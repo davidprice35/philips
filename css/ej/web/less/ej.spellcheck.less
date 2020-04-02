@@ -1,0 +1,36 @@
+@import "definition.less";
+
+/*------------SpellCheck themes -------------*/
+
+.e-spellcheck .e-sentencecontent .e-errorword {
+    color: red;
+}
+
+.e-spellcheck .e-sentence {
+    border-color: @content-border-color;
+    background-color: @content-bg-color;
+}
+
+.e-spellcheck .e-suggestionlist {
+    border-color: @content-border-color;
+}
+
+.e-spellmenu {
+    & when (@skin= "material") {
+        fill: @widget-bg-color;
+        border: @material-sshover-border-color !important;
+    }
+}
+
+.e-spellmenu .e-list:hover {
+    & when (@skin= "material") {
+        background-color: @grey-200 !important;
+    }
+}
+
+.e-spellmenu {
+    & when (@skin= "material") {
+        fill: @widget-bg-color;
+        border: @material-sshover-border-color !important;
+    }
+}

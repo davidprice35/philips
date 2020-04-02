@@ -1,0 +1,291 @@
+@import "definition.less";
+
+.e-pivotpager .e-pagerTextBox {
+    display:inline-block;
+      & when not (@skin = "material") and not (@skin = "office-365") {
+        height: 18px;
+       width: 35px;
+     .pivotpager-setcolor();
+    }
+    & when (@skin = "material") {
+      color:fade(@base-font-color,87%);
+      outline:none;
+      border:1px solid fade(@base-font-color,26%);
+      border-radius:2px;
+      text-indent:2px;
+      height: 18px;
+      width: 35px;
+    }
+    & when (@skin = "office-365") {
+      color:@theme-light-font;
+      outline:none;
+      border:1px solid @neutral-tertiary-alt;
+      text-indent:2px;
+      font-family:@font-family;
+    font-size:14px;
+        height: 32px;
+    width: 40px;
+      text-align:center;
+    }
+}
+.e-pivotpager *:focus:hover{
+    outline:none;
+}
+& when (@skin = "material") {
+    .e-pivotpager{
+        font-family:'Roboto',Segoe UI;
+    }
+  .e-pivotpager .e-movePrevious , .e-pivotpager .e-pagerLabel, .e-pivotpager .e-pagerTextBox, .e-pivotpager .e-moveNext, .e-pivotpager .e-moveLast {
+        margin-left:16px;
+  }
+  .e-pivotpager .e-moveFirst{
+        margin-left:24px !important;
+   }
+  .e-pivotpager .e-moveLast{
+        margin-right:24px !important;
+   }
+   .e-pivotpager .e-pagerTextBox{
+        width:35px;
+       height:21px;
+    }
+    .e-pivotpager table{
+        height:56px;
+    }
+    .e-pivotpager .e-categPagerTd .e-pagerDiv{
+       border-right: 1px solid @grey-300;
+    }
+    .e-pivotpager .e-pagerTextBox:active,.e-pivotpager .e-pagerTextBox:focus{
+       border-color:fade(@base-font-color,54%);
+    }
+}    
+.e-pivotpager .e-movePrevious, .e-pivotpager .e-moveNext ,
+.e-pivotpager .e-moveFirst,.e-pivotpager .e-moveLast{
+            display:inline-block;
+
+         & when not (@skin = "office-365") {
+            width:18px;
+            height:18px;
+         }
+        & when (@skin = "office-365") {
+            width:32px;
+            height:32px;
+            color:@neutral-dark;
+        }
+            position:relative;
+            top:1px;
+            cursor:pointer;
+         & when (@skin = "material") {
+           color:fade(@base-font-color,54%);
+         }
+ }
+.e-pivotpager .e-moveFirst:before {
+      & when (@skin = "material"), (@skin = "office-365")  {
+        content: "\e83e";
+    }
+   & when not (@skin = "material") and not (@skin = "office-365") {
+        content: "\e62a";
+    }
+    font-size: 14px;
+    & when  not (@skin = "office-365") {
+      margin-left: 5px;
+    }
+}
+.e-pivotpager .e-moveLast:before {
+      & when (@skin = "material"), (@skin = "office-365")  {
+          content: "\e841";
+        }
+   & when not (@skin = "material") and not (@skin = "office-365") {
+          content: "\e62c";
+        }
+          font-size: 14px;
+       & when  not (@skin = "office-365") {
+          margin-left: 5px;
+      }
+}
+.e-pivotpager .e-categPagerTd {
+      & when not (@skin = "material") and not (@skin = "office-365") {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: @default-icon-color;
+   }
+   & when (@skin = "office-365") {
+       border-right: 1px solid @neutral-light;
+   }
+}
+.e-pivotpager.e-rtl .e-categPagerTd {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: @default-icon-color;
+    border-right-style: hidden !important;
+}
+.e-pivotpager.e-rtl .e-pagerDiv, .e-pivotpager.e-rtl .e-seriesPagerTd {
+    direction: ltr;
+}
+.e-pivotpager .e-movePrevious:before {
+      & when (@skin = "material"), (@skin = "office-365")  {
+            content: "\e83f";
+        }
+   & when not (@skin = "material") and not (@skin = "office-365") {
+            content:"\e665";
+        }
+			font-size: 14px;
+          & when  not (@skin = "office-365") {
+            margin-left: 5px;
+         }
+        }
+.e-pivotpager .e-moveNext:before {
+      & when (@skin = "material"), (@skin = "office-365")  {
+            content: "\e840";
+        }
+   & when not (@skin = "material") and not (@skin = "office-365") {
+            content:"\e67e";
+        }
+			font-size: 14px;
+          & when  not (@skin = "office-365") {
+            margin-left: 5px;
+         }
+}
+
+.e-pivotpager .e-categPageCount, .e-pivotpager .e-seriesPageCount {
+			cursor: default;
+          & when not (@skin = "office-365") {
+            padding:0px 0px 0px 5px;
+            }
+          & when (@skin = "office-365") {
+            padding:0px;
+            margin:0px 8px;
+           }
+        }
+
+.e-pivotpager .e-pagerDiv {
+      & when not (@skin = "material") and not (@skin = "office-365") {
+            margin:3px;
+            padding:7px;
+           .pivotpager-setcolor();
+    }
+    & when (@skin = "material") {
+        color:@base-font-color;
+    }
+       & when (@skin= "office-365") {
+        /* office-365*/
+        font-family: @font-family;
+        font-size: 14px;
+        color:@theme-light-font;
+       }
+}
+
+.e-pivotpager .e-pagerLabel {
+			cursor: default;
+            display:inline-block;
+          & when not (@skin= "office-365") {
+            margin-left:5px;
+			margin-right: 5px;
+          }
+         & when (@skin= "office-365") {
+            margin:0px 8px;
+          }
+           & when (@skin = "material") {
+           font-size:13px;
+           }
+}
+
+.e-pivotpager .e-disabled {
+        & when (@skin = "material") {
+           color:fade(@base-font-color,26%);
+        }
+      & when not (@skin = "material") and not (@skin = "office-365") {
+            opacity: 0.4;
+        }
+         & when (@skin = "office-365") {
+           color:@neutral-tertiary-alt;
+        }
+            cursor: default !important;
+        }
+
+.e-pivotpager .pivotpager {
+    overflow:auto;
+}
+.e-pivotpager input{
+  background: @content-bg-color;
+}
+.e-pivotpager .e-pagerTextBox:active,.e-pivotpager .e-pagerTextBox:focus{
+    & when (@skin = "office-365") {
+    border-color:@theme-primary;
+    }
+}
+.e-pivotpager .e-pagerTextBox:hover{
+    & when (@skin = "office-365") {
+    border-color:@neutral-secondary-alt;
+    }
+}
+.e-pivotpager .e-categPagerTd .e-pagerDiv{
+    & when (@skin = "office-365") {
+   margin-right:8px;
+    }
+}
+.e-pivotpager .e-seriesPagerTd .e-pagerDiv{
+    & when (@skin = "office-365") {
+   margin-left:8px;
+    }
+}
+.e-pivotpager.e-rtl .e-categPagerTd .e-pagerDiv{
+    & when (@skin = "office-365") {
+   margin-left:8px;
+   margin-right:0px
+    }
+}
+.e-pivotpager.e-rtl .e-seriesPagerTd .e-pagerDiv{
+    & when (@skin = "office-365") {
+   margin-right:8px;
+      margin-left:0px
+    }
+}
+.e-pivotpager .e-moveFirst:before{
+    & when (@skin = "office-365") {
+   margin-top:12px;
+   margin-left:10px;
+    }
+}
+.e-pivotpager .e-movePrevious:hover, .e-pivotpager .e-moveNext:hover, .e-pivotpager .e-moveFirst:hover, .e-pivotpager .e-moveLast:hover{
+    & when (@skin = "office-365") {
+background-color:@neutral-lighter;
+    }
+  }
+.e-pivotpager .e-movePrevious:active, .e-pivotpager .e-moveNext:active, .e-pivotpager .e-moveFirst:active, .e-pivotpager .e-moveLast:active{
+    & when (@skin = "office-365") {
+background-color:@theme-primary;
+color:white;
+    }
+  }
+.e-pivotpager .e-disabled:hover,.e-pivotpager .e-disabled:active{
+        & when (@skin = "office-365") {
+background-color:@neutral-white;
+color:@neutral-tertiary-alt;
+    }
+}
+.e-pivotpager .e-pagerLabel,.e-pivotpager .e-seriesPageCount, .e-pivotpager .e-categPageCount, .e-pivotpager .e-pagerTextBox,.e-pivotpager .e-movePrevious, .e-pivotpager .e-moveNext, .e-pivotpager .e-moveFirst, .e-pivotpager .e-moveLast{
+        & when (@skin = "office-365") {
+vertical-align:middle;
+    }
+}
+.e-pivotpager .e-movePrevious:before, .e-pivotpager .e-moveNext:before, .e-pivotpager .e-moveFirst:before, .e-pivotpager .e-moveLast:before{
+    & when (@skin = "office-365") {
+margin-top:9px;
+    }
+  }
+.e-pivotpager tr{
+        & when (@skin = "office-365") {
+height:59px;
+    }
+}
+.e-pivotpager .e-movePrevious.e-disabled, .e-pivotpager .e-moveNext.e-disabled, .e-pivotpager .e-moveFirst.e-disabled, .e-pivotpager .e-moveLast.e-disabled{
+    & when (@skin = "office-365") {
+color:@neutral-tertiary-alt;
+    }
+  }
+.e-pivotpager table{
+	background-color: @bg-value-color;
+    & when (@skin = "office-365") {
+border:1px solid @neutral-light;
+    }
+  }

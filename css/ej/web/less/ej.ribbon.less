@@ -1,0 +1,898 @@
+@import "definition.less";
+
+.e-ribbon.e-js .e-header .e-bottom-line.e-select.e-item, .e-ribbon.e-js .e-header .e-top-line.e-select.e-item {
+ & when not (@skin= "material") {
+    background: transparent;
+    outline: none;
+    outline-offset: 0;
+ }
+}
+.e-ribbon.e-js.e-widget {
+    .ribbon-shadow();
+    font-size: 14px;
+}
+ej-ribbon {
+	display: block;
+}
+.e-ribbon .e-rbn-button.e-button .e-btntxt{
+    white-space:pre-wrap;
+	& when (@skin= "material") {
+        /*material*/
+      color: fade(@base-font-color,87%);
+    }
+	& when (@skin= "office-365") {
+        /*office-365*/
+      color: @neutral-secondary-alt;
+    }
+}
+
+.e-ribbon.e-js .e-header .e-select.e-disable .e-apptabanchor{
+    & when (@skin="office-365"){
+	    color: @theme-primary-font;
+	}
+}
+
+.e-ribbon.e-js .e-groupdiv .e-disable .e-icon{
+	& when (@skin= "material") {
+        /*material*/
+      color: @base-font-color;
+    }
+}
+
+.e-ribbon .e-rbn-button.e-btn.e-select:focus {
+    box-shadow:none;
+}
+.e-ribbon .e-groupdiv > div:after {
+	& when (@skin= "material") {
+      /*material*/
+     background: @grey-300;
+    }
+	& when not (@skin= "material") {
+      /*other*/
+     background: @rbncontent-border-color;
+   }
+}
+.e-ribbon .e-ribbonbackicon{
+    .ribbon-header-gradient();
+}
+.e-ribbon .e-backstagetopicon span:hover:before {
+   & when not (@skin= "material") {
+      /*other*/
+     opacity: 0.8;
+     filter: alpha(opacity=80);
+	 }
+}
+.e-ribbon .e-captionarea {
+	& when (@skin= "material") {
+      /*material*/
+      color: fade(@base-font-color,38%);
+    }
+	& when (@skin= "office-365") {
+      /*office-365*/
+      color: @neutral-secondary-alt;
+    }
+	& when not (@skin= "material") and not (@skin= "office-365") {
+      /*other*/
+     color: @rbncaption-font-color;
+   }
+}
+ .e-separatordiv,  .e-separatordivrow{
+    background: @default-border-color;
+}
+
+.e-ribbon.e-js .e-content{
+    & when (@skin= "material") {
+      /*material*/
+     background: @grey-100;
+    }
+	& when not (@skin= "material") {
+      /*other*/
+     background: @rbncontent-content-bg-color;
+   }
+   & when (@skin="office-365"){
+        /*office-365*/
+	    border-width: 1px;
+		border-color: @neutral-tertiary-alt;
+    } 
+	& when not(@skin= "office-365"){
+	    /*not office-365*/
+		border-color: @rbncontent-border-color;
+	}
+	border-top-width:0;
+	color:@content-font-color;
+}
+
+.e-ribbon .e-drp-btn.e-select .e-icon, .e-ribbon .e-btn.e-select .e-icon{
+    & when (@skin="office-365"){
+        /*office-365*/
+	    color: @neutral-secondary-alt;
+    }
+}
+
+.e-ribbon .e-rbn-ddl.e-ddl .e-select{
+   background: @rbndropdown-color;
+   border-color: @content-border-color;
+   color: @default-icon-color;
+   filter:none;
+}
+.e-ribbon .e-rbn-ddl.e-ddl .e-select:hover{
+    .ribbon-hover-gradient();
+	color: @hover-icon-color;
+}
+.e-ribbon .e-expandcollapse span:hover, .e-ribbon .e-expander:hover
+{
+    border-color: @hover-border-color;
+	& when (@skin="office-365"){
+        /*office-365*/
+	    color: @neutral-secondary-alt;
+		background: @theme-lighter;
+    }
+	& when not(@skin="office-365"){
+        /*other*/
+	    .hover-gradient();
+		color:  @hover-icon-color;
+    }
+}
+.e-ribbon .e-expandcollapse span, .e-ribbon .e-expander
+{
+   & when (@skin="office-365"){
+	    color: @neutral-secondary-alt;
+    }
+    & when not(@skin="office-365"){
+        /*other*/
+    	color:  @default-icon-color;
+	}
+}
+.e-ribbon.e-js .e-header,.e-ribbon.e-js .e-left,.e-ribbon.e-js .e-right{
+     & when (@skin= "material") {
+        /*material*/
+        border-bottom: none;
+      }
+	  & when (@skin= "office-365"){
+	     /*office-365*/
+		 border: 1px solid @neutral-tertiary-alt;
+	  }
+    .high-contrast-ribbon-header-border;
+    .office-ribbon-header-border;
+	.header-gradient();
+	& when not(@skin="office-365"){
+         border:1px solid @header-border-color;
+	}
+}
+
+.e-ribbon.e-js .e-header, .e-ribbon.e-js .e-left, .e-ribbon.e-js .e-right {
+   & when not (@skin= "material") and not (@skin="office-365") {
+      /*other*/
+    .office-ribbon-header-bg-color;
+   }
+}
+
+.e-ribbon.e-js .e-header > .e-select,.e-ribbon.e-js .e-header > .e-active,.e-ribbon.e-js .e-left > .e-active,.e-ribbon.e-js .e-right > .e-active,.e-ribbon.e-js .e-left > .e-select,.e-ribbon.e-js .e-right > .e-select{
+ & when not (@skin= "material") {
+    background:transparent;
+	border:none;
+  }
+  & when (@skin="office-365"){
+    border: none! important;
+  }
+}
+.e-ribbon.e-js .e-header > .e-select:not(.e-apptab) a, .e-ribbon.e-tab.e-js .e-header .e-select.e-disable a:hover {
+ & when not (@skin= "material") and not (@skin= "office-365"){
+    .office-ribbon-header-font-color;
+     color:@rbntab-font-color;
+	.ribbon-tab-hover();
+ }
+ & when (@skin= "office-365") {
+    .office-ribbon-header-font-color;
+     color:@theme-light-font;
+	.ribbon-tab-hover();
+ }
+}
+.e-ribbon .e-apptab .e-menu .e-active >a,.e-ribbon .e-apptab .e-menu .e-active span {
+   & when not (@skin= "material") and not(@skin="office-365"){
+     color:@rbnapptab-font-color !important;
+	}
+	& when (@skin="office-365"){
+	  color: @theme-dark-font ! important;
+	}
+}
+.e-ribbon.e-js .e-header li.e-select:not(.e-apptab) a:hover {
+  & when not (@skin= "material") {
+    .high-contrast-ribbon-header-hover-font;
+     color:@rbn-bg-color;
+	.ribbon-bg-hover-gradient();
+ }
+}
+.e-ribbon.e-js .e-header .e-active.e-tab a:hover, .e-ribbon.e-js .e-header .e-active.e-contextualtabset a:hover {
+  & when not (@skin= "material") {
+    .ribbon-bg-active-gradient();
+	 color:@rbn-act-color;
+ }
+}
+.e-ribbon.e-js .e-header .e-active.e-tab a, .e-ribbon.e-js .e-header .e-active.e-contextualtabset a {
+  & when (@skin= "office-365") {
+	 color:@theme-darker;
+ }
+}
+.e-ribbon .e-apptab .e-menu ul > li >a{
+    color:@rbncontent-font-color !important;
+}
+.e-ribbon .e-apptab .e-menu >li >a:hover,.e-ribbon .e-apptab .e-menu .e-active span:hover,.e-ribbon .e-apptab .e-menu .e-active,.e-ribbon .e-apptab .e-menu .e-active >a{
+ & when not (@skin= "material") {  
+  .office-ribbon-file-hover();
+  }
+}
+
+.e-ribbon.e-grpdivhide{
+   border-right:1px solid @header-border-color !important;
+}
+.e-ribbon.e-rtl.e-grpdivhide{
+   border-left:1px solid @header-border-color !important;
+}
+.e-ribbon .e-header > .e-apptab  .e-menu {
+    .ribbon-active-gradient();
+}
+
+.e-ribbon .e-header > .e-apptab  .e-menu {
+    .high-contrast-ribbon-file-header();
+    .office-ribbon-file-header();
+    .material-ribbon-file-header();
+}
+
+.e-ribbon.e-js .e-header .e-apptab .e-menu > li:first-child > a,.e-ribbon.e-js .e-header .e-apptab .e-menu > li:first-child > a > span {
+    .switch-ribbon-file-header-txt-color;
+    & when (@skin="office-365"){
+	  color: @theme-primary-font;
+	}
+	& when not (@skin="office-365"){
+	   color:@rbn-white-color;
+	}
+}
+
+.e-ribbon.e-js .e-header > .e-item:hover {
+ & when not (@skin= "material") {
+    background:transparent;
+	border:none;
+ }
+}
+.e-ribbon.e-js .e-header .e-active.e-tab  a,.e-ribbon.e-js .e-header .e-active.e-contextualtabset a {
+	& when not (@skin= "material") {
+      /*other*/
+    .high-contrast-ribbon-header-active-border;
+    border-color:@rbn-act-a-border-color @rbn-act-a-border-color transparent;
+    .high-contrast-ribbon-header-active-font;
+    .material-ribbon-header-active-font;
+       .high-contrast-ribbon-header-active;
+     background: @rbncontent-content-bg-color;
+   }
+   & when not (@skin="material") and not (@skin="office-365"){
+        color:@rbn-bg-color;
+   }
+   & when (@skin="office-365"){
+     color: @theme-darker;
+   }
+}
+.e-ribbon .e-rbn-button.e-btn.e-select,.e-ribbon .e-rbn-button.e-btn.e-disable.e-select:hover,.e-ribbon .e-rbn-button.e-tbtn.e-disable{
+	& when (@skin= "material") {
+      /*material*/
+     background: @grey-100;
+	 color: @default-font-color;
+    }
+	& when (@skin= "office-365") {
+      /*office-365*/
+     background: @neutral-white;
+	 color: @neutral-light-font;
+	 
+    }
+	& when not (@skin= "material") and not (@skin= "office-365") {
+      /*other*/
+     background: @rbncontent-content-bg-color;
+	 color: @default-font-color;
+   }
+    border-color: @rbncontent-content-bg-color;
+	filter:none;
+}
+.e-ribbon .e-rbn-button.e-btn.e-select .e-btntxt{
+     & when (@skin= "office-365") {
+      /*office-365*/
+	 color: @theme-light-font;
+    }
+}
+.e-rbn-splitbtn.e-menu.e-split, .e-rbn-splitbtn.e-menu.e-context.e-split,.e-rbn-splitbtn.e-menu.e-context.e-split .e-list > ul{
+    background: @rbncontent-content-bg-color;
+}
+.e-rbn-splitbtn.e-js.e-menu.e-split ul, .e-rbn-splitbtn.e-js.e-menu.e-context.e-split ul,.e-rbn-splitbtn.e-js.e-menu.e-context.e-split .e-list > ul,.e-rbn-splitbtn.e-js.e-menu.e-widget.e-split li.e-list{
+    background: @rbncontent-content-bg-color;
+}
+
+ .e-resizegroupdiv.e-reshover,
+ .e-resizegroupdiv.e-reshover .e-rbn-button.e-resizebtn,
+.e-ribbon.e-responsive .e-backstageli:hover, 
+.e-ribbon.e-responsive .e-responsivetabli:hover,
+.e-ribbon.e-js .e-rbn-button.e-btn.e-select:hover{
+    & when (@skin= "office-365") {
+      /*office-365*/
+      background: @theme-lighter;
+      color: @neutral-secondary-alt;
+   }
+   & when not (@skin= "office-365") {
+      /*other*/
+      .ribbon-hover-gradient();
+	   color: @rbnhover-font-color;
+   }
+}
+
+.e-ribbon.e-js .e-header .e-apptab.e-backstagetab:hover{
+     & when (@skin= "office-365") {
+	      background: @theme-dark;    
+	  }
+}
+.e-ribbon.e-js .e-header .e-apptab.e-backstagetab:hover a {
+      & when (@skin= "office-365") {
+          color: @theme-dark-font! important;       
+	  }
+}
+
+.e-ribbon.e-responsive  .e-responsivebackstage li:hover, .e-ribbon.e-responsive  .e-responsivebackstage li:hover a{
+      & when (@skin= "office-365") {
+      /*office-365*/
+      color: @neutral-secondary-alt! important;
+   }
+}
+.e-ribbon .e-rbn-button.e-btn.e-select:active ,.e-ribbon .e-rbn-button.e-btn.e-disable.e-active.e-select:hover,.e-ribbon .e-rbn-button.e-tbtn.e-active
+{
+    .ribbon-toggle-gradient();
+    color:  @rbnhover-font-color;
+}
+.e-ribbon .e-rbn-button.e-btn.e-disable.e-active.e-select:hover{
+    & when (@skin= "office-365") {
+      /*office-365*/
+      background: @theme-light;
+	  color:  @rbnhover-font-color;
+    }
+}
+.e-ribbon .e-rbn-button.e-btn.e-select:active .e-icon,.e-ribbon .e-rbn-button.e-btn.e-active .e-icon,.e-ribbon .e-rbn-button.e-btn.e-select:hover .e-icon{
+	& when not (@skin= "material") {
+      /*other*/
+      color:  @rbnhover-font-color;
+   }
+}
+.e-ribbon .e-rbn-button.e-tbtn.e-active.e-disable {
+  background: none;
+}
+.e-ribbon.e-js .e-header .e-apptab .e-menu >.e-list:nth-child(1):not(.e-active) > a:hover,.e-ribbon.e-js .e-header .e-apptab .e-menu >li:nth-child(1):not(.e-active) > a:hover span{
+ & when not (@skin= "material") {
+    color:@rbn-menu-font-hover-color;
+ }
+}
+.e-ribbon .e-disable{
+   background: @rbncontent-content-bg-color;
+   opacity: 0.35;
+   filter: alpha(opacity=35);
+}
+.e-ribbon .e-btn.e-disable.e-select, .e-ribbon .e-btn.e-disable.e-select:hover,.e-ribbon .e-tbtn.e-disable, .e-ribbon .e-tbtn.e-disable:hover, .e-ribbon .e-split.e-disable, .e-ribbon .e-split.e-disable:hover, .e-ribbon .e-btn.e-disable.e-select:active, .e-ribbon .e-tbtn.e-btn.e-disable.e-select.e-active:hover, .e-ribbon .e-tbtn.e-btn.e-disable.e-select.e-active{
+   opacity: 0.35;
+   filter: alpha(opacity=35);
+}
+.e-ribbon .e-modelDiv{
+   background: @rbncontent-content-bg-color;
+   opacity: 0;
+   filter: alpha(opacity=0);
+}
+.e-ribbon .e-groupdiv .e-gallerycontent,.e-ribbon .e-groupdiv .e-gallexpandcontent,
+.e-ribbon .e-resizediv .e-gallerycontent,.e-ribbon .e-resizediv .e-gallexpandcontent{
+  background:@rbngallery-bg-color;
+  border-color: @rbncontent-border-color;
+}
+.e-ribbon.e-rtl .e-groupdiv .e-gallerycontent{
+ border-right-color: @rbncontent-border-color;
+}
+.e-ribbon .e-groupdiv .e-gallscrollcontent .e-content,.e-ribbon .e-resizediv .e-gallscrollcontent .e-content{
+  background:@rbngallery-bg-color;
+}
+.e-ribbon .e-groupdiv .e-gallerymovediv,.e-ribbon .e-resizediv .e-gallerymovediv,
+.e-ribbon .e-groupdiv .e-gallexpandcontent,.e-ribbon .e-resizediv .e-gallexpandcontent{
+  background:@rbngallery-bg-color;
+ }
+.e-ribbon .e-groupdiv .e-extracontent,.e-ribbon .e-resizediv .e-extracontent{
+  border-top-color: @rbncontent-border-color;
+ }
+.e-ribbon .e-groupdiv .e-moveupdiv,.e-ribbon .e-groupdiv .e-movedowndiv,.e-ribbon .e-groupdiv .e-expgallerydiv,
+.e-ribbon .e-resizediv .e-moveupdiv,.e-ribbon .e-resizediv .e-movedowndiv,.e-ribbon .e-resizediv .e-expgallerydiv{
+ border-color:@rbncontent-border-color;
+ }
+.e-ribbon.e-js .e-groupdiv .e-rbn-button.e-gallerybtn,.e-ribbon.e-js .e-resizediv .e-rbn-button.e-gallerybtn
+{
+  background:@rbngallery-bg-color !important;
+  border-color:@rbngallery-bg-color;
+}
+.e-ribbon .e-groupdiv .e-rbn-button.e-galleryextrabtn,.e-ribbon .e-resizediv .e-rbn-button.e-galleryextrabtn,
+.e-ribbon.e-js .e-groupdiv .e-extracontent .e-menu,.e-ribbon.e-js .e-resizediv .e-extracontent .e-menu{
+   background:@content-bg-color;
+   color:@content-font-color;
+ }
+.e-ribbon.e-js .e-gallerymenu a{
+        & when (@skin= "office-365") {
+            /*office-365*/
+            color:@neutral-dark! important;
+        }
+		& when not (@skin= "office-365") {
+            /*other*/
+            color:@content-font-color;
+        }
+ }
+ .e-ribbon .e-groupdiv .e-rbn-button.e-galleryextrabtn:hover,.e-ribbon .e-resizediv .e-rbn-button.e-galleryextrabtn:hover{
+  .ribbon-hover-gradient();
+ }
+.e-ribbon.e-js .e-groupdiv .e-rbn-button.e-galleryselect,.e-ribbon.e-js .e-resizediv .e-rbn-button.e-galleryselect
+{
+  box-shadow:none;
+  border-color:@rbngallery-select-color;
+}
+.e-ribbon.e-js .e-groupdiv .e-rbn-button.e-gallerybtn:hover,.e-ribbon.e-js .e-resizediv .e-rbn-button.e-gallerybtn:hover
+{
+  border-color:@rbngallery-hover-color;
+  color:@rbn-text-color;
+  background:@rbncontent-content-bg-color;
+ }
+ .e-ribbon .e-groupdiv .e-gallerymovediv > div:hover,.e-ribbon .e-resizediv .e-gallerymovediv > div:hover
+{
+   .ribbon-hover-gradient();
+   border-color:@rbngallery-select-color;
+  }
+ .e-ribbon .e-groupdiv .e-movedowndiv:hover ~ .e-expgallerydiv,.e-ribbon .e-groupdiv .e-moveupdiv:hover ~ .e-movedowndiv{
+     border-top-color:@rbngallery-select-color;
+}
+.e-ribbon .e-groupdiv .e-disablegrymovebtn:hover ~ .e-expgallerydiv,.e-ribbon .e-groupdiv .e-disablegrymovebtn:hover ~ .e-movedowndiv{
+border-top-color:@rbncontent-border-color;
+}
+.e-ribbon .e-groupdiv .e-gallerymovediv >.e-disablegrymovebtn,.e-ribbon .e-groupdiv .e-gallerymovediv >.e-disablegrymovebtn:hover,
+.e-ribbon .e-resizediv .e-gallerymovediv >.e-disablegrymovebtn,.e-ribbon .e-resizediv .e-gallerymovediv >.e-disablegrymovebtn:hover
+{
+  background:@rbngallery-bg-color;
+  border-color:@rbncontent-border-color;
+}
+.e-ribbon .e-tooltipdiv{
+     & when (@skin= "material") {
+      /*material*/
+       border-color:@grey-700;
+       background:@grey-700;
+    }
+	& when not (@skin= "material") {
+      /*other*/
+      border-color:@rbncontent-border-color;
+      background:@rbngallery-bg-color;
+   }
+}
+.e-ribbon .e-tooltipdiv .e-tooltiptitle,.e-ribbon .e-tooltipdiv .e-tooltipcontent,.e-ribbon .e-tooltipdiv .e-tooltipcntwithimg{
+    & when (@skin= "material") {
+      /*material*/
+       color: @primary-font-color;
+    }
+	& when not (@skin= "material") {
+      /*other*/
+      color:@rbncontent-font-color;
+   }  
+}
+.e-ribbon .e-resizediv{
+    border-color:@rbncontent-border-color;
+    & when (@skin= "material") {
+      /*material*/
+     background: @grey-100;
+    }
+	& when not (@skin= "material") {
+      /*other*/
+     background: @rbncontent-content-bg-color;
+   }
+}
+.e-ribbon .e-header .e-margine-top:hover{
+ & when not (@skin= "material") {
+    border-top: none;
+ }
+}
+.e-ribbon .e-groupdiv .e-gallexpandcontent,.e-ribbon .e-resizediv .e-gallexpandcontent{
+  border-color:@rbngallery-border-color;
+ }	
+ .e-ribbon .e-groupdiv .e-disablegrymovebtn > span,.e-ribbon .e-resizediv .e-disablegrymovebtn > span{
+  color:@rbngallery-disable-color;
+}
+ .e-ribbon .e-rbn-button.e-btn.e-disable.e-select:hover .e-icon {
+  & when (@skin="office-365") {
+     color: @neutral-secondary-alt! important;
+  }
+  & when not (@skin="office-365") {
+     color: @rbn-text-color;
+  }
+}
+.e-ribbon .e-rbn-button.e-btn.e-disable.e-select:hover{
+background:none;
+}
+.e-ribbon .e-rbn-button.e-tbtn.e-active.e-disable .e-icon {
+  color: @rbn-text-color;
+}
+.e-ribbon .e-rbn-ddl.e-ddl .e-disable.e-select:hover {
+  background:none;
+  color: @rbn-text-color;
+}
+
+.e-ribbon.e-js .e-groupdiv .e-disable .e-icon {
+    & when (@skin="material") {
+        color: fade(@base-font-color, 26%);
+    }
+}
+.e-ribbon.e-js .e-btn.e-disable.e-select:hover, .e-ribbon.e-js .e-btn.e-disable.e-select:hover, .e-ribbon.e-js .e-tbtn.e-disable:hover,
+.e-ribbon.e-js .e-btn.e-disable.e-select:active, .e-ribbon.e-js .e-btn.e-disable.e-select:active{
+    & when (@skin="office-365") {
+	    /*office-365*/
+		color: @neutral-secondary-alt! important;
+    }
+}
+.e-ribbon .e-ribbonbackstagepage{
+  border-color:@rbn-border-color;
+  background:@rbncontent-content-bg-color;
+}
+.e-backstagescrollcontent.e-js .e-content{
+  background:@rbncontent-content-bg-color;
+}
+.e-ribbon .e-backstagetopcontent,.e-ribbon .e-backstageheader{
+  .ribbon-header-gradient();
+}
+.e-ribbon .e-backstageli:hover{
+   & when (@skin= "material") {
+      /*material*/
+      color: fade(@header-font-color,70%);
+      background: fade(@content-bg-color,12%);
+    }
+	& when (@skin= "office-365") {
+      /*office-365*/
+       background: @theme-dark-alt;
+    }
+	& when not (@skin= "material") and not (@skin = "office-365") {
+        /*other*/
+     .ribbon-backstage-hover-bg();
+    }
+}
+.e-ribbon .e-backstageseparator,.e-ribbon .e-backstageactive{
+    & when (@skin= "material") {
+        /*material*/
+        color: fade(@header-font-color,100%);
+        background: fade(@content-bg-color,12%);
+    }
+	& when (@skin= "office-365") {
+        /*office-365*/
+        background: @theme-secondary;
+    }
+	& when not (@skin= "material") and not (@skin="office-365"){
+        /*other*/
+     .ribbon-backstage-select-bg();
+    }
+}
+.e-ribbon .e-backstagetopicon span:hover:before{
+	& when not (@skin= "material") {
+        /*other*/
+     color: @hover-bg-stcolor;
+    }
+}
+.e-ribbon .e-backstagetopicon span:before{
+  color: @rbn-white-color;
+}
+.e-ribbon .e-header > .e-apptab .e-apptabanchor:hover{
+	& when not (@skin= "material") {
+  .ribbon-app-hover-gradient();
+  color:@rbn-menu-font-hover-color;
+  }
+}
+
+.e-ribbon .e-header > .e-apptab .e-apptabanchor:hover {
+	& when not (@skin= "material") {
+    .high-contrast-ribbon-file-header-hover();
+    .material-ribbon-file-header-hover();
+	}
+}
+
+.e-ribbon .e-backstageli a,.e-ribbon .e-backstagebutton{
+  color: @active-font-color;
+}
+.e-ribbon.e-js .e-backstageheader .e-backstageli:hover a,.e-ribbon.e-js .e-backstageheader .e-backstageactive a,.e-ribbon.e-js .e-backstageheader .e-backstagebutton:hover{
+    & when (@skin= "material") {
+        /*material*/
+        color: fade(@header-font-color,100%);
+    }
+	& when not (@skin= "material") {
+        /*other*/
+     color: @active-font-color;
+    }
+}
+.e-ribbon .e-backstagecontent{
+  background:@rbncontent-content-bg-color;
+}
+.e-ribbon .e-header > .e-apptab .e-apptabanchor{
+  .ribbon-active-gradient();
+  .ribbon-app-tab-font();
+}
+
+.e-ribbon .e-header > .e-apptab .e-apptabanchor {
+    .high-contrast-ribbon-file-header();
+    .office-ribbon-file-header();
+    .material-ribbon-file-header();
+}
+.e-ribbon.e-rbnwithqat .e-rbnqatmenu,.e-ribbon.e-rbnwithqat .e-qaresizediv{
+    & when (@skin= "material") {
+        /*material*/
+        border-color: @grey-300;
+	    box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.21);
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+       border-color:@header-border-color;
+     }
+  background:@content-bg-color;
+}
+.e-ribbon.e-rbnwithqat .e-rbnqatmenu div{
+ .default-gradient();
+}
+.e-ribbon.e-rbnwithqat .e-qatmenuli{
+  background:@content-bg-color;
+  color:@content-font-color;
+}
+.e-ribbon.e-rbnwithqat .e-qatseparator{
+  background:@content-border-color;
+}
+.e-ribbon.e-rbnwithqat .e-qatmenuli:hover{
+  .hover-gradient();
+  color:@hover-font-color;
+}
+.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar,.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-btn{
+  background:transparent;
+}
+.e-ribbon.e-js .e-rbn-button.e-tbtn:hover, .e-ribbon.e-js .e-rbn-button.e-btn:hover, .e-ribbon.e-rbnwithqat.e-js .e-rbn-button.e-tbtn:hover{
+    & when (@skin="office-365") {
+	    /*office-365*/
+        background: @theme-lighter;
+		color: @neutral-secondary-alt;
+    }
+}
+.e-ribbon.e-js .e-rbn-button.e-tbtn.e-active,.e-ribbon.e-js .e-rbn-button.e-btn.e-resizebtnselect,.e-ribbon.e-rbnwithqat.e-js .e-rbn-button.e-tbtn.e-active{
+      & when (@skin="material") {
+	    /*material*/
+        background-color: @grey-400;
+		color:fade(@base-font-color, 54%);
+      }
+	  & when (@skin="office-365") {
+	    /*office-365*/
+        background: @theme-light;
+		color:  @rbnhover-font-color;
+      }
+	  & when not (@skin= "material") and not (@skin="office-365") {
+        /*other*/
+       .ribbon-toggle-gradient();
+       color:  @rbnhover-font-color;
+     }
+}
+
+.e-ribbon.e-js .e-rbn-button.e-tbtn.e-select:active .e-icon,.e-ribbon.e-js .e-rbn-button.e-tbtn.e-active .e-icon,.e-ribbon.e-js .e-rbn-button.e-tbtn.e-select.e-active:hover,.e-ribbon.e-js .e-rbn-button.e-tbtn.e-select.e-active:hover .e-icon{
+      & when (@skin="material") {
+	    /*material*/
+	 	color: fade(@base-font-color, 54%);
+      }
+	   & when (@skin="office-365") {
+	    /*office-365*/
+	 	color:@neutral-secondary-alt! important;
+      }
+	  & when not (@skin= "material") and not (@skin="office-365") {
+        /*other*/
+       color:  @rbnhover-font-color;
+     }
+}
+.e-ribbon.e-js .e-rbn-button.e-btn,.e-ribbon .e-active-content.e-parentdiv .e-split,.e-ribbon .e-resizediv .e-split,.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-split {
+  box-shadow:none;
+}
+.e-ribbon.e-responsive .e-header,
+.e-ribbon.e-responsive  .e-responsiveqat .e-rbn-button.e-btn,
+.e-ribbon.e-responsive  .e-resqatScroll .e-content,
+.e-ribbon.e-responsive .e-backstagerestop
+{
+   & when (@skin= "material") {
+      /*material*/
+      background: @header-bg-endcolor !important;
+    }
+	& when not (@skin= "material") {
+      /*other*/
+     background:@active-bg-endcolor !important;
+    }
+}
+.e-ribbon.e-responsive .e-icon.e-resbackstage,
+.e-ribbon.e-responsive .e-ribresmenu .e-icon,
+.e-ribbon.e-responsive .e-ribresmenu a, 
+.e-ribbon.e-responsive .e-responsiveqat .e-rbn-button.e-btn .e-icon
+ {
+     color:@active-font-color !important;
+    }
+.e-ribbon.e-responsive .e-responsivebackstagecontent{
+    background:@active-font-color !important;
+}
+.e-ribbon.e-responsive .e-backstageheader,
+.e-ribbon.e-responsive .e-rescontent
+{
+    .header-gradient();
+}
+.e-ribbon.e-responsive .e-responsivetabheader .e-rescontent
+{
+ & when (@skin= "material") {
+      /*material*/
+    background:@content-bg-color;
+	box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.21);
+    border-radius: 2px;
+ }
+}
+.e-ribbon.e-responsive .e-backstageheader .e-backstagebutton,
+.e-ribbon.e-responsive .e-backstageheader a{
+    color:@default-icon-color;
+}
+
+.e-ribbon.e-responsive .e-responsiveback,
+.e-ribbon.e-responsive .e-groupmobdiv,
+.e-ribbon.e-responsive .e-groupdiv{
+border-bottom: 1px solid @content-border-color;
+}
+.e-ribbon.e-responsive .e-responsiveqat .e-rbn-button.e-btn.e-active .e-icon {
+     color:@header-font-color !important;
+}
+.e-ribbon.e-responsive .e-rescontent,
+.e-ribbon.e-responsive .e-backstageheader{
+box-shadow: -1px 0 10px 0 black;
+}
+
+.e-ribbon .e-rbnquickaccessbar .e-rbn-button .e-icon {
+   & when (@skin= "material") {
+        /*material*/
+        color:@header-icon-color !important;
+      }
+}
+.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-qatooldiv .e-split .e-in-wrap .e-rbn-splitbtn.e-rbn-button,.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-btn.e-rbn-button,.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-qatooldiv .e-split .e-in-wrap{
+	& when (@skin= "material") {
+      /*material*/
+      background: @header-bg-endcolor !important;
+    }
+}
+.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-qatooldiv .e-split .e-in-wrap .e-rbn-splitbtn.e-rbn-button:hover,.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-btn.e-rbn-button:hover{
+	& when (@skin= "material") {
+      /*material*/
+      background:transparent !important;
+    }
+}
+.e-ribbon.e-rbnwithqat.e-js .e-rbnquickaccessbar .e-rbn-button.e-tbtn.e-active,.e-ribbon.e-rbnwithqat.e-js .e-rbnquickaccessbar .e-rbn-button.e-tbtn.e-active:hover{
+	& when (@skin= "material") {
+      /*material*/
+     background:fade(@content-bg-color,12%)!important;
+    }
+}
+.e-ribbon.e-rbnwithqat.e-js .e-rbnquickaccessbar .e-rbn-button.e-tbtn.e-active,.e-ribbon.e-rbnwithqat.e-js .e-rbnquickaccessbar .e-rbn-button.e-tbtn.e-active:hover,.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-btn.e-rbn-button:hover{
+	& when (@skin= "material") {
+      /*material*/
+     background:fade(@content-bg-color,12%);
+    }
+}
+.e-ribbon.e-responsive .e-responsivetabli.e-resactive{
+	& when (@skin= "material") {
+      /*material*/
+     color:@grey-400;
+    }
+}
+.e-ribbon.e-responsive .e-ribresmenu a,.e-ribbon.e-responsive .e-responsivetabli,.e-ribbon.e-responsive .e-rescontent .e-responsivetabli:hover{
+     & when (@skin= "material") {
+        /*material*/
+     background: @grey-200;
+    }
+}
+.e-ribbon.e-responsive .e-backstageheader .e-backstageli:hover, .e-ribbon.e-responsive .e-backstageheader .e-backstagebutton:hover{
+     & when (@skin= "material") {
+        /*material*/
+     background:fade(@content-bg-color,12%);
+    }
+}
+.e-ribbon.e-js .e-backstageheader .e-backstageli a, .e-ribbon.e-js .e-backstageheader .e-backstagebutton{
+     & when (@skin= "material") {
+        /*material*/
+      color: fade(@header-font-color,70%);
+    }
+}
+.e-ribbon .e-header>.e-select a, .e-ribbon .e-left>.e-select a, .e-ribbon .e-right>.e-select a,.e-ribbon.e-js .e-header .e-apptab .e-menu>li:first-child>a, .e-ribbon.e-js .e-header .e-apptab .e-menu>li:first-child>a>span,.e-ribbon .e-header>.e-apptab .e-apptabanchor{
+  & when (@skin= "material") {
+        /*material*/
+     color: fade(@header-font-color,70%);
+    }
+}
+.e-ribbon.e-js .e-header .e-apptab .e-menu >.e-list:nth-child(1):not(.e-active) > a:hover{
+  & when (@skin= "material") {
+        /*material*/
+      color: fade(@base-font-color,87%);    
+    }
+}
+.e-ribbon .e-header>.e-active a, .e-ribbon .e-left>.e-active a, .e-ribbon .e-right>.e-active a,.e-ribbon .e-header>.e-select:hover a, .e-ribbon .e-left>.e-select:hover a, .e-ribbon .e-right>.e-select:hover a{
+  & when (@skin= "material") {
+        /*material*/
+      color: @header-font-color;
+    }
+}
+.e-ribbon .e-header>.e-select, .e-ribbon .e-left>.e-select, .e-ribbon .e-right>.e-select,.e-ribbon .e-header>.e-active, .e-ribbon .e-left>.e-active, .e-ribbon .e-right>.e-active{
+  & when (@skin= "material") {
+        /*material*/
+      background: transparent !important;
+      color: @header-font-color !important;
+    }
+}
+ .e-ribbon .e-ddl.e-widget.e-rbn-ddl .e-input,.e-ribbon .e-rbn-ddl.e-ddl .e-select{
+    & when (@skin= "material") {
+      /*material*/
+     background: @grey-100;
+     box-shadow: none;
+    }
+}
+.e-ribbon.e-js .e-header .e-contextual .e-contextualtabset.e-active{
+    & when (@skin= "material") {
+      /*material*/
+     border-bottom: 2px solid @accent-color !important;
+    }
+}
+.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar.e-rbnbelow{
+    & when (@skin= "material") {
+      /*material*/
+      background: @header-bg-endcolor;
+    }
+}
+.e-ribbon.e-js .e-split.e-widget .e-rbn-button.e-btn.e-select:hover,.e-ribbon.e-js .e-rbn-button.e-btn.e-select:hover,
+.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowbottom .e-split-btn.e-left-btn,.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowbottom .e-split-btn.e-drp-btn,
+.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowtop .e-split-btn.e-left-btn,.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowtop .e-split-btn.e-drp-btn,
+.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowleft .e-split-btn.e-left-btn,.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowright .e-split-btn.e-drp-btn,
+.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowright .e-split-btn.e-left-btn,.e-ribbon.e-js .e-split.e-widget:hover .e-in-wrap.e-splitarrowleft .e-split-btn.e-drp-btn
+{
+    & when (@skin= "material") {
+      /*material*/
+      background: @grey-300;
+    }
+}
+.e-ribbon.e-js .e-rbn-button.e-tbtn.e-select.e-active:hover, .e-ribbon.e-js .e-rbn-button.e-tbtn.e-select.e-active{
+    & when (@skin= "material") {
+      /*material*/
+      background: @grey-400;
+    }
+}
+
+.e-ribbon.e-js .e-rbn-split.e-split.e-widget:hover .e-in-wrap.e-splitarrowright .e-split-btn.e-left-btn {
+    & when (@skin="material") {
+        border-width: 0px 0.5px 0px 0px;  
+        border-color: fade(@base-font-color,12%);
+    }
+}
+.e-ribbon.e-responsive.e-js .e-responsivecontent .e-innerdivrow:after, .e-ribbon.e-responsive.e-js .e-responsivecontent .e-innerdiv:after {
+	 & when (@skin= "material") {
+    background:  @grey-300;
+	}
+}
+.e-ribbon.e-responsive.e-js .e-ddl.e-widget.e-rbn-ddl .e-in-wrap{
+ & when (@skin= "material") {
+  border-bottom: 1px solid fade(@base-font-color,12%);
+	 }
+}
+.e-ribbon .e-expandcollapse .e-icon:after{
+  & when (@skin= "material") {
+     /*material*/
+     background: @base-font-color;
+     background: fade(@base-font-color,12%);
+ }
+}
+
+.e-ribbon.e-responsive.e-js .e-icon.e-ribuparrow:before,.e-ribbon.e-responsive.e-js .e-ribupdivarrow .e-icon.e-ribdownarrow:before,.e-ribbon.e-responsive.e-js .e-icon.e-ribrightarrow:before,.e-ribbon.e-responsive.e-js .e-groupresponsive.e-ribleftarrow:before {
+	 & when (@skin= "material") {
+        /*material*/
+       color: fade(@base-font-color,87%);
+      }
+}
+.e-ribbon .e-expandcollapse .e-icon:after,.e-ribbon.e-responsive.e-js .e-ribupdivarrow .e-icon:after{
+  & when (@skin= "material") {
+     /*material*/
+     background: @base-font-color;
+     background: fade(@base-font-color,12%);
+ }
+}

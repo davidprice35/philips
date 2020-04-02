@@ -1,0 +1,76 @@
+@import "definition.less";
+
+/*------------------------------------- tagcloud -------------------------------------------*/
+
+.e-tagcloud {
+    background-color: @content-bg-color;    
+}
+.e-tagcloud.e-js .header {
+    border-color: @default-border-color;
+}
+
+.e-tagcloud .e-title {
+    & when (@skin= "material") {
+        /*material*/ 
+       background: @content-bg-color;
+	   color: fade(@base-font-color,87%);
+	   font-size: 20px;
+	   font-weight: 500;
+       font-family: @font-family; 
+       border-top: 0px solid @grey-200;
+    } 
+    & when not (@skin= "material") {
+        /*other*/
+        & when (@skin= "office-365") {  
+            border-bottom: 0px @border-type @neutral-light;
+            border-color: @neutral-light; 
+            font-size: 14px;
+            font-family: @font-family;
+	        color: @theme-light-font; 
+        } 
+        & when not (@skin= "office-365") {  
+            border-color: @header-border-color;
+            border-bottom: @tools-border-radius @border-type @active-bg-stcolor;
+            font-size: @header-font-size; 
+	        color: @header-font-color; 
+        }   
+	   .header-gradient();
+	   font-weight: @header-font-weight; 
+    .office-dialog-active-line-color; 
+    }   
+}
+.e-tagcloud .e-load {
+    background-image: @ajaxloaderimage;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.e-tagcloud .e-tagitems .e-txt { 
+     & when (@skin= "material") {
+        /*material*/ 
+       color:fade(@base-font-color,87%);
+    } 
+    & when not (@skin= "material") {
+        /*other*/ 
+	color: @content-font-color; 
+    }
+}
+.e-tagcloud .e-tagitems .e-txt.hover { 
+     & when (@skin= "material") {
+        /*material*/ 
+       color:fade(@base-font-color,54%);
+    } 
+    & when not (@skin= "material") {
+        /*other*/ 
+	   .high-contrast-tagcloud-txt-hover;
+	   color:@active-bg-stcolor; 
+    }
+    
+}
+.e-tagcloud .e-cloud, .e-tagcloud .e-list {
+    & when (@skin= "office-365") {
+    border-color: @neutral-light; 
+    }
+    & when not (@skin= "office-365") {
+    border-color: @content-border-color; 
+    }
+} 

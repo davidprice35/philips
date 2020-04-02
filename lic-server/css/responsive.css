@@ -1,0 +1,269 @@
+
+
+@media(max-width:767px){
+	.rightbar .nav-tabs>li>a {
+    width: 94px;
+    font-size: 10px;
+    padding: 10px 5px;
+}
+.rightbar .tab-content .tab-pane h3 {font-size: 15px;}
+.top-header img{margin:auto auto 30px;}
+.top-header .navbar-collapse {padding: 0 15px;}
+.rightbar {margin-top: 30px;}
+
+.rightbar .tab-content{padding:10px;}
+.rightbar .tab-content .tab-pane .table1 tr th{font-size:12px;}
+.rightbar .tab-content .tab-pane .table1 tr td{font-size:12px;}
+.top-header .navbar-inverse{clear:both;}
+.top-header .navbar-collapse {
+    position: absolute;
+    z-index: 10000;
+    background: #000;
+    width: 100%;
+}
+.top-header .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{border-color:inherit;}
+.navbar_div {
+    clear: both;
+}
+.top-header  ul.nav.navbar-nav:first-child{border-bottom:none;}
+.top-header .navbar-inverse .navbar-nav>.active>a:after{display:none;}
+.form-div{margin:0;}
+.border-left {
+    border-left: none;
+    padding-left: 15px;
+}
+.checkbox-body-part{margin-top:0;}
+.navbar_div .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    float: left;
+    width: 270px;
+    margin-top: 0;
+    background-color: #fff;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	left:0;
+	right:inherit;
+}
+.icons-right {
+    margin-left: 15px;
+}
+.right-padding {width:100%;
+    padding-left: 15px;
+}
+.left-padding{width:100%;}
+
+/*14feb css start*/
+	.rightbar .pending-changes{padding:0;}
+	.rightbar .pending-changes .tab-pane h3{padding:20px 10px;}
+	.sortby-section{padding:10px 8px;}
+	
+	.sortby-section .list-inline>li {padding: 0 2px 0 0;}
+	.sortt .btn.approved {padding: 2px 4px;font-size: 11px;}
+	.sort-date span{font-size:12px;}
+	.sortby-section p{font-size:12px;}
+	.sortt select{width: 60px;padding: 2px 5px;font-size: 12px;}
+	.sortt .btn.approved span {padding-right: 0;}
+	.table-pending-section { padding: 15px;}
+    .top-tabs-link .nav-pills > li > a {
+        font-size: 12px;
+    }
+    .container {padding:0 15px;
+    }
+/*14feb css end*/
+
+/**28mar css start**/
+.toshiba-content td{padding:20px!important;}
+.toshiba-content table thead th{padding:5px 20px!important;}
+/**28mar css end**/
+}
+
+@media(min-width:767px) and (max-width:991px){
+	.rightbar .nav-tabs>li>a{width:150px;}
+	.top-header img{margin:auto auto 30px;}
+	.top-header .navbar-inverse .navbar-nav>li>a{padding:7px;font-size:12px;}
+	.left-sidebar {margin-top: 0;}
+	.rightbar .tab-content .tab-pane h3 {font-size: 18px;}
+	.rightbar .tab-content .tab-pane .table1 tr th{padding:4px;}
+	.left-sidebar .panel-title {font-size: 12px;}
+	.left-sidebar .panel-heading{padding:10px 7px;}
+	.checkbox-body-part ul li label{font-size:12px;}
+	.navbar_div {padding: 0;}
+	.top-header .navbar-inverse .navbar-nav>.active>a:after{top:25px;}
+	.form-div h2{font-size:20px;}
+	.border-left {padding-left: 30px;}
+	.form-div {margin: 0 30px;}
+	.drop-down img{margin:0!important;}
+	.drop-down { margin-top: 5px;}
+	.icons-right {margin-left: 15px;}
+	.checkbox-body-part ul li { width: 100%;}
+	
+	
+	/*14feb css start*/
+
+	.sortby-section .list-inline>li {padding: 0 2px 0 0;}
+	.sortt .btn.approved {padding: 2px 4px;font-size: 11px;}
+	.sort-date span{font-size:12px;}
+	.sortby-section p{font-size:12px;}
+	.sortby-section{padding:10px 10px;}
+	.sortt select{width: 65px;padding: 2px 5px;font-size: 12px;}
+	.sortt .btn.approved span {padding-right: 0;}
+	.rightbar .pending-changes .tab-pane h3{padding:15px;}
+	.table-pending-section {padding: 15px;}
+    .top-tabs-link .nav-pills > li > a {
+        font-size: 12px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+	/*14feb css end*/
+	
+	
+	/**28mar css start**/
+	.left-padding {
+		padding-right: 10px;
+		width: 25%;
+	}
+	.right-padding{width:75%;}
+	.competitors-right .nav-tabs>li>a {
+		width: 95px;
+		font-size: 10px;padding:10px;
+	}
+	.toshiba-content table thead th{padding:5px 20px;}
+	.toshiba-content td{padding:15px!important;}
+	.table_content-div {
+		height: 400px;
+		min-height: 400px;
+	}
+	.checkbox-body-part .checkbox label{font-size:11px;}
+	/**28mar css end**/
+}
+	
+	
+@media(min-width:992px) and (max-width:1199px){
+	.top-header .navbar-inverse .navbar-nav>li>a {
+		font-size: 13px;
+		padding: 10px 6px;
+	}
+	.bottom-tab .col{margin:0 4px;}
+	.bottom-tab label{font-size:11px;}
+	.icons-right {margin-left: 0px;}
+	
+	/*14feb css start*/	
+	
+	.sortby-section .list-inline>li {padding: 0 2px 0 0;}
+	.sortt .btn.approved {padding: 2px 4px;font-size: 11px;}
+	.sort-date span{font-size:12px;}
+	.sortby-section p{font-size:12px;}
+	.sortby-section{padding:10px 10px;}
+	.sortt select{width: 70px;padding: 2px 5px;font-size: 12px;}
+	.table-pending-section {padding: 15px;}
+    .top-tabs-link .nav-pills > li > a {
+        font-size: 12px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+	/*14feb css end*/
+	
+	
+	/**28mar css start**/
+	.left-padding {
+		padding-right: 10px;
+		width: 25%;
+	}
+	.right-padding{width:75%;}
+	.competitors-right .nav-tabs>li>a {
+		width: 130px;
+		font-size: 12px;
+	}
+	.toshiba-content table thead th{padding:5px 20px;}
+	.toshiba-content td{padding:20px!important;}
+	.table_content-div {
+		height: 400px;
+		min-height: 400px;
+	}
+	/**28mar css end**/
+}
+
+
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) {
+	.wros {
+		padding-top: 20px;padding-bottom: 10px;
+	}
+	.rightbar .tab-content .tab-pane h3 span {
+		float: left;
+		margin-top: 10px;
+		    margin-bottom: 10px;
+	}
+	.bottom-tab .col {
+    display: block;
+	}
+	.left-sidebar {
+     margin-top: 0px; 
+}
+.top-header .navbar-toggle{margin-right:0;}
+
+/*14 feb css start*/
+.sortt select {
+    width: 60px!important;
+}
+.sortt .btn.approved{font-size:12px!important;}
+.sortby-section {
+    padding: 10px 7px!important;
+}
+/*14 feb css start*/
+
+.clinical-preview .panel-body ul{padding-left:0;}
+ }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+	.wros {
+		padding-top: 20px;padding-bottom: 10px;
+	}
+	.rightbar .tab-content .tab-pane h3 span {
+		float: left;
+		margin-top: 10px;
+		    margin-bottom: 10px;
+	}
+	.bottom-tab .col {
+    display: block;
+	}
+		.left-sidebar {
+     margin-top: 0px; 
+}
+.top-header .navbar-toggle{margin-right:0;}
+
+/*14 feb css start*/
+.sortt select {
+    width: 50px;
+}
+.sortt .btn.approved{font-size:10px;}
+.sortby-section {
+    padding: 10px 2px;
+}
+/*14 feb css start*/
+.clinical-preview .panel-body ul {
+    padding-left: 0px;
+}
+}
+
+
+@media(min-width:1200px) and (max-width:1300px){
+	.competitors-right .nav-tabs > li > a {
+    width: 188px;
+}
+}	
+	
+@media(min-width:1400px) and (max-width:1600px){
+	.competitors-right .nav-tabs > li > a {
+    width: 221px;
+}
+}

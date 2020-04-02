@@ -1,0 +1,274 @@
+@import "definition.less";
+
+/*------------------------------pdfviewer Theme Start-------------------------------*/
+&.e-pdfviewer-outerborder:hover{
+    .hover-gradient();
+    border-color: @hover-border-color;
+    color: @content-font-color;
+}
+
+&.e-pdfviewer-tbdiv.e-pdfviewer-exporttip{
+	.default-gradient();
+    border-color:@content-border-color;
+	background-color:@content-bg-color;
+}
+
+&.e-pdfviewer-tbdiv.e-pdfviewer-fittopagetip{
+	.default-gradient();
+    border-color:@content-border-color;
+	background-color:@content-bg-color;
+}
+
+&.e-pdfviewer-tbdiv.e-pdfviewer-tooltip{
+    & when not (@skin="material") and not (@skin="office-365")  { 
+        background:@content-bg-color;
+        border-color:@content-border-color;
+    }
+    & when (@skin="material") {
+        background-color:@grey-700;
+        border:0px solid @content-border-color;
+        border-radius:2px;
+        padding-left:8px;
+        padding-right:8px;
+        padding-top:2px;
+        padding-bottom:2px;
+    }
+    & when (@skin="office-365") {
+        font-family:@font-family;
+        font-size:12px;
+        background-color:@info-bg-color;
+        border-color: @neutral-secondary-alt;
+        border-radius:2px;
+        padding-left:8px;
+        padding-right:8px;
+        padding-top:2px;
+        padding-bottom:2px;
+    }
+}
+
+&.e-pdfviewer-headerspan,.e-pdfviewer-contentspan{
+	font-family: @font-family !important; 
+    & when not (@skin="material") { 
+        color:@content-font-color;
+    }
+    & when (@skin="material") {
+        color:@primary-font-color;
+        font-size:10px !important;
+    }
+}
+
+&.e-pdfviewer-viewer{
+    font-size:@content-font-size;
+}
+
+&.e-pdfviewer-popuppageno,.e-pdfviewer-popuptotalpage{
+    color : @rv-popuppage-color; 
+}
+
+&.e-pdfviewer-toolbarcontainer .ejinputtext{
+	background-color: @content-bg-color !important;
+ }
+
+&.e-pdfviewer-viewerblock {
+    background-color:@rv-viewerblock-bg-color;
+    font-size: @rv-viewerblock-font-size;
+	color:@content-font-color;
+}
+
+&.e-pdfviewer-viewerblockcellcontent {
+    font-size: @rv-viewerblockcellcontent-font-size;
+    color: @content-font-color;
+}
+
+&.e-pdfviewer-viewpdf {
+    border-left-color: @content-border-color;
+}
+
+&.e-pdfviewer-scrollcontainer,
+ .e-pdfviewer-viewer>.e-splitter .e-pane{
+    background-color: @pdfviewer-scrollcontainer;
+}
+
+&.e-pdfviewer-pageviewcontainer{
+    background-color: @rv-pageviewcontainer-bg-color;
+}
+
+&.e-pdfviewer-pageview {
+    -moz-box-shadow: @rv-pageview-moz-box-shadow;
+    -webkit-box-shadow: @rv-pageview-webkit-box-shadow;
+    box-shadow: @rv-pageview-box-shadow;
+    border-color :@rv-pageview-border-color;
+}
+
+&.e-pdfviewer-label,
+&.e-pdfviewer-tbpage,
+&.e-pdfviewer-elementalignments,
+&.e-pdfviewer-textbox{
+    color: @content-font-color;
+}
+
+&.e-pdfviewer-elementalignments.ejinputtext:focus {
+    & when (@skin="material") {
+        border-color:rgba(0,0,0,0.38);
+    }
+}
+
+&.e-pdfviewer-label,
+&.e-pdfviewer-tbpage,
+&.e-pdfviewer-elementalignments, 
+&.e-pdfviewer-textbox{
+    font-size: @content-font-size;
+    font-weight: @content-font-weight;
+}
+
+&.e-pdfviewer-labelpageno {
+    & when not (@skin="material") {
+        font-size: @rv-labelpageno-font-size;
+    }
+    & when (@skin="material") {
+        font-size:13px;
+    }
+}
+
+&.e-pdfviewer-documentmapcontainer div,
+&.e-pdfviewer-documentmappopup{
+    background-color: @rv-documentMappopup-bg-color;
+}
+
+&.e-pdfviewer-pagepopupinfo{
+    background-color:@rv-popuppageinfo-bg-color;
+}
+
+ &.e-pdfviewer-viewerblock,
+ &.e-pdfviewer-viewer,
+ &.e-pdfviewer-pagenumber,
+ &.e-pdfviewer-tbpage,
+ &.e-pdfviewer-tbdiv.e-pdfviewer-exportlist,
+ &.e-pdfviewer-label,
+ &.e-pdfviewer-labelpageno {
+    font-family: @font-family !important;
+}
+
+ &.e-pdfviewer-viewerblock,
+ &.e-pdfviewer-elementalignments,
+ &.e-pdfviewer-viewerblockcellcontent,
+ &.e-pdfviewer-viewerblockcontent,
+ &.e-pdfviewer-textbox, 
+ &.e-pdfviewer-documentmappopup{
+    border-color: @content-border-color;
+}
+
+ &.e-pdfviewer-elementalignments.ejinputtext {
+     & when (@skin="material") {
+        border-color:rgba(0,0,0,0.26);
+        font-size: 13px;
+        color:rgba(0,0,0,0.87);
+        border-radius:2px;
+     }
+ }
+
+ &.e-pdfviewer-elementalignments.ejinputtext::selection {
+     & when (@skin="material") {
+         background-color:@accent-color;
+         color:@accent-font-color;
+     }
+ }
+
+ &.e-pdfviewer-toolbarcontainer.e-toolbar{
+     .pdfviewer-toolbar-border-color;
+     & when not (@skin = "material") and not (@skin = "office-365") {
+         border-color: @default-border-color;
+     }
+     & when (@skin = "material") {
+         border-color:@grey-300;
+     }
+ }
+
+ &.e-pdfviewer-searchbox{
+     .pdfviewer-searchtoolbar-border-color;
+    & when not (@skin = "material") {
+         border-color: @default-border-color;
+     }
+     & when (@skin = "material") {
+         border-color:@grey-300;
+         background-color:@grey-50;
+     }
+ }
+ 
+ &.e-pdfviewer-viewercontainer{
+     & when not (@skin = "material") and not (@skin = "office-365") {
+     .pdfviewer-viewercontainer-bgcolor;
+     background-color: @default-bg-stcolor;
+     .pdfviewer-viewercontainer-border-color;
+     border-color: @default-border-color;
+     }
+     & when (@skin = "material") {
+     .pdfviewer-viewercontainer-bgcolor;
+     background-color: @grey-200;
+     .pdfviewer-viewercontainer-border-color;
+     border-color: @grey-300;
+     }
+     & when (@skin = "office-365") {
+     .pdfviewer-viewercontainer-bgcolor;
+     background-color: @neutral-quaternary-alt;
+     .pdfviewer-viewercontainer-border-color;
+     border-color: @neutral-tertiary-alt;
+     }
+ }
+
+ &.e-pdfviewer-pageCanvas{
+     & when not (@skin = "material") and not (@skin = "office-365") {      
+         border: solid #000000 1px;
+     }
+     & when (@skin = "material") {
+         box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.16);
+     }
+     & when (@skin = "office-365") {
+         box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+     }
+ }
+ 
+    &.e-pdfviewer-popupmenu {
+        border: solid 2px @default-border-color;
+        background-color: @default-bg-stcolor;
+    }
+    &.e-pdfviewer-innercontent{
+        border-color:black;
+        background-color:white;
+    }
+    &.e-pdfviewer-closeicon{
+        color:@default-font-color;
+    }
+    &.e-pdfviewer-properties-okbtn, &.e-pdfviewer-properties-cancelbtn {
+        & when not (@skin = "material") and not (@skin = "office-365") {
+            background-color:@content-bg-color !important;
+        }
+    }
+    &.e-pdfviewer-currenttime, &.e-pdfviewer-username{
+        color:@default-font-color;
+    }
+    &.e-tab .e-header>.e-active.e-pdfviewer-tab-li a {
+        color:@default-font-color !important;
+    }
+    &.e-pdfviewer-opacity-slider.e-slider .e-handle.e-select {
+        background-color:@widget-bg-color;
+    }
+    &.e-tab .e-header>.e-active.e-pdfviewer-tab-li {
+        & when (@skin = "flat-azure") {
+        border-top-color:@default-border-color !important;
+        }
+    }
+
+&.e-pdfviewer-popupli:hover {
+   .hover-gradient();
+    background-color:@hover-bg-stcolor;
+    color:@hover-font-color;
+}
+
+&.e-pdfviewer-popupli {
+    color: @content-font-color !important;
+    font-family: @font-family !important;
+    font-size: @content-font-size !important;
+    font-weight: @content-font-weight !important;
+}
+/*------------------------------pdfviewer Theme End-------------------------------*/

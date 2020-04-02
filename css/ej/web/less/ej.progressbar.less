@@ -1,0 +1,37 @@
+@import "definition.less";
+
+.e-progressbar 
+{ 
+    & when (@skin= "material") {
+        /*material*/  
+	   background-color: fade(@base-font-color,12%);  
+	   border-color: transparent;   
+       height: 5px !important;         
+    } 
+    & when not (@skin= "material") {
+        /*other*/ 
+     & when (@skin= "office-365") {
+	    background-color: @neutral-light;  
+	    border-color: @neutral-light; 
+        height: 2px !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }
+        & when not (@skin= "office-365") {
+	    background-color: @content-bg-color;  
+	    border-color: @content-border-color; 
+        }
+    }  
+	color: @content-font-color;
+}
+.e-progressbar .e-progress 
+{
+    & when (@skin= "material") {
+        /*material*/ 
+        background: @accent-color;                
+    } 
+    & when not (@skin= "material") {
+        /*other*/
+        .active-gradient();
+    }  
+}

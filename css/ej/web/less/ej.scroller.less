@@ -1,0 +1,272 @@
+
+@import "definition.less";
+/*------------------------------------- scrollbar -------------------------------------------*/
+
+.e-scrollbar .e-vscroll,
+.e-scrollbar .e-hscroll,
+.e-scrollbar .e-vhandlespace {
+    & when (@skin="material") {
+        background-color: @grey-400;
+        border-color: @grey-300;
+    }
+    & when (@skin= "office-365") {        
+         background-color: @neutral-white;
+    }
+   & when not (@skin= "material") and not (@skin="office-365") {
+        background-color: @scroll-bg-color;
+    }
+}
+.e-scrollbar .e-vscroll{
+    &when not(@skin="material"){
+        border-left:@border-size @border-type @content-border-color;
+    }
+    &when (@skin="material"){
+        border-left:@border-size @border-type @grey-300;
+    }
+     &when (@skin="office-365"){
+        border-left:none;
+    }
+    border-right:none;
+}
+.e-scrollbar .e-hscroll{
+    &when not(@skin="material"){
+        border-top:@border-size @border-type @content-border-color;
+    }
+    &when (@skin="material"){
+        border-top:@border-size @border-type @grey-300;
+    }
+     &when (@skin="office-365"){
+        border-top:none;
+    }
+}
+.e-scrollbar .e-vhandlespace,
+.e-scrollbar .e-hhandlespace {
+    position: relative;
+    background-color: @scroll-bg-color;
+}
+.e-scrollbar .e-hscroll .e-hdown.e-icon{
+    &when not(@skin="material"){
+        border-right: @border-size @border-type @content-border-color;
+    }
+    &when (@skin="material"){
+        border-right:@border-size @border-type @grey-300;
+    }
+     &when (@skin="office-365"){
+        border-right:none;
+    }
+}
+.e-scrollbar .e-hscroll .e-hup.e-icon{
+    border-left: none;
+} 
+.e-scrollbar .e-vscroll .e-chevron-down_01.e-icon{
+    &when not(@skin="material"){
+        border-bottom: @border-size @border-type @content-border-color;
+    }
+    &when (@skin="material"){
+        border-bottom:@border-size @border-type @grey-300;
+    }
+      &when (@skin="office-365"){
+        border-bottom:none;
+    }
+}
+.e-scroller.e-rtl .e-scrollbar .e-vscroll{
+    &when not(@skin="office-365"){
+    border-right:@border-size @border-type @content-border-color;
+    }   
+     &when (@skin="office-365"){
+        border-right:none;
+    }
+    border-left:none;
+}
+.e-scroller.e-rtl .e-scrollbar .e-hscroll .e-hup.e-icon{
+    border-left: @border-size @border-type @content-border-color;
+}
+.e-scroller.e-rtl .e-scrollbar .e-hscroll .e-hdown.e-icon{
+    border-right: none;
+} 
+.e-scrollbar .e-vhandle,
+.e-scrollbar .e-hhandle {
+    &when (@skin="material") {
+        background-color: @grey-400;
+    }
+    & when (@skin= "office-365") {        
+         background-color: @neutral-light;
+    }
+    & when not (@skin= "material") and not (@skin="office-365"){
+        background-color: @scroll-handle-color;
+    }
+    transition: top .1s linear 0s, left .1s linear 0s;
+}
+.e-scrollbar .e-vhandle {
+    &when not(@skin="material") {
+        border-top: 1px solid @row-border-color;
+        border-bottom: 1px solid @row-border-color;
+    }
+
+    &when (@skin="material") {
+        border-top: 0.5px solid transparent;
+        border-bottom: 0.5px solid transparent;
+    }
+}
+.e-scrollbar .e-vhandle:hover,.e-scrollbar .e-vhandle:active {   
+    &when (@skin="material") {
+        border-top: 0.5px solid @grey-300;
+        border-bottom: 0.5px solid @grey-300;
+    }
+}
+.e-scrollbar .e-hhandle {
+    &when not(@skin="material") {
+        border-left: 1px solid @row-border-color;
+        border-right: 1px solid @row-border-color;
+    }
+
+    &when (@skin="material") {
+        border-left: 0.5px solid transparent;
+        border-right: 0.5px solid transparent;
+    }
+}
+
+.e-scrollbar .e-hhandle:hover,.e-scrollbar .e-hhandle:active {   
+    &when (@skin="material") {
+        border-left: 0.5px solid @grey-300;
+        border-right: 0.5px solid @grey-300;
+    }
+}
+
+.e-vhandle.e-box.e-pinch.e-touch,.e-hhandle.e-box.e-pinch.e-touch{
+    & when not (@skin="material") {
+        background-color:@hover-bg-stcolor;
+    }
+    & when (@skin="material") {
+        background-color: @grey-600;
+        border-color: @grey-700;
+    }
+}
+.e-scrollbar .e-vhandle:hover,
+.e-scrollbar .e-hhandle:hover {    
+    & when (@skin="material") {
+        background-color: @grey-500;
+        border-color: @grey-600;
+    }
+    & when (@skin= "office-365") {        
+         background-color: @neutral-primary;
+    }
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background-color: @hover-bg-stcolor;
+        cursor: default;
+        border-color: @hover-border-color;
+    }
+}
+
+.e-scrollbar .e-vhandle.e-disable:hover,
+.e-scrollbar .e-hhandle.e-disable:hover,
+.e-scrollbar .e-vhandle.e-disable,
+.e-scrollbar .e-hhandle.e-disable,
+.e-scroller .e-vscroll .e-vup.e-button.e-disable, .e-scroller .e-vscroll .e-vdown.e-button.e-disable,
+.e-scroller .e-hscroll .e-hup.e-button.e-disable, .e-scroller .e-hscroll .e-hdown.e-button.e-disable,
+.e-scroller .e-vscroll .e-vup.e-button.e-disable:hover, .e-scroller .e-vscroll .e-vdown.e-button.e-disable:hover,
+.e-scroller .e-hscroll .e-hup.e-button.e-disable:hover, .e-scroller .e-hscroll .e-hdown.e-button.e-disable:hover {
+    & when (@skin="material") {
+        background-color: fade(@base-font-color,12%);
+        border-color: fade(@base-font-color,12%);
+    }
+}
+
+.e-scrollbar .e-vhandle:active,
+.e-scrollbar .e-hhandle:active {
+    & when (@skin="material") {
+        background-color: @grey-600;
+        border-color: @grey-700;
+    }
+}
+
+.e-scrollbar .e-button {
+    & when (@skin= "office-365") {        
+        color:@neutral-dark;
+    }
+    & when not (@skin="office-365") {
+        /*other*/       
+   color: @default-icon-color;
+   }
+    }
+    
+.e-scrollbar .e-button:hover
+{
+    & when (@skin= "office-365") {        
+         background-color:@neutral-white;
+        color: @neutral-dark;
+    }
+    & when not (@skin="office-365") {
+        /*other*/       
+     background-color:@hover-bg-stcolor;
+    color: @hover-icon-color;
+    }
+    border-color:@hover-border-color;
+}
+
+.e-scrollbar .e-button{
+     & when (@skin= "office-365") {        
+        background-color:@neutral-white;
+    }
+    & when not (@skin="office-365") {
+        /*other*/       
+   background-color:@scroll-handle-color;
+    }
+    
+}
+
+.e-scroller .e-disable .e-vhandle:hover,
+.e-scroller .e-disable .e-button :hover,
+.e-scroller .e-disable .e-hhandle:hover
+{
+    &when not(@skin="material"){
+    .handle-default-gradient();
+    border: 1px solid @row-border-color;
+    transition: top .1s linear 0s, left .1s linear 0s;
+    }
+}
+
+.e-scrollbar .e-v-line:before{
+    .vhandle-arrow();
+}
+
+.e-scrollbar .e-h-line:before{
+    .hhandle-arrow();
+}
+
+.e-scroller .e-button,
+.e-scroller .e-disable .e-button:hover
+{   
+    &when (@skin="material"){
+        color:fade(@base-font-color,54%);
+    }
+    & when (@skin= "office-365") {        
+         color:@neutral-secondary-alt;
+    }
+    & when not (@skin= "material") and not (@skin="office-365"){
+        color: @default-icon-color;
+    }
+}
+.e-scroller .e-disable .e-button:hover
+{
+   background-color: transparent;
+}
+
+.e-scroller .e-vscroll .e-vup.e-button, .e-scroller .e-vscroll .e-vdown.e-button, .e-scroller .e-hscroll .e-hup.e-button, .e-scroller .e-hscroll .e-hdown.e-button {
+    & when (@skin= "material") {
+        background-color: @grey-400;
+    }
+}
+
+.e-scroller .e-vscroll .e-vup.e-button:hover, .e-scroller .e-vscroll .e-vdown.e-button:hover, .e-scroller .e-hscroll .e-hup.e-button:hover, .e-scroller .e-hscroll .e-hdown.e-button:hover {
+    & when (@skin= "material") {
+        background-color: @grey-500;
+    }
+}
+
+.e-scroller .e-vscroll .e-vup.e-button:active, .e-scroller .e-vscroll .e-vdown.e-button:active, .e-scroller .e-hscroll .e-hup.e-button:active, .e-scroller .e-hscroll .e-hdown.e-button:active {
+    & when (@skin= "material") {
+        background-color: @grey-600;
+        border-color: @grey-700;
+    }
+}

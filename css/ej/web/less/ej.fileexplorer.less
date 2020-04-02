@@ -1,0 +1,608 @@
+@import "definition.less";
+
+
+.e-fileexplorer,.e-fileexplorer input:not(.e-textbox), input.e-fe-dialog-text:not(.e-textbox),
+.e-fe-toolbar.e-responsive-toolbar input{
+    border-color:@default-border-color;
+} 
+.e-fileexplorer input,  input.e-fe-dialog-text{
+    & when (@skin= "office-365") {
+        border-color:@default-border-color;
+    }
+}
+
+.e-fileexplorer,.e-fileexplorer input, input.e-fe-dialog-text,
+.e-fe-toolbar.e-responsive-toolbar input{
+    & when not (@skin= "material") and not (@skin="office-365") {
+        border-color:@default-border-color;
+    }
+} 
+
+.e-fileexplorer {
+    .office-file-explorer-toolbar-border-color;
+    border-color:@default-border-color;
+} 
+
+.e-fileexplorer .e-splitter .e-splitbar,
+.e-fileexplorer .e-statusbar,.e-fileexplorer .e-grid .e-gridheader, .e-fileexplorer.e-fe-mobile .e-fe-split-icon
+{
+    border-color: @content-border-color;
+}
+.e-fileexplorer .e-splitter .e-splitbar.e-h-bar{
+    & when (@skin= "office-365") {
+        border-color: @content-border-color;
+        border-style: solid;
+    }
+}
+.e-fileexplorer .e-statusbar {
+    .material-stylefor-bordertop();
+}
+.e-fileexplorer .e-statusbar .e-itemStaus{
+    & when (@skin= "material") {
+        color: fade(@base-font-color, 87%);
+    }
+}
+.e-fileexplorer input:not(.e-textbox),
+.e-fileexplorer .e-grid .e-headercelldiv, .e-fileexplorer .e-grid .e-gridcontent tr,
+.e-fileexplorer .e-tileview .e-tilenode .e-name,  input.e-fe-dialog-text:not(.e-textbox),
+.e-fe-toolbar.e-responsive-toolbar input
+{
+    & when (@skin= "material") {
+        color: fade(@base-font-color, 87%);
+    }
+    & when not (@skin= "material") {
+        color: @content-font-color;
+    }
+    
+}
+
+.e-fileexplorer .e-tileview .e-tilenode:hover .e-name,.e-fileexplorer .e-grid .e-gridcontent tr.e-hover td{
+    color: @hover-font-color;
+}
+.e-fileexplorer.e-js .e-grid td.e-active, .e-fileexplorer .e-tileview .e-tilenode.e-active .e-name{
+    & when (@skin= "material") {
+        color:rgba(0,0,0,.87);
+    }
+    & when (@skin= "office-365") {
+        color: @theme-light-font;
+    }
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        color:@active-font-color;
+    }
+    
+}
+.e-fileexplorer .e-tileview .e-tilenode.e-active:hover{
+    .hover-gradient();
+    border-color:@hover-border-color;
+}
+.e-fileexplorer .e-tileview .e-tilenode.e-active:hover .e-name{
+    & when (@skin= "office-365") {
+        color:@theme-light-font;
+    }
+    & when not (@skin= "office-365") {
+        color: @hover-font-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar .e-fe-split-button .e-active .e-icon, .fe-context-menu.e-menu.e-context .e-list.e-active > .e-menulink > .e-fileexplorer-toolbar-icon
+{
+    & when not (@skin= "material") and not (@skin="office-365"){
+        color: @active-icon-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar .e-fe-split-button.e-hover .e-active .e-icon, .e-fileexplorer .e-toolbar .e-fe-split-button.e-hover .e-icon {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @hover-icon-color;
+    }
+}
+
+.e-fileexplorer .e-treeview .e-fe-node-hover,  .e-fe-dialog.e-icon.e-close:hover
+{
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .hover-gradient();
+        color: @hover-font-color;
+        border-color: @hover-border-color;
+    }    
+}
+
+ .e-fileexplorer.e-js .e-tilenode.e-active, .e-fileexplorer.e-js .e-grid .e-gridcontent tr td.e-active
+{
+     & when (@skin= "material") {
+        border-color: @grey-100;
+        background: @grey-100;
+     }
+     & when (@skin= "office-365") {
+        border-color: @theme-lighter;
+        background:@theme-lighter;
+     }
+     & when not (@skin= "material") and not(@skin= "office-365") {
+        .high-contrast-file-explorer-content-active;
+        border-color: @active-border-color;
+        background: @active-bg-stcolor; 
+     }    
+}
+ .e-fileexplorer.e-js .e-tilenode.e-active:hover, .e-fileexplorer.e-js .e-grid .e-gridcontent tr:hover td.e-active{
+     & when (@skin= "material") {
+        border-color: @grey-200;
+        background: @grey-200;
+     }
+     & when (@skin= "office-365") {
+        border-color: @neutral-lighter;
+        background: @neutral-lighter;
+     }
+     & when not (@skin= "material") and not(@skin= "office-365") {
+        .hover-gradient();
+        color:@hover-font-color;
+        border-color:@hover-border-color;
+     }
+ }
+
+.e-fileexplorer.e-js .e-statusbar .e-active .e-icon
+{
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @active-bg-stcolor;
+    }
+}
+
+.e-fileexplorer.e-js .e-treeview .e-text:hover,
+.e-fileexplorer .e-actionbar .e-btn.e-select:hover,
+.e-fileexplorer .e-treeview .e-text.e-file-droppable
+{
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @hover-font-color;
+        border-color:@hover-border-color;
+    }
+}
+
+.e-fileexplorer input:not(.e-textbox) ,  input.e-fe-dialog-text:not(.e-textbox), .e-fe-toolbar.e-responsive-toolbar input,
+ .e-fe-split-context.e-menu.e-context.e-split,  .e-fe-split-context.e-menu.e-widget.e-split li.e-list
+{
+    background: @content-bg-color;
+}
+
+.e-fileexplorer .e-tilenode.e-hover, .e-fileexplorer .e-grid .e-gridcontent tr.e-hover td,
+.e-fileexplorer .e-tilenode.e-file-droppable, .e-fileexplorer .e-grid .e-gridcontent tr.e-file-droppable td,
+.e-fileexplorer .e-treeview .e-text.e-file-droppable
+{
+    & when (@skin= "material") {
+        border-color: @grey-200;
+		background: @grey-200;
+    }
+    & when (@skin= "office-365") {
+        border-color: @neutral-lighter;
+        background: @neutral-lighter;
+    }
+    & when not (@skin= "material") and not(@skin= "office-365") {
+        border-color: @hover-border-color;
+        background: @hover-bg-stcolor;
+    }
+}
+
+.e-fileexplorer .e-switchGridView.e-button:hover,
+.e-fileexplorer .e-swithListView.e-button:hover
+{
+    & when (@skin="office-365") {
+        background-color: @neutral-lighter;
+    }
+    & when not (@skin="office-365") {
+        .hover-gradient();
+    }
+    border-color: @hover-border-color;
+    border-color:@hover-border-color;
+}
+
+.e-fileexplorer .e-toolbar .e-fe-split-button.e-hover .e-btn.e-select,
+.e-fileexplorer .e-toolbar .e-fe-split-button .e-btn.e-select:focus {
+    & when not (@skin= "material") and not (@skin="office-365") {
+	    .hover-gradient();
+    }
+}
+
+.e-fileexplorer .e-toolbar>.e-horizontal>.e-active>span.e-fe-folder{
+     & when (@skin="office-365") {
+         background-color: transparent;
+     }
+}
+
+.e-fileexplorer .e-toolbar .e-hover .e-tool-input,
+.e-fe-toolbar.e-responsive-toolbar .e-hover .e-tool-input {
+    & when (@skin="office-365") {
+        border-color: @neutral-secondary-alt;
+    }
+}
+
+.e-fileexplorer.e-js .e-toolbar .e-feItem-Addressbar.e-hover,
+.e-fileexplorer.e-js .e-toolbar .e-feItem-Searchbar.e-hover,
+.e-fe-toolbar.e-responsive-toolbar.e-js .e-feItem-Addressbar.e-hover,
+.e-fe-toolbar.e-responsive-toolbar.e-js .e-feItem-Searchbar.e-hover {
+    & when (@skin="office-365") {
+        background: transparent;
+        border-color: transparent;
+    }
+}
+
+.e-fileexplorer .e-split.e-widget .e-split-btn.e-left-btn,.e-fileexplorer .e-split.e-widget .e-split-btn.e-drp-btn,
+.e-fe-toolbar .e-split.e-widget .e-split-btn.e-left-btn, .e-fe-toolbar .e-split.e-widget .e-split-btn.e-drp-btn{
+    background: none;
+}
+
+.e-fileexplorer .e-toolbar > .e-horizontal > .e-active > span.e-fe-folder {
+    & when (@skin= "material") {
+        background-color: transparent;
+    }
+}
+
+.e-fileexplorer .e-toolbar input, .e-fe-toolbar.e-responsive-toolbar.e-toolbar input {
+    & when (@skin= "material") {
+        border-color: fade(@base-font-color, 26%);
+    }
+}
+
+.e-fileexplorer .e-toolbar input::selection, .e-fe-toolbar.e-responsive-toolbar.e-toolbar input::selection {
+    & when (@skin= "material") {
+        color: @accent-font-color;
+        background: @accent-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar .e-tool-input:focus, .e-fe-toolbar.e-responsive-toolbar .e-tool-input:focus {
+    & when (@skin= "material") {
+        border-color: fade(@base-font-color, 38%);
+    }
+}
+
+.e-fileexplorer .e-toolbar .e-hover .e-tool-input,
+.e-fe-toolbar.e-responsive-toolbar .e-hover .e-tool-input {
+    & when (@skin= "material") {
+        border-color: fade(@base-font-color, 38%);
+    }
+}
+
+.e-fileexplorer.e-js .e-toolbar .e-feItem-Addressbar.e-hover, .e-fileexplorer.e-js .e-toolbar .e-feItem-Searchbar.e-hover,
+.e-fe-toolbar.e-responsive-toolbar.e-js .e-feItem-Addressbar.e-hover, .e-fe-toolbar.e-responsive-toolbar.e-js .e-feItem-Searchbar.e-hover {
+    & when (@skin= "material") {
+        background: transparent;
+        border-color: transparent;
+    }
+}
+
+.e-fileexplorer .e-statusbar .e-switchView .e-btn.e-select.e-flat .e-icon {
+    & when (@skin= "material") {
+        color: fade(@base-font-color, 54%);
+    }
+}
+
+.e-fileexplorer .e-statusbar .e-switchView .e-btn.e-select.e-active.e-flat .e-icon {
+    & when (@skin= "material") {
+        color: @accent-color;
+    }
+}
+
+.e-fileexplorer .e-split.e-widget:hover .e-in-wrap .e-split-btn.e-left-btn,
+.e-fe-toolbar.e-responsive-toolbar .e-split.e-widget:hover .e-in-wrap .e-split-btn.e-left-btn {
+    & when (@skin= "material") {
+        background-color: @grey-300;
+    }
+}
+
+.e-fileexplorer .e-tooltxt.e-feItem-Addressbar.e-active:after,
+.e-fe-toolbar.e-responsive-toolbar .e-tooltxt.e-feItem-Searchbar.e-active:after {
+    & when (@skin= "material") {
+        animation: none;
+    }
+}
+
+.e-fileexplorer .e-scrollbar .e-vscroll, .e-fileexplorer .e-scrollbar .e-hscroll {
+    & when (@skin= "material") {
+        border-color: @default-border-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar > .e-horizontal .e-fe-split-button .e-active, .e-fe-toolbar.e-responsive-toolbar .e-horizontal .e-fe-split-button .e-active {
+    & when (@skin= "material") {
+        background: @grey-300;
+        box-shadow: none;
+    }
+}
+
+.e-fileexplorer .e-statusbar .e-switchView .e-button.e-active:focus, .e-fileexplorer .e-statusbar .e-switchView .e-button.e-active:focus:hover {
+    & when (@skin= "material") {
+        background-color: fade(@accent-color, 26%);
+    }
+}
+
+.e-fileexplorer .e-statusbar .e-switchView .e-active.e-btn.e-select .e-icon {
+    & when (@skin= "material") {
+        color: @accent-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar
+{
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @default-icon-color;
+        .default-gradient();
+        border-color:@default-border-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .office-file-explorer-toolbar-bg-color;
+    }
+}
+
+.e-fe-toolbar.e-toolbar .e-feItem-Searchbar.e-tooltxt.e-active {
+    background: transparent;
+}
+.e-fileexplorer .e-grid .e-gridheader, .e-fileexplorer .e-grid .e-gridheader.e-scrollcss, .e-fileexplorer .e-grid .e-gridheader .e-headercell {
+    background: @content-bg-color;
+}
+.e-fileexplorer .e-alt_row, .e-fileexplorer .e-gridheader ,
+.e-fileexplorer .e-gridheader .e-headercell, .e-fileexplorer .e-grid .e-gridcontent,
+.e-fileexplorer .e-splitter .e-pane, .e-fileexplorer .e-scroller .e-scrollbar .e-vhandlespace, 
+.e-fileexplorer .e-scroller .e-scrollbar .e-hhandlespace
+{
+    background-color: @content-bg-color;
+}
+
+.e-fileexplorer .e-tilenode.e-hover .e-thumbImage
+{
+    border-color: @hover-border-color;
+}
+
+.e-fileexplorer.e-js .e-active .e-thumbImage
+{
+    border-color: @active-bg-stcolor;
+}
+
+ .e-menu > .e-list.e-fe-separator {
+    border-color: @content-border-color;
+}
+
+
+
+.e-fileexplorer .e-toolbar .e-hover .e-tool-input, .e-fe-toolbar.e-responsive-toolbar .e-hover .e-tool-input,
+.e-fileexplorer .e-toolbar .e-tool-input:focus, .e-fe-toolbar.e-responsive-toolbar .e-tool-input:focus {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .high-contrast-file-explorer-search-text;
+        border-color: @active-bg-stcolor;
+    }
+}
+.e-fileexplorer .e-toolbar .e-feItem-Addressbar.e-hover, .e-fileexplorer .e-toolbar .e-feItem-Searchbar.e-hover,
+.e-fe-toolbar.e-responsive-toolbar .e-feItem-Addressbar.e-hover, .e-fe-toolbar.e-responsive-toolbar .e-feItem-Searchbar.e-hover,
+.e-fileexplorer .e-toolbar .e-feItem-Searchbar.e-active, .e-fileexplorer .e-toolbar .e-feItem-Addressbar.e-active,
+.e-fe-toolbar.e-responsive-toolbar .e-feItem-Searchbar.e-active, .e-fe-toolbar.e-responsive-toolbar .e-feItem-Addressbar.e-active {
+    & when (@skin="office-365") {
+        background: transparent;
+        border-color: transparent;
+    }
+    & when not (@skin="office-365") {
+        background: @default-bg-stcolor;
+        border-color: @default-bg-stcolor;
+    }
+}
+.e-fileexplorer .e-toolbar .e-fe-split-button.e-hover, .e-fe-toolbar.e-responsive-toolbar .e-fe-split-button.e-hover,
+.e-fileexplorer .e-toolbar .e-fe-split-button.e-active, .e-fe-toolbar.e-responsive-toolbar .e-fe-split-button.e-active {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background: @default-bg-stcolor;
+        border-color: @default-bg-stcolor;
+    }
+}
+.e-dialog .e-fe-table table tr .e-readonly {
+  background:@content-bg-color;    
+  color: @content-font-color;
+}
+
+.e-dialog .e-fe-table table .e-border {
+    border-color:@content-border-color;
+}
+
+.e-fileexplorer .e-toolbar .e-fe-split-button .e-active .e-btn {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background: @active-bg-stcolor;
+        color: @active-font-color;
+    }
+}
+.e-fileexplorer .e-splitter .e-splitbar.e-shadowbar, .e-fileexplorer .e-splitter .e-splitbar.e-split-divider, 
+.e-fileexplorer .e-splitter .e-splitbar.e-split-divider:hover, .e-fileexplorer .e-splitter .e-hover.e-splitbar.e-split-divider{
+	background-color: transparent;
+}
+
+.e-fileexplorer .e-fe-popup .e-content {
+    background-color: @content-bg-color;
+    border-color: @default-border-color;
+}
+
+.e-fileexplorer .e-fe-popup .e-downtail:after {
+    border-top-color: @content-bg-color;
+}
+
+.e-fileexplorer .e-fe-popup .e-downtail:before, .e-fileexplorer .e-fe-popup .e-downtail {
+    border-top-color: @default-border-color;
+}
+
+.e-fileexplorer .e-fe-popup span:hover, .e-fileexplorer .e-fe-popup .e-spanclicked {
+    border-color: @default-icon-color;
+}
+.e-fileexplorer .e-tile-wrapper.e-js.e-file-droppable, .e-fileexplorer .e-grid .e-gridcontent.e-file-droppable{
+	box-shadow: 0px 0px 6px -1px @default-border-color inset;
+}
+.e-fe-dialog.e-dialog .e-fe-table tr td:first-child{
+     & when (@skin= "material") {
+            color: rgba(0,0,0,.38);
+			border-color: rgba(0,0,0,.38);
+     }
+}
+/*------------------------------------------------------------------*/
+
+.e-fileexplorer .e-toolbar.e-js {
+    .material-stylefor-fileexplorer();
+}
+
+.fe-context-menu.e-menu.e-context .e-mhover > a > span.e-fileexplorer-toolbar-icon,
+.fe-context-menu.e-menu.e-context .e-mfocused > a > span.e-fileexplorer-toolbar-icon {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .switch-file-explorer-context-icon-color;
+        color: @hover-font-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar.e-focus{
+    & when not (@skin= "material") and not (@skin="office-365") {
+	    .material-normal-box-shadow;
+    }
+}
+
+.e-fileexplorer .e-toolbar > ul > li .e-splitbutton.e-btn.e-select {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .material-file-explorer-splitbtn-shadow;
+        .office-file-explorer-splitbtn-bg-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar > ul > li .e-split.e-active .e-splitbutton.e-btn.e-select{
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background: @active-bg-stcolor;
+    }
+}
+
+.e-fileexplorer .e-toolbar > ul > .e-fe-split-button.e-hover .e-split.e-active .e-splitbutton.e-btn.e-select{
+    & when not (@skin= "material") and not (@skin="office-365"){
+        background: @hover-bg-stcolor;
+    }
+}
+
+.e-fileexplorer .e-toolbar > ul > li .e-splitbutton.e-btn.e-ntouch.e-select:hover {
+    & when not (@skin= "material") and not (@skin="office-365"){
+        .material-file-explorer-splitbtn-shadow;
+    }
+}
+
+
+.e-fileexplorer .e-toolbar .e-hover .e-tool-input,
+.e-fe-toolbar.e-responsive-toolbar .e-hover .e-tool-input,
+.e-fileexplorer .e-toolbar .e-tool-input:focus,
+.e-fe-toolbar.e-responsive-toolbar .e-tool-input:focus
+{
+    & when not (@skin= "material") and not (@skin="office-365"){
+        .material-normal-box-shadow;
+        .focus-border-color();
+    }
+}
+.e-fe-dialog input.e-fe-dialog-text{
+    & when (@skin= "material") {
+        box-shadow: none;
+        border-color: fade(@base-font-color, 12%);
+    }
+}
+.e-fe-dialog input.e-fe-dialog-text:hover, .e-fe-dialog input.e-fe-dialog-text:focus {
+    & when not (@skin= "material") and not (@skin="office-365"){
+        .material-normal-box-shadow;
+        .focus-border-color();
+    }
+}
+.e-fe-dialog input.e-fe-dialog-text:focus{
+    & when (@skin= "material") {
+        box-shadow: none;
+        border-color: @accent-color;
+    }
+}
+
+.e-fileexplorer .e-toolbar > ul > li .e-split {
+    & when not (@skin= "material") and not (@skin="office-365"){
+        .material-file-explorer-splitbtn-radius;
+    }
+}
+.e-fileexplorer .e-statusbar .e-button.e-btn:after {
+    & when (@skin= "material") {
+        background-color: fade(@accent-color, 38%);
+    } 
+}
+
+.e-fileexplorer .e-tile-wrapper .e-fe-selection-rect, .e-fileexplorer .e-gridcontent .e-fe-selection-rect {
+
+    & when (@skin= "high-contrast-01") {
+        border: 1px solid @active-border-color;
+    }
+
+    & when (@skin= "high-contrast-02") {
+        border: 1px solid @active-border-color;
+    }
+
+    & when (@skin= "material") {
+        border: 1px solid @accent-color;
+    }
+
+    & when not (@skin= "high-contrast-01") and not (@skin= "high-contrast-02") and not (@skin= "material") {
+        border: 1px solid @active-bg-stcolor;
+    }
+
+    .mouseselection-stylefor-fileexplorer();
+}
+
+.e-fileexplorer.e-ie8 .e-tile-wrapper .e-fe-selection-rect.e-active, .e-fileexplorer.e-ie8 .e-gridcontent .e-fe-selection-rect.e-active {
+    background-color: @active-bg-stcolor;
+}
+
+.e-fileexplorer .e-toolbar .e-tool-input:focus, .e-fe-toolbar.e-responsive-toolbar .e-tool-input:focus, .e-fe-dialog input.e-fe-dialog-text:focus {
+    & when (@skin= "office-365") {
+        border-color: @theme-primary;
+    }
+}
+
+.e-fileexplorer .e-toolbar .e-tool-input:hover, .e-fe-toolbar.e-responsive-toolbar .e-tool-input:hover, .e-fe-dialog input.e-fe-dialog-text:hover {
+    & when (@skin= "office-365") {
+        border-color: @neutral-secondary-alt;
+    }
+}
+
+.e-fe-dialog input.e-fe-dialog-text {
+    & when (@skin= "office-365") {
+        border-color: @neutral-tertiary-alt;
+    }
+}
+
+.e-fileexplorer input:not(.e-textbox), .e-fileexplorer .e-grid .e-headercelldiv, .e-fileexplorer .e-grid .e-gridcontent tr, .e-fileexplorer .e-tileview .e-tilenode .e-name,  input.e-fe-dialog-text:not(.e-textbox), .e-fe-toolbar.e-responsive-toolbar input {
+    & when (@skin= "office-365") {
+        color: @neutral-light-font;
+    }
+}
+
+.e-fileexplorer .e-statusbar .e-switchView .e-button.e-active:focus, .e-fileexplorer .e-statusbar .e-switchView .e-button.e-active:focus:hover {
+    & when (@skin= "office-365") {
+        background-color: @theme-lighter;
+    }
+}
+
+.e-fileexplorer .e-statusbar .e-switchView .e-active.e-btn.e-select .e-icon {
+    & when (@skin= "office-365") {
+        color: @theme-light-font;
+    }
+}
+
+.e-fileexplorer .e-statusbar .e-btn.e-select:hover .e-icon {
+    & when (@skin= "office-365") {
+        color: @neutral-dark;
+    }
+}
+
+.e-fileexplorer .e-switchGridView.e-button.e-active {
+    & when (@skin= "office-365") {
+        background-color: @theme-lighter;
+    }
+}
+
+.e-fileexplorer .e-switchGridView.e-button.e-active .e-icon {
+    & when (@skin= "office-365") {
+        color: @theme-light-font;
+    }
+}
+
+.e-fileexplorer .e-toolbar .e-split.e-widget .e-btn.e-select:active .e-icon,
+.e-fe-toolbar .e-split.e-widget .e-btn.e-select:active .e-icon {
+    & when (@skin= "office-365") {
+        color: @neutral-dark;
+    }
+}

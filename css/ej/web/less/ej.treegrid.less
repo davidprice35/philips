@@ -1,0 +1,851 @@
+@import "definition.less";
+
+.e-treegrid .e-extendcolumn {
+    background-color: @gantt-content-bg-color;
+}
+
+.e-treegrid .e-headercelldiv {
+    color: @gantt-header-font-color;
+    font-family: @font-family;
+}
+
+ .e-filterMenuDiv {
+    & when (@skin= "material") {
+        border-color: transparent !important;
+    }
+
+    & when (@skin= "office-365") {
+        border-color: @gantt-columnchooser-border-color !important;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        border-color: @filtermenudialog-color !important;
+    }
+
+    font-family: @font-family;
+    min-height: 0px !important;
+}
+
+.e-treegrid .e-treegridpopup .e-popupcontent {
+    background-color: @treegrid-selectionpopup-content-bg-color;
+    border-color: @treegrid-selectionpopup-border-color;
+}
+
+.e-treegrid .e-treegridpopup span:hover,
+.e-treegrid .e-treegridpopup .e-spanclicked {
+    border-color: @treegrid-selectionpopup-default-icon-color;
+}
+
+.e-treegrid .e-treegridpopup .e-downtail:before,
+.e-treegrid .e-treegridpopup .e-downtail {
+    border-top-color: @treegrid-selectionpopup-border-color;
+}
+
+.e-treegrid .e-treegridpopup .e-downtail:after {
+    border-top-color: @treegrid-selectionpopup-content-bg-color;
+}
+
+.e-treegrid .e-headercelldiv .e-descending, 
+.e-treegrid .e-headercelldiv .e-ascending, 
+.e-treegrid .e-headercell .e-columnmenu-icon {
+    & when (@skin= "material") {
+        color: fadeout(@base-font-color,46%);
+    }
+
+    & when not (@skin= "material") {
+        color: @header-icon-color;
+    }
+}
+
+.e-treegrid-core {
+    font-family: @font-family;
+}
+
+.e-treegrid {
+    border-color: @gantt-content-border-color;
+    color: @gantt-content-font-color;
+}
+
+.e-treegrid .e-gridcontent {
+    background-color: @gantt-content-bg-color;
+    border-color: @gantt-content-border-color;
+}
+
+.e-treegrid .e-borderbox {
+    border-bottom-color: @gantt-content-bg-color;
+}
+
+.e-treegrid .e-editcell,
+.e-treegrid .e-detailsrowcell,
+.e-treegrid .e-rowcell,
+.e-treegrid .e-extendcolumn {
+    & when (@skin= "material") {
+        border-right-color: transparent;
+        border-bottom-color: @gantt-content-border-color;
+    }
+
+    & when (@skin= "office-365") {
+        border-color: @neutral-quaternary;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        border-color: @gantt-content-border-color;
+    }
+}
+
+.e-treegrid .e-tableLastCell {
+    border-right-color: @gantt-content-border-color !important;
+}
+
+.e-treegrid .e-detailsiconcell:hover,
+.e-treegrid .e-detailsinfoiconhide {
+    background-color: @treegrid-detailicon-shadow-color;
+}
+
+.e-treegrid div.e-error .e-toparrow {
+    & when not (@skin= "material") {
+        border-bottom-color: #fffe92;
+    }
+
+    & when (@skin= "material") {
+        border-bottom-color: @grey-700;
+    }
+}
+
+.e-treegrid div.e-error .e-bottomarrow {
+    & when not (@skin= "material") {
+        border-top-color: #fffe92;
+    }
+
+    & when (@skin= "material") {
+        border-top-color: @grey-700;
+    }
+}
+
+
+ .e-detailscellwrapperfly {
+    border-color: @treegrid-detailcellwrapperfly-border-color;
+
+    & when (@skin= "office-365") {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+    }
+
+    & when not (@skin= "office-365") {
+        box-shadow: 0px 0px 11px 3px @treegrid-detailcellwrapperfly-shadow-color;
+        -moz-box-shadow: 0px 0px 11px 3px @treegrid-detailcellwrapperfly-shadow-color;
+        -webkit-box-shadow: 0px 0px 11px 3px @treegrid-detailcellwrapperfly-shadow-color;
+    }
+}
+
+.e-dragrowcell {
+    border-color: @gantt-content-border-color !important;
+}
+
+.e-treegrid .e-alt-row {
+    & when (@skin= "material") {
+        background: @grey-50;
+    }
+
+    & when (@skin= "office-365") {
+        background: #fbfbfb;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        background: @gantt-altRow-bg-color;
+    }
+}
+
+.e-treegrid .e-selectionbackground {
+    & when (@skin= "material") {
+        background: @grey-100;
+    }
+
+    & when (@skin = "office-365") {
+        background: @theme-lighter;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        .active-gradient();
+        color: @active-font-color;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="@{gantt-row-selection-bg-color}", endColorstr="@{gantt-row-selection-bg-color}", GradientType=0), progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+    }
+}
+
+ .e-treegridPane .e-treegrid .e-selectionbackground {
+    & when (@skin= "material") {
+        background: fade(@grey-100,70);
+    }
+
+    & when (@skin= "office-365") {
+        background: fade(@theme-lighter,70);
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        .gantt-row-selection();
+        .high-contrast-gantt-active-font-color;
+        color: @gantt-selection-font-color;
+        filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="@{gantt-row-selection-bg-color}", endColorstr="@{gantt-row-selection-bg-color}", GradientType=0), progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+    }
+}
+
+.e-treegrid .e-selectingcell {
+    & when (@skin= "material") {
+        background: @grey-100;
+    }
+
+    & when (@skin= "office-365") {
+        background: @theme-lighter;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        .active-gradient();
+        color: @active-font-color;
+    }
+}
+
+  .e-treegridPane .e-treegrid .e-selectingcell {
+    & when (@skin= "material") {
+        background: @grey-100;
+    }
+
+    & when not (@skin= "material") {
+        .gantt-row-selection();
+        color: @gantt-selection-font-color;
+    }
+}
+
+.e-treegrid .e-detailsinfoiconhide:before,
+.e-treegrid .e-detailsinfoiconshow:before {
+    & when (@skin= "material") {
+        color: @grey-600 !important;
+    }
+
+    & when not (@skin= "material") {
+        color: @active-bg-stcolor !important;
+    }
+}
+
+.e-treegrid .e-selectionbackground .e-detailsinfoiconshow:before {
+    & when (@skin= "material") {
+        color: @grey-600 !important;
+    }
+
+    & when not (@skin= "material") {
+        color: @active-font-color !important;
+    }
+}
+
+.e-treegrid .e-detailscellwrapper,
+  .e-detailscellwrapperfly {
+    background: @treegrid-detailcellwrapper-background-color;
+    color: @treegrid-detailcellwrapper-font-color !important;
+}
+
+.e-dragtooltipbackground {
+    & when (@skin= "material") {
+        background-color: @grey-700;
+        color: @primary-font-color;
+    }
+
+    & when (@skin= "office-365") {
+        background-color: @info-bg-color;
+        color: @neutral-secondary;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        background-color: @gantt-content-bg-color;
+        color: @gantt-content-font-color;
+    }
+}
+
+.e-treegrid .e-tabletd {
+    border-color: @gantt-content-border-color;
+}
+
+.e-treegrid .e-treegridtoolbar {
+    background-color: @gantt-toolbar-bg-color !important;
+    border-color: @gantt-toolbar-border-color !important;
+}
+
+.e-treegrid .e-headercell {
+    & when (@skin= "office-365") {
+        border-right-color: @neutral-quaternary !important;
+        border-bottom-color: @neutral-quaternary !important;
+    }
+
+    & when not (@skin= "office-365") {
+        border-right-color: @gantt-header-border-color !important;
+        border-bottom-color: @gantt-header-border-color !important;
+    }
+}
+
+.e-treegrid .e-filterbarcell {
+    & when (@skin= "office-365") {
+        border-color: @neutral-quaternary !important;
+    }
+
+    & when not (@skin= "office-365") {
+        border-color: @gantt-header-border-color !important;
+    }
+}
+
+.e-treegrid .e-grid-icon {
+    background: @gantt-header-bg-color;
+}
+
+
+.e-treegrid .e-gridheader {
+    color: @gantt-header-font-color;
+    border-color: @gantt-header-border-color;
+
+    & when (@skin= "material") {
+        background: #fff;
+    }
+
+    & when not (@skin= "material") {
+        .tgheader-gradient();
+    }
+}
+
+.e-treegrid .e-headercontent {
+    border-right-color: @gantt-header-border-color;
+}
+
+.e-treegrid .e-ejinputtext,
+ .e-addedColumn .e-ejinputtext,
+ .e-treegridrenamedialog .e-ejinputtext {
+    & when (@skin= "material") {
+        color: fade(@base-font-color,84%);
+        background-color: transparent;
+    }
+
+    & when not (@skin= "material") {
+        color: @content-font-color;
+        background-color: @content-bg-color;
+    }
+
+    border-color: @content-border-color;
+    outline: none;
+    vertical-align: baseline;
+}
+
+ .e-addedColumn .e-ejinputtext:hover,
+.e-treegrid .e-ejinputtext:hover,
+ .e-treegridrenamedialog .e-ejinputtext:hover {
+    .high-contrast-gantt-textbox-border-color;
+}
+
+.e-treegrid .e-ejinputtext:focus,
+ .e-addedColumn .e-ejinputtext:focus,
+ .e-treegridrenamedialog .e-ejinputtext:focus {
+    & when (@skin= "material") {
+        box-shadow: none;
+        border-width: 0px 0px 2px 0px;
+        border-color: @accent-color;
+    }
+
+    & when (@skin= "office-365") {
+        box-shadow: none;
+        border: 1px solid @theme-primary;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        box-shadow: 0 0 5px @shadow-bg-color;
+    }
+}
+
+.e-treegrid .e-reSizeColbg {
+    border-left-color: @gantt-header-border-color !important;
+}
+
+.e-treegrid .e-gridheadercontainer {
+    & when (@skin= "office-365") {
+        border-right-color: @neutral-quaternary !important;
+    }
+
+    & when not (@skin= "office-365") {
+        border-right-color: @gantt-header-border-color !important;
+    }
+}
+
+.e-columnmenu {
+    .tgPopUp-gradient();
+    color: @gantt-menuitem-font-color;
+    font-family: @font-family;
+
+    & when (@skin= "material") {
+        border-color: transparent !important;
+    }
+
+    & when not (@skin= "material") {
+        border-color: @gantt-columnchooser-border-color !important;
+    }
+}
+
+
+ .e-columnmenuitem .e-icon,
+ .e-menuitem .e-icon {
+    & when (@skin= "material") {
+        color: fadeout(@base-font-color,46%);
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-primary;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        color: @gantt-toolbar-icon-color;
+    }
+}
+
+.e-treegrid .e-toolbaricons {
+    & when (@skin= "material") {
+        color: fadeout(@base-font-color,46%);
+    }
+
+    & when not (@skin= "material") {
+        color: @gantt-toolbar-icon-color;
+    }
+}
+
+ .e-columnmenuselection .e-icon,
+ .e-contextmenu-mouseover .e-icon {
+    & when (@skin= "material") {
+        color: fadeout(@base-font-color,46%);
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-primary;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        color: @gantt-toolbar-icon-mouseover-color;
+    }
+}
+
+.e-treegrid .e-tooltxt.e-hover > span {
+    & when (@skin= "material") {
+        color: fadeout(@base-font-color,46%);
+    }
+
+    & when not (@skin= "material") {
+        color: @gantt-toolbar-icon-mouseover-color;
+    }
+}
+
+ .e-columnSelector {
+    .tgPopUp-gradient();
+    border: 1px solid;
+    border-color: @gantt-columnchooser-border-color !important;
+    color: @gantt-menuitem-font-color !important;
+}
+
+ .e-columnMenuListDiv label {
+    font-family: @font-family;
+}
+
+ .e-columnmenuselection {
+    & when (@skin= "material") {
+        background: fade(@base-font-color,12%);
+    }
+
+    & when not (@skin= "material") {
+        .treegrid-hover-gradient();
+    }
+
+    color: @gantt-menuitem-hover-font-color;
+}
+
+.e-treegrid .e-summaryrow {
+    & when (@skin= "material") {
+        background: @grey-50;
+    }
+
+    & when (@skin= "office-365") {
+        background: @neutral-light;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        background: @treegrid-summaryrow-backgroundcolor;
+    }
+}
+
+.e-treegrid .e-footersummaryrow,
+.e-treegrid .e-footersummaryrowdiv {
+    & when (@skin= "material") {
+        background: @grey-50;
+    }
+
+    & when (@skin= "office-365") {
+        background: @neutral-light;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        background: @treegrid-summaryrow-backgroundcolor;
+    }
+}
+
+.e-treegrid .e-footersummaryrowdiv {
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: @treegrid-summaryrow-border-color;
+}
+
+.e-treegrid .e-summaryrow .e-summaryrowcell {
+    & when (@skin= "office-365") {
+        border-bottom-color: @treegrid-summaryrow-border-color;
+    }
+
+    & when not (@skin= "office-365") {
+        border-bottom-color: @treegrid-summaryrow-border-color;
+    }
+}
+
+.e-contextmenu,
+.e-innerContextmenu {
+    & when (@skin= "material") {
+        border-color: transparent !important;
+        color: @gantt-menuitem-font-color;
+    }
+
+    & when not (@skin= "material") {
+        border-color: @gantt-columnchooser-border-color !important;
+        color: @gantt-menuitem-font-color;
+    }
+
+    .tgPopUp-gradient();
+    font-family: @font-family;
+}
+
+.e-headerContextmenu {
+
+    & when (@skin= "material") {
+        border-color: transparent !important;
+        color: @gantt-menuitem-font-color;
+    }
+
+    & when not (@skin= "material") {
+        border-color: @gantt-columnchooser-border-color !important;
+        color: @gantt-menuitem-font-color;
+    }
+
+    .tgPopUp-gradient();
+    font-family: @font-family;
+    border: 1px solid;
+}
+
+ .e-contextmenu-mouseover {
+    & when (@skin= "material") {
+        background: fade(@base-font-color,12%);
+    }
+
+    & when not (@skin= "material") {
+        .treegrid-hover-gradient();
+        color: @gantt-menuitem-hover-font-color;
+    }
+}
+
+ .e-tooltipgantt {
+    & when (@skin= "material") {
+        background-color: @grey-700;
+        color: @primary-font-color;
+        border-color: transparent;
+    }
+
+    & when (@skin= "office-365") {
+        background-color: @info-bg-color;
+        color: @neutral-secondary;
+        border-color: @neutral-secondary-alt;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        background-color: @gantt-content-bg-color;
+        color: @gantt-tooltip-font-color;
+        border-color: @gantt-tooltip-border-color;
+    }
+}
+
+.e-treegrid .e-movablecontainer, 
+.e-treegrid .e-movableheader, 
+.e-treegrid .e-movablefooter {
+    & when (@skin= "material") {
+        border-left-color: @primary-color;
+    }
+
+    & when (@skin= "office-365") {
+        border-left-color: @theme-primary;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        border-left-color: @active-bg-stcolor;
+    }
+}
+
+.e-treegrid .e-footercontainer {
+    border-right-color: @gantt-header-border-color;
+}
+
+.e-headervline {
+    & when (@skin= "material") {
+        border-color: @primary-color;
+    }
+
+    & when not (@skin= "material") {
+        border-color: @active-bg-stcolor;
+    }
+}
+
+.e-headertooltip {
+    & when (@skin= "material") {
+        background-color: @grey-700;
+        color: @primary-font-color;
+        border-color: transparent;
+    }
+
+    & when not (@skin= "material") {
+        color: @gantt-header-font-color;
+        background-color: @gantt-header-endbg-color;
+        border-color: @gantt-header-border-color;
+    }
+}
+
+ .e-menuitem-hr {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+
+    & when (@skin= "material") {
+        border-color: fade(@base-font-color,12%);
+    }
+
+    & when (@skin= "office-365") {
+        border-color: @neutral-light;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        border-color: @gantt-content-border-color;
+    }
+}
+
+& when (@skin = "material") {
+    .e-treegrid .e-rowcell {
+        font-family: @font-family;
+        font-size: 13px;
+        color: fadeout(@base-font-color,13%);
+        text-overflow: ellipsis;
+    }
+
+    .e-treegrid .e-treegridtoolbar ul {
+        padding-left: 20px;
+        margin-top: 0px !important;
+    }
+
+    .e-treegrid .e-ejinputtext::selection,
+     .e-addedColumn .e-ejinputtext::selection,
+     .e-treegridrenamedialog .e-ejinputtext::selection,
+    .e-treegrid .e-ejinputtext::selection {
+        background: @accent-color;
+        color: @accent-font-color;
+    }
+
+    .e-treegrid .e-inner-treecolumn-container {
+        padding-left: 24px;
+        width: 100% !important;
+    }
+
+    .e-treegrid .e-rowcell .e-cell {
+        padding-left: 10px;
+    }
+
+    .e-treegrid .e-filterbar-material,
+    .e-treegrid .e-filterbarcell {
+        border-right-color: transparent !important;
+    }
+
+    .e-columnmenu {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+
+    .e-treegrid-columnchooser {
+        box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.24);
+    }
+
+    .e-contextmenu {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+
+    .e-innerContextmenu {
+        box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.24);
+    }
+
+    .e-treegrid .e-frozenheaderdiv {
+        position: relative;
+    }
+
+    .e-treegrid .e-frozenheaderdiv::before {
+        content: "";
+        background: @primary-color;
+        position: absolute;
+        height: 55px;
+        width: 1px;
+        top: -10px;
+        left: 100%;
+    }
+
+    .e-treegrid .e-frozenheaderdiv.e-filterbar-header-material::before {
+        content: "";
+        background: @primary-color;
+        position: absolute;
+        height: 103px;
+        width: 1px;
+        top: -10px;
+        left: 100%;
+    }
+
+    .e-treegrid .e-frozenheaderdiv.e-stacked-header-material::before {
+        content: "";
+        background: @primary-color;
+        position: absolute;
+        height: 91px;
+        width: 1px;
+        top: -10px;
+        left: 100%;
+    }
+
+    .e-treegrid .e-headercontent-material-filterbar {
+        border-right-color: transparent !important;
+    }
+
+    .e-treegrid .e-frozen-header-container {
+        overflow: visible !important;
+    }
+
+     .e-treegridmenufilterwraper {
+        background: @content-bg-color;
+    }
+
+    .e-treegrid-dialog .e-header.e-dialog {
+        font-weight: normal;
+    }
+
+    .e-treegrid-dialog .e-editLabel,
+    .e-treegrid .e-dialog .e-treegridform .e-editdialoglabel label:first-child {
+        font-size: 13px;
+        color: fadeout(@base-font-color,62%);
+    }
+
+     .e-filterMenuDiv .e-btn.e-select,
+     .e-filterMenuDiv .e-btn.e-select:hover,
+     .e-filterMenuDiv .e-btn.e-select:active,
+    .e-treegrid-dialog .e-btn.e-select,
+    .e-treegrid-dialog .e-btn.e-select:hover,
+    .e-treegrid-dialog .e-btn.e-select:active {
+        color: @accent-color;
+        border-width: 0px;
+    }
+
+     .e-filterMenuDiv .e-btn.e-select, 
+     .e-filterMenuDiv .e-btn.e-select:hover,
+    .e-treegrid-dialog .e-btn.e-select, 
+    .e-treegrid-dialog .e-btn.e-select:hover {
+        background: none;
+        box-shadow: none;
+    }
+
+     .e-filterMenuDiv .e-btn.e-select:hover,
+    .e-treegrid-dialog .e-btn.e-select:hover {
+        background: fadeout(@base-font-color,88%);
+    }
+
+     .e-filterMenuDiv .e-btn.e-select:active,
+    .e-treegrid-dialog .e-btn.e-select:active {
+        box-shadow: none;
+        background: fadeout(@accent-color,88%);
+    }
+}
+
+& when (@skin = "office-365") {
+    .e-treegrid .e-rowcell .e-cell {
+        padding-left: 5px;
+    }
+
+    .e-columnmenu {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+    }
+
+    .e-treegrid-columnchooser {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+    }
+
+    .e-contextmenu {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+    }
+
+    .e-innerContextmenu {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+    }
+
+     .e-parent-menuitem.e-columnmenuselection,
+     .e-parent-menuitem.e-contextmenu-mouseover {
+        background: @theme-lighter;
+        color: @theme-light-font;
+    }
+
+    .e-treegrid .e-dialog .e-treegridform .e-editdialogbutton .e-save,
+    .e-treegrid-dialog .e-confirm-dialog-btn-ok.e-btn.e-select,
+     .e-treegrid-rename-dialog-btn-ok.e-btn.e-select,
+     .e-add-dialog-btn-ok .e-btn.e-select,
+     .e-filter-btn-filter .e-btn.e-select {
+        background: @theme-primary;
+        color: @theme-primary-font;
+    }
+
+    .e-treegrid .e-dialog .e-treegridform .e-editdialogbutton .e-save:hover,
+    .e-treegrid-dialog .e-confirm-dialog-btn-ok.e-btn.e-select:hover,
+     .e-treegrid-rename-dialog-btn-ok.e-btn.e-select:hover,
+     .e-add-dialog-btn-ok .e-btn.e-select:hover,
+     .e-filter-btn-filter .e-btn.e-select:hover {
+        background: @theme-dark;
+        color: @theme-dark-font;
+    }
+
+    .e-treegrid .e-dialog .e-treegridform .e-editdialogbutton .e-save:focus,
+    .e-treegrid-dialog .e-confirm-dialog-btn-ok.e-btn.e-select:focus,
+     .e-treegrid-rename-dialog-btn-ok.e-btn.e-select:focus,
+     .e-add-dialog-btn-ok .e-btn.e-select:focus,
+     .e-filter-btn-filter .e-btn.e-select:focus {
+        background: @theme-dark;
+        color: @theme-dark-font;
+        border-color: @theme-primary;
+    }
+
+    .e-treegrid .e-dialog .e-treegridform .e-editdialogbutton .e-save:active,
+    .e-treegrid-dialog .e-confirm-dialog-btn-ok.e-btn.e-select:active,
+     .e-treegrid-rename-dialog-btn-ok.e-btn.e-select:active,
+     .e-add-dialog-btn-ok .e-btn.e-select:active,
+     .e-filter-btn-filter .e-btn.e-select:active {
+        background: @theme-primary;
+        color: @theme-primary-font;
+        border-color: @theme-primary;
+    }
+
+    .e-dialog.e-widget-content.e-filterMenuDiv {
+        background: @neutral-white;
+    }
+
+    .e-dialog.e-widget-content.e-filterMenuDiv .e-filter-text {
+        font-size: 13px;
+        font-weight: normal;
+    }
+}
+
+ .e-treegrid-resIcon {
+    & when (@skin= "material") {
+        color: fade(@base-font-color, 54%);
+    }
+
+    & when not (@skin= "material") {
+        color: @header-icon-color;
+    }
+}

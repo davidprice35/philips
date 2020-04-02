@@ -1,0 +1,1096 @@
+@skin: "gradient-saffron";
+@font-family: Segoe UI,Helvetica Neue,Ubuntu,Arial;
+@font-size: 12px;
+@border-size: 1px;
+@border-type: solid;
+@tools-border-radius: 3px;
+@widget-bg-color:#ffffff;
+@label-color:#111111;
+
+@header-bg-stcolor: #f9f9f9;
+@header-bg-endcolor: #f2f2f2;
+@header-gradient-color: #f9f9f9, #f2f2f2;
+@header-border-color: #c8c8c8;
+@header-font-color: #282827;
+@header-icon-color: #232323;
+@filtermenu-color: #c8c8c8;
+
+@tooltip-line-height : 18px;
+
+@content-bg-color: #ffffff;
+@content-border-color: #c8c8c8;
+@content-font-color: #333333;
+
+@default-bg-stcolor: #f5f5f5;
+@default-bg-endcolor: #dddddd;
+@default-gradient-color: #f5f5f5, #dddddd;
+@default-border-color: #c8c8c8;
+@default-font-color: #333333;
+@default-icon-color: #686969;
+
+@hover-bg-stcolor: #fde3c2;
+@hover-bg-endcolor: #fcce91;
+@hover-gradient-color: #fde3c2, #fcce91;
+@hover-border-color: #c8c8c8;
+@hover-font-color: #282827;
+@hover-icon-color: #282827;
+
+@active-bg-stcolor: #fbbe6d;
+@active-bg-endcolor: #f9920b;
+@active-gradient-color: #fbbe6d, #f9920b;
+@active-border-color: #c8c8c8;
+@active-font-color: #ffffff;
+@active-icon-color: #ffffff;
+
+@error-color: #ee2924;
+@warning-color: #ffca1c;
+@success-color: #22b24b;
+@information-color: #489bd5;
+
+@overlay-bg-color: #383838;
+@sort-filter-disable: #999999;
+
+@header-font-weight: normal;
+@header-font-size: 17px;
+
+@content-font-weight: normal;
+@content-font-size:14px;
+
+@disable-control-background-color: #f5f5f5;
+@disable-control-border-color: #e3e3e3;
+@disable-icon-bg-color: #d6d7d7;
+
+@hover-bg-mdcolor: #fa9e39;
+
+@scroll-bg-color: darken(@content-bg-color, 2%);
+@scroll-handle-color: @default-bg-stcolor;
+@scroll-handle-hover-color: @hover-bg-stcolor;
+@scroll-handle-active-color: @active-bg-stcolor;
+
+@gheader-bg-color: @header-bg-stcolor;
+@gheader-bg-colorhover: @hover-bg-stcolor;
+@gheader-border-color: @active-bg-stcolor;
+@gheader-font-color: @header-font-color;
+@gheader-hover-font-color: @hover-font-color;
+@gheader-font-size: 14px;
+@gedit-title-color: darken( @content-bg-color, 3%);
+
+@gtouch-border-color: #000000;
+
+@gcontent-bg-color: @content-bg-color;
+@gcontent-font-color: @content-font-color;
+
+@gdroparea-stbg-color: @active-bg-stcolor;
+@gdroparea-endbg-color: @active-bg-endcolor;
+@gdroparea-border-color: @content-border-color;
+@gdroparea-font-color: @active-font-color;
+@gdroparea-hover-color: @hover-bg-stcolor;
+@gcaption-border-color: lighten( @default-bg-stcolor, 1% );
+@gcaption-border-radius: 0px;
+
+@row-hover-color: @hover-bg-stcolor;
+@row-hover-font-color: @hover-font-color;
+@row-border-color: @content-border-color;
+@row-border-coloropac: rgba(187,188,187,0.5);
+@row-selection-bg-color: @active-bg-stcolor;
+@row-selection-font-color: @active-font-color;
+@cell-selection-stbg-color: @active-bg-stcolor;
+@cell-selection-endbg-color: darken(@active-bg-endcolor, 10%);
+@column-selection-bg-color: @default-bg-stcolor;
+@alt-row-bg-color: darken( saturate( spin( @content-bg-color, 180deg ), 6%), 3%);
+
+@pager-font-color: @default-font-color;
+@pager-default-font-color: @default-font-color;
+@pager-default-border-color: @default-border-color;
+@pager-default-bg-color: @default-bg-stcolor;
+@pager-active-stbg-color: @active-bg-stcolor;
+@pager-active-endbg-color: @active-bg-endcolor;
+@pager-hover-stbg-color: @hover-bg-stcolor;
+@pager-hover-endbg-color: @hover-bg-endcolor;
+@pager-active-font-color: @active-font-color;
+
+@filter-input-border-color: #939292;
+@filter-input-bg-color: #F6F7F7;
+
+
+@alternate-border-color: #c1c1c1;
+@timeline-bg-color: #CE8715;
+
+
+@captcha-refresh-border: 1px solid lighten( @default-border-color, 1% );
+@captcha-image-border: 1px solid darken( @default-border-color, 18% );
+@captcha-valid-border: 1px solid saturate( @default-border-color, 2% );
+@captcha-image: #f7f7f7;
+
+@watermark-font-style: italic;
+@watermark-font-color: lighten( saturate( @default-font-color, 1% ), 57% );
+@watermark-font-weight: normal;
+@watermark-font-size: 14px;
+
+@hightlight-bg-color: #5EABDE;
+@highlight-border-color: #AAAAAA;
+@highlight-font-color: #363636;
+@highlight-font-weight: bold;
+@highlight-font-size: 14px;
+
+@error-bg-color: #fef1ec;
+@error-border-color: #cd0a0a;
+@error-font-color: #cd0a0a;
+@error-font-weight: bold;
+
+@shadow-bg-color: darken( @default-bg-stcolor, 13% );
+@input-bg-color: #807F7F;
+
+@gantt-chart-critical-connectorline-color: #ff5555;
+@gantt-chart-critical-connectorline-rightarrow-color: #ff5555;
+@gantt-chart-critical-connectorline-leftarrow-color: #ff5555;
+@gantt-chart-critical-child-progressbar-color: #ff5555;
+@gantt-chart-critical-child-progressbar-border-color: #ff5555;
+@gantt-chart-critical-child-taskbar-color: #ff8b8b;
+@gantt-chart-critical-child-taskbar-border-color: #ff8b8b;
+
+@gantt-chart-manual-child-progressbar-stbg-color: #7ECCBE;
+@gantt-chart-manual-child-progressbar-endbg-color: #54B4A2;
+@gantt-chart-manual-child-progressbar-gradient-color:#7ECCBE,#54B4A2;
+@gantt-chart-manual-child-taskbar-color: #8DD1C4;
+@gantt-chart-manual-child-taskbar-border-color: #4FB29F;
+
+@gantt-chart-connectorline-hover-color: #0026da;
+
+@schedule-app-stbg-color: @active-bg-stcolor;
+@schedule-app-endbg-color: @active-bg-endcolor;
+@schedule-app-border-color: lighten(@active-bg-stcolor, 10%);
+@schedule-select-bg-color: @hover-bg-stcolor;
+@schedule-active-border-size:3px;
+@schedule-header-border-color:@active-bg-stcolor;
+@schedule-cells-bg-color: darken( saturate( spin( @content-bg-color, 180deg ), 6%), 3%);
+
+@grid-uisupport-background-color: #BBBDC0;
+@grid-uisupport-number-color: #FFFFFF;
+@grid-focusout: desaturate( @active-bg-endcolor, 95% );
+
+@gantt-toolbar-bg-color: @content-bg-color;
+@gantt-editDialog-bg-color: @content-bg-color;
+@gantt-content-bg-color: @content-bg-color;
+@gantt-chart-content-bg-color: @content-bg-color;
+@gantt-altRow-bg-color: darken(@content-bg-color,2%);
+@gantt-weekends-bg-color: @gantt-altRow-bg-color;
+@gantt-selection-bg-color: fadeout(@active-bg-stcolor,80%);
+@gantt-row-stbg-color: fadeout(@active-bg-stcolor,80%);
+@gantt-row-endbg-color: fadeout(@active-bg-endcolor,80%);
+@gantt-header-bg-color: @header-bg-stcolor;
+@gantt-parent-taskbar-color: #a7b1be;
+@gantt-row-selection-bg-color: #f9920b;
+@gantt-header-stbg-color: @header-bg-stcolor;
+@gantt-header-endbg-color: @header-bg-endcolor;
+@gantt-milestone-bg-color: @content-font-color;
+@gantt-spliiter-bg-color: @content-bg-color;
+@gantt-connectorline-arrow-bg-color: @content-font-color;
+@gantt-progressHandle-color: @content-font-color;
+@gantt-toolTip-bg-color: @content-bg-color;
+@gantt-parent-progress-bg-color: @content-font-color;
+@gantt-parent-task-bg-color: fadeout(@content-font-color,40%);
+@gantt-child-progress-bg-color: @active-bg-stcolor;
+@gantt-child-task-bg-color: fadeout(@active-bg-stcolor,40%);
+@gantt-parent-progress-stbg-color: @content-font-color; /* need verify with UX team*/
+@gantt-parent-progress-enbg-color: lighten(@content-font-color, 60%);
+@gantt-child-progress-stbg-color: @active-bg-stcolor;
+@gantt-child-progress-enbg-color: @active-bg-endcolor;
+@gantt-predecessor-header-bg-color: @content-bg-color;
+@gantt-toolbar-icon-color: @default-icon-color;
+@gantt-toolbar-icon-mouseover-color: @hover-icon-color;
+@gantt-menuitem-font-color: @content-font-color;
+@gantt-menuitem-hover-font-color: @hover-font-color;
+@gantt-expandcollapse-icon-color: @default-icon-color;
+@gantt-task-gripper-color: fadeout(@content-bg-color,60%);
+@gantt-dialog-close-icon-mouseover-color: darken(@content-bg-color,10%);
+
+@gantt-toolbar-border-color: @header-border-color;
+@gantt-splitter-border-color: @content-border-color;
+@gantt-content-border-color: @content-border-color;
+@gantt-header-border-color: @header-border-color;
+@gantt-schedule-border-color: @header-border-color;
+@gantt-tooltip-border-color: @content-border-color;
+@gantt-parent-taskbar-border-color: @gantt-parent-progress-stbg-color;
+@gantt-child-taskbar-border-color: @gantt-child-progress-stbg-color;
+@gantt-chart-border-color: @content-border-color;
+
+@gantt-editDialog-font-color: @content-font-color;
+@gantt-content-font-color: @content-font-color;
+@gantt-selection-font-color: @content-font-color;
+@gantt-header-font-color: @header-font-color;
+@gantt-schedule-font-color: @header-font-color;
+@gantt-toolbar-font-color: @content-font-color;
+@gantt-tooltip-font-color: @content-font-color;
+@gantt-taskbar-selection-border-color: #000000;
+@gantt-selectionpopup-content-bg-color: @content-bg-color;
+@gantt-selectionpopup-border-color:@content-border-color;
+@gantt-selectionpopup-default-icon-color:@default-icon-color;
+
+@treegrid-detailcellwrapper-background-color: @content-bg-color;
+@treegrid-detailcellwrapper-font-color: @content-font-color;
+@treegrid-detailcellwrapperfly-border-color: @content-border-color;
+@treegrid-detailcellwrapperfly-shadow-color: @content-border-color;
+@treegrid-detailicon-shadow-color: darken(@content-bg-color,11%);
+
+@gantt-theme-line-color: @active-bg-stcolor;
+@gantt-connectorline-color: @gantt-connectorline-arrow-bg-color;
+@gantt-connectorpoint-hover-color: @gantt-connectorline-arrow-bg-color;
+@gantt-falseLine-color: @gantt-connectorline-arrow-bg-color;
+@gantt-columnchooser-border-color: @default-border-color;
+
+@treegrid-summaryrow-backgroundcolor: lighten(@default-bg-stcolor, 1%);
+@treegrid-totalsummaryrow-backgroundcolor: lighten(@default-bg-stcolor, 1%);
+@treegrid-summaryrow-textcolor: @content-font-color;
+@treegrid-summaryrow-border-color: @content-border-color;
+@treegrid-selectionpopup-content-bg-color: @content-bg-color;
+@treegrid-selectionpopup-border-color:@content-border-color;
+@treegrid-selectionpopup-default-icon-color:@default-icon-color;
+@filtermenudialog-color:@filtermenu-color;
+
+@colorpicker-image: url(../common-images/lighttheme/colorpicker_light.png);
+@colorpicker-bg-color: @content-bg-color;
+@colorpicker-border-color: #cecece;
+@colorpicker-button-bg-color: @content-bg-color;
+@colorpicker-button-border-color: @content-bg-color;
+@colorpicker-popup-bg-color: @default-bg-stcolor;
+@colorpicker-popup-boder-color: @default-border-color;
+@colorpicker-btn-bg-color: @content-bg-color;
+@colorpicker-hover-font-color: #5c5c5c;
+
+
+
+
+@ajaxloaderimage: url(images/ajax-loader.gif);
+
+@ratingimage: url(images/rating-star.png);
+@treeview-drop-image: url(images/drop-sibling.png);
+@slider-tick: url(images/slider-tick.png);
+@loading-img: url(images/waitingpopup.gif);
+
+
+
+@checkedtick-image: url(images/checkedtick.png);
+@tab-background-color: #ebebeb;
+.tab-headerbg(@is-color: none){    
+    & when not (@is-color = none) {
+        background: @content-bg-color;      
+    }
+    color: @active-bg-stcolor;
+} 
+@radial-badge-color:#FFFFFF;
+
+.header-gradient() {
+   .custom-gradient(@header-gradient-color, @header-bg-stcolor, @header-bg-endcolor, 0%, 0% );
+}
+
+.default-gradient() {
+   .custom-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 0%, 0% );
+}
+
+.hover-gradient() {
+    .custom-gradient(@hover-gradient-color, @hover-bg-stcolor, @hover-bg-endcolor, 0%, 0% );
+}
+
+.active-gradient() {
+    .custom-gradient(@active-gradient-color, @active-bg-stcolor, @active-bg-endcolor, 0%, 0% );
+}
+
+
+@isDefault: true;
+
+.custom-gradient(@derivedfrom, @start, @end, @light, @dark) when (@isDefault) {
+    &{
+        .generate();
+    }
+    .generate() when (@derivedfrom = none) {
+        @gradient: none;
+        background: @start;        
+    }
+    .generate() when not (@derivedfrom = none) {
+        @gradient: lighten(extract(@derivedfrom, 1), @light), darken(extract(@derivedfrom, 2), @dark);
+        background: @start; /* Old browsers */
+        background: -moz-linear-gradient(top, @gradient); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@end)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,@gradient); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @gradient); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @gradient); /* IE10+ */
+        background: linear-gradient(to bottom, @gradient); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end}',GradientType=0 ); /* IE6-9 */
+    }
+}    
+
+.scroller-gradient() {
+    background-image: @active-grid-image, @default-bg-stcolor; /* Old browsers */
+    background-image: @active-grid-image, -moz-linear-gradient(top, @default-bg-stcolor 0%, @default-bg-endcolor 100%); /* FF3.6+ */
+    background-image: @active-grid-image, -webkit-gradient(linear, left top, left bottom, color-stop(0%,@default-bg-stcolor), color-stop(100%,@default-bg-endcolor)); /* Chrome,Safari4+ */
+    background-image: @active-grid-image, -webkit-linear-gradient(top, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* Chrome10+,Safari5.1+ */
+    background-image: @active-grid-image, -o-linear-gradient(top, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* Opera 11.10+ */
+    background-image: @active-grid-image, -ms-linear-gradient(top, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* IE10+ */
+    background-image: @active-grid-image, linear-gradient(to bottom, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{default-bg-stcolor}', endColorstr='@{default-bg-endcolor}',GradientType=0 ); /* IE6-9 */
+}
+
+.scroller-hover-gradient() {
+    background-image: @hover-grid-image, @hover-bg-stcolor; /* Old browsers */
+    background-image: @hover-grid-image, -moz-linear-gradient(top, @hover-bg-stcolor 0%, @hover-bg-endcolor 100%); /* FF3.6+ */
+    background-image: @hover-grid-image, -webkit-gradient(linear, left top, left bottom, color-stop(0%,@hover-bg-stcolor), color-stop(100%,@hover-bg-endcolor)); /* Chrome,Safari4+ */
+    background-image: @hover-grid-image, -webkit-linear-gradient(top, @hover-bg-stcolor 0%,@hover-bg-endcolor 100%); /* Chrome10+,Safari5.1+ */
+    background-image: @hover-grid-image, -o-linear-gradient(top, @hover-bg-stcolor 0%,@hover-bg-endcolor 100%); /* Opera 11.10+ */
+    background-image: @hover-grid-image, -ms-linear-gradient(top, @hover-bg-stcolor 0%,@hover-bg-endcolor 100%); /* IE10+ */
+    background-image: @hover-grid-image, linear-gradient(to bottom, @hover-bg-mdcolor 0%, @hover-bg-endcolor 56%,@hover-bg-stcolor 56%, @hover-bg-mdcolor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{hover-bg-stcolor}', endColorstr='@{hover-bg-endcolor}',GradientType=0 ); /* IE6-9 */
+}
+
+.row-selection() {
+    .active-gradient();
+}
+
+.schedule-app-color() {
+    background: @schedule-app-stbg-color; /* Old browsers */
+    background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@schedule-app-stbg-color), color-stop(100%,@schedule-app-endbg-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{schedule-app-stbg-color}', endColorstr='@{schedule-app-endbg-color}',GradientType=0 ); /* IE6-9 */
+}
+
+.cell-selection() {        
+    .custom-gradient(@active-gradient-color, @cell-selection-stbg-color, @cell-selection-endbg-color, 0%, 10%);  
+}
+
+.column-selection() {
+    background-color: @column-selection-bg-color;
+}
+
+.row-Hover() {
+    .hover-gradient();
+}
+
+.tgPopUp-gradient() {
+    background: @content-bg-color;
+}
+
+.gheader-gradient() {
+    .header-gradient();
+}
+
+.tgheader-gradient() {
+    .header-gradient();
+}
+.ganttheader-gradient() {
+    .header-gradient();
+}
+.treegrid-hover-gradient() {
+    .hover-gradient();
+}
+
+.treegrid-default-gradient() {
+    background: @default-bg-stcolor; /* Old browsers */
+    background: -moz-linear-gradient(top, @default-bg-stcolor 0%, @default-bg-endcolor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@default-bg-stcolor), color-stop(100%,@default-bg-endcolor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @default-bg-stcolor 0%,@default-bg-endcolor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{default-bg-stcolor}', endColorstr='@{default-bg-endcolor}',GradientType=0 ); /* IE6-9 */
+}
+
+.hover-gradientfunction() {
+    background: @tab-background-color; /* Old browsers */
+}
+
+.tile-bg-gradient() {
+    .active-gradient();
+}
+
+.pager-hover-gradient() {
+    .hover-gradient();
+}
+
+.header-hover-gradient(){
+    .hover-gradient();
+}
+
+.hover-pager-gradient() {
+    .hover-gradient();
+}
+
+.pager-selection-gradient() {
+    .active-gradient();
+}
+
+.gdroparea-gradient() {
+    .active-gradient();
+}
+
+.gantt-row-selection() {
+    @temp-gradient: @gantt-row-stbg-color, @gantt-row-endbg-color;
+	background: -moz-linear-gradient(top, @temp-gradient); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@gantt-row-stbg-color), color-stop(100%,@gantt-row-endbg-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  @temp-gradient); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @temp-gradient); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @temp-gradient); /* IE10+ */
+    background: linear-gradient(to bottom, @temp-gradient); /* W3C */
+}
+
+.gantt-parent-progress-background() {
+    @temp-gradient:@gantt-parent-progress-stbg-color, @gantt-parent-progress-enbg-color;
+    .custom-gradient(@temp-gradient, @gantt-parent-progress-stbg-color, @gantt-parent-progress-enbg-color, 0%, 0% );
+}
+
+.gantt-child-progress-background() {
+   .active-gradient();
+}
+.gantt-child-manualprogress-background(){   
+    .custom-gradient(@gantt-chart-manual-child-progressbar-gradient-color,  @gantt-chart-manual-child-progressbar-stbg-color, @gantt-chart-manual-child-progressbar-endbg-color, 0%, 0% );
+}
+/*-----------------------Map------------------*/
+
+@map-home: url(../common-images/maps/Home_saffron.png);
+@map-home-hover: url(../common-images/maps/Home_hover_saffron.png);
+
+/*-----------------------PdfViewer------------------*/
+@pdfviewer-scrollcontainer:darken(@content-bg-color,12%);
+
+.pdfviewer-searchtoolbar-border-color(){}
+.pdfviewer-toolbar-border-color(){}
+.pdfviewer-toolbar-border-color-hover(){}
+.pdfviewer-viewercontainer-border-color(){}
+.pdfviewer-viewercontainer-bgcolor(){}
+/*-----------------------End PdfViewer------------------*/
+
+/*----------------------OLAP Definition------------------*/
+@table-font: 12px @font-family !important; @toolTipText-color:@content-font-color; @toolTip-bg-color:linear-gradient(to bottom,@default-bg-stcolor 0%,@default-bg-endcolor 100%); @fg-table-color: @content-font-color; @bg-table-color: @content-bg-color; @brd-table-color: @gdroparea-border-color; @bg-value-color: @content-bg-color; @bg-summary-color: linear-gradient(to bottom,saturate( @active-bg-stcolor, 1 ) 0%,saturate( @active-bg-endcolor, 1 ) 100%); @fg-header-color: @content-font-color; @fg-header-hvr-color: @hover-font-color; @expander-img: url("../common-images/icons-gray.png"); @kpi-uparrow-img: url("../common-images/pivotgrid/up-arrow.png"); @kpi-rightarrow-img: url("../common-images/pivotgrid/right-arrow.png"); @kpi-downarrow-img: url("../common-images/pivotgrid/down-arrow.png"); @kpi-diamond-img: url("../common-images/pivotgrid/diamond.png"); @kpi-triangle-img: url("../common-images/pivotgrid/triangle.png"); @kpi-circle-img: url("../common-images/pivotgrid/circle.png"); @kpi-red-img: url("../common-images/pivotgrid/red.png"); @kpi-green-img: url("../common-images/pivotgrid/green.png"); @kpi-all-img: url("../common-images/pivotgrid/three-color.png"); @aeb-bgcolor: @content-bg-color; @oclient-bgcolor: @content-bg-color; @oclient-border-color: @content-border-color; @oclient-icons-color:@default-icon-color; @oclient-dialog-bgcolor:@content-bg-color; @oclient-dialog-color:@default-font-color; @oclient-treeview-text:@default-font-color; @oclient-treeview-text-hover:@hover-font-color; @oclient-treeview-active:linear-gradient(to bottom,@active-bg-stcolor 0%,@active-bg-endcolor 100%); @oclient-ddl-color:@default-font-color; @oclient-ddl-bgcolor:@content-bg-color; @oclient-ddl-bcolor:@hover-border-color; @oclient-ddl-hcolor:@hover-font-color; @oclient-ddl-hbgcolor:linear-gradient(to bottom,@hover-bg-stcolor 0%,@hover-bg-endcolor 100%); @oclient-icons-hover-bg: linear-gradient(to bottom,@hover-bg-stcolor 0%,@hover-bg-endcolor 100%); @toolbar-bgcolor:linear-gradient(to bottom,@default-bg-stcolor 0%,@default-bg-endcolor 100%); @toolbar-icons-hvrcolor:@hover-icon-color; @fullscreen-bg-color:@content-bg-color; @maxview-bg-color:@content-bg-color; @ogrid-header-border-color:@content-border-color; @ogaugeTooltip-border-color:@content-border-color; @pivotList-treeview-text:@default-font-color; @pivotList-treeview-hvr-color:linear-gradient(to bottom,@active-bg-stcolor 0%,@active-bg-endcolor 100%); @pivotList-treeview-text-hvr-color:linear-gradient(to bottom,@active-bg-stcolor 0%,@active-bg-endcolor 100%); @ogrid-dialog-bgcolor:linear-gradient(to bottom,darken( desaturate( @active-bg-stcolor, 4 ), 1 ) 0%,darken( desaturate( @active-bg-endcolor, 4 ), 1 ) 100%); @pivotList-dialog-close-hvr-color:linear-gradient(to bottom,@active-bg-stcolor 0%,@active-bg-endcolor 100%); @pivotList-treeview-active-color:linear-gradient(to bottom,darken( desaturate( @active-bg-stcolor, 11 ), 2 ) 0%,darken( desaturate( @active-bg-endcolor, 11 ), 2 ) 100%); @pivot-selection-background:linear-gradient(to bottom,@hover-bg-stcolor 0%,@hover-bg-endcolor 100%); @pivot-selection-border:@default-border-color; @groupingBar-bg-color:linear-gradient(to bottom,@active-bg-stcolor 0%,@active-bg-endcolor 100%); 
+.groupingBar-btn-color() {
+    color: @default-icon-color;
+    border-color: @content-border-color;
+}
+
+.oclientDialog-setcolor() {
+    color: @default-font-color;
+    .default-gradient();
+}
+
+.ogridheader-gradient() {
+    background: @content-bg-color;
+}
+
+.ogridheader-hvr-gradient() {
+    .hover-gradient();
+}
+
+.summary-gradient() {
+    .hover-gradient();
+    color: @hover-font-color;
+}
+
+.oclient-header-color() {
+    color: @hover-font-color;
+	.hover-gradient();
+}
+
+.hyperlink-setcolor() {
+    color: @active-bg-stcolor;
+}
+
+.pivotpager-setcolor() {
+    color: @default-icon-color;
+}
+
+.scrollPane-setcolor() {
+    background-color: lighten( @default-icon-color, 48 );
+}
+
+.scrollThumb-setcolor() {
+    background-color: lighten( @default-icon-color, 32 );
+}
+
+.scrollThumb-dragcolor() {
+    background-color: @default-icon-color !important;
+}
+
+.pageIndicator-setcolor() {
+    .active-gradient();
+    border: thin solid @active-border-color;
+    color: @active-font-color;
+}
+
+.scrollThumb-hovercolor() {
+    background-color: lighten( @default-icon-color, 19 );
+}
+
+.chartTypesDialog-setcolor() {
+    .default-gradient();
+    border: 2px solid @content-border-color;
+}
+/*----------------------Reportviewer Definition start------------------*/
+@rv-toolbar-exportlistTip-before-border-color: transparent transparent @content-border-color transparent;
+@rv-toolbar-exportlistTip-after-border-color: transparent transparent @default-bg-stcolor transparent;
+@rv-popuppage-color: @content-bg-color;
+@rv-navigate-disabled-opacity: 0.5;
+@rv-viewerblock-font-size: 12.5px;
+@rv-viewerblockcellcontent-font-size: 14.5px;
+
+@rv-viewerblock-bg-color: lighten(@default-bg-endcolor, 4%);
+@rv-pageviewcontainer-bg-color: darken(@content-bg-color, 20%); 
+@rv-documentMappopup-bg-color:#EBEBEB !important; 
+
+@rv-popuppageinfo-bg-color:black; 
+@rv-labelpageno-font-size:16px !important; 
+@rv-pageview-moz-box-shadow:rgba(0,0,0,0.6); 
+@rv-pageview-webkit-box-shadow:rgba(0,0,0,0.6); 
+@rv-pageview-box-shadow:rgba(0,0,0,0.3); 
+@rv-pageview-border-color: rgb(128,128,128); 
+
+@rv-ttooltip-background:white; 
+@rv-ttooltip-border-color:@content-border-color; 
+@rv-ttooltip-color:black;
+
+/*----------------------Reportviewer Definition End------------------*/
+/*-----------------------SymbolPalette Definition-----------------*/
+@sp-outline:transparent none 0px; @sp-item-hover-color: rgba(250, 198, 125, 0.40); @sp-noborder:0px solid transparent; @sp-header-font-size:14px; @sp-header-border-radius:0px;
+/*-----------------------Diagram Definition-----------------*/
+@dg-contextmenu:url("../common-images/diagram/diagram_context.png");@dg-contextmenu-hover:url("../common-images/diagram/diagram_context.png");
+@dg-ruler-overlap-bg: #dddddd;
+@dg-ruler-space-bg: #f5f5f5;
+@dg-ruler-tick: #686969;
+@dg-ruler-label: #333333;
+ 
+/*-----------------------Datepicker Definition-----------------*/
+@disable-datepicker-text: lighten( @default-font-color, 55% );
+/*-----------------------Bootstrap support-----------------*/
+@bs-default-bg-stcolor:@default-bg-stcolor; @bs-header-bg-stcolor:@header-bg-stcolor; @bs-shadow-bg-color:@shadow-bg-color; @bs-content-font-color:@content-font-color; @bs-header-font-color:@header-font-color; @bs-hover-font-color:@hover-font-color; @bs-active-font-color:@active-font-color; @shadow-bg-size:2px; @content-font-color-element:#000000; .bs-default-gradient() {
+    .default-gradient();
+}
+
+.bs-header-gradient() {
+    .header-gradient();
+}
+
+.tooltip-colors() {
+    background-color: @content-bg-color;
+    border-color: @content-border-color;
+    color: @content-font-color;
+}
+
+.handle-default-gradient() {
+    .default-gradient();
+}
+
+.handle-hover-gradient() {
+    .hover-gradient();
+}
+
+.vhandle-arrow(){
+    content: "";
+}
+
+.hhandle-arrow(){
+    content: "";
+}
+
+.border-bottom() {
+}
+
+.focus-border-color() {
+}
+
+.bs-hover-gradient() {
+}
+
+.hover-font-color() {
+}
+
+.active-icon-color() {
+}
+
+.default-icon-color() {
+}
+
+.add-borderdiv() {
+    border: @border-size @border-type @default-border-color;
+}
+
+.transparent-border() {
+}
+/*----------------------Ribbon Definition-----------------------*/
+@rbncontent-content-bg-color:@content-bg-color;
+@rbn-border-color:@default-border-color;
+@rbn-bg-color:@active-bg-stcolor;
+@rbn-act-color: none;
+@rbnapptab-font-color:@rbntab-font-color;
+@rbn-menu-font-hover-color:@hover-font-color;
+@rbnbackstage-item-select-color:@active-font-color;
+@rbnbackstage-item-hover-color:@hover-font-color;
+@rbn-bg-color-start:@active-bg-stcolor;
+@rbn-bg-color-end:@active-bg-endcolor;
+@rbn-act-a-border-color:@active-border-color;
+@rbncontent-font-color:@header-font-color; 
+@rbntab-font-color:@header-font-color;
+@rbncontent-border-color: @content-border-color; 
+@rbnhelp-color: @default-icon-color;
+@rbncaption-font-color: @content-font-color;
+@rbndropdown-color: @content-bg-color; 
+@rbnmenu-font-color:@hover-font-color; 
+@rbn-white-color:#FFFFFF;  
+@rbn-apptab-color:@rbn-white-color;                        
+@rbngallery-hover-color:@hover-bg-stcolor;    
+@rbngallery-select-color:@active-bg-stcolor;     
+@rbn-text-color:@hover-font-color;   
+@rbngallery-bg-color: @content-bg-color;          
+@rbngallery-border-color:@default-border-color;
+@rbngallery-disable-color:#CECECE;
+@rbnbackstage-start-hover-color:@active-bg-stcolor;
+@rbnbackstage-end-hover-color:darken(@active-bg-endcolor, 15%);
+@rbnbackstage-start-select-color:lighten(@active-bg-stcolor, 15%);
+@rbnbackstage-end-select-color:lighten(@active-bg-endcolor, 15%);
+@rbntoggle-start-color:lighten(@active-bg-stcolor, 10%);
+@rbntoggle-end-color:lighten(@active-bg-endcolor, 15%);
+@rbnhover-font-color: @hover-font-color;
+.ribbon-toggle-gradient(){
+ .custom-gradient(@active-gradient-color, @rbntoggle-start-color, @rbntoggle-end-color, 10%, 0%);  
+}
+.ribbon-header-gradient(){
+ .ribbon-active-gradient();
+}
+.ribbon-active-gradient(){
+ .active-gradient();
+}
+.ribbon-hover-gradient(){
+ .hover-gradient();
+}
+.ribbon-backstage-hover-bg(){
+ .custom-gradient(@active-gradient-color, @rbnbackstage-start-hover-color, @rbnbackstage-end-hover-color, 0%, 15%);  
+}
+.ribbon-backstage-select-bg(){
+ .custom-gradient(@active-gradient-color, @rbnbackstage-start-select-color, @rbnbackstage-end-select-color, 15%, 0%);  
+}
+.ribbon-bg-hover-gradient(){}
+.ribbon-tab-hover(){}
+.ribbon-bg-active-gradient(){}
+.office-ribbon-file-hover(){}
+.ribbon-app-hover-gradient(){
+   .ribbon-hover-gradient();
+}
+.ribbon-shadow(){   
+}
+.ribbon-app-tab-font(){
+  color: @rbn-apptab-color;
+}
+/*----------------------Ribbon End-----------------------*/
+/*----------------------File Explorer Start-----------------------*/
+
+.mouseselection-stylefor-fileexplorer() {
+    background-color: fade(@active-bg-stcolor,20%);
+}
+/*----------------------File Explorer End-----------------------*/
+/*----------------------Kanban Definition-----------------------*/
+@kanban-cell-exceed: #f8d9c7;
+@kanban-cell-deceed: #ffedcd;
+@kanban-cell-border:@default-border-color;
+@kanban-card-border:@content-border-color;
+@kanban-select-cardhead-border:lighten(@default-border-color,3%);
+@kanban-cardhead-border:lighten(@default-border-color,3%);
+@kanban-toolbar-border:@default-border-color;
+@kanban-filter-done-stcolor: @hover-bg-stcolor;
+@kanban-card-shadow:none;
+@kanban-toggle-hover-ftcolor: @active-bg-stcolor;
+.kanban-cell-bg(){
+.custom-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 4%, 0%);
+}
+.kanban-dragclone-bg(){
+.custom-gradient(@hover-gradient-color, @hover-bg-stcolor, @hover-bg-endcolor, 21%, 0%);
+}
+.kanban-skheader-bg(){
+	.custom-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 1%, 0%);
+}
+.kanban-header-font(){
+     color:@active-bg-stcolor;
+}
+.kanban-targetdrag-font(){
+	.default-gradient();
+}
+.kanban-toggle-content-ftcolor(){
+     color: @content-font-color;
+     opacity: 0.6;
+     filter: alpha(opacity=60);
+}
+.kanban-toggle-icon-ftcolor(){
+     color: @content-font-color;
+     opacity: 0.8;
+     filter: alpha(opacity=80);
+}
+/*----------------------Kanban End-----------------------*/
+/*----------------------Spreadsheet Definition-----------------------*/
+@sscontent-color: @content-font-color;
+@ssheader-content-color:@header-font-color;
+@sscontent-border-color: @content-border-color;
+@ssfroze-border-color: @content-border-color;
+@ssdialog-border: @content-border-color;
+@sscopy-blank-bgcolor: @content-border-color;
+@sscopy-blur-bgcolor: darken( @content-bg-color, 4% );
+@sscomments-hdr-bgcolor: darken( @content-bg-color, 5% );
+@ssborder-bright: darken( desaturate( @active-bg-stcolor, 8% ), 1% );
+@sscomments-focused-border: lighten( desaturate( @active-bg-stcolor, 18% ), 14% );
+@sscomments-excel-border: darken( saturate( @header-border-color, 1% ), 4% );
+@sspager-font-color:@default-font-color;
+@ssheader-border-color: @header-border-color;
+@ssheader-bgcolor: @content-bg-color;
+@sshover-bg-color: @hover-bg-stcolor;
+@ssheader-select-bgcolor: lighten( desaturate(@hover-bg-stcolor, 15% ), 7% );
+@ssheader-hover-bordercolor:@hover-border-color;
+@sscontent-border-color:@content-border-color;
+@ssfroze-highlight-color: darken( desaturate( @active-bg-stcolor, 11% ), 22% );
+@sschart-darktheme-bgcolor: darken( @content-font-color, 13% );
+@ssdrpdwnbrdr: darken( @header-border-color, 7% );
+@ssselectall: lighten(@active-bg-stcolor, 20%);
+@ssselectallhover: @active-bg-stcolor;
+@ssselectselected: darken( desaturate( @active-bg-stcolor, 16% ), 6% );
+@sschart-select-bgcolor: lighten( desaturate( @active-bg-stcolor, 24% ), 20% );
+@sscontent-active-bgcolor: darken( desaturate( @active-bg-stcolor, 11% ), 2% );
+@sscontent-active-color: @active-font-color;
+@ssnumeric-icon-color: darken( @header-border-color, 31% );
+@ssactive-bg-color: @active-bg-stcolor;
+@ss-icon-color:@default-icon-color;
+@ssbtntgle-start-color:lighten(@active-bg-stcolor, 10%);
+@ssbtntgle-end-color:lighten(@active-bg-stcolor, 15%);
+@ss-chartmenu-bgcolor:lighten( @default-bg-stcolor, 4% );
+@ss-chartmenu-color:@default-font-color;
+@ss-chartmenuheader-bgcolor:@header-bg-stcolor;
+@ss-textarea-color:@default-border-color;
+@ssrowselect-font-color:@content-font-color;
+.spread-toggle-gradient(){
+  .custom-gradient(@active-gradient-color,@ssbtntgle-start-color, @ssbtntgle-end-color, 10%, 0%);
+}
+@ssactive-font-color:@default-font-color;
+@ssactive-icon-color:@default-icon-color;
+@ssdown-arrow-cursor:url("../common-images/spreadsheet/down_arrow_light.cur"),auto;
+@ssright-arrow-cursor:url("../common-images/spreadsheet/right_arrow_light.cur"),auto;
+@ssformatpainter-cursor:url("../common-images/spreadsheet/format_painter_light.cur"),auto;
+@ssdraw-border-cursor:url("../common-images/spreadsheet/draw_border_light.cur"),auto;
+@ssdraw-border-grid-cursor:url("../common-images/spreadsheet/draw_border_grid_light.cur"),auto;
+/*----------------------Spreadsheet End-----------------------*/
+
+/*----------------------rangeScrollbar Start------------------*/
+
+@default-rangeScroll-select-fill: @default-bg-stcolor;
+@default-rangeScroll-select-stroke : @default-border-color;
+@hover-rangeScroll-select-fill: @hover-bg-stcolor;
+@hover-rangeScroll-select-stroke : @hover-border-color;
+@default-rangeScroll-backRect-fill:@content-bg-color;
+@default-rangeScroll-backRect-stroke:@content-border-color;
+@default-rangeScroll-arrow-fill:@default-icon-color;
+@hover-rangeScroll-arrow-fill:@hover-icon-color;
+
+/*----------------------rangeScrollbar End--------------------*//*----------------------Office 365 theme-----------------------*/
+.border-selection(){}
+.colorpicker-color-selection(){  }
+.colorpicker-boxshadow-selection(){}
+/*----------------------High-Contrast-01 & High-Contrast-02 theme-----------------------*/
+.colorpickericon-color-selection(){}
+  /*----------------------material theme-----------------------*/
+.material-stylefor-bordertop(){}
+.material-stylefor-fileexplorer(){
+   border-bottom-color: @active-bg-stcolor;
+}
+.material-stylefor-button(){}
+.material-stylefor-datepicker(){} 
+.material-stylefor-borderradius(){}
+
+/*--------------- common ----------------- */
+
+.switch-animate-icon-color() {
+    @active-icon-color: white;
+}
+.tab-header-background() {}
+.switch-grid-header-icon() {}
+.switch-datepick-header-hover() {}
+.switch-datepick-header-text() {}
+.switch-datetimepick-button-text() {}
+.switch-colorpicker-grpbtn-text() {}
+.switch-splitter-divder-hover() {}
+.switch-schedule-appointment-btn() {}
+.switch-schedule-header-color() {}
+.switch-pivotgrid-draggale-button() {}
+.switch-pivotgrid-groupingBar-btn-color() {}
+.switch-pivotgrid-btn-hover() {}
+.switch-pivotclient-icon-hover() {}
+.switch-pivotclient-treeview-icon-hover-active() {}
+.switch-checkbox-icontick() {}
+.switch-ribbon-file-header-txt-color() {}
+.switch-file-explorer-context-icon-color() {}
+.switch-rte-active-icon-color() {}
+.switch-rte-context-icon-color() {}
+
+/*---------------high-contrast ------*/
+
+.high-contrast-groupbtn-border() {
+    @hover-border-color: @default-border-color;
+}
+.switch-themes-groupbtn-border-color() {
+    @hover-gbtn-border-color: transparent;
+}
+.high-contrast-gantt-toolbar-icon-border() {
+    @hover-border-color: transparent;
+}
+.high-contrast-stylefor-daterange(){}
+.high-contrast-stylefor-silder-active() {}
+.high-contrast-checkbox-bordercolor() {}
+.high-contrast-radio-bordercolor() {}
+.high-contrast-radio-iconcircle() {}
+.high-contrast-tab-headerborder() {}
+.high-contrast-tab-header-normal-font() {}
+.high-contrast-rotator-default-border() {}
+.high-contrast-rotator-pager-border() {}
+.high-contrast-file-explorer-search-text() {}
+.high-contrast-file-explorer-content-active() {}
+.high-contrast-tagcloud-txt-hover() {}
+.high-contrast-ribbon-header-active() {}
+.high-contrast-ribbon-header-border() {}
+.high-contrast-ribbon-header-active-border() {}
+.high-contrast-ribbon-header-active-font() {}
+.high-contrast-ribbon-header-hover-font() {}
+.high-contrast-ribbon-file-header() {}
+.high-contrast-ribbon-file-header-hover() {}
+.high-contrast-gantt-textbox-border-color() {}
+.high-contrast-gantt-active-font-color() {}
+.high-contrast-toolbar-border() {}
+.high-contrast-grid-button-border-color() {}
+.high-contrast-schedule-content-icon-color() {}
+.high-contrast-upload-btn-hover-color(){}
+.daterange-inrange-background() {}
+/*---------------- Office-365 ----------------*/
+
+.office-grid-footer-bg-color() {}
+.office-grid-footer-border-color() {}
+.office-grid-pager-bg-color() {}
+.office-grid-pager-hover-color() {}
+.office-button-bg-color() {}
+.office-silder-handle-bg-color() {}
+.office-silder-handle-border-color() {}
+.office-silder-handle-hover-border-color() {}
+.office-acrd-header-bg-color() {}
+.office-acrd-header-border-color() {}
+.office-tab-headerborder() {}
+.office-tab-header-normal-font() {}
+.office-colorpick-popup-bg-color() {}
+.office-colorpick-popup-border-color() {}
+.office-rotator-pager-hover-border() {}
+.office-ribbon-header-bg-color() {}
+.office-ribbon-header-border() {}
+.office-ribbon-header-font-color() {}
+.office-ribbon-file-header() {}
+.office-pivotclient-toolbar-bg-color() {}
+.office-checkbox-bordercolor() {}
+.office-file-explorer-toolbar-bg-color() {}
+.office-file-explorer-toolbar-border-color() {}
+.office-rte-toolbar-color() {}
+.office-split-menu-color() {}
+.office-tab-header-bg-color {}
+.office-radio-iconcircle() {}
+.office-radio-bordercolor() {}
+.office-dialog-active-line-color() {}
+.office-tab-header-hover-font(){}
+.office-file-explorer-splitbtn-bg-color(){}
+.office-ddl-checkbox-bordercolor(){}
+.office-toolbar-bg-color(){}
+.office-rte-splitbtn-bg-color(){}
+.office-upload-btn-hover-color(){}
+.office-tab-header-bghover-color{}
+.office-upload-button-border(){}
+.office-tab-border-left-right(){
+    border: none;
+}
+.office-pivot-treeview-hover-border(){}
+.office-pivot-button-active(){}
+.office-pivot-treeview-active-color(){}
+.office-pivot-groupingBar-button-active(){}
+.office-pivot-button-border(){
+    border:1px solid;
+}
+.office-pivot-dialog-icon-hover(){
+   background:@pivotList-dialog-close-hvr-color;
+}
+/*------------------ material theme ---------------------*/
+
+.material-tab-border() {
+    border-bottom: transparent;
+}
+.material-tab-borderbottom() {
+    border-top: 3px @border-type @active-bg-stcolor;
+}
+
+.material-tab-right-border(){ 
+  border-left: transparent;
+}
+.material-tab-right-bottom-border(){
+    border-right: 3px @border-type @active-bg-stcolor;
+}
+.material-tab-left-border(){
+    border-right: transparent;
+}
+.material-tab-left-bottom-border(){
+    border-left: 3px @border-type @active-bg-stcolor;
+}
+.material-tab-bottom-border(){
+    border-top: transparent;
+}
+.material-tab-bottom-border-bottom(){
+    border-bottom: 3px @border-type @active-bg-stcolor;
+}
+
+.material-datepick-header-icon-color() {}
+.material-dialog-icon-hover-bg-color() {}
+.material-dialog-icon-hover-color(){}
+.material-menu-active-bg-color() {}
+.material-radio-bg-color() {}
+.material-radio-bordercolor() {}
+.material-radio-iconcircle() {}
+.material-tab-header-bg-hover-color() {}
+.material-tab-headerborder() {}
+.material-tab-header-normal-font() {}
+.material-tab-header-hover-font() {}
+.material-hover-navigation-header-icon-color() {}
+.material-tootip-bg-color() {}
+.material-tootip-border-color() {}
+.material-tootip-text-color() {}
+.material-button-border-color() {}
+.material-listview-header-icon-color() {}
+.material-tileview-bg-color() {}
+.material-ribbon-header-active-font() {}
+.material-ribbon-file-header() {}
+.material-ribbon-file-header-hover() {}
+.material-pivot-drag-bg-color() {}
+.material-pivot-drag-column-color() {}
+.material-pivot-drag-column-br-color() {}
+.material-pivot-drag-column-txt-color() {}
+.material-pivotclient-box-shadow() {}
+.material-grid-droparea-bg-color() {}
+.material-grid-header-border-top-color() {}
+.material-gantt-header-background() {}
+.material-gantt-header-icon-color() {}
+.material-upload-background() {}
+.material-upload-border() {}
+.material-active-box-shadow() {}
+.material-normal-box-shadow() {}
+.material-checkbox-bordercolor() {}
+.material-checkbox-act-bordercolor() {}
+.material-upload-dialog-active-line(){
+    border-bottom: 3px @border-type @active-bg-stcolor;
+}
+.material-radio-act-bordercolor(){}
+.material-file-explorer-splitbtn-shadow(){}
+.material-file-explorer-splitbtn-radius(){}
+.material-ddl-checkbox-bordercolor(){}
+.material-tab-padding-bottom(){ 
+   padding-bottom: 1px;
+}
+.material-tab-border-bottom-line(){}
+
+.material-headerStylefor-datepicker(){}
+.material-dateDimension-datepicker(){}
+.material-dateCircle-datepicker(){}
+.material-monthDimension-datepicker(){}
+.material-buttonText-alignment(){}
+.material-icon-alignment(){}
+.material-gantt-toolbar-shadow(){}
+
+.material-datePicker-header() {}
+.material-borderRadius-datepicker(){}
+.material-datePicker-headerText(){}
+.material-headerText-padding(){}
+.material-rightIcon-alignment(){}
+.material-icon-dimension(){}
+.material-icon-position(){}
+.material-otherMonth-dateColor(){}
+.material-text-dimension(){}
+.material-headerHoverStylefor-datepicker(){}
+.material-headerHoverStylefor-dateTimePicker(){}
+.material-upload-dialog-bg-color(){}
+.material-rte-splitbtn-radius(){}
+.material-header-RTL(){}
+.material-prevIcon-RTL(){}
+.material-nextIcon-RTL(){}
+.material-drillDownContainer-font(){}
+.material-timeDimension-datepicker(){}
+.material-content-border-color(){}
+/*-----------------------HeatMap Definition-----------------*/
+@hmp-border-color: #c8c8c8;
+@hmp-font-color:black;
+@hmp-background-color:white;
+/* Common style */
+
+.e-content-area{
+   background-color:@widget-bg-color;
+   color:@label-color;
+   border-color:@content-border-color;
+   font-family:@font-family;
+}
+@isDefault: false;
+.custom-gradient(@gradients, @stcolor, @endcolors, @light, @dark) when not (@isDefault)  and not (@gradients = none) {
+  .normal-bg(){
+    @gradient: extract(@gradients, 1);
+    @color: extract(@gradient, 1);
+    background: contrast(@color, lighten(@color, @light), darken(@color, @dark));
+  }.normal-bg();   
+ 
+  .gen-gradient(-moz-, top);
+   
+   .webkit-gradient(){
+    .lower-browsers();
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@end)); 
+  }.webkit-gradient();
+  
+  .gen-gradient(-webkit-, top);   
+  .gen-gradient(-o-, top);
+  .gen-gradient(-ms-, top);   
+  .gen-gradient("" ; to bottom);   
+  
+  .filter-bg(){
+    .lower-browsers();
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@start, endColorstr=@end,GradientType=0 ); 
+  }.filter-bg();
+  
+  .lower-browsers(){
+    @startgradient: extract(@gradients, 1);
+    @endgradient:  extract(@gradients, length(@gradients));
+    @startcolor: extract(@startgradient, 1);    
+    @endcolor: extract(@endgradient, 1);    
+    @start: contrast(@startcolor, lighten(@startcolor, @light), darken(@startcolor, @dark));
+    @end: contrast(@endcolor, lighten(@endcolor, @light), darken(@endcolor, @dark));
+  }   
+  
+  .gen-gradient(@browser, @position){
+    @{browser}+_: ~"; background: @{browser}linear-gradient(@{position}";
+    .loop(length(@gradients));
+    .loop(@i) when (@i > 0) {
+        .loop((@i - 1));
+        @gradient: extract(@gradients, @i);
+        @color:    extract(@gradient, 1); 
+       .scale() when (length(@gradient) = 2){
+           .lightdark() when (lightness(@color) > 50) {
+               @{browser}+: darken(@color, @dark) extract(@gradient, 2);
+           }
+           .lightdark() when (lightness(@color) < 50) {
+               @{browser}+: lighten(@color, @light) extract(@gradient, 2);
+           }.lightdark();
+       }      
+       .scale() when (length(@gradient) = 1){ 
+         .lightdark() when (lightness(@color) > 50) {
+               @{browser}+: darken(@color, @dark);
+           }
+           .lightdark() when (lightness(@color) < 50) {
+               @{browser}+: lighten(@color, @light);
+           }.lightdark();                     
+      }                            
+    }
+    .scale();
+    @{browser}+_:);    
+  }
+}
+.custom-gradient(@gradients, @stcolor, @endcolors, @light, @dark) when not (@isDefault)  and (@gradients = none) {
+    background:  @stcolor;
+}

@@ -1,0 +1,417 @@
+@import "definition.less";
+
+/*------------------------------------- Mediaplayer -------------------------------------------*/
+/*#region mediaplayer*/
+/*region media container styles*/
+
+.e-media-content-div .e-waitpopup-pane {
+    background-color: transparent;
+}
+
+.e-media-player {
+    border-color: @header-border-color;
+    background-color: @content-bg-color;
+}
+
+.e-media-control-container {
+    background: @content-bg-color;
+}
+
+.e-media-element {
+    background: @content-bg-color;
+}
+
+.e-media-player .e-slider {
+    background-color: @default-icon-color !important;
+}
+/*region media container styles*/
+
+/* region toolbar styles*/
+
+.e-media-toolbar-icon:before, .e-media-playlist-icon:before, .e-media-playlist-toggle:before {
+    color: @default-icon-color;
+}
+
+.e-media-toolbar.adv .e-media-volume-text {
+    color: @default-icon-color;
+}
+
+.e-media-time-stamp.e-media-adv {
+    color: @default-font-color;
+}
+
+.e-media-player .media-shuffled:before, .e-media-player .media-muted:before, .e-media-player .media-repeated:before,
+.e-media-player .e-media-playlist-visible:before {
+    color: @active-bg-stcolor;
+}
+
+.e-media-timeslider-div.e-media-adv {
+    background: transparent;
+}
+
+.e-media-prev-li.basic .e-media-toolbar-icon:before, .e-media-next-li.basic .e-media-toolbar-icon:before {
+    color: @default-icon-color;
+}
+
+.e-media-toolbar.basic .e-media-toolbar-split-li {
+    color: @default-icon-color;
+}
+
+.e-media-toolbar.basic .e-media-split {
+    color: @default-font-color;
+}
+
+.e-media-toolbar.basic .e-media-vol-slider-li {
+    background-color: @content-bg-color;
+}
+
+.e-media-time-stamp-end.e-media-basic, .e-media-time-stamp-run.e-media-basic {
+    color: @default-font-color;
+}
+
+.e-media-time-stamp-end.e-media-mob, .e-media-time-stamp-run.e-media-mob {
+    color: @default-font-color;
+}
+/* end region toolbar styles*/
+
+/*region settings styles*/
+
+.e-media-settings-popup > .e-lv.subpage {
+    background-color: @content-bg-color;
+    border-color: @content-border-color !important;
+}
+
+.e-media-settings-popup li {
+    background-color: @content-bg-color !important;
+}
+
+.e-media-settings-popup .e-header {
+    background-color: @header-bg-stcolor !important;
+    border-bottom-color: @header-border-color !important;
+}
+
+.e-media-settings-selector:before {
+    color: @active-bg-stcolor;
+}
+
+.e-media-settings-popup .e-lv .e-list .e-chevron-right_01.e-fontimage:before,
+.e-media-settings-popup .e-lv > .e-header > .e-icon:before {
+    color: @active-bg-stcolor !important;
+}
+
+.e-media-settings-popup .e-list-text, .e-media-settings-popup .e-btn-text {
+    color: @default-font-color !important;
+}
+/*end region settings styles*/
+
+/*region playlist styles*/
+
+.e-media-playlist-img-div {
+    color: @content-bg-color !important;
+}
+
+.e-media-playlist-img-div.desktop {
+    border-color: @content-border-color;
+}
+
+.e-media-playlist-img-div.mobile {
+    border-color: @content-border-color;
+}
+
+.e-media-player .e-media-playlist-play:before {
+    color: @default-font-color;
+}
+
+.e-media-playlist-title {
+    color: @default-font-color;
+}
+
+.e-media-playlist-container.desktop, .e-media-playlist-container.mobile {
+    background-color: @content-bg-color;
+    border-color: @content-border-color;
+}
+
+.e-media-playlist-header {
+    border-bottom-color: @header-border-color;
+}
+
+.e-media-playlist-header label {
+    color: @default-font-color;
+}
+
+.e-media-playlist-toggle.desktop {
+    background-color: @default-font-color;
+}
+
+.e-media-playlist-toggle.e-media-expand:before, .e-media-playlist-toggle.e-media-collapse:before {
+    color: @default-font-color !important;
+}
+
+.e-media-playlist-container .e-listbox .e-select {
+    /*background: @active-bg-stcolor !important;*/
+}
+
+.e-media-playlist-container .e-listbox li {
+    border-bottom-color: @content-border-color;
+}
+
+.e-media-playlist-container .e-listbox-container {
+    background-color: @content-bg-color;
+}
+/*region playlist styles*/
+
+/*other styles*/
+.e-media-video-baner {
+    color: @active-font-color;
+}
+
+.e-media-audio-title {
+    color: @header-font-color;
+}
+
+.e-media-overlay {
+    color: white;
+}
+
+.e-media-time-tooltip {
+    border-color: @content-border-color;
+    color: @content-font-color;
+    background-color: @content-bg-color;
+}
+
+.e-media-hd-tag {
+    color: red;
+}
+
+.e-media-toolbar-split {
+    background: @header-border-color;
+}
+
+.e-media-player .e-media-playlist-close:before {
+    color: @default-icon-color;
+}
+
+.e-media-player .e-media-play-animation {
+    background: rgba(0,0,0,.5);
+}
+
+.e-media-player .e-slider .e-handle {
+    border-color: @default-border-color !important;
+}
+/*#region hover*/
+.e-media-mouse .e-media-toolbar-icon:not(.disabled):hover::before {
+    color: @hover-font-color !important;
+}
+
+.e-media-toolbar.adv .e-media-toolbar-volume-li:hover {
+    background: transparent !important;
+}
+
+.e-media-settings-popup li:hover {
+    background: @hover-bg-stcolor !important;
+}
+
+
+/*material theme*/
+
+.e-media-toolbar.basic .e-media-time-li .e-handle {
+    & when (@skin= "material") {
+        margin-top: -3px !important;
+    }
+}
+
+.e-media-toolbar.basic .e-media-volume-slider .e-handle {
+    & when (@skin= "material") {
+        margin-left: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv .e-list .e-chevron-right_01 {
+    & when (@skin= "material") {
+        padding-top: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-header {
+    & when (@skin= "material") {
+        background-color: white !important;
+        box-shadow: none !important;
+        border-top: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "material") {
+        left: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-header .e-hicon,
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "material") {
+        top: -18px !important;
+        right: 0px !important;
+    }
+}
+
+.e-media-timeslider.e-media-adv.e-slider .e-handle {
+    & when (@skin= "material") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider .e-handle {
+    & when (@skin= "material") {
+        margin-top: 0px !important;
+    }
+}
+
+.e-media-player .e-media-shuffle:before {
+    & when (@skin= "material") {
+        font-size: 17px !important;
+        margin-top: -3px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider-li {
+    & when (@skin= "material") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-player .e-media-playlist-toggle.e-media-collapse:before {
+    & when (@skin= "material") {
+        content: "\e116" !important;
+        -ms-transform: rotate(180deg) !important;
+        -webkit-transform: rotate(180deg) !important;
+        transform: rotate(180deg) !important;
+    }
+}
+
+.e-media-playlist-toggle.mobile {
+    & when (@skin= "material") {
+        -ms-transform: rotate(90deg) !important;
+        -webkit-transform: rotate(90deg) !important;
+        transform: rotate(90deg) !important;
+    }
+}
+
+.e-media-center-play:before {
+    & when (@skin= "material") {
+        left: 46% !important;
+        left: -moz-calc(~'50% - 23px') !important;
+        left: -webkit-calc(~'50% - 23px') !important;
+        left: -o-calc(~'50% - 23px') !important;
+        left: calc(~'50% - 23px') !important;
+    }
+}
+
+.e-media-hd-tag {
+    & when (@skin= "material") {
+        right: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-list-text {
+    & when (@skin= "material") {
+        font-size: 13px !important;
+    }
+}
+/*office-365 theme*/
+.e-media-toolbar.basic .e-media-volume-slider .e-handle {
+    & when (@skin= "office-365") {
+        margin-left: -2px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv .e-list .e-chevron-right_01 {
+    & when (@skin= "office-365") {
+        padding-top: 0px !important;
+        margin-top: -6px;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "office-365") {
+        left: 0px !important;
+    }
+}
+
+.e-media-settings-selector:before {
+    & when (@skin= "office-365") {
+        top: 6px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider .e-handle {
+    & when (@skin= "office-365") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-playlist-container .e-listbox li {
+    & when (@skin= "office-365") {
+        padding: 4px !important;
+    }
+}
+
+.e-media-playlist-number {
+    & when (@skin= "office-365") {
+        margin-top: -17px !important;
+    }
+}
+
+.e-media-settings-popup .e-header {
+    & when (@skin= "office-365") {
+        box-shadow: none !important;
+        border-top: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-header .e-hicon,
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "office-365") {
+        top: -6px !important;
+    }
+}
+
+.e-media-player .e-media-shuffle:before {
+    & when (@skin= "office-365") {
+        font-size: 17px !important;
+        margin-top: -3px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider-li {
+    & when (@skin= "office-365") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-player .e-media-playlist-toggle.e-media-collapse:before {
+    & when (@skin= "office-365") {
+        content: "\e116" !important;
+        -ms-transform: rotate(180deg) !important;
+        -webkit-transform: rotate(180deg) !important;
+        transform: rotate(180deg) !important;
+    }
+}
+
+.e-media-playlist-toggle.mobile {
+    & when (@skin= "office-365") {
+        -ms-transform: rotate(90deg) !important;
+        -webkit-transform: rotate(90deg) !important;
+        transform: rotate(90deg) !important;
+    }
+}
+
+.e-media-center-play:before {
+    & when (@skin= "office-365") {
+        left: 46% !important;
+        left: -moz-calc(~'50% - 23px') !important;
+        left: -webkit-calc(~'50% - 23px') !important;
+        left: -o-calc(~'50% - 23px') !important;
+        left: calc(~'50% - 23px') !important;
+    }
+}
+/*#end region mediaplayer*/

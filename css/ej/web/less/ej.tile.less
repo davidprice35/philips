@@ -1,0 +1,114 @@
+@import "definition.less";
+/*------------------------------------- Tile View -------------------------------------------*/
+
+.e-tile {
+    color: @active-font-color;
+     & when (@skin= "material") { 
+         margin:2px;
+         font-weight:400;
+         font-family:@font-family;
+     }
+}
+
+.e-tile .e-image-parent {
+    .tile-bg-gradient;
+}
+
+.e-tile .e-image-parent {
+    .material-tileview-bg-color;
+    & when  (@skin= "office-365") {
+        background-color: @theme-primary;
+    }
+}
+
+.e-tile .e-tile-selected::after {
+    border-top: 28px solid @cell-selection-stbg-color;
+}
+
+.e-tile .e-tile-selected {
+    border: 2px solid @active-border-color;
+}
+.e-tile-wide {
+     & when (@skin= "material") {
+         width: 354px !important; 
+         }
+         
+}
+.e-tile-medium {
+     & when (@skin= "material") {
+         width: 175px !important; 
+         }        
+}
+.e-tile-small {
+     & when (@skin= "material") {
+         width: 85.5px !important; 
+         height: 73px !important;
+         } 
+}
+.e-tile-group .e-tile-column {
+     & when (@skin= "material") {
+         max-width:358px;
+         }    
+}
+.e-tile.e-js.e-tile-web:hover {
+     & when (@skin= "material") {
+        box-shadow:0px 3px 6px 0px rgba(0,0,0,0.26);
+       }    
+}
+.e-tile.e-js.e-tile-web:hover .e-image-parent {
+    & when (@skin= "material") {
+       background-color: @material-tile-hover-color;
+    }
+    & when  (@skin= "office-365") {
+        border: 2px @border-type @theme-darker;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+.e-tile-caption-text.e-caption-innerbottom::before {
+   & when (@skin= "material") {
+       margin-bottom: 16px;
+       }
+}
+.e-tile-caption-text::before {
+    & when (@skin= "material") {
+        padding-left:12px;
+        }
+}
+.e-tile.e-tile-web.e-tile-medium .e-image-parent .e-tile-image:not(.e-tile-imagefill), .e-tile.e-tile-web.e-tile-wide .e-image-parent .e-tile-image:not(.e-tile-imagefill) {
+    & when (@skin= "material") {
+       background-size:48px 48px;
+    }
+}
+.e-tile-caption::before {
+    & when (@skin= "material") {
+      font-size:15px;
+    }
+    & when  (@skin= "office-365") {
+        font-size: 14px;
+        font-family: @font-family;
+        color: @theme-primary-font;
+    }
+}
+.e-tile-small-col-2 {
+     & when (@skin= "material") {
+        width:179px;
+        height:154px;
+        }
+}
+.e-tile.e-tile-small .e-image-parent .e-tile-image:not(.e-tile-imagefill) {
+   & when (@skin= "material") {
+       background-size:24px 24px;
+   }
+}
+.e-tile.e-tile-imagefill .e-tile-overlay {
+    & when (@skin= "material") {
+        margin-top:75px;
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.49) 70%,rgba(0,0,0,0.7) 100%);
+        background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.49) 70%,rgba(0,0,0,0.7) 100%);
+        background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.49) 70%,rgba(0,0,0,0.7) 100%);
+        background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.49) 70%,rgba(0,0,0,0.7) 100%);
+        background:  linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.49) 70%,rgba(0,0,0,0.7) 100%);
+    }
+}

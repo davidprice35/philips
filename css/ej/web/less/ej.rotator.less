@@ -1,0 +1,187 @@
+@import "definition.less";
+
+/*------------------------------------- Rotator -------------------------------------------*/
+.e-rotator-wrap :focus {
+     outline: 0 none;
+}
+.e-rotator-wrap .e-in-wrap .e-single, .e-rotator-wrap .e-thumb .e-thumb-items li , .e-rotator-wrap .e-in-wrap.e-multiple{
+    .high-contrast-rotator-default-border;
+    border-color: @default-border-color;  
+}
+.e-rotator-wrap .e-thumb .e-thumb-items li:hover {
+      & when (@skin= "material") {
+        border-color: @grey-200;
+        }
+      & when not (@skin= "material") {
+        border-color: @hover-border-color;
+        }
+}
+.e-rotator-wrap .e-thumb .e-thumb-items li.e-active,
+.e-rotator-wrap.e-disable .e-thumb .e-thumb-items li.e-active:hover {
+    & when (@skin= "material") {
+        border-color: @grey-200;
+        }
+    & when not (@skin= "material") {
+        border-color: @active-border-color;
+        }
+}
+.e-rotator-wrap .e-thumb .e-thumb-items li.e-thumbhover {
+     border-color: @hover-border-color;
+}
+.e-rotator-wrap.e-disable .e-thumb .e-thumb-items li:hover,
+.e-rotator-wrap.e-disable .e-thumb .e-thumb-items li.e-thumbhover {
+     border-color: @default-border-color;
+}
+.e-rotator-wrap .e-inner .e-caption {
+    & when (@skin= "material") {
+       color: @primary-font-color;
+       opacity:1.5;
+    }
+    & when not (@skin= "material") {
+       background-color: @content-bg-color;
+       color: @content-font-color;
+    }
+}
+.e-rotator-wrap .e-pager-wrap .e-bullet > li:hover {
+    .office-rotator-pager-hover-border;
+     border-color: @hover-border-color;
+	& when (@skin= "material") {
+      background-color:@primary-font-color;
+    }
+    & when (@skin= "office-365") {
+        background-color: @neutral-tertiary;
+    }
+    & when not (@skin= "material") and not (@skin= "office-365") {
+      background-color:@hover-bg-stcolor;
+    }
+}
+.e-rotator-wrap.e-disable .e-pager-wrap .e-bullet > li:hover {
+     border-color: @default-border-color;
+     background-color: @default-bg-stcolor;
+}
+.e-rotator-wrap.e-disable .e-pager-wrap .e-bullet > li {
+	cursor: default;
+}
+.e-rotator-wrap .e-pager-wrap .e-bullet > li.e-active, 
+.e-rotator-wrap.e-disable .e-pager-wrap .e-bullet > li.e-active:hover{
+    & when (@skin= "material") {
+        width:16px;
+        height:16px;
+        margin-bottom:0px; 
+        }
+    & when not (@skin= "material") {
+    border-color: @active-border-color;
+	background-color:@active-bg-stcolor;
+    }
+}
+.e-rotator-wrap .e-pager-wrap .e-bullet > li {
+    .high-contrast-rotator-pager-border;
+	border-color:@default-border-color;
+     & when (@skin= "material") {
+         height:8px;
+         width:8px;
+         background-color:@primary-font-color;
+     }
+     & when (@skin= "office-365") {
+         background-color:@neutral-quaternary-alt;
+     }
+     & when not (@skin= "material") and not (@skin= "office-365") {
+         background-color:@default-bg-stcolor;
+	 }
+}
+
+.e-rotator-wrap .e-in-wrap .e-nav-btn.e-icon,.e-rotator-wrap .e-thumb-nav .e-thumb-btn.e-icon{
+background-image:url(images/rotator-icon.png);
+}
+.e-rotator-wrap .e-in-wrap .e-nav-btn.e-icon.play{
+ background-position: -161px  -0px;
+    & when (@skin= "office-365") {
+        background-position: -186px -0px;
+    }
+}
+.e-rotator-wrap .e-in-wrap .e-nav-btn.e-icon.pause{
+ background-position: -248px -0px;
+    & when (@skin= "office-365") {
+        background-position: -273px -0px;
+    }
+}
+.e-rotator-wrap .e-in-wrap .e-nav-btn.e-icon.e-previous{
+ background-position: -64px -15px;
+    & when (@skin= "office-365") {
+       background-position: -69px -15px;
+    }
+}
+.e-rotator-wrap .e-in-wrap .e-nav-btn.e-icon.e-next{
+ background-position: -109px -15px;
+    & when (@skin= "office-365") {
+       background-position: -126px -15px;
+    }
+}
+.e-rotator-wrap .e-thumb-nav .e-thumb-btn.e-icon.e-previous{
+    & when (@skin= "material") {
+        background:none;
+    }
+    & when (@skin= "office-365") {
+        background-position: 11px -15px;
+    }
+    & when not (@skin= "material") and not (@skin= "office-365") {
+       background-position: 8px -18px;
+    }
+}
+.e-rotator-wrap .e-thumb-nav .e-thumb-btn.e-icon.e-next{
+    & when (@skin= "material") {
+        background:none;
+    }
+    & when (@skin= "office-365") {
+        background-position: -22px -15px;
+    }
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        background-position: -27px -18px;
+    }
+}
+.e-rotator-wrap .e-pager-wrap .e-bullet {
+     & when (@skin= "material") {
+         padding-top:20px;
+         }
+}
+.e-rotator-wrap .e-pager-wrap .e-bullet > li:hover, .e-rotator-wrap .e-pager-wrap .e-bullet > li.e-active {
+     & when (@skin= "material") {
+         border-color:#e0e0e0;
+     }
+}
+.e-rotator-wrap .e-inner .e-caption > span {
+  & when (@skin= "material") {
+      font-size:20px;
+      margin-left:24px;
+      margin-bottom:24px;
+      font-family: @font-family;
+    }
+} 
+.e-rotator-wrap .e-thumb-nav .e-thumb-btn.e-icon.e-previous:before {
+& when (@skin= "material") {
+    content:"\e630";
+    }
+}
+.e-rotator-wrap .e-thumb-nav .e-thumb-btn.e-icon.e-next:before {
+& when (@skin= "material") {
+    content:"\e62f";
+    }
+}
+.e-rotator-wrap .e-thumb-nav .e-thumb-btn {
+  & when (@skin= "material") {
+    height: 36px;
+    width: 36px;
+    font-size:20px;
+  }
+}
+ .e-rotator-wrap .e-thumb-nav .e-thumb-btn.e-icon {
+      & when (@skin= "material") {
+          color:fade(@base-font-color,54%);
+      }
+ }
+ .e-rotator-wrap.e-Focused .e-shadow {
+      & when (@skin= "material") {
+           box-shadow:0 0 9px rgba(0,0,0,0) !important;
+      }
+ }
+ 

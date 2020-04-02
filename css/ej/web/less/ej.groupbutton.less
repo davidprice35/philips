@@ -1,0 +1,303 @@
+@import "definition.less";
+
+/*------------------------------------- GroupButton -------------------------------------------*/
+.e-groupbutton {
+    & when (@skin="material") {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        border-radius: 2px;
+        height: 32px;
+        background-color:@grey-50;
+    }
+
+    & when not (@skin="material") {
+        font-family: @font-family;
+        font-weight: @content-font-weight;
+        font-size: @content-font-size;
+        color: @default-font-color;
+        background-repeat: no-repeat;
+        border-color: @default-border-color;
+        .border-selection();
+        .bs-default-gradient();
+    }
+	& when (@skin="office-365") {
+        font-family: @font-family;
+        font-weight: 600;
+        font-size:14px;
+        color: @neutral-light-font;
+        background-repeat: no-repeat;
+        border-color: @neutral-lighter;
+		background-color:@neutral-lighter;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item {
+    & when (@skin="material") {
+        position: relative;
+        text-transform:uppercase;
+        overflow:hidden;
+    }
+}
+
+.e-groupbutton-hSmall {
+    min-height: 26px;
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content.e-groupBtn-padding {
+    padding: 0px;
+}
+
+.e-groupbutton.e-focus {
+    &when not(@skin="material"){
+        box-shadow: 0 0 2px @shadow-bg-color;
+    }
+}
+.e-groupbutton > .e-ul > .e-grp-btn-item:focus {
+	& when (@skin="office-365") {
+		border-color:@neutral-lighter;
+		background-color:@neutral-light;
+		color:@neutral-light-font;
+    }
+}
+.e-groupbutton > .e-ul > .e-grp-btn-item:active {
+	& when (@skin="office-365") {
+		border-color:@theme-primary;
+		background-color:@theme-primary;
+		color:@theme-primary-font;
+    }
+}
+
+
+.e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item, .e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item, .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item, .e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.e-border-left, .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.e-border-bottom {
+    border-color:@default-border-color;
+    .border-selection();
+}
+
+.e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.e-disable, .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.e-disable {
+    & when (@skin="material") {
+        color:fade(@base-font-color,38%);
+    }
+	& when (@skin="office-365") {
+		border-color:@neutral-lighter;
+		background-color:@neutral-lighter;
+		color:@neutral-tertiary;
+    }
+}
+
+.e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.e-disable .e-icon, .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.e-disable .e-icon{
+    & when (@skin="material") {
+        color:fade(@base-font-color,26%);
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-active, .e-groupbutton > .e-ul > .e-grp-btn-item.e-select {
+    & when (@skin="material") {
+        background-color: @grey-400;
+    }
+
+    & when not (@skin="material") {
+        color: #fff;
+        .active-gradient();
+        color: @active-font-color;
+    }
+}
+
+.e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item{
+    & when (@skin="material") {
+        padding-left:12px;
+        padding-right:12px;
+    }
+}
+
+.e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item{
+    & when (@skin="material") {
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-active.e-hover .e-btn-content .e-btntxt {
+    &when not(@skin="material"){
+    color: @hover-font-color;
+    }
+    &when (@skin="material"){
+        color: fade(@base-font-color, 87%);
+    }
+	& when (@skin="office-365") {
+		color:@theme-primary-font;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-active.e-hover, .e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item.e-active.e-hover {
+    .high-contrast-groupbtn-border;
+    border-color:@hover-border-color;    
+	& when (@skin="office-365") {
+		border-color:@theme-dark;
+		background-color:@theme-dark;
+		color:@theme-primary-font;
+    }
+}
+ .e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item {
+	border-right-color:transparent;
+}
+.e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item {
+	border-bottom-color:transparent;
+}
+.e-groupbutton.e-rtl >.e-horizontal.e-ul>.e-grp-btn-item {
+	border-left-color:transparent;
+
+}
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-hover, .e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item.e-hover {
+    &when not (@skin="material"){
+    .hover-gradient();
+    color: @hover-font-color;
+    .high-contrast-groupbtn-border;
+    border-color: @hover-border-color;
+    }
+    &when (@skin="material"){
+        background-color: fade(@base-font-color,12%);
+    }
+	& when (@skin="office-365"){
+        background-color: @neutral-light;
+    }
+}
+ 
+.e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.last,.e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.last.e-hover {
+	border-right-color:@default-border-color;
+	& when (@skin="office-365") {
+		border-color:@neutral-lighter;
+    }
+}
+.e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.last, .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.last.e-hover {
+	border-bottom-color:@default-border-color;
+	& when (@skin="office-365") {
+		border-color:@neutral-lighter;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > a.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > span.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > div.e-btntxt {
+    & when (@skin="material") {
+        font-family: @font-family;
+        font-size: 14px;
+    }
+
+    & when not (@skin="material") {
+        color: @default-font-color;
+        text-decoration: none;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > a.e-icon, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > span.e-icon, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > div.e-icon {
+    & when (@skin="material") {        
+        font-size: 18px;
+        color: fade(@base-font-color,54%);
+        height:24px;
+        width:24px;
+    }
+
+    & when not (@skin="material") {
+        color: @default-icon-color;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > a.e-icon:before, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > span.e-icon:before, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > div.e-icon:before {
+    & when (@skin="material") {                
+        height:18px;
+        width:18px;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > a.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > span.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > div.e-btntxt,
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > a.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > span.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > div.e-btntxt {
+    & when (@skin="material") {
+        color: fade(@base-font-color,87%)
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > a.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > span.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > div.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > a.e-icon, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > span.e-icon, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > div.e-icon {
+    & when not (@skin="material") {
+        color: @active-font-color;
+        text-decoration: none;
+    }
+}
+
+.e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item.last, .e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item.last.e-hover {
+	border-left-color:@default-border-color;
+	& when (@skin="office-365") {
+		border-color:@neutral-lighter;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-disable .e-btn-content > span.e-btntxt,.e-groupbutton > .e-ul > .e-disable .e-btn-content > a.e-btntxt,.e-groupbutton > .e-ul > .e-disable .e-btn-content > div.e-btntxt,
+.e-groupbutton > .e-ul > .e-disable.e-active .e-btn-content > span.e-btntxt,.e-groupbutton > .e-ul > .e-disable.e-active .e-btn-content > a.e-btntxt,.e-groupbutton > .e-ul > .e-disable.e-active .e-btn-content > div.e-btntxt {
+    & when (@skin="material") {
+        font-family: @font-family;
+        font-size: 14px;
+        color: fade(@base-font-color,38%);
+    }
+}
+
+.e-groupbutton > .e-ul > .e-disable.e-active{
+    & when (@skin="material") {
+        background-color:transparent;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-disable .e-btn-content > span.e-icon {
+    & when (@skin="material") {
+        /*font-family: roboto Medium;*/
+        font-size: 14px;
+        color: fade(@base-font-color,26%);
+    }
+}
+
+.e-groupbutton.e-disable {
+    & when (@skin="material") {
+        background: fade(@base-font-color,12%);
+        box-shadow: none;
+    }
+}
+
+.e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.e-hover {
+	.switch-themes-groupbtn-border-color();
+	border-right-color:@hover-gbtn-border-color;
+	& when (@skin="office-365") {
+		border-color:@neutral-light;
+    }
+	  
+}
+.e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.e-hover {
+	.switch-themes-groupbtn-border-color();
+	border-bottom-color:@hover-gbtn-border-color; 
+	& when (@skin="office-365") {
+		border-color:@neutral-light;
+    }
+}
+.e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item.e-hover {
+	.switch-themes-groupbtn-border-color();
+	border-left-color:@hover-gbtn-border-color;
+	& when (@skin="office-365") {
+		border-color:@neutral-light;
+    }
+}
+.e-groupbutton.e-rtl > .e-vertical.e-ul > .e-grp-btn-item.e-hover {
+	.switch-themes-groupbtn-border-color();
+	border-left-color:@hover-gbtn-border-color;
+	& when (@skin="office-365") {
+		border-color:@neutral-light;
+    }
+}
+
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-active:not(:active):after, .e-groupbutton > .e-ul > .e-grp-btn-item:not(:active):after
+{
+    &when( @skin="material") {
+        background-color: fade(@content-bg-color,50%);
+    }
+} 
+.e-groupbutton.e-disable{
+     & when not (@skin= "material") and not (@skin="office-365"){
+     background-color: @disable-control-background-color;
+    border-color:@disable-control-border-color;
+    opacity:1;
+    color:@disable-icon-bg-color;
+    }
+}

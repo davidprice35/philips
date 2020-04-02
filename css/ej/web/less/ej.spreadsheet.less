@@ -1,0 +1,807 @@
+@import "definition.less";
+.e-spreadsheet {
+    color: @sscontent-color;
+    border-color: @sscontent-border-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-headercell,
+.e-spreadsheet .e-spreadsheetmainpanel .e-headercontent,
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowheader {
+    border-color: @ssheader-border-color;
+    color: @ssheader-content-color;
+}
+    .e-spreadsheet .e-spreadsheetmainpanel .e-headercell,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-headercontent,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-rowheader {
+        & when (@skin= "material") {
+            color: @material-ssheader-content-color;
+        }
+    }
+.e-spreadsheet .e-spreadsheetmainpanel .e-headercell:hover,
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowheader:hover {
+    background-color: @ssheader-select-bgcolor;
+    border-color:@ssheader-hover-bordercolor;
+	color: @ssheader-content-color;
+     & when (@skin= "office-365") {
+            background-color: @ssheader-hover-bgcolor;
+            color: @ssheader-hover-fontcolor;
+        }
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowheadercontent {
+    border-bottom-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcontentcontainer {
+    border-left-color: @ssheader-border-color;
+	background-color: @content-bg-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcolumnheader {
+    border-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-spreadsheetheader {
+    border-bottom-color: @ssheader-border-color;
+    border-top-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcolumnheader {
+    border-right-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell {
+    color: @content-font-color;
+    background-color: @content-bg-color;
+    border-color: @content-border-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcolumnheader,
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowheader,
+.e-spreadsheet .e-scrollcss,
+.e-spreadsheet .e-scrollrowcss {
+    background-color: @ssheader-bgcolor;
+}
+.e-ss-editinput .e-in-wrap, .e-ss-editinput .e-input {
+  color: inherit;
+  font-size: 11pt;
+  font-family: Calibri;
+}
+/*---------------------------Frozen Row------------------------*/
+.e-spreadsheet .e-reSizeColbg {
+    border-left-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-reSizeAPbg {
+    border-left-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-reSizeRowbg {
+    border-top-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-selected,
+.e-spreadsheet .e-spreadsheetmainpanel .e-ctrlselected {
+    background: @ssheader-select-bgcolor;
+	color:@sscontent-color;
+     & when (@skin = "office-365") {
+    background: @sscontent-selection-bgcolor;
+  }
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-activecell {
+    background-color: @content-bg-color;
+	color:@sscontent-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowheader.e-rowhighlight, 
+.e-spreadsheet .e-spreadsheetmainpanel .e-colhighlight {
+    background-color: @ssheader-select-bgcolor;
+    color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowhighlight {
+    border-right-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-colhighlight {
+    border-bottom-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-colhighlight:hover {
+    background-color: @ssheader-select-bgcolor;
+    border-bottom-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowhighlight:hover {
+    background-color: @ssheader-select-bgcolor;
+    border-right-color: @ssfroze-highlight-color;
+}
+.e-menu-wrap .e-chartcell:hover, .e-chartimg:hover {
+    background-color: @sshover-bg-color;
+}
+.e-chartimg:hover {
+   & when (@skin = "office-365") {
+      border-color:@sscontent-selection-bgcolor;
+      background-color:none;
+  }
+}
+/*-------------------- Borders ------------------------ */
+.e-spreadsheet .e-spreadsheetmainpanel td.e-bborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-bctrlborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-bcbright {
+    border-right-color: @ssborder-bright;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-bborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-bctrlborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-bcbbottom {
+    border-bottom-color: @ssborder-bright;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-rborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-rctrlborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-rcbright {
+    border-right-color: #fc100c;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-rborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-rctrlborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-rcbbottom {
+    border-bottom-color: #fc100c;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-vborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-vctrlborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-vcbright {
+    border-right-color: #6a13ad;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-vborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-vctrlborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-vcbbottom {
+    border-bottom-color: #6a13ad;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-gborderright,
+.e-spreadsheet .e-spreadsheetmainpanel .e-gctrlborderright {
+    border-right-color: #62c435 !important;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-gborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-gctrlborderbottom {
+    border-bottom-color: #62c435;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-pborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-pctrlborderright {
+    border-right-color: #f411b0;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-pborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-pctrlborderbottom {
+    border-bottom-color: #f411b0;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-oborderright,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-octrlborderright {
+    border-right-color: #e59604;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-oborderbottom,
+.e-spreadsheet .e-spreadsheetmainpanel td.e-octrlborderbottom {
+    border-bottom-color: #e59604;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-thinright {
+    border-right-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-thinbottom {
+    border-bottom-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-ss-numeric .e-select .e-spin {
+    background-color: @sscontent-active-color;
+    color: @ssnumeric-icon-color;
+}
+
+.e-spreadsheet .e-ss-numeric .e-select .e-spin:hover {
+    background-color: @sscomments-focused-border;
+    border-color: @sscomments-excel-border;
+    color:@sscontent-active-color;
+}
+
+.e-spreadsheet .e-ss-numeric .e-select {
+    border-color: @sscontent-active-color;
+}
+
+.e-spreadsheet .e-ss-numeric .e-select:hover {
+    border-color: @sscomments-excel-border;
+}
+/*--------------------- Selection -------------------------- */
+.e-spreadsheet div.e-selecttop {
+    border-top-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet div.e-selectbottom {
+    border-bottom-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet div.e-selectright {
+    border-right-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet div.e-selectleft {
+    border-left-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-ss-selectall {
+    color: @ssselectall;
+}
+.e-spreadsheet .e-ss-selectall:hover {
+    color: @ssselectallhover;
+}
+.e-spreadsheet .e-sheetselected, .e-spreadsheet .e-sheetselected:hover {
+    color: @ssselectselected;
+}
+/*--------------------- Auto Fill -------------------------------*/
+.e-spreadsheet .e-autofill {
+    border-color: @content-bg-color;
+    background-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet div.e-autofillright {
+    border-right-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet div.e-autofillbottom {
+    border-bottom-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet div.e-autofilltop {
+    border-top-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet div.e-autofillleft {
+    border-left-color: @ssfroze-highlight-color;
+}
+/*--------------------- Cut and Copy ------------------------ */
+.e-spreadsheet .e-spreadsheetmainpanel td.e-cutright {
+    border-right-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel td.e-cutbottom {
+    border-bottom-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-blur {
+    background-color: @sscopy-blur-bgcolor;
+}
+.e-spreadsheet .e-spanfilter, .e-spreadsheet .e-spanddl{
+    border-color: @ssheader-border-color;
+    background-color: @default-bg-stcolor;
+    color: @default-icon-color;
+}
+.e-spreadsheet .e-spreadsheetcontentcontainer .e-ss-object.e-ss-activeimg {
+    border-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetcontentcontainer .e-ss-pivot.e-ss-activepivot {
+    border-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet  .e-ss-object.e-datavisualization-chart {
+    border-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-ss-imgvisual {
+    border-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell.e-redft {
+    background-color: #ffc7ce;
+    color: #9C0055;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell.e-yellowft {
+    background-color: #ffeb9c;
+    color: #9c6500;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell.e-greenft {
+    background-color: #c6efce;
+    color: #006100;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell.e-redf {
+    background-color: #ffc7ce;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell.e-redt {
+    color: #9C0055;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell.e-hlcell {
+    background-color: #ffff00;
+    color: #ff0000;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowcell.e-goto-blank {
+    background-color: @sscopy-blank-bgcolor;
+}
+/*-------------------------- Formula Tab --------------------------- */
+.e-spreadsheet .e-indexbox,
+.e-spreadsheet .functionbox,
+.e-spreadsheet .e-inputbox {
+    border-color: @sscontent-border-color;
+    color: @content-font-color;
+    background-color: @content-bg-color;
+}
+.e-ss-autocomplete.e-atc-popup ul li {
+    color: @ssheader-content-color;
+}
+.e-spreadsheet .e-inputbox > input {
+    color: @sscontent-color;
+}
+/*-------------Pager-------------*/
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-numericitem {
+    color: @sspager-font-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-currentitem,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-currentitem:hover {
+& when not (@skin = "material") {
+    background: @ssheader-select-bgcolor;
+    color: @ssfroze-highlight-color;
+    filter:none;   /* IE9 only*/
+	}
+& when (@skin = "material") {
+    background: none;
+	color: @ssfroze-highlight-color;
+    filter:none;   /* IE9 only*/
+        }
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-numericitem:hover {
+  color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager {
+    background-color: @ssheader-bgcolor;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-prevpagedisabled,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-prevpage,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-nextpage,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-nextpagedisabled,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-lastpagedisabled,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-lastpage,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-firstpage,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-firstpagedisabled,
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-numericcontainer {
+    background-color: @ssheader-bgcolor;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-pagercontainer {
+    background-color: @ssheader-bgcolor;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-icon:not(.e-disable):hover {
+    color: @ssfroze-highlight-color;
+    cursor: pointer;
+}
+.e-spreadsheet div.e-field-validation-error {
+    background-color:  #fffe91;
+    color: #cd0a0a;
+}
+.e-ss-dialog div.e-dlg-field-validation-error:before {
+    border-bottom-color:  #fffe91;
+}
+.e-spreadsheet div.e-error .e-errortail {
+    border-bottom-color:  #fffe91;
+}
+.e-spreadsheet .e-spreadsheetfooter {
+    border-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-hyperlinks {
+    color: inherit;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-mediaforward {
+    border-right-color: @content-border-color;
+	& when (@skin = "office-365") {
+	border-right-color: @theme-dark-font;
+	}
+}
+.e-spreadsheet .e-formulabar {
+    background-color:@ssheader-bgcolor;
+}
+.e-ss-dialog .e-chartheader {
+    background-color:@ssheader-bgcolor;
+    color:@ss-chartmenu-color;
+}
+.e-ss-dialog .e-tab .e-header.e-addborderbottom .e-active {
+    border-top-color:@ssheader-border-color;
+}
+/*---------------------- Dialog -------------------------- */
+ .e-dlgtab .e-header,
+ .e-valdlgtab .e-header {
+    overflow: visible;
+    /*border-color: @ssheader-bgcolor;*/
+}
+.e-spreadsheet .e-dlg-field-validation-error, .e-ss-dialog .e-dlg-field-validation-error {
+    background-color:  #fffe91;
+    color: #cd0a0a;
+}
+ .e-dlgright,
+ .e-dlgleft,
+ .e-dlginput,
+ .e-dlgcontent,
+ .e-chtdlgright,
+ .e-chtdlgleft,
+ .e-chtdlgcontent {
+    border-color: @ssheader-border-color;
+}
+ .e-dlgviewpanel {
+    border: 1px solid @ssdialog-border;
+}
+.e-ss-dlgtab .e-ss-sctnseparator {
+    border-color: @ssdialog-border;
+}
+
+.e-ss-dialog hr {
+    border-color: #eeeeee;
+}
+/*---------------------- Name Manager ------------------*/
+.e-menu .e-nmuseinformularow:hover {
+    background-color: @ssfroze-highlight-color;
+}
+/*---------------------- Cell Styles--------------------*/
+.e-menu-wrap .e-cellstylecontent, .e-menu-wrap .e-formatastablecontent, .e-menu-wrap .e-chartcontent {
+    background-color: @ss-chartmenu-bgcolor;
+	color: @ss-chartmenu-color;
+}
+.e-menu-wrap .e-cellstyleheader, .e-menu-wrap .e-formatastableheader {
+    background-color: @ss-chartmenuheader-bgcolor;
+	color: @ss-chartmenu-color;
+	border-color: @ssheader-border-color;
+}
+.e-menu-wrap .e-cellstylecell:hover, .e-menu-wrap .e-formatastablecell:hover, .e-menu-wrap .e-chartcontent:hover {
+    border-color: @sshover-bg-color;
+}
+.e-menu-wrap .e-cellstylecell:hover, .e-menu-wrap .e-formatastablecell:hover, .e-menu-wrap .e-chartcontent:hover {
+    & when (@skin = "material") {
+          border-color: @material-sshover-border-color;
+    }
+}
+/*---------------------- Comments--------------------*/
+
+.e-spreadsheet .e-celltoparrow {
+    border-color:  #ff0000 transparent transparent;
+}
+.e-spreadsheet .e-comment-txtarea {
+    background-color: #f7fbbd;
+	 color: #000000;
+}
+ .e-list.e-hdrcolor {
+    background-color: @sscomments-hdr-bgcolor !important;
+    color: @sscontent-color !important;
+}
+ .e-list.e-color {
+    border-color: @header-bg-stcolor !important;
+}
+ .e-list.e-hdrcolor.e-mhover > a,  .e-list.e-hdrcolor.e-mfocused > a {
+    background-color: transparent !important;
+    color: @sscontent-color !important;
+}
+ .e-list.e-color.e-mhover.e-mfocused {
+    border-color: @sscomments-focused-border !important;
+}
+.e-spreadsheet .e-excelfilter .e-in-wrap {
+    border-color: @sscomments-excel-border;
+}
+/*---------------------------RTL--------------------------*/
+.e-spreadsheetrowheader.e-scrollrowcss.e-rtl {
+    border-color: @ssheader-border-color;
+}
+.e-spreadsheetcolumnheader.e-rtl {
+    border-color: @ssheader-border-color;
+}
+.e-spreadsheetcontentcontainer.e-rtl {
+    border-color: @ssheader-border-color;
+}
+.e-spreadsheet .e-numeric .e-in-wrap {
+    border-color: @sscomments-excel-border;
+}
+.e-ss-dialog .e-chartselect {
+    border-color: @ssactive-bg-color;
+	 & when (@skin = "office-365") {
+         border-color: @sschart-select-color;
+		}
+}
+.e-menu-wrap .e-chartcell {
+    border-color: @header-bg-stcolor;
+}
+.e-spreadsheet .e-ss-object {
+    background-color: @content-bg-color;
+}
+.e-spreadsheet .e-ss-charttheme {
+    background-color: @sschart-darktheme-bgcolor;
+}
+/*-------------------------Merge--------------------*/
+.e-spreadsheet .e-ssr-horizontalprt .e-btn.e-ss-active {
+   .spread-toggle-gradient();
+   color:@sscontent-color;
+   & when (@skin = "office-365") {
+	background:@ssactive-buttonbg-color;
+	}
+}
+
+.e-spreadsheet .e-ssr-horizontalprt .e-btn.e-ss-active:hover {
+    & when (@skin = "office-365") {
+	background:@ssactive-buttonbg-color;
+	}
+}
+
+.e-spreadsheet .e-ssr-horizontalprt .e-btn.e-ss-active:hover .e-icon {
+    color:@ss-icon-color;
+}
+/*-------------------------Auto fill Option--------------------*/
+.e-ss-colorpicker .e-in-wrap.e-tool, .e-ss-colorpicker .e-in-wrap.e-tool .e-select {
+     & when not (@skin = "material") {
+            background-color: @rbncontent-content-bg-color;
+        }
+     & when (@skin = "material") {
+            background-color: none;
+        }
+}
+/*--------------------------------- Freeze Pane -------------------------------*/
+.e-spreadsheet .e-frow{
+	border-color: @ssfroze-highlight-color;
+}
+.e-spreadsheet .e-fcol {
+	border-color: @ssfroze-highlight-color;
+}
+/*-------------------------Ribbon icons Customization--------------------*/
+.e-spreadsheet .e-ssr-verticalHparent:hover .e-btn.e-select:not(.e-disable):not(.e-active),
+.e-spreadsheet .e-split .e-in-wrap.e-ssr-horizontalprt:hover .e-split-btn:not(.e-disable),
+.e-spreadsheet .e-ss-colorpicker .e-in-wrap.e-ssr-colpickHprt:hover:not(.e-disable) .e-ssr-colorcontainer {
+  border-color: @sshover-bg-color;
+   & when (@skin = "office-365") {
+            border-color:@ssactive-buttonbg-color;
+        }
+}
+.e-spreadsheet .e-ssr-verticalHparent:hover .e-active,.e-spreadsheet .e-splitspan .e-spreadsheet.e-btn.e-select:hover {
+    .spread-toggle-gradient();
+	& when (@skin = "office-365") {
+	background:@ssactive-buttonbg-color;
+	}
+}
+.e-spreadsheet .e-split.e-active .e-in-wrap.e-ssr-horizontalprt:hover .e-split-btn:not(.e-disable) {
+    .spread-toggle-gradient();
+	& when (@skin = "office-365") {
+	background:@ssactive-buttonbg-color;
+	}
+}
+.e-spreadsheet .e-split.e-active .e-box .e-btn.e-select, 
+.e-spreadsheet .e-split.e-active .e-box .e-btn.e-select:hover, 
+.e-spreadsheet .e-button.e-btn.e-select.e-active, 
+.e-spreadsheet .e-ribbon.e-js .e-rbn-button.e-button.e-btn.e-select.e-active:hover {
+    .spread-toggle-gradient();
+	color:@ssactive-font-color;
+	 & when (@skin = "office-365") {
+	background:@ssactive-buttonbg-color;
+	border-color:@ssactive-buttonbg-color;
+	}
+}
+.e-spreadsheet .e-split.e-active .e-box .e-btn .e-icon, .e-spreadsheet .e-split .e-btn.e-select:active .e-icon{
+    color: @ssactive-icon-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-hborder {
+    border-color: transparent;
+}
+.e-spreadsheet .e-content.e-viewbrdr {
+    border-color: @ssheader-border-color;
+}
+/*-------------------------------------Spreadsheet Ribbon override------------*/
+.e-spreadsheet .e-ribbon .e-header {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+.e-spreadsheet .e-ribbon .e-content {
+    border-right: none;
+    border-left: none;
+}
+.e-spreadsheet .e-ribbon .e-header {
+    border-right: medium none;
+    border-left: medium none;
+    border-top: medium none;
+}
+.e-spreadsheet .e-ribbon  .e-content {
+    border-right: medium none;
+    border-left: medium none;
+}
+ .e-ribbon .e-btn.e-ss-active {
+    background-color: @ssfroze-highlight-color;
+    color: @header-bg-stcolor;
+}
+.e-spreadsheet .e-ribbon .e-ddl {
+    border-color: @ssdrpdwnbrdr;
+}
+
+.e-spreadsheet .e-ribbon .e-ddl.e-widget.e-focus .e-in-wrap {
+    box-shadow: 0 0 7px #ccc;
+}
+
+.e-spreadsheet .e-ribbon .e-ddl {
+    border-color: @ssdrpdwnbrdr;
+}
+.e-spreadsheet .e-menu.e-split,.e-menu-wrap .e-spreadsheet.e-split.e-autofillbtn li.e-list, .e-spreadsheet .e-splitspan .e-btn.e-select {
+   background:@ssheader-bgcolor;
+}
+.e-spreadsheet .e-ssr-bscontent div:not(.e-ssr-bsnewtmpl) .e-btn.e-select{ 
+   border-color:@ssheader-border-color;
+}
+.e-ss-colorpicker.e-popup {
+   background-color:@ssheader-bgcolor;
+   color:@ssheader-content-color;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-numericitem:not(.e-currentitem) {
+   background-color:@ssheader-bgcolor;
+}
+.e-spreadsheet .e-ribbon .e-btn.e-select.e-disable:hover .e-icon {
+   color:@disable-icon-bg-color;
+   & when (@skin="material") {
+        color: fade(@base-font-color,26%);
+    }
+}
+
+.e-spreadsheet .e-ribbon .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:not(.e-active),.e-spreadsheet .e-ribbon .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:not(.e-active):hover {
+    & when (@skin="material") {
+        background: @hover-bg-stcolor;
+    }
+}
+
+.e-spreadsheet .e-ribbon .e-button.e-btn.e-select.e-disable:hover {
+  & when (@skin="material") {
+        background: none;
+    }
+}
+
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowheader.e-filterhiglight, .e-spreadsheet .e-spreadsheetmainpanel .e-rowheader.e-rowhighlight.e-filterhiglight {
+   color:#00cc00;
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-headercell {
+        cursor:@ssdown-arrow-cursor;
+    }
+.e-spreadsheet .e-spreadsheetmainpanel .e-rowheader {
+        cursor:@ssright-arrow-cursor;
+    }
+.e-spreadsheet .e-ss-fpcursor {
+        cursor:@ssformatpainter-cursor;
+    }
+.e-spreadsheet .e-ss-drwbrdrcursor {
+        cursor:@ssdraw-border-cursor;
+    }
+.e-spreadsheet .e-ss-drwbrdrgridcursor {
+        cursor:@ssdraw-border-grid-cursor;
+    }
+
+/***********************SpreadsheetTextArea***********************************/
+
+   .e-ss-textarea, .e-ss-textarea:focus, .e-ss-textarea:hover{
+        border-color:@ss-textarea-color;
+    }
+
+/*-------------------------------------SpreadsheetCellType--------------------*/
+.e-spreadsheet .e-cellreadonly .e-datewidget .e-select{
+	 background:@ssheader-bgcolor;
+}
+.e-spreadsheet .e-cellreadonly .e-ddl .e-select{
+	 background:@ssheader-bgcolor;
+}
+/*----------------------------Activation Panel-------------------------*/
+.e-spreadsheet .e-spreadsheetactpanel{
+	border-left-color: @ssheader-border-color;
+}
+/*---------------------------Border Menu-------------------------------*/
+.e-spreadsheet .e-bordercontainer {
+	background-color: @content-bg-color;
+}
+.e-spreadsheet .e-bordercell:hover {
+	border-color: @sshover-bg-color;
+}
+.e-spreadsheet .e-ss-bdr-header {
+	background-color: @content-bg-color;
+	border-color: @header-border-color;
+}
+/*---------------------------Pivot Table-------------------------------*/
+.e-spreadsheet .e-ss-pivottableheader {
+     background-color: @ssheader-select-bgcolor;
+     border-color: @ssheader-border-color;
+    color: @ssheader-content-color;
+
+}
+/*-------------------------------------Material Theme Changes -----------------------*/
+.e-spreadsheet .e-formulabar, .e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcontentcontainer, .e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcolumnheader, .e-spreadsheet .e-spreadsheetmainpanel .e-rowheader, .e-spreadsheet .e-scrollcss, .e-spreadsheet .e-scrollrowcss {
+    & when (@skin = "material") {
+        background-color: @material-ssbg-default-color;
+    }
+}
+
+.e-ss-dialog .e-btn.e-select, .e-ss-dialog .e-btn.e-select:hover, .e-ss-dialog .e-btn.e-select:active {
+    & when (@skin = "material") {
+        color: @ssactive-bg-color;
+    }
+}
+
+    .e-ss-dialog .e-btn.e-select:hover {
+        & when (@skin = "material") {
+            background-color: @material-sstextbox-border-color;
+        }
+    }
+
+    .e-ss-dialog .e-btn.e-select:active {
+        & when (@skin = "material") {
+            background-color: @ssselectall;
+        }
+    }
+
+.e-ss-dialog .e-dialog input.ejinputtext:focus, .e-spreadsheet input.ejinputtext:focus {
+    & when (@skin= "material") {
+        border-color: @ssactive-bg-color;
+    }
+}
+
+.e-ss-dialog .e-dialog input.ejinputtext, .e-spreadsheet input.ejinputtext {
+    & when (@skin= "material") {
+        border-color: @material-sshover-border-color;
+    }
+}
+
+.e-ss-dialog.e-ss-mattab .e-dlg-btnfields {
+    & when (@skin = "material") {
+        border-top-color: @material-sstextbox-border-color;
+    }
+}
+
+.e-ss-dialog.e-ss-mattab .e-titlebar {
+    & when (@skin = "material") {
+        background-color: @material-dlgtab-bgcolor;
+        color: @material-dlgtab-fontcolor;
+    }
+}
+
+.e-ss-dialog.e-ss-mattab .e-dialog .e-tab .e-header {
+    & when (@skin = "material") {
+        background-color: @material-dlgtab-bgcolor;
+    }
+}
+
+    .e-ss-dialog.e-ss-mattab .e-dialog .e-tab .e-header li a {
+        & when (@skin = "material") {
+            color: @material-dlgtab-inactcolor;
+        }
+    }
+
+    .e-ss-dialog.e-ss-mattab .e-dialog .e-tab .e-header li.e-active a {
+        & when (@skin = "material") {
+            color: @material-dlgtab-fontcolor;
+        }
+    }
+
+.e-ss-autocomplete.e-atc .e-in-wrap {
+    & when (@skin = "material") {
+        border-color: @material-ac-brdr-color;
+    }
+}
+
+    .e-ss-autocomplete.e-atc .e-in-wrap:active {
+        & when (@skin = "material") {
+            border-color: @material-ac-brdractive-color;
+        }
+    }
+
+.e-spreadsheet .e-ss-dialog.e-ss-mattab .e-dialog-icon:before {
+    & when (@skin = "material") {
+        color: @material-dlgtab-fontcolor;
+    }
+}
+
+.e-ss-dialog label, .e-ss-dialog .e-ss-fcgdiv {
+    & when (@skin = "material") {
+        color: @material-dialog-content-color;
+    }
+}
+.e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-numericitem:not(.e-active) {
+    & when (@skin = "material") {
+          color: @material-ssheader-content-color;
+    }
+}
+
+.e-ss-dialog .e-dialog .e-dlgctndiv label {
+  & when (@skin = "office-365") {
+    color:@ssheader-hover-fontcolor;
+  }
+}
+
+.e-ss-dialog .e-ss-okbtn.e-btn.e-select {
+	& when (@skin = "office-365") {
+		background-color:@ssactive-bg-color;
+		color:@sscontent-active-color;
+		border-color: @ssactive-border-color;
+	}
+}
+.e-ss-dialog .e-ss-okbtn.e-btn.e-select:hover{
+	& when (@skin = "office-365") {
+		background-color:@ssdlgbtn-dark-bg;
+		color:@ssdlgbtn-dark-font;
+		border-color: @ssdlgbtn-dark-bg;
+    }
+}
+.e-ss-dialog .e-ss-okbtn.e-btn.e-select:focus {
+	& when (@skin = "office-365") {
+		background-color:@ssdlgbtn-dark-bg;
+		color:@ssdlgbtn-dark-font;
+		border-color: @ssactive-border-color;
+	}
+}
+.e-ss-dialog .e-ss-okbtn.e-btn.e-select:active {
+	& when (@skin = "office-365") {
+		background-color:@ssactive-bg-color;
+		color:@sscontent-active-color;
+		border-color: @ssactive-border-color;
+	}
+}
+.e-ss-colorpicker .e-colorwidget .e-in-wrap.e-box.e-ssr-colpickHprt:hover {
+& when (@skin = "office-365") {
+  border:none;
+  }
+}
+
+/*-------------------------------------SpreadSheet End -----------------------*/
+

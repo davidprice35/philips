@@ -1,0 +1,36 @@
+@import "definition.less";
+
+/*------------------------------------- Radial Menu -------------------------------------------*/
+
+.e-radialmenu .e-childdefault{
+    fill: @active-bg-stcolor;
+}
+.e-radialmenu .e-default, .e-radialmenu .e-outerdefault{
+    fill: @default-bg-stcolor;
+}
+.e-radialmenu .e-active{
+    fill: @hover-bg-stcolor;
+}
+.e-radialmenu .e-arcbgcolor,.e-radialmenu .e-itembgcolor,.e-radialmenu .e-circlebgcolor{
+    fill: @content-bg-color;
+    stroke:@content-bg-color;
+}
+.e-radialmenu .e-textcolor{
+    fill: @content-font-color;    
+}
+.e-radialmenu .e-radial{
+    border-color: @active-bg-stcolor; 
+    background-color:@content-bg-color;
+}
+.e-radialmenu .e-badgetext{
+    fill: @radial-badge-color;    
+}
+.e-radialmenu .e-badgecircle{
+    fill: @active-bg-stcolor;    
+}
+.e-radialmenu .e-radialslider {
+    background-color:@content-bg-color;
+}
+.e-radialmenu:focus{
+outline:none !important;
+}

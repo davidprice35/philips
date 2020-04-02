@@ -1,0 +1,1127 @@
+@import "definition.less";
+
+.e-kanban, .e-kanban .e-kanbanheader .e-headercell, .e-kanban .e-swimlanerow {
+    background: @content-bg-color;
+}
+
+.e-kanban .e-icon,.e-kbntoolbar-body .e-icon{
+    color: @default-icon-color;
+}
+
+.e-kanban {
+    border-color: @content-border-color;
+    color: @content-font-color;
+}
+
+.e-kanban .e-kanbancontent .e-rowcell .e-shrinkheader {
+     & when (@skin= "material") {
+        /*material*/
+    color: @accent-color;
+   }
+   & when not (@skin= "material") {
+        /*other*/
+    color: @active-bg-stcolor;
+   }
+}
+
+.e-kanban .e-kanbantoolbar .e-searchbar .e-search:before, .e-kanban .e-kanbantoolbar .e-searchbar .e-search:after {
+    & when (@skin= "material") {
+        /*material*/
+        background: @accent-color;
+    }
+}
+
+.e-kanban .e-kanbandialog .e-save, .e-kanban .e-externalform .e-save{
+    & when (@skin= "office-365"){
+        background-color: @theme-primary;
+		color: @theme-primary-font;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-icon.e-searchfind:before{
+    & when (@skin= "office-365"){
+        color: @header-font-color;
+    }
+}
+
+.e-kanban-context .e-checkbox .e-checkmark {
+    color: @active-bg-stcolor !important;
+}
+.e-kanban .e-kanbantoolbar .e-searchdiv{
+   & when (@skin= "material") {
+        /*material*/
+        background: @grey-50;
+   }
+   & when not (@skin= "material") {
+        /*other*/
+        background: @content-bg-color;
+   }
+}
+.e-kanban .e-kanbantoolbar .e-searchdiv .e-ejinputtext,.e-kanban .e-kanbantoolbar .e-toolbaricons.e-searchitem,.e-kanban .e-kanbantoolbar .e-toolbaricons.e-searchitem:hover{
+    & when (@skin= "material") {
+        /*material*/
+        background: @grey-50;
+   }
+} 
+.e-kanban .e-adaptive-search .e-searchdiv .e-ejinputtext{
+    & when (@skin= "material") {
+        /*material*/
+        background: @content-bg-color;
+   }
+} 
+.e-kanban .e-search.e-tooltxt:hover .e-searchdiv{
+  background: @content-bg-color;
+}
+.e-kanban .e-kanbanheader.e-slheader .e-headercell, .e-kanban.e-swimlane-responsive .e-columnrow .e-rowcell {
+    & when (@skin = "office-365"){
+        border-bottom: 2px solid @header-border-color;
+    }
+    & when not (@skin = "office-365"){
+        border-bottom: 4px solid @default-bg-stcolor;
+    }
+}
+
+.e-kanban .e-stackedHeaderRow th {
+    border-bottom: 2px @border-type @active-bg-stcolor !important;
+}
+
+.e-kanban .e-kanbanheader.e-slheader .e-headercell.e-exceed {
+    border-bottom-color: @kanban-cell-exceed;
+}
+
+.e-kanban .e-kanbanheader.e-slheader .e-headercell.e-deceed {
+    border-bottom-color: @kanban-cell-deceed;
+}
+
+.e-kanban .e-columnrow .e-kanbancard {
+    background: @content-bg-color;
+	box-shadow:@kanban-card-shadow;
+	& when (@skin= "office-365"){
+	    /*office-365*/
+        color: @neutral-light-font;
+    } 
+}
+
+.e-kanban .e-kanbancard {
+    border-color: @kanban-card-border;
+    color: @content-font-color;
+}
+
+.e-kanban .e-kanbancard .e-tag {
+	& when (@skin= "office-365"){
+	    /*office-365*/
+        background: @active-bg-stcolor;
+        color: @active-font-color;
+    } 
+    & when not (@skin="office-365"){
+	    /*others*/
+        background: @default-bg-stcolor;
+        color: lighten(@content-font-color, 22%);
+    }
+}
+
+.e-kanban .e-kanbancard.e-cardselection {
+   & when (@skin= "material") {
+      /*material*/
+      background-color: @grey-100;
+      border-color: @grey-300;
+	  color: @active-font-color;
+    }
+	& when (@skin="office-365"){
+	   /*office-365*/
+       background-color: @theme-lighter;
+       border-color: @content-border-color;
+       color: @theme-light-font;
+   }
+	& when not (@skin= "material") and not (@skin= "office-365"){
+      /*other*/
+      .active-gradient();
+      border-color: @active-border-color;
+	  color: @active-font-color;
+   }
+    
+}
+
+.e-kanban .e-stackedHeaderCell{
+    & when (@skin= "office-365"){
+	    /*office-365*/
+        color: @neutral-light-font;
+    }
+}
+
+.e-kanban .e-draggedcard, .e-kanban .e-kanbancard.e-cardselection.dragClone {
+    & when (@skin= "material") {
+        /*material*/
+         background:@grey-50;
+    }
+	& when (@skin= "office-365"){
+	    /*office-365*/
+        background: @default-bg-stcolor;
+    }
+	& when not (@skin= "material") and not (@skin= "office-365") {
+        /*other*/
+        background: @content-bg-color;
+    }
+    color: @content-font-color;
+}
+
+.e-kanban .e-draggedcard .e-dragmultiple {
+  & when (@skin= "material") {
+        /*material*/
+       color: @accent-color;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+      color: @active-bg-stcolor;
+     }
+      border: 1px solid @content-border-color;
+}
+
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclone {
+	  & when (@skin= "material") {
+          /*material*/
+          border: 1px dashed @accent-color;
+          background:fade(@accent-color,26%);
+      }
+	  & when (@skin="office-365"){
+	      /*office-365*/
+          border: 1px dashed @content-border-color;
+          background: @alert-bg-color;
+      }
+	  & when not (@skin= "material") and not (@skin= "office-365") {
+          /*other*/
+          border: 1px dashed @active-bg-stcolor;
+         .kanban-dragclone-bg();
+     }
+}
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey{
+ border-left: 1px dashed;
+ border-right: 1px dashed;
+ border-bottom: 1px dashed;
+ }
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey{
+      border-color: @default-border-color;
+}
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey.e-active{
+    .kanban-dragclone-bg();
+}
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey.e-active{
+     border-color:@active-bg-stcolor;
+}
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey.e-multiclonestyle{
+    border-bottom-color:@active-bg-stcolor;
+}
+ .e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey:first-child {
+ border-top-width: 1px;
+ border-top-style: dashed;
+ }
+ 
+.e-kanban .e-kanbancontent .e-rowcell .e-targetdragclone {
+    & when (@skin= "material") {
+        /*material*/
+	   background:@grey-100;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+       .kanban-targetdrag-font();
+     }
+    border: 1px dashed @content-border-color;
+}
+
+.e-kanban .e-form-titlebar {
+    & when (@skin= "material") {
+        /*material*/
+        border-bottom: none;
+      }
+    & when (@skin="office-365"){
+        /*office-365*/
+        border-bottom: none;
+    }
+	& when not (@skin= "material") and not (@skin= "office-365") {
+        /*other*/
+       border-bottom: 1px solid @content-border-color;
+     }
+}
+
+.e-kanban .e-form-container {
+    border-color: @content-border-color !important;
+	background-color: @content-bg-color;
+    & when (@skin= "office-365"){
+        /*office-365*/
+        border: 1px solid @hover-bg-stcolor !important;
+    }
+}
+
+.e-kanban .e-form-title{
+    & when (@skin= "office-365"){
+        /*office-365*/
+        color: @neutral-light-font;
+    }
+}
+
+.e-kanban .e-columnrow .e-rowcell {
+	& when (@skin= "material") {
+        /*material*/
+	   background:@grey-50;
+       border-bottom: 1px solid @grey-300;
+       border-top: 1px solid @grey-300;
+      }
+     & when (@skin= "office-365"){
+          /*office-365*/
+         background: @neutral-lighter-alt;
+		 border-bottom: 1px solid @kanban-cell-border;
+         border-top: 1px solid @kanban-cell-border;
+     }
+	  & when not (@skin= "material") and not (@skin="office-365") {
+        /*other*/
+       border-bottom: 1px solid @kanban-cell-border;
+       border-top: 1px solid @kanban-cell-border;
+       .kanban-cell-bg();
+     }
+}
+
+.e-kanban .e-printlist {
+    .kanban-cell-bg();
+}
+
+.e-kanban .e-collapsedrow .e-rowcell, .e-kanban .e-frozenrow .e-rowcell {
+    border-bottom: 1px solid @default-bg-stcolor;
+}
+
+.e-kanban .e-kanbancontent .e-rowcell.e-shrink, .e-kanban .e-kanbanheader .e-headercell.e-shrinkcol {
+     & when (@skin="office-365"){
+        /*office-365*/
+        background-color: @neutral-lighter-alt;
+    }
+	& when not (@skin= "office-365"){
+         /*others*/
+	    .kanban-skheader-bg();
+	}
+}
+
+.e-kanban .e-dialog .e-titlebar .e-title{
+	 & when (@skin="office-365"){
+        /*office-365*/
+        color: @neutral-light-font;
+     }
+}
+
+.e-kanban .e-kanbancard {
+    color: @content-font-color;
+}
+
+.e-kanban .e-swimlanerow .e-slkey {	
+    & when (@skin= "material") {
+         /*material*/
+     color: fade(@base-font-color,87%);
+    }
+    & when (@skin="office-365"){
+        /*office-365*/
+        color: @default-icon-color;
+    }  
+	& when not (@skin= "material") and not (@skin="office-365") {
+        /*other*/
+        color: @content-font-color;
+    }
+}
+
+.e-kanban  .e-columnrow .e-rowcell .e-toggle-header:hover > div  {
+    color: @kanban-toggle-hover-ftcolor;
+}
+
+.e-kanban .e-toggle-header:hover > div div {
+    color: @kanban-toggle-hover-ftcolor !important;
+}
+
+.e-kanban  .e-columnrow .e-rowcell .e-toggle-header > div {
+    .kanban-toggle-content-ftcolor();
+}
+
+.e-kanban .e-columnrow .e-rowcell .e-toggle-header > div div {
+    .kanban-toggle-icon-ftcolor();
+}
+
+.e-kanbanfilter-window .e-filter-scrollcontent, .e-kbnfilterwindow-head {
+    color: @content-font-color;
+}
+
+.e-kanban .e-slexpand, .e-kanban .e-slcollapse {
+    & when (@skin="office-365"){
+        /*office-365*/
+        color: @header-font-color;
+    }
+    & when not (@skin = "office-365"){
+        /*other*/
+       color: @default-icon-color;
+    }
+}
+
+.e-kanban .e-slexpand:hover, .e-kanban .e-slcollapse:hover {
+	& when not (@skin= "material") {
+        /*other*/
+      .hover-gradient();
+    }
+    color: @hover-icon-color;
+}
+
+.e-kanban .e-clcollapse::before, .e-kanban .e-clexpand::before {
+	  & when (@skin= "material") {
+          /*material*/
+          color: fade(@base-font-color,87%);
+      }
+      & when (@skin= "office-365"){
+          /*office-365*/
+          color: @header-font-color;
+      }
+	  & when not (@skin= "material") and not (@skin="office-365") {
+          /*other*/
+          color: @default-icon-color;
+      }
+}
+
+.e-kanban .e-kanbancard.e-hover .e-cardcollapse:before, .e-kanban .e-kanbancard.e-hover .e-cardexpand:before {
+    color: @hover-icon-color;
+}
+
+.e-kanban .e-kanbancard.e-cardselection .e-cardcollapse:before, .e-kanban .e-kanbancard.e-cardselection .e-cardexpand:before {
+      & when (@skin= "material") {
+        /*material*/
+       color: @base-font-color;
+      }
+      & when (@skin= "office-365"){
+          /*office-365*/
+         color: @header-font-color;
+      }
+	  & when not (@skin= "material") and not (@skin="office-365") {
+        /*other*/
+       color: @active-icon-color;
+     }
+}
+
+.e-kanban .e-kanbancard.e-cardselection.e-hover .e-cardcollapse:before, .e-kanban .e-kanbancard.e-cardselection.e-hover .e-cardexpand:before {
+     & when (@skin= "office-365"){
+         /*office-365*/
+        color: @header-font-color; 
+    }
+    & when not (@skin= "office-365"){
+          /*other*/
+         color: @hover-icon-color;
+    }
+}
+
+.e-kanban .e-swimlanerow .e-slcount {
+    & when (@skin= "office-365"){
+        /*office-365*/
+        color: @default-icon-color; 
+    }
+    & when not (@skin= "office-365"){
+        /*other*/
+        color: lighten(@content-font-color, 40%);
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-search .e-ejinputtext:focus{
+    & when (@skin= "office-365"){
+        /*office-365*/
+        color: @neutral-light-font; 
+    }
+}
+
+.e-kanban .e-kanbanheader .e-columnheader .e-shrinkcol:hover{
+     & when (@skin= "office-365"){
+         /*office-365*/
+         background-color: @hover-bg-stcolor;
+    }
+}
+
+.e-kanban .e-kanbancontent .e-rowcell.e-shrink:hover{
+     & when (@skin= "office-365"){
+       /*office-365*/
+       background-color: @hover-bg-stcolor;
+    }
+}
+
+.e-kanban .e-kanbancontent .e-rowcell .e-shrinkcount { 
+  & when (@skin= "material") {
+        /*material*/
+    color: @accent-color;
+   }
+   & when not (@skin= "material") {
+        /*other*/
+    color: @active-bg-stcolor;
+   }
+}
+
+.e-kanban .e-collapserow .e-rowcell {
+    border: none;
+}
+
+.e-kanban .e-kanbancard.e-hover {
+     & when (@skin= "material") {
+         /*material*/
+         background-color: @grey-200;
+         border-color: @hover-border-color;
+		 color: @hover-font-color;
+     }
+     & when (@skin= "office-365"){
+         /*office-365*/
+         background-color: @default-bg-stcolor;
+         border-color: @content-border-color;
+		 color: @neutral-light-font;
+     }
+   	& when not (@skin= "material") and not (@skin="office-365") {
+        /*other*/
+        .hover-gradient();
+         border-color: @hover-border-color;
+		 color: @hover-font-color;
+    }
+}
+
+.e-kanban .e-headercontent {
+    border-right-color: @content-border-color;
+}
+
+.e-kanban .e-kanbanheader .e-headercelldiv {
+    & when (@skin= "material") {
+      /*material*/
+     color: fade(@base-font-color,87%);
+    }
+     & when (@skin= "office-365"){
+         /*office-365*/
+        color: @neutral-light-font;
+    }
+	& when not (@skin= "material") and not (@skin= "office-365"){
+      /*other*/
+    .kanban-header-font();
+   }
+}
+
+.e-kanban .e-kanbanheader {
+    .kanban-header-font();
+}
+
+.e-kanban .e-kanbancontent {
+    background-color: @content-bg-color;
+}
+
+.e-kanban .e-kanbancontent .e-rowcell {
+    border-color: @content-border-color;
+}
+
+.e-kanban .e-cardcollapse:before, .e-kanban .e-cardexpand:before, .e-kanban .e-kanbancard.e-cardselection.dragClone .e-cardexpand:before, .e-kanban .e-kanbancard.e-cardselection.dragClone .e-cardcollapse:before {
+    & when (@skin= "office-365"){
+        /*office-365*/
+        color: @header-font-color;
+    }
+    & when not (@skin= "office-365"){
+        /*other*/
+        color: @default-icon-color;
+    }
+}
+
+.e-kanban .e-kanbancard .e-card_image {
+    background: @default-bg-stcolor;
+    border-color: @content-border-color;
+}
+.e-kanban .e-kanbantoolbar.e-toolbar,.e-kbntoolbar-body.e-toolbar{
+     & when (@skin= "material") {
+        /*material*/
+        background: @grey-50;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+        background: @content-bg-color;
+     }
+    border-color: @kanban-toolbar-border;
+    filter: none;
+}
+
+.e-kanban .e-kanbantoolbar li {
+    & when (@skin= "office-365"){
+       /*office-365*/
+       border:  @border-size @border-type @default-bg-stcolor;
+    }
+    & when not (@skin= "office-365"){
+        /*other*/
+       border: @border-size @border-type @default-border-color;
+    }
+}
+.e-kanban .e-kanbantoolbar li.e-tooltxt.e-kbnfilter-tbtn.e-hover{
+   & when (@skin= "material") {
+        /*material*/
+        background:  @grey-50;
+   }
+}
+.e-kanban .e-kanbantoolbar li.e-select{
+	  & when not (@skin= "material") {
+        /*other*/
+       .active-gradient();
+     }
+}
+
+.e-kanban .e-kanbantoolbar .e-tooltxt.e-hover{
+    & when (@skin= "office-365"){
+        /*office-365*/
+        background: @hover-bg-stcolor;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-tooltxt.e-hover .e-text{
+    & when (@skin= "office-365"){
+        /*office-365*/
+        color: @neutral-light-font-alt;
+    }
+}
+
+.e-kanban .e-kanbantoolbar li.e-tooltxt.e-kbnfilter-tbtn.e-select,.e-kanban .e-kanbantoolbar li.e-tooltxt.e-kbnfilter-tbtn.e-active,.e-kanban .e-kanbantoolbar li.e-tooltxt.e-select.e-kbnfilter-tbtn.e-hover,.e-kanban.e-js .e-kanbantoolbar li.e-tooltxt.e-kbnfilter-tbtn.e-active a {
+     & when (@skin= "material") {
+        /*material*/
+        background: @accent-color;
+      }
+}
+
+.e-kanban .e-kanbantoolbar li.e-tooltxt{
+    & when (@skin="office-365"){
+        /*office-365*/
+        background: @default-bg-stcolor;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-select a.e-toolbartext.e-text{
+    color: @active-font-color;
+}
+
+.e-kanban .e-kanbantoolbar .e-active a.e-toolbartext.e-text,.e-kanban .e-kanbantoolbar .e-select.e-hover a.e-toolbartext.e-text{
+     & when (@skin= "material") {
+        /*material*/
+     color: @active-font-color;
+	}
+}
+.e-kanban .e-kanbantoolbar .e-select.e-hover a.e-toolbartext.e-text {
+    color: @content-font-color;
+}
+
+.e-kanban .e-kanbantoolbar .e-text, .e-kanban .e-kanbantoolbar .e-quickfilter .e-text,.e-kbntoolbar-body .e-text,.e-kbntoolbar-body .e-quickfilter .e-text {
+    & when (@skin="office-365"){
+        /*office-365*/
+        color: @neutral-light-font;
+    }
+    & when not (@skin="office-365"){
+        /*other*/
+       color: @content-font-color;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-select.e-hover {
+    .hover-gradient();
+    & when (@skin= "office-365"){
+        /*office-365*/
+        border-color: @hover-bg-stcolor;
+    }
+    & when not (@skin= "office-365"){
+        /*other*/
+       border-color: @hover-border-color;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-tooltxt.e-select{
+     & when (@skin= "office-365"){
+         /*office-365*/
+         background: @active-bg-stcolor;
+         border-color: @active-bg-stcolor;
+     }
+ }
+ 
+.e-kanban .e-kanbantoolbar .e-select a.e-toolbartext.e-text, .e-kanban .e-kanbantoolbar .e-select.e-hover a.e-toolbartext.e-text{
+    & when (@skin= "office-365"){
+        /*office-365*/
+        color: @theme-primary-font;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-tooltxt.e-select.e-hover{
+    & when (@skin= "office-365"){
+        /*office-365*/
+        background: @theme-primary;
+        border-color: @theme-primary;
+    }
+}
+
+.e-kanban .e-columnrow .e-rowcell.e-dropping {
+    border-color: @default-border-color;
+}
+
+.e-kanban .e-kanbancontent .e-rowcell.e-exceed {
+    background: @kanban-cell-exceed;
+    filter: none !important;
+}
+
+.e-kanban .e-kanbancontent .e-rowcell.e-deceed {
+    background: @kanban-cell-deceed;
+}
+
+.e-kanban .e-kanbantooltip {
+   & when (@skin= "material"){
+        /*office-365*/
+        background: @grey-700;
+        color: #ffffff;
+    }
+	& when not (@skin= "material"){
+        /*office-365*/
+        background: @content-bg-color;
+        color: @content-font-color;
+    }
+    border: @border-size @border-type @content-border-color;
+    box-shadow: 9px 9px 15px -9px rgba(0,0,0,0.3);
+    -moz-box-shadow: 9px 9px 15px -9px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 9px 9px 15px -9px rgba(0,0,0,0.3);
+}
+
+.e-kanban .e-kanbantoolbar .e-toolbaricons.e-searchfind, .e-kanban .e-kanbantoolbar .e-toolbaricons.e-cancel {
+	& when (@skin="office-365"){
+	      /*office-365*/
+        border-left: 0px;
+        background-color: @content-bg-color;
+    }
+    & when not (@skin= "office-365"){
+	      /*other*/
+       .kanban-cell-bg();
+        border-left: 1px solid @default-border-color;
+    }
+}
+
+.e-kanban .e-kanbantoolbar li.e-search.e-tooltxt{
+    & when (@skin="office-365"){
+        border-color: @content-border-color;
+    }
+}
+
+.e-kanban .e-kanbantoolbar li.e-search.e-tooltxt:hover{
+    & when (@skin="office-365"){
+        border-color: @neutral-secondary-alt;
+    }
+}
+.e-kanban .e-kanbandialog .e-save:hover, .e-kanban .e-externalform .e-save:hover{
+    & when (@skin="office-365"){
+        background-color: @theme-dark;
+		color: @theme-dark-font;
+    }
+}
+.e-kanban .e-kanbandialog .e-save:focus, .e-kanban .e-externalform .e-save:focus{
+    & when (@skin="office-365"){
+     }
+}
+
+.e-kanban .e-kanbantoolbar .e-search.e-hover .e-searchfind{
+    & when (@skin="office-365"){
+        background-color: @neutral-light;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-highliht-kbnsearchbar .e-search.e-tooltxt{
+    & when (@skin="office-365"){
+        border-color: @theme-primary;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-highliht-kbnsearchbar .e-search.e-tooltxt .e-cancel{
+   & when (@skin="office-365"){
+        background: @theme-primary;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-highliht-kbnsearchbar .e-search.e-tooltxt .e-cancel:before{
+   & when (@skin="office-365"){
+        color: @theme-primary-font;
+    }
+}
+
+.e-kanban .e-kanbantoolbar .e-search.e-hover .e-searchfind:before{
+    & when (@skin="office-365"){
+        color: @neutral-light-font-alt;
+    }
+}
+
+.e-kanban div.e-error .e-toparrow {
+    border-bottom-color: #fffe92;
+}
+
+.e-kanban div.e-field-validation-error {
+    background-color: #FFFE91;
+    color: #CD0A0A;
+}
+
+.e-kanban .e-kanbantouchbar .e-content {
+    background-color: @content-bg-color;
+    border-color: @content-border-color;
+}
+
+.e-kanban .e-kanbantouchbar span:hover,
+.e-kanban .e-kanbantouchbar .e-spanclicked {
+    border-color: @default-icon-color;
+}
+
+.e-kanban .e-kanbantouchbar .e-downtail:before,
+.e-kanban .e-kanbantouchbar .e-downtail {
+    border-top-color: @content-border-color;
+}
+
+.e-kanban .e-kanbantouchbar .e-downtail:after {
+    border-top-color: @content-bg-color;
+}
+
+.e-kanban .e-freezeswimlanerow .e-rowcell.e-shrink {
+    background: @content-bg-color;
+}
+
+.e-kanban.e-rtl .e-toolbaricons.e-searchfind, .e-kanban.e-rtl .e-toolbaricons.e-cancel {
+    border-right: 1px solid @default-border-color;
+	border-left: 0px;
+}
+
+.e-kanban.e-rtl td:first-child, .e-kanban.e-rtl th:first-child,
+.e-kanban.e-rtl .e-headercontent, .e-kanban.e-rtl .e-columnrow td.e-dropping:first-child, .e-kanban .e-kanbancontent .e-rowcell.e-dragged {
+    border-left-color: @content-border-color !important;
+}
+
+.e-kanban.e-rtl .e-kanbancard {
+    border-color: @content-border-color;
+}
+
+.e-kanban .e-customaddbutton,.e-kanban .e-columnadd { 
+   & when (@skin= "material") {
+        /*material*/
+      color: @accent-color;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+      color: @active-bg-stcolor;
+     }
+}
+
+.e-kanban .e-customtoolbarseparator {
+    & when (@skin= "office-365") {
+        /*office-365*/
+       border-right: 0px;
+      }
+	  & when not (@skin= "office-365") {
+        /*other*/
+       border-right: 1px solid @default-border-color;
+     }
+}
+
+.e-kanban.e-responsive .e-kanbantoolbar.e-toolbar,.e-kbntoolbar-body.e-toolbar{
+    .default-gradient();
+}
+
+.e-kanban.e-responsive .e-kanbantoolbar:not(.e-adaptive-search) .e-searchfind {
+    background: transparent;
+}
+
+.e-kanbanfilter-window {
+	  & when (@skin= "material") {
+        /*material*/
+       border: 1px solid @grey-300;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+       border: 1px solid @header-border-color;
+     }
+    background: @content-bg-color;
+}
+
+.e-kanbanfilter-window .e-kbnfilterwindow-head {
+     & when (@skin= "material") {
+        /*material*/
+       background: @grey-100;
+       border-bottom: 1px solid @grey-300;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+       background: @header-bg-stcolor;
+       border-bottom: 1px solid @header-border-color;
+     }
+}
+
+.e-kanbanfilter-window .e-filter-content,.e-swimlane-window, .e-kanban .e-adapt-search, .e-kanban.e-responsive .e-adapt-cancel {
+    background: @content-bg-color;
+}
+
+.e-swimlane-window .e-swimlane-item:hover {
+    .hover-gradient();
+	 & when (@skin= "material") {
+        /*material*/
+      color: fade(@base-font-color,87%);
+     }
+	 & when not (@skin= "material") {
+        /*other*/
+      color: @active-font-color;
+     }
+}
+.e-swimlane-window .e-swimlane-item {
+	 & when (@skin= "material") {
+        /*material*/
+      color: fade(@base-font-color,87%);
+     }
+}
+.e-swimlane-window .e-swimlane-item.e-selected-item{
+	 & when (@skin= "material") {
+        /*material*/
+      color: @accent-color;
+      background: transparent;
+     }
+}
+.e-kanban.e-responsive .e-kanbantoolbar .e-kanbanfilter-icon:hover {
+    .hover-gradient();
+    color: @hover-font-color;
+}
+
+.e-kanban.e-responsive .e-kanbantoolbar:not(.e-adaptive-search) .e-searchitem:hover {
+    .hover-gradient();
+}
+
+.e-kanbanfilter-window .e-filter-done:hover {
+     & when (@skin= "material") {
+        /*material*/
+       color: @grey-500;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+       color: @kanban-filter-done-stcolor;
+     }
+}
+
+.e-kanbanfilter-window .e-filter-done {
+     & when (@skin= "material") {
+        /*material*/
+       color: @accent-color;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+      color: @active-bg-stcolor;
+     }
+}
+
+.e-swimlane-window {
+    background: @content-bg-color;
+}
+
+.e-kanban.e-responsive .e-kanbantoolbar .e-searchitem:hover {
+    .hover-gradient();
+}
+
+.e-swimlane-ul li:not(:last-child) div:after {
+    background: @content-border-color;
+}
+
+.e-swimlane-arrow:hover, .e-kanbanfilter-window .e-filterback-icon:hover,.e-kanban.e-responsive .e-adapt-cancel:hover {
+    & when (@skin= "material") {
+        /*material*/
+      color: @accent-color;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+      color: @active-bg-stcolor;
+     }
+}
+
+.e-kanban .e-kanbanheader .e-headercell .e-totalcard, .e-kanban .e-kanbanheader .e-headercell .e-totalcount, .e-kanban .e-minlimit, .e-kanban .e-maxlimit,.e-kanban .e-limits, .e-kanban .e-kanbancontent .e-rowcell .e-shrinklabel  {
+      & when (@skin= "material") {
+        /*material*/
+       color: fade(@base-font-color,64%);
+      }
+	  & when (@skin= "office-365"){
+          /*office-365*/
+          color: @header-icon-color;
+      }
+	  & when not (@skin= "material") and not (@skin= "office-365"){
+        /*other*/
+	     color: lighten(@content-font-color, 40%);
+     }
+}
+
+.e-kanban .e-kanbancard .e-bottom-triangle {
+    & when (@skin= "material") {
+        /*material*/
+       border-bottom-color: @header-bg-endcolor;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+      border-bottom-color: @active-bg-stcolor;
+     }
+}
+.e-kanban.e-responsive .e-vhandlespace,.e-kanbanfilter-window .e-vhandlespace,.e-kbnslwindow-body .e-vhandlespace,.e-kbnadapt-editdlg .e-vhandlespace{
+    border-color: @content-border-color;
+}
+.e-kanban.e-js .e-numeric.e-widget .e-in-wrap,.e-kbnadapt-editdlg .e-numeric.e-widget .e-in-wrap,.e-kanban.e-js .e-ddl.e-widget .e-in-wrap, .e-kbnadapt-editdlg .e-ddl.e-widget .e-in-wrap{
+    & when (@skin= "material") {
+        /*material*/
+     border-color:@grey-400;
+      }
+}
+.e-kanban .e-ejinputtext,.e-kbnadapt-editdlg .e-ejinputtext{
+    & when (@skin= "material") {
+        /*material*/
+     border-color:@grey-400;
+      }
+	  & when not (@skin= "material") {
+        /*other*/
+     border-color:@content-border-color;
+     }
+  background-color: @content-bg-color;
+  color: @content-font-color;
+}
+.e-kanban .e-kanbancard .e-primarykey,.e-kanban.e-swimlane-responsive.e-js .e-limits .e-swimlane-name,.e-swimlane-ddl .e-swimlane-text {
+  & when (@skin= "material") {
+     /*material*/
+     color: fade(@base-font-color,87%);
+   } 
+}
+.e-kanban .e-kanbancard .e-primarykey{
+    & when (@skin= "office-365") {
+        /*office-365*/
+        color: @neutral-light-font;
+    } 
+}
+
+.e-kanban .e-kanbancard .e-text {
+  & when (@skin= "material") {
+     /*material*/
+     color: fade(@base-font-color,64%);
+   } 
+   & when (@skin= "office-365") {
+     /*office-365*/
+     color: @theme-light-font;
+   } 
+}
+.e-kanban .e-externalformedit div>label,.e-kanban .e-kanbandialog .kanbanform label{
+  & when (@skin= "material") {
+      /*material*/
+     color: fade(@base-font-color,38%);
+  } 
+   & when (@skin= "office-365"){
+       /*office-365*/
+      color: @neutral-light-font;
+   }
+}
+.e-kanban .e-ejinputtext,.e-kbnadapt-editdlg .e-ejinputtext{
+  & when (@skin= "material") {
+      /*material*/
+     color: fade(@base-font-color,87%);
+  } 
+}
+.e-kanban .e-totalcard,.e-kanban .e-limits{
+   & when (@skin= "material") {
+      /*material*/
+     color: fade(@base-font-color,64%);
+  } 
+}
+.e-kanban .e-kanbantoolbar .e-kbnfilter-tbtn a.e-toolbartext.e-text{
+   & when (@skin= "material") {
+      /*material*/
+     color: @accent-color;
+  } 
+}
+.e-kanban.e-js .e-kanbantoolbar .e-kbnfilter-tbtn.e-select a.e-toolbartext.e-text{
+   & when (@skin= "material") {
+      /*material*/
+     color: @active-font-color;
+  } 
+}
+.e-kanban .e-dialog .e-titlebar{
+   & when (@skin= "material") {
+      /*material*/
+     background: @content-bg-color;
+     color: @base-font-color;
+     box-shadow: none;
+  } 
+}
+.e-kanban .e-dialog .e-titlebar .e-icon.e-close:hover:before,.e-kanban .e-dialog .e-titlebar .e-icon.e-close:before{
+   & when (@skin= "material") {
+      /*material*/
+     color: @base-font-color;
+  } 
+}
+.e-kanban .e-kanbantoolbar .e-searchbar.e-ul,.e-kanban .e-adaptive-search .e-search.e-tooltxt{
+   & when (@skin= "material") {
+      /*material*/
+	  border-bottom: 2px solid @grey-500;
+  } 
+}
+.e-kanban.e-responsive .e-kanbantoolbar .e-searchbar.e-ul{
+   & when (@skin= "material") {
+    border-bottom:none !important;
+  }
+}
+.e-kanban .e-kanbantoolbar .e-highliht-kbnsearchbar {
+   & when (@skin= "material") {
+      /*material*/
+	  border-bottom-color: @accent-color !important;
+  } 
+}
+.e-kanban .e-toolbar.e-js ul>li.e-tooltxt.e-search.e-active{
+   & when (@skin= "material") {
+      /*material*/
+	  background: @grey-50;
+  } 
+}
+.e-kanban .e-toolbar.e-js ul>li.e-tooltxt.e-search.e-active a:before{
+   & when (@skin= "material") {
+      /*material*/
+    color: @default-icon-color !important;
+  } 
+}
+.e-kanban .e-ejinputtext:focus,.e-kbnadapt-editdlg .e-ejinputtext:focus{
+   & when (@skin= "material") {
+      /*material*/
+	  border-color: @accent-color;
+	  border-bottom-width: 2px;
+  } 
+}
+.e-kanban .e-kanbandialog .e-kanban-editdiv .e-save, .e-kanban .e-kanbandialog .e-kanban-editdiv .e-cancel, .e-kanban .e-externalform .e-save, .e-kanban .e-externalform .e-cancel,.e-kbnadapt-editdlg .e-save,.e-kbnadapt-editdlg .e-cancel,.e-kanbanfilter-window .e-clearfilter{
+   & when (@skin= "material") {
+      /*material*/
+    background: @content-bg-color;
+    color: @accent-color;
+    box-shadow: none !important;
+  } 
+}
+.e-kanban.e-js .e-kanbandialog .e-save:hover, .e-kanban.e-js .e-kanbandialog .e-cancel:hover, .e-kanban.e-js .e-externalform .e-save:hover, .e-kanban.e-js .e-externalform .e-cancel:hover, .e-kbnadapt-editdlg .e-save:hover, .e-kbnadapt-editdlg .e-cancel:hover, .e-kanbanfilter-window .e-clearfilter:hover{
+   & when (@skin= "material") {
+      /*material*/
+	  background: fade(@base-font-color,12%);
+	  color:@base-font-color;
+  } 
+}
+ .e-kanbantoolbar .e-customtoolbar li.e-hover.e-active .e-icon:before{
+   & when (@skin= "material") {
+      /*material*/
+    color: @grey-600;
+	}
+}
+.e-kanban .e-kanbantoolbar .e-quickfilter.e-tooltxt{
+	background:transparent;
+}
+.e-kanban .e-kanbantoolbar .e-search.e-hover{
+  & when (@skin= "material") {
+    /*material*/
+	background:transparent !important;
+  }
+}
+.e-kanban .e-cardcollapse:after,.e-kanban .e-cardexpand:after,.e-kanban .e-slcollapse:after,.e-kanban .e-slexpand:after{
+  & when (@skin= "material") {
+     /*material*/
+     background: @base-font-color;
+     background: fade(@base-font-color,12%);
+ }
+}
+ .e-kanban.e-js .e-kanbantoolbar .e-searchbar.e-highliht-kbnsearchbar .e-searchdiv .e-ejinputtext{
+      & when (@skin= "material") {
+    color: @base-font-color;
+	}
+ }
+.e-kanban.e-js.e-kanbanscroll .e-kanbantoolbar.e-toolbarspan{
+      & when (@skin= "material") {
+	    border-bottom: 1px solid @grey-300;
+	}
+ }

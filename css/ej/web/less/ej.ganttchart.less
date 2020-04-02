@@ -1,0 +1,309 @@
+@import "definition.less";
+
+.e-ganttchart .e-ganttviewerbodyContianer{
+    background-color:@gantt-chart-content-bg-color;
+}
+.e-ganttchart .e-ganttviewerbodyContianerparent {
+    border-right-color:@gantt-content-border-color;
+}
+
+.e-ganttchart .e-headercell-weekend > div
+{
+    & when (@skin= "office-365") {
+        background:@neutral-lighter-alt;
+    }
+    & when not (@skin= "office-365"){
+        .ganttheader-gradient();    
+    }
+}
+.e-ganttchart .e-weekends
+{
+    background-color:@gantt-weekends-bg-color;
+}
+
+.e-ganttchart-core{
+    background:@gantt-chart-content-bg-color; 
+}
+
+.e-ganttchart  .e-borderbox {
+  border-bottom-color:@gantt-chart-content-bg-color;
+ }
+
+.e-ganttchart .e-schedule-day-headercell,
+.e-ganttchart .e-schedule-hour-headercell,
+.e-ganttchart .e-schedule-week-headercell {  
+    .material-gantt-header-background;
+    color: @gantt-schedule-font-color;    
+    border-color: @gantt-header-border-color !important;    
+    font-family:@font-family;
+    & when (@skin= "material") {
+        height:27px;
+        line-height:27px;
+    }
+    & when (@skin= "office-365") {
+        height:29px;
+        line-height:29px;
+    }
+}
+
+.e-gantt-dialog {
+width:42% !important; 
+}
+
+.e-gantt-dialog .e-gantt-validation-btn {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 27px;
+}
+
+.e-ganttchart .e-ganttviewerheaderContainer { 
+    .ganttheader-gradient();
+    .material-gantt-header-background;
+    color: @gantt-schedule-font-color;
+    border-bottom-color:@gantt-header-border-color !important;
+    border-right-color:@gantt-header-border-color;
+     & when (@skin= "material") {
+        height:54px!important;
+    }
+     & when (@skin= "office-365") {
+        height:58px!important;
+    }
+}
+
+.e-ganttchart .e-milestone-top{
+    
+    border-bottom-color:@gantt-milestone-bg-color;
+}
+
+.e-ganttchart .e-milestone-bottom {
+    border-top-color:@gantt-milestone-bg-color;
+}
+
+.e-ganttchart .e-taskbarname,
+.e-ganttchart .e-resourceinfo {
+    color: @gantt-content-font-color;
+    font-family: @font-family;
+}
+.e-ganttchart .e-connectorline-rightarrow {
+    border-left-color:  @gantt-connectorline-arrow-bg-color;
+}
+
+.e-ganttchart .e-connectorline-leftarrow {
+    border-right-color:  @gantt-connectorline-arrow-bg-color;
+}
+
+.e-progressbartooltip,
+.e-editingtooltip,
+.e-tooltipganttpredecessor {
+     & when (@skin= "material") {
+        background-color: @grey-700;
+        color: @primary-font-color;
+        border-color: transparent;
+    }
+    & when (@skin= "office-365") {
+        background-color: @info-bg-color;
+        color: @neutral-secondary;
+        border-color: @neutral-secondary-alt;
+    }
+    & when not (@skin= "material") and not (@skin= "office-365") {
+      .tgPopUp-gradient();
+       background-color: @gantt-content-bg-color;
+       color: @gantt-content-font-color;
+       border-color: @gantt-tooltip-border-color;
+    }
+}
+
+ .e-tooltiptaskname {
+     & when (@skin= "material") {
+        color: @primary-font-color;
+    }
+     & when (@skin= "office-365") {
+        color: @neutral-secondary;
+    }
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        color: @gantt-tooltip-font-color;
+    }
+	font-family: @font-family;
+}
+.e-tooltipgantt,
+.e-progressbartooltip,
+.e-editingtooltip,
+.e-tooltipganttpredecessor {
+    font-family: @font-family;
+}
+.e-ganttchart .e-tasklabel {
+    font-family: @font-family;
+    color:@active-font-color;
+}
+.e-ganttchart .e-gantt-mouseclick td.e-chartcell {       
+    & when not (@skin= "material") and not (@skin= "office-365") {   
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="@{gantt-row-selection-bg-color}", endColorstr="@{gantt-row-selection-bg-color}", GradientType=0); /* IE9 and below */
+   }
+}
+.e-ganttchart .e-gantt-mouseclick {
+    & when (@skin= "material") {
+          background:fade(@grey-100,70);
+    }
+    & when (@skin= "office-365") {
+          background:fade(@theme-lighter,70);
+    }
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        .gantt-row-selection();
+        .high-contrast-gantt-active-font-color;
+        color:@gantt-selection-font-color;
+        filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="@{gantt-row-selection-bg-color}", endColorstr="@{gantt-row-selection-bg-color}", GradientType=0), progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+    }
+}
+
+.e-ganttchart .e-progresshandle {
+    background: @gantt-progressHandle-color;
+}
+
+.e-ganttchart .e-progresshandleafter {
+     border-bottom-color:  @gantt-progressHandle-color;
+}
+
+.e-ganttchart .e-gantt-parenttaskbar-progress,
+.e-ganttchart .e-gantt-parenttaskbar-innerdiv {
+    & when (@skin= "office-365") {
+          border-color: transparent;
+    }
+    & when not (@skin= "office-365") {
+        border-color:@gantt-parent-taskbar-border-color;
+    }
+}
+
+.e-ganttchart .e-gantt-childtaskbar-progress,
+.e-ganttchart .e-gantt-childtaskbar {
+     & when (@skin= "office-365") {
+          border-color: transparent;
+    }
+    & when not (@skin= "office-365") {
+        border-color:@gantt-child-taskbar-border-color;
+    }
+}
+
+.e-ganttchart .e-chartcell {
+    border-bottom-color: transparent;
+}
+
+.e-ganttchart .e-gantt-mouseclick .e-chartcell .e-resourceinfo,
+.e-ganttchart .e-gantt-mouseclick .e-chartcell .e-tasknameContainer .e-taskbarname {
+    font-family: @font-family;
+    .high-contrast-gantt-active-font-color;
+    color: @gantt-selection-font-color;
+}
+
+.e-ganttchart .e-gantt-parenttaskbar-progress {
+     & when (@skin= "office-365") {
+          background: @neutral-primary;
+    }
+    & when not (@skin= "office-365") {
+     .gantt-parent-progress-background();
+	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{gantt-parent-progress-enbg-color}', endColorstr='@{gantt-parent-progress-enbg-color}',GradientType=0 );
+     }
+}
+
+.e-ganttchart .e-gantt-parenttaskbar-innerdiv {
+    background-color:@gantt-parent-task-bg-color;
+    background: rgb(red(@gantt-parent-task-bg-color),green(@gantt-parent-task-bg-color),blue(@gantt-parent-task-bg-color))~'\9';
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{gantt-parent-taskbar-color}', endColorstr='@{gantt-parent-taskbar-color}',GradientType=0 );
+}
+
+.e-ganttchart .e-gantt-childtaskbar-progress{
+    .gantt-child-progress-background();
+}
+.e-ganttchart .e-gantt-childtaskbar {
+    background-color:@gantt-child-task-bg-color;
+    background: rgb(red(@gantt-child-task-bg-color),green(@gantt-child-task-bg-color),blue(@gantt-child-task-bg-color))~'\9';
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+.e-ganttchart .e-manualprogressbar {
+ .gantt-child-manualprogress-background();
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{gantt-chart-manual-child-progressbar-stbg-color}', endColorstr='@{gantt-chart-manual-child-progressbar-endbg-color}',GradientType=0 );
+  border-color:@gantt-chart-manual-child-taskbar-border-color;
+}
+.e-ganttchart .e-manualchildtaskbar {
+    background-color:@gantt-chart-manual-child-taskbar-color;
+    border-color:@gantt-chart-manual-child-taskbar-border-color;
+}
+.e-ganttchart .e-line {
+    border-color: @gantt-connectorline-color;
+}
+
+.e-ganttchart .e-connectorpoint-hover {
+    background-color:@gantt-connectorpoint-hover-color;
+}
+
+.e-ganttchart .e-gantt-falseLine {
+    border-top-color:@gantt-falseLine-color;
+}
+
+.e-ganttchart .e-gripper:before {
+   color:@gantt-task-gripper-color;
+   background: rgb(red(@gantt-task-gripper-color),green(@gantt-task-gripper-color),blue(@gantt-task-gripper-color))~'\9';
+   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.e-ganttchart .e-ganttgridlines {
+   border-bottom-color:  @gantt-chart-border-color;
+}
+
+.e-ganttchart .e-criticalconnectorline {
+    border-color: @gantt-chart-critical-connectorline-color !important;
+}
+
+.e-ganttchart .e-criticalconnectorlinerightarrow {
+    border-left-color: @gantt-chart-critical-connectorline-rightarrow-color !important;
+}
+
+.e-ganttchart .e-criticalconnectorlineleftarrow {
+    border-right-color: @gantt-chart-critical-connectorline-leftarrow-color !important;
+}
+
+.e-ganttchart .e-criticalprogressbar {
+    background: @gantt-chart-critical-child-progressbar-color !important;
+    border-color: @gantt-chart-critical-child-progressbar-border-color !important;
+}
+
+.e-ganttchart .e-criticaltaskbar {
+    background: @gantt-chart-critical-child-taskbar-color !important;
+    border-color: @gantt-chart-critical-child-taskbar-border-color !important;
+}
+
+ .e-gantt-manualparenttaskbar {
+    background-color: #b3b3b3;
+}
+
+ .e-gantt-manualparenttaskbar-left, 
+ .e-gantt-manualparenttaskbar-right {
+    border-color: #b3b3b3;
+}
+
+ .e-gantt-manualparenttaskbar-connectorpoint-hover {
+    background-color: #b3b3b3 !important;
+}
+
+.e-rg-rangdiv {
+  background: #ff0000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: 0.8;
+}
+ .e-gantt-taskbarSelection .e-gantt-childtaskbar:before {
+    border-color: @gantt-taskbar-selection-border-color;
+}
+
+.e-ganttchart .e-connectorline-leftarrow-hover{
+    border-right-color: @gantt-chart-connectorline-hover-color !important;
+}
+
+.e-ganttchart .e-connectorline-rightarrow-hover{
+    border-left-color: @gantt-chart-connectorline-hover-color !important;
+}
+
+.e-ganttchart .e-connectorline-hover{
+    border-color: @gantt-chart-connectorline-hover-color !important;
+    outline-color: @gantt-chart-connectorline-hover-color !important;
+}

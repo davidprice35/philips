@@ -1,0 +1,239 @@
+@import "definition.less";
+/*Theme Color*/
+
+.e-acrdn
+{
+    font-family: @font-family;
+}
+.e-acrdn > .e-content
+{
+	border-color: @content-border-color;
+	background-color: @content-bg-color;
+   & when (@skin= "material") {
+        /*material*/
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 0px solid;
+        color: fade(@base-font-color,54%); 
+	    font-size: 13px;
+    }
+
+    & when not (@skin= "material") {
+		& when (@skin= "office-365") {
+			color: @theme-light-font; 
+			font-size: 12px;
+		}
+		& when not (@skin= "office-365") {
+			/*other*/
+			color: @content-font-color;
+			font-size:@content-font-size;
+		}
+		border-right: -1;
+		border-left: -1;
+    }  
+}
+
+.e-acrdn > .e-select, .e-acrdn > .e-disable.e-select:hover, .e-acrdn > .e-disable.e-select:hover a
+{
+       & when (@skin= "material") {
+        /*material*/
+        background: @content-bg-color;
+        color:  fade(@base-font-color,87%); 
+    }
+
+    & when not (@skin= "material") {
+        /*other*/
+        .default-gradient();
+        color: @default-font-color;
+    } 
+}
+
+.e-acrdn > .e-select, .e-acrdn > .e-disable.e-select:hover, .e-acrdn > .e-disable.e-select:hover a {
+    .office-acrd-header-bg-color();
+}
+
+.e-acrdn .e-select
+{   
+    & when (@skin= "material") {
+       /*material*/ 
+        border-color: @content-bg-color;
+        font-size: 15px;
+    }
+    & when not (@skin= "material") {
+		& when (@skin= "office-365") {
+			font-size: 14px;
+			border-color: @neutral-light;
+		}
+		& when not (@skin= "office-365") {
+			 /*other*/ 
+			border-color: @default-border-color; 
+			font-size:@header-font-size;  
+		}
+    }
+    font-weight: @content-font-weight; 
+    font-family: @font-family;
+}
+.e-acrdn .e-select:hover 
+{
+      & when (@skin= "material") {
+        /*material*/
+        background: @content-bg-color;
+        color:  fade(@base-font-color,87%);
+        border-color: @content-bg-color;
+    }
+
+    & when not (@skin= "material") {
+		& when (@skin= "office-365") {
+			color : @neutral-light-font;
+			background-color: @neutral-lighter;
+		}
+		& when not (@skin= "office-365") {
+			/*other*/
+			.hover-gradient();
+			color: @hover-font-color;
+			border-color: @hover-border-color;
+		}
+    } 
+}
+.e-acrdn .e-select a
+{
+	& when (@skin= "office-365") {
+		color: @neutral-light-font;
+	}
+	& when not (@skin= "office-365") {
+		color: @default-font-color;
+	}
+}
+.e-acrdn .e-select:first-child 
+{
+	& when (@skin= "office-365") {
+		border-top-color: @neutral-light;
+	}
+	& when not (@skin= "office-365") {
+		border-top-color:@default-border-color;
+	}
+}
+.e-acrdn > .e-select:first-child
+{
+    & when (@skin= "material") {
+       /*material*/ 
+        border-color: @content-bg-color;
+    }
+    & when not (@skin= "material") {
+		& when (@skin= "office-365") {
+			border-color: @neutral-light;
+		}
+		& when not (@skin= "office-365") {
+			/*other*/   
+			border-color: @default-border-color;
+		}
+    } 
+}
+.e-acrdn .e-select:last-of-type {
+	& when (@skin= "office-365") {
+		border-bottom-color: @neutral-light;
+	}
+}
+
+.e-acrdn .e-select.e-active, .e-acrdn .e-disable.e-active.e-select:hover a, .e-acrdn .e-disable.e-active.e-select:hover
+{
+    & when (@skin= "material") {
+        /*material*/
+        background: @content-bg-color;
+        color:  fade(@base-font-color,87%);
+    }
+
+    & when not (@skin= "material") {
+		& when (@skin= "office-365") {
+			color: @theme-primary-font;
+			background-color: @theme-primary;
+		}
+		 & when not (@skin= "office-365"){
+			/*other*/
+			.active-gradient();
+			color:@active-font-color;
+		}
+    }
+}
+.e-acrdn.e-disable .e-select:hover, .e-acrdn.e-disable .e-select:hover a
+{
+background: #ecedee;
+color:#5c5c5c;
+}
+.e-acrdn .e-select.e-active
+{    
+     & when (@skin= "material") {
+       /*material*/  
+        border: none;
+    }
+    & when not (@skin= "material") {
+        /*other*/ 
+        border-color:@active-border-color;    
+    }
+    font-weight: normal;
+    border-bottom: medium none;
+}
+.e-acrdn .e-select.e-active:hover {
+     & when (@skin= "material") {
+        /*material*/
+        background: @content-bg-color;
+        color: fade(@base-font-color,87%);
+        border-color: @content-bg-color;
+    }
+
+    & when not (@skin= "material") {
+        /*other*/
+        .hover-gradient();
+        color: @hover-font-color;
+        border-color:@hover-border-color;
+    }
+}
+.e-acrdn .e-select.e-active a
+{
+     & when (@skin= "material") {
+        /*material*/
+        color: fade(@base-font-color,87%);
+    }
+
+    & when not (@skin= "material") {
+        /*other*/
+        color: @active-font-color;
+    }  
+}
+.e-acrdn .e-select:hover a, .e-acrdn .e-select.e-active:hover a { 
+    & when (@skin= "material") {
+        /*material*/
+        color: fade(@base-font-color,87%);
+    }
+
+    & when not (@skin= "material") {
+        /*other*/
+        color: @hover-font-color;
+    }
+}
+.e-acrdn .e-select > span{
+    color:@default-icon-color;
+}
+.e-acrdn .e-select.e-active > span{
+      & when (@skin= "material") {
+        /*material*/
+        color: fade(@base-font-color,87%);
+    }
+
+    & when not (@skin= "material") {
+        /*other*/
+        color: @active-icon-color;
+    }
+}
+.e-acrdn .e-select:hover > span, .e-acrdn .e-select.e-active:hover > span{
+    color:@hover-icon-color;
+}
+.e-acrdn .e-select.e-disable:hover > span, .e-acrdn .e-select.e-disable.e-active:hover > span{
+    color:@default-icon-color;
+}
+.e-acrdn .e-content.e-load
+{
+    background-image: @ajaxloaderimage;
+	background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,1019 @@
+@import "definition.less";
+/*---------------------------------Schedule Theme--------------------------------*/
+.e-schedule,
+.e-schedule.e-scheduleouter {
+    & when (@skin= "material") {
+        color: @base-font-color;
+        background-color: @content-bg-color;
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-dark;
+        background-color: @neutral-white;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @content-font-color;
+        background-color: @content-bg-color;
+    }
+}
+
+.e-schedule .e-mobileNavigation {
+    & when (@skin= "material") {
+        color: @primary-font-color;
+    }
+
+    & when not (@skin= "material") {
+        color: @default-icon-color;
+    }
+}
+
+.e-scheduledrawer .e-mAddEvent,
+.e-scheduledrawer .e-mday,
+.e-scheduledrawer .e-mweek,
+.e-scheduledrawer .e-mworkweek,
+.e-scheduledrawer .e-mmonth,
+.e-scheduledrawer .e-mcustomview,
+.e-scheduledrawer .e-magenda {
+    color: @default-icon-color;
+}
+
+.e-scheduledrawer .e-lv .e-list.e-state-default:hover > .e-list-img {
+    color: @hover-icon-color;
+}
+
+.navDrawerMenu li {
+    & when (@skin= "office-365") {
+        border-bottom: 1px solid @neutral-light !important;
+    }
+}
+
+.e-scheduledrawer .e-list.e-state-active .e-list-img {
+    & when (@skin= "material") {
+        color: @accent-color;
+    }
+
+    & when (@skin= "office-365") {
+        color: @theme-primary;
+    }
+
+    & when not (@skin= "material") and not (@skin= "office-365") {
+        color: @active-icon-color;
+    }
+}
+
+.e-schedule .icon-AddGrad:before {
+    color: #2382C3;
+}
+
+.e-schedule .e-datecommondiv {
+    & when (@skin= "material") {
+        color: @primary-font-color;
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-secondary;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @default-font-color;
+    }
+}
+
+.e-schedule .e-commonviewbutton {
+    & when (@skin= "material") {
+        color: @primary-font-color;
+        background: @primary-color;
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-light-font;
+        background: @neutral-lighter;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .bs-default-gradient();
+        color: @default-font-color;
+        border: @border-size @border-type @default-border-color;
+        border-right: none;
+    }
+}
+
+.e-schedule .e-commonviewbutton.e-activeview:hover {
+    & when (@skin= "office-365") {
+        color: @theme-dark-font;
+        background: @theme-dark;
+    }
+}
+
+.e-schedule .e-nextapp:hover,
+.e-schedule .e-prevapp:hover {
+
+    & when (@skin="material") {
+        background-color: fade(@base-font-color,12%);
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-light-font-alt;
+        background-color: @neutral-light;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .hover-gradient();
+        border-color: @hover-border-color;
+        color: @hover-font-color;
+    }
+}
+
+.e-scheduledialog .e-scheduleclose:hover {
+    & when (@skin="material") {
+        background-color: none;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .hover-gradient();
+        border-color: @hover-border-color;
+        color: @hover-font-color;
+    }
+}
+
+.e-schedule .e-commonviewbutton:hover {
+    & when (@skin= "office-365") {
+        color: @neutral-light-font-alt;
+        background: @neutral-light;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .hover-gradient();
+        color: @hover-font-color;
+    }
+}
+
+.e-schedule .e-appup,
+.e-schedule .e-appdown {
+    & when (@skin= "material") {
+        color: @base-font-color;
+    }
+
+    & when not (@skin= "material") {
+        color: @default-font-color;
+    }
+}
+
+.e-schedule .e-appup:hover,
+.e-schedule .e-appdown:hover {
+    & when not (@skin= "material") {
+        color: @schedule-select-bg-color;
+    }
+}
+
+.e-schedule .e-singleview {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        border-right: @border-size @border-type @default-border-color;
+    }
+}
+
+.e-schedule.e-rtl .e-firstview,
+.e-schedule .e-lastview {
+    & when not (@skin= "material") and not (@skin="office-365") {
+        border: @border-size @border-type @default-border-color;
+    }
+}
+
+.e-schedule .e-dateheader {
+    border-bottom: @schedule-active-border-size @border-type @schedule-header-border-color;
+}
+
+.e-schedule .e-horizontalemptytd {
+    .switch-schedule-header-color;
+    border: none !important;
+    border-right: @border-size @border-type @content-border-color !important;
+    border-top: @border-size @border-type @content-border-color !important;
+}
+
+.e-schedule.e-rtl .e-horizontalemptytd {
+    .switch-schedule-header-color;
+    border: none !important;
+    border-left: @border-size @border-type @content-border-color !important;
+    border-top: @border-size @border-type @content-border-color !important;
+}
+
+.e-categorizeMenuSelected {
+    background: none repeat scroll 0 0 aliceblue;
+    border: 1px solid #0094ff !important;
+}
+
+.e-schedule .e-dateheader, .e-schedule .e-leftindent {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @content-border-color;
+}
+
+.e-scheduledialog .e-quickstartend {
+    & when (@skin= "material") {
+        color: fade(@base-font-color,87%);
+    }
+}
+
+.e-scheduledialog .e-quickstartendtime {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @content-border-color;
+}
+
+.e-scheduledialog .e-quickcreatebottomcontainer {
+    & when (@skin= "material") {
+        border-top: @border-size @border-type @grey-300;
+    }
+}
+
+.e-schedule .e-horizontalheader {
+    .switch-schedule-header-color;
+    border-bottom: @schedule-active-border-size @border-type @schedule-header-border-color !important;
+    background: @header-bg-stcolor;
+    color: @header-font-color;
+}
+
+.e-schedule .e-horizontalheadertddate {
+    border-left: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+}
+
+.e-schedule .e-horizontaltimetd {
+    .switch-schedule-header-color;
+    border-bottom: @schedule-active-border-size @border-type @schedule-header-border-color !important;
+    border-top: @border-size @border-type @header-border-color !important;
+    border-left: @border-size @border-type @header-border-color;
+}
+
+.e-schedule .e-horizontalalternatetd {
+    .switch-schedule-header-color;
+    border-bottom: @schedule-active-border-size @border-type @schedule-header-border-color !important;
+    border-left: @border-size @border-type transparent;
+    border-top: @border-size @border-type @header-border-color !important;
+}
+
+.e-schedule .e-horizontmonthheaderdatetd {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @header-border-color !important;
+    border-left: @border-size @border-type @header-border-color;
+}
+
+.e-schedule .e-horizontmonthheaderdaytd {
+    .switch-schedule-header-color;
+    border-bottom: @schedule-active-border-size @border-type @schedule-header-border-color !important;
+    border-left: @border-size @border-type @header-border-color;
+}
+
+.e-schedule .e-horizontmonthheaderdaytd,
+.e-schedule .e-horizontaltabletimecell {
+    & when (@skin= "material") {
+        background: @content-bg-color;
+    }
+}
+
+.e-schedule .e-alternateworkcell {
+    .switch-schedule-header-color;
+    border-left: @border-size dotted @content-border-color !important;
+}
+
+.e-schedule .e-dayend {
+    .switch-schedule-header-color;
+    border-left: 2px @border-type @content-border-color !important;
+}
+
+.e-schedule .e-parentnode,
+.e-schedule .e-parentworkcell {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @content-border-color !important;
+}
+
+
+.e-schedule .e-parentnode {
+    & when not (@skin= "material") {
+        .default-gradient();
+        border-bottom: @border-size @border-type @content-border-color !important;
+    }
+}
+
+.e-schedule .e-childnode,
+.e-schedule .e-childworkcell {
+    .switch-schedule-header-color;
+    border-bottom: @border-size dotted @content-border-color !important;
+}
+
+.e-schedule .e-workcells,
+.e-schedule .e-monthcells {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @content-border-color;
+    border-left: @border-size @border-type @content-border-color;
+    background: @schedule-cells-bg-color;
+}
+
+.e-schedule .e-othermonths {
+    border-left: @border-size @border-type transparent;
+}
+
+.e-schedule .e-agendacells {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @content-border-color;
+    border-left: @border-size @border-type @content-border-color;
+}
+
+.e-schedule .e-agendahover,
+.e-schedule .e-schedulerepeat,
+.e-schedule .e-schedulerepeatedit,
+.e-schedule .e-scheduleallday {
+    .high-contrast-schedule-content-icon-color;
+    color: @active-bg-stcolor;
+}
+
+.e-schedule .e-alternatecells, .e-schedule .e-ampmstyle {
+    & when (@skin= "material") {
+        border-bottom: @border-size dashed @grey-300;
+    }
+
+    & when (@skin= "office-365") {
+        border-bottom: @border-size dotted @neutral-quaternary;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        border-bottom: @border-size dotted lighten( @content-border-color, 2% );
+    }
+}
+
+.e-schedule .e-ampmstyle {
+    & when (@skin= "material") {
+        border-bottom: @border-size dotted transparent;
+    }
+}
+
+.e-schedule .e-appointresizer-top,
+.e-schedule .e-appointresizer-bottom,
+.e-schedule .e-appointresizer-left,
+.e-schedule .e-appointresizer-right {
+    & when (@skin= "office-365") {
+        color: @theme-primary-font;
+    }
+
+    & when not (@skin="office-365") {
+        color: @active-font-color;
+    }
+}
+
+.e-schedule .e-monthcellhighlight {
+    & when (@skin= "office-365") {
+        background: @neutral-white;
+    }
+
+    & when not (@skin="office-365") {
+        background: @content-bg-color;
+    }
+}
+
+.e-schedule .e-businesshighlightworkcells {
+    & when (@skin= "office-365") {
+        background: @neutral-white;
+    }
+
+    & when not (@skin="office-365") {
+        background: @content-bg-color;
+    }
+}
+
+.e-schedule .e-scheduleheader {
+    & when (@skin= "material") {
+        background: @primary-color;
+    }
+
+    & when (@skin= "office-365") {
+        background: @neutral-white;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .default-gradient();
+    }
+}
+
+.e-schedule .e-nextapp,
+.e-schedule .e-prevapp {
+    & when (@skin="material") {
+        color: fade(@base-font-color,87%);
+        background-color: @grey-100;
+        border: @border-size @border-type @grey-400;
+        border-bottom: transparent;
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-light-font;
+        background: @neutral-lighter;
+        border: @border-size @border-type @neutral-lighter;
+        border-bottom: transparent;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .default-gradient();
+        border: @border-size @border-type @default-border-color;
+        border-bottom: transparent;
+        color: @default-font-color;
+    }
+}
+
+.e-schedule .e-nextprevappdisable {
+    & when (@skin= "material") {
+        color: fade(@base-font-color,26%);
+        background-color: fade(@base-font-color,12%);
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-tertiary;
+        background: @neutral-lighter;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        opacity: 0.4;
+    }
+}
+
+.e-schedule .e-navigatenext,
+.e-schedule .e-navigateprevious {
+    & when (@skin= "material") {
+        color: @primary-font-color;
+    }
+
+   & when (@skin= "office-365") {
+         color:@neutral-secondary;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @default-icon-color;
+    }
+}
+
+.e-schedule .e-scheduleheader > td {
+    & when (@skin= "office-365") {
+        border: @border-size @border-type @content-border-color;
+        border-bottom: none;
+    }
+
+    & when not (@skin="office-365") {
+        border: @border-size @border-type @default-border-color;
+        border-bottom: none;
+    }
+}
+
+.e-schedule .e-headerarearow > td {
+    .switch-schedule-header-color;
+    border: @border-size @border-type @content-border-color;
+    border-bottom: none;
+}
+
+.e-schedule .e-contentarearow > td {
+    .switch-schedule-header-color;
+    border: @border-size @border-type @content-border-color;
+    border-top: none;
+}
+
+.e-schedule .e-resourceexpand:after,
+.e-schedule .e-resourcecollapse:after {
+    & when (@skin= "material") {
+        background: @grey-400;
+    }
+}
+
+.e-schedule.e-scheduleresponsive.e-resources {
+    .switch-schedule-header-color;
+    border-right: @border-size @border-type @content-border-color;
+}
+
+.e-schedule.e-rtl.e-scheduleresponsive.e-resources {
+    .switch-schedule-header-color;
+    border-right: none;
+    border-left: @border-size @border-type @content-border-color;
+}
+
+.e-schedule .e-headerbackcolor,
+.e-schedule .e-timecells {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @content-border-color;
+}
+
+.e-schedule .e-monthheader, .e-schedule .e-scrolltimecells {
+    & when (@skin= "material") {
+        color: @base-font-color;
+    }
+
+    & when (@skin= "office-365") {
+        color: @neutral-light-font;
+    }
+}
+
+.e-schedule .e-currentdayhighlight {
+    & when (@skin= "material") {
+        color: @accent-color !important;
+        background: fade(@accent-color,12%) !important;
+    }
+
+    & when (@skin= "office-365") {
+        color: @theme-light-font !important;
+        background: @theme-lighter !important;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @header-font-color !important;
+        background: fade(@active-bg-stcolor, 30%) !important;
+    }
+}
+
+.e-schedule .e-horizontal .e-currentdayhighlight {
+    & when (@skin= "material") {
+        background: none !important;
+    }
+
+    & when (@skin= "office-365") {
+        background: @neutral-white !important;
+        color: @theme-primary !important;
+    }
+}
+
+.e-schedule .e-currentdayhighlight .e-activeview {
+    & when (@skin= "material") {
+        background: none !important;
+        color: @accent-color !important;
+        border: none;
+    }
+
+    & when (@skin= "office-365") {
+        background: @neutral-white !important;
+        color: @theme-primary !important;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background: none !important;
+        color: @header-font-color !important;
+    }
+}
+
+.e-schedule .e-headercells:not(.e-currentdayhighlight) .e-activeview {
+    & when (@skin= "material") {
+        background: @accent-color;
+        color: @accent-font-color;
+        border: none;
+    }
+}
+
+.e-schedule .e-mousehover {
+    background-color: @schedule-select-bg-color !important;
+    color: @hover-font-color;
+}
+
+.e-schedule .e-mousehover .e-agendahover,
+.e-schedule .e-mousehover .e-schedulerepeat,
+.e-schedule .e-mousehover .e-schedulerepeatedit,
+.e-schedule .e-mousehover .e-scheduleallday {
+    & when (@skin= "material") {
+        color: fade(@base-font-color,54%);
+    }
+
+    & when not (@skin= "material") {
+        color: @hover-icon-color;
+    }
+}
+
+.e-schedule .e-highlightcurrenttimeline {
+    background-color: darken(@active-bg-stcolor,5%);
+}
+
+.e-schedule .e-currenttime {
+    background-color: darken(@active-bg-stcolor,5%);
+    color: @active-font-color;
+}
+
+.e-schedule .e-timeidicatorcircle {
+    color: darken(@active-bg-stcolor,5%);
+}
+
+.e-scheduledialog .e-recuredit {
+    color: @active-bg-stcolor;
+}
+
+.e-schedule .e-alldaycells {
+    .switch-schedule-header-color;
+    border-left: @border-size @border-type @content-border-color;
+    border-bottom: @border-size @border-type @content-border-color;
+}
+
+.e-schedule .e-headerresourcecells {
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type @content-border-color;
+}
+
+.e-schedule .e-resourcecells,
+.e-schedule .e-monthnamecells{
+    .switch-schedule-header-color;
+    border-left: @border-size @border-type @header-border-color;
+    border-bottom: @border-size @border-type @header-border-color;
+    background: @header-bg-stcolor;
+    color: @header-font-color;
+}
+
+.e-schedule .e-headercells {
+    .switch-schedule-header-color;
+    border-left: @border-size @border-type @header-border-color;
+    border-bottom: @schedule-active-border-size @border-type @schedule-header-border-color;
+    background: @header-bg-stcolor;
+    color: @header-font-color;
+}
+
+.e-schedule .e-monthdateshighlight {
+    & when (@skin= "office-365") {
+        color: @neutral-tertiary-alt;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        color: @watermark-font-color !important;
+    }
+}
+
+.e-schedule .e-monthcurrenttime {
+    background: darken(@active-bg-stcolor,5%);
+    color: @active-font-color;
+}
+
+.e-schedule.e-rtl .e-agendacells,
+.e-schedule.e-rtl .e-workcells,
+.e-schedule.e-rtl .e-alldaycells,
+.e-schedule.e-rtl .e-monthcells {
+    border-left: none !important;
+    border-right: @border-size @border-type @content-border-color;
+}
+
+.e-schedule.e-rtl .e-resourcecells,
+.e-schedule.e-rtl .e-headercells,
+.e-schedule.e-rtl .e-horizontmonthheaderdatetd,
+.e-schedule.e-rtl .e-horizontmonthheaderdaytd,
+.e-schedule.e-rtl .e-monthnamecells{
+    .switch-schedule-header-color;
+    border-left: none !important;
+    border-right: @border-size @border-type @header-border-color;
+}
+
+.e-schedule.e-rtl .e-othermonths {
+    border-left: none !important;
+    border-right: @border-size @border-type transparent;
+}
+
+.e-schedule.e-rtl .e-dayend {
+    border-left: none !important;
+    border-right: 2px @border-type @content-border-color !important;
+}
+
+.e-schedule.e-rtl .e-horizontaltimetd {
+    .switch-schedule-header-color;
+    border-left: none !important;
+    border-right: @border-size @border-type @header-border-color;
+}
+
+.e-schedule.e-rtl .e-alternateworkcell {
+    border-left: none !important;
+    border-right: @border-size dotted @content-border-color !important;
+}
+
+.e-schedule.e-rtl .e-horizontalalternatetd {
+    border-left: none !important;
+    border-right: @border-size @border-type transparent !important;
+}
+
+.e-schedule .e-activeview {
+    & when (@skin= "material") {
+        opacity: 1;
+        border-bottom: 2px @border-type @accent-color;
+    }
+
+    & when (@skin= "office-365") {
+        color: @theme-primary-font;
+        background: @theme-primary;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        .schedule-app-color();
+        color: @active-font-color;
+    }
+}
+
+.e-schedule .e-monthleftcells,
+.e-schedule .e-settingsindent {
+    .switch-schedule-header-color;
+    border-bottom: @schedule-active-border-size @border-type @schedule-header-border-color;
+    background: @header-bg-stcolor;
+    color: @header-font-color;
+}
+
+.e-schedule .e-resourceleftindentcells,
+.e-schedule .e-monthnameleftindentcell{
+    .switch-schedule-header-color;
+    border-bottom: @border-size @border-type transparent;
+    background: @header-bg-stcolor;
+    color: @header-font-color;
+}
+
+.e-schedule .e-horizontaldaterender {
+    .switch-schedule-header-color;
+    background: @header-bg-stcolor;
+    color: @header-font-color;
+}
+
+ .e-draggableAppointment,
+.e-schedule .e-monthappointment,
+.e-schedule .e-alldayappointment,
+.e-schedule .e-appointment,
+.e-schedule .e-inline {
+    .schedule-app-color();
+    color: @active-font-color;
+    border: @border-size @border-type @schedule-app-border-color;
+}
+
+.e-schedule .e-categorycolor,
+.e-schedule .e-agendacolordiv {
+    .schedule-app-color();
+}
+
+.e-schedule .e-selectedAppointment {
+    border: 1px solid black;
+}
+
+.e-schedule .e-selectedCell,
+.e-schedule .e-agendaappointment.e-selectedAppointment {
+    & when (@skin= "material") {
+        background-color: @grey-100 !important;
+    }
+
+    & when (@skin= "office-365") {
+        background-color: @theme-lighter !important;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background-color: @schedule-select-bg-color !important;
+    }
+}
+
+.e-schedule .e-borderleft {
+    border-left: @border-size @border-type @content-border-color;
+}
+
+.e-schedule .e-borderright {
+    border-right: @border-size @border-type @content-border-color !important;
+}
+
+.e-scheduledialog .e-buttonactive:not(.e-disable) {
+    & when (@skin= "material") {
+        background-color: fade(@base-font-color,12%) !important;
+    }
+
+    & when (@skin= "office-365") {
+        background: @theme-primary !important;
+        color: @theme-primary-font !important;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background: @active-bg-stcolor !important;
+        color: @active-font-color !important;
+    }
+}
+
+.e-scheduledialog .e-buttonactive:not(.e-disable):hover {
+    & when (@skin= "material") {
+        background-color: fade(@base-font-color,12%) !important;
+    }
+
+    & when (@skin= "office-365") {
+        background: @theme-dark !important;
+        color: @theme-dark-font !important;
+    }
+
+    & when not (@skin= "material") and not (@skin="office-365") {
+        background: @hover-bg-stcolor !important;
+        color: @hover-font-color !important;
+    }
+}
+
+.e-scheduledialog .e-detailedapp,
+.e-scheduledialog .e-editevents {
+    .switch-schedule-appointment-btn;
+    color: @active-bg-stcolor;
+}
+
+.e-scheduledialog .e-dialogheader {
+    font-weight: bold !important;
+}
+
+.e-scheduledialog .e-outerarrowline {
+    border-color: @content-border-color rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 9px 9px 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.e-scheduledialog .e-innerarrow {
+    border-color: @content-bg-color rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 8px 8px 0;
+    left: 1px;
+    position: absolute;
+    top: 0;
+}
+
+ .e-draggableAppointment {
+    box-shadow: 5px 5px 5px @overlay-bg-color;
+}
+
+.e-schedule .e-blocktimeappointment {
+    background-color: darken(@default-bg-stcolor, 20%);
+    color: @default-font-color;
+    opacity: 0.4;
+}
+
+.e-scheduledialog div.e-field-validation-error {
+    & when (@skin= "material") {
+        background-color: @grey-700;
+        color: @primary-font-color;
+        white-space: normal;
+    }
+
+    & when not (@skin= "material") {
+        background-color: #fffe91;
+        color: #cd0a0a;
+        white-space: normal;
+    }
+}
+
+.e-schedule .e-appsoverflow {
+    color: @default-icon-color;
+}
+
+.e-schedule .e-appsoverflow:hover {
+    color: @hover-icon-color;
+}
+
+.e-scheduledialog div.e-error .e-toparrow {
+    & when not (@skin= "material") {
+        border-bottom-color: #fffe92;
+    }
+
+    & when (@skin= "material") {
+        border-bottom-color: @grey-700;
+    }
+}
+
+@media print {
+    .e-schedule .e-monthappointment,
+    .e-schedule .e-alldayappointment,
+    .e-schedule .e-appointment,
+    .e-schedule .e-activeview,
+    .e-schedule .e-currenttime,
+    .e-schedule .e-highlightcurrenttimeline,
+    .e-schedule .e-agendacolordiv,
+    .e-schedule .e-selectedCell{
+        background: @schedule-app-stbg-color !important; /* Old browsers */
+        & when (@skin= "gradient-azure-dark") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-lime") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-lime-dark") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-saffron") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-saffron-dark") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when not (@skin= "gradient-azure-dark") and not (@skin="gradient-lime") and not (@skin="gradient-lime-dark") and not (@skin="gradient-saffron") and not (@skin="gradient-saffron-dark"){
+            background: -moz-linear-gradient(top, 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@schedule-app-stbg-color), color-stop(100%,@schedule-app-endbg-color)) !important; /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* IE10+ */
+        background: linear-gradient(to bottom, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{schedule-app-stbg-color}', endColorstr='@{schedule-app-endbg-color}',GradientType=0 ) !important; /* IE6-9 */
+        color: #fff !important;
+    }
+    
+    .e-schedule .e-scheduleheader {
+        & when (@skin= "material") {
+            background: @primary-color !important;
+        }
+        & when (@skin= "office-365") {
+            background: @neutral-white !important;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
+            .media-print-default-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 0%, 0%);
+        }
+    }
+    
+    .media-print-default-gradient(@derivedfrom, @start, @end, @light, @dark) when (true) {
+        &{
+            .generate();
+        }
+        .generate() when (@derivedfrom = none) {
+            @gradient: none;
+            background: @start !important; 
+        }
+        .generate() when not (@derivedfrom = none) {
+            @gradient: lighten(extract(@derivedfrom, 1), @light), darken(extract(@derivedfrom, 2), @dark) !important;
+            background: @start !important; /* Old browsers */
+            background: -moz-linear-gradient(top, @gradient) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@end)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,@gradient) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, @gradient) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, @gradient) !important; /* IE10+ */
+            background: linear-gradient(to bottom, @gradient) !important; /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end}',GradientType=0 ) !important; /* IE6-9 */
+        }
+    }
+
+    .e-schedule .e-workcells,
+    .e-schedule .e-monthcells {   
+        border-bottom: @border-size @border-type @content-border-color !important;
+        border-left: @border-size @border-type @content-border-color !important;
+        background: @schedule-cells-bg-color !important;
+    }
+
+    .e-schedule .e-monthcellhighlight {
+        & when (@skin= "office-365") {
+            background: @neutral-white !important;
+        }
+        & when not (@skin="office-365") {
+            background: @content-bg-color !important;
+        }
+    }
+
+    .e-schedule .e-businesshighlightworkcells {
+        & when (@skin= "office-365") {
+            background: @neutral-white !important;
+        }
+        & when not (@skin="office-365") {
+            background: @content-bg-color !important;
+        }
+    }
+
+    .e-schedule .e-nextapp,
+    .e-schedule .e-prevapp {
+        & when (@skin="material") {
+            color: fade(@base-font-color,87%) !important;
+            background-color: @grey-100 !important;
+            border: @border-size @border-type @grey-400 !important;
+            border-bottom: transparent !important;
+        }
+        & when (@skin= "office-365") {
+            color: @neutral-light-font !important;
+            background: @neutral-lighter !important;
+            border: @border-size @border-type @neutral-lighter !important;
+            border-bottom: transparent !important;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
+            .media-print-default-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 0%, 0%);
+            border: @border-size @border-type @default-border-color !important;
+            border-bottom: transparent !important;
+            color: @default-font-color !important;
+        }
+    }
+
+    .e-schedule .e-apptext,
+    .e-schedule .e-apptime,
+    .e-schedule .e-recurapp:before,
+    .e-schedule .e-recureditapp:before {
+        color: @active-font-color !important;
+    }
+    
+    .e-schedule .e-scheduleallday:before,
+    .e-schedule .e-schedulerepeat:before,
+    .e-schedule .e-schedulerepeatedit:before,
+    .e-schedule .e-timeidicatorcircle:before {
+        color: @schedule-app-stbg-color !important;
+    }
+
+    .e-schedule .e-alternatecells, 
+    .e-schedule .e-ampmstyle {
+        & when (@skin= "material") {
+            border-bottom: @border-size dashed @grey-300 !important;
+        }
+        & when (@skin= "office-365") {
+            border-bottom: @border-size dotted @neutral-quaternary !important;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
+            border-bottom: @border-size dotted lighten( @content-border-color, 2% ) !important;
+        }
+    }
+
+    .e-schedule .e-othermonths {
+        border-left: @border-size @border-type transparent !important;
+    }
+}
+/*-----------------------Schedule Theme End -----------------------------*/
