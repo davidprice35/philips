@@ -79,8 +79,8 @@ public class Helper
     public static void InsertData(string sql)
     {
         try
-        {            
-            string connStr = "server=rdsipos01d.cxvevr7ci7iw.eu-west-1.rds.amazonaws.com;user=appadmin; database=innodb; password=jyMMkn9UWTrDosfNNc5zf97Iwua9NIKb9L2cp17K";
+        {
+            string connStr = "server=91.208.99.2;user=travelma2_phil1;port=1220; database=travelma2_phil1; password=Monst3rlinksT";
             MySqlConnection conn = new MySqlConnection(connStr);
             
             conn.Open();                

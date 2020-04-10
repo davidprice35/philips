@@ -11,14 +11,21 @@ using System.Data.Common;
 using Newtonsoft.Json;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
-
-
+using System.IO;
+using System.Globalization;
 using Syncfusion.JavaScript.Web;
+using System.Xml.Serialization;
+//using System.Xml;
+using Newtonsoft.Json;
 
 
 public partial class competitive_info_Competitors : System.Web.UI.Page
 {
-    List<PhilipsData> PhilipsDataLST = new List<PhilipsData>();
+    List<KeyProjectData> KeyProjectData1 = new List<KeyProjectData>();
+    List<KeyPortalData> KeyPortalDat1 = new List<KeyPortalData>();
+    List<CoreData> CoreDat1 = new List<CoreData>();
+
+
     public string m_UserName = string.Empty;
     public string m_UserID = string.Empty;
     public string m_UserType = string.Empty;
@@ -127,38 +134,64 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
 
     [Serializable]
-    public class PhilipsData
+    public class KeyProjectData
     {
-        public PhilipsData()
+        public KeyProjectData()
         {
 
         }
-        public PhilipsData(string DataID , string ColumnName, string Philips, string Tera, string Siemens, string GE,string Cannon, string Agfa, string Comment,string TrafficLight)
+        public KeyProjectData(string FirstName , string LastName, string Email)
         {
-            this.DataID = DataID;
-            this.ColumnName = ColumnName;
-            this.Philips = Philips;
-            this.Tera = Tera;
-            this.Siemens = Siemens;
-            this.GE = GE;
-            this.Cannon = Cannon;
-            this.Agfa = Agfa;
-            this.Comment = Comment;
-            this.TrafficLight = TrafficLight;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Email = Email;
+          
         }
 
-        public string DataID { get; set; }
-        public string ColumnName { get; set; }
-        public string Philips { get; set; }
-        public string Tera { get; set; }
-        public string Siemens { get; set; }
-        public string GE { get; set; }
-        public string Cannon { get; set; }
-        public string Agfa { get; set; }
-        public string Comment { get; set; }
-        public string TrafficLight { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }       
     }
 
+    [Serializable]
+    public class KeyPortalData
+    {
+        public KeyPortalData()
+        {
+
+        }
+        public KeyPortalData(string FirstName, string LastName, string Email)
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Email = Email;
+
+        }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+    }
+
+    [Serializable]
+    public class CoreData
+    {
+        public CoreData()
+        {
+
+        }
+        public CoreData(string FirstName, string LastName, string Email)
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Email = Email;
+
+        }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+    }
 
     public string ShowProfileMenu()
     {
@@ -236,775 +269,9 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         catch { }
     }
 
-    private string GetCompareData(string ColumnName,string Comp)
-    {
-        PhilipsDataLST = Session["CellEditDataSource"] as List<PhilipsData>;
-        string CompData = string.Empty;
-        int Valueidx = 0;
+   
 
-        try {
-
-            switch(ColumnName)
-            {
-                case "Value Proposition":
-                    Valueidx = 1;
-                    break;
-                case "Market Share":
-                    Valueidx = 2;
-                    break;             
-                case "Business Model":
-                    Valueidx = 3;
-                    break;
-                case "Solution Weaknesses":
-                    Valueidx = 4;
-                    break;
-                case "Solution Strengths":
-                    Valueidx = 5;
-                    break;
-                case "Competitive Argumentation":
-                    Valueidx = 6;
-                    break;
-                case "TrafficLight":
-                    Valueidx = 6;
-                    break;
-            }
-
-            switch(Comp)
-            {
-                case "Philips":
-                    CompData = PhilipsDataLST[Valueidx].Philips;
-                    break;
-                case "Tera":
-                    CompData = PhilipsDataLST[Valueidx].Tera;
-                    break;
-                case "Siemens":
-                    CompData = PhilipsDataLST[Valueidx].Siemens;
-                    break;
-                case "GE":
-                    CompData = PhilipsDataLST[Valueidx].GE;
-                    break;
-                case "Cannon":
-                    CompData = PhilipsDataLST[Valueidx].Cannon;
-                    break;
-                case "Agfa":
-                    CompData = PhilipsDataLST[Valueidx].Agfa;
-                    break;
-
-            }
-            
-
-            if ( CompData!="")
-            {
-                CompData= CompData.Replace("\r\n", "").Replace("\n", "");
-            }
-
-
-        }
-        catch { }
-
-
-        return CompData;
-
-    }
-
-    private string GetTrafficData(string ColumnName, string Comp)
-    {
-        PhilipsDataLST = Session["CellEditDataSource"] as List<PhilipsData>;
-        string CompData = string.Empty;
-        int Valueidx = 0;
-
-        try
-        {
-
-            switch (ColumnName)
-            {
-                case "Value Proposition":
-                    Valueidx = 1;
-                    break;
-                case "Market Share":
-                    Valueidx = 2;
-                    break;
-                case "Business Model":
-                    Valueidx = 3;
-                    break;
-                case "Solution Weaknesses":
-                    Valueidx = 4;
-                    break;
-                case "Solution Strengths":
-                    Valueidx = 5;
-                    break;
-                case "Competitive Argumentation":
-                    Valueidx = 6;
-                    break;
-                case "TrafficLight":
-                    Valueidx = 6;
-                    break;
-            }
-
-            switch (Comp)
-            {
-                case "Philips":
-                    CompData = PhilipsDataLST[Valueidx].TrafficLight;
-                    if (CompData!="" & CompData!=null)
-                    {
-                        CompData = CompData.Substring(1);
-                        string[] SplitData = CompData.Split(';');
-                        CompData = "";
-                        foreach (string items in SplitData)
-                        {
-                            string[] innerSplitData = items.Split(':');
-                            foreach (string innerItem in innerSplitData)
-                            {
-                                if (innerItem== Comp)
-                                {
-                                    CompData = innerSplitData[1];
-                                }
-                            }
-                        }
-                    }else
-                    {
-                        CompData = "4";
-                    }
-                    
-                    break;
-                case "Tera":
-                    CompData = PhilipsDataLST[Valueidx].TrafficLight;
-                    if (CompData != "" & CompData != null)
-                    {
-                        CompData = CompData.Substring(1);
-                        string[] SplitData = CompData.Split(';');
-                        CompData = "";
-                        foreach (string items in SplitData)
-                        {
-                            string[] innerSplitData = items.Split(':');
-                            foreach (string innerItem in innerSplitData)
-                            {
-                                if (innerItem == Comp)
-                                {
-                                    CompData = innerSplitData[1];
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        CompData = "4";
-                    }
-                    break;
-                case "Siemens":
-                    CompData = PhilipsDataLST[Valueidx].TrafficLight;
-                    if (CompData != "" & CompData != null)
-                    {
-                        CompData = CompData.Substring(1);
-                        string[] SplitData = CompData.Split(';');
-                        CompData = "";
-                        foreach (string items in SplitData)
-                        {
-                            string[] innerSplitData = items.Split(':');
-                            foreach (string innerItem in innerSplitData)
-                            {
-                                if (innerItem == Comp)
-                                {
-                                    CompData = innerSplitData[1];
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        CompData = "4";
-                    }
-                    break;
-                case "GE":
-                    CompData = PhilipsDataLST[Valueidx].TrafficLight;
-                    if (CompData != "" & CompData != null)
-                    {
-                        CompData = CompData.Substring(1);
-                        string[] SplitData = CompData.Split(';');
-                        CompData = "";
-                        foreach (string items in SplitData)
-                        {
-                            string[] innerSplitData = items.Split(':');
-                            foreach (string innerItem in innerSplitData)
-                            {
-                                if (innerItem == Comp)
-                                {
-                                    CompData = innerSplitData[1];
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        CompData = "4";
-                    }
-                    break;
-                case "Cannon":
-                    CompData = PhilipsDataLST[Valueidx].TrafficLight;
-                    if (CompData != "" & CompData != null)
-                    {
-                        CompData = CompData.Substring(1);
-                        string[] SplitData = CompData.Split(';');
-                        CompData = "";
-                        foreach (string items in SplitData)
-                        {
-                            string[] innerSplitData = items.Split(':');
-                            foreach (string innerItem in innerSplitData)
-                            {
-                                if (innerItem == Comp)
-                                {
-                                    CompData = innerSplitData[1];
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        CompData = "4";
-                    }
-                    break;
-                case "Agfa":
-                    CompData = PhilipsDataLST[Valueidx].TrafficLight;
-                    if (CompData != "" & CompData != null)
-                    {
-                        CompData = CompData.Substring(1);
-                        string[] SplitData = CompData.Split(';');
-                        foreach (string items in SplitData)
-                        {
-                            string[] innerSplitData = items.Split(':');
-                            CompData = "";
-                            foreach (string innerItem in innerSplitData)
-                            {
-                                if (innerItem == Comp)
-                                {
-                                    CompData = innerSplitData[1];
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        CompData = "4";
-                    }
-                    break;
-
-            }
-
-
-            //if (CompData != "")
-            //{
-            //    CompData = CompData.Replace("\r\n", "").Replace("\n", "");
-            //}
-
-
-        }
-        catch { }
-
-        if (CompData=="")
-        {
-            CompData = "4";
-        }
-
-        return CompData;
-
-    }
-
-
-    private string GetComment (Dictionary<string, object> KeyVal,string DataName)
-    {
-        string MyData = string.Empty;
-
-        try {
-
-            if (KeyVal[DataName] != null)
-            {
-                MyData = KeyVal[DataName].ToString();
-            }else
-            {
-                MyData = "";
-            }
-
-
-        }
-        catch
-        {
-            MyData = "";
-        }
-
-        return MyData;
-    }
-
-
-    private string GetTrafficLightData(Dictionary<string, object> KeyVal,string Competitor)
-    {
-        string MyData = string.Empty;
-
-        try
-        {
-
-            switch(Competitor)
-            {
-                case "Philips":
-                    if (KeyVal["Philipscheck"].ToString()!= "")
-                    {
-                        MyData = KeyVal["Philipscheck"].ToString();
-                    }                   
-                    break;
-                case "Tera":
-                    if (KeyVal["Teracheck"].ToString() != "")
-                    {
-                        MyData = KeyVal["Teracheck"].ToString();
-                    }
-                    break;
-                case "Siemens":
-                    if (KeyVal["Siemenscheck"].ToString() != "")
-                    {
-                        MyData = KeyVal["Siemenscheck"].ToString();
-                    }
-                    break;
-                case "GE":
-                    if (KeyVal["GEcheck"].ToString() != "")
-                    {
-                        MyData = KeyVal["GEcheck"].ToString();
-                    }
-                    break;
-                case "Cannon":
-                    if (KeyVal["Cannoncheck"].ToString() != "")
-                    {
-                        MyData = KeyVal["Cannoncheck"].ToString();
-                    }
-                    break;
-                case "Agfa":
-                    if (KeyVal["Agfacheck"].ToString() != "")
-                    {
-                        MyData = KeyVal["Agfacheck"].ToString();
-                    }
-                    break;
-
-            }
-     
-
-        }
-        catch
-        {
-            MyData = "4";
-        }
-
-        return MyData;
-    }
-
-    //private string GetTrafficString(string DataItem,string Comp)
-    //{
-    //    string myData = string.Empty;
-
-    //    try {
-
-
-    //        myData = DataItem.Replace(Comp + ":", "");
-
-    //        switch(myData)
-    //        {
-    //            case "1":
-                    
-    //                break;
-    //            case "2":
-    //                break;
-    //            case "3":
-    //                break;
-    //            case "4":
-    //                break;
-    //        }
-
-    //    }
-    //    catch { }
-        
-    //    return myData;
-
-    //}
-    protected void EditAction(string eventType, object record)
-    {
-        PhilipsDataLST = Session["CellEditDataSource"] as List<PhilipsData>;
-        if (PhilipsDataLST==null)
-        {
-            GetGridDBData();
-        }
-        string sColumnName = string.Empty;
-        string sColumnPhilips = string.Empty;
-        string sColumnTera = string.Empty;
-        string sColumnSiemens = string.Empty;
-        string sColumnGE = string.Empty;
-        string sColumnCannon = string.Empty;
-        string sColumnAgfa = string.Empty;
-        string CompareData = string.Empty;
-        string SQL = string.Empty;
-        string sComment = string.Empty;
-        string sTrafficLightData = string.Empty;
-        string sOriginalTrafficLightData = string.Empty;
-
-        Dictionary<string, object> KeyVal = record as Dictionary<string, object>;
-        if (eventType == "endEdit")
-        {
-                       
-            foreach (KeyValuePair<string, object> keyval in KeyVal)
-            {
-
-                if (keyval.Key == "ColumnName")
-                {
-                    sColumnName = Convert.ToString(keyval.Value);
-                }
-                else if (keyval.Key == "Philips")
-                {
-                    CompareData = GetCompareData(sColumnName, "Philips");
-                    sOriginalTrafficLightData = GetTrafficData(sColumnName, "Philips");
-                    sColumnPhilips = Convert.ToString(keyval.Value).Replace("'", "\"").Replace("\n", "");
-                    sComment = GetComment(KeyVal, "PhilipsComments");
-
-                    sTrafficLightData = GetTrafficLightData(KeyVal, "Philips");
-                    if (sTrafficLightData != "")
-                    {
-                        if (sTrafficLightData.Replace("Philips:", "") != sOriginalTrafficLightData)
-                        {
-                            SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment,TrafficLightData) VALUES('" + sTrafficLightData + "', '"+ sOriginalTrafficLightData + "', '" + sColumnName.Replace(" ", "_") + "_chk', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Philips','" + sComment + "','" + sTrafficLightData + "')";
-                            GetData(SQL);
-                        }
-                        SQL = "";
-                    }
-
-
-
-                    if (CompareData!= sColumnPhilips)
-                    {
-                        SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment,TrafficLightData) VALUES('" + sColumnPhilips + "', '" + CompareData + "', '" + sColumnName + "', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Philips','"+ sComment + "','"+ sTrafficLightData + "')";
-                        GetData(SQL);
-                        SQL = "";
-                    }                    
-                }
-                else if (keyval.Key == "Tera")
-                {
-                    CompareData = GetCompareData(sColumnName, "Tera");
-                    sOriginalTrafficLightData = GetTrafficData(sColumnName, "Tera");
-                    sColumnTera = Convert.ToString(keyval.Value).Replace("'", "\"").Replace("\n","");                    
-                    sComment = GetComment(KeyVal, "TeraComments");
-
-                    sTrafficLightData = GetTrafficLightData(KeyVal, "Tera");
-                    if (sTrafficLightData != "")
-                    {
-                        if (sTrafficLightData.Replace("Tera:", "") != sOriginalTrafficLightData)
-                        {
-                            SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment,TrafficLightData) VALUES('" + sTrafficLightData + "', '" + sOriginalTrafficLightData + "', '" + sColumnName.Replace(" ", "_") + "_chk', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Tera','" + sComment + "','" + sTrafficLightData + "')";
-                            GetData(SQL);
-                        }
-                        SQL = "";
-                    }
-
-                    if (CompareData != sColumnTera)
-                    {
-                        SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment) VALUES('" + sColumnTera + "', '" + CompareData + "', '" + sColumnName + "', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Tera','" + sComment + "')";
-                        GetData(SQL);
-                        SQL = "";
-                    }
-                }                
-                else if (keyval.Key == "Siemens")
-                {
-                    CompareData = GetCompareData(sColumnName, "Siemens");
-                    sOriginalTrafficLightData = GetTrafficData(sColumnName, "Siemens");
-                    sColumnSiemens = Convert.ToString(keyval.Value).Replace("'", "\"").Replace("\n", "");
-                    sComment = GetComment(KeyVal, "SiemensComments");
-
-                    sTrafficLightData = GetTrafficLightData(KeyVal, "Siemens");
-                    if (sTrafficLightData != "")
-                    {
-                        if (sTrafficLightData.Replace("Siemens:", "") != sOriginalTrafficLightData)
-                        {
-                            SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment,TrafficLightData) VALUES('" + sTrafficLightData + "', '" + sOriginalTrafficLightData + "', '" + sColumnName.Replace(" ", "_") + "_chk', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Siemens','" + sComment + "','" + sTrafficLightData + "')";
-                            GetData(SQL);
-                        }
-                        SQL = "";
-                    }
-
-                    if (CompareData != sColumnSiemens)
-                    {
-                        SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment) VALUES('" + sColumnSiemens + "', '" + CompareData + "', '" + sColumnName + "', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Siemens','" + sComment + "')";
-                        GetData(SQL);
-                        SQL = "";
-                    }
-                }               
-                else if (keyval.Key == "GE")
-                {
-                    CompareData = GetCompareData(sColumnName, "GE");
-                    sOriginalTrafficLightData = GetTrafficData(sColumnName, "GE");
-                    sColumnGE = Convert.ToString(keyval.Value).Replace("'", "\"").Replace("\n", "");
-                    sComment = GetComment(KeyVal, "GEComments");
-
-                    sTrafficLightData = GetTrafficLightData(KeyVal, "GE");
-                    if (sTrafficLightData != "")
-                    {
-                        if (sTrafficLightData.Replace("GE:", "") != sOriginalTrafficLightData)
-                        {
-                            SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment,TrafficLightData) VALUES('" + sTrafficLightData + "', '" + sOriginalTrafficLightData + "', '" + sColumnName.Replace(" ", "_") + "_chk', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'GE','" + sComment + "','" + sTrafficLightData + "')";
-                            GetData(SQL);
-                        }
-                        SQL = "";
-                    }
-
-                    if (CompareData != sColumnGE)
-                    {
-                        SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment) VALUES('" + sColumnGE + "', '" + CompareData + "', '" + sColumnName + "', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'GE','" + sComment + "')";
-                        GetData(SQL);
-                        SQL = "";
-                    }
-                }                
-                else if (keyval.Key == "Cannon")
-                {
-                    CompareData = GetCompareData(sColumnName, "Cannon");
-                    sOriginalTrafficLightData = GetTrafficData(sColumnName, "Cannon");
-                    sColumnCannon = Convert.ToString(keyval.Value).Replace("'", "\"").Replace("\n", "");                    
-                    sComment = GetComment(KeyVal, "CannonComments");
-
-                    sTrafficLightData = GetTrafficLightData(KeyVal, "Cannon");
-                    if (sTrafficLightData != "")
-                    {
-                        if (sTrafficLightData.Replace("Cannon:", "") != sOriginalTrafficLightData)
-                        {
-                            SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment,TrafficLightData) VALUES('" + sTrafficLightData + "', '" + sOriginalTrafficLightData + "', '" + sColumnName.Replace(" ", "_") + "_chk', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Cannon','" + sComment + "','" + sTrafficLightData + "')";
-                            GetData(SQL);
-                        }
-                        SQL = "";
-                    }
-
-                    if (CompareData != sColumnCannon)
-                    {
-                        SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment) VALUES('" + sColumnCannon + "', '" + CompareData + "', '" + sColumnName + "', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Cannon','" + sComment + "')";
-                        GetData(SQL);
-                        SQL = "";
-                    }
-                }                
-                else if (keyval.Key == "Agfa")
-                {
-                    CompareData = GetCompareData(sColumnName, "Agfa");
-                    sOriginalTrafficLightData = GetTrafficData(sColumnName, "Agfa");
-                    sColumnAgfa = Convert.ToString(keyval.Value).Replace("'", "\"").Replace("\n", "");
-                    sComment = GetComment(KeyVal, "AgfaComments");
-
-                    sTrafficLightData = GetTrafficLightData(KeyVal, "Agfa");
-                    if (sTrafficLightData != "")
-                    {
-                        if (sTrafficLightData.Replace("Agfa:", "") != sOriginalTrafficLightData)
-                        {
-                            SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment,TrafficLightData) VALUES('" + sTrafficLightData + "', '" + sOriginalTrafficLightData + "', '" + sColumnName.Replace(" ", "_") + "_chk', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Agfa','" + sComment + "','" + sTrafficLightData + "')";
-                            GetData(SQL);
-                        }
-                        SQL = "";
-                    }
-
-                    if (CompareData != sColumnAgfa)
-                    {
-                        SQL = "INSERT INTO PhilipsAnalysisCompetitorsData_PendingUpdates(NewDataUpdate, OldData, UpdateColumnName, UserID, UserName, Status,Type,Comment) VALUES('" + sColumnAgfa + "', '" + CompareData + "', '" + sColumnName + "', '" + Session["UserID"] + "', '" + Session["User"] + "', 1,'Agfa','" + sComment + "')";
-                        GetData(SQL);
-                        SQL = "";
-                    }
-                }
-                
-
-            }
-        }
-
-
-
-       // this.Grid1.DataSource = PhilipsDataLST;
-       // this.Grid1.DataBind();
-    }
-
-    protected void EditEvents_ServerEditRow(object sender, GridEventArgs e)
-    {
-        EditAction(e.EventType, e.Arguments["data"]);
-    }
-
-    private void GetGridDBData()
-    {
-        try {
-
-            string DataID = string.Empty;
-            string SQL = "select * from PhilipsAnalysisCompetitorsData";
-            DataView MyDV = Helper.GetData(SQL);
-
-
-
-            PhilipsData mySolution = new PhilipsData();
-            PhilipsData myValue_Proposition = new PhilipsData();
-            PhilipsData myMarket_Share = new PhilipsData();
-
-            PhilipsData myBusiness_Model = new PhilipsData();
-            PhilipsData mySolution_Weaknesses = new PhilipsData();
-            PhilipsData mySolution_Strengths = new PhilipsData();
-            PhilipsData myCompetitive_Argumentation = new PhilipsData();
-
-            PhilipsData myComment = new PhilipsData();
-
-            PhilipsData myTrafficLight = new PhilipsData();
-
-            foreach (DataRowView rowView in MyDV)
-            {
-                mySolution.ColumnName = "Solution";
-                DataID = rowView["PhilipsAnalysisCompetitorsDataID"].ToString();
-                string Solution = rowView["Solution"].ToString();
-                string Name = rowView["Name"].ToString();
-                string Value_Proposition = rowView["Value_Proposition"].ToString();
-                string Market_Share = rowView["Market_Share"].ToString();
-
-                string Business_Model = rowView["Business_Model"].ToString();
-                string Solution_Weaknesses = rowView["Solution_Weaknesses"].ToString();
-                string Solution_Strengths = rowView["Solution_Strengths"].ToString();
-                string Competitive_Argumentation = rowView["Competitive_Argumentation"].ToString();
-                string Comment = rowView["Comment"].ToString();
-
-                string TrafficLight_Value_Proposition = rowView["Value_Proposition_chk"].ToString();
-                string TrafficLight_Market_Share = rowView["Market_Share_chk"].ToString();
-                string TrafficLight_Business_Model = rowView["Business_Model_chk"].ToString();
-                string TrafficLight_Solution_Weaknesses = rowView["Solution_Weaknesses_chk"].ToString();
-                string TrafficLight_Competitive_Argumentation = rowView["Competitive_Argumentation_chk"].ToString();
-
-
-                switch (Name)
-                {
-                    case "Philips":
-                        mySolution.Philips = mySolution.Philips = "<a  target='_blank' href='https://www.philips.com/healthcare/product/HC881102/intellispace-portal-10-advanced-visualization'>IntelliSpace Portal</a>"; // Solution;
-                        myValue_Proposition.Philips = Value_Proposition;
-                        myMarket_Share.Philips = Market_Share;
-
-                        myBusiness_Model.Philips = Business_Model;
-                        mySolution_Weaknesses.Philips = Solution_Weaknesses;
-                        mySolution_Strengths.Philips = Solution_Strengths;
-                        myCompetitive_Argumentation.Philips = Competitive_Argumentation;
-                        myComment.Philips = Comment;
-
-                        myValue_Proposition.TrafficLight += ";Philips:" + TrafficLight_Value_Proposition;
-                        myMarket_Share.TrafficLight += ";Philips:" + TrafficLight_Market_Share;
-                        myBusiness_Model.TrafficLight += ";Philips:" + TrafficLight_Business_Model;
-                        mySolution_Weaknesses.TrafficLight += ";Philips:" + TrafficLight_Solution_Weaknesses;
-                        myCompetitive_Argumentation.TrafficLight += ";Philips:" + TrafficLight_Competitive_Argumentation;
-
-                        break;
-                    case "TeraRecon":
-                        mySolution.Tera = "<a  target='_blank' href='https://www.terarecon.com'>iNtuition</a>"; // Solution;
-                        myValue_Proposition.Tera = Value_Proposition;
-                        myMarket_Share.Tera = Market_Share;
-                        myBusiness_Model.Tera = Business_Model;
-                        mySolution_Weaknesses.Tera = Solution_Weaknesses;
-                        mySolution_Strengths.Tera = Solution_Strengths;
-                        myCompetitive_Argumentation.Tera = Competitive_Argumentation;
-                        myComment.Tera = Comment;
-                        
-                        myValue_Proposition.TrafficLight += ";Tera:" + TrafficLight_Value_Proposition;
-                        myMarket_Share.TrafficLight += ";Tera:" + TrafficLight_Market_Share;
-                        myBusiness_Model.TrafficLight += ";Tera:" + TrafficLight_Business_Model;
-                        mySolution_Weaknesses.TrafficLight += ";Tera:" + TrafficLight_Solution_Weaknesses;
-                        myCompetitive_Argumentation.TrafficLight += ";Tera:" + TrafficLight_Competitive_Argumentation;
-
-                        break;
-                    case "Siemens Medical":
-                        mySolution.Siemens = "<a  target='_blank' href='https://www.healthcare.siemens.com/medical-imaging-it'>Syngo.via</a>"; // Solution;
-                        myValue_Proposition.Siemens = Value_Proposition;
-                        myMarket_Share.Siemens = Market_Share;
-                        myBusiness_Model.Siemens = Business_Model;
-                        mySolution_Weaknesses.Siemens = Solution_Weaknesses;
-                        mySolution_Strengths.Siemens = Solution_Strengths;
-                        myCompetitive_Argumentation.Siemens = Competitive_Argumentation;
-                        myComment.Siemens = Comment;
-                        
-                        myValue_Proposition.TrafficLight += ";Siemens:" + TrafficLight_Value_Proposition;
-                        myMarket_Share.TrafficLight += ";Siemens:" + TrafficLight_Market_Share;
-                        myBusiness_Model.TrafficLight += ";Siemens:" + TrafficLight_Business_Model;
-                        mySolution_Weaknesses.TrafficLight += ";Siemens:" + TrafficLight_Solution_Weaknesses;
-                        myCompetitive_Argumentation.TrafficLight += ";Siemens:" + TrafficLight_Competitive_Argumentation;
-                        break;
-                    case "GE Healthcare":
-                        mySolution.GE = "<a  target='_blank' href='http://www3.gehealthcare.com/en/products/categories/advanced_visualization'>AW Server</a>"; // Solution;
-                        myValue_Proposition.GE = Value_Proposition;
-                        myMarket_Share.GE = Market_Share;
-                        myBusiness_Model.GE = Business_Model;
-                        mySolution_Weaknesses.GE = Solution_Weaknesses;
-                        mySolution_Strengths.GE = Solution_Strengths;
-                        myCompetitive_Argumentation.GE = Competitive_Argumentation;
-                        myComment.GE = Comment;
-                        
-
-                        myValue_Proposition.TrafficLight += ";GE:" + TrafficLight_Value_Proposition;
-                        myMarket_Share.TrafficLight += ";GE:" + TrafficLight_Market_Share;
-                        myBusiness_Model.TrafficLight += ";GE:" + TrafficLight_Business_Model;
-                        mySolution_Weaknesses.TrafficLight += ";GE:" + TrafficLight_Solution_Weaknesses;
-                        myCompetitive_Argumentation.TrafficLight += ";GE:" + TrafficLight_Competitive_Argumentation;
-                        break;
-                    case "Canon/Toshiba/Vital":
-                        mySolution.Cannon = "<a  target='_blank' href='http://www.vitalimages.com/vitrea-vision/vitrea-advanced-visualization'>Vital VITREA®</a>";
-                        myValue_Proposition.Cannon = Value_Proposition;
-                        myMarket_Share.Cannon = Market_Share;
-                        myBusiness_Model.Cannon = Business_Model;
-                        mySolution_Weaknesses.Cannon = Solution_Weaknesses;
-                        mySolution_Strengths.Cannon = Solution_Strengths;
-                        myCompetitive_Argumentation.Cannon = Competitive_Argumentation;
-                        myComment.Cannon = Comment;
-                        
-
-                        myValue_Proposition.TrafficLight += ";Cannon:" + TrafficLight_Value_Proposition;
-                        myMarket_Share.TrafficLight += ";Cannon:" + TrafficLight_Market_Share;
-                        myBusiness_Model.TrafficLight += ";Cannon:" + TrafficLight_Business_Model;
-                        mySolution_Weaknesses.TrafficLight += ";Cannon:" + TrafficLight_Solution_Weaknesses;
-                        myCompetitive_Argumentation.TrafficLight += ";Cannon:" + TrafficLight_Competitive_Argumentation;
-
-                        break;
-                    case "Agfa Healthcare":
-                        mySolution.Agfa = "<a  target='_blank' href='https://global.agfahealthcare.com/main/'>Agfa HealthCare Enterprise Imaging</a>";
-                        myValue_Proposition.Agfa = Value_Proposition;
-                        myMarket_Share.Agfa = Market_Share;
-                        myBusiness_Model.Agfa = Business_Model;
-                        mySolution_Weaknesses.Agfa = Solution_Weaknesses;
-                        mySolution_Strengths.Agfa = Solution_Strengths;
-                        myCompetitive_Argumentation.Agfa = Competitive_Argumentation;
-                        myComment.Agfa = Comment;
-                        
-
-                        myValue_Proposition.TrafficLight += ";Agfa:" + TrafficLight_Value_Proposition;
-                        myMarket_Share.TrafficLight += ";Agfa:" + TrafficLight_Market_Share;
-                        myBusiness_Model.TrafficLight += ";Agfa:" + TrafficLight_Business_Model;
-                        mySolution_Weaknesses.TrafficLight += ";Agfa:" + TrafficLight_Solution_Weaknesses;
-                        myCompetitive_Argumentation.TrafficLight += ";Agfa:" + TrafficLight_Competitive_Argumentation;
-                        break;
-
-                }
-
-            }
-
-            int DataIDs = 1;
-
-            PhilipsDataLST = new List<PhilipsData>();
-
-            PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString(), "Solution", mySolution.Philips, mySolution.Tera, mySolution.Siemens, mySolution.GE, mySolution.Cannon, mySolution.Agfa, mySolution.Comment, mySolution.TrafficLight));
-            DataIDs++;
-            PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString(), "Value Proposition", myValue_Proposition.Philips, myValue_Proposition.Tera, myValue_Proposition.Siemens, myValue_Proposition.GE, myValue_Proposition.Cannon, myValue_Proposition.Agfa, myValue_Proposition.Comment, myValue_Proposition.TrafficLight));
-            DataIDs++;
-            PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString(), "Market Share", myMarket_Share.Philips, myMarket_Share.Tera, myMarket_Share.Siemens, myMarket_Share.GE, myMarket_Share.Cannon, myMarket_Share.Agfa, myComment.Comment, myMarket_Share.TrafficLight));
-            DataIDs++;
-            PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString(), "Business Model", myBusiness_Model.Philips, myBusiness_Model.Tera, myBusiness_Model.Siemens, myBusiness_Model.GE, myBusiness_Model.Cannon, myBusiness_Model.Agfa, myBusiness_Model.Comment, myBusiness_Model.TrafficLight));
-            DataIDs++;
-            PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString().ToString(), "Solution Weaknesses", mySolution_Weaknesses.Philips, mySolution_Weaknesses.Tera, mySolution_Weaknesses.Siemens, mySolution_Weaknesses.GE, mySolution_Weaknesses.Cannon, mySolution_Weaknesses.Agfa, mySolution_Weaknesses.Comment, mySolution_Weaknesses.TrafficLight));
-            DataIDs++;
-            PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString(), "Solution Strengths", mySolution_Strengths.Philips, mySolution_Strengths.Tera, mySolution_Strengths.Siemens, mySolution_Strengths.GE, mySolution_Strengths.Cannon, mySolution_Strengths.Agfa, mySolution_Strengths.Comment, mySolution_Strengths.TrafficLight));
-            DataIDs++;
-            PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString(), "Competitive Argumentation", myCompetitive_Argumentation.Philips, myCompetitive_Argumentation.Tera, myCompetitive_Argumentation.Siemens, myCompetitive_Argumentation.GE, myCompetitive_Argumentation.Cannon, myCompetitive_Argumentation.Agfa, myCompetitive_Argumentation.Comment, myCompetitive_Argumentation.TrafficLight));
-            //DataIDs++;
-            //PhilipsDataLST.Add(new PhilipsData(DataIDs.ToString(), "Additional Comments", myComment.Philips, myComment.Tera, myComment.Siemens, myComment.GE, myComment.Cannon, myComment.Agfa));
-
-
-            Session["CellEditDataSource"] = PhilipsDataLST;
-
-
-        }
-        catch (Exception ex)
-        {
-
-        }
-    }
+   
     protected void Page_Load(object sender, EventArgs e)
     {
         try {
@@ -1105,4 +372,858 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         }
         catch { }
     }
+
+
+    protected void cmdSave_Click(object sender, EventArgs e)
+    {
+        try {
+
+            string xx = "sdsd";
+
+            int KeyAccountCount = 0;
+            int PortalSalesCount = 0;
+            int ProjectCoreCount = 0;
+            string KeyAccountJSON = string.Empty;
+            string PortalJSON = string.Empty;
+            string CoreJSON = string.Empty;
+
+            if (Session["KeyAccountCount"] != null)
+            {
+                KeyAccountCount = Convert.ToInt32(Session["KeyAccountCount"].ToString());
+
+                for (int i = 1; i <= KeyAccountCount; i++)
+                {
+                    TextBox t1 = (TextBox)(this.FindControl("txtPortalKeyAccountFirstName" + i.ToString()));
+                    TextBox t2 = (TextBox)(this.FindControl("txtPortalKeyAccountLastName" + i.ToString()));
+                    TextBox t3 = (TextBox)(this.FindControl("txtPortalKeyAccountEmail" + i.ToString()));
+
+                    KeyProjectData1.Add(new KeyProjectData { FirstName = t1.Text , LastName = t2.Text, Email=t3.Text });
+                }
+
+
+                //Serialize 
+                KeyAccountJSON = JsonConvert.SerializeObject(KeyProjectData1, Formatting.Indented);
+
+                //Deserialize 
+                //KeyProjectData1 = JsonConvert.DeserializeObject<List<KeyProjectData>>(json);                                                          
+            }
+
+            if (Session["PortalSalesCount"] != null)
+            {
+                PortalSalesCount = Convert.ToInt32(Session["PortalSalesCount"].ToString());
+
+                for (int i = 1; i <= PortalSalesCount; i++)
+                {
+                    TextBox t1 = (TextBox)(this.FindControl("txtPortalSalesFirstName" + i.ToString()));
+                    TextBox t2 = (TextBox)(this.FindControl("txtPortalSalesLastName" + i.ToString()));
+                    TextBox t3 = (TextBox)(this.FindControl("txtPortalSalesEmail" + i.ToString()));
+
+                    KeyPortalDat1.Add(new KeyPortalData { FirstName = t1.Text, LastName = t2.Text, Email = t3.Text });
+                }
+
+                //Serialize 
+                PortalJSON = JsonConvert.SerializeObject(KeyPortalDat1, Formatting.Indented);
+            }
+
+            if (Session["ProjectCoreCount"] != null)
+            {
+                ProjectCoreCount = Convert.ToInt32(Session["ProjectCoreCount"].ToString());
+
+                for (int i = 1; i <= ProjectCoreCount; i++)
+                {
+                    TextBox t1 = (TextBox)(this.FindControl("txtProjectCoreFirstName" + i.ToString()));
+                    TextBox t2 = (TextBox)(this.FindControl("txtProjectCoreLastName" + i.ToString()));
+                    TextBox t3 = (TextBox)(this.FindControl("txtProjectCoreEmail" + i.ToString()));
+
+                    CoreDat1.Add(new CoreData { FirstName = t1.Text, LastName = t2.Text, Email = t3.Text });
+                }
+
+                //Serialize 
+                CoreJSON = JsonConvert.SerializeObject(CoreDat1, Formatting.Indented);
+            }
+
+            string SQL = string.Empty;
+            
+
+            SQL = "INSERT INTO PhilipsLic_Project(project_name,customer_name,customer_address,customer_country,customer_po,customer_comments,customer_key_account,customer_portalsales,customer_project_core) VALUES('" + txtProjectName.Text + "','" + txtCustomerName.Text + "','" + txtCustomerAddress.Text + "','" + txtCountry.SelectedValue.ToString() + "','" + txtPONumber.Text + "','" + txtCommentBox.Text + "','"+ KeyAccountJSON + "','" + PortalJSON + "','" + CoreJSON + "')";
+            Helper.InsertData(SQL);
+
+            SQL = "SELECT PhilipsLic_ProjectID FROM travelma2_phil1.PhilipsLic_Project order by PhilipsLic_ProjectID desc limit 1";
+            DataView MyDV = Helper.GetData(SQL);
+            string myID = "";
+            foreach (DataRowView rowView in MyDV)
+            {
+                myID = rowView["PhilipsLic_ProjectID"].ToString();
+            }
+
+
+            Response.Redirect("/lic-server/ISPConcerto?id=" + myID, true);
+
+        }
+        catch { }
+    }
+
+    protected void cmdCancel_Click(object sender, EventArgs e)
+    {
+
+    }
+
+
+    protected void lnkKeyAccount_Click(object sender, EventArgs e)
+    {
+        
+        try
+        {
+
+
+            if (Session["KeyAccountCount"] == null)
+            {
+                Session["KeyAccountCount"] = 2;
+            }
+            else
+            {
+                int idx = Convert.ToInt32(Session["KeyAccountCount"].ToString());
+                idx++;
+                Session["KeyAccountCount"] = idx;
+            }
+
+
+            if (Session["KeyAccountCount"].ToString() != "11")
+            {
+
+                switch (Session["KeyAccountCount"].ToString())
+                {
+                    case "2":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+                        break;
+                    case "3":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;                        
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        break;
+
+                    case "4":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        txtPortalKeyAccountFirstName4.Visible = true;
+                        txtPortalKeyAccountLastName4.Visible = true;
+                        txtPortalKeyAccountEmail4.Visible = true;
+
+
+
+                        break;
+
+                    case "5":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        txtPortalKeyAccountFirstName4.Visible = true;
+                        txtPortalKeyAccountLastName4.Visible = true;
+                        txtPortalKeyAccountEmail4.Visible = true;
+
+                        txtPortalKeyAccountFirstName5.Visible = true;
+                        txtPortalKeyAccountLastName5.Visible = true;
+                        txtPortalKeyAccountEmail5.Visible = true;
+
+                        break;
+
+                    case "6":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        txtPortalKeyAccountFirstName4.Visible = true;
+                        txtPortalKeyAccountLastName4.Visible = true;
+                        txtPortalKeyAccountEmail4.Visible = true;
+
+                        txtPortalKeyAccountFirstName5.Visible = true;
+                        txtPortalKeyAccountLastName5.Visible = true;
+                        txtPortalKeyAccountEmail5.Visible = true;
+
+                        txtPortalKeyAccountFirstName6.Visible = true;
+                        txtPortalKeyAccountLastName6.Visible = true;
+                        txtPortalKeyAccountEmail6.Visible = true;
+
+                        break;
+
+                    case "7":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        txtPortalKeyAccountFirstName4.Visible = true;
+                        txtPortalKeyAccountLastName4.Visible = true;
+                        txtPortalKeyAccountEmail4.Visible = true;
+
+                        txtPortalKeyAccountFirstName5.Visible = true;
+                        txtPortalKeyAccountLastName5.Visible = true;
+                        txtPortalKeyAccountEmail5.Visible = true;
+
+                        txtPortalKeyAccountFirstName6.Visible = true;
+                        txtPortalKeyAccountLastName6.Visible = true;
+                        txtPortalKeyAccountEmail6.Visible = true;
+
+                        txtPortalKeyAccountFirstName7.Visible = true;
+                        txtPortalKeyAccountLastName7.Visible = true;
+                        txtPortalKeyAccountEmail7.Visible = true;
+
+                        break;
+
+                    case "8":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        txtPortalKeyAccountFirstName4.Visible = true;
+                        txtPortalKeyAccountLastName4.Visible = true;
+                        txtPortalKeyAccountEmail4.Visible = true;
+
+                        txtPortalKeyAccountFirstName5.Visible = true;
+                        txtPortalKeyAccountLastName5.Visible = true;
+                        txtPortalKeyAccountEmail5.Visible = true;
+
+                        txtPortalKeyAccountFirstName6.Visible = true;
+                        txtPortalKeyAccountLastName6.Visible = true;
+                        txtPortalKeyAccountEmail6.Visible = true;
+
+                        txtPortalKeyAccountFirstName7.Visible = true;
+                        txtPortalKeyAccountLastName7.Visible = true;
+                        txtPortalKeyAccountEmail7.Visible = true;
+
+                        txtPortalKeyAccountFirstName8.Visible = true;
+                        txtPortalKeyAccountLastName8.Visible = true;
+                        txtPortalKeyAccountEmail8.Visible = true;
+
+                        break;
+
+                    case "9":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        txtPortalKeyAccountFirstName4.Visible = true;
+                        txtPortalKeyAccountLastName4.Visible = true;
+                        txtPortalKeyAccountEmail4.Visible = true;
+
+                        txtPortalKeyAccountFirstName5.Visible = true;
+                        txtPortalKeyAccountLastName5.Visible = true;
+                        txtPortalKeyAccountEmail5.Visible = true;
+
+                        txtPortalKeyAccountFirstName6.Visible = true;
+                        txtPortalKeyAccountLastName6.Visible = true;
+                        txtPortalKeyAccountEmail6.Visible = true;
+
+                        txtPortalKeyAccountFirstName7.Visible = true;
+                        txtPortalKeyAccountLastName7.Visible = true;
+                        txtPortalKeyAccountEmail7.Visible = true;
+
+                        txtPortalKeyAccountFirstName8.Visible = true;
+                        txtPortalKeyAccountLastName8.Visible = true;
+                        txtPortalKeyAccountEmail8.Visible = true;
+
+                        txtPortalKeyAccountFirstName9.Visible = true;
+                        txtPortalKeyAccountLastName9.Visible = true;
+                        txtPortalKeyAccountEmail9.Visible = true;
+
+                        break;
+
+                    case "10":
+                        txtPortalKeyAccountFirstName2.Visible = true;
+                        txtPortalKeyAccountLastName2.Visible = true;
+                        txtPortalKeyAccountEmail2.Visible = true;
+
+                        txtPortalKeyAccountFirstName3.Visible = true;
+                        txtPortalKeyAccountLastName3.Visible = true;
+                        txtPortalKeyAccountEmail3.Visible = true;
+
+                        txtPortalKeyAccountFirstName4.Visible = true;
+                        txtPortalKeyAccountLastName4.Visible = true;
+                        txtPortalKeyAccountEmail4.Visible = true;
+
+                        txtPortalKeyAccountFirstName5.Visible = true;
+                        txtPortalKeyAccountLastName5.Visible = true;
+                        txtPortalKeyAccountEmail5.Visible = true;
+
+                        txtPortalKeyAccountFirstName6.Visible = true;
+                        txtPortalKeyAccountLastName6.Visible = true;
+                        txtPortalKeyAccountEmail6.Visible = true;
+
+                        txtPortalKeyAccountFirstName7.Visible = true;
+                        txtPortalKeyAccountLastName7.Visible = true;
+                        txtPortalKeyAccountEmail7.Visible = true;
+
+                        txtPortalKeyAccountFirstName8.Visible = true;
+                        txtPortalKeyAccountLastName8.Visible = true;
+                        txtPortalKeyAccountEmail8.Visible = true;
+
+                        txtPortalKeyAccountFirstName9.Visible = true;
+                        txtPortalKeyAccountLastName9.Visible = true;
+                        txtPortalKeyAccountEmail9.Visible = true;
+
+                        txtPortalKeyAccountFirstName10.Visible = true;
+                        txtPortalKeyAccountLastName10.Visible = true;
+                        txtPortalKeyAccountEmail10.Visible = true;
+
+                        break;
+
+                }
+
+            }
+
+
+
+          
+        }
+        catch { }
+    }
+
+    protected void lnkPortalSales_Click(object sender, EventArgs e)
+    {
+        //int numOfRows = 0;
+        //int numOfColumns = 0;
+
+        //int rowsCount = 1;
+        //int colsCount = 1;
+
+        try
+        {
+
+
+            if (Session["PortalSalesCount"] == null)
+            {
+                Session["PortalSalesCount"] = 2;
+            }
+            else
+            {
+                int idx = Convert.ToInt32(Session["PortalSalesCount"].ToString());
+                idx++;
+                Session["PortalSalesCount"] = idx;
+            }
+
+
+            if (Session["PortalSalesCount"].ToString() != "11")
+            {
+
+                switch (Session["PortalSalesCount"].ToString())
+                {
+                    case "2":
+                        txtPortalSalesFirstName2.Visible = true;                        
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+                        break;
+                    case "3":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        break;
+
+                    case "4":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        txtPortalSalesFirstName4.Visible = true;
+                        txtPortalSalesLastName4.Visible = true;
+                        txtPortalSalesEmail4.Visible = true;
+
+
+
+                        break;
+
+                    case "5":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        txtPortalSalesFirstName4.Visible = true;
+                        txtPortalSalesLastName4.Visible = true;
+                        txtPortalSalesEmail4.Visible = true;
+
+                        txtPortalSalesFirstName5.Visible = true;
+                        txtPortalSalesLastName5.Visible = true;
+                        txtPortalSalesEmail5.Visible = true;
+
+                        break;
+
+                    case "6":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        txtPortalSalesFirstName4.Visible = true;
+                        txtPortalSalesLastName4.Visible = true;
+                        txtPortalSalesEmail4.Visible = true;
+
+                        txtPortalSalesFirstName5.Visible = true;
+                        txtPortalSalesLastName5.Visible = true;
+                        txtPortalSalesEmail5.Visible = true;
+
+                        txtPortalSalesFirstName6.Visible = true;
+                        txtPortalSalesLastName6.Visible = true;
+                        txtPortalSalesEmail6.Visible = true;
+
+                        break;
+
+                    case "7":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        txtPortalSalesFirstName4.Visible = true;
+                        txtPortalSalesLastName4.Visible = true;
+                        txtPortalSalesEmail4.Visible = true;
+
+                        txtPortalSalesFirstName5.Visible = true;
+                        txtPortalSalesLastName5.Visible = true;
+                        txtPortalSalesEmail5.Visible = true;
+
+                        txtPortalSalesFirstName6.Visible = true;
+                        txtPortalSalesLastName6.Visible = true;
+                        txtPortalSalesEmail6.Visible = true;
+
+                        txtPortalSalesFirstName7.Visible = true;
+                        txtPortalSalesLastName7.Visible = true;
+                        txtPortalSalesEmail7.Visible = true;
+
+                        break;
+
+                    case "8":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        txtPortalSalesFirstName4.Visible = true;
+                        txtPortalSalesLastName4.Visible = true;
+                        txtPortalSalesEmail4.Visible = true;
+
+                        txtPortalSalesFirstName5.Visible = true;
+                        txtPortalSalesLastName5.Visible = true;
+                        txtPortalSalesEmail5.Visible = true;
+
+                        txtPortalSalesFirstName6.Visible = true;
+                        txtPortalSalesLastName6.Visible = true;
+                        txtPortalSalesEmail6.Visible = true;
+
+                        txtPortalSalesFirstName7.Visible = true;
+                        txtPortalSalesLastName7.Visible = true;
+                        txtPortalSalesEmail7.Visible = true;
+
+                        txtPortalSalesFirstName8.Visible = true;
+                        txtPortalSalesLastName8.Visible = true;
+                        txtPortalSalesEmail8.Visible = true;
+
+                        break;
+
+                    case "9":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        txtPortalSalesFirstName4.Visible = true;
+                        txtPortalSalesLastName4.Visible = true;
+                        txtPortalSalesEmail4.Visible = true;
+
+                        txtPortalSalesFirstName5.Visible = true;
+                        txtPortalSalesLastName5.Visible = true;
+                        txtPortalSalesEmail5.Visible = true;
+
+                        txtPortalSalesFirstName6.Visible = true;
+                        txtPortalSalesLastName6.Visible = true;
+                        txtPortalSalesEmail6.Visible = true;
+
+                        txtPortalSalesFirstName7.Visible = true;
+                        txtPortalSalesLastName7.Visible = true;
+                        txtPortalSalesEmail7.Visible = true;
+
+                        txtPortalSalesFirstName8.Visible = true;
+                        txtPortalSalesLastName8.Visible = true;
+                        txtPortalSalesEmail8.Visible = true;
+
+                        txtPortalSalesFirstName9.Visible = true;
+                        txtPortalSalesLastName9.Visible = true;
+                        txtPortalSalesEmail9.Visible = true;
+
+                        break;
+
+                    case "10":
+                        txtPortalSalesFirstName2.Visible = true;
+                        txtPortalSalesLastName2.Visible = true;
+                        txtPortalSalesEmail2.Visible = true;
+
+                        txtPortalSalesFirstName3.Visible = true;
+                        txtPortalSalesLastName3.Visible = true;
+                        txtPortalSalesEmail3.Visible = true;
+
+                        txtPortalSalesFirstName4.Visible = true;
+                        txtPortalSalesLastName4.Visible = true;
+                        txtPortalSalesEmail4.Visible = true;
+
+                        txtPortalSalesFirstName5.Visible = true;
+                        txtPortalSalesLastName5.Visible = true;
+                        txtPortalSalesEmail5.Visible = true;
+
+                        txtPortalSalesFirstName6.Visible = true;
+                        txtPortalSalesLastName6.Visible = true;
+                        txtPortalSalesEmail6.Visible = true;
+
+                        txtPortalSalesFirstName7.Visible = true;
+                        txtPortalSalesLastName7.Visible = true;
+                        txtPortalSalesEmail7.Visible = true;
+
+                        txtPortalSalesFirstName8.Visible = true;
+                        txtPortalSalesLastName8.Visible = true;
+                        txtPortalSalesEmail8.Visible = true;
+
+                        txtPortalSalesFirstName9.Visible = true;
+                        txtPortalSalesLastName9.Visible = true;
+                        txtPortalSalesEmail9.Visible = true;
+
+                        txtPortalSalesFirstName10.Visible = true;
+                        txtPortalSalesLastName10.Visible = true;
+                        txtPortalSalesEmail10.Visible = true;
+
+                        break;
+
+                }
+
+            }
+
+
+
+            //TextBox tb1 = new TextBox();
+            //tb1.ID = "1";
+            //tb1.CssClass = "form-control";
+            //Panel1.Controls.Add(tb1);
+
+            ////TextBox tb4 = new TextBox();
+            ////tb4.ID = "4";
+            ////tb4.CssClass = "form-control";
+            ////Panel1.Controls.Add(tb4);
+
+
+            //TextBox tb2 = new TextBox();
+            //tb2.ID = "2";
+            //tb2.CssClass = "form-control";
+            //Panel2.Controls.Add(tb2);
+            //Panel2.Controls.Add(tb2);
+
+
+            //TextBox tb3 = new TextBox();
+            //tb3.ID = "3";
+            //tb3.CssClass = "form-control";
+            //Panel3.Controls.Add(tb3);
+            //Panel3.Controls.Add(tb3);
+
+
+
+
+
+
+        }
+        catch { }
+    }
+
+    protected void lnkProjectCore_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+
+            if (Session["ProjectCoreCount"] == null)
+            {
+                Session["ProjectCoreCount"] = 2;
+            }
+            else
+            {
+                int idx = Convert.ToInt32(Session["ProjectCoreCount"].ToString());
+                idx++;
+                Session["ProjectCoreCount"] = idx;
+            }
+
+
+            if (Session["ProjectCoreCount"].ToString() != "11")
+            {
+
+                switch (Session["ProjectCoreCount"].ToString())
+                {
+                    case "2":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+                        break;
+                    case "3":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        break;
+
+                    case "4":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        txtProjectCoreFirstName4.Visible = true;
+                        txtProjectCoreLastName4.Visible = true;
+                        txtProjectCoreEmail4.Visible = true;
+
+
+
+                        break;
+
+                    case "5":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        txtProjectCoreFirstName4.Visible = true;
+                        txtProjectCoreLastName4.Visible = true;
+                        txtProjectCoreEmail4.Visible = true;
+
+                        txtProjectCoreFirstName5.Visible = true;
+                        txtProjectCoreLastName5.Visible = true;
+                        txtProjectCoreEmail5.Visible = true;
+
+                        break;
+
+                    case "6":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        txtProjectCoreFirstName4.Visible = true;
+                        txtProjectCoreLastName4.Visible = true;
+                        txtProjectCoreEmail4.Visible = true;
+
+                        txtProjectCoreFirstName5.Visible = true;
+                        txtProjectCoreLastName5.Visible = true;
+                        txtProjectCoreEmail5.Visible = true;
+
+                        txtProjectCoreFirstName6.Visible = true;
+                        txtProjectCoreLastName6.Visible = true;
+                        txtProjectCoreEmail6.Visible = true;
+
+                        break;
+
+                    case "7":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        txtProjectCoreFirstName4.Visible = true;
+                        txtProjectCoreLastName4.Visible = true;
+                        txtProjectCoreEmail4.Visible = true;
+
+                        txtProjectCoreFirstName5.Visible = true;
+                        txtProjectCoreLastName5.Visible = true;
+                        txtProjectCoreEmail5.Visible = true;
+
+                        txtProjectCoreFirstName6.Visible = true;
+                        txtProjectCoreLastName6.Visible = true;
+                        txtProjectCoreEmail6.Visible = true;
+
+                        txtProjectCoreFirstName7.Visible = true;
+                        txtProjectCoreLastName7.Visible = true;
+                        txtProjectCoreEmail7.Visible = true;
+
+                        break;
+
+                    case "8":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        txtProjectCoreFirstName4.Visible = true;
+                        txtProjectCoreLastName4.Visible = true;
+                        txtProjectCoreEmail4.Visible = true;
+
+                        txtProjectCoreFirstName5.Visible = true;
+                        txtProjectCoreLastName5.Visible = true;
+                        txtProjectCoreEmail5.Visible = true;
+
+                        txtProjectCoreFirstName6.Visible = true;
+                        txtProjectCoreLastName6.Visible = true;
+                        txtProjectCoreEmail6.Visible = true;
+
+                        txtProjectCoreFirstName7.Visible = true;
+                        txtProjectCoreLastName7.Visible = true;
+                        txtProjectCoreEmail7.Visible = true;
+
+                        txtProjectCoreFirstName8.Visible = true;
+                        txtProjectCoreLastName8.Visible = true;
+                        txtProjectCoreEmail8.Visible = true;
+
+                        break;
+
+                    case "9":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        txtProjectCoreFirstName4.Visible = true;
+                        txtProjectCoreLastName4.Visible = true;
+                        txtProjectCoreEmail4.Visible = true;
+
+                        txtProjectCoreFirstName5.Visible = true;
+                        txtProjectCoreLastName5.Visible = true;
+                        txtProjectCoreEmail5.Visible = true;
+
+                        txtProjectCoreFirstName6.Visible = true;
+                        txtProjectCoreLastName6.Visible = true;
+                        txtProjectCoreEmail6.Visible = true;
+
+                        txtProjectCoreFirstName7.Visible = true;
+                        txtProjectCoreLastName7.Visible = true;
+                        txtProjectCoreEmail7.Visible = true;
+
+                        txtProjectCoreFirstName8.Visible = true;
+                        txtProjectCoreLastName8.Visible = true;
+                        txtProjectCoreEmail8.Visible = true;
+
+                        txtProjectCoreFirstName9.Visible = true;
+                        txtProjectCoreLastName9.Visible = true;
+                        txtProjectCoreEmail9.Visible = true;
+
+                        break;
+
+                    case "10":
+                        txtProjectCoreFirstName2.Visible = true;
+                        txtProjectCoreLastName2.Visible = true;
+                        txtProjectCoreEmail2.Visible = true;
+
+                        txtProjectCoreFirstName3.Visible = true;
+                        txtProjectCoreLastName3.Visible = true;
+                        txtProjectCoreEmail3.Visible = true;
+
+                        txtProjectCoreFirstName4.Visible = true;
+                        txtProjectCoreLastName4.Visible = true;
+                        txtProjectCoreEmail4.Visible = true;
+
+                        txtProjectCoreFirstName5.Visible = true;
+                        txtProjectCoreLastName5.Visible = true;
+                        txtProjectCoreEmail5.Visible = true;
+
+                        txtProjectCoreFirstName6.Visible = true;
+                        txtProjectCoreLastName6.Visible = true;
+                        txtProjectCoreEmail6.Visible = true;
+
+                        txtProjectCoreFirstName7.Visible = true;
+                        txtProjectCoreLastName7.Visible = true;
+                        txtProjectCoreEmail7.Visible = true;
+
+                        txtProjectCoreFirstName8.Visible = true;
+                        txtProjectCoreLastName8.Visible = true;
+                        txtProjectCoreEmail8.Visible = true;
+
+                        txtProjectCoreFirstName9.Visible = true;
+                        txtProjectCoreLastName9.Visible = true;
+                        txtProjectCoreEmail9.Visible = true;
+
+                        txtProjectCoreFirstName10.Visible = true;
+                        txtProjectCoreLastName10.Visible = true;
+                        txtProjectCoreEmail10.Visible = true;
+
+                        break;
+
+                }
+
+            }
+
+
+
+
+        }
+        catch { }
+    }
+
+    
 }

@@ -16,13 +16,14 @@ using System.Data.SqlClient;
 using Syncfusion.JavaScript.Web;
 
 
-public partial class ViewExisting : System.Web.UI.Page
+public partial class competitive_info_Competitors : System.Web.UI.Page
 {
-
+    
     public string m_UserName = string.Empty;
     public string m_UserID = string.Empty;
     public string m_UserType = string.Empty;
-    public string m_TableData = string.Empty;
+
+    
 
 
     public string ShowProfileMenu()
@@ -74,7 +75,6 @@ public partial class ViewExisting : System.Web.UI.Page
         return MyMenu;
     }
 
-
     protected void ddlSwitchUser_SelectedIndexChanged(object sender, EventArgs e)
     {
         try
@@ -102,15 +102,18 @@ public partial class ViewExisting : System.Web.UI.Page
         catch { }
     }
 
+    
     protected void Page_Load(object sender, EventArgs e)
     {
-        try
-        {
+        try {
 
             Session["Competitors"] = "Super Admin";
             Session["User"] = "Jonny";
             Session["UserType"] = "Granted Access";
             //bool Signin = false;
+
+
+
 
             //if (Session["User"] != null)
             //{
@@ -168,6 +171,8 @@ public partial class ViewExisting : System.Web.UI.Page
             if (!IsPostBack)
             {
 
+                SetUpApplicationCombo();
+
                 //if (Session["SwitchUser"] != null)
                 //{
                 //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
@@ -182,23 +187,49 @@ public partial class ViewExisting : System.Web.UI.Page
                 //this.Grid1.EditSettings.AllowEditing = false;
 
 
-
-                DataView myDV =Helper.GetData("Select * from PhilipsLic_Project");
-
-
-                foreach (DataRowView rowView in myDV)
-                {
-                   
-
-                    m_TableData += "<tr><th scope='row'>"+ rowView["PhilipsLic_ProjectID"].ToString() + "</th><td>"+ rowView["project_name"].ToString() + "</td><td>the Bird</td><td>@twitter</td><td>@mdo</td></tr>";
-
-                }
-
             }
 
         }
         catch { }
     }
 
+    private void SetUpApplicationCombo()
+    {
+        try {
 
+            string SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications";
+            DataView MyDV = Helper.GetData(SQL);
+            string myID = "";
+            foreach (DataRowView rowView in MyDV)
+            {
+                myID = rowView["Applications"].ToString();
+                cmdApplication1.Items.Add(new ListItem(rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString()));
+            }
+
+        }
+        catch { }
+    }
+
+    protected void cmdEdit_Click(object sender, EventArgs e)
+    {
+        try {
+
+            //this.Grid1.ToolbarSettings.ShowToolbar = true;
+            //this.Grid1.EditSettings.AllowEditing = true;
+
+            //GetGridDBData();
+
+            //this.Grid1.DataSource = PhilipsDataLST;
+            //this.Grid1.DataBind();
+
+        }
+        catch { }
+    }
+
+    protected void lnkCentralAddSite_Click(object sender, EventArgs e)
+    {
+
+    }
 }
+
+//http://localhost:8085/lic-server/ISPConcerto?id=10
