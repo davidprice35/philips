@@ -197,13 +197,29 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     {
         try {
 
-            string SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications";
+            //string myID1 = "";
+            //string SQL1 = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Category in ('Enterprise  Hardware', 'Enterprise Software') order by Applications";
+            //DataView MyDV1 = Helper.GetData(SQL1);
+            
+            //foreach (DataRowView rowView in MyDV1)
+            //{
+            //    myID1 += rowView["Applications"].ToString() + "||";
+
+            //}
+
+
+
+                string SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Category not in ('Enterprise Software','Enterprise  Hardware')";
             DataView MyDV = Helper.GetData(SQL);
             string myID = "";
             foreach (DataRowView rowView in MyDV)
             {
                 myID = rowView["Applications"].ToString();
-                cmdApplication1.Items.Add(new ListItem(rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString()));
+                cmdApplication1.Items.Add(new ListItem(rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication2.Items.Add(new ListItem(rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication3.Items.Add(new ListItem(rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication4.Items.Add(new ListItem(rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                
             }
 
         }
