@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  enableEventValidation="false" CodeFile="ISPConcerto.aspx.cs" Inherits="competitive_info_Competitors" %>
 
-<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
+<%--<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
 <%@ Register Assembly="Syncfusion.EJ.Web, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Web" TagPrefix="ej" %>
-<%@ Register Assembly="Syncfusion.EJ, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Models" TagPrefix="ej" %>
+<%@ Register Assembly="Syncfusion.EJ, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Models" TagPrefix="ej" %>--%>
 
 
 <!DOCTYPE html>
@@ -51,6 +51,93 @@
     <style>
           
 
+         .ISPTestLicenseHW{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .ISPTestLicenseHW.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+        
+          .AdditionalhostserverHW{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .AdditionalhostserverHW.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+          .AdditionalStorageRequiredHW{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .AdditionalStorageRequiredHW.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+          .Philipsprovidestorage{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .Philipsprovidestorage.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+
+          .ISPPremiumLicenseHW{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .ISPPremiumLicenseHW.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+         
+
+
+
+         .STBAddStorage{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .STBAddStorage.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+          .ISPAdvancedlicense{
+             color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .ISPAdvancedlicense.active{
+             color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+          .ISPEnterprisetestlicense{
+             color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .ISPEnterprisetestlicense.active{
+             color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+          .ISPTextLicenseRequired{
+             color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .ISPTextLicenseRequired.active{
+             color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+
+        .HHA{
+             color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .HHA.active{
+             color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
 .ISPSoftwareButton {
     color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;
 }
@@ -68,6 +155,10 @@
     color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:45px;
 }
 
+
+        .ISPSoftwareOnly[disabled] {
+            color:grey !important;
+        }
 
 
 
@@ -235,27 +326,27 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet1" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
                                                                             <td>
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite1" id="HospitalSite1Main" value="Main" checked>
                                                                                     <label class="form-check-label" for="inlineRadio1">Main</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite1" id="HospitalSite1Remote" value="Remote" style="margin-left: 13px;">
                                                                                     <label class="form-check-label" for="inlineRadio2">Remote</label>
 
                                                                                 </div>
                                                                             </td>
                                                                             <td>
 
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityHigh" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityMed" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityLow" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -266,14 +357,14 @@
                                                                          <tr style="display:none;vertical-align: middle;" id="row2-central">
                                                                              <td align="center" style="vertical-align: middle;" ><span style="align-items:center">2</span></td>
                                                                             <td>
-                                                                                <asp:TextBox ID="txtHospitalName2" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName2" onblur="UpdateHospital(2);"  CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet2" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
                                                                             <td>
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
                                                                                     <label class="form-check-label" for="inlineRadio1">Main</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
@@ -283,8 +374,8 @@
                                                                             </td>
                                                                             <td>
 
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
@@ -303,14 +394,14 @@
                                                                              <tr style="display:none;vertical-align: middle;" id="row3-central">
                                                                             <td align="center" style="vertical-align: middle;" >3</td>
                                                                             <td >
-                                                                                <asp:TextBox ID="txtHospitalName3" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName3" onblur="UpdateHospital(3);"  CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet3" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
                                                                             <td>
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
                                                                                     <label class="form-check-label" for="inlineRadio1">Main</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
@@ -320,8 +411,8 @@
                                                                             </td>
                                                                             <td>
 
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
@@ -340,14 +431,14 @@
                                                                          <tr style="display:none;vertical-align: middle;" id="row4-central">
                                                                             <td align="center" style="vertical-align: middle;" >4</td>
                                                                             <td >
-                                                                                <asp:TextBox ID="txtHospitalName4" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName4" onblur="UpdateHospital(4);"  CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet4" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
                                                                             <td>
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
                                                                                     <label class="form-check-label" for="inlineRadio1">Main</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
@@ -357,8 +448,8 @@
                                                                             </td>
                                                                             <td>
 
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
@@ -378,14 +469,14 @@
                                                                          <tr style="display:none;vertical-align: middle;" id="row5-central">
                                                                             <td align="center" style="vertical-align: middle;" >5</td>
                                                                             <td >
-                                                                                <asp:TextBox ID="txtHospitalName5" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName5" CssClass="form-control" onblur="UpdateHospital(5);"  runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet5" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
                                                                             <td>
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
                                                                                     <label class="form-check-label" for="inlineRadio1">Main</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
@@ -395,8 +486,8 @@
                                                                             </td>
                                                                             <td>
 
-                                                                                <div class="form-check form-check-inline">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High">
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
@@ -457,7 +548,8 @@
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>
-                                                                               <ej:NumericTextBox ID="CONCURRENTENTERPRISEUSERS" MaxValue="50" MinValue="10" Value="35" Name="CONCURRENTENTERPRISEUSERS" runat="server" Width="100%" />
+                                                                                 <input type="number" id="CONCURRENTENTERPRISEUSERS" onchange="GetLicenceData();" value="35" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="10" max="55">
+                                                                              <%-- <ej:NumericTextBox ID="CONCURRENTENTERPRISEUSERS" MaxValue="50" MinValue="10" Value="35" Name="CONCURRENTENTERPRISEUSERS" runat="server" Width="100%" />--%>
                                                                             </td>
 
 
@@ -513,7 +605,7 @@
                                                                                     
                                                                                     </td>
                                                                             <td>
-
+                                                                                <asp:HiddenField ID="hidtxtConcurrent1" runat="server" />
                                                                                 <input type="number" id="txtConcurrent1" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent1" min="1" max="55">                                                                                                                                                                
                                                                                 <div id="errortxtConcurrent1" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
@@ -536,8 +628,9 @@
                                                                                     
                                                                                     </td>
                                                                             <td>
-                                                                                <input type="number" id="txtConcurrent2" class="form-control" style="margin-top: 3px;" name="txtConcurrent2" min="10" max="100">
-                                                                                 
+                                                                                <asp:HiddenField ID="hidtxtConcurrent2" runat="server" />
+                                                                                <input type="number" id="txtConcurrent2" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent2" min="10" max="100">
+                                                                                 <div id="errortxtConcurrent2" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:DropDownList ID="cmdHospitalName2" CssClass="form-control" runat="server" style="width: 100%;">
@@ -557,8 +650,9 @@
                                                                                     
                                                                                     </td>
                                                                             <td>
-                                                                                <input type="number" id="txtConcurrent3" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" min="10" max="100">
-                                                                                 
+                                                                                <asp:HiddenField ID="hidtxtConcurrent3" runat="server" />
+                                                                                <input type="number" id="txtConcurrent3" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" min="10" max="100">
+                                                                                 <div id="errortxtConcurrent3" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:DropDownList ID="cmdHospitalName3" CssClass="form-control" runat="server" style="width: 100%;">
@@ -578,8 +672,9 @@
                                                                                     
                                                                                     </td>
                                                                             <td>
-                                                                                <input type="number" id="txtConcurrent4" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                 
+                                                                                 <asp:HiddenField ID="hidtxtConcurrent4" runat="server" />
+                                                                                <input type="number" id="txtConcurrent4" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                 <div id="errortxtConcurrent4" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:DropDownList ID="cmdHospitalName4" CssClass="form-control" runat="server" style="width: 100%;">
@@ -648,12 +743,12 @@
       
       <td style="width: 50px;">
 
-          <input id="cmdISPSoftwareNo" class="ISPSoftwareButton active" type="button" value="No" >
+          <input id="cmdISPSoftwareNo" class="ISPSoftwareButton active" onclick="ispSoftware('NO');" type="button" value="No" >
           
 
       </td>
       <td style="width: 50px;">
-          <input id="cmdISPSoftwareYes" class="ISPSoftwareButton" type="button" value="Yes" >          
+          <input id="cmdISPSoftwareYes" class="ISPSoftwareButton" onclick="ispSoftware('YES');" type="button" value="Yes" >          
           <asp:HiddenField ID="hidISPSoftware" runat="server" />
       </td>
 
@@ -713,7 +808,7 @@
                                                                 <div class="row">
                                                                     <div class="col-md-12">
                                                                         <div class="table-responsive">
-                                                                         <table class="table table-bordered" id="empTable" style="margin-left: -0px;">
+                                                                         <table class="table table-bordered" id="macTable" style="margin-left: -0px;">
                                                                     <thead class="thead-light">
                                                                         <tr>
                                                                             <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
@@ -750,14 +845,14 @@
     <tbody>
     <tr>
      
-      <td> <input type="button" name="Button1" value="Hardware High Availiabllity NOT required" id="Button1" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 217px;width:300px;">                                    </td>
+      <td> <input type="button" name="hhaNOT" class="HHA" onclick="hha('NO');" value="Hardware High Availiabllity NOT required" id="hhaNOT" style="font-weight: 600;height: 49px;margin-left: 217px;width:300px;">                                    </td>
      
     </tr>
     <tr>
       
-      <td><input type="button" name="Button2" value="Hardware High Availiabllity IS required" id="Button2" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 217px;width:300px;margin-top: 10px;"></td>
-      <td><input type="button" name="Button2" value="Hardware High Availiabllity IS required" id="Button2" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
-      <td><input type="button" name="Button2" value="Hardware High Availiabllity IS required" id="Button2" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
+      <td><input type="button" name="hhaIS" onclick="hha('YES');" class="HHA" value="Hardware High Availiabllity IS required" id="hhaIS" style="font-weight: 600;height: 49px;margin-left: 217px;width:300px;margin-top: 10px;"></td>
+      <td><input type="button" name="Button2" class="HHA" value="Partial High Availability" id="Button2" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
+      <td><input type="button" name="Button2" class="HHA" value="Full High Availability" id="Button2" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
     </tr>
     
   </tbody>
@@ -783,15 +878,15 @@
   <tbody>
     <tr>
       
-      <td colspan="2" style="width: 274px">STB Additional Storage</td>
+      <td colspan="2" style="width: 274px" id="STBAddStorageLabel">STB Additional Storage</td>
       
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="No" id="Button3" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="STBAddStorageNo" value="No" id="STBAddStorageNo" class="STBAddStorage" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td style="width: 50px;">
-          <input type="submit" name="Button5" value="Yes" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="STBAddStorageYes" value="Yes" id="STBAddStorageYes" class="STBAddStorage" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
 
@@ -799,44 +894,43 @@
 	
 	    <tr>
       
-      <td colspan="2" style="width: 274px">ISP Text License Required</td>
+      <td colspan="2" style="width: 274px" id="ISPTextLicenseRequiredLabel">ISP Text License Required</td>
       
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="No" id="Button3" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="ISPTextLicenseRequiredNo" class="ISPTextLicenseRequired" value="No" id="ISPTextLicenseRequiredNo" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td style="width: 50px;">
-          <input type="submit" name="Button5" value="Yes" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="ISPTextLicenseRequiredYes" class="ISPTextLicenseRequired" value="Yes" id="ISPTextLicenseRequiredYes" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
     </tr>
 	
 		    <tr>
       
-      <td colspan="2" style="width: 274px">ISP Enterprise test license</td>
+      <td colspan="2" style="width: 274px" id="ISPEnterprisetestlicenseLabel" >ISP Enterprise test license</td>
       
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="No" id="Button3" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="ISPEnterprisetestlicenseNo" value="No" class="ISPEnterprisetestlicense" id="ISPEnterprisetestlicenseNo" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td style="width: 50px;">
-          <input type="submit" name="Button5" value="Yes" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;"> 
+        <input type="button" name="ISPEnterprisetestlicenseYes" value="Yes" id="ISPEnterprisetestlicenseYes" class="ISPEnterprisetestlicense" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
     </tr>
 	
 <tr>
       
-      <td style="width: 274px">ISP Advanced license</td>
+      <td style="width: 274px" id="ISPAdvancedlicenseLabel">ISP Advanced license</td>
       
       
       <td colspan="3" align="right" style="width: 30px;">
-          <input type="submit" name="Button5" value="Yes" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:60px;margin: 0 10px 0 0;"> 
-
-      <input type="submit" name="Button3" value="No" id="Button3" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:60px;margin: 0 10px 0 0;">
-<input type="submit" name="Button5" value="Yes" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:60px;"></td>
+          <input type="button" name="ISPAdvancedlicense1" value="1" id="ISPAdvancedlicense1" class="ISPAdvancedlicense" style="font-weight: 600;height: 49px;width:60px;margin: 0 10px 0 0;"> 
+          <input type="button" name="ISPAdvancedlicense2" value="2" id="ISPAdvancedlicense2" class="ISPAdvancedlicense" style="font-weight: 600;height: 49px;width:60px;margin: 0 10px 0 0;">
+          <input type="button" name="ISPAdvancedlicense3" value="3" id="ISPAdvancedlicense3" class="ISPAdvancedlicense" style="font-weight: 600;height: 49px;width:60px;"></td>
       
       
     </tr>
@@ -861,31 +955,31 @@
       
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="No" id="Button3" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="PhilipsprovidestorageNo" value="No" id="PhilipsprovidestorageNo" class="Philipsprovidestorage" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td colspan="" style="width: 50px;">
-          <input type="submit" name="Button5" value="Yes" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="PhilipsprovidestorageYes" value="Yes" id="PhilipsprovidestorageYes" class="Philipsprovidestorage" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
     </tr>
 <tr>
       
-      <td style="width: 274px; color:#d2dee5;">Additional Storage Required </td>
+      <td style="width: 274px;">Additional Storage Required </td>
       
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="10TB" id="Button3" style="color: white !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="AdditionalStorageRequired10TB" value="10TB" id="AdditionalStorageRequired10TB" class="AdditionalStorageRequiredHW" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="10TB" id="Button3" style="color: white !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="AdditionalStorageRequired15TB" value="15TB" id="AdditionalStorageRequired15TB" class="AdditionalStorageRequiredHW" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
 	    <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="10TB" id="Button3" style="color: white !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid ;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="AdditionalStorageRequired20TB" value="20TB" id="AdditionalStorageRequired20TB" class="AdditionalStorageRequiredHW" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
     </tr>
@@ -894,16 +988,16 @@
       
       <td style="width: 274px">Additional host server required </td>
            <td style="width: 50px;">
-          <input type="submit" name="Button5" value="No" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="AdditionalhostserverNo" value="No" id="AdditionalhostserverNo" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="1" id="Button3" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="Additionalhostserver1" value="1" id="Additionalhostserver1" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td style="width: 50px;">
-          <input type="submit" name="Button5" value="2" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="Additionalhostserver2" value="2" id="Additionalhostserver2" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
     </tr>
@@ -914,9 +1008,11 @@
       <td style="width: 274px">ISP Premium License</td>
       
       <td colspan="3" align="right">
-          <input type="submit" name="Button5" value="1" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;"> 
-
-      <input type="submit" name="Button5" value="2" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;"><input type="submit" name="Button5" value="3" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;"><input type="submit" name="Button5" value="4" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;"><input type="submit" name="Button5" value="5" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;"></td>
+          <input type="button" name="ISPPremiumLicense1" value="1" id="ISPPremiumLicense1" class="ISPPremiumLicenseHW" style="font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;"> 
+          <input type="button" name="ISPPremiumLicense2" value="2" id="ISPPremiumLicense2" class="ISPPremiumLicenseHW" style="font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;">
+          <input type="button" name="ISPPremiumLicense3" value="3" id="ISPPremiumLicense3" class="ISPPremiumLicenseHW" style="font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;">
+          <input type="button" name="ISPPremiumLicense4" value="4" id="ISPPremiumLicense4" class="ISPPremiumLicenseHW" style="font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;">
+          <input type="button" name="ISPPremiumLicense5" value="5" id="ISPPremiumLicense5" class="ISPPremiumLicenseHW" style="font-weight: 600;height: 49px;width: 49px;margin: 0 5px 0 0;"></td>
 	        
 	        
 	        
@@ -929,11 +1025,11 @@
       
       <td style="width: 50px;">
 
-          <input type="submit" name="Button3" value="No" id="Button3" style="color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="ISPTestLicenseHWNo" value="No" id="ISPTestLicenseHWNo" class="ISPTestLicenseHW" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td style="width: 50px;">
-          <input type="submit" name="Button5" value="Yes" id="Button5" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="ISPTestLicenseHWYes" value="Yes" id="ISPTestLicenseHWYes" class="ISPTestLicenseHW" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
     </tr>
@@ -960,20 +1056,8 @@
 
 
 <div class="row">
-<div class="col-md-6"><button class="text-align:center;" style="    display: block;
-    background: #d2dee5;
-    color: #000;
-    margin: auto;
-    width: 50%;
-    border: none;
-    padding: 15px;margin-bottom:20px;">Configuration</button></div>
-<div class="col-md-6"><button class="text-align:center;" style="    display: block;
-    background: #d2dee5;
-    color: #000;
-    margin: auto;
-    width: 50%;
-    border: none;
-    padding: 15px;margin-bottom:20px;">Configuration</button></div>
+
+
 </div>
 																</div>
 																
@@ -991,6 +1075,18 @@
                                             <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;">
                                             </div>
 
+                                            <div class="row">
+                                            <div class="col-md-12">
+                                                
+                                                
+                                                <asp:LinkButton ID="cmdSave" OnClick="cmdSave_Click" runat="server" style="display: block;background: #d2dee5;color: #000;margin: auto;width: 20%;border: none;padding: 15px;margin-bottom:20px;margin-top:10px;text-align:center;" > Configuration </asp:LinkButton>
+                                                
+                                                
+                                                                                               
+
+                                            </div>
+
+                                                </div>
 
                                         </div>
 
@@ -1017,6 +1113,11 @@
             </div>
         </footer>
 
+
+          <asp:HiddenField ID="hidLicenceData" runat="server" />
+          <asp:HiddenField ID="hidApplicationData" runat="server" />
+          <asp:HiddenField ID="hidMacTable"  runat="server"  Value="" />
+
     </form>
 
 
@@ -1035,103 +1136,151 @@
     arrHead = ['No', 'Menu', 'Mac']; // table headers.
 
 
-        function CreateRow(NoRows) {
+        function CreateRow(NoRows , ApplicationUsed,IsTest,maclist) {
+
+            //remove items
+            
+            var tableHeaderRowCount = 1;
+            var table = document.getElementById('macTable');
+            var rowCount = table.rows.length;
+            for (var i = tableHeaderRowCount; i < rowCount; i++) {
+                //if (table.rows[i].id == ApplicationUsed)
+                //{                
+                    table.deleteRow(tableHeaderRowCount);
+                //}
+            }
+            //remove items
+            NoRows++;
 
             for (var r = 0; r < NoRows; r++) {
-                addRow(r);
+                addRow(r +1,ApplicationUsed,NoRows,IsTest,maclist);
             }
 
         }
 
+        function storeCurrentMac() {
 
+            var macTable = document.getElementById('macTable');
+            var rowCnt = macTable.rows.length -1;
 
-        function addRow(idx) {
-        var empTab = document.getElementById('empTable');
+            var MacList = "";
+           
+
+            for (var i = 1; i < rowCnt; i++)
+            {
+                MacList += $("#ApplicationSoftwareOnly"+i)[0].value + ",";               
+            }
+
+            if (MacList != "") {
+                MacList = MacList.substr(0, MacList.length - 1);
+            }
+
+            $('#hidMacTable')[0].value = MacList;
+
+            
+
+            //hidMacTable
+            let a = "";
+
+        }
+
+        function addRow(idx, ApplicationUsed,NoRows,IsTest,maclist) {
+
+        var empTab = document.getElementById('macTable');
 
         var rowCnt = empTab.rows.length;    // get the number of rows.
-        var tr = empTab.insertRow(rowCnt); // table row.
-        tr = empTab.insertRow(rowCnt);
+            var tr = empTab.insertRow(rowCnt); // table row.
+            tr.id = ApplicationUsed;
+            //tr = empTab.insertRow(rowCnt);
+            
 
-        for (var c = 0; c < arrHead.length; c++) {
-            var td = document.createElement('td');            
-            td = tr.insertCell(c);
-            td.align = "center";
+            for (var c = 0; c < arrHead.length; c++) {
+                var td = document.createElement('td');
+                td = tr.insertCell(c);
+                td.align = "center";
 
+                switch (c) {
 
-            switch (c) {
+                    case 0:
 
-                case 0:
-
-                    var closeSpan = document.createElement("span");
-                    closeSpan.setAttribute("class","text-center");
-                    closeSpan.textContent = idx + 1;
-                    td.appendChild(closeSpan);
-                    break;
-                case 1:
+                        var closeSpan = document.createElement("span");
+                        closeSpan.setAttribute("class", "text-center");
+                        closeSpan.textContent = idx;
+                        td.appendChild(closeSpan);
+                        break;
+                    case 1:
                         var select = document.createElement('select');
+                        select.name = "ApplicationSoftwareOnly" + idx;
+                        select.id = "ApplicationSoftwareOnly" + idx;
+                        select.setAttribute("onchange", "storeCurrentMac();");
+
+
+
+                     
+
+
                         var option;
-                        var inputdata = "Advanced Extended Storage 5TB||Concerto remote sites||Concerto Usr Lic Above 50||Concerto Usr Lic Btw 10-15||Concerto Usr Lic Btw 16-20||Concerto Usr Lic Btw 21-30||Concerto Usr Lic Btw 31-40||Concerto Usr Lic Btw 41-50||Ent Prem. HW Solution engine||Ent Prem. HW Solution storage||Enterprise Adv.HW Solution||Enterprise Engine SW||ISP Advanced  SW License||ISP Premium  SW License||ISP Server - Software only||Number of Concurrent Users||Number of Concurrent Users NA||Premium Add. Second Engine||Premium Add. Third Engine||Premium Extended Storage 5TB";
+                        var inputdata = "Advanced Extended Storage 5TB||Concerto remote sites||Ent Prem. HW Solution engine||Ent Prem. HW Solution storage||Enterprise Engine SW||ISP Advanced  SW License||ISP Premium  SW License||ISP Server - Software only||Premium Add. Second Engine||Premium Add. Third Engine||Test Server";
                         var split = inputdata.split('||');
 
-                        select.setAttribute("class","form-control");
+                        select.setAttribute("class", "form-control");
                         inputdata.split('||').forEach(function (item) {
 
-                            option = document.createElement( 'option' );
+                            option = document.createElement('option');
 
                             option.value = option.textContent = item;
 
-                            select.appendChild( option );
+                            select.appendChild(option);
                         });
-                
+
                         td.appendChild(select);
-                    break;
-                case 2:
-                    
-                    var ele = document.createElement('input');
-                    ele.setAttribute('type', 'text');
-                    ele.setAttribute('value', '');
-                    ele.setAttribute("class","form-control");
-                    td.appendChild(ele);
 
-                    break;
+                        if (idx == 1) {
+                            $("#ApplicationSoftwareOnly" + idx).val('Enterprise Engine SW').change();                                                       
+                        } else {
+                            $("#ApplicationSoftwareOnly" + idx).val('ISP Server - Software only').change();                                    
+                        }
+
+
+                        
+                        if (maclist != "" & maclist != null) {
+
+                            var n = maclist.includes(",");
+                            if (n == true) {
+                                res = maclist.split(",");
+
+                                for (i = 0; i < res.length; i++) {
+                                    if (idx == (i + 1)) {
+                                        $("#ApplicationSoftwareOnly" + idx).val(res[i]).change();
+                                    }
+                                }
+                            }
+
+                        }
+
+
+
+                        if (IsTest == true) {
+                            if (NoRows == idx) {
+                                $("#ApplicationSoftwareOnly" + idx)[0].options[10].selected = 'selected'; //Test 
+                            }
+                        }
+
+                        break;
+                    case 2:
+
+                        var ele = document.createElement('input');
+                        ele.setAttribute('type', 'text');
+                        ele.setAttribute('value', '');
+                        ele.setAttribute('name', "MacSoftwareOnly" + idx);
+                        ele.setAttribute("class", "form-control");
+                        td.appendChild(ele);
+
+                        break;
+                }
+             
+
             }
-           
-
-            //https://www.encodedna.com/javascript/dynamically-add-remove-rows-to-html-table-using-javascript-and-save-data.htm
-
-
-
-            //<input type='text' id='lname' name='lname' Class="form-control" style="margin-top: 3px;">
-
-                                                                              //<select id='cars'>
-                                                                              //    <option value='volvo'>Volvo</option>
-                                                                              //    <option value='saab'>Saab</option>
-                                                                              //    <option value='mercedes'>Mercedes</option>
-                                                                              //    <option value='audi'>Audi</option>
-                                                                              //  </select>
-
-            if (c == 0) {   // if its the first column of the table.
-                // add a button control.
-                //var button = document.createElement('input');
-
-                // set the attributes.
-               // button.setAttribute('type', 'button');
-                //button.setAttribute('value', 'Remove');
-
-                // add button's "onclick" event.
-                //button.setAttribute('onclick', 'removeRow(this)');
-
-                //td.appendChild(button);
-            }
-            else {
-                // the 2nd, 3rd and 4th column, will have textbox.
-                //var ele = document.createElement('input');
-                //ele.setAttribute('type', 'text');
-                //ele.setAttribute('value', '');
-
-                //td.appendChild(ele);
-            }
-        }
         }
 
 
@@ -1147,10 +1296,68 @@
             }
 
 
-            GetLicenceData(TextBoxItem);
+            GetLicenceData();
 
         }
+
+           $('.STBAddStorage').click(function() {
+            $('.STBAddStorage.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+           });
+
+           $('.ISPAdvancedlicense').click(function() {
+            $('.ISPAdvancedlicense.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+           });
+
+           $('.ISPEnterprisetestlicense').click(function() {
+            $('.ISPEnterprisetestlicense.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+           });
+
+           $('.ISPTextLicenseRequired').click(function() {
+            $('.ISPTextLicenseRequired.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+           });
+
+
+        $('.ISPTestLicenseHW').click(function() {
+            $('.ISPTestLicenseHW.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+        });
+        $('.AdditionalhostserverHW').click(function() {
+            $('.AdditionalhostserverHW.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+        });
+        $('.AdditionalStorageRequiredHW').click(function() {
+            $('.AdditionalStorageRequiredHW.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+        });
+        $('.Philipsprovidestorage').click(function() {
+            $('.Philipsprovidestorage.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+        });
+        $('.ISPPremiumLicenseHW').click(function() {
+            $('.ISPPremiumLicenseHW.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+        });
+
         
+
+         $('.HHA').click(function() {
+            $('.HHA.active').removeClass("active");             
+            $(this).addClass("active");                                     
+            
+        });
 
          $('.ISPSoftwareOnly').click(function() {
             $('.ISPSoftwareOnly.active').removeClass("active");             
@@ -1159,7 +1366,10 @@
             $('#hidISPSoftwareOnly')[0].value = $(this)[0].value;
             
             
-        });
+         });
+
+
+        
 
         $('.ISPSoftwareButton').click(function() {
             $('.ISPSoftwareButton.active').removeClass("active");             
@@ -1178,9 +1388,14 @@
 
             if (array[2] == "Enterprise") {
                 
-                $("#txtConcurrent" + ddlbox.id.substr( ddlbox.id.length-1,2))[0].value = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+                $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+                
+
             } else {
-                $("#txtConcurrent" + ddlbox.id.substr( ddlbox.id.length-1,2))[0].value = array[2];
+                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
+                $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
+                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
             }
 
             //Concurrent_Users
@@ -1196,6 +1411,7 @@
 
                 if (Number.isInteger(array[3]) == true) {
                     $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
+                    $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
                 }
 
             }
@@ -1203,6 +1419,8 @@
             
            // alert(array[0]);
             //alert(array[1]);
+
+            GetLicenceData();
 
         }
 
@@ -1275,36 +1493,203 @@
 
 
 
-        function GetLicenceData(TextBoxItem) {
+        function GetLicenceData() {
 
-            let enterpriseuser = $("#CONCURRENTENTERPRISEUSERS")[0].value;
-            let concurentusers = $(TextBoxItem)[0].value;
-            let selectedapplication =  $("#cmdApplication" + TextBoxItem.id.substr(TextBoxItem.id.length - 1, 2) )[0].value;
+            let enterpriseuser = $("#CONCURRENTENTERPRISEUSERS")[0].value;           
+            let IsTest = false;          
+
+            let selectedapplication = "";
+            let selectedapplication1 = $("#cmdApplication1")[0].value + "?" + $("#txtConcurrent1")[0].value;
+            let selectedapplication2 =  $("#cmdApplication2")[0].value + "?" + $("#txtConcurrent2")[0].value;
+            let selectedapplication3 = $("#cmdApplication3")[0].value + "?" + $("#txtConcurrent3")[0].value;
+            let selectedapplication4 = $("#cmdApplication4")[0].value + "?" + $("#txtConcurrent4")[0].value;            
 
 
-            var myKeyVals = { enterpriseuser: enterpriseuser, concurentusers: concurentusers, selectedapplication: selectedapplication }
+            selectedapplication = selectedapplication1 + "~" + selectedapplication2 + "~" + selectedapplication3 + "~" + selectedapplication4;//+ "~" + selectedapplication5;
 
-            $.ajax('./apidata', 
+            var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser:enterpriseuser }
+
+            $.ajax('./apidata.aspx', 
                 {
                     type: 'POST',
                      data: myKeyVals,
                 dataType: 'json', // type of response data
                 //timeout: 5000,     // timeout milliseconds
                 success: function (data,status,xhr) {   // success callback function
-                   
-                    
+
+                    $('.hidLicenceData').value = data.licence;
+                    $('.hidApplicationData').value = data.application;
+
+                    console.log("data.licence:" + data.licence);
+                    console.log("data.Name:" +  data.application);
+
+                    if ( $("#cmdISPSoftwareYes").hasClass('active') )
+                    {
+                        data.licence = parseInt(data.licence) + 1;
+                        IsTest = true;
+                    }
+
+                    let maclist = $('#hidMacTable')[0].value;
+
+                    $("#cmdISPSoftwareOnly11").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly10").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly9").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly8").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly7").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly6").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly5").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly4").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly3").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly2").prop('disabled', false);
+                    $("#cmdISPSoftwareOnly1").prop('disabled', false);
 
 
-                    switch (data.licence) {
+                    switch (data.licence.toString()) {
+                        case "1":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly1").addClass("active");                                                                                        
+
+                            CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                         case "2":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly2").addClass("active");                 
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);                                                  
+
+                             CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                         case "3":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly3").addClass("active");    
+                                                                                    
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);                                                                                                           
+
+                            CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                        case "4":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly4").addClass("active");    
+                                                        
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);
+                           
+                            CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
                         case "5":
                             $('.ISPSoftwareOnly.active').removeClass("active");                              
                             $("#cmdISPSoftwareOnly5").addClass("active");    
 
-                            CreateRow( data.licence )
+                            $("#cmdISPSoftwareOnly4").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);                      
+
+                            CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                         case "6":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+                            $("#cmdISPSoftwareOnly6").addClass("active");    
+                            $("#cmdISPSoftwareOnly5").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly4").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);
+
+                             CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                         case "7":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly7").addClass("active");    
+
+                            $("#cmdISPSoftwareOnly6").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly5").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly4").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);
+
+                             CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                        case "8":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly8").addClass("active");    
+
+                            $("#cmdISPSoftwareOnly7").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly6").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly5").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly4").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);
+
+                            CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                        case "9":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly9").addClass("active");    
+
+                            $("#cmdISPSoftwareOnly8").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly7").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly6").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly5").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly4").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);
+
+                             CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                        case "10":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly10").addClass("active");    
+
+                            
+                            $("#cmdISPSoftwareOnly9").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly8").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly7").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly6").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly5").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly4").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);
+
+                             CreateRow( data.licence ,data.application,IsTest,maclist)
+                            break;
+                        case "11":
+                            $('.ISPSoftwareOnly.active').removeClass("active");                              
+
+                            $("#cmdISPSoftwareOnly11").addClass("active");    
+
+                            $("#cmdISPSoftwareOnly10").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly9").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly8").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly7").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly6").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly5").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly4").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly3").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly2").prop('disabled', true);
+                            $("#cmdISPSoftwareOnly1").prop('disabled', true);
+
+                            CreateRow( data.licence ,data.application,IsTest,maclist)
                             break;
                     }
 
                     $('#hidISPSoftwareOnly')[0].value = data.licence;
+
+
+                    storeCurrentMac();
 
                 },
                 error: function (jqXhr, textStatus, errorMessage) { // error callback                     
@@ -1313,6 +1698,80 @@
             });
 
         }
+
+
+        function ispSoftware(typeButton) {
+
+
+             //$('.hidLicenceData').value = data.licence;
+             //$('.hidApplicationData').value = data.application;
+
+
+            let currentValue = parseInt( $('.ISPSoftwareOnly.active')[0].value);
+            $('.ISPSoftwareOnly.active').removeClass("active");  
+
+            if (typeButton == "YES") {
+
+                currentValue = currentValue + 1;
+                $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
+
+                 CreateRow( currentValue ,$('.hidApplicationData').value,true,$('#hidMacTable')[0].value)
+
+
+            } else {
+
+                currentValue = currentValue - 1;
+                $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
+                CreateRow( currentValue ,$('.hidApplicationData').value,false,$('#hidMacTable')[0].value)
+            }
+            
+        }
+
+
+        function hha(typeButton) {
+
+            if (typeButton == "YES") {
+                $("#STBAddStorageNo").prop('disabled', true);
+                $("#STBAddStorageNo").css('color', 'grey');
+                $("#STBAddStorageNo").css('background-color', '#d2dee5');  
+                $("#STBAddStorageLabel").css('color', '#d2dee5');  
+                $("#STBAddStorageYes").prop('disabled', true);
+                $("#STBAddStorageYes").css('color', 'grey');
+                
+
+                $("#ISPTextLicenseRequiredLabel").css('color', '#d2dee5');  
+                $("#ISPEnterprisetestlicenseLabel").css('color', '#d2dee5');  
+                $("#ISPAdvancedlicenseLabel").css('color', '#d2dee5');     
+
+
+
+            } else {
+                $("#STBAddStorageNo").prop('disabled', false);  
+                $("#STBAddStorageNo").css('color', 'black');                
+                $('#STBAddStorageLabel').css('color', '#333'); 
+                $("#STBAddStorageYes").prop('disabled', false);
+                $("#STBAddStorageYes").css('color', 'black');
+
+                $("#ISPTextLicenseRequiredLabel").css('color', '#333');
+                $("#ISPEnterprisetestlicenseLabel").css('color', '#333');
+                $("#ISPAdvancedlicenseLabel").css('color', '#333');   
+
+                
+            }
+
+             //
+            
+           
+            //alert(typeButton);
+
+            
+        }
+
+
+
+        GetLicenceData();
+
+        
 
     </script>
 

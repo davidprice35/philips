@@ -13,7 +13,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using System.IO;
 using System.Globalization;
-using Syncfusion.JavaScript.Web;
+//using Syncfusion.JavaScript.Web;
 using System.Xml.Serialization;
 //using System.Xml;
 using Newtonsoft.Json;

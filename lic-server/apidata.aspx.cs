@@ -14,10 +14,31 @@ using System.Data.SqlClient;
 
 public partial class lic_server_apidata : System.Web.UI.Page
 {
+
+    public class concurrentUserList
+    {
+        public concurrentUserList()
+        {
+            
+        }
+
+        public concurrentUserList(int intConcurrent, string strApplication)
+        {
+            ConcurrentData = intConcurrent;
+            ApplicationData = strApplication;
+        }
+
+        public int ConcurrentData { get; private set; }
+        public string ApplicationData { get; private set; }
+    }
+
+
     protected void Page_Load(object sender, EventArgs e)
     {
         int IntelliSpace_licenses = 0;
         int Licence = 0;
+        string SQL = string.Empty;
+        DataView MyDV = null;
 
         try {
 
@@ -29,19 +50,53 @@ public partial class lic_server_apidata : System.Web.UI.Page
             //}
             //            }
             bool HasZFP = false;
+            bool HasDynCad = false;
+            bool HasIntelliSpace = false;
             string Category = string.Empty;
             string enterpriseuser = Request.Form["enterpriseuser"].ToString();
-            string concurentusers = Request.Form["concurentusers"].ToString();
+            string concurentusers = string.Empty; //Request.Form["concurentusers"].ToString();
             string selectedapplication = Request.Form["selectedapplication"].ToString();
             string NumberofLicenses = string.Empty;
+            string SelectedAppList = string.Empty;
 
-            if (selectedapplication!="")
+           // var concurrentUserList1 = new List<concurrentUserList>();
+
+            if (selectedapplication!="" && selectedapplication != "?~?~?~?")
             {
-                string[] words = selectedapplication.Split('|');
-                selectedapplication = words[0];
 
-                string SQL = "SELECT* FROM travelma2_phil1.PhilipsLic_Applications where Applications = '"+ selectedapplication + "'";
-                DataView MyDV = Helper.GetData(SQL);               
+                string[] applicationslist = selectedapplication.Split('~');
+                foreach (string applist in applicationslist)
+                {
+
+                    //Split the concurrentuser
+                    string[] CurrentUsers = applist.Split('?');
+
+                    //concurrentUserList1.Add(new concurrentUserList(Convert.ToInt32(CurrentUsers[1]), CurrentUsers[0]));
+                    
+                    //Apllications
+                    string[] appItems = CurrentUsers[0].Split('|');
+                    SelectedAppList += "'" + appItems[0] + "'" + ",";      
+                    
+                    if (appItems[0]== "Zero FootPrint Viewer SW 2 Usr")
+                    {
+                        concurentusers = CurrentUsers[1];
+                    }
+
+
+                }
+
+                //remove last comma
+                if ( SelectedAppList!="")
+                {
+                    SelectedAppList = SelectedAppList.Substring(0, SelectedAppList.Length - 1);
+                }
+
+
+                //string[] words = selectedapplication.Split('|');
+                //selectedapplication = words[0];
+
+                SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Applications in ("+ SelectedAppList + ")";
+                MyDV = Helper.GetData(SQL);               
                 foreach (DataRowView rowView in MyDV)
                 {
                     Category = rowView["Category"].ToString();  
@@ -49,9 +104,18 @@ public partial class lic_server_apidata : System.Web.UI.Page
                     switch(Category)
                     {
                         case "Zerofootprint Software":
-                            Category = "ZFP";
+                           // Category = "ZFP";
                             HasZFP = true;
-                                break;
+                            break;
+                        case "Dynacad software":
+                            //Category = "Dynacad";
+                            HasDynCad = true;
+                            break;
+                        default:
+                            //Category = "IntelliSpace";
+                            HasIntelliSpace = true;
+                            break;
+
                     }
 
                 }
@@ -59,33 +123,68 @@ public partial class lic_server_apidata : System.Web.UI.Page
             }
 
 
-            //get licence data
+
+
+            Category = "";
+            if (HasIntelliSpace == true)
+            {
+                Category = "IntelliSpace";
+            }
+
+            
+
+            if (HasDynCad == true)
+            {
+                if (Category != "")
+                {
+                    Category += " ";
+                }
+                Category += "DynaCad";
+            }
+
+           
             if (HasZFP == true)
             {
-               
+                if (Category != "")
+                {
+                    Category += " ";
+                }
 
-                string SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Licence where Type ='IntelliSpace ZFP' and rangefrom <= "+ enterpriseuser + " and rangeto >= " + enterpriseuser + " and addtionalrangefrom <="+ concurentusers + " and addtionalrangeto >=" + concurentusers ;
-                DataView MyDV = Helper.GetData(SQL);
-                foreach (DataRowView rowView in MyDV)
-                {
-                    IntelliSpace_licenses = Convert.ToInt32( rowView["IntelliSpace_licenses"].ToString() );
-                    Licence = Convert.ToInt32( rowView["licenses"].ToString() ) ;
-                }
+                Category += "ZFP";
             }
-            else
+
+
+            //get licence data
+
+            if (HasZFP==true)
             {
-                string SQL = "SELECT* FROM travelma2_phil1.PhilipsLic_Licence where Type = 'IntelliSpace ZFP' and rangefrom <= 35 and rangeto >= 35";
-                DataView MyDV = Helper.GetData(SQL);
+                SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Licence where Type ='"+ Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser + " and addtionalrangefrom <=" + concurentusers + " and addtionalrangeto >=" + concurentusers;
+                MyDV = Helper.GetData(SQL);
                 foreach (DataRowView rowView in MyDV)
                 {
+                    IntelliSpace_licenses = Convert.ToInt32(rowView["IntelliSpace_licenses"].ToString());
+                    Licence = Convert.ToInt32(rowView["licenses"].ToString());
+                }
+            }else
+            {
+                if (Category=="")
+                {
+                    Category = "IntelliSpace";
+                }
+                SQL = "SELECT* FROM travelma2_phil1.PhilipsLic_Licence where Type = '" + Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser;
+                MyDV = Helper.GetData(SQL);
+                foreach (DataRowView rowView in MyDV)
+                {
+                    IntelliSpace_licenses = Convert.ToInt32(rowView["IntelliSpace_licenses"].ToString());
+                    Licence = Convert.ToInt32(rowView["licenses"].ToString());
                 }
             }
-            //
-            //
+
+                                   
 
             Licence = Licence + IntelliSpace_licenses;
 
-            string json = "{\"licence\":\""+ Licence.ToString() + "\"}";
+            string json = "{\"licence\":\""+ Licence.ToString() + "\" , \"application\":\"" + selectedapplication + "\"}";
             Response.Clear();
             Response.ContentType = "application/json; charset=utf-8";
             Response.Write(json);

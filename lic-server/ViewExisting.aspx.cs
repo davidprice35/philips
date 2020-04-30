@@ -13,7 +13,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 
 
-using Syncfusion.JavaScript.Web;
+
 
 
 public partial class ViewExisting : System.Web.UI.Page
@@ -190,7 +190,7 @@ public partial class ViewExisting : System.Web.UI.Page
                 {
                    
 
-                    m_TableData += "<tr><th scope='row'>"+ rowView["PhilipsLic_ProjectID"].ToString() + "</th><td>"+ rowView["project_name"].ToString() + "</td><td>the Bird</td><td>@twitter</td><td>@mdo</td></tr>";
+                    m_TableData += "<tr> <th scope='row'><a href='/lic-server/ispConcerto.aspx?id="+ rowView["PhilipsLic_ProjectID"].ToString() + "'>" + rowView["PhilipsLic_ProjectID"].ToString() + "</a></th><td>" + rowView["project_name"].ToString() + "</td><td>-</td><td>-</td><td>-</td></tr>";
 
                 }
 
