@@ -35,6 +35,13 @@
     <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.web.all.min.js")%>' type="text/javascript"></script>
     <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.webform.min.js")%>' type="text/javascript"></script>
 
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+
+
+
     <script>
         $(document).ready(function () {
 
@@ -49,9 +56,33 @@
 
 
     <style>
-          
+         
+        .HHAopt{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
 
-         .ISPTestLicenseHW{
+         .HHAopt.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+           .HHAyesopt{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .HHAyesopt.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+          .HHNotPrem{
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
+        }
+
+         .HHNotPrem.active{
+             color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
+        }
+
+
+        .ISPTestLicenseHW{
              color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
         }
 
@@ -106,27 +137,27 @@
         }
 
           .ISPAdvancedlicense{
-             color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;
+             color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
         }
 
          .ISPAdvancedlicense.active{
-             color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;
+            color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
         }
 
           .ISPEnterprisetestlicense{
-             color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;
+               color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
         }
 
          .ISPEnterprisetestlicense.active{
-             color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;
+              color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
         }
 
           .ISPTextLicenseRequired{
-             color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;
+            color: black; cursor: default;background-color: #d2dee5;border: 1px solid #d2dee5;border-bottom-color: transparent;
         }
 
          .ISPTextLicenseRequired.active{
-             color: white !important;cursor: default;background-color: #178bc6 !important;border: 1px solid #178bc6;border-bottom-color: transparent;
+              color: white; cursor: default;background-color: #178bc6;border: 1px solid #178bc6;border-bottom-color: transparent;
         }
 
 
@@ -286,7 +317,12 @@
                                     <div id="home" class="tab-pane fade in active">
                                         <div style="margin-top: 30px; height: auto;">
                                             <div class="container">
-                                                <p style="font-weight: bolder;">SITE INFORMATION</p>
+                                                <p style="font-weight: bolder;">SITE INFORMATION 
+
+                                                    <i class="fa fa-info-circle" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+
+
+                                                </p>
 
                                                 <div class="Tab-info">
                                                     <div class="tab-regular" style="margin-top: 10px;">
@@ -314,6 +350,7 @@
                                                                             <th scope="col" style="background-color: #0b1f65;">Hospital Street</th>
                                                                             <th scope="col" style="background-color: #0b1f65;">Site</th>
                                                                             <th scope="col" style="background-color: #0b1f65;">Connectivity</th>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Remove</th>
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody>
@@ -352,6 +389,14 @@
                                                                                 </div>
 
                                                                             </td>
+
+                                                                            
+                                                                                <td>
+
+                                                                                   
+                                                                                    
+
+                                                                                </td>
                                                                         </tr>
 
                                                                          <tr style="display:none;vertical-align: middle;" id="row2-central">
@@ -364,11 +409,11 @@
                                                                             </td>
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
-                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite2" id="HospitalSite2Main" value="Main" disabled >
+                                                                                    <label class="form-check-label" for="HospitalSite2Main">Main</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
-                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite2" id="HospitalSite2Remote" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="HospitalSite2Remote">Remote</label>
 
                                                                                 </div>
                                                                             </td>
@@ -389,6 +434,15 @@
                                                                                 </div>
 
                                                                             </td>
+                                                                              <td align="center">
+
+
+                                                                                    <span id="cmdHospitalDelete2" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
                                                                         </tr>
 
                                                                              <tr style="display:none;vertical-align: middle;" id="row3-central">
@@ -401,14 +455,17 @@
                                                                             </td>
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
-                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite3" id="HospitalSite3Main" value="Main" disabled >
+                                                                                    <label class="form-check-label" for="HospitalSite2Main">Main</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
-                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite3" id="HospitalSite3Remote" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="HospitalSite2Remote">Remote</label>
 
                                                                                 </div>
+
+                                                                                
                                                                             </td>
+
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
@@ -426,6 +483,14 @@
                                                                                 </div>
 
                                                                             </td>
+                                                                                  <td align="center">
+
+                                                                                  <span id="cmdHospitalDelete3" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
                                                                         </tr>
 
                                                                          <tr style="display:none;vertical-align: middle;" id="row4-central">
@@ -438,11 +503,11 @@
                                                                             </td>
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
-                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite4" id="HospitalSite4Main" value="Main" disabled >
+                                                                                    <label class="form-check-label" for="HospitalSite4Main">Main</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
-                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite4" id="HospitalSite4Remote" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="HospitalSite4Remote">Remote</label>
 
                                                                                 </div>
                                                                             </td>
@@ -463,6 +528,14 @@
                                                                                 </div>
 
                                                                             </td>
+                                                                              <td align="center">
+
+                                                                                     <span id="cmdHospitalDelete4" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
                                                                         </tr>
 
 
@@ -476,6 +549,51 @@
                                                                             </td>
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite5" id="HospitalSite5Main" value="Main" disabled >
+                                                                                    <label class="form-check-label" for="HospitalSite5Main">Main</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite5" id="HospitalSite5Remote" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="HospitalSite5Remote">Remote</label>
+
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio3">High</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <label class="form-check-label" for="inlineRadio4">Med</label>
+
+
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <label class="form-check-label" for="inlineRadio5">Low</label>
+
+                                                                                </div>
+
+                                                                            </td>
+                                                                              <td align="center">
+
+                                                                                     <span id="cmdHospitalDelete5" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
+                                                                        </tr>
+
+                                                                          <tr style="display:none;vertical-align: middle;" id="row6-central">
+                                                                            <td align="center" style="vertical-align: middle;" >6</td>
+                                                                            <td >
+                                                                                <asp:TextBox ID="txtHospitalName6" CssClass="form-control" onblur="UpdateHospital(6);"  runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:TextBox ID="txtHospitalStreet6" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
                                                                                     <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
                                                                                     <label class="form-check-label" for="inlineRadio1">Main</label>
 
@@ -501,6 +619,194 @@
                                                                                 </div>
 
                                                                             </td>
+                                                                               <td  align="center">
+
+                                                                                     <span id="cmdHospitalDelete6" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
+                                                                        </tr>
+
+                                                                          <tr style="display:none;vertical-align: middle;" id="row7-central">
+                                                                            <td align="center" style="vertical-align: middle;" >7</td>
+                                                                            <td >
+                                                                                <asp:TextBox ID="txtHospitalName7" CssClass="form-control" onblur="UpdateHospital(5);"  runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:TextBox ID="txtHospitalStreet7" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" disabled >
+                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio3">High</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <label class="form-check-label" for="inlineRadio4">Med</label>
+
+
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <label class="form-check-label" for="inlineRadio5">Low</label>
+
+                                                                                </div>
+
+                                                                            </td>
+                                                                              <td  align="center">
+
+                                                                                    <span id="cmdHospitalDelete7" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
+                                                                        </tr>
+
+                                                                          <tr style="display:none;vertical-align: middle;" id="row8-central">
+                                                                            <td align="center" style="vertical-align: middle;" >8</td>
+                                                                            <td >
+                                                                                <asp:TextBox ID="txtHospitalName8" CssClass="form-control" onblur="UpdateHospital(5);"  runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:TextBox ID="txtHospitalStreet8" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio3">High</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <label class="form-check-label" for="inlineRadio4">Med</label>
+
+
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <label class="form-check-label" for="inlineRadio5">Low</label>
+
+                                                                                </div>
+
+                                                                            </td>
+                                                                              <td  align="center">
+
+                                                                                     <span id="cmdHospitalDelete8" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
+                                                                        </tr>
+
+                                                                          <tr style="display:none;vertical-align: middle;" id="row9-central">
+                                                                            <td align="center" style="vertical-align: middle;" >9</td>
+                                                                            <td >
+                                                                                <asp:TextBox ID="txtHospitalName9" CssClass="form-control" onblur="UpdateHospital(5);"  runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:TextBox ID="txtHospitalStreet9" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio3">High</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <label class="form-check-label" for="inlineRadio4">Med</label>
+
+
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <label class="form-check-label" for="inlineRadio5">Low</label>
+
+                                                                                </div>
+
+                                                                            </td>
+                                                                              <td  align="center">
+
+                                                                                    <span id="cmdHospitalDelete9" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
+                                                                        </tr>
+
+                                                                          <tr style="display:none;vertical-align: middle;" id="row10-central">
+                                                                            <td align="center" style="vertical-align: middle;" >10</td>
+                                                                            <td >
+                                                                                <asp:TextBox ID="txtHospitalName10" CssClass="form-control" onblur="UpdateHospital(5);"  runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <asp:TextBox ID="txtHospitalStreet10" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio1" value="Main" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+
+                                                                                <div class="form-check form-check-inline" style="text-align: center;margin-top: 6px;">
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <label class="form-check-label" for="inlineRadio3">High</label>
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <label class="form-check-label" for="inlineRadio4">Med</label>
+
+
+
+                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <label class="form-check-label" for="inlineRadio5">Low</label>
+
+                                                                                </div>
+
+                                                                            </td>
+                                                                              <td  align="center">
+
+                                                                                     <span id="cmdHospitalDelete10" onclick="deleteHospital(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
                                                                         </tr>
 
                                                                     </tbody>
@@ -586,8 +892,10 @@
                                                                         <tr>
                                                                             <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
                                                                             <th scope="col" class="w-35" style="background-color: #0b1f65;">Applications</th>
-                                                                            <th scope="col" class="w-25" style="background-color: #0b1f65;">Concurrent Users</th>
-                                                                            <th scope="col" class="w-25" style="background-color: #0b1f65;">Hostpital Name</th>
+                                                                            <th scope="col" class="" style="width:8%;background-color: #0b1f65;">Concurrent Users</th>
+                                                                             <th scope="col" class="" style="width:10%;background-color: #0b1f65;">Description</th>
+                                                                            <th scope="col" class="w-25" style="background-color: #0b1f65;">Hospital Name</th>
+                                                                              <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove</th>
 
                                                                         </tr>
                                                                     </thead>
@@ -595,7 +903,7 @@
                                                                         <tr>
                                                                             <td align="center">1</td>
                                                                             <td>
-                                                                                <asp:DropDownList ID="cmdApplication1" onchange="GetApplicationData(this)" CssClass="form-control" runat="server" style="width: 100%;">
+                                                                                <asp:DropDownList ID="cmdApplication1" onchange="GetApplicationData(this)" CssClass="form-control" runat="server" style="width: 100%;margin-top: 3px;">
                                                                                       
                                                                                     
 
@@ -609,12 +917,19 @@
                                                                                 <input type="number" id="txtConcurrent1" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent1" min="1" max="55">                                                                                                                                                                
                                                                                 <div id="errortxtConcurrent1" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
+
+                                                                            <td align="center">                                                                            
+                                                                                <i class="fa fa-info-circle" style="margin-top: 10px;font-size: 20px;color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>                                                                                                                                                                                                                                        
+                                                                            </td>
+
                                                                             <td>
-                                                                                <asp:DropDownList ID="cmdHospitalName1" CssClass="form-control" runat="server" style="width: 100%;">
+                                                                                <asp:DropDownList ID="cmdHospitalName1" CssClass="form-control" runat="server" style="width: 100%;margin-top: 3px;">
                                                                                                                                                                    
                                                                                 </asp:DropDownList>
                                                                             </td>
 
+                                                                            <td>
+                                                                            </td>
                                                                         </tr>
 
 
@@ -632,18 +947,30 @@
                                                                                 <input type="number" id="txtConcurrent2" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent2" min="10" max="100">
                                                                                  <div id="errortxtConcurrent2" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
+
+                                                                               <td align="center">                                                                            
+                                                                                <i class="fa fa-info-circle" style="margin-top: 10px;font-size: 19px;color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>                                                                                                                                                                                                                                        
+                                                                            </td>
+
                                                                             <td>
                                                                                 <asp:DropDownList ID="cmdHospitalName2" CssClass="form-control" runat="server" style="width: 100%;">
                                                                                                                                                                    
                                                                                 </asp:DropDownList>
                                                                             </td>
+                                                                              <td  align="center">
 
+                                                                                    <span id="cmdAddtionalAppDelete2" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                    
+
+                                                                                </td>
                                                                         </tr>
 
                                                                            <tr style="display:none;vertical-align: middle;" id="row3-additional-apps">
                                                                             <td align="center">3</td>
                                                                             <td>
-                                                                                <asp:DropDownList ID="cmdApplication3" onchange="GetApplicationData(this)" CssClass="form-control" runat="server" style="width: 100%;">
+                                                                                <asp:DropDownList ID="cmdApplication3" onchange="GetApplicationData(this)" CssClass="form-control" runat="server" style="width: 100%;margin-top: 3px;">
                                                                                       
                                                                                     
                                                                                 </asp:DropDownList>
@@ -654,18 +981,27 @@
                                                                                 <input type="number" id="txtConcurrent3" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" min="10" max="100">
                                                                                  <div id="errortxtConcurrent3" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
+
+                                                                                <td align="center">                                                                            
+                                                                                <i class="fa fa-info-circle" style="margin-top: 10px;font-size: 19px;color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>                                                                                                                                                                                                                                        
+                                                                            </td>
+
                                                                             <td>
-                                                                                <asp:DropDownList ID="cmdHospitalName3" CssClass="form-control" runat="server" style="width: 100%;">
+                                                                                <asp:DropDownList ID="cmdHospitalName3" CssClass="form-control" runat="server" style="width: 100%;margin-top: 3px;">
                                                                                                                                                                    
                                                                                 </asp:DropDownList>
                                                                             </td>
-
+                                                                               <td  align="center">
+                                                                                     <span id="cmdAddtionalAppDelete3" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                            </td>
                                                                         </tr>
 
                                                                          <tr style="display:none;vertical-align: middle;" id="row4-additional-apps">
                                                                             <td align="center">4</td>
                                                                             <td>
-                                                                                <asp:DropDownList ID="cmdApplication4" onchange="GetApplicationData(this)" CssClass="form-control" runat="server" style="width: 100%;">
+                                                                                <asp:DropDownList ID="cmdApplication4" onchange="GetApplicationData(this)" CssClass="form-control" runat="server" style="width: 100%;margin-top: 3px;">
                                                                                       
                                                                                     
                                                                                 </asp:DropDownList>
@@ -676,12 +1012,21 @@
                                                                                 <input type="number" id="txtConcurrent4" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
                                                                                  <div id="errortxtConcurrent4" style="color:red;padding-top: 2px;display:none;"> Error with input</div>
                                                                             </td>
+
+                                                                             <td align="center">                                                                            
+                                                                                <i class="fa fa-info-circle" style="margin-top: 10px;font-size: 19px;color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>                                                                                                                                                                                                                                        
+                                                                            </td>
+
                                                                             <td>
-                                                                                <asp:DropDownList ID="cmdHospitalName4" CssClass="form-control" runat="server" style="width: 100%;">
+                                                                                <asp:DropDownList ID="cmdHospitalName4" CssClass="form-control" runat="server" style="width: 100%;margin-top: 3px;">
                                                                                                                                                                    
                                                                                 </asp:DropDownList>
                                                                             </td>
-
+                                                                              <td  align="center">
+                                                                                   <span id="cmdAddtionalAppDelete4" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px;margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                            </td>
                                                                         </tr>
 
                                                                     </tbody>
@@ -743,12 +1088,12 @@
       
       <td style="width: 50px;">
 
-          <input id="cmdISPSoftwareNo" class="ISPSoftwareButton active" onclick="ispSoftware('NO');" type="button" value="No" >
+          <input id="cmdISPSoftwareNo" class="ISPSoftwareButton active" onclick="ispSoftware('NO',this);" type="button" value="No" >
           
 
       </td>
       <td style="width: 50px;">
-          <input id="cmdISPSoftwareYes" class="ISPSoftwareButton" onclick="ispSoftware('YES');" type="button" value="Yes" >          
+          <input id="cmdISPSoftwareYes" class="ISPSoftwareButton" onclick="ispSoftware('YES',this);" type="button" value="Yes" >          
           <asp:HiddenField ID="hidISPSoftware" runat="server" />
       </td>
 
@@ -778,17 +1123,17 @@
            <td >
 
 
-               <input id="cmdISPSoftwareOnly1" class="ISPSoftwareOnly active" type="button" value="1" >
-               <input id="cmdISPSoftwareOnly2" class="ISPSoftwareOnly" type="button" value="2" >
-               <input id="cmdISPSoftwareOnly3" class="ISPSoftwareOnly" type="button" value="3" >
-               <input id="cmdISPSoftwareOnly4" class="ISPSoftwareOnly" type="button" value="4" >
-               <input id="cmdISPSoftwareOnly5" class="ISPSoftwareOnly" type="button" value="5" >
-               <input id="cmdISPSoftwareOnly6" class="ISPSoftwareOnly" type="button" value="6" >
-               <input id="cmdISPSoftwareOnly7" class="ISPSoftwareOnly" type="button" value="7" >
-               <input id="cmdISPSoftwareOnly8" class="ISPSoftwareOnly" type="button" value="8" >
-               <input id="cmdISPSoftwareOnly9" class="ISPSoftwareOnly" type="button" value="9" >
-               <input id="cmdISPSoftwareOnly10" class="ISPSoftwareOnly" type="button" value="10" >
-               <input id="cmdISPSoftwareOnly11" class="ISPSoftwareOnly" type="button" value="11" >
+               <input id="cmdISPSoftwareOnly1" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly active" type="button" value="1" >
+               <input id="cmdISPSoftwareOnly2" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="2" >
+               <input id="cmdISPSoftwareOnly3" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="3" >
+               <input id="cmdISPSoftwareOnly4" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="4" >
+               <input id="cmdISPSoftwareOnly5" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="5" >
+               <input id="cmdISPSoftwareOnly6" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="6" >
+               <input id="cmdISPSoftwareOnly7" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="7" >
+               <input id="cmdISPSoftwareOnly8" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="8" >
+               <input id="cmdISPSoftwareOnly9" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="9" >
+               <input id="cmdISPSoftwareOnly10" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="10" >
+               <input id="cmdISPSoftwareOnly11" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="11" >
 
 
                <asp:HiddenField ID="hidISPSoftwareOnly" runat="server" />
@@ -828,6 +1173,7 @@
                                                                         </div>
                                                                     </div>
                                                                     
+                                                                     <div onclick="MacAddLine();" style="cursor: pointer;margin-left: 14px;"> + Add another line </div>
     
                                                                   </div>
 
@@ -845,14 +1191,16 @@
     <tbody>
     <tr>
      
-      <td> <input type="button" name="hhaNOT" class="HHA" onclick="hha('NO');" value="Hardware High Availiabllity NOT required" id="hhaNOT" style="font-weight: 600;height: 49px;margin-left: 217px;width:300px;">                                    </td>
+      <td> <input type="button" name="hhaNOT" class="HHA" onclick="hha('NO');" value="Hardware High Availiabllity NOT required" id="hhaNOT" style="font-weight: 600;height: 49px;margin-left: 217px;width:300px;"></td>
+        <td><input type="button" name="HHNotPro" onclick="hha('Pro');"  class="HHAopt" value="Pro" id="HHNotPro" style="font-weight: 600;height: 49px;width:300px;margin-left: 10px"></td>
+        <td><input type="button" name="HHNotPrem" onclick="hha('Premium');" class="HHAopt" value="Premium" id="HHNotPrem" style="font-weight: 600;height: 49px;width:300px;margin-left: 10px"></td>
      
     </tr>
     <tr>
       
       <td><input type="button" name="hhaIS" onclick="hha('YES');" class="HHA" value="Hardware High Availiabllity IS required" id="hhaIS" style="font-weight: 600;height: 49px;margin-left: 217px;width:300px;margin-top: 10px;"></td>
-      <td><input type="button" name="Button2" class="HHA" value="Partial High Availability" id="Button2" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
-      <td><input type="button" name="Button2" class="HHA" value="Full High Availability" id="Button2" style="color: black !important;cursor: default;background-color: #d2dee5 !important;border: 1px solid #d2dee5;border-bottom-color: transparent;font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
+      <td><input type="button" name="HHYesPartial" class="HHAyesopt" value="Partial High Availability" id="HHYesPartial" style="font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
+      <td><input type="button" name="HHYesFull" class="HHAyesopt" value="Full High Availability" id="HHYesFull" style="font-weight: 600;height: 49px;margin-left: 10px;width:300px;margin-top: 10px;"></td>
     </tr>
     
   </tbody>
@@ -878,7 +1226,7 @@
   <tbody>
     <tr>
       
-      <td colspan="2" style="width: 274px" id="STBAddStorageLabel">STB Additional Storage</td>
+      <td colspan="2" style="width: 274px" id="STBAddStorageLabel">5TB Additional Storage</td>
       
       <td style="width: 50px;">
 
@@ -894,7 +1242,7 @@
 	
 	    <tr>
       
-      <td colspan="2" style="width: 274px" id="ISPTextLicenseRequiredLabel">ISP Text License Required</td>
+      <td colspan="2" style="width: 274px" id="ISPTextLicenseRequiredLabel">ISP Test License Required</td>
       
       <td style="width: 50px;">
 
@@ -909,7 +1257,7 @@
 	
 		    <tr>
       
-      <td colspan="2" style="width: 274px" id="ISPEnterprisetestlicenseLabel" >ISP Enterprise test license</td>
+      <td colspan="2" style="width: 274px" id="ISPEnterprisetestlicenseLabel" >ISP Enterprise Test License</td>
       
       <td style="width: 50px;">
 
@@ -943,7 +1291,7 @@
     <div class="col-md-6">
 		   <div class="heading">
 	        <h2 style="font-size: 16px;font-weight: bold;margin-left: -17px;">IntelliSpace Portal Enterprise Premium HW</h2>
-			<p style="margin-left: -17px;">50 concurrent users</p>
+			<p style="margin-left: -17px;">Min 50 concurrent users</p>
 	   </div>
 <div class="tab-pane active" id="" role="tabpanel" aria-labelledby="DELIVERY-tab">
                                                                 <table class="table" style="margin-left: -15px;">
@@ -955,17 +1303,17 @@
       
       <td style="width: 50px;">
 
-          <input type="button" name="PhilipsprovidestorageNo" value="No" id="PhilipsprovidestorageNo" class="Philipsprovidestorage" style="font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="PhilipsprovidestorageNo" value="No" id="PhilipsprovidestorageNo" onclick="prePhilipsprovidestorage('NO');"  class="Philipsprovidestorage" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td colspan="" style="width: 50px;">
-          <input type="button" name="PhilipsprovidestorageYes" value="Yes" id="PhilipsprovidestorageYes" class="Philipsprovidestorage" style="font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="PhilipsprovidestorageYes" value="Yes" id="PhilipsprovidestorageYes" onclick="prePhilipsprovidestorage('YES');" class="Philipsprovidestorage" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
     </tr>
-<tr>
+<tr id="premTotalStorageRequiredROW">
       
-      <td style="width: 274px;">Additional Storage Required </td>
+      <td style="width: 274px;">Total Storage Required </td>
       
       <td style="width: 50px;">
 
@@ -986,18 +1334,18 @@
 		
 	    <tr>
       
-      <td style="width: 274px">Additional host server required </td>
+      <td style="width: 274px">Total Host servers required </td>
            <td style="width: 50px;">
-          <input type="button" name="AdditionalhostserverNo" value="No" id="AdditionalhostserverNo" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="AdditionalhostserverNo" value="1" id="AdditionalhostserverNo" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
       <td style="width: 50px;">
 
-          <input type="button" name="Additionalhostserver1" value="1" id="Additionalhostserver1" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;">
+          <input type="button" name="Additionalhostserver1" value="2" id="Additionalhostserver1" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;">
 
       </td>
       <td style="width: 50px;">
-          <input type="button" name="Additionalhostserver2" value="2" id="Additionalhostserver2" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;"> 
+          <input type="button" name="Additionalhostserver2" value="3" id="Additionalhostserver2" class="AdditionalhostserverHW" style="font-weight: 600;height: 49px;width:100px;"> 
 
       </td>
     </tr>
@@ -1117,6 +1465,7 @@
           <asp:HiddenField ID="hidLicenceData" runat="server" />
           <asp:HiddenField ID="hidApplicationData" runat="server" />
           <asp:HiddenField ID="hidMacTable"  runat="server"  Value="" />
+         <asp:HiddenField ID="hidManualISP" runat="server" />
 
     </form>
 
@@ -1129,6 +1478,9 @@
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
     <script>
 
@@ -1186,9 +1538,10 @@
 
         function addRow(idx, ApplicationUsed,NoRows,IsTest,maclist) {
 
-        var empTab = document.getElementById('macTable');
+            var datalicence =  parseInt($('#hidLicenceData')[0].value) + 1;
 
-        var rowCnt = empTab.rows.length;    // get the number of rows.
+            var empTab = document.getElementById('macTable');
+            var rowCnt = empTab.rows.length;    // get the number of rows.
             var tr = empTab.insertRow(rowCnt); // table row.
             tr.id = ApplicationUsed;
             //tr = empTab.insertRow(rowCnt);
@@ -1214,13 +1567,21 @@
                         select.id = "ApplicationSoftwareOnly" + idx;
                         select.setAttribute("onchange", "storeCurrentMac();");
 
+                        if (idx > datalicence ) {
+                            
+                        } else {
+                            select.setAttribute("disabled", "disabled");
+
+                        }
+                        
+
 
 
                      
 
 
                         var option;
-                        var inputdata = "Advanced Extended Storage 5TB||Concerto remote sites||Ent Prem. HW Solution engine||Ent Prem. HW Solution storage||Enterprise Engine SW||ISP Advanced  SW License||ISP Premium  SW License||ISP Server - Software only||Premium Add. Second Engine||Premium Add. Third Engine||Test Server";
+                        var inputdata = "NICB021 - Advanced Extended Storage 5TB||FIC0139 - Concerto remote sites||NICB020 - Ent Prem. HW Solution engine||NICB023 - Ent Prem. HW Solution storage||NICB006 - Enterprise Engine SW||ISP Advanced  SW License||ISP Premium  SW License||FIC0456 - ISP Server - Software only||NICB052 - Premium Add. Second Engine||NICB053 - Premium Add. Third Engine||Test Server";
                         var split = inputdata.split('||');
 
                         select.setAttribute("class", "form-control");
@@ -1236,9 +1597,9 @@
                         td.appendChild(select);
 
                         if (idx == 1) {
-                            $("#ApplicationSoftwareOnly" + idx).val('Enterprise Engine SW').change();                                                       
+                            $("#ApplicationSoftwareOnly" + idx).val('NICB006 - Enterprise Engine SW').change();                                                       
                         } else {
-                            $("#ApplicationSoftwareOnly" + idx).val('ISP Server - Software only').change();                                    
+                            $("#ApplicationSoftwareOnly" + idx).val('FIC0456 - ISP Server - Software only').change();                                    
                         }
 
 
@@ -1263,6 +1624,7 @@
                         if (IsTest == true) {
                             if (NoRows == idx) {
                                 $("#ApplicationSoftwareOnly" + idx)[0].options[10].selected = 'selected'; //Test 
+                                $("#ApplicationSoftwareOnly" + idx).attr("disabled", "disabled");
                             }
                         }
 
@@ -1351,7 +1713,15 @@
             
         });
 
-        
+        $('.HHAyesopt').click(function () {           
+           $('.HHAyesopt.active').removeClass("active");                
+            $(this).addClass("active");                                                 
+        });
+
+        $('.HHAopt').click(function () {           
+           $('.HHAopt.active').removeClass("active");                
+           $(this).addClass("active");                                                 
+        });
 
          $('.HHA').click(function() {
             $('.HHA.active').removeClass("active");             
@@ -1463,6 +1833,162 @@
             }
         }
 
+
+
+        function deleteAddtionalApp(thisItem) {
+
+            let hidv = $("#hidadditionalapps")[0].value;
+            hidv--;
+            $("#hidadditionalapps")[0].value = hidv;
+
+            switch (hidv) {
+                case 1:
+                    $("#row2-additional-apps").hide();
+                    $("#row3-additional-apps").hide();
+                    $("#row4-additional-apps").hide();                    
+                    break;
+                case 2:
+                   
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").hide();
+                    $("#row4-additional-apps").hide();  
+                    break;
+                case 3:
+                  
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").hide();  
+                    break;
+                case 4:               
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();  
+                    break;
+            }
+        }
+
+
+        function deleteHospital(thisItem) {
+
+            let hidv = $("#hidCentralSite")[0].value;
+            hidv--;
+            $("#hidCentralSite")[0].value = hidv;
+
+            switch (hidv) {               
+                 case 1:
+                    $("#row2-central").hide();
+                    $("#row3-central").hide();
+                    $("#row4-central").hide();
+                    $("#row5-central").hide();
+                    $("#row6-central").hide();
+                    $("#row7-central").hide();
+                    $("#row8-central").hide();
+                    $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                case 2:
+                    $("#row2-central").show();
+                    $("#row3-central").hide();
+                    $("#row4-central").hide();
+                    $("#row5-central").hide();
+                    $("#row6-central").hide();
+                    $("#row7-central").hide();
+                    $("#row8-central").hide();
+                    $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                case 3:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").hide();
+                    $("#row5-central").hide();
+                    $("#row6-central").hide();
+                    $("#row7-central").hide();
+                    $("#row8-central").hide();
+                    $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                case 4:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                     $("#row5-central").hide();
+                    $("#row6-central").hide();
+                    $("#row7-central").hide();
+                    $("#row8-central").hide();
+                    $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                  case 5:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").hide();
+                    $("#row7-central").hide();
+                    $("#row8-central").hide();
+                    $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                case 6:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                      $("#row7-central").hide();
+                    $("#row8-central").hide();
+                    $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                case 7:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                     $("#row8-central").hide();
+                    $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                case 8:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                    $("#row8-central").show();
+                     $("#row9-central").hide();
+                    $("#row10-central").hide();
+                    break;
+                case 9:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                    $("#row8-central").show();
+                    $("#row9-central").show();
+                    $("#row10-central").hide();
+                    break;
+                case 10:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                    $("#row8-central").show();
+                    $("#row9-central").show();
+                    $("#row10-central").show();
+                    break;
+            }
+
+        }
+
         function CentralAddSite() {
             
             let hidv = $("#hidCentralSite")[0].value;
@@ -1488,6 +2014,51 @@
                     $("#row4-central").show();
                     $("#row5-central").show();
                     break;
+                case 6:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    break;
+                case 7:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                    break;
+                case 8:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                    $("#row8-central").show();
+                    break;
+                case 9:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                    $("#row8-central").show();
+                    $("#row9-central").show();
+                    break;
+                case 10:
+                    $("#row2-central").show();
+                    $("#row3-central").show();
+                    $("#row4-central").show();
+                    $("#row5-central").show();
+                    $("#row6-central").show();
+                    $("#row7-central").show();
+                    $("#row8-central").show();
+                    $("#row9-central").show();
+                    $("#row10-central").show();
+                    break;
             }
         }
 
@@ -1495,7 +2066,14 @@
 
         function GetLicenceData() {
 
-            let enterpriseuser = $("#CONCURRENTENTERPRISEUSERS")[0].value;           
+            let enterpriseuser = $("#CONCURRENTENTERPRISEUSERS")[0].value;    
+
+            if (enterpriseuser > 50) {
+                alert("Concurrent users can not exceed 50");
+                $("#CONCURRENTENTERPRISEUSERS")[0].value = 50;
+            }
+
+
             let IsTest = false;          
 
             let selectedapplication = "";
@@ -1508,8 +2086,8 @@
             selectedapplication = selectedapplication1 + "~" + selectedapplication2 + "~" + selectedapplication3 + "~" + selectedapplication4;//+ "~" + selectedapplication5;
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser:enterpriseuser }
-
-            $.ajax('./apidata.aspx', 
+            
+            $.ajax('./apidata', 
                 {
                     type: 'POST',
                      data: myKeyVals,
@@ -1517,8 +2095,8 @@
                 //timeout: 5000,     // timeout milliseconds
                 success: function (data,status,xhr) {   // success callback function
 
-                    $('.hidLicenceData').value = data.licence;
-                    $('.hidApplicationData').value = data.application;
+                    $('#hidLicenceData')[0].value = data.licence;
+                    $('#hidApplicationData')[0].value = data.application;
 
                     console.log("data.licence:" + data.licence);
                     console.log("data.Name:" +  data.application);
@@ -1700,29 +2278,51 @@
         }
 
 
-        function ispSoftware(typeButton) {
+        function ispSoftware(typeButton,currentButton) {
 
 
              //$('.hidLicenceData').value = data.licence;
              //$('.hidApplicationData').value = data.application;
+            let abort = true;
 
 
-            let currentValue = parseInt( $('.ISPSoftwareOnly.active')[0].value);
-            $('.ISPSoftwareOnly.active').removeClass("active");  
+            if (typeButton == "NO") {
+                if (typeButton == "NO" & $("#cmdISPSoftwareNo").hasClass('active') == true) {
+                    abort = true;
+                } else {
+                    abort = false;
+                }
+            }
+
 
             if (typeButton == "YES") {
+                if (typeButton == "YES" & $("#cmdISPSoftwareYes").hasClass('active') == true) {
+                    abort = true;
+                } else {
+                    abort = false;
+                }
+            }
 
-                currentValue = currentValue + 1;
-                $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
 
-                 CreateRow( currentValue ,$('.hidApplicationData').value,true,$('#hidMacTable')[0].value)
+            if (abort == false) {
+                let currentValue = parseInt($('.ISPSoftwareOnly.active')[0].value);
+                $('.ISPSoftwareOnly.active').removeClass("active");
+
+                if (typeButton == "YES") {
+
+                    currentValue = currentValue + 1;
+                    $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
+
+                    CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value)
 
 
-            } else {
+                } else {
 
-                currentValue = currentValue - 1;
-                $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
-                CreateRow( currentValue ,$('.hidApplicationData').value,false,$('#hidMacTable')[0].value)
+                    currentValue = currentValue - 1;
+                    $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
+                    CreateRow(currentValue, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value)
+                }
+
             }
             
         }
@@ -1731,13 +2331,45 @@
         function hha(typeButton) {
 
             if (typeButton == "YES") {
+                $(".STBAddStorage").removeClass("active");     
+                $(".ISPTextLicenseRequired").removeClass("active");     
+                $(".ISPEnterprisetestlicense").removeClass("active");     
+                $(".ISPAdvancedlicense").removeClass("active");     
+                
+                 
                 $("#STBAddStorageNo").prop('disabled', true);
                 $("#STBAddStorageNo").css('color', 'grey');
-                $("#STBAddStorageNo").css('background-color', '#d2dee5');  
-                $("#STBAddStorageLabel").css('color', '#d2dee5');  
+                
+
+                $("#STBAddStorageLabel").css('color', '#d2dee5'); 
+                
                 $("#STBAddStorageYes").prop('disabled', true);
                 $("#STBAddStorageYes").css('color', 'grey');
+
+                $("#ISPTextLicenseRequiredNo").prop('disabled', true);
+                $("#ISPTextLicenseRequiredNo").css('color', 'grey');
+
+                $("#ISPTextLicenseRequiredYes").prop('disabled', true);
+                $("#ISPTextLicenseRequiredYes").css('color', 'grey');
+
+                $("#ISPEnterprisetestlicenseNo").prop('disabled', true);
+                $("#ISPEnterprisetestlicenseNo").css('color', 'grey');
+
+                $("#ISPEnterprisetestlicenseYes").prop('disabled', true);
+                $("#ISPEnterprisetestlicenseYes").css('color', 'grey');
+
+                $("#ISPAdvancedlicense1").prop('disabled', true);
+                $("#ISPAdvancedlicense1").css('color', 'grey');
+
+                $("#ISPAdvancedlicense2").prop('disabled', true);
+                $("#ISPAdvancedlicense2").css('color', 'grey');
+
+                $("#ISPAdvancedlicense3").prop('disabled', true);
+                $("#ISPAdvancedlicense3").css('color', 'grey');
+
+
                 
+
 
                 $("#ISPTextLicenseRequiredLabel").css('color', '#d2dee5');  
                 $("#ISPEnterprisetestlicenseLabel").css('color', '#d2dee5');  
@@ -1747,7 +2379,14 @@
 
             } else {
                 $("#STBAddStorageNo").prop('disabled', false);  
-                $("#STBAddStorageNo").css('color', 'black');                
+                $("#STBAddStorageNo").css('color', 'black');     
+
+                $("#ISPTextLicenseRequiredNo").prop('disabled', false);  
+                $("#ISPTextLicenseRequiredNo").css('color', 'black');     
+
+                 $("#ISPTextLicenseRequiredYes").prop('disabled', false);  
+                $("#ISPTextLicenseRequiredYes").css('color', 'black'); 
+                
                 $('#STBAddStorageLabel').css('color', '#333'); 
                 $("#STBAddStorageYes").prop('disabled', false);
                 $("#STBAddStorageYes").css('color', 'black');
@@ -1755,6 +2394,22 @@
                 $("#ISPTextLicenseRequiredLabel").css('color', '#333');
                 $("#ISPEnterprisetestlicenseLabel").css('color', '#333');
                 $("#ISPAdvancedlicenseLabel").css('color', '#333');   
+
+                $("#ISPEnterprisetestlicenseNo").prop('disabled', false);  
+                $("#ISPEnterprisetestlicenseNo").css('color', 'black');    
+
+                $("#ISPEnterprisetestlicenseYes").prop('disabled', false);  
+                $("#ISPEnterprisetestlicenseYes").css('color', 'black');    
+
+
+                $("#ISPAdvancedlicense1").prop('disabled', false);  
+                $("#ISPAdvancedlicense1").css('color', 'black');    
+
+                $("#ISPAdvancedlicense2").prop('disabled', false);  
+                $("#ISPAdvancedlicense2").css('color', 'black');    
+
+                $("#ISPAdvancedlicense3").prop('disabled', false);  
+                $("#ISPAdvancedlicense3").css('color', 'black');    
 
                 
             }
@@ -1768,8 +2423,65 @@
         }
 
 
+        function ISPSoftwareButton(currentButton) {
+
+            
+            let mybut = currentButton.value;
+            $("#hidManualISP")[0].value = mybut;
+            let HasTestServer = $("#cmdISPSoftwareYes").hasClass('active');
+
+            if (HasTestServer==true) {
+                CreateRow(mybut, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value);
+            } else {
+                CreateRow(mybut, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value);
+            }
+
+        }
+
+
+        function MacAddLine() {
+
+            let currentValue = parseInt($('.ISPSoftwareOnly.active')[0].value);
+            let HasTestServer = $("#cmdISPSoftwareYes").hasClass('active');
+            currentValue = currentValue + 1;
+
+            if (currentValue < 11) {
+
+                $('.ISPSoftwareOnly.active').removeClass("active");
+                $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
+
+
+                if (HasTestServer == true) {
+                    CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value);
+                } else {
+                    CreateRow(currentValue, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value);
+                }
+
+            } else {
+                alert('Maximum lines reached');
+            }
+
+
+        }
+
 
         GetLicenceData();
+
+
+
+        function prePhilipsprovidestorage(elm) {
+
+            if (elm == "NO") {
+
+                $("#premTotalStorageRequiredROW").hide();
+
+            } else {
+                $("#premTotalStorageRequiredROW").show();
+            }
+
+        }
+
+        
 
         
 
