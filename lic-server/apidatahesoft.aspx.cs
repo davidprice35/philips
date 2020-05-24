@@ -37,6 +37,12 @@ public partial class lic_server_apidata : System.Web.UI.Page
     {
         int IntelliSpace_licenses = 0;
         int Licence = 0;
+
+        int parial_ha = 0;
+        int full_ha = 0;
+        int server_ha_partial = 0;
+        int server_ha_full = 0;
+
         string SQL = string.Empty;
         DataView MyDV = null;
 
@@ -61,8 +67,8 @@ public partial class lic_server_apidata : System.Web.UI.Page
 
            // var concurrentUserList1 = new List<concurrentUserList>();
 
-            //if (selectedapplication!="" && selectedapplication != "?~?~?~?")
-            //{
+            if (selectedapplication!="" && selectedapplication != "?~?~?~?")
+            {
 
                 string[] applicationslist = selectedapplication.Split('~');
                 foreach (string applist in applicationslist)
@@ -92,22 +98,19 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 }
 
 
-            //string[] words = selectedapplication.Split('|');
-            //selectedapplication = words[0];
+                //string[] words = selectedapplication.Split('|');
+                //selectedapplication = words[0];
 
-            if (selectedapplication != "" && selectedapplication != "?~?~?~?")
-            {
-
-                SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Applications in (" + SelectedAppList + ")";
-                MyDV = Helper.GetData(SQL);
+                SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Applications in ("+ SelectedAppList + ")";
+                MyDV = Helper.GetData(SQL);               
                 foreach (DataRowView rowView in MyDV)
                 {
-                    Category = rowView["Category"].ToString();
-
-                    switch (Category)
+                    Category = rowView["Category"].ToString();  
+                    
+                    switch(Category)
                     {
                         case "Zerofootprint Software":
-                            // Category = "ZFP";
+                           // Category = "ZFP";
                             HasZFP = true;
                             break;
                         case "Dynacad software":
@@ -122,10 +125,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                     }
 
                 }
-
-            }else
-            {
-                HasIntelliSpace = true;
+               
             }
 
 
@@ -159,6 +159,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 Category += "IntelliSpace ZFP";
             }
 
+
             if (Category== "IntelliSpace DynaCad IntelliSpace ZFP")
             {
                 Category = "IntelliSpace DynaCad ZFP";
@@ -166,23 +167,18 @@ public partial class lic_server_apidata : System.Web.UI.Page
 
             //get licence data
 
-            
-
             if (HasZFP==true)
             {
                 SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Licence where Type ='"+ Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser + " and addtionalrangefrom <=" + concurentusers + " and addtionalrangeto >=" + concurentusers;
                 MyDV = Helper.GetData(SQL);
                 foreach (DataRowView rowView in MyDV)
                 {
-                    IntelliSpace_licenses = Convert.ToInt32(rowView["IntelliSpace_licenses"].ToString());
-                    Licence = Convert.ToInt32(rowView["licenses"].ToString());
-
-                    if (HasDynCad == true)
-                    {
-                        Licence += Convert.ToInt32(rowView["dyncad"].ToString());
-                    }
-
-
+                    IntelliSpace_licenses = Convert.ToInt32(rowView["adv_pro"].ToString());
+                    Licence = Convert.ToInt32(rowView["adv_pre"].ToString());
+                    parial_ha = Convert.ToInt32(rowView["parial_ha"].ToString());
+                    full_ha = Convert.ToInt32(rowView["full_ha"].ToString());
+                    server_ha_partial  = Convert.ToInt32(rowView["server_ha_partial"].ToString());
+                    server_ha_full =  Convert.ToInt32(rowView["server_ha_full"].ToString());
                 }
             }else
             {
@@ -196,21 +192,24 @@ public partial class lic_server_apidata : System.Web.UI.Page
                     Category = "IntelliSpace DynaCad";
                 }
 
-
-                SQL = "SELECT* FROM travelma2_phil1.PhilipsLic_Licence where Type = '" + Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser;
+                SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Licence where Type = '" + Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser;
                 MyDV = Helper.GetData(SQL);
                 foreach (DataRowView rowView in MyDV)
                 {
-                    IntelliSpace_licenses = Convert.ToInt32(rowView["IntelliSpace_licenses"].ToString());
-                    Licence = Convert.ToInt32(rowView["licenses"].ToString());
+                    IntelliSpace_licenses = Convert.ToInt32(rowView["adv_pro"].ToString());
+                    Licence = Convert.ToInt32(rowView["adv_pre"].ToString());
+                    parial_ha = Convert.ToInt32(rowView["parial_ha"].ToString());
+                    full_ha = Convert.ToInt32(rowView["full_ha"].ToString());
+                    server_ha_partial = Convert.ToInt32(rowView["server_ha_partial"].ToString());
+                    server_ha_full = Convert.ToInt32(rowView["server_ha_full"].ToString());
                 }
             }
 
                                    
 
-            Licence = Licence + IntelliSpace_licenses;
+           // Licence = Licence + IntelliSpace_licenses;
 
-            string json = "{\"licence\":\""+ Licence.ToString() + "\" , \"application\":\"" + selectedapplication + "\"}";
+            string json = "{\"licence\":\""+ IntelliSpace_licenses.ToString() + "\" ,\"prelicence\":\"" + Licence.ToString() + "\" ,\"parial_ha\":\"" + parial_ha.ToString() + "\" ,\"full_ha\":\"" + full_ha.ToString() + "\" ,\"server_ha_partial\":\"" + server_ha_partial.ToString() + "\" ,\"server_ha_full\":\"" + server_ha_full.ToString() + "\" , \"application\":\"" + selectedapplication + "\"}";
             Response.Clear();
             Response.ContentType = "application/json; charset=utf-8";
             Response.Write(json);

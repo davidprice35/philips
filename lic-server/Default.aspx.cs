@@ -457,7 +457,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             }
 
 
-            Response.Redirect("/lic-server/ISPConcerto?id=" + myID, true);
+            Response.Redirect("/lic-server/ISPConcerto.aspx?id=" + myID, true);
 
         }
         catch { }
