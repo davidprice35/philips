@@ -164,9 +164,15 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 Category = "IntelliSpace DynaCad ZFP";
             }
 
+
+            if (Category == "IntelliSpace IntelliSpace DynaCad IntelliSpace ZFP")
+            {
+                Category = "IntelliSpace DynaCad ZFP";
+            }
+
             //get licence data
 
-            
+
 
             if (HasZFP==true)
             {

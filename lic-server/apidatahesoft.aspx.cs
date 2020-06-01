@@ -165,6 +165,11 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 Category = "IntelliSpace DynaCad ZFP";
             }
 
+            if (Category == "IntelliSpace IntelliSpace DynaCad IntelliSpace ZFP")
+            {
+                Category = "IntelliSpace DynaCad ZFP";
+            }
+
             //get licence data
 
             if (HasZFP==true)
@@ -198,6 +203,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 {
                     IntelliSpace_licenses = Convert.ToInt32(rowView["adv_pro"].ToString());
                     Licence = Convert.ToInt32(rowView["adv_pre"].ToString());
+
                     parial_ha = Convert.ToInt32(rowView["parial_ha"].ToString());
                     full_ha = Convert.ToInt32(rowView["full_ha"].ToString());
                     server_ha_partial = Convert.ToInt32(rowView["server_ha_partial"].ToString());
