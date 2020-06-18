@@ -2628,3 +2628,43 @@ a:focus, a:hover {
 .OpenDropdown ul.dropdown-menu {
     display: block;
 }
+.DELIVERY-info .tab-regular ul.nav.nav-tabs li a {
+    background: #d2dee5 !important;
+    border: none !important;
+    color: #111 !important;
+    font-weight: 600; 
+    font-size: 13px; cursor:pointer;
+}
+
+.DELIVERY-info .tab-regular ul.nav.nav-tabs li.active a {
+    color: #fff !important;
+    background: #178bc6 !important;
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

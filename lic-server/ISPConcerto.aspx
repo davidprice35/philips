@@ -322,9 +322,14 @@
                 width: 45px;
             }
 
+            .softwareTable[readonly]
+            {
+                pointer-events:none;
+            }
 
             .ISPSoftwareOnly[disabled] {
                 color: grey !important;
+               
             }
     </style>
 
@@ -418,6 +423,13 @@
 
                                         </li>
                                         <li class="icons"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                    </ul>
+
+
+                                     <ul class="nav navbar-nav icons-right" style="float: left;">
+                                        <li class="icons"><a href="<%= Helper.GetUserGuide() %>" target="_blank">Project Profile</a></li>
+                                         <li class="icons"><a href="<%= Helper.GetUserGuide() %>" target="_blank">Existing Project</a></li>
+                                        
                                     </ul>
 
 
@@ -1016,17 +1028,17 @@
                                                                     <table class="table table-bordered" style="margin-left: -0px;">
                                                                         <thead class="thead-light">
                                                                             <tr>
-                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Applications</th>
-                                                                                <th scope="col" class="" style="width: 8%; background-color: #0b1f65;">Concurrent Users</th>
+                                                                                <th scope="col" class="" style="width: 20px;background-color: #0b1f65;">No.</th>
+                                                                                <th scope="col" class="" style="width: 450px;background-color: #0b1f65;">Applications</th>
+                                                                                <th scope="col" class="" style="width: 3%; background-color: #0b1f65;">Concurrent Users</th>
                                                                                 <th scope="col" class="" style="width: 10%; background-color: #0b1f65;">Description</th>
                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">Hospital Name</th>
-                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove</th>
+                                                                                <th scope="col" class="w-10" style="width: 20px;background-color: #0b1f65;">Remove</th>
 
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
-                                                                            <tr>
+                                                                             <tr style="" vertical-align: middle;" id="row1-additional-apps">
                                                                                 <td align="center">1</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication1" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
@@ -1035,7 +1047,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent1" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent1" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent1" min="1" max="55">
+                                                                                    <input type="number" id="txtConcurrent1" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent1" min="1" max="55" value="<%=m_txtConcurrent1 %>" />
                                                                                     <div id="errortxtConcurrent1" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1048,11 +1060,18 @@
                                                                                     </asp:DropDownList>
                                                                                 </td>
 
-                                                                                <td></td>
+                                                                                <td align="center">
+
+                                                                                    <span id="cmdAddtionalAppDelete1" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+
+
+                                                                                </td>
                                                                             </tr>
 
 
-                                                                            <tr style="display: none; vertical-align: middle;" id="row2-additional-apps">
+                                                                            <tr style="<% if ( m_NoApp == "2" ){ %> display: none; vertical-align: middle; <% } else { %> vertical-align: middle; <% } %>" id="row2-additional-apps">
                                                                                 <td align="center">2</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication2" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%;">
@@ -1061,7 +1080,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent2" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent2" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent2" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent2" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent2" min="10" max="100" value="<%=m_txtConcurrent2 %>">
                                                                                     <div id="errortxtConcurrent2" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1139,13 +1158,324 @@
                                                                                 </td>
                                                                             </tr>
 
+                                                                            <tr style="display: none; vertical-align: middle;" id="row5-additional-apps">
+                                                                                <td align="center">5</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication5" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent5" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent5" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName5" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete5" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row6-additional-apps">
+                                                                                <td align="center">6</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication6" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent6" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent6" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName6" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete6" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row7-additional-apps">
+                                                                                <td align="center">7</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication7" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent7" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent7" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent7" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName7" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete7" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row8-additional-apps">
+                                                                                <td align="center">8</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication8" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent8" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent8" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent8" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName8" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete8" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+                                                                             <tr style="display: none; vertical-align: middle;" id="row9-additional-apps">
+                                                                                <td align="center">9</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication9" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent9" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent9" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent9" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName9" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete9" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+                                                                             <tr style="display: none; vertical-align: middle;" id="row10-additional-apps">
+                                                                                <td align="center">10</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication10" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent10" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent10" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent10" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName10" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete10" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row11-additional-apps">
+                                                                                <td align="center">11</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication11" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent11" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent11" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent11" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName11" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete11" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row12-additional-apps">
+                                                                                <td align="center">12</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication12" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent12" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent12" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent12" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName12" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete12" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row13-additional-apps">
+                                                                                <td align="center">13</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication13" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent13" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent13" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent13" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName13" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete13" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row14-additional-apps">
+                                                                                <td align="center">14</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication14" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent14" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent14" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent14" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName14" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete14" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
+                                                                            <tr style="display: none; vertical-align: middle;" id="row15-additional-apps">
+                                                                                <td align="center">15</td>
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdApplication15" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:HiddenField ID="hidtxtConcurrent15" runat="server" />
+                                                                                    <input type="number" id="txtConcurrent15" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <div id="errortxtConcurrent15" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                </td>
+
+                                                                                <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName15" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                    </asp:DropDownList>
+                                                                                </td>
+                                                                                <td align="center">
+                                                                                    <span id="cmdAddtionalAppDelete15" onclick="deleteAddtionalApp(this);">
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+
                                                                         </tbody>
                                                                     </table>
 
                                                                     <asp:HiddenField ID="hidadditionalapps" Value="1" runat="server" />
 
 
-                                                                    <div onclick="AdditionalAppsAddSite();" style="cursor: pointer;">+ Add another application </div>
+                                                                    <div onclick="AdditionalAppsAddSite();" style="cursor: pointer;width: 180px;">+ Add another application </div>
 
                                                                     <br />
 
@@ -1177,47 +1507,19 @@
                                                     <div class="tab-regular" style="margin-top: 10px;">
                                                         <ul class="nav nav-tabs " id="myTab1" role="tablist">
 
-                                                            <li class="nav-item">
-                                                                <a class="nav-link active " id="DELIVERY-tab" data-toggle="tab" href="#DELIVERY" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 158px;">Software Only</a>
-                                                            </li>
+                                                            <li class="nav-item active" id="Navsoftware-tab"> 
+                                                                <a class="nav-link test" id="DELIVERY-tab" name="DELIVERY-tab" data-toggle="tab" href="#DELIVERY" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 158px;">Software Only</a>
+                                                            </li> 
 
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" id="SOFTWARE-tab" data-toggle="tab" href="#SOFTWARE" role="tab" aria-controls="SOFTWARE" aria-selected="false" onclick="selectButtons();" style="width: 220px;">Software & Hardware</a>
+                                                            <li class="nav-item" id="NavsoftwareHardware-tab">
+                                                                <a class="nav-link" id="SOFTWARE-tab" name="SOFTWARE-tab" data-toggle="tab" href="#SOFTWARE" role="tab" aria-controls="SOFTWARE" aria-selected="false" onclick="selectButtons();" style="width: 220px;">Software & Hardware</a>
                                                             </li>
 
                                                         </ul>
                                                         <div class="tab-content" id="myTabContent1">
 
                                                             <div class="tab-pane active" id="DELIVERY" role="tabpanel" aria-labelledby="DELIVERY-tab">
-                                                                <table class="table" style="margin-left: -15px;">
 
-                                                                    <tbody>
-                                                                        <tr>
-
-                                                                            <td style="width: 274px">ISP Software only test server included: </td>
-
-                                                                            <td style="width: 50px;">
-
-                                                                                <input id="cmdISPSoftwareNo" class="ISPSoftwareButton active" onclick="ispSoftware('NO', this);" type="button" value="No">
-                                                                            </td>
-                                                                            <td style="width: 50px;">
-                                                                                <input id="cmdISPSoftwareYes" class="ISPSoftwareButton" onclick="ispSoftware('YES', this);" type="button" value="Yes">
-                                                                                <asp:HiddenField ID="hidISPSoftware" runat="server" />
-                                                                            </td>
-
-                                                                            <td></td>
-
-                                                                            <td align="right"></td>
-
-
-                                                                            <td></td>
-
-                                                                        </tr>
-
-
-
-                                                                    </tbody>
-                                                                </table>
 
                                                                 <table class="table" style="margin-left: -15px;">
 
@@ -1256,6 +1558,39 @@
                                                                 </table>
 
 
+                                                                <table class="table" style="margin-left: -15px;">
+
+                                                                    <tbody>
+                                                                        <tr>
+
+                                                                            <td style="width: 274px">ISP Test Server Software Only? </td>
+
+                                                                            <td style="width: 50px;">
+
+                                                                                <input id="cmdISPSoftwareNo" class="ISPSoftwareButton active" onclick="ispSoftware('NO', this);" type="button" value="No">
+                                                                            </td>
+                                                                            <td style="width: 50px;">
+                                                                                <input id="cmdISPSoftwareYes" class="ISPSoftwareButton" onclick="ispSoftware('YES', this);" type="button" value="Yes">
+                                                                                <asp:HiddenField ID="hidISPSoftware" runat="server" />
+                                                                            </td>
+
+                                                                            <td></td>
+
+                                                                            <td align="right"></td>
+
+
+                                                                            <td></td>
+
+                                                                        </tr>
+
+
+
+                                                                    </tbody>
+                                                                </table>
+
+                                                                
+
+
 
 
                                                                 <div class="row">
@@ -1267,6 +1602,7 @@
                                                                                         <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
                                                                                         <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
                                                                                         <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
 
 
                                                                                     </tr>
@@ -1366,7 +1702,7 @@
 
                                                                                         <tr>
 
-                                                                                            <td colspan="2" style="width: 274px" id="ISPTextLicenseRequiredLabel">ISP Test License Required</td>
+                                                                                            <td colspan="2" style="width: 274px" id="ISPTextLicenseRequiredLabel">ISP Test Server Software Only?</td>
 
                                                                                             <td style="width: 50px;">
 
@@ -1430,9 +1766,9 @@
 
                                                                                             <td colspan="3" align="right">
 
-                                                                                                <input type="button" name="Additionalhostserver1" value="1" id="Additionalhostserver1" class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
-                                                                                                <input type="button" name="Additionalhostserver2" value="2" id="Additionalhostserver2" class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
-                                                                                                <input type="button" name="Additionalhostserver3" value="3" id="Additionalhostserver3" class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+                                                                                                <input type="button" name="Additionalhostserver1" value="1" id="Additionalhostserver1" disabled class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+                                                                                                <input type="button" name="Additionalhostserver2" value="2" id="Additionalhostserver2" disabled class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+                                                                                                <input type="button" name="Additionalhostserver3" value="3" id="Additionalhostserver3" disabled class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
                                                                                                 <%--<input type="button" name="Additionalhostserver4" value="4" id="Additionalhostserver4" class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
                                                                                                 <input type="button" name="Additionalhostserver5" value="5" id="Additionalhostserver5" class="AdditionalhostserverHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">--%>
                                                                                             </td>
@@ -1469,7 +1805,7 @@
                                                                                                 <input type="button" name="ISPPremiumLicense7" value="7" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense7" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
                                                                                                 <input type="button" name="ISPPremiumLicense8" value="8" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense8" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
                                                                                                 <input type="button" name="ISPPremiumLicense9" value="9" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense9" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
-                                                                                                <input type="button" name="ISPPremiumLicense10" value="10" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense10" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;"></td>
+                                                                                                <%--<input type="button" name="ISPPremiumLicense10" value="10" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense10" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;"></td>--%>
 
 
 
@@ -1481,7 +1817,7 @@
 
                                                                                         <tr>
 
-                                                                                            <td colspan="2" style="width: 274px" id="prelabel5">ISP Test License required?</td>
+                                                                                            <td colspan="2" style="width: 274px" id="prelabel5">ISP Test Server Software Only?</td>
 
                                                                                             <td style="width: 50px;">
 
@@ -1525,7 +1861,7 @@
                                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
                                                                                                 <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
                                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
 
                                                                                             </tr>
                                                                                         </thead>
@@ -1558,13 +1894,27 @@
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-md-12">
+                                                <div class="col-8 text-center">
 
 
-                                                    <asp:LinkButton ID="cmdSave" OnClick="cmdSave_Click" runat="server" Style="display: block; background: #d2dee5; color: #000; margin: auto; width: 20%; border: none; padding: 15px; margin-bottom: 20px; margin-top: 10px; text-align: center;"> Configuration </asp:LinkButton>
+                                                    <table class="table table-responsive text-center" style="margin-left: 40px; margin-right: 40px; width:80%">
+
+                                                      <tbody>    
+                                                        <tr>
+                                                          <td> <asp:LinkButton ID="cmdConfig" OnClick="cmdConfig_Click" runat="server" Style="display: block; background: #178bc6; color: #ffff; margin: auto; width: 20%; border: none; padding: 15px;  text-align: center;"> Configuration </asp:LinkButton>
+</td>
+                                                          <td> <asp:LinkButton ID="cmdSave" OnClick="cmdSave_Click" OnClientClick="setupSave();" runat="server" Style="display: block; background: #178bc6; color: #ffff; margin: auto; width: 20%; border: none; padding: 15px;  text-align: center;"> Save </asp:LinkButton>
+</td>
+      
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
 
 
+                                                   
+                                                   
 
+                                                    <asp:HiddenField ID="HiddenDeliveryModel" Value="" runat="server" />
 
                                                 </div>
 
@@ -1607,6 +1957,29 @@
 </div>
 
 
+
+<!-- Modal -->
+<div class="modal fade" id="ApplicationErrorModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Management</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please add a main application 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
         <footer class="footer">
             <div class="container">
                 <div class="row">
@@ -1636,6 +2009,11 @@
         <asp:HiddenField ID="server_ha_partial" runat="server" />
         <asp:HiddenField ID="server_ha_full" runat="server" />
 
+        <asp:HiddenField ID="hidConcurrent_Default" runat="server" />
+        <asp:HiddenField ID="hidConcurrent_Range" runat="server" />
+
+
+
 
 
 
@@ -1659,7 +2037,7 @@
     <script>
 
         var arrHead = new Array();
-        arrHead = ['No', 'Menu', 'Mac']; // table headers.
+        arrHead = ['No', 'Menu', 'Mac','Remove']; // table headers.
 
 
 
@@ -1670,12 +2048,12 @@
             var tableHeaderRowCount = 1;
             var table = document.getElementById('macTableAdv');
             var rowCount = table.rows.length;
-            for (var i = tableHeaderRowCount; i < rowCount; i++) {
-                //if (table.rows[i].id == ApplicationUsed)
-                //{                
-                table.deleteRow(tableHeaderRowCount);
-                //}
+            for (var i = tableHeaderRowCount; i < rowCount; i++) {                        
+                table.deleteRow(tableHeaderRowCount);            
             }
+
+          
+
             //remove items
             NoRows++;
 
@@ -1692,16 +2070,16 @@
             var tableHeaderRowCount = 1;
             var table = document.getElementById('macTable');
             var rowCount = table.rows.length;
-            for (var i = tableHeaderRowCount; i < rowCount; i++) {
-                //if (table.rows[i].id == ApplicationUsed)
-                //{                
-                table.deleteRow(tableHeaderRowCount);
-                //}
+            for (var i = tableHeaderRowCount; i < rowCount; i++) {                      
+                table.deleteRow(tableHeaderRowCount);           
             }
-            //remove items
-            NoRows++;
+
+            if (IsTest == true) {
+                  NoRows++;
+            }
+
             
-            console.log("Rows:", NoRows);
+            NoRows++;                      
 
             for (var r = 0; r < NoRows; r++) {
                 addRow(r + 1, ApplicationUsed, NoRows, IsTest, maclist);
@@ -1796,12 +2174,12 @@
                         if (idx > datalicence) {
 
                         } else {
-                            select.setAttribute("disabled", "disabled");
+                            select.setAttribute("readonly", "readonly");
 
                         }
                                                                                          
                         var option;
-                        var inputdata = "NICB021 - Advanced Extended Storage 5TB||FIC0139 - Concerto remote sites||NICB020 - Ent Prem. HW Solution engine||NICB023 - Ent Prem. HW Solution storage||NICB006 - Enterprise Engine SW||FIC0455 ISP Advanced  SW License||FIC0456 ISP Premium  SW License||FIC0456 - ISP Server - Software only||NICB052 - Premium Add. Second Engine||NICB053 - Premium Add. Third Engine||NICA963 Test Server";
+                        var inputdata = "NICB021 - Advanced Extended Storage 5TB||FIC0139 - Concerto remote sites||NICB020 - Ent Prem. HW Solution engine||NICB023 - Ent Prem. HW Solution storage||NICB006 - Enterprise Engine SW||FIC0455 ISP Advanced  SW License||FIC0456 ISP Premium  SW License||FICO248 - ISP Server - Software only||NICB052 - Premium Add. Second Engine||NICB053 - Premium Add. Third Engine||NICA963 - ISP Test Server - Software Only";
                         var split = inputdata.split('||');
 
                         select.setAttribute("class", "form-control");
@@ -1836,7 +2214,7 @@
 
                                 for (i = 0; i < res.length; i++) {
                                     if (idx == (i + 1)) {
-                                        $("#ApplicationSoftwareHardWare" + idx).val('NICA963 Test Server').change();
+                                        $("#ApplicationSoftwareHardWare" + idx).val('NICA963 - ISP Test Server - Software Only').change();
                                     }
                                 }
                             }
@@ -1847,9 +2225,9 @@
 
                         if (IsTest == true) {
                             if (NoRows == idx) {
-                                 $("#ApplicationSoftwareHardWare" + idx).val('NICA963 Test Server').change();
+                                 $("#ApplicationSoftwareHardWare" + idx).val('NICA963 - ISP Test Server - Software Only').change();
                                 //$("#ApplicationSoftwareHardWare" + idx)[0].options[10].selected = 'selected'; //Test 
-                                $("#ApplicationSoftwareHardWare" + idx).attr("disabled", "disabled");
+                                $("#ApplicationSoftwareHardWare" + idx).attr("readonly", "readonly");
                             }
                         }
 
@@ -1862,6 +2240,30 @@
                         ele.setAttribute('name', "MacSoftwareOnlyPro" + idx);
                         ele.setAttribute("class", "form-control");
                         td.appendChild(ele);
+
+                        break;
+                    case 3:
+                        
+                                              
+
+
+                        if (idx > datalicence) {
+
+                            var ele = document.createElement('span');
+                            ele.setAttribute('id', 'cmdLicenceProDelete' + idx);
+                            ele.setAttribute('onclick', 'deleteLicencePro(this);');
+                            td.appendChild(ele);
+
+                            document.getElementById('cmdLicenceProDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>';
+
+
+                        } else {
+
+
+
+                            
+
+                        }
 
                         break;
                 }
@@ -1904,7 +2306,7 @@
                         if (idx > datalicence) {
 
                         } else {
-                            select.setAttribute("disabled", "disabled");
+                            select.setAttribute("readonly", "readonly");
 
                         }
 
@@ -1915,10 +2317,10 @@
 
 
                         var option;
-                        var inputdata = "NICB021 - Advanced Extended Storage 5TB||FIC0139 - Concerto remote sites||NICB020 - Ent Prem. HW Solution engine||NICB023 - Ent Prem. HW Solution storage||NICB006 - Enterprise Engine SW||ISP Advanced  SW License||ISP Premium  SW License||FIC0456 - ISP Server - Software only||NICB052 - Premium Add. Second Engine||NICB053 - Premium Add. Third Engine||Test Server";
+                        var inputdata = "NICB021 - Advanced Extended Storage 5TB||FIC0139 - Concerto remote sites||NICB020 - Ent Prem. HW Solution engine||NICB023 - Ent Prem. HW Solution storage||NICB006 - Enterprise Engine SW||ISP Advanced  SW License||ISP Premium  SW License||FICO248 - ISP Server - Software only||NICB052 - Premium Add. Second Engine||NICB053 - Premium Add. Third Engine||NICA963 - ISP Test Server - Software Only";
                         var split = inputdata.split('||');
 
-                        select.setAttribute("class", "form-control");
+                        select.setAttribute("class", "form-control softwareTable");
                         inputdata.split('||').forEach(function (item) {
 
                             option = document.createElement('option');
@@ -1933,7 +2335,7 @@
                         if (idx == 1) {
                             $("#ApplicationSoftwareOnly" + idx).val('NICB006 - Enterprise Engine SW').change();
                         } else {
-                            $("#ApplicationSoftwareOnly" + idx).val('FIC0456 - ISP Server - Software only').change();
+                            $("#ApplicationSoftwareOnly" + idx).val('FICO248 - ISP Server - Software only').change();
                         }
 
 
@@ -1958,12 +2360,13 @@
                         if (IsTest == true) {
                             if (NoRows == idx) {
                                 $("#ApplicationSoftwareOnly" + idx)[0].options[10].selected = 'selected'; //Test 
-                                $("#ApplicationSoftwareOnly" + idx).attr("disabled", "disabled");
+                                $("#ApplicationSoftwareOnly" + idx).attr("readonly", "readonly");
                             }
                         }
 
                         break;
                     case 2:
+                        
 
                         var ele = document.createElement('input');
                         ele.setAttribute('type', 'text');
@@ -1971,6 +2374,34 @@
                         ele.setAttribute('name', "MacSoftwareOnly" + idx);
                         ele.setAttribute("class", "form-control");
                         td.appendChild(ele);
+
+                        break;
+
+
+                    case 3:
+                        
+                        //    <span id="cmdAddtionalAppDelete1" onclick="deleteAddtionalApp(this);">
+                        //        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                        //    </span>                            
+
+
+                        if (idx > datalicence) {
+
+                            var ele = document.createElement('span');
+                            ele.setAttribute('id', 'cmdLicenceDelete' + idx);
+                            ele.setAttribute('onclick', 'deleteLicence(this);');
+                            td.appendChild(ele);
+
+                            document.getElementById('cmdLicenceDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>';
+
+
+                        } else {
+
+
+
+                            
+
+                        }
 
                         break;
                 }
@@ -1982,7 +2413,9 @@
 
         function CheckConcurrentValue(TextBoxItem) {
 
-            if ($(TextBoxItem)[0].value > $(TextBoxItem)[0].max) {
+            let myvalue = parseInt($(TextBoxItem)[0].value);
+
+            if ( myvalue > $(TextBoxItem)[0].max) {
                 $("#errortxtConcurrent" + TextBoxItem.id.substr(TextBoxItem.id.length - 1, 2)).show();
                 $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
                 $("#errortxtConcurrent" + TextBoxItem.id.substr(TextBoxItem.id.length - 1, 2))[0].innerHTML = "max range is " + $(TextBoxItem)[0].max;
@@ -2086,9 +2519,87 @@
 
         });
 
+
+        function CheckApplicationsValidation (appName)
+        {
+
+            var AppArray = [];
+
+            let selectedapplication1 = $("#cmdApplication1")[0].value ;
+            let selectedapplication2 = $("#cmdApplication2")[0].value ;
+            let selectedapplication3 = $("#cmdApplication3")[0].value ;
+            let selectedapplication4 = $("#cmdApplication4")[0].value ;
+            let selectedapplication5 = $("#cmdApplication5")[0].value;
+            let selectedapplication6 = $("#cmdApplication6")[0].value;
+            let selectedapplication7 = $("#cmdApplication7")[0].value;
+            let selectedapplication8 = $("#cmdApplication8")[0].value;
+            let selectedapplication9 = $("#cmdApplication9")[0].value;
+            let selectedapplication10 = $("#cmdApplication10")[0].value;
+            let selectedapplication11 = $("#cmdApplication11")[0].value;
+            let selectedapplication12 = $("#cmdApplication12")[0].value;
+            let selectedapplication13 = $("#cmdApplication13")[0].value;
+            let selectedapplication14 = $("#cmdApplication14")[0].value;
+            let selectedapplication15 = $("#cmdApplication15")[0].value;
+
+
+            AppArray.push(selectedapplication1);
+            AppArray.push(selectedapplication2);
+            AppArray.push(selectedapplication3);
+            AppArray.push(selectedapplication4);
+            AppArray.push(selectedapplication5);
+            AppArray.push(selectedapplication6);
+            AppArray.push(selectedapplication7);
+            AppArray.push(selectedapplication8);
+            AppArray.push(selectedapplication9);
+            AppArray.push(selectedapplication10);
+            AppArray.push(selectedapplication11);
+            AppArray.push(selectedapplication12);
+            AppArray.push(selectedapplication13);
+            AppArray.push(selectedapplication14);
+            AppArray.push(selectedapplication15);
+
+
+
+             var myKeyVals = { appName: appName, AppArray: AppArray.toString() }
+
+            $.ajax('./apicheckapp',
+                {
+                    type: 'POST',
+                    data: myKeyVals,
+                    dataType: 'json', 
+                  
+                    success: function (data, status, xhr) {   // success callback function
+
+
+                        
+                        console.log("data.data:" + data.data);
+
+                        if (data.data=="0" ) {
+                              $("#ApplicationErrorModalCenter").modal();
+                        }
+                     
+
+                    },
+                    error: function (jqXhr, textStatus, errorMessage) { // error callback                     
+                        alert(errorMessage);
+                    }
+                });
+
+
+
+            
+
+
+        }
+
+
         function GetApplicationData(ddlbox) {
+                       
 
             var array = ddlbox.value.split("|");
+
+
+            CheckApplicationsValidation(array[0]);
 
             if (array[2] == "Enterprise") {
 
@@ -2097,9 +2608,24 @@
 
 
             } else {
+                let CONCURRENTENTERPRISEUSERS = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+
+                if (array[2] == "1") {
+                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].readOnly = true;    
+                }
+                
                 $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
                 $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
                 $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
+
+                if (array[0].includes("Add_Users")) {
+
+                    CONCURRENTENTERPRISEUSERS = CONCURRENTENTERPRISEUSERS - 1;
+                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = CONCURRENTENTERPRISEUSERS;
+
+                }
+
+
             }
 
             //Concurrent_Users
@@ -2162,12 +2688,220 @@
                     $("#row3-additional-apps").show();
                     $("#row4-additional-apps").show();
                     break;
+                 case 5:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    break;
+                  case 6:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    break;
+                 case 7:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    break;
+                 case 8:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    break;
+                 case 9:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    $("#row9-additional-apps").show();
+                    
+                    break;
+                 case 10:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    $("#row9-additional-apps").show();
+                    $("#row10-additional-apps").show();
+                    break;
+                case 11:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    $("#row9-additional-apps").show();
+                    $("#row10-additional-apps").show();
+                    $("#row11-additional-apps").show();
+                    break;
+                case 12:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    $("#row9-additional-apps").show();
+                    $("#row10-additional-apps").show();
+                    $("#row11-additional-apps").show();
+                    $("#row12-additional-apps").show();
+                    break;
+                case 13:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    $("#row9-additional-apps").show();
+                    $("#row10-additional-apps").show();
+                    $("#row11-additional-apps").show();
+                    $("#row12-additional-apps").show();
+                    $("#row13-additional-apps").show();
+                    break;
+                case 14:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    $("#row9-additional-apps").show();
+                    $("#row10-additional-apps").show();
+                    $("#row11-additional-apps").show();
+                    $("#row12-additional-apps").show();
+                    $("#row13-additional-apps").show();
+                    $("#row14-additional-apps").show();
+                    break;
+                case 15:
+                    $("#row2-additional-apps").show();
+                    $("#row3-additional-apps").show();
+                    $("#row4-additional-apps").show();
+                    $("#row5-additional-apps").show();
+                    $("#row6-additional-apps").show();
+                    $("#row7-additional-apps").show();
+                    $("#row8-additional-apps").show();
+                    $("#row9-additional-apps").show();
+                    $("#row10-additional-apps").show();
+                    $("#row11-additional-apps").show();
+                    $("#row12-additional-apps").show();
+                    $("#row13-additional-apps").show();
+                    $("#row14-additional-apps").show();
+                    $("#row15-additional-apps").show();
+                    break;
 
             }
 
              GetLicenceData();
         }
 
+
+        function deleteLicence(thisItem) {
+
+
+            let currentValue = parseInt($('.ISPSoftwareOnly.active')[0].value);
+            let HasTestServer = $("#cmdISPSoftwareYes").hasClass('active');
+            currentValue = currentValue - 1;
+
+            if (currentValue < 12) {
+
+                $('.ISPSoftwareOnly.active').removeClass("active");
+                $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
+
+
+                if (HasTestServer == true) {
+                     currentValue = currentValue - 1;
+                    CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value);
+                } else {
+                    CreateRow(currentValue, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value);
+                }
+
+            } else {
+                //alert('Maximum lines reached');
+            }
+
+        }
+
+         function deleteLicencePro(thisItem) {
+
+
+
+             let isPro = $("#HHNotPro").hasClass('active');
+            let currentValue = 0;
+            if (isPro == true) {
+                currentValue = parseInt($('.ISPAdvancedlicense.active')[0].value);
+            } else {
+                currentValue = parseInt($('.ISPPremiumLicenseHW.active')[0].value);
+            }
+
+
+
+            let HasTestServer = $("#ISPTextLicenseRequiredYes").hasClass('active');
+            currentValue = currentValue - 1;
+
+            if (currentValue < 11) {
+               
+                if (isPro == false) {
+
+                    
+                    
+                    $('.ISPPremiumLicenseHW.active').removeClass("active");
+                    $("#ISPPremiumLicense" + currentValue).addClass("active");
+
+                    if (HasTestServer == true) {
+                          currentValue = currentValue - 1;
+                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value, 1);
+                    } else {
+                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value, 1);
+                    }
+
+                    SetPremiumServers(currentValue);
+
+                } else {
+
+
+                    $('.ISPAdvancedlicense.active').removeClass("active");
+                    $("#ISPAdvancedlicense" + currentValue).addClass("active");
+
+                    if (HasTestServer == true) {
+                          currentValue = currentValue - 1;
+                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value, 0);
+                    } else {
+                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value, 0);
+                    }
+
+
+                    //SetPremiumServers(currentValue);
+
+                }
+
+            } else {
+                alert('Maximum lines reached');
+            }
+
+
+        }
 
 
         function deleteAddtionalApp(thisItem) {
@@ -2176,38 +2910,20 @@
             hidv--;
             $("#hidadditionalapps")[0].value = hidv;
 
-            switch (hidv) {
-                case 1:
-                    $("#row2-additional-apps").hide();
-                    $("#row3-additional-apps").hide();
-                    $("#row4-additional-apps").hide();
-                    $("#cmdApplication2")[0].value = "";
-                    $("#cmdApplication3")[0].value = "";
-                    $("#cmdApplication4")[0].value = "";
+            //if (hidv < 1) {
+              //  hidv = 1;
+            //}
+            
+            hidv = thisItem.id;
+            hidv = parseInt(hidv.replace("cmdAddtionalAppDelete", ""));
 
-                    break;
-                case 2:
+             $("#cmdApplication"+hidv+"").val('1');
+             $("#cmdApplication"+hidv+"").trigger('change');
 
-                    $("#row2-additional-apps").show();
-                    $("#row3-additional-apps").hide();
-                    $("#row4-additional-apps").hide();
+            $("#row"+hidv+"-additional-apps").hide();
 
-                    //$("#cmdApplication3")[0].value = ""
-                    //$("#cmdApplication4")[0].value = ""
 
-                    break;
-                case 3:
-
-                    $("#row2-additional-apps").show();
-                    $("#row3-additional-apps").show();
-                    $("#row4-additional-apps").hide();
-                    break;
-                case 4:
-                    $("#row2-additional-apps").show();
-                    $("#row3-additional-apps").show();
-                    $("#row4-additional-apps").show();
-                    break;
-            }
+          
 
              GetLicenceData();
         }
@@ -2439,6 +3155,7 @@
             let selectedapplication2 = $("#cmdApplication2")[0].value + "?" + $("#txtConcurrent2")[0].value;
             let selectedapplication3 = $("#cmdApplication3")[0].value + "?" + $("#txtConcurrent3")[0].value;
             let selectedapplication4 = $("#cmdApplication4")[0].value + "?" + $("#txtConcurrent4")[0].value;
+            let selectedapplication5 = $("#cmdApplication5")[0].value + "?" + $("#txtConcurrent5")[0].value;
 
             //if (selectedapplication1 != "?") {
 
@@ -2446,7 +3163,7 @@
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
-            $.ajax('./apidata.aspx',
+            $.ajax('./apidata',
                 {
                     type: 'POST',
                     data: myKeyVals,
@@ -2457,11 +3174,16 @@
                         $('#hidLicenceData')[0].value = data.licence;
                         $('#hidApplicationData')[0].value = data.application;
 
+                        $('#hidConcurrent_Default')[0].value = data.Concurrent_Default;
+                        $('#hidConcurrent_Range')[0].value = data.Concurrent_Range;
+                        
+
+
                         console.log("data.licence:" + data.licence);
                         console.log("data.Name:" + data.application);
 
                         if ($("#cmdISPSoftwareYes").hasClass('active')) {
-                            data.licence = parseInt(data.licence) + 1;
+                            //data.licence = parseInt(data.licence) + 1;
                             IsTest = true;
                         }
 
@@ -2626,6 +3348,7 @@
 
 
                         storeCurrentMac();
+                         GetProData();
 
                     },
                     error: function (jqXhr, textStatus, errorMessage) { // error callback                     
@@ -2639,7 +3362,7 @@
 
 
 
-            GetProData();
+           
 
         }
         function ispSoftwarePre(typeButton, currentButton) {
@@ -2770,7 +3493,7 @@
 
                 if (typeButton == "YES") {
 
-                    currentValue = currentValue + 1;
+                   // currentValue = currentValue + 1;
                     // $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
 
                     CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value)
@@ -2871,9 +3594,9 @@
                 }
 
                 if (HasTestServer == true) {
-                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value);
+                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value,1);
                 } else {
-                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value);
+                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value,1);
                 }
 
 
@@ -2982,7 +3705,28 @@
                 $("#ISPAdvancedlicense5").css('color', 'grey');
 
 
+                //reset
+                $(".Philipsprovidestorage").prop('disabled', false);
+                $(".Philipsprovidestorage").css('color', 'black');
 
+                $(".AdditionalStorageRequiredHW").prop('disabled', false);
+                $(".AdditionalStorageRequiredHW").css('color', 'black');
+
+               // $(".AdditionalhostserverHW").prop('disabled', false);
+                $(".AdditionalhostserverHW").css('color', 'black');
+
+                $(".ISPPremiumLicenseHW").prop('disabled', false);
+                $(".ISPPremiumLicenseHW").css('color', 'black');
+
+                $(".ISPTestLicenseHW").prop('disabled', false);
+                $(".ISPTestLicenseHW").css('color', 'black');
+
+                $("#prelabel1").css('color', '#333');
+                $("#prelabel2").css('color', '#333');
+                $("#prelabel3").css('color', '#333');
+                $("#prelabel4").css('color', '#333');
+                $("#prelabel5").css('color', '#333');
+                //
 
 
                 $("#ISPTextLicenseRequiredLabel").css('color', '#d2dee5');
@@ -2990,7 +3734,7 @@
                 $("#ISPAdvancedlicenseLabel").css('color', '#d2dee5');
 
 
-
+               
 
 
                 $("#ISPTextLicenseRequiredLabel").css('color', '#d2dee5');
@@ -3179,9 +3923,9 @@
                 }
 
                 if (HasTestServer == true) {
-                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value);
+                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value,1);
                 } else {
-                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value);
+                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value,1);
                 }
 
 
@@ -3264,7 +4008,7 @@
                 $(".AdditionalStorageRequiredHW").prop('disabled', true);
                 $(".AdditionalStorageRequiredHW").css('color', 'grey');
 
-                $(".AdditionalhostserverHW").prop('disabled', true);
+               // $(".AdditionalhostserverHW").prop('disabled', true);
                 $(".AdditionalhostserverHW").css('color', 'grey');
 
                 $(".ISPPremiumLicenseHW").prop('disabled', true);
@@ -3309,9 +4053,9 @@
                 }
 
                 if (HasTestServer == true) {
-                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value);
+                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value,0);
                 } else {
-                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value);
+                    CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value,0);
                 }
 
 
@@ -3325,7 +4069,7 @@
                 $(".AdditionalStorageRequiredHW").prop('disabled', false);
                 $(".AdditionalStorageRequiredHW").css('color', 'black');
 
-                $(".AdditionalhostserverHW").prop('disabled', false);
+               // $(".AdditionalhostserverHW").prop('disabled', false);
                 $(".AdditionalhostserverHW").css('color', 'black');
 
                 $(".ISPPremiumLicenseHW").prop('disabled', false);
@@ -3800,7 +4544,7 @@
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
-            $.ajax('./apidatahesoft.aspx',
+            $.ajax('./apidatahesoft',
                 {
                     type: 'POST',
                     data: myKeyVals,
@@ -4123,7 +4867,7 @@
             console.log("HasTestServer", HasTestServer);
 
             if (HasTestServer == true) {
-                mybut++;
+               // mybut++;
             }
             
 
@@ -4155,6 +4899,35 @@
 
         }
 
+        function SetPremiumServers(currentButtonNumber) {
+
+            let mybut = currentButtonNumber;
+            $("#hidManualISPPro")[0].value = mybut;
+            let HasTestServer = $("#ISPTestLicenseHWYes").hasClass('active');
+
+
+            let HostServers = 0;
+
+            if ($("#Additionalhostserver1").hasClass('active') == true) {
+                HostServers = 1;
+            }
+
+            if ($("#Additionalhostserver2").hasClass('active') == true) {
+                HostServers = 2;
+            }
+
+            if ($("#Additionalhostserver3").hasClass('active') == true) {
+                HostServers = 3;
+            }
+
+            let noServers = Math.ceil((parseInt(mybut) / 3));
+
+            
+            $('.AdditionalhostserverHW.active').removeClass("active");
+            $("#Additionalhostserver" + noServers).addClass("active");                        
+
+        }
+
 
         function ISPSoftwarePreButton(currentButton) {
 
@@ -4162,6 +4935,9 @@
             let mybut = currentButton.value;
             $("#hidManualISPPro")[0].value = mybut;
             let HasTestServer = $("#ISPTestLicenseHWYes").hasClass('active');
+
+            SetPremiumServers(mybut);
+                                       
 
             if (HasTestServer == true) {
                 CreateRowPro(mybut, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value);
@@ -4177,13 +4953,14 @@
             let HasTestServer = $("#cmdISPSoftwareYes").hasClass('active');
             currentValue = currentValue + 1;
 
-            if (currentValue < 11) {
+            if (currentValue < 12) {
 
                 $('.ISPSoftwareOnly.active').removeClass("active");
                 $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
 
 
                 if (HasTestServer == true) {
+                     currentValue = currentValue + 1;
                     CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value);
                 } else {
                     CreateRow(currentValue, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value);
@@ -4209,28 +4986,42 @@
 
 
 
-            let HasTestServer = $("#cmdISPSoftwareYes").hasClass('active');
+            let HasTestServer = $("#ISPTextLicenseRequiredYes").hasClass('active');
             currentValue = currentValue + 1;
 
-            if (currentValue < 6) {
-
-                $('.ISPSoftwareOnly.active').removeClass("active");
-                $("#ISPAdvancedlicense " + currentValue).addClass("active");
-
+            if (currentValue < 11) {
+               
                 if (isPro == false) {
+
+                    
+                    
+                    $('.ISPPremiumLicenseHW.active').removeClass("active");
+                    $("#ISPPremiumLicense" + currentValue).addClass("active");
+
                     if (HasTestServer == true) {
+                          currentValue = currentValue + 1;
                         CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value, 1);
                     } else {
                         CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value, 1);
                     }
 
+                    SetPremiumServers(currentValue);
+
                 } else {
 
+
+                    $('.ISPAdvancedlicense.active').removeClass("active");
+                    $("#ISPAdvancedlicense" + currentValue).addClass("active");
+
                     if (HasTestServer == true) {
+                          currentValue = currentValue + 1;
                         CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value, 0);
                     } else {
                         CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value, 0);
                     }
+
+
+                    SetPremiumServers(currentValue);
 
                 }
 
@@ -4259,10 +5050,30 @@
         }
 
 
+        function setupSave() {
+            ///denDeliveryModel
+             
+            let isSoftwareOnly = $("#Navsoftware-tab").hasClass('active');
+            let isSoftwareHardWare = $("#NavsoftwareHardware-tab").hasClass('active');
+
+            if (isSoftwareOnly != "") {
+                $("#HiddenDeliveryModel")[0].value = "SoftwareOnly";
+            }
+
+            if (isSoftwareHardWare != "") {
+                $("#HiddenDeliveryModel")[0].value = "SoftwareHardWare";
+            }
+                       
+        }
+
         $(document).ready(function () {
             GetLicenceData();
             $('.ApplicationDDL').select2();
         });
+
+
+
+
         
 
     </script >
@@ -4305,8 +5116,7 @@
         .DELIVERY-info .nav-tabs .nav-link.active {
                     color: white !important;
                 cursor: default;
-
-                 background-color: #178bc6 !important;
+                background-color: #178bc6 !important;
                 border: 1px solid #178bc6;
                 border-bottom-color: transparent;
                 font-weight: 600;

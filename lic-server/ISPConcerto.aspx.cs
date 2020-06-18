@@ -18,7 +18,27 @@ using System.Data.SqlClient;
 
 public partial class competitive_info_Competitors : System.Web.UI.Page
 {
-    
+    public string m_NoApp = string.Empty;
+
+    public string m_txtConcurrent1 = "0";
+    public string m_txtConcurrent2 = "0";
+    public string m_txtConcurrent3 = "0";
+    public string m_txtConcurrent4 = "0";
+    public string m_txtConcurrent5 = "0";
+    public string m_txtConcurrent6 = "0";
+    public string m_txtConcurrent7 = "0";
+    public string m_txtConcurrent8 = "0";
+    public string m_txtConcurrent9 = "0";
+    public string m_txtConcurrent10 = "0";
+    public string m_txtConcurrent11 = "0";
+    public string m_txtConcurrent12 = "0";
+    public string m_txtConcurrent13 = "0";
+    public string m_txtConcurrent14 = "0";
+    public string m_txtConcurrent15 = "0";
+
+
+
+
     public string m_UserName = string.Empty;
     public string m_UserID = string.Empty;
     public string m_UserType = string.Empty;
@@ -242,8 +262,12 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             if (!IsPostBack)
             {
 
-                SetUpApplicationCombo();
 
+
+
+
+                SetUpApplicationCombo();
+                SetupPage();
                 //if (Session["SwitchUser"] != null)
                 //{
                 //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
@@ -259,6 +283,64 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
 
             }
+
+        }
+        catch { }
+    }
+
+    private void SetupPage()
+    {
+        try
+        {
+
+            DataView myDV = Helper.GetData("Select * from PhilipsLic_Project where PhilipsLic_ProjectID=" + Request.QueryString["id"]);
+
+
+            foreach (DataRowView rowView in myDV)
+            {
+                AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["centralised_add_application"].ToString());
+                m_NoApp = Convert.ToString(AdditionalApplication1.Count - 1);
+
+
+                for (int i = 0; i <= AdditionalApplication1.Count - 1; i++)
+                {
+
+                    switch(i)
+                    {
+                        case 0:
+                            cmdApplication1.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent1 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 1:
+                            cmdApplication2.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent2 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 2:
+                            cmdApplication3.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent3 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 3:
+                            cmdApplication4.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent4 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 4:
+                            cmdApplication5.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent5 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 5:
+                            cmdApplication6.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent6 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                    }
+
+
+                }
+
+
+
+
+            }
+
 
         }
         catch { }
@@ -288,6 +370,17 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             cmdApplication2.Items.Add(new ListItem("", ""));
             cmdApplication3.Items.Add(new ListItem("", ""));
             cmdApplication4.Items.Add(new ListItem("", ""));
+            cmdApplication5.Items.Add(new ListItem("", ""));
+            cmdApplication6.Items.Add(new ListItem("", ""));
+            cmdApplication7.Items.Add(new ListItem("", ""));
+            cmdApplication8.Items.Add(new ListItem("", ""));
+            cmdApplication9.Items.Add(new ListItem("", ""));
+            cmdApplication10.Items.Add(new ListItem("", ""));
+            cmdApplication11.Items.Add(new ListItem("", ""));
+            cmdApplication12.Items.Add(new ListItem("", ""));
+            cmdApplication13.Items.Add(new ListItem("", ""));
+            cmdApplication14.Items.Add(new ListItem("", ""));
+            cmdApplication15.Items.Add(new ListItem("", ""));
 
             foreach (DataRowView rowView in MyDV)
             {
@@ -296,7 +389,19 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 cmdApplication2.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
                 cmdApplication3.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
                 cmdApplication4.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                
+                cmdApplication5.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication6.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication7.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication8.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication9.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication10.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication11.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication12.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication13.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication14.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+                cmdApplication15.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+
+
             }
 
         }
@@ -428,13 +533,15 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         string ApplicationSoftwareOnly1 = string.Empty;
         string MacSoftwareOnly1 = string.Empty;
 
-        
+        string id = string.Empty;
 
         try {
 
+
+            id = Request.QueryString["id"];
+
             int siteinfoidx = GetNumberofEntries("siteinfo");
-
-
+            
             for (int i = 1; i <= siteinfoidx; i++)
             {
                 string item1 = Request.Form["txtHospitalName" + i.ToString()].ToString();
@@ -444,11 +551,14 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                 SiteInfoData1.Add(new SiteInfoData {  No=i.ToString(), HospitalName= item1, HospitalStreet = item2,  Site= item3, Connectivity= item4 });
             }
+            //serilaze for DB
+            string centralised_siteinfo = JsonConvert.SerializeObject(SiteInfoData1, Formatting.Indented);
 
 
-            
             string CONCURRENTENTERPRISEUSERS = Request.Form["CONCURRENTENTERPRISEUSERS"].ToString();
 
+
+            string WhichDeliveryTab = Request.Form["HiddenDeliveryModel"];
 
 
             int addApplicationidx = GetNumberofEntries("addApplication");
@@ -457,19 +567,25 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             for (int i = 1; i <= addApplicationidx; i++)
             {
                 string item1 = Request.Form["cmdApplication" + i.ToString()].ToString();
-                string item2 = Request.Form["hidtxtConcurrent" + i.ToString()].ToString();
-                string item3 = "";
-                if (Request.Form["cmdHospitalName" + i.ToString()] !=null)
+
+                if (item1 != "")
                 {
-                    item3 = Request.Form["cmdHospitalName" + i.ToString()].ToString();
+
+                    string item2 = Request.Form["txtConcurrent" + i.ToString()].ToString();
+                    string item3 = "";
+                    if (Request.Form["cmdHospitalName" + i.ToString()] != null)
+                    {
+                        item3 = Request.Form["cmdHospitalName" + i.ToString()].ToString();
+                    }
+                    else
+                    {
+                        item3 = "";
+                    }
+
+                    AdditionalApplication1.Add(new AdditionalApplication { No = i.ToString(), Application = item1, ConcurrentUsers = item2, HospitalName = item3 });
                 }
-                else
-                {
-                    item3 = "";
-                }
-                
-                AdditionalApplication1.Add(new AdditionalApplication {  No = i.ToString() , Application = item1,  ConcurrentUsers = item2 , HospitalName = item3});
             }
+            string AdditionalApplication = JsonConvert.SerializeObject(AdditionalApplication1, Formatting.Indented);
 
 
 
@@ -480,14 +596,26 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             {
                 string item1 = Request.Form["ApplicationSoftwareOnly" + i.ToString()].ToString();
                 string item2 = Request.Form["MacSoftwareOnly" + i.ToString()].ToString();
-                
+
                 MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2});
             }
 
-                       
+            string MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
+
+
+
+
+            string SQL = "update PhilipsLic_Project set centralised_add_application='"+ AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
+            Helper.InsertData(SQL);
+
+
+
+
+            //Response.Redirect("/lic-server/OutputReporta.aspx?id=10");
+
 
             //SiteInfoData1.Add(new SiteInfoData { FirstName = t1.Text, LastName = t2.Text, Email = t3.Text });
-            // PortalJSON = JsonConvert.SerializeObject(KeyPortalDat1, Formatting.Indented);
+            // PortalJSON = JsonConvert.SerializeObject(SiteInfoData1, Formatting.Indented);
 
             //save DB
             //Request.QueryString["id"]
@@ -514,6 +642,20 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         {
 
         }
+    }
+
+    protected void cmdConfig_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string id = Request.QueryString["id"];
+            Response.Redirect("/lic-server/OutputReporta.aspx?id=" + id);
+        }
+        catch (Exception ex)
+        {
+
+        }
+
     }
 }
 

@@ -37,6 +37,8 @@ public partial class lic_server_apidata : System.Web.UI.Page
     {
         int IntelliSpace_licenses = 0;
         int Licence = 0;
+        string Concurrent_Default = string.Empty;
+        string Concurrent_Range = string.Empty;
         string SQL = string.Empty;
         DataView MyDV = null;
 
@@ -58,6 +60,8 @@ public partial class lic_server_apidata : System.Web.UI.Page
             string selectedapplication = Request.Form["selectedapplication"].ToString();
             string NumberofLicenses = string.Empty;
             string SelectedAppList = string.Empty;
+
+
 
            // var concurrentUserList1 = new List<concurrentUserList>();
 
@@ -95,7 +99,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
             //string[] words = selectedapplication.Split('|');
             //selectedapplication = words[0];
 
-            if (selectedapplication != "" && selectedapplication != "?~?~?~?")
+            if (selectedapplication != "" && selectedapplication != "?~?~?~?" && selectedapplication !=  "?1~?2~?~?")
             {
 
                 SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Applications in (" + SelectedAppList + ")";
@@ -188,6 +192,8 @@ public partial class lic_server_apidata : System.Web.UI.Page
                         Licence += Convert.ToInt32(rowView["dyncad"].ToString());
                     }
 
+                   // Concurrent_Default = rowView["Concurrent_Default"].ToString();
+                   // Concurrent_Range = rowView["Concurrent_Range"].ToString();
 
                 }
             }else
@@ -203,12 +209,16 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 }
 
 
-                SQL = "SELECT* FROM travelma2_phil1.PhilipsLic_Licence where Type = '" + Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser;
+                SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Licence where Type = '" + Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser;
                 MyDV = Helper.GetData(SQL);
                 foreach (DataRowView rowView in MyDV)
                 {
                     IntelliSpace_licenses = Convert.ToInt32(rowView["IntelliSpace_licenses"].ToString());
                     Licence = Convert.ToInt32(rowView["licenses"].ToString());
+
+                    //Concurrent_Default = rowView["Concurrent_Default"].ToString();
+                   // Concurrent_Range = rowView["Concurrent_Range"].ToString();
+
                 }
             }
 
@@ -216,7 +226,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
 
             Licence = Licence + IntelliSpace_licenses;
 
-            string json = "{\"licence\":\""+ Licence.ToString() + "\" , \"application\":\"" + selectedapplication + "\"}";
+            string json = "{\"licence\":\""+ Licence.ToString() + "\" , \"application\":\"" + selectedapplication + "\" }";
             Response.Clear();
             Response.ContentType = "application/json; charset=utf-8";
             Response.Write(json);
