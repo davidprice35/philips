@@ -81,7 +81,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                     string[] appItems = CurrentUsers[0].Split('|');
                     SelectedAppList += "'" + appItems[0] + "'" + ",";      
                     
-                    if (appItems[0]== "Zero FootPrint Viewer SW 2 Usr")
+                    if (appItems[0]== "Zero FootPrint Viewer SW - 2 User")
                     {
                         concurentusers = CurrentUsers[1];
                     }

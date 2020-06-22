@@ -56,6 +56,12 @@
 
 
     <style>
+
+
+        .select2-search--dropdown {
+            padding:0px !important;
+        }
+
         .select2-container {
             margin-top: 5px;
             height: 34px;
@@ -427,8 +433,8 @@
 
 
                                      <ul class="nav navbar-nav icons-right" style="float: left;">
-                                        <li class="icons"><a href="<%= Helper.GetUserGuide() %>" target="_blank">Project Profile</a></li>
-                                         <li class="icons"><a href="<%= Helper.GetUserGuide() %>" target="_blank">Existing Project</a></li>
+                                        <li class="icons"><a href="/lic-server/" target="_blank">Project Profile</a></li>
+                                         <li class="icons"><a href="/lic-server/ViewExisting.aspx" target="_blank">Existing Project</a></li>
                                         
                                     </ul>
 
@@ -2562,7 +2568,7 @@
 
              var myKeyVals = { appName: appName, AppArray: AppArray.toString() }
 
-            $.ajax('./apicheckapp',
+            $.ajax('./apicheckapp.aspx',
                 {
                     type: 'POST',
                     data: myKeyVals,
@@ -2611,7 +2617,9 @@
                 let CONCURRENTENTERPRISEUSERS = $("#CONCURRENTENTERPRISEUSERS")[0].value;
 
                 if (array[2] == "1") {
-                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].readOnly = true;    
+                    if (!array[0].includes("Add_Users")) {
+                        $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].readOnly = true;
+                    }
                 }
                 
                 $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
@@ -2623,6 +2631,18 @@
                     CONCURRENTENTERPRISEUSERS = CONCURRENTENTERPRISEUSERS - 1;
                     $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = CONCURRENTENTERPRISEUSERS;
 
+                    switch (array[0]) {
+                        case "Zero FootPrint Viewer SW - Add_Users":
+                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].min = 1;
+                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = 53;
+                            break;
+                        default:
+                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].min = 1;
+                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = CONCURRENTENTERPRISEUSERS;
+                            break;
+                    }
+                    
+                    
                 }
 
 
@@ -3163,7 +3183,7 @@
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
-            $.ajax('./apidata',
+            $.ajax('./apidata.aspx',
                 {
                     type: 'POST',
                     data: myKeyVals,
@@ -4544,7 +4564,7 @@
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
-            $.ajax('./apidatahesoft',
+            $.ajax('./apidatahesoft.aspx',
                 {
                     type: 'POST',
                     data: myKeyVals,

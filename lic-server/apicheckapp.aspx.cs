@@ -33,6 +33,65 @@ public partial class lic_server_apidata : System.Web.UI.Page
     }
 
 
+    private string GetMainApp ( string app)
+    {
+
+        string myMainApp = string.Empty;
+
+
+        try {
+
+
+            switch(app)
+            {
+
+                
+                case "NM JETPack App License - Add_Users":
+                    myMainApp = "Processing App Suite";
+                    break;
+                case "NM NeuroQ - 1 User - Add_Users":
+                case "NeuroQ SPECT Opt - Add_Users":
+                    myMainApp = "NM NeuroQ PET - 1 User";
+                    break;
+                case "NM Amyloid Analysis - Add_Users":
+                case "NM Equal  - Add_Users":
+                case "NeuroQ DaTscan opt ISP  - Add_Users":
+                case "ECTB NM v4.x - Add_Users":
+                case "ECTB SPECT v4.x - Add_Users":
+                case "ECTB PET v4.x - Add_Users":
+                case "ECTB Heart Fusion v4.x - Add_Users":
+                case "ECTB SmartReport Option V4.x - Add_Users":
+                case "ECTB CFR MBF V4.x - Add_Users":
+                case "NM AutoQuant 2015.x - Add_Users":
+                case "SPECT AutoQuant 2015.x - Add_Users":
+                case "NM/CTA Cedars Fusion 2015.x - Add_Users":
+                case "Cedars MFSC 2015.x - Add_Users":
+                case "NM AutoQUANT 2017 - Add_Users":
+                case "SPECT AutoQUANT 2017 - Add_Users":
+                case "NM/CTA Cedars Fusion 2017 - Add_Users":
+                case "Cedars MFSC 2017 - Add_Users":
+                case "ZFP Viewer Enterprise - Add_Users":
+                case "DynaCAD Enterprise - Add_Users":
+                    myMainApp = app.Replace("- Add_Users", "").ToString().Trim();
+                    break;
+
+            }
+
+
+            if (myMainApp=="")
+            {
+                myMainApp = app.Replace("- Add_Users", "").ToString().Trim();
+            }
+
+
+        }
+        catch { }
+        
+
+        return myMainApp;
+
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
        
@@ -50,8 +109,9 @@ public partial class lic_server_apidata : System.Web.UI.Page
             if (appName.Contains("- Add_Users"))
             {
 
-                string mainApp = appName.Replace("- Add_Users", "").ToString().Trim();
+                // string mainApp = appName.Replace("- Add_Users", "").ToString().Trim();
 
+                string mainApp = GetMainApp(appName);
 
                 string[] appSplit = AppArray.Split(',');
 
@@ -62,8 +122,9 @@ public partial class lic_server_apidata : System.Web.UI.Page
                     {
 
                         string[] appapp = myapp.Split('|');
+                        string[] appapp2 = appapp[0].Split('-');
 
-                        if (mainApp == appapp[0])
+                        if (mainApp.Trim() == appapp2[0].Trim())
                         {
                             DataOK = "1";
                             break;

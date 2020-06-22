@@ -739,7 +739,7 @@
                                                                     <asp:TextBox ID="txtProjectCoreLastName10" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Last Name"></asp:TextBox>
                                                                 </td>
                                                                 <td>
-                                                                    <asp:TextBox ID="txtProjectCoreEmaill" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                    <asp:TextBox ID="txtProjectCoreEmail1" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
                                                                     <asp:TextBox ID="txtProjectCoreEmail2" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
                                                                     <asp:TextBox ID="txtProjectCoreEmail3" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
                                                                     <asp:TextBox ID="txtProjectCoreEmail4" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
