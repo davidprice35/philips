@@ -23,7 +23,7 @@
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!--[if lt IE 9]>remove
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -42,17 +42,7 @@
 
 
 
-    <script>
-        $(document).ready(function () {
-
-            $('.ToggleDropdown').click(function () {
-
-                $('.drop-down').addClass('OpenDropdown');
-
-            });
-
-        });
-    </script>
+    
 
 
     <style>
@@ -579,7 +569,7 @@
 
 
                                                                                 <span id="cmdHospitalDelete2" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px; color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -626,7 +616,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete3" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -670,7 +660,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete4" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -715,7 +705,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete5" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -759,7 +749,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete6" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -803,7 +793,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete7" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color:#337ab7"></i>
                                                                                 </span>
 
 
@@ -847,7 +837,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete8" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -891,7 +881,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete9" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -934,7 +924,7 @@
                                                                             <td align="center">
 
                                                                                 <span id="cmdHospitalDelete10" onclick="deleteHospital(this);">
-                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                    <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                 </span>
 
 
@@ -1069,7 +1059,7 @@
                                                                                 <td align="center">
 
                                                                                     <span id="cmdAddtionalAppDelete1" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
 
 
@@ -1077,7 +1067,7 @@
                                                                             </tr>
 
 
-                                                                            <tr style="<% if ( m_NoApp == "2" ){ %> display: none; vertical-align: middle; <% } else { %> vertical-align: middle; <% } %>" id="row2-additional-apps">
+                                                                            <tr style="<% if ( m_NoApp == "1" ){ %> display: none; vertical-align: middle; <% } else { %> vertical-align: middle; <% } %>" id="row2-additional-apps">
                                                                                 <td align="center">2</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication2" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%;">
@@ -1087,7 +1077,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent2" runat="server" />
                                                                                     <input type="number" id="txtConcurrent2" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent2" min="10" max="100" value="<%=m_txtConcurrent2 %>">
-                                                                                    <div id="errortxtConcurrent2" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent2" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1101,7 +1091,7 @@
                                                                                 <td align="center">
 
                                                                                     <span id="cmdAddtionalAppDelete2" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
 
 
@@ -1118,7 +1108,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent3" runat="server" />
                                                                                     <input type="number" id="txtConcurrent3" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent3" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent3" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1131,7 +1121,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete3" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1146,7 +1136,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent4" runat="server" />
                                                                                     <input type="number" id="txtConcurrent4" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent4" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent4" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1159,7 +1149,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete4" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1174,7 +1164,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent5" runat="server" />
                                                                                     <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent5" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent5" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1187,7 +1177,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete5" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1203,7 +1193,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent6" runat="server" />
                                                                                     <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent6" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent6" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1216,7 +1206,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete6" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1232,7 +1222,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent7" runat="server" />
                                                                                     <input type="number" id="txtConcurrent7" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent7" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent7" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1245,7 +1235,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete7" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1261,7 +1251,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent8" runat="server" />
                                                                                     <input type="number" id="txtConcurrent8" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent8" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent8" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1274,7 +1264,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete8" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1289,7 +1279,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent9" runat="server" />
                                                                                     <input type="number" id="txtConcurrent9" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent9" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent9" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1302,7 +1292,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete9" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1317,7 +1307,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent10" runat="server" />
                                                                                     <input type="number" id="txtConcurrent10" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent10" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent10" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1329,8 +1319,9 @@
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td align="center">
+                                                                                    
                                                                                     <span id="cmdAddtionalAppDelete10" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1345,7 +1336,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent11" runat="server" />
                                                                                     <input type="number" id="txtConcurrent11" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent11" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent11" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1358,7 +1349,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete11" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1373,7 +1364,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent12" runat="server" />
                                                                                     <input type="number" id="txtConcurrent12" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent12" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent12" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1386,7 +1377,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete12" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1401,7 +1392,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent13" runat="server" />
                                                                                     <input type="number" id="txtConcurrent13" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent13" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent13"  class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1414,7 +1405,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete13" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1429,7 +1420,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent14" runat="server" />
                                                                                     <input type="number" id="txtConcurrent14" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent14" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent14" class="errortxtConcurrent"  style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1442,7 +1433,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete14" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1457,7 +1448,7 @@
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent15" runat="server" />
                                                                                     <input type="number" id="txtConcurrent15" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
-                                                                                    <div id="errortxtConcurrent15" style="color: red; padding-top: 2px; display: none;">Error with input</div>
+                                                                                    <div id="errortxtConcurrent15"  class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1470,7 +1461,7 @@
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete15" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -1986,6 +1977,29 @@
 </div>
 
 
+
+<!-- Modal -->
+<div class="modal fade" id="ApplicationDupErrorModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Management</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Duplicate App
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
         <footer class="footer">
             <div class="container">
                 <div class="row">
@@ -2260,7 +2274,7 @@
                             ele.setAttribute('onclick', 'deleteLicencePro(this);');
                             td.appendChild(ele);
 
-                            document.getElementById('cmdLicenceProDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>';
+                            document.getElementById('cmdLicenceProDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
 
 
                         } else {
@@ -2398,7 +2412,7 @@
                             ele.setAttribute('onclick', 'deleteLicence(this);');
                             td.appendChild(ele);
 
-                            document.getElementById('cmdLicenceDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>';
+                            document.getElementById('cmdLicenceDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
 
 
                         } else {
@@ -2583,7 +2597,10 @@
                         if (data.data=="0" ) {
                               $("#ApplicationErrorModalCenter").modal();
                         }
-                     
+
+                         if (data.data=="3" ) {
+                              $("#ApplicationDupErrorModalCenter").modal();
+                        }
 
                     },
                     error: function (jqXhr, textStatus, errorMessage) { // error callback                     
@@ -2604,74 +2621,93 @@
 
             var array = ddlbox.value.split("|");
 
+            if (array.length > 1) {
 
-            CheckApplicationsValidation(array[0]);
+                CheckApplicationsValidation(array[0]);
 
-            if (array[2] == "Enterprise") {
+                if (array[2] == "Enterprise") {
 
-                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = $("#CONCURRENTENTERPRISEUSERS")[0].value;
-                $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+                    $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = $("#CONCURRENTENTERPRISEUSERS")[0].value;
 
 
-            } else {
-                let CONCURRENTENTERPRISEUSERS = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+                } else {
+                    let CONCURRENTENTERPRISEUSERS = $("#CONCURRENTENTERPRISEUSERS")[0].value;
 
-                if (array[2] == "1") {
-                    if (!array[0].includes("Add_Users")) {
-                        $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].readOnly = true;
+                    if (array[2] == "1") {
+                        if (!array[0].includes("Add_Users")) {
+                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].readOnly = true;
+                        } else {
+                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].readOnly = false;
+                        }
                     }
-                }
-                
-                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
-                $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
-                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
 
-                if (array[0].includes("Add_Users")) {
-
-                    CONCURRENTENTERPRISEUSERS = CONCURRENTENTERPRISEUSERS - 1;
-                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = CONCURRENTENTERPRISEUSERS;
-
-                    switch (array[0]) {
-                        case "Zero FootPrint Viewer SW - Add_Users":
-                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].min = 1;
-                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = 53;
-                            break;
-                        default:
-                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].min = 1;
-                            $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = CONCURRENTENTERPRISEUSERS;
-                            break;
-                    }
-                    
-                    
-                }
-
-
-            }
-
-            //Concurrent_Users
-            if (array[1] == "No") {
-
-                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].disabled = true;
-            } else {
-                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].disabled = false;
-            }
-
-            //Concurrent_Range - Max
-            if (array[3] != "") {
-
-                if (Number.isInteger(array[3]) == true) {
+                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
+                    $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = array[2];
                     $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
-                    $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
+
+                    if (array[0].includes("Add_Users")) {
+
+                        CONCURRENTENTERPRISEUSERS = CONCURRENTENTERPRISEUSERS - 1;
+
+
+                        switch (array[0]) {
+                            case "DynaCAD Enterprise - Add_Users":
+                                let usageCount = 0;
+
+                                var i;
+                                for (i = 1; i <= 15; i++) {
+                                    if ($("#cmdApplication" + i)[0].value.includes("DynaCAD Prostate - 1 User") | $("#cmdApplication" + i)[0].value.includes("DynaCAD Breast - 1 User") | $("#cmdApplication" + i)[0].value.includes("DynaCAD Combo Package - 1 User")) {
+
+                                        usageCount++;
+                                    }
+                                }
+
+                                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].min = 1;
+                                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = (4 - usageCount);
+                                break;
+                            case "Zero FootPrint Viewer SW - Add_Users":
+                                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].min = 1;
+                                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = 53;
+                                break;
+                            default:
+                                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].min = 1;
+                                $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = CONCURRENTENTERPRISEUSERS;
+                                //$("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].value = CONCURRENTENTERPRISEUSERS;
+                                break;
+                        }
+
+
+                    }
+
                 }
 
+
+
+                //Concurrent_Users
+                if (array[1] == "No") {
+
+                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].disabled = true;
+                } else {
+                    $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].disabled = false;
+                }
+
+                //Concurrent_Range - Max
+                if (array[3] != "") {
+
+                    if (Number.isInteger(array[3]) == true) {
+                        $("#txtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
+                        $("#hidtxtConcurrent" + ddlbox.id.substr(ddlbox.id.length - 1, 2))[0].max = array[3];
+                    }
+
+                }
+                //txtConcurrent1
+
+                // alert(array[0]);
+                //alert(array[1]);
+
+                GetLicenceData();
             }
-            //txtConcurrent1
-
-            // alert(array[0]);
-            //alert(array[1]);
-
-            GetLicenceData();
-
         }
 
         function UpdateHospital(itemidx) {
@@ -2693,26 +2729,36 @@
 
         function AdditionalAppsAddSite() {
             let hidv = $("#hidadditionalapps")[0].value;
+
+            $(".errortxtConcurrent").hide()
+
             hidv++;
             $("#hidadditionalapps")[0].value = hidv;
             switch (hidv) {
                 case 2:
-                    $("#row2-additional-apps").show();
+                    $("#row2-additional-apps").show();                    
+                     $("#txtConcurrent2")[0].readOnly = false;
                     break;
                 case 3:
                     $("#row2-additional-apps").show();
                     $("#row3-additional-apps").show();
+                   
+                    $("#txtConcurrent3")[0].readOnly = false;
                     break;
                 case 4:
                     $("#row2-additional-apps").show();
                     $("#row3-additional-apps").show();
-                    $("#row4-additional-apps").show();
+                    $("#row4-additional-apps").show();                   
+                    $("#txtConcurrent4")[0].readOnly = false;
                     break;
                  case 5:
                     $("#row2-additional-apps").show();
                     $("#row3-additional-apps").show();
                     $("#row4-additional-apps").show();
                     $("#row5-additional-apps").show();
+                    
+                    $("#txtConcurrent5")[0].readOnly = false;
+
                     break;
                   case 6:
                     $("#row2-additional-apps").show();
@@ -2720,6 +2766,10 @@
                     $("#row4-additional-apps").show();
                     $("#row5-additional-apps").show();
                     $("#row6-additional-apps").show();
+
+             
+                    $("#txtConcurrent6")[0].readOnly = false;
+
                     break;
                  case 7:
                     $("#row2-additional-apps").show();
@@ -2728,6 +2778,8 @@
                     $("#row5-additional-apps").show();
                     $("#row6-additional-apps").show();
                     $("#row7-additional-apps").show();
+
+                     $("#txtConcurrent7")[0].readOnly = false;
                     break;
                  case 8:
                     $("#row2-additional-apps").show();
@@ -2737,6 +2789,7 @@
                     $("#row6-additional-apps").show();
                     $("#row7-additional-apps").show();
                     $("#row8-additional-apps").show();
+                     $("#txtConcurrent8")[0].readOnly = false;
                     break;
                  case 9:
                     $("#row2-additional-apps").show();
@@ -2747,7 +2800,9 @@
                     $("#row7-additional-apps").show();
                     $("#row8-additional-apps").show();
                     $("#row9-additional-apps").show();
-                    
+
+                    $("#txtConcurrent9")[0].readOnly = false;
+
                     break;
                  case 10:
                     $("#row2-additional-apps").show();
@@ -2759,6 +2814,9 @@
                     $("#row8-additional-apps").show();
                     $("#row9-additional-apps").show();
                     $("#row10-additional-apps").show();
+
+                    $("#txtConcurrent10")[0].readOnly = false;
+
                     break;
                 case 11:
                     $("#row2-additional-apps").show();
@@ -2771,6 +2829,9 @@
                     $("#row9-additional-apps").show();
                     $("#row10-additional-apps").show();
                     $("#row11-additional-apps").show();
+
+                     $("#txtConcurrent11")[0].readOnly = false;
+
                     break;
                 case 12:
                     $("#row2-additional-apps").show();
@@ -2784,6 +2845,9 @@
                     $("#row10-additional-apps").show();
                     $("#row11-additional-apps").show();
                     $("#row12-additional-apps").show();
+
+                     $("#txtConcurrent12")[0].readOnly = false;
+
                     break;
                 case 13:
                     $("#row2-additional-apps").show();
@@ -2798,6 +2862,8 @@
                     $("#row11-additional-apps").show();
                     $("#row12-additional-apps").show();
                     $("#row13-additional-apps").show();
+
+                    $("#txtConcurrent13")[0].readOnly = false;
                     break;
                 case 14:
                     $("#row2-additional-apps").show();
@@ -2813,6 +2879,9 @@
                     $("#row12-additional-apps").show();
                     $("#row13-additional-apps").show();
                     $("#row14-additional-apps").show();
+
+                    $("#txtConcurrent14")[0].readOnly = false;
+
                     break;
                 case 15:
                     $("#row2-additional-apps").show();
@@ -2829,6 +2898,9 @@
                     $("#row13-additional-apps").show();
                     $("#row14-additional-apps").show();
                     $("#row15-additional-apps").show();
+
+                    $("#txtConcurrent15")[0].readOnly = false;
+
                     break;
 
             }
@@ -2942,7 +3014,8 @@
 
             $("#row"+hidv+"-additional-apps").hide();
 
-
+                $("#errortxtConcurrent"+hidv).hide();
+            
           
 
              GetLicenceData();
@@ -3176,10 +3249,13 @@
             let selectedapplication3 = $("#cmdApplication3")[0].value + "?" + $("#txtConcurrent3")[0].value;
             let selectedapplication4 = $("#cmdApplication4")[0].value + "?" + $("#txtConcurrent4")[0].value;
             let selectedapplication5 = $("#cmdApplication5")[0].value + "?" + $("#txtConcurrent5")[0].value;
+            let selectedapplication6 = $("#cmdApplication6")[0].value + "?" + $("#txtConcurrent6")[0].value;
+            let selectedapplication7 = $("#cmdApplication7")[0].value + "?" + $("#txtConcurrent7")[0].value;
+            let selectedapplication8 = $("#cmdApplication8")[0].value + "?" + $("#txtConcurrent8")[0].value;
 
             //if (selectedapplication1 != "?") {
 
-            selectedapplication = selectedapplication1 + "~" + selectedapplication2 + "~" + selectedapplication3 + "~" + selectedapplication4;//+ "~" + selectedapplication5;
+            selectedapplication = selectedapplication1 + "~" + selectedapplication2 + "~" + selectedapplication3 + "~" + selectedapplication4 + "~" + selectedapplication5 + "~" + selectedapplication6 + "~" + selectedapplication7 + "~" + selectedapplication8;
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
@@ -5089,6 +5165,14 @@
         $(document).ready(function () {
             GetLicenceData();
             $('.ApplicationDDL').select2();
+
+
+             $('.ToggleDropdown').click(function () {
+
+                $('.drop-down').addClass('OpenDropdown');
+
+            });
+
         });
 
 

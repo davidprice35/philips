@@ -56,7 +56,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
             bool HasIntelliSpace = false;
             string Category = string.Empty;
             string enterpriseuser = Request.Form["enterpriseuser"].ToString();
-            string concurentusers = string.Empty; //Request.Form["concurentusers"].ToString();
+            int concurentusers = 0; //Request.Form["concurentusers"].ToString();
             string selectedapplication = Request.Form["selectedapplication"].ToString();
             string NumberofLicenses = string.Empty;
             string SelectedAppList = string.Empty;
@@ -81,9 +81,17 @@ public partial class lic_server_apidata : System.Web.UI.Page
                     string[] appItems = CurrentUsers[0].Split('|');
                     SelectedAppList += "'" + appItems[0] + "'" + ",";      
                     
-                    if (appItems[0]== "Zero FootPrint Viewer SW - 2 User")
+                    if (appItems[0]== "Zero FootPrint Viewer SW - 2 User" | appItems[0] == "Zero FootPrint Viewer SW - Add_Users")
                     {
-                        concurentusers = CurrentUsers[1];
+                        if (CurrentUsers[1] == "")
+                        {
+
+                        }
+                        else
+                        {
+                            concurentusers += Convert.ToInt32(CurrentUsers[1]);
+                        }
+                        
                     }
 
 
@@ -114,6 +122,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                             // Category = "ZFP";
                             HasZFP = true;
                             break;
+                        case "DynaCAD Software":
                         case "Dynacad software":
                             //Category = "Dynacad";
                             HasDynCad = true;
@@ -145,22 +154,27 @@ public partial class lic_server_apidata : System.Web.UI.Page
 
             if (HasDynCad == true)
             {
-                if (Category != "")
-                {
-                    Category += " ";
-                }
-                Category += "IntelliSpace DynaCad";
+                //if (Category != "")
+                //{
+                //    Category += " ";
+                //}
+                Category = "IntelliSpace DynaCad";
             }
 
            
             if (HasZFP == true)
             {
-                if (Category != "")
-                {
-                    Category += " ";
-                }
+                //if (Category != "")
+                //{
+                //    Category += " ";
+                //}
 
-                Category += "IntelliSpace ZFP";
+                Category = "IntelliSpace ZFP";
+            }
+
+            if (HasDynCad==true & HasZFP==true)
+            {
+                Category = "IntelliSpace DynaCad ZFP";
             }
 
             if (Category== "IntelliSpace DynaCad IntelliSpace ZFP")
