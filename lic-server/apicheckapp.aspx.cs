@@ -44,6 +44,27 @@ public partial class lic_server_apidata : System.Web.UI.Page
 
             switch(app)
             {
+                case "SPECT AutoQUANT 2017 - Add_Users":
+                    myMainApp = "SPECT AutoQUANT 2017 - Add_Users";
+                    break;
+                case "SPECT AutoQuant 2015.x - Add_Users":
+                    myMainApp = "SPECT AutoQuant 2015.x  - 1 User";
+                    break;
+                case "NM AutoQuant 2015.x - Add_Users":
+                    myMainApp = "NM AutoQuant 2015.x  - 1 User";
+                    break;
+                case "NM AutoQUANT 2017 - Add_Users":
+                    myMainApp = "NM AutoQUANT 2017  - 1 User";
+                    break;
+                case "NeuroQ SPECT Opt - Add_Users":
+                    myMainApp = "NeuroQ SPECT Opt - 1 User";
+                    break;
+                case "Cedars MFSC 2017 - Add_Users":
+                    myMainApp = "Cedars MFSC 2017 - 1 User";
+                    break;
+                case "Cedars MFSC 2015.x - Add_Users":
+                    myMainApp = "Cedars MFSC 2015.x - 1 User";
+                    break;
                 case "NM NeuroQ PET - Add_Users":
                     myMainApp = "NM NeuroQ PET - 1 User";
                     break;
@@ -66,7 +87,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                     myMainApp = "Processing App Suite";
                     break;
                
-                case "NeuroQ SPECT Opt - Add_Users":
+               
                 case "NM Amyloid Analysis - Add_Users":
                 case "NM Equal  - Add_Users":
                 case "NeuroQ DaTscan opt ISP  - Add_Users":
@@ -76,14 +97,13 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 case "ECTB Heart Fusion v4.x - Add_Users":
                
                 case "ECTB CFR MBF V4.x - Add_Users":
-                case "NM AutoQuant 2015.x - Add_Users":
-                case "SPECT AutoQuant 2015.x - Add_Users":
+               
+                
                 case "NM/CTA Cedars Fusion 2015.x - Add_Users":
-                case "Cedars MFSC 2015.x - Add_Users":
-                case "NM AutoQUANT 2017 - Add_Users":
-                case "SPECT AutoQUANT 2017 - Add_Users":
+                
+               
                 case "NM/CTA Cedars Fusion 2017 - Add_Users":
-                case "Cedars MFSC 2017 - Add_Users":
+               
                 case "ZFP Viewer Enterprise - Add_Users":
                 case "DynaCAD Enterprise - Add_Users":
                     myMainApp = app.Replace("- Add_Users", "").ToString().Trim();

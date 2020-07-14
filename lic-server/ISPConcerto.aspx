@@ -1053,6 +1053,7 @@
 
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName1" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
 
@@ -1086,6 +1087,7 @@
 
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName2" CssClass="form-control" runat="server" Style="width: 100%;">
+                                                                                       <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td align="center">
@@ -1117,6 +1119,7 @@
 
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName3" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                       <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td align="center">
@@ -1130,6 +1133,7 @@
                                                                                 <td align="center">4</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication4" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1145,6 +1149,7 @@
 
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName4" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td align="center">
@@ -1163,7 +1168,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent5" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent5" min="10" max="100">
                                                                                     <div id="errortxtConcurrent5" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1192,7 +1197,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent6" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent6" min="10" max="100">
                                                                                     <div id="errortxtConcurrent6" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1221,7 +1226,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent7" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent7" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent7" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent7" min="10" max="100">
                                                                                     <div id="errortxtConcurrent7" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1250,7 +1255,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent8" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent8" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent8" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent8" min="10" max="100">
                                                                                     <div id="errortxtConcurrent8" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1278,7 +1283,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent9" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent9" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent9" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent9" min="10" max="100">
                                                                                     <div id="errortxtConcurrent9" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1306,7 +1311,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent10" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent10" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent10" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent10" min="10" max="100">
                                                                                     <div id="errortxtConcurrent10" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1335,7 +1340,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent11" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent11" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent11" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent11" min="10" max="100">
                                                                                     <div id="errortxtConcurrent11" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1363,7 +1368,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent12" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent12" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent12" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent12" min="10" max="100">
                                                                                     <div id="errortxtConcurrent12" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1391,7 +1396,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent13" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent13" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent13" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent13" min="10" max="100">
                                                                                     <div id="errortxtConcurrent13"  class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1419,7 +1424,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent14" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent14" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent14" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent14" min="10" max="100">
                                                                                     <div id="errortxtConcurrent14" class="errortxtConcurrent"  style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1447,7 +1452,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent15" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent15" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent15" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent15" min="10" max="100">
                                                                                     <div id="errortxtConcurrent15"  class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -2056,6 +2061,23 @@
 
     <script>
 
+
+        var isDev = true;
+
+        var sapicheckapp = "";
+        var sapidata = "";
+        var sapidatahesoft = "";
+
+        if (isDev == true) {
+            sapicheckapp = "./apicheckapp";
+            sapidata = "./apidata";
+            sapidatahesoft = "./apidatahesoft";
+        } else {
+            sapicheckapp = "./apicheckapp.aspx";
+            sapidata = "./apidata.aspx";
+            sapidatahesoft = "./apidatahesoft.aspx";
+        }
+
         var arrHead = new Array();
         arrHead = ['No', 'Menu', 'Mac','Remove']; // table headers.
 
@@ -2433,8 +2455,10 @@
 
         function CheckConcurrentValue(TextBoxItem) {
 
+          //  let myCONCURRENTENTERPRISEUSERS = parseInt($("#CONCURRENTENTERPRISEUSERS")[0].value);
             let myvalue = parseInt($(TextBoxItem)[0].value);
-
+            
+          
             if ( myvalue > $(TextBoxItem)[0].max) {
                 $("#errortxtConcurrent" + TextBoxItem.id.substr(TextBoxItem.id.length - 1, 2)).show();
                 $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
@@ -2582,7 +2606,7 @@
 
              var myKeyVals = { appName: appName, AppArray: AppArray.toString() }
 
-            $.ajax('./apicheckapp.aspx',
+             $.ajax(sapicheckapp, 
                 {
                     type: 'POST',
                     data: myKeyVals,
@@ -2683,6 +2707,55 @@
                 }
 
 
+                //checkallDynacad
+                var i;
+                var dycAddUserLocation = 0;
+                var dyncadcnt = 0;
+                for (i = 0; i < 10; i++) {
+                    if ($("#cmdApplication" + i)[0] != undefined && $("#cmdApplication" + i)[0].value !="" ) {
+                        let appitem = $("#cmdApplication" + i)[0].value;
+                        if (appitem != "") {                            
+                            var array = $("#cmdApplication" + i)[0].value.split("|");
+
+
+                            switch (array[0])
+                            {
+                                case "DynaCAD Prostate - 1 User":
+                                    dyncadcnt++;
+                                    break;
+                                case "DynaCAD Breast - 1 User":
+                                    dyncadcnt++;
+                                    break;
+                                case "DynaCAD Combo Package - 1 User":
+                                    dyncadcnt++;
+                                    break;
+                            }
+
+                            if (array[0] == "DynaCAD Enterprise - Add_Users") {
+                                //$("#txtConcurrent" + i)[0].value = enterpriseuser;
+                                //$("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+                                dycAddUserLocation = i;
+                            }
+                        }
+                    }
+                }
+
+                if (dyncadcnt > 0) {
+                    if (dycAddUserLocation > 0) {
+                        if ($("#txtConcurrent" + dycAddUserLocation)[0].value != "") {
+                            dyncadcnt = 4 - dyncadcnt;
+                            $("#txtConcurrent" + dycAddUserLocation)[0].value = dyncadcnt;
+                            $("#hidtxtConcurrent" + dycAddUserLocation)[0].value = dyncadcnt;
+                            $("#txtConcurrent" + dycAddUserLocation)[0].max = dyncadcnt;                            
+                        }
+                    }
+                }
+
+
+                //checkallDynacad
+
+
+
 
                 //Concurrent_Users
                 if (array[1] == "No") {
@@ -2712,18 +2785,25 @@
 
         function UpdateHospital(itemidx) {
 
-
+            
             AddHospitalItem($("#txtHospitalName" + itemidx)[0].value, $("#txtHospitalName" + itemidx)[0].value)
+
 
             //txtHospitalName1
 
         }
         function AddHospitalItem(Text, Value) {
 
-            var optVal = document.createElement("option");
-            document.getElementById("cmdHospitalName1").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            var i;
+            for (i = 1; i < 10; i++) {
+                var optVal = document.createElement("option");
+               
+                document.getElementById("cmdHospitalName" + i).options.add(optVal);
+                optVal.text = Text;
+                optVal.value = Value;
+            }
+
+           
 
         }
 
@@ -2923,7 +3003,7 @@
 
 
                 if (HasTestServer == true) {
-                     currentValue = currentValue - 1;
+                    // currentValue = currentValue - 1;
                     CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value);
                 } else {
                     CreateRow(currentValue, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value);
@@ -3001,21 +3081,45 @@
             let hidv = $("#hidadditionalapps")[0].value;
             hidv--;
             $("#hidadditionalapps")[0].value = hidv;
-
-            //if (hidv < 1) {
-              //  hidv = 1;
-            //}
-            
+                        
             hidv = thisItem.id;
             hidv = parseInt(hidv.replace("cmdAddtionalAppDelete", ""));
 
-             $("#cmdApplication"+hidv+"").val('1');
-             $("#cmdApplication"+hidv+"").trigger('change');
-
+            $("#cmdApplication"+hidv+"").val('1');
+            $("#cmdApplication"+hidv+"").trigger('change');            
+            $("#txtConcurrent"+hidv+"")[0].value=""
             $("#row"+hidv+"-additional-apps").hide();
+            $("#errortxtConcurrent"+hidv).hide();
 
-                $("#errortxtConcurrent"+hidv).hide();
-            
+            //reorder
+            var i;
+            for (i = 1; i <= 15; i++) {
+                if (i <= 14) {
+                    if ($("#cmdApplication" + i)[0].value != "") {
+                        //Item has data 
+                        if ($("#cmdApplication" + (i + 1))[0].value == "" & $("#cmdApplication" + (i + 2))[0].value != "") {
+
+                            $("#cmdApplication"+(i + 1)+"").val($("#cmdApplication" + (i+2))[0].value);
+                           
+                            $("#txtConcurrent" + (i + 1) + "")[0].value = $("#txtConcurrent" + (i + 2) + "")[0].value;
+                            $("#cmdHospitalName" + (i + 1) + "")[0].value = $("#cmdHospitalName" + (i + 2) + "")[0].value;
+
+                            $("#cmdHospitalName" + (i + 2) + "")[0].value = "";
+
+                            $("#row" + hidv + "-additional-apps").show();
+                            $("#row" + (hidv + 1) + "-additional-apps").hide();
+                          
+                             $("#cmdApplication"+(i + 2))[0].value="";
+                            $("#cmdApplication" + (i + 2)).val('1');
+
+                            $("#cmdApplication" + (i + 1) + "").trigger('change');  
+                            $("#cmdApplication"+(i + 2) ).trigger('change');    
+                            
+                        }
+                    } 
+                }
+            }
+            //reorder
           
 
              GetLicenceData();
@@ -3222,6 +3326,8 @@
 
             let enterpriseuser = $("#CONCURRENTENTERPRISEUSERS")[0].value;
 
+            
+
             if (enterpriseuser > 50) {
                 //alert("Concurrent users can not exceed 50");
                 $("#CONCURRENTENTERPRISEUSERS")[0].value = 50;
@@ -3239,6 +3345,46 @@
             } else {
                  $("#CONCURRENTENTERPRISE_Error").hide();
             }
+
+
+
+            //update enterprise
+
+            var i;
+            for (i = 0; i < 10; i++) {
+                if ($("#cmdApplication" + i)[0] != undefined && $("#cmdApplication" + i)[0].value !="" ) {
+                    let appitem = $("#cmdApplication" + i)[0].value;
+                    var array = $("#cmdApplication" + i)[0].value.split("|");
+                    if (array[2] == "Enterprise") {
+                        if ($("#txtConcurrent" + i)[0].value != "") {
+                            $("#txtConcurrent" + i)[0].value = enterpriseuser;
+                            $("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+                        }
+                    } else {
+
+                        if ($("#txtConcurrent" + i)[0].value != "") {
+                            if (array[2] == "") {
+                                if (array[0].includes("Add_Users")) {
+
+
+                                    $("#txtConcurrent" + i)[0].max = enterpriseuser - 1;
+
+                                    if (enterpriseuser - 1 < $("#txtConcurrent" + i)[0].value) {
+                                        $("#txtConcurrent" + i)[0].value = enterpriseuser - 1;
+                                        $("#hidtxtConcurrent" + i)[0].value = enterpriseuser - 1;
+                                    }
+                                    
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
 
 
             let IsTest = false;
@@ -3259,7 +3405,8 @@
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
-            $.ajax('./apidata.aspx',
+            //$.ajax('./apidata',
+            $.ajax(sapidata,
                 {
                     type: 'POST',
                     data: myKeyVals,
@@ -4640,7 +4787,8 @@
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
-            $.ajax('./apidatahesoft.aspx',
+             //$.ajax('./apidatahesoft',
+            $.ajax(sapidatahesoft,
                 {
                     type: 'POST',
                     data: myKeyVals,
@@ -5056,7 +5204,7 @@
 
 
                 if (HasTestServer == true) {
-                     currentValue = currentValue + 1;
+                   //  currentValue = currentValue + 1;
                     CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value);
                 } else {
                     CreateRow(currentValue, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value);
