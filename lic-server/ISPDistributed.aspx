@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="ISPConcerto.aspx.cs" Inherits="competitive_info_Competitors" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="ISPDistributed.aspx.cs" Inherits="competitive_info_Competitors" %>
 
 <%--<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
 <%@ Register Assembly="Syncfusion.EJ.Web, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Web" TagPrefix="ej" %>
@@ -466,14 +466,14 @@
                                                 <div class="Tab-info">
                                                     <div class="tab-regular" style="margin-top: 10px;">
                                                         <ul class="nav nav-tabs " id="myTab" role="tablist">
-                                                            <li class="nav-item active">
-                                                                <a class="nav-link" id="Central-tab" data-toggle="tab" href="#Central" role="tab" aria-controls="home" aria-selected="false" style="width: 158px;">Centralised</a>
+                                                            <li class="nav-item disabled">
+                                                                <a class="nav-link" id="Central-tab" data-toggle="tab" href="#Central" role="tab" aria-controls="home" aria-selected="true" style="width: 158px;">Centralised</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link" id="profile-tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="width: 158px;">Hybrid</a>
                                                             </li>
-                                                            <li class="nav-item" disabled>
-                                                                <a class="nav-link active show" id="contact-tab" href="/lic-server/ISPDistributed.aspx" role="tab" aria-controls="contact" aria-selected="true" style="width: 158px;">Distributed</a>
+                                                            <li class="nav-item active" >
+                                                                <a class="nav-link active show" id="contact-tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" style="width: 158px;">Distributed</a>
                                                             </li>
                                                         </ul>
                                                         <div class="tab-content" id="myTabContent">
@@ -496,15 +496,16 @@
                                                                         <tr>
                                                                             <td align="center" style="vertical-align: middle;"><span style="align-items: center">1</span></td>
                                                                             <td>
-                                                                                <asp:TextBox ID="txtHospitalName1" onblur="UpdateHospital(1);" CssClass="form-control " runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName1" onblur="UpdateHospital(1);" CssClass="form-control " runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox> 
+                                                                               
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet1" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSite1" id="HospitalSite1Main" value="Main" checked>
-                                                                                    <label class="form-check-label" for="inlineRadio1">Main</label>
+                                                                                   <input class="form-check-input" type="radio" name="HospitalSite1" id="HospitalSite1Remote" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <label class="form-check-label" for="HospitalSite2Remote">Remote</label>
 
 
 
@@ -513,7 +514,7 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityHigh" value="High" <%=m_connectH1 %>>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityHigh" value="High" <%=m_connectH1 %> checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
                                                                                     <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityMed" value="Med"  <%=m_connectM1 %>>
@@ -551,15 +552,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity2" id="HospitalRadioConnectivityH2" value="High" checked />
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity2" id="HospitalRadioConnectivityM2" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity2" id="HospitalRadioConnectivityL2" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -599,15 +600,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity3" id="HospitalRadioConnectivityH3" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity3" id="HospitalRadioConnectivityM3" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity3" id="HospitalRadioConnectivityL3" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -643,15 +644,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                     <input class="form-check-input" type="radio" name="HospitalRadioConnectivity4" id="HospitalRadioConnectivityH4" value="High" checked />
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity4" id="HospitalRadioConnectivityM4" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity4" id="HospitalRadioConnectivityL4" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -688,15 +689,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity5" id="HospitalRadioConnectivityH5" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity5" id="HospitalRadioConnectivityM5" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity5" id="HospitalRadioConnectivityL5" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -724,23 +725,23 @@
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
-                                                                                    <label class="form-check-label" for="inlineRadio2">Remote</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite6Remote" id="HospitalSite6Remote" value="Remote" style="margin-left: 13px;" checked />
+                                                                                    <label class="form-check-label" for="HospitalSite6Remote">Remote</label>
 
                                                                                 </div>
                                                                             </td>
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity6" id="HospitalRadioConnectivityH6" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity6" id="HospitalRadioConnectivityM6" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity6" id="HospitalRadioConnectivityL6" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -759,7 +760,7 @@
                                                                         <tr style="display: none; vertical-align: middle;" id="row7-central">
                                                                             <td align="center" style="vertical-align: middle;">7</td>
                                                                             <td>
-                                                                                <asp:TextBox ID="txtHospitalName7" CssClass="form-control" onblur="UpdateHospital(5);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName7" CssClass="form-control" onblur="UpdateHospital(7);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet7" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
@@ -776,15 +777,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity7" id="HospitalRadioConnectivityH7" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity7" id="HospitalRadioConnectivityM7" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity7" id="HospitalRadioConnectivityL7" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -803,7 +804,7 @@
                                                                         <tr style="display: none; vertical-align: middle;" id="row8-central">
                                                                             <td align="center" style="vertical-align: middle;">8</td>
                                                                             <td>
-                                                                                <asp:TextBox ID="txtHospitalName8" CssClass="form-control" onblur="UpdateHospital(5);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName8" CssClass="form-control" onblur="UpdateHospital(8);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet8" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
@@ -820,15 +821,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity8" id="HospitalRadioConnectivityH8" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity8" id="HospitalRadioConnectivityM8" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity8" id="HospitalRadioConnectivityL8" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -847,7 +848,7 @@
                                                                         <tr style="display: none; vertical-align: middle;" id="row9-central">
                                                                             <td align="center" style="vertical-align: middle;">9</td>
                                                                             <td>
-                                                                                <asp:TextBox ID="txtHospitalName9" CssClass="form-control" onblur="UpdateHospital(5);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName9" CssClass="form-control" onblur="UpdateHospital(9);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet9" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
@@ -864,15 +865,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity9" id="HospitalRadioConnectivityH9" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity9" id="HospitalRadioConnectivityM9" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity9" id="HospitalRadioConnectivityL9" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -891,7 +892,7 @@
                                                                         <tr style="display: none; vertical-align: middle;" id="row10-central">
                                                                             <td align="center" style="vertical-align: middle;">10</td>
                                                                             <td>
-                                                                                <asp:TextBox ID="txtHospitalName10" CssClass="form-control" onblur="UpdateHospital(5);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHospitalName10" CssClass="form-control" onblur="UpdateHospital(10);" runat="server" Style="margin-top: 3px;" placeholder="Hospital Name"></asp:TextBox>
                                                                             </td>
                                                                             <td>
                                                                                 <asp:TextBox ID="txtHospitalStreet10" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
@@ -907,15 +908,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity10" id="HospitalRadioConnectivityH10" value="High" checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity9" id="HospitalRadioConnectivityM10" value="Med">
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity9" id="HospitalRadioConnectivityL10" value="Low">
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -962,7 +963,18 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+
+                                                              <div class="col-12">
+                                                             <span id="CONCURRENTENTERPRISE_Error3" style="display:none;">
+                                                                 <br />
+                                                                    <div class='alert' style="color: white;background-color: red;border-color: red;font-weight:bold;" role='alert' id="error3display">
+                                                                   
+                                                                    </div>
+                                                                </span>
+                                                                   </div>
+                                                            <div class="col-md-3">
+
+                                                               
 
                                                                 <p style="color: black; margin-top: 20px;"><b>CONCURRENT ENTERPRISE USERS</b></p>
                                                                 
@@ -978,6 +990,9 @@
                                                                     </div>
                                                                 </span>
 
+
+                                                                
+
                                                                 <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
                                                                     <thead class="thead-light">
                                                                         <tr>
@@ -988,8 +1003,7 @@
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>
-                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" onchange="GetLicenceData();" value="<%=m_ConEnterpriseUsers %>" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="10" max="55">
-                                                                                <%-- <ej:NumericTextBox ID="CONCURRENTENTERPRISEUSERS" MaxValue="50" MinValue="10" Value="35" Name="CONCURRENTENTERPRISEUSERS" runat="server" Width="100%" />--%>
+                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" <%--onchange="GetLicenceData();"--%> value="<%=m_ConEnterpriseUsers %>" onchange="CheckConcurrentBox();" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="1" max="55">                                                                                
                                                                             </td>
 
 
@@ -998,11 +1012,345 @@
                                                                     </tbody>
                                                                 </table>
 
+
+                                                                
+                                                               
+
+
+                                                                
+                                                                
+
+
                                                             </div>
-                                                            <div class="col-md-4">
+
+                                                            <div class="col-md-3" id="HostpitalEntry1" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel1"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel1" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText1" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText1" value="0" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
                                                             </div>
-                                                            <div class="col-md-4">
+                                                                                                                                                                                 
+                                                            <div class="col-md-3" id="HostpitalEntry2" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel2"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel2" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText2" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText2" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
                                                             </div>
+
+                                                            <div class="col-md-3" id="HostpitalEntry3" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel3"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel3" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText3" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText3" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
+
+                                                              <div class="col-md-3" id="HostpitalEntry4" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel4"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel4" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText4" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText4" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
+
+
+                                                              <div class="col-md-3" id="HostpitalEntry5" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel5"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel5" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText5" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText5" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
+
+
+                                                             <div class="col-md-3" id="HostpitalEntry6" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel6"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel6" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText6" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText6" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
+
+                                                             <div class="col-md-3" id="HostpitalEntry7" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel7"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel7" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText7" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText7" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
+
+                                                             <div class="col-md-3" id="HostpitalEntry8" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel8"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel8" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText8" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText8" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
+
+                                                             <div class="col-md-3" id="HostpitalEntry9" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel9"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel9" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText9" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText9" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
+                                                            <div class="col-md-3" id="HostpitalEntry10" style="display:none;">
+                                                               
+                                                                <p style="color: black; margin-top: 20px;" id="HostpitalEntryLabel10"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                               
+                                                                <span id="HostpitalEntryErrorLabel10" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Users can not exceed Concurrent users
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="HostpitalEntryText10" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" value="0"  name="HostpitalEntryText10" min="1" max="15">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>                                                                
+
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1017,6 +1365,16 @@
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="col-md-12">
+
+                                                        <div class="col-12">
+                                                             <span id="CONCURRENTENTERPRISE_Error4" style="display:none;">
+                                                                 <br />
+                                                                    <div class='alert' style="color: white;background-color: red;border-color: red;font-weight:bold;" role='alert' id="error4display">
+                                                                   
+                                                                    </div>
+                                                                </span>
+                                                                   </div>
+
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <p style="color: black; margin-top: 20px;"><b>ADDITIONAL APPLICATIONS</b></p>
@@ -1029,6 +1387,7 @@
                                                                                 <th scope="col" class="" style="width: 3%; background-color: #0b1f65;">Concurrent Users</th>
                                                                                 <th scope="col" class="" style="width: 10%; background-color: #0b1f65;">Description</th>
                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">Hospital Name</th>
+                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Users</th>
                                                                                 <th scope="col" class="w-10" style="width: 20px;background-color: #0b1f65;">Remove</th>
 
                                                                             </tr>
@@ -1038,6 +1397,60 @@
                                                                                 <td align="center">1</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication1"  onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL appddlselect" runat="server" Style="width: 100%; margin-top: 3px;">
+
+
+
+                                                                                        <asp:ListItem value="" ></asp:ListItem>
+	<asp:ListItem value="Mirada Viewer Pro - 1 User|No|1|NA" >NICA439 - Mirada Viewer Pro </asp:ListItem>
+	<asp:ListItem value="Mirada Viewer  Premium |No|1|NA" >NICA441 - Mirada Viewer  Premium </asp:ListItem>
+	<asp:ListItem value="Mirada Viewer Pro - S.Lic|No|Enterprise|" >NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+	<asp:ListItem value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|" >NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+	<asp:ListItem value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users" >NICA436 - NM Processing App Suite</asp:ListItem>
+	<asp:ListItem value="NM Astonish Recon Suite|No|Enterprise|" >NICA438 - NM Astonish Recon Suite</asp:ListItem>
+	<asp:ListItem value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users" >NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+	<asp:ListItem value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users" >NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+	<asp:ListItem value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users" >NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+	<asp:ListItem value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+	<asp:ListItem value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users" >NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+	<asp:ListItem value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users" >NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+	<asp:ListItem value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users" >NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+	<asp:ListItem value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users" >NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+	<asp:ListItem value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users" >NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+	<asp:ListItem value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users" >NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+	<asp:ListItem value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users" >NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+	<asp:ListItem value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users" >FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+	<asp:ListItem value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users" >FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+	<asp:ListItem value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users" >FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+	<asp:ListItem value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users" >FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+	<asp:ListItem value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users" >FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+	<asp:ListItem value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users" >FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+	<asp:ListItem value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users" >FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+	<asp:ListItem value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users" >FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+	<asp:ListItem value="Corridor4DM SPECT 2016|No|Enterprise|" >FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+	<asp:ListItem value="Corridor4DM NM 2016|No|Enterprise|" >FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+	<asp:ListItem value="Corridor4DM CT Opt 2016|No|Enterprise|" >FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+	<asp:ListItem value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|" >FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+	<asp:ListItem value="Corridor4DM NM 2018|No|Enterprise|" >FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+	<asp:ListItem value="Corridor4DM SPECT 2018|No|Enterprise|" >FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+	<asp:ListItem value="Corridor4DM CT Opt 2018|No|Enterprise|" >FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+	<asp:ListItem value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|" >FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+	<asp:ListItem value="Zero FootPrint Viewer SW - 2 User|No|2|55" >NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+	<asp:ListItem value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed" >NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+	<asp:ListItem value="DynaCAD Breast |No|1|" >NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+	<asp:ListItem value="DynaCAD Combo Package |No|1|" >NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+	<asp:ListItem value="NM JETPack App License - Add_Users|NULL||NULL" >FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+	<asp:ListItem value="NeuroQ SPECT Opt - Add_Users|NULL||NULL" >FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+	<asp:ListItem value="ECTB NM v4.x - Add_Users|NULL||NULL" >FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
+
+	<asp:ListItem value="MR NeuroQuant 100+10 test Rpts|No|Enterprise|" >FIC0290 - MR NeuroQuant 100+10 test Rpts</asp:ListItem>
+	<asp:ListItem value="MR NeuroQuant 500+20 test Rpts|||" >FIC0292 - MR NeuroQuant 500+20 test Rpts</asp:ListItem>
+	<asp:ListItem value="MR NeuroQuant Unltd 1 yr. SNGL|||" >FIC0294 - MR NeuroQuant Unltd 1 yr. SNGL</asp:ListItem>
+	<asp:ListItem value="MR NeuroQuant Unltd 1 yr. All|||" >FIC0295 - MR NeuroQuant Unltd 1 yr. All</asp:ListItem>
+
+
+
+                                                                                        
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1055,12 +1468,123 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName1" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_1" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_2" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_3" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_4" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_5" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_6" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_7" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_8" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_9" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName1_10" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <span onclick="addhostnewline(1);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <asp:HiddenField ID="HiddenHostNewLine1" runat="server" value="0" />
                                                                                 </td>
+
+
+
+                                                                                 <td>                                                                                    
+                                                                                    <input type="number" id="txtCUser1" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,1,0);" name="txtCUsers1" min="1" max="55" value="" />                                                                                    
+                                                                                     <input type="number" id="txtCUser1_1" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,1);" name="txtCUsers1_1" min="1" max="15" value="" />     
+                                                                                      <input type="number" id="txtCUser1_2" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,2);" name="txtCUsers1_2" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_3" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_3" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_4" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_4" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_5" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_5" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_6" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_6" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_7" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_7" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_8" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_8" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_9" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_9" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser1_10" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_10" min="1" max="15" value="" />     
+                                                                                </td>
+
 
                                                                                 <td align="center">
 
                                                                                     <span id="cmdAddtionalAppDelete1" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+                                                                                     <span id="cmdAddtionalAppDelete1_1" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+                                                                                    
+                                                                                    <span id="cmdAddtionalAppDelete1_2" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+
+                                                                                     <span id="cmdAddtionalAppDelete1_3" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete1_4" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete1_5" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete1_6" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete1_7" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete1_8" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete1_9" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete1_10" onclick="deleteHostNew(this,1);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
                                                                                     </span>
 
 
@@ -1081,6 +1605,8 @@
                                                                                     <div id="errortxtConcurrent2" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
+                                                                                
+
                                                                                 <td align="center">
                                                                                     <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
                                                                                 </td>
@@ -1090,6 +1616,12 @@
                                                                                        <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
+
+                                                                                 <td>                                                                                    
+                                                                                    <input type="number" id="txtCUser2" class="form-control" style="margin-top: 3px;" name="txtCUsers2" min="1" max="55" value="" />                                                                                    
+                                                                                </td>
+
+
                                                                                 <td align="center">
 
                                                                                     <span id="cmdAddtionalAppDelete2" onclick="deleteAddtionalApp(this);">
@@ -1122,6 +1654,12 @@
                                                                                        <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
+
+
+                                                                                <td>                                                                                    
+                                                                                    <input type="number" id="txtCUser3" class="form-control" style="margin-top: 3px;" name="txtCUsers3" min="1" max="55" value="" />                                                                                    
+                                                                                </td>
+
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete3" onclick="deleteAddtionalApp(this);">
                                                                                         <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
@@ -1152,6 +1690,13 @@
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
+
+
+
+                                                                                <td>                                                                                    
+                                                                                    <input type="number" id="txtCUser4" class="form-control" style="margin-top: 3px;" name="txtCUsers4" min="1" max="55" value="" />                                                                                    
+                                                                                </td>
+
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete4" onclick="deleteAddtionalApp(this);">
                                                                                         <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
@@ -1523,7 +2068,11 @@
                                                     <div class="tab-regular" style="margin-top: 10px;">
                                                         <ul class="nav nav-tabs " id="myTab1" role="tablist">
 
-                                                            <li class="nav-item active" id="Navsoftware-tab"> 
+                                                             <li class="nav-item active" id="Navsoftware-tab"> 
+                                                                <a class="nav-link test" id="DELIVERY-tab" name="DELIVERY-tab" data-toggle="tab" href="#DELIVERY" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 158px;">Commercial Only</a>
+                                                            </li> 
+
+                                                            <li class="nav-item " id="Navsoftware-tab"> 
                                                                 <a class="nav-link test" id="DELIVERY-tab" name="DELIVERY-tab" data-toggle="tab" href="#DELIVERY" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 158px;">Software Only</a>
                                                             </li> 
 
@@ -1537,7 +2086,7 @@
                                                             <div class="tab-pane active" id="DELIVERY" role="tabpanel" aria-labelledby="DELIVERY-tab">
 
 
-                                                                <table class="table" style="margin-left: -15px;">
+                                                                <table class="table" style="margin-left: -15px;display:none;">
 
                                                                     <tbody>
 
@@ -1574,7 +2123,7 @@
                                                                 </table>
 
 
-                                                                <table class="table" style="margin-left: -15px;">
+                                                                <table class="table" style="margin-left: -15px;display:none;">
 
                                                                     <tbody>
                                                                         <tr>
@@ -1609,10 +2158,30 @@
 
 
 
-                                                                <div class="row">
+                                                                <div class="row" id="mac1">
+                                                                    <br />
+    
+       <p style="font-weight:bold;display: inline-block;" id="macheading1"></p> 
+      <div style="display: inline-block;">
+       <span id="error1" style="color:red; font-weight:bold;"></span>
+      </div>
+    
                                                                     <div class="col-md-12">
+
+
+
+   
+
+
+
+
+                                                                      
+                                                                        
+                                                                        
+                                                                        
+
                                                                         <div class="table-responsive">
-                                                                            <table class="table table-bordered" id="macTable" style="margin-left: -0px;">
+                                                                            <table class="table table-bordered" id="macTable1" style="margin-left: -2px;">
                                                                                 <thead class="thead-light">
                                                                                     <tr>
                                                                                         <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
@@ -1634,6 +2203,128 @@
                                                                 </div>
 
 
+
+
+                                                                 <div class="row" id="mac2" style="display:none;">
+                                                                     <br />
+                                                                    <div class="col-md-12">
+                                                                         
+
+
+
+                                                                        <p style="font-weight:bold;display: inline-block;" id="macheading2"></p> 
+      <div style="display: inline-block;">
+      
+          <span id="error2" style="color:red; font-weight:bold;"></span>
+      </div>
+
+
+
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-bordered" id="macTable2" style="margin-left: -0px;">
+                                                                                <thead class="thead-light">
+                                                                                    <tr>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+
+                                                                </div>
+
+
+
+                                                                <div class="row" id="mac3" style="display:none;">
+                                                                    <br />
+                                                                    <div class="col-md-12">
+                                                                           <p style="font-weight:bold;" id="macheading3"></p>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-bordered" id="macTable3" style="margin-left: -0px;">
+                                                                                <thead class="thead-light">
+                                                                                    <tr>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+
+                                                                </div>
+
+
+
+                                                                 <div class="row" id="mac4" style="display:none;">
+                                                                     <br />
+                                                                    <div class="col-md-12">
+                                                                           <p style="font-weight:bold;" id="macheading4"></p>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-bordered" id="macTable4" style="margin-left: -0px;">
+                                                                                <thead class="thead-light">
+                                                                                    <tr>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+
+                                                                </div>
+
+
+
+                                                                <div class="row" id="mac5" style="display:none;">
+                                                                    <br />
+                                                                    <div class="col-md-12">
+                                                                           <p style="font-weight:bold;" id="macheading5"></p>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-bordered" id="macTable5" style="margin-left: -0px;">
+                                                                                <thead class="thead-light">
+                                                                                    <tr>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+
+                                                                </div>
 
 
 
@@ -1889,10 +2580,11 @@
 
                                                                             <div onclick="MacAddLinePro();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
 
-                                                                        </div>
-
-
+                                                                        </div>                                                                        
                                                                     </div>
+
+
+
                                                                 </div>
 
 
@@ -2076,7 +2768,7 @@
     <script>
 
 
-        var isDev = false;
+        var isDev = true;
 
         var sapicheckapp = "";
         var sapidata = "";
@@ -2096,49 +2788,184 @@
         arrHead = ['No', 'Menu', 'Mac','Remove']; // table headers.
 
 
+        function deleteHostNew(thisItem,lineno) {
 
-        function CreateRowPro(NoRows, ApplicationUsed, IsTest, maclist, isPre) {
+            let itemLine = thisItem.id;
 
-            //remove items
+            let itemnumber = $("#HiddenHostNewLine" + lineno)[0].value;
 
-            var tableHeaderRowCount = 1;
-            var table = document.getElementById('macTableAdv');
-            var rowCount = table.rows.length;
-            for (var i = tableHeaderRowCount; i < rowCount; i++) {                        
-                table.deleteRow(tableHeaderRowCount);            
-            }
+            itemnumber--;
 
-          
+            $("#HiddenHostNewLine" + lineno)[0]=itemnumber;
 
-            //remove items
-            NoRows++;
+            switch (itemnumber) {
+                case 0:
+                    $("#cmdHospitalName1_1").hide();
+                    $("#txtCUser1_1").hide();
+                    $("#cmdAddtionalAppDelete1_1").hide();
+                    break;
+                case 1:
+                    $("#cmdHospitalName1_1").hide();
+                    $("#txtCUser1_1").hide();
+                    $("#cmdAddtionalAppDelete1_1").hide();
 
-            for (var r = 0; r < NoRows; r++) {
-                addRowPro(r + 1, ApplicationUsed, NoRows, IsTest, maclist, isPre);
+                    $("#cmdHospitalName1_2").hide();
+                    $("#txtCUser1_2").hide();
+                    $("#cmdAddtionalAppDelete1_2").hide();
+                    break;
+                  case 2:
+                    $("#cmdHospitalName1_1").hide();
+                    $("#txtCUser1_1").hide();
+                    $("#cmdAddtionalAppDelete1_1").hide();
+
+                    $("#cmdHospitalName1_2").hide();
+                    $("#txtCUser1_2").hide();
+                    $("#cmdAddtionalAppDelete1_2").hide();
+
+                    $("#cmdHospitalName1_3").hide();
+                    $("#txtCUser1_3").hide();
+                    $("#cmdAddtionalAppDelete1_3").hide();
+                    break;
             }
 
         }
 
-        function CreateRow(NoRows, ApplicationUsed, IsTest, maclist) {
+        function addhostnewline(itemNo) {
+
+           
+
+            let counteridx = $("#HiddenHostNewLine" + itemNo)[0].value;
+            counteridx++;
+            $("#HiddenHostNewLine" + itemNo)[0].value = counteridx;
+
+            switch (counteridx) {
+                case 1:
+                    $("#cmdHospitalName1_1").show();
+                    $("#txtCUser1_1").show();
+                    $("#cmdAddtionalAppDelete1_1").show();
+                    break;
+                case 2:
+                    $("#cmdHospitalName1_1").show();
+                    $("#txtCUser1_1").show();
+                    $("#cmdAddtionalAppDelete1_1").show();
+
+                    $("#cmdHospitalName1_2").show();
+                    $("#txtCUser1_2").show();
+                    $("#cmdAddtionalAppDelete1_2").show();
+                    break;
+                  case 2:
+                    $("#cmdHospitalName1_1").show();
+                    $("#txtCUser1_1").show();
+                    $("#cmdAddtionalAppDelete1_1").show();
+
+                    $("#cmdHospitalName1_2").show();
+                    $("#txtCUser1_2").show();
+                    $("#cmdAddtionalAppDelete1_2").show();
+
+                    $("#cmdHospitalName1_3").show();
+                    $("#txtCUser1_3").show();
+                    $("#cmdAddtionalAppDelete1_3").show();
+                    break;
+
+                case 3:
+                    $("#cmdHospitalName1_4").show();
+                    $("#txtCUser1_4").show();
+                    $("#cmdAddtionalAppDelete1_4").show();
+                    break;
+                case 4:
+                    $("#cmdHospitalName1_5").show();
+                    $("#txtCUser1_5").show();
+                    $("#cmdAddtionalAppDelete1_5").show();
+                    break;
+                case 5:
+                    $("#cmdHospitalName1_6").show();
+                    $("#txtCUser1_6").show();
+                    $("#cmdAddtionalAppDelete1_6").show();
+                    break;
+                case 6:
+                    $("#cmdHospitalName1_7").show();
+                    $("#txtCUser1_7").show();
+                    $("#cmdAddtionalAppDelete1_7").show();
+                    break;
+                case 7:
+                    $("#cmdHospitalName1_8").show();
+                    $("#txtCUser1_8").show();
+                    $("#cmdAddtionalAppDelete1_8").show();
+                    break;
+                case 8:
+                    $("#cmdHospitalName1_9").show();
+                    $("#txtCUser1_9").show();
+                    $("#cmdAddtionalAppDelete1_9").show();
+                    break;
+            }
+
+
+
+        }
+       
+        function CreateRow(NoRows, maclist) {
 
             //remove items
 
             var tableHeaderRowCount = 1;
-            var table = document.getElementById('macTable');
+            var table = document.getElementById('macTable1');
             var rowCount = table.rows.length;
             for (var i = tableHeaderRowCount; i < rowCount; i++) {                      
                 table.deleteRow(tableHeaderRowCount);           
             }
 
-            if (IsTest == true) {
-                  NoRows++;
+              
+            var siteConcurrent =  $("#HostpitalEntryText1")[0].value;
+
+          //  NoRows++;                      
+
+            for (var r = 1; r <= NoRows; r++) {
+
+                let isreadOnly = "";
+
+                if (siteConcurrent > 10) {
+
+                    if (r <= 3) {
+                        isreadOnly = true;
+                    }
+
+                } else {
+                    if (r == 1) {
+                        isreadOnly = true;
+                    }
+                }
+                
+
+
+                Add_Dist_MacTable(1, r, GetMaclistItem(r,maclist),isreadOnly,siteConcurrent );
             }
 
-            
-            NoRows++;                      
+        }
 
-            for (var r = 0; r < NoRows; r++) {
-                addRow(r + 1, ApplicationUsed, NoRows, IsTest, maclist);
+
+        function GetMaclistItem(itemNo,maclist) {
+
+
+            if (maclist != "" & maclist != null) {
+
+                var n = maclist.includes(",");
+                if (n == true) {
+                    res = maclist.split(",");
+
+                    for (i = 0; i < res.length; i++) {
+
+                        if (itemNo - 1 == i) {
+                            if (res[i] != ":") {
+                                myMacres = res[i].split(":");
+                                return myMacres[0];
+                            }
+                        }
+                        
+                    }
+
+                    
+                }
+
             }
 
         }
@@ -2179,7 +3006,7 @@
 
         function storeCurrentMac() {
 
-            var macTable = document.getElementById('macTable');
+            var macTable = document.getElementById('macTable1');
             var rowCnt = macTable.rows.length - 1;
 
             var MacList = "";
@@ -2364,11 +3191,229 @@
             }
         }
 
+        function removeDistMacTable(thisItemNo) {
+            var tableHeaderRowCount = 1;
+            var table = document.getElementById('macTable'+thisItemNo);
+            var rowCount = table.rows.length;
+            for (var i = tableHeaderRowCount; i < rowCount; i++) {                        
+                table.deleteRow(tableHeaderRowCount);            
+            }
+        }
+
+        function UpdateDistMacTable(thisItemNo)
+        {
+
+            let maxConcurrent = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+            let siteBox = $("#HostpitalEntryText" + thisItemNo)[0].value;
+
+
+
+            let siteBox1 = $("#HostpitalEntryText1")[0].value;
+            let siteBox2 = $("#HostpitalEntryText2")[0].value = $("#HostpitalEntryText2")[0].value ? $("#HostpitalEntryText2")[0].value : 0;
+            let siteBox3 = $("#HostpitalEntryText3")[0].value = $("#HostpitalEntryText3")[0].value ? $("#HostpitalEntryText3")[0].value : 0;
+            let siteBox4 = $("#HostpitalEntryText4")[0].value = $("#HostpitalEntryText4")[0].value ? $("#HostpitalEntryText4")[0].value : 0;
+            let siteBox5 = $("#HostpitalEntryText5")[0].value = $("#HostpitalEntryText5")[0].value ? $("#HostpitalEntryText5")[0].value : 0;
+
+            let SiteBoxTotal = parseInt(siteBox1) + parseInt(siteBox2)+ parseInt(siteBox3)+ parseInt(siteBox4)+ parseInt(siteBox5);
+
+            if (SiteBoxTotal > maxConcurrent) {
+
+                alert("ERROR with value");
+            }
+
+
+            //remove items
+            removeDistMacTable(thisItemNo);
+
+            SiteBoxTotal = SiteBoxTotal - siteBox;
+            SiteBoxTotal = maxConcurrent - SiteBoxTotal;
+
+            if (maxConcurrent > 15) {
+
+                 if (parseInt(siteBox) > 15 ) {
+                    $("#HostpitalEntryText" + thisItemNo)[0].value = SiteBoxTotal;
+                   // $("#error" + thisItemNo)[0].innerHTML = "max number is " + SiteBoxTotal;
+                    siteBox = $("#HostpitalEntryText" + thisItemNo)[0].value;                
+                } else {
+                   // $("#error" + thisItemNo)[0].innerHTML = "";
+                }
+
+
+            } else {
+
+               
+
+                 if (parseInt(siteBox) > SiteBoxTotal ) {
+                    $("#HostpitalEntryText" + thisItemNo)[0].value = SiteBoxTotal;
+                   // $("#error" + thisItemNo)[0].innerHTML = "max number is " + SiteBoxTotal;
+                    siteBox = $("#HostpitalEntryText" + thisItemNo)[0].value;                
+                } else {
+                   // $("#error" + thisItemNo)[0].innerHTML = "";
+                }
+
+
+            }
+
+                     
+
+           
+
+            if (siteBox <= 10) {
+                siteBox = 1;
+            }
+
+            if (siteBox > 10) {
+                siteBox = 2;
+            }
+
+
+            let ConUsers =  $("#HostpitalEntryText" + thisItemNo)[0].value
+
+            
+
+            switch (siteBox) {
+                case 1:
+                    Add_Dist_MacTable(thisItemNo, 1,"FIC0248 - ISP Server Software Only",true);
+                    Add_Dist_MacTable(thisItemNo, 2,"FIC0133 - Standard ISP Server",false,ConUsers);
+                    break;
+                case 2:
+                    Add_Dist_MacTable(thisItemNo, 1, "FIC0248 - ISP Server Software Only", true);
+                    Add_Dist_MacTable(thisItemNo, 2,"FIC0248 - ISP Server Software Only",true);
+                    Add_Dist_MacTable(thisItemNo, 3, "FIC0134 - Extended ISP Server", true);
+
+                    break;
+
+                
+
+            }
+
+            
+
+        }
+
+        function Add_Dist_MacTable(thisItemNo,idx,overrideText, overrideReadOnly, ConUsers)
+        {
+            
+            var empTab = document.getElementById('macTable'+thisItemNo);
+            var rowCnt = empTab.rows.length;    // get the number of rows.
+            var tr = empTab.insertRow(rowCnt); // table row.
+            tr.id = 'macTable'+thisItemNo + idx;
+            //tr = empTab.insertRow(rowCnt);
+            
+
+            for (var c = 0; c < arrHead.length; c++) {
+                var td = document.createElement('td');
+                td = tr.insertCell(c);
+                td.align = "center";
+
+                switch (c) {
+
+                    case 0:
+
+                        var closeSpan = document.createElement("span");
+                        closeSpan.setAttribute("class", "text-center");
+                        closeSpan.textContent = idx;
+                        td.appendChild(closeSpan);
+                        break;
+                    case 1:
+                        var select = document.createElement('select');
+                        select.name = "ApplicationSoftwareOnly" + idx;
+                        select.id = "ApplicationSoftwareOnly" + idx;
+                        select.setAttribute("onchange", "storeCurrentMac();");
+
+                        if (overrideReadOnly == true) {                       
+                            select.setAttribute("readonly", "readonly");
+                        }
+                                                                    
+                        
+                        var option;
+                        var inputdata = "";
+
+
+                        if (ConUsers <= 10 && idx == 2) {
+
+                            inputdata = "FIC0133 - Standard ISP Server||FIC0134 - Extended ISP Server";
+                        } else {
+                            inputdata = "FIC0248 - ISP Server Software Only||FIC0133 - Standard ISP Server||FIC0134 - Extended ISP Server";
+                        }
+
+
+                        var split = inputdata.split('||');
+
+                        select.setAttribute("class", "form-control softwareTable");
+                        inputdata.split('||').forEach(function (item) {
+
+                            option = document.createElement('option');
+
+                            option.value = option.textContent = item;
+
+                            select.appendChild(option);
+                        });
+
+                        td.appendChild(select);
+
+                        if (overrideText !="") {
+                            $("#ApplicationSoftwareOnly" + idx).val(overrideText).change();                        
+                        }                                                                   
+
+                        break;
+                    case 2:
+                        
+
+                        var ele = document.createElement('input');
+                        ele.setAttribute('type', 'text');
+                        ele.setAttribute('value', '');
+                        ele.setAttribute('name', "MacSoftwareOnly" + idx);
+                        ele.setAttribute('id', "MacSoftwareOnly" + idx);
+                        ele.setAttribute("class", "form-control");
+                        td.appendChild(ele);
+
+
+
+                      
+
+
+
+                        break;
+
+
+                    case 3:
+                        
+                        //    <span id="cmdAddtionalAppDelete1" onclick="deleteAddtionalApp(this);">
+                        //        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                        //    </span>                            
+
+
+                        if (idx > 1) {
+
+                            var ele = document.createElement('span');
+                            ele.setAttribute('id', 'cmdLicenceDelete' + idx);
+                            ele.setAttribute('onclick', 'deleteLicence(this);');
+                            td.appendChild(ele);
+
+                            document.getElementById('cmdLicenceDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+
+
+                        } else {
+
+
+
+                            
+
+                        }
+
+                        break;
+                }
+
+
+            }
+        }
+
         function addRow(idx, ApplicationUsed, NoRows, IsTest, maclist) {
 
             var datalicence = parseInt($('#hidLicenceData')[0].value) + 1;
 
-            var empTab = document.getElementById('macTable');
+            var empTab = document.getElementById('macTable1');
             var rowCnt = empTab.rows.length;    // get the number of rows.
             var tr = empTab.insertRow(rowCnt); // table row.
             tr.id = ApplicationUsed;
@@ -2393,7 +3438,7 @@
                         var select = document.createElement('select');
                         select.name = "ApplicationSoftwareOnly" + idx;
                         select.id = "ApplicationSoftwareOnly" + idx;
-                        select.setAttribute("onchange", "storeCurrentMac();");
+                        //select.setAttribute("onchange", "storeCurrentMac();");
 
                         if (idx > datalicence) {
 
@@ -2922,16 +3967,313 @@
             }
         }
 
+        function validateCUser(itemTHIS,rowno,rowsubitem) {
+
+            let myitem = itemTHIS.id;
+            let myitemIDX = itemTHIS.id.replace('txtCUser','');
+
+            let hospitalselected = $("#cmdHospitalName" + myitemIDX)[0].value;
+            let selectedHost = 0;
+
+            if (myitemIDX.includes("_")) {
+
+                for (i = 1; i < 10; i++) {
+                    if (typeof $("#cmdHospitalName"+ rowno +"_" + i)[0].value !== 'undefined' && $("#cmdHospitalName" + rowno +"_" + i)[0].value) {
+                        let itemHos = $("#cmdHospitalName" + rowno +"_" + i)[0].value;
+                        if (itemHos == hospitalselected) {
+                            selectedHost = i;
+                            break;
+                        }
+                    }
+                }
+
+            } else {
+                for (i = 1; i < 10; i++) {
+                    if (typeof $("#cmdHospitalName" + i)[0].value !== 'undefined' && $("#cmdHospitalName" + i)[0].value) {
+                        let itemHos = $("#cmdHospitalName" + i)[0].value;
+                        if (itemHos == hospitalselected) {
+                            selectedHost = i;
+                            break;
+                        }
+                    }
+                }
+            }
+
+          
+            let maxvalue = $("#HostpitalEntryText" + selectedHost)[0].value;
+            let myvalue = $("#" + myitem)[0].value;
+
+
+            if ( parseInt(myvalue) > parseInt(maxvalue)) {
+               
+                $("#CONCURRENTENTERPRISE_Error4").show();
+                $("#error4display")[0].innerText = "Value exceeds";
+                $("#" + myitem)[0].value = 0;
+                return false;
+
+            } else {
+                $("#CONCURRENTENTERPRISE_Error4").hide();
+            }
+
+
+            let concUser = $("#txtConcurrent" + rowno)[0].value;
+           
+            if ( parseInt( myvalue)  > parseInt(concUser)) {
+                $("#CONCURRENTENTERPRISE_Error4").show();
+                $("#error4display")[0].innerText = "Value exceeds";
+            } else {    
+                 $("#CONCURRENTENTERPRISE_Error4").hide();
+            }
+
+
+            //Total up 
+            let totaluser = 0;
+            if (typeof $("#txtCUser" + i)[0].value !== 'undefined' && $("#txtCUser" + i)[0].value) {
+                totaluser += parseInt($("#txtCUser" + rowno)[0].value);
+            }
+
+            if (typeof $("#txtCUser" + rowno + "_" + 1)[0].value !== 'undefined' && $("#txtCUser" + rowno + "_" + 1)[0].value) {
+                totaluser += parseInt($("#txtCUser" + rowno + "_" + 1)[0].value);
+            }
+
+            if (typeof $("#txtCUser" + rowno + "_" + 2)[0].value !== 'undefined' && $("#txtCUser" + rowno + "_" + 2)[0].value) {
+                totaluser += parseInt($("#txtCUser" + rowno + "_" + 2)[0].value);
+            }
+
+            if (typeof $("#txtCUser" + rowno + "_" + 3)[0].value !== 'undefined' && $("#txtCUser" + rowno + "_" + 3)[0].value) {
+                totaluser += parseInt($("#txtCUser" + rowno + "_" + 3)[0].value);
+            }
+
+            if (parseInt(totaluser) > parseInt(concUser)) {
+                  $("#CONCURRENTENTERPRISE_Error4").show();
+                  $("#error4display")[0].innerText = "Value exceeds";
+            } else {
+                 $("#CONCURRENTENTERPRISE_Error4").hide();
+            }
+            
+
+        }
+
+
+        function CheckConcurrentBox() {
+
+            let CONCURRENTENTERPRISEUSERS = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+
+            let HostpitalEntryText1 = $("#HostpitalEntryText1")[0].value;
+            let HostpitalEntryText2 = $("#HostpitalEntryText2")[0].value;
+            let HostpitalEntryText3 = $("#HostpitalEntryText3")[0].value;
+            let HostpitalEntryText4 = $("#HostpitalEntryText4")[0].value;
+            let HostpitalEntryText5 = $("#HostpitalEntryText5")[0].value;
+            let HostpitalEntryText6 = $("#HostpitalEntryText6")[0].value;
+
+            if (HostpitalEntryText1 == "") { HostpitalEntryText1 = 0; }
+            if (HostpitalEntryText2 == "") { HostpitalEntryText2 = 0; }
+            if (HostpitalEntryText3 == "") { HostpitalEntryText3 = 0; }
+            if (HostpitalEntryText4 == "") { HostpitalEntryText4 = 0; }
+            if (HostpitalEntryText5 == "") { HostpitalEntryText5 = 0; }
+            if (HostpitalEntryText6 == "") { HostpitalEntryText6 = 0; }
+
+             let total = parseInt(HostpitalEntryText1) + parseInt(HostpitalEntryText2) + parseInt(HostpitalEntryText3) + parseInt(HostpitalEntryText4) + parseInt(HostpitalEntryText5) + parseInt(HostpitalEntryText6);
+
+
+            if (total > CONCURRENTENTERPRISEUSERS) {
+                 $("#CONCURRENTENTERPRISEUSERS")[0].value = total;
+                 CONCURRENTENTERPRISEUSERS = total;
+                 $("#CONCURRENTENTERPRISE_Error3").show();
+                 $("#error3display")[0].innerText = "Enterprise Users can't be less than site users";
+            } else {
+                $("#CONCURRENTENTERPRISE_Error3").hide();
+            }
+
+
+           
+
+            for (i = 1; i <= 15; i++) {
+                if (i <= 14) {
+                    if ($("#cmdApplication" + i)[0].value != "") {
+
+                        let myaa= $("#cmdApplication" + i)[0].value
+                        if ($("#cmdApplication" + i)[0].value.includes("Enterprise") == true) {
+                            $("#txtConcurrent" + i)[0].value = CONCURRENTENTERPRISEUSERS;
+                        }
+
+                    }
+                }
+            }
+
+
+
+        }
+
+
+        function checkEntValues(itemTHIS) {
+
+            //check input less than 15
+
+            
+
+
+            let CONCURRENTENTERPRISEUSERS = $("#CONCURRENTENTERPRISEUSERS")[0].value;
+            
+            let HostpitalEntryText1 = $("#HostpitalEntryText1")[0].value;
+            let HostpitalEntryText2 = $("#HostpitalEntryText2")[0].value;
+            let HostpitalEntryText3 = $("#HostpitalEntryText3")[0].value;
+            let HostpitalEntryText4 = $("#HostpitalEntryText4")[0].value;
+            let HostpitalEntryText5 = $("#HostpitalEntryText5")[0].value;
+            let HostpitalEntryText6 = $("#HostpitalEntryText6")[0].value;
+
+            if (HostpitalEntryText1 == "") { HostpitalEntryText1 = 0; }
+            if (HostpitalEntryText2 == "") { HostpitalEntryText2 = 0; }
+            if (HostpitalEntryText3 == "") { HostpitalEntryText3 = 0; }
+            if (HostpitalEntryText4 == "") { HostpitalEntryText4 = 0; }
+            if (HostpitalEntryText5 == "") { HostpitalEntryText5 = 0; }
+            if (HostpitalEntryText6 == "") { HostpitalEntryText6 = 0; }
+
+            let total = parseInt(HostpitalEntryText1) + parseInt(HostpitalEntryText2) + parseInt(HostpitalEntryText3) + parseInt(HostpitalEntryText4) + parseInt(HostpitalEntryText5) + parseInt(HostpitalEntryText6);
+
+            if (total > CONCURRENTENTERPRISEUSERS) {
+
+                $("#" + itemTHIS.id)[0].value = 0;
+
+
+                $("#CONCURRENTENTERPRISE_Error3").show();
+                $("#error3display")[0].innerText = "Value exceeds total Enterprise users " + CONCURRENTENTERPRISEUSERS;
+
+            } else {
+                $("#CONCURRENTENTERPRISE_Error3").hide();
+            }
+
+
+
+            if (HostpitalEntryText1 != "0") {
+                UpdateDistMacTable('1');
+            }
+
+            if (HostpitalEntryText2 != "0") {
+                UpdateDistMacTable('2');
+            }
+
+
+            if (HostpitalEntryText3 != "0") {
+                UpdateDistMacTable('3');
+            }
+
+            if (HostpitalEntryText4 != "0") {
+                UpdateDistMacTable('4');
+            }
+
+            if (HostpitalEntryText5 != "0") {
+                UpdateDistMacTable('5');
+            }
+
+
+            if (parseInt($("#" + itemTHIS.id)[0].value) > 15) {
+                $("#CONCURRENTENTERPRISE_Error3").show();
+                $("#error3display")[0].innerText = "Value can not be exceeds 15";
+                $("#" + itemTHIS.id)[0].value = 15;
+                return false;
+            }
+
+
+        }
+
+
         function UpdateHospital(itemidx) {
 
             
-            AddHospitalItem($("#txtHospitalName" + itemidx)[0].value, $("#txtHospitalName" + itemidx)[0].value)
+            AddHospitalItem($("#txtHospitalName" + itemidx)[0].value, $("#txtHospitalName" + itemidx)[0].value);
+           
 
 
+
+            switch (itemidx) {
+
+                case 1:
+                    $("#HostpitalEntry1").show();
+                    $("#HostpitalEntryLabel1")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+                    
+                    break;
+
+                
+                case 2:
+                    $("#HostpitalEntry2").show();
+                    $("#HostpitalEntryLabel2")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+                    
+                    break;
+
+                  case 3:
+                    $("#HostpitalEntry3").show();
+                    $("#HostpitalEntryLabel3")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+                    
+                    break;
+
+                 case 4:
+                    $("#HostpitalEntry4").show();
+                    $("#HostpitalEntryLabel4")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+                    
+                    break;
+
+                 case 5:
+                    $("#HostpitalEntry5").show();
+                    $("#HostpitalEntryLabel5")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
+                    break;
+
+                 case 6:
+                    $("#HostpitalEntry6").show();
+                    $("#HostpitalEntryLabel6")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
+                    break;
+
+                 case 7:
+                    $("#HostpitalEntry7").show();
+                    $("#HostpitalEntryLabel7")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
+                    break;
+
+                 case 8:
+                    $("#HostpitalEntry8").show();
+                    $("#HostpitalEntryLabel8")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
+                    break;
+
+                case 9:
+                    $("#HostpitalEntry9").show();
+                    $("#HostpitalEntryLabel9")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
+                    break;
+
+                case 10:
+                    $("#HostpitalEntry10").show();
+                    $("#HostpitalEntryLabel10")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
+                    break;
+
+            }
+
+
+            $("#mac" + itemidx).show();
+            $("#macheading" + itemidx)[0].innerText = "SITE " + itemidx + ": " +  $("#txtHospitalName" + itemidx)[0].value.toUpperCase() + " - MAIN";
+            
+            //GetLicenceData();
             //txtHospitalName1
 
         }
         function AddHospitalItem(Text, Value) {
+
+            //var i;
+            //for (i = 1; i < 10; i++) {
+            //    var optVal = document.createElement("option");
+
+            //   optVal.text = Text;
+            //    optVal.value = Value;
+
+            //    document.getElementById("cmdHospitalName" + i).options.add(optVal);
+
+            //    if (i == 1) {                    
+            //        document.getElementById("cmdHospitalName" + i + "_1").options.add(optVal);
+            //        document.getElementById("cmdHospitalName" + i + "_2").options.add(optVal);
+            //        document.getElementById("cmdHospitalName" + i + "_3").options.add(optVal);
+            //    }
+
+                 
+               
+            //}
+
 
             var i;
             for (i = 1; i < 10; i++) {
@@ -2942,7 +4284,76 @@
                 optVal.value = Value;
             }
 
-           
+
+
+
+            var i;
+           // for (i = 1; i < 10; i++) {
+                var optVal = document.createElement("option");
+               
+                document.getElementById("cmdHospitalName" + 1+ "_1").options.add(optVal);
+                optVal.text = Text;
+                optVal.value = Value;
+            //}
+
+            var i;
+          //  for (i = 1; i < 10; i++) {
+                var optVal = document.createElement("option");
+               
+                document.getElementById("cmdHospitalName" + 1+ "_2").options.add(optVal);
+                optVal.text = Text;
+                optVal.value = Value;
+            //}
+
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_3").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_4").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_5").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_6").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_7").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_8").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_9").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
+            var i;          
+            var optVal = document.createElement("option");               
+            document.getElementById("cmdHospitalName" + 1+ "_10").options.add(optVal);
+            optVal.text = Text;
+            optVal.value = Value;
+
 
         }
 
@@ -3717,7 +5128,7 @@
 
                                 $("#cmdISPSoftwareOnly1").addClass("active");
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                               // CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "2":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3725,7 +5136,7 @@
                                 $("#cmdISPSoftwareOnly2").addClass("active");
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                               // CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "3":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3735,7 +5146,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                               // CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "4":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3746,7 +5157,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                              //  CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "5":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3757,7 +5168,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                              //  CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "6":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3768,7 +5179,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                               // CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "7":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3782,7 +5193,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                              //  CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "8":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3797,7 +5208,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                               // CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "9":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3813,7 +5224,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                              //  CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "10":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3831,7 +5242,7 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                              //  CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                             case "11":
                                 $('.ISPSoftwareOnly.active').removeClass("active");
@@ -3849,14 +5260,14 @@
                                 $("#cmdISPSoftwareOnly2").prop('disabled', true);
                                 $("#cmdISPSoftwareOnly1").prop('disabled', true);
 
-                                CreateRow(data.licence, data.application, IsTest, maclist)
+                              ///  CreateRow(data.licence, data.application, IsTest, maclist)
                                 break;
                         }
 
                         $('#hidISPSoftwareOnly')[0].value = data.licence;
 
 
-                        storeCurrentMac();
+                       // storeCurrentMac();
                          GetProData();
 
                     },
@@ -5461,83 +6872,15 @@
 
             storeCurrentMac();
 
-            let currentValue = parseInt($('.ISPSoftwareOnly.active')[0].value);
-            let HasTestServer = $("#cmdISPSoftwareYes").hasClass('active');
+
+            var currentValue = document.getElementById("macTable1").rows.length-1;
+
+            //let currentValue = parseInt($('.ISPSoftwareOnly.active')[0].value);
             currentValue = currentValue + 1;
 
             if (currentValue < 12) {
-
-                $('.ISPSoftwareOnly.active').removeClass("active");
-                $("#cmdISPSoftwareOnly" + currentValue).addClass("active");
-
-
-                if (HasTestServer == true) {
-                   //  currentValue = currentValue + 1;
-                    CreateRow(currentValue, $('#hidApplicationData').value, true, $('#hidMacTable')[0].value);
-                } else {
-                    CreateRow(currentValue, $('#hidApplicationData').value, false, $('#hidMacTable')[0].value);
-                }
-
-            } else {
-                alert('Maximum lines reached');
-            }
-
-
-        }
-
-
-        function MacAddLinePro() {
-
-            storeCurrentMacPro();
-
-            let isPro = $("#HHNotPro").hasClass('active');
-            let currentValue = 0;
-            if (isPro == true) {
-                currentValue = parseInt($('.ISPAdvancedlicense.active')[0].value);
-            } else {
-                currentValue = parseInt($('.ISPPremiumLicenseHW.active')[0].value);
-            }
-
-
-
-            let HasTestServer = $("#ISPTextLicenseRequiredYes").hasClass('active');
-            currentValue = currentValue + 1;
-
-            if (currentValue < 11) {
                
-                if (isPro == false) {
-
-                    
-                    
-                    $('.ISPPremiumLicenseHW.active').removeClass("active");
-                    $("#ISPPremiumLicense" + currentValue).addClass("active");
-
-                    if (HasTestServer == true) {
-                          currentValue = currentValue + 1;
-                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value, 1);
-                    } else {
-                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value, 1);
-                    }
-
-                    SetPremiumServers(currentValue);
-
-                } else {
-
-
-                    $('.ISPAdvancedlicense.active').removeClass("active");
-                    $("#ISPAdvancedlicense" + currentValue).addClass("active");
-
-                    if (HasTestServer == true) {
-                          currentValue = currentValue + 1;
-                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, true, $('#hidMacTablePro')[0].value, 0);
-                    } else {
-                        CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value, 0);
-                    }
-
-
-                    SetPremiumServers(currentValue);
-
-                }
+                CreateRow(currentValue,  $('#hidMacTable')[0].value);               
 
             } else {
                 alert('Maximum lines reached');
@@ -5545,6 +6888,9 @@
 
 
         }
+
+
+      
 
 
 
@@ -5581,7 +6927,7 @@
         }
 
         $(document).ready(function () {
-            GetLicenceData();
+           // GetLicenceData();
             $('.ApplicationDDL').select2();
 
 

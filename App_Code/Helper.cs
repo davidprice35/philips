@@ -179,8 +179,8 @@ public class Helper
 
     //    }
 
-    //    public static void InsertTracking(string userID, string PageName, string UserEmail)
-    //    {
+        public static void InsertTracking(string userID, string PageName, string UserEmail)
+        {
     //        try {
 
     //            //Get active Directory user
@@ -192,7 +192,7 @@ public class Helper
 
     //        }
     //        catch { }        
-    //    }
+        }
 
     //    public static void SendEmail(string ToEmail, string Subject, string MailBody)
     //    {

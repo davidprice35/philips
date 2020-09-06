@@ -200,99 +200,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     }
 
     
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        try {
-
-            Session["Competitors"] = "Super Admin";
-            Session["User"] = "Jonny";
-            Session["UserType"] = "Granted Access";
-            //bool Signin = false;
-
-
-
-
-            //if (Session["User"] != null)
-            //{
-            //    if (Session["User"] != null)
-            //    {
-            //        m_UserName = Session["User"].ToString();
-            //        m_UserID= Session["UserID"].ToString();
-            //        m_UserType = Session["Competitors"].ToString();
-            //        Signin = true;
-            //    }
-
-            //}
-
-
-            //if (Signin == true)
-            //{
-
-
-            //}
-            //else
-            //{
-            //    Response.Redirect("/Account/Signin");
-            //}
-
-
-            try
-            {
-                //string EmailName = Request.Headers["Federation-UserPrincipalName"].ToString();
-                //Helper.InsertTracking(m_UserID, "Competitors", EmailName);
-            }
-            catch
-            {
-
-                //Helper.InsertTracking(m_UserID, "Competitors", "");
-            }
-
-
-
-
-            //if (Session["Competitors"].ToString() == "Super Admin")
-            //{
-            //   // PanSwitchUser.Visible = true;
-            //}
-            //else
-            //{
-            //    if (Session["SwitchUser"] != null)
-            //    {
-            //    }
-            //    else
-            //    {
-            //      //  PanSwitchUser.Visible = false;
-            //    }
-            //}
-
-            if (!IsPostBack)
-            {
-
-
-
-
-
-                SetUpApplicationCombo();
-                SetupPage();
-                //if (Session["SwitchUser"] != null)
-                //{
-                //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
-                //}                           
-
-                //GetGridDBData();
-
-                //this.Grid1.DataSource = PhilipsDataLST;
-                //this.Grid1.DataBind();
-
-                //this.Grid1.ToolbarSettings.ShowToolbar = false;
-                //this.Grid1.EditSettings.AllowEditing = false;
-
-
-            }
-
-        }
-        catch { }
-    }
+  
 
     private void SetupPage()
     {
@@ -446,7 +354,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             //string myID1 = "";
             //string SQL1 = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Category in ('Enterprise  Hardware', 'Enterprise Software') order by Applications";
             //DataView MyDV1 = Helper.GetData(SQL1);
-            
+
             //foreach (DataRowView rowView in MyDV1)
             //{
             //    myID1 += rowView["Applications"].ToString() + "||";
@@ -459,7 +367,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             DataView MyDV = Helper.GetData(SQL);
             string myID = "";
 
-            cmdApplication1.Items.Add(new ListItem("", ""));
+          //  cmdApplication1.Items.Add(new ListItem("", ""));
             cmdApplication2.Items.Add(new ListItem("", ""));
             cmdApplication3.Items.Add(new ListItem("", ""));
             cmdApplication4.Items.Add(new ListItem("", ""));
@@ -478,7 +386,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             foreach (DataRowView rowView in MyDV)
             {
                 myID = rowView["Applications"].ToString();
-                cmdApplication1.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+               // cmdApplication1.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
                 cmdApplication2.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
                 cmdApplication3.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
                 cmdApplication4.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
@@ -750,6 +658,105 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         }
 
     }
+
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+
+            Session["Competitors"] = "Super Admin";
+            Session["User"] = "Jonny";
+            Session["UserType"] = "Granted Access";
+            //bool Signin = false;
+
+
+
+
+            //if (Session["User"] != null)
+            //{
+            //    if (Session["User"] != null)
+            //    {
+            //        m_UserName = Session["User"].ToString();
+            //        m_UserID= Session["UserID"].ToString();
+            //        m_UserType = Session["Competitors"].ToString();
+            //        Signin = true;
+            //    }
+
+            //}
+
+
+            //if (Signin == true)
+            //{
+
+
+            //}
+            //else
+            //{
+            //    Response.Redirect("/Account/Signin");
+            //}
+
+
+            try
+            {
+                //string EmailName = Request.Headers["Federation-UserPrincipalName"].ToString();
+                //Helper.InsertTracking(m_UserID, "Competitors", EmailName);
+            }
+            catch
+            {
+
+                //Helper.InsertTracking(m_UserID, "Competitors", "");
+            }
+
+
+
+
+            //if (Session["Competitors"].ToString() == "Super Admin")
+            //{
+            //   // PanSwitchUser.Visible = true;
+            //}
+            //else
+            //{
+            //    if (Session["SwitchUser"] != null)
+            //    {
+            //    }
+            //    else
+            //    {
+            //      //  PanSwitchUser.Visible = false;
+            //    }
+            //}
+
+            if (!IsPostBack)
+            {
+
+
+
+
+
+                SetUpApplicationCombo();
+                SetupPage();
+                //if (Session["SwitchUser"] != null)
+                //{
+                //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
+                //}                           
+
+                //GetGridDBData();
+
+                //this.Grid1.DataSource = PhilipsDataLST;
+                //this.Grid1.DataBind();
+
+                //this.Grid1.ToolbarSettings.ShowToolbar = false;
+                //this.Grid1.EditSettings.AllowEditing = false;
+
+
+            }
+
+        }
+        catch { }
+    }
+
+
 }
 
 //http://localhost:8085/lic-server/ISPConcerto?id=10

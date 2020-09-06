@@ -44,6 +44,9 @@ public partial class lic_server_apidata : System.Web.UI.Page
 
             switch(app)
             {
+                case "NM Amyloid Analysis - Add_Users":
+                    myMainApp = "NM Amyloid Analysis - 1 User";
+                    break;
                 case "SPECT AutoQUANT 2017 - Add_Users":
                     myMainApp = "SPECT AutoQUANT 2017 - Add_Users";
                     break;
@@ -86,24 +89,18 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 case "NM JETPack App License - Add_Users":
                     myMainApp = "Processing App Suite";
                     break;
-               
-               
-                case "NM Amyloid Analysis - Add_Users":
+                case "NeuroQ DaTscan Opt - Add_Users":
+                    myMainApp = "NeuroQ DaTscan Opt - 1 User";
+                    break;
                 case "NM Equal  - Add_Users":
-                case "NeuroQ DaTscan opt ISP  - Add_Users":
-                case "ECTB NM v4.x - Add_Users":
+                    myMainApp = "NM EQual - 1 User";
+                    break;
 
-                
-                case "ECTB Heart Fusion v4.x - Add_Users":
-               
-                case "ECTB CFR MBF V4.x - Add_Users":
-               
-                
-                case "NM/CTA Cedars Fusion 2015.x - Add_Users":
-                
-               
-                case "NM/CTA Cedars Fusion 2017 - Add_Users":
-               
+                case "ECTB NM v4.x - Add_Users":                                    
+                case "ECTB Heart Fusion v4.x - Add_Users":               
+                case "ECTB CFR MBF V4.x - Add_Users":                               
+                case "NM/CTA Cedars Fusion 2015.x - Add_Users":                               
+                case "NM/CTA Cedars Fusion 2017 - Add_Users":               
                 case "ZFP Viewer Enterprise - Add_Users":
                 case "DynaCAD Enterprise - Add_Users":
                     myMainApp = app.Replace("- Add_Users", "").ToString().Trim();

@@ -28,9 +28,12 @@
     <![endif]-->
 
     <link href="https://cdn.syncfusion.com/16.1.0.37/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-    <script src='<%= Page.ResolveClientUrl("https://code.jquery.com/jquery-1.11.3.min.js")%>' type="text/javascript"></script>
-    <script src='<%= Page.ResolveClientUrl("https://cdn.syncfusion.com/js/assets/external/jsrender.min.js")%>' type="text/javascript"></script>
-    <script src='<%= Page.ResolveClientUrl("https://cdn.syncfusion.com/16.1.0.37/js/web/ej.web.all.min.js")%>' type="text/javascript"></script>
+    <link href="../css/ej/web/responsive-css/ejgrid.responsive.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/16.1.0.37/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    
+    <script src='<%= Page.ResolveClientUrl("~/js/ej/jquery-1.11.3.min.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveClientUrl("~/js/ej/jsrender.min.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.web.all.min.js")%>' type="text/javascript"></script>
     <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.webform.min.js")%>' type="text/javascript"></script>
 
     <script src='<%= Page.ResolveClientUrl("~/js/multi-list.js")%>' type="text/javascript"></script>
@@ -1008,9 +1011,10 @@ function FilterClinicalListforCompetitor(CompList) {
             <div class="container">
                 <div class="row">
                     <img src="images/footer-logo.png" class="img-responsive">
+
                     <h5><span>Privacy notice  |  Terms of use</span>
                         <br>
-                        © Koninklijke Philips N.V., 2004 - 2019. All rights reserved. </h5>
+                        © Koninklijke Philips N.V., 2004 - 2020. All rights reserved. </h5>
                 </div>
             </div>
         </footer>

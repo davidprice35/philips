@@ -188,9 +188,9 @@ public partial class ViewExisting : System.Web.UI.Page
 
                 foreach (DataRowView rowView in myDV)
                 {
-                   
 
-                    m_TableData += "<tr> <th scope='row'><a href='/lic-server/ispConcerto.aspx?id="+ rowView["PhilipsLic_ProjectID"].ToString() + "'>" + rowView["PhilipsLic_ProjectID"].ToString() + "</a></th><td>" + rowView["project_name"].ToString() + "</td><td>-</td><td>-</td><td>-</td></tr>";
+                    //<td>-</td><td>-</td>
+                    m_TableData += "<tr> <th scope='row'><a href='/lic-server/ispConcerto.aspx?id="+ rowView["PhilipsLic_ProjectID"].ToString() + "'>" + rowView["PhilipsLic_ProjectID"].ToString() + "</a></th><td>" + rowView["project_name"].ToString() + "</td><td>" + rowView["lasteditdate"].ToString() + "</td></tr>";
 
                 }
 

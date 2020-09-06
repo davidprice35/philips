@@ -173,8 +173,8 @@
                                                                       <th scope="col" style="background-color: #0b1f65;">No.</th>
                                                                       <th scope="col" style="background-color: #0b1f65;">Project Name</th>
                                                                       <th scope="col" style="background-color: #0b1f65;">Last Edit Date</th>
-                                                                      <th scope="col" style="background-color: #0b1f65;">Edit by</th>
-                                                                        <th scope="col" style="background-color: #0b1f65;">Downloaded</th>
+                                                                     <%-- <th scope="col" style="background-color: #0b1f65;">Edit by</th>
+                                                                        <th scope="col" style="background-color: #0b1f65;">Downloaded</th>--%>
                                                                     </tr>
                                                                   </thead>
                                                                   <tbody>
