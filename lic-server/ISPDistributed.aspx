@@ -1511,7 +1511,7 @@
                                                                                     </asp:DropDownList>
 
                                                                                      <span onclick="addhostnewline(1);" style="cursor: pointer;width: 180px;" >+ Add new</span>
-                                                                                     <asp:HiddenField ID="HiddenHostNewLine1" runat="server" value="0" />
+                                                                                     <asp:HiddenField ID="hostpitalnewline1" runat="server" Value="0" />
                                                                                 </td>
 
 
@@ -1605,31 +1605,142 @@
                                                                                     <div id="errortxtConcurrent2" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
+                                                                                   <td align="center">
+                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 20px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
+                                                                                </td>
+                                                                                                                                                                                                                                            
+
+                                                                                  <td>
+                                                                                    <asp:DropDownList ID="cmdHospitalName2" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_1" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_2" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_3" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_4" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_5" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_6" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_7" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_8" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_9" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName2_10" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <span onclick="addhostnewline(2);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                    <asp:HiddenField ID="hostpitalnewline2" runat="server" Value="0" />
+                                                                                </td>
+
+                                                                             
+
+                                                                                <td>                                                                                    
+                                                                                    <input type="number" id="txtCUser2" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,2,0);" name="txtCUsers2" min="1" max="55" value="" />                                                                                    
+                                                                                     <input type="number" id="txtCUser2_1" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,1);" name="txtCUsers2_1" min="1" max="15" value="" />     
+                                                                                      <input type="number" id="txtCUser2_2" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,2);" name="txtCUsers2_2" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_3" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_3" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_4" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_4" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_5" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_5" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_6" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_6" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_7" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_7" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_8" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_8" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_9" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_9" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser2_10" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_10" min="1" max="15" value="" />     
+                                                                                </td>
+
                                                                                 
 
-                                                                                <td align="center">
-                                                                                    <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
-                                                                                </td>
 
-                                                                                <td>
-                                                                                    <asp:DropDownList ID="cmdHospitalName2" CssClass="form-control" runat="server" Style="width: 100%;">
-                                                                                       <asp:ListItem></asp:ListItem>
-                                                                                    </asp:DropDownList>
-                                                                                </td>
-
-                                                                                 <td>                                                                                    
-                                                                                    <input type="number" id="txtCUser2" class="form-control" style="margin-top: 3px;" name="txtCUsers2" min="1" max="55" value="" />                                                                                    
-                                                                                </td>
 
 
                                                                                 <td align="center">
 
                                                                                     <span id="cmdAddtionalAppDelete2" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+                                                                                     <span id="cmdAddtionalAppDelete2_1" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+                                                                                    
+                                                                                    <span id="cmdAddtionalAppDelete2_2" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+
+                                                                                     <span id="cmdAddtionalAppDelete2_3" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete2_4" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete2_5" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete2_6" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete2_7" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete2_8" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete2_9" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete2_10" onclick="deleteHostNew(this,2);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
                                                                                     </span>
 
 
                                                                                 </td>
+
+
                                                                             </tr>
 
                                                                             <tr style="display: none; vertical-align: middle;" id="row3-additional-apps">
@@ -1649,22 +1760,146 @@
                                                                                     <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
                                                                                 </td>
 
-                                                                                <td>
+
+                                                                                                                                                                                                                                                                                                                            
+
+                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName3" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                       <asp:ListItem></asp:ListItem>
+                                                                                        <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_1" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_2" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_3" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_4" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_5" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_6" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_7" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_8" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_9" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName3_10" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                    
+
+                                                                                     <span onclick="addhostnewline(3);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                    <asp:HiddenField ID="hostpitalnewline3" runat="server" Value="0" />
                                                                                 </td>
 
+                                                                             
 
                                                                                 <td>                                                                                    
-                                                                                    <input type="number" id="txtCUser3" class="form-control" style="margin-top: 3px;" name="txtCUsers3" min="1" max="55" value="" />                                                                                    
+                                                                                    <input type="number" id="txtCUser3" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,3,0);" name="txtCUsers3" min="1" max="55" value="" />                                                                                    
+                                                                                     <input type="number" id="txtCUser3_1" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,1);" name="txtCUsers3_1" min="1" max="15" value="" />     
+                                                                                      <input type="number" id="txtCUser3_2" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,2);" name="txtCUsers3_2" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_3" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_3" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_4" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_4" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_5" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_5" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_6" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_6" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_7" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_7" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_8" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_8" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_9" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_9" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser3_10" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_10" min="1" max="15" value="" />     
                                                                                 </td>
 
-                                                                                <td align="center">
+
+
+
+
+
+
+                                                                              
+                                                                                  <td align="center">
+
                                                                                     <span id="cmdAddtionalAppDelete3" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
                                                                                     </span>
+                                                                                     <span id="cmdAddtionalAppDelete3_1" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+                                                                                    
+                                                                                    <span id="cmdAddtionalAppDelete3_2" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+
+                                                                                     <span id="cmdAddtionalAppDelete3_3" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete3_4" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete3_5" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete3_6" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete3_7" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete3_8" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete3_9" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete3_10" onclick="deleteHostNew(this,3);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+
                                                                                 </td>
+
+
+
+
                                                                             </tr>
 
                                                                             <tr style="display: none; vertical-align: middle;" id="row4-additional-apps">
@@ -1685,23 +1920,142 @@
                                                                                     <i class="fa fa-info-circle" style="margin-top: 10px; font-size: 19px; color: #178bc6;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Pop up msg" data-original-title="PopD" title="PopT"></i>
                                                                                 </td>
 
+                                                                                
+
+
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName4" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_1" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_2" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_3" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_4" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_5" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_6" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_7" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_8" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_9" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                     <asp:DropDownList ID="cmdHospitalName4_10" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;display:none;">
+                                                                                        <asp:ListItem></asp:ListItem>
+                                                                                    </asp:DropDownList>
+
+                                                                                    
+
+                                                                                     <span onclick="addhostnewline(4);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                    <asp:HiddenField ID="hostpitalnewline4" runat="server" Value="0" />
                                                                                 </td>
 
-
+                                                                             
 
                                                                                 <td>                                                                                    
-                                                                                    <input type="number" id="txtCUser4" class="form-control" style="margin-top: 3px;" name="txtCUsers4" min="1" max="55" value="" />                                                                                    
+                                                                                    <input type="number" id="txtCUser4" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,4,0);" name="txtCUsers4" min="1" max="55" value="" />                                                                                    
+                                                                                     <input type="number" id="txtCUser4_1" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,1);" name="txtCUsers4_1" min="1" max="15" value="" />     
+                                                                                      <input type="number" id="txtCUser4_2" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,2);" name="txtCUsers4_2" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_3" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_3" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_4" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_4" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_5" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_5" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_6" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_6" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_7" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_7" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_8" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_8" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_9" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_9" min="1" max="15" value="" />     
+                                                                                     <input type="number" id="txtCUser4_10" class="form-control" style="margin-top: 3px;display:none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_10" min="1" max="15" value="" />     
                                                                                 </td>
 
-                                                                                <td align="center">
+
+
+
+                                                                                
+                                                                               
+                                                                                   <td align="center">
+
                                                                                     <span id="cmdAddtionalAppDelete4" onclick="deleteAddtionalApp(this);">
-                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
                                                                                     </span>
+                                                                                     <span id="cmdAddtionalAppDelete4_1" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+                                                                                    
+                                                                                    <span id="cmdAddtionalAppDelete4_2" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+
+                                                                                     <span id="cmdAddtionalAppDelete4_3" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete4_4" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete4_5" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete4_6" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete4_7" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete4_8" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete4_9" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+                                                                                     <span id="cmdAddtionalAppDelete4_10" onclick="deleteHostNew(this,4);" style="display:none;">
+                                                                                         <br />
+                                                                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;color: #337ab7;"></i>
+                                                                                    </span>
+
+
                                                                                 </td>
+
+
                                                                             </tr>
 
                                                                             <tr style="display: none; vertical-align: middle;" id="row5-additional-apps">
@@ -2198,7 +2552,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                    <div onclick="MacAddLine();" id="macaddline1" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
 
                                                                 </div>
 
@@ -2238,7 +2592,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                    <div onclick="MacAddLine();" id="macaddline2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
 
                                                                 </div>
 
@@ -2266,7 +2620,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                    <div onclick="MacAddLine();" id="macaddline3" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
 
                                                                 </div>
 
@@ -2294,7 +2648,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                    <div onclick="MacAddLine();" id="macaddline4" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
 
                                                                 </div>
 
@@ -2322,7 +2676,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div onclick="MacAddLine();" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                    <div onclick="MacAddLine();" id="macaddline5" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
 
                                                                 </div>
 
@@ -2768,7 +3122,7 @@
     <script>
 
 
-        var isDev = true;
+        var isDev = false;
 
         var sapicheckapp = "";
         var sapidata = "";
@@ -2834,68 +3188,68 @@
 
            
 
-            let counteridx = $("#HiddenHostNewLine" + itemNo)[0].value;
+            let counteridx = $("#hostpitalnewline" + itemNo)[0].value;
             counteridx++;
-            $("#HiddenHostNewLine" + itemNo)[0].value = counteridx;
+            $("#hostpitalnewline" + itemNo)[0].value = counteridx;
 
             switch (counteridx) {
                 case 1:
-                    $("#cmdHospitalName1_1").show();
-                    $("#txtCUser1_1").show();
-                    $("#cmdAddtionalAppDelete1_1").show();
+                    $("#cmdHospitalName"+itemNo+"_1").show();
+                    $("#txtCUser"+itemNo+"_1").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_1").show();
                     break;
                 case 2:
-                    $("#cmdHospitalName1_1").show();
-                    $("#txtCUser1_1").show();
-                    $("#cmdAddtionalAppDelete1_1").show();
+                    $("#cmdHospitalName"+itemNo+"_1").show();
+                    $("#txtCUser"+itemNo+"_1").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_1").show();
 
-                    $("#cmdHospitalName1_2").show();
-                    $("#txtCUser1_2").show();
-                    $("#cmdAddtionalAppDelete1_2").show();
+                    $("#cmdHospitalName"+itemNo+"_2").show();
+                    $("#txtCUser"+itemNo+"_2").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_2").show();
                     break;
                   case 2:
-                    $("#cmdHospitalName1_1").show();
-                    $("#txtCUser1_1").show();
-                    $("#cmdAddtionalAppDelete1_1").show();
+                    $("#cmdHospitalName"+itemNo+"_1").show();
+                    $("#txtCUser"+itemNo+"_1").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_1").show();
 
-                    $("#cmdHospitalName1_2").show();
-                    $("#txtCUser1_2").show();
-                    $("#cmdAddtionalAppDelete1_2").show();
+                    $("#cmdHospitalName"+itemNo+"1_2").show();
+                    $("#txtCUser"+itemNo+"_2").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_2").show();
 
-                    $("#cmdHospitalName1_3").show();
-                    $("#txtCUser1_3").show();
-                    $("#cmdAddtionalAppDelete1_3").show();
+                    $("#cmdHospitalName"+itemNo+"_3").show();
+                    $("#txtCUser"+itemNo+"_3").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_3").show();
                     break;
 
                 case 3:
-                    $("#cmdHospitalName1_4").show();
-                    $("#txtCUser1_4").show();
-                    $("#cmdAddtionalAppDelete1_4").show();
+                    $("#cmdHospitalName"+itemNo+"_4").show();
+                    $("#txtCUser"+itemNo+"_4").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_4").show();
                     break;
                 case 4:
-                    $("#cmdHospitalName1_5").show();
-                    $("#txtCUser1_5").show();
-                    $("#cmdAddtionalAppDelete1_5").show();
+                    $("#cmdHospitalName"+itemNo+"_5").show();
+                    $("#txtCUser"+itemNo+"_5").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_5").show();
                     break;
                 case 5:
-                    $("#cmdHospitalName1_6").show();
-                    $("#txtCUser1_6").show();
-                    $("#cmdAddtionalAppDelete1_6").show();
+                    $("#cmdHospitalName"+itemNo+"_6").show();
+                    $("#txtCUser"+itemNo+"_6").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_6").show();
                     break;
                 case 6:
-                    $("#cmdHospitalName1_7").show();
-                    $("#txtCUser1_7").show();
-                    $("#cmdAddtionalAppDelete1_7").show();
+                    $("#cmdHospitalName"+itemNo+"_7").show();
+                    $("#txtCUser"+itemNo+"_7").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_7").show();
                     break;
                 case 7:
-                    $("#cmdHospitalName1_8").show();
-                    $("#txtCUser1_8").show();
-                    $("#cmdAddtionalAppDelete1_8").show();
+                    $("#cmdHospitalName"+itemNo+"_8").show();
+                    $("#txtCUser"+itemNo+"_8").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_8").show();
                     break;
                 case 8:
-                    $("#cmdHospitalName1_9").show();
-                    $("#txtCUser1_9").show();
-                    $("#cmdAddtionalAppDelete1_9").show();
+                    $("#cmdHospitalName"+itemNo+"_9").show();
+                    $("#txtCUser"+itemNo+"_9").show();
+                    $("#cmdAddtionalAppDelete"+itemNo+"_9").show();
                     break;
             }
 
@@ -3269,7 +3623,11 @@
 
             let ConUsers =  $("#HostpitalEntryText" + thisItemNo)[0].value
 
-            
+            if (ConUsers > 11) {
+                $("#macaddline" + thisItemNo).hide();
+            } else {
+                  $("#macaddline"+thisItemNo ).show();
+            }
 
             switch (siteBox) {
                 case 1:
@@ -4247,7 +4605,7 @@
 
 
             $("#mac" + itemidx).show();
-            $("#macheading" + itemidx)[0].innerText = "SITE " + itemidx + ": " +  $("#txtHospitalName" + itemidx)[0].value.toUpperCase() + " - MAIN";
+            $("#macheading" + itemidx)[0].innerText = "SITE " + itemidx + ": " +  $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
             
             //GetLicenceData();
             //txtHospitalName1
@@ -4285,74 +4643,86 @@
             }
 
 
-
-
             var i;
-           // for (i = 1; i < 10; i++) {
+            for (i = 1; i < 10; i++) {
                 var optVal = document.createElement("option");
                
-                document.getElementById("cmdHospitalName" + 1+ "_1").options.add(optVal);
+                document.getElementById("cmdHospitalName" + 1+ "_"+i).options.add(optVal);
                 optVal.text = Text;
                 optVal.value = Value;
-            //}
+            }
 
             var i;
-          //  for (i = 1; i < 10; i++) {
+            for (i = 1; i < 10; i++) {
                 var optVal = document.createElement("option");
                
-                document.getElementById("cmdHospitalName" + 1+ "_2").options.add(optVal);
+                document.getElementById("cmdHospitalName" + 2+ "_"+i).options.add(optVal);
                 optVal.text = Text;
                 optVal.value = Value;
-            //}
+            }
+
+            //var i;         
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_1").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
+         
+
+            //var i;         
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_2").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
+         
 
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_3").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_3").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_4").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_4").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_5").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_5").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_6").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_6").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_7").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_7").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_8").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_8").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_9").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_9").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
-            var i;          
-            var optVal = document.createElement("option");               
-            document.getElementById("cmdHospitalName" + 1+ "_10").options.add(optVal);
-            optVal.text = Text;
-            optVal.value = Value;
+            //var i;          
+            //var optVal = document.createElement("option");               
+            //document.getElementById("cmdHospitalName" + 1+ "_10").options.add(optVal);
+            //optVal.text = Text;
+            //optVal.value = Value;
 
 
         }
