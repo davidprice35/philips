@@ -423,7 +423,7 @@
 
 
                                      <ul class="nav navbar-nav icons-right" style="float: left;">
-                                        <li class="icons"><a href="/lic-server/" target="_blank">Project Profile</a></li>
+                                        <li class="icons"><a href="/lic-server/?id=<%=m_ID%>" target="_blank">Project Profile</a></li>
                                          <li class="icons"><a href="/lic-server/ViewExisting.aspx" target="_blank">Existing Project</a></li>
                                         
                                     </ul>
@@ -473,7 +473,7 @@
                                                                 <a class="nav-link" id="profile-tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="width: 158px;">Hybrid</a>
                                                             </li>
                                                             <li class="nav-item" disabled>
-                                                                <a class="nav-link active show" id="contact-tab" href="/lic-server/ISPDistributed.aspx" role="tab" aria-controls="contact" aria-selected="true" style="width: 158px;">Distributed</a>
+                                                                <a class="nav-link active show" id="contact-tab" href="/lic-server/ISPDistributed.aspx?id=<%=m_ID %>" role="tab" aria-controls="contact" aria-selected="true" style="width: 158px;">Distributed</a>
                                                             </li>
                                                         </ul>
                                                         <div class="tab-content" id="myTabContent">
@@ -513,16 +513,16 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityHigh" value="High" <%=m_connectH1 %>>
-                                                                                    <label class="form-check-label" for="inlineRadio3">High</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityHigh1" value="High" <%=m_connectH1 %>>
+                                                                                    <label class="form-check-label" for="HospitalSiteConnectivity1">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityMed" value="Med"  <%=m_connectM1 %>>
-                                                                                    <label class="form-check-label" for="inlineRadio4">Med</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityMed1" value="Med"  <%=m_connectM1 %>>
+                                                                                    <label class="form-check-label" for="HospitalSiteConnectivity1">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityLow" value="Low"  <%=m_connectL1 %>>
-                                                                                    <label class="form-check-label" for="inlineRadio5">Low</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityLow1" value="Low"  <%=m_connectL1 %>>
+                                                                                    <label class="form-check-label" for="HospitalSiteConnectivity1">Low</label>
 
                                                                                 </div>
 
@@ -551,16 +551,14 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
-                                                                                    <label class="form-check-label" for="inlineRadio3">High</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity2" id="HospitalSite1ConnectivityHigh2" value="High" <%=m_connectH2 %>>
+                                                                                    <label class="form-check-label" for="HospitalSiteConnectivity2">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
-                                                                                    <label class="form-check-label" for="inlineRadio4">Med</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity2" id="HospitalSite1ConnectivityMed2" value="Med"  <%=m_connectM2 %>>
+                                                                                    <label class="form-check-label" for="HospitalSiteConnectivity2">Med</label>                                                                                    
 
-
-
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
-                                                                                    <label class="form-check-label" for="inlineRadio5">Low</label>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity2" id="HospitalSite1ConnectivityLow2" value="Low" <%=m_connectL2 %>>
+                                                                                    <label class="form-check-label" for="HospitalSiteConnectivity2">Low</label>
 
                                                                                 </div>
 
@@ -599,15 +597,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity3" id="HospitalSite1ConnectivityHigh3" value="High" <%=m_connectH3 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity3" id="HospitalSite1ConnectivityMed3" value="Med" <%=m_connectM3 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity3" id="HospitalSite1ConnectivityLow3" value="Low" <%=m_connectL3 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -643,15 +641,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity4" id="HospitalSite1ConnectivityHigh4" value="High" <%=m_connectH4 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity4" id="HospitalSite1ConnectivityMed4" value="Med" <%=m_connectM4 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity4" id="HospitalSite1ConnectivityLow4" value="Low" <%=m_connectL4 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -680,7 +678,7 @@
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
 
 
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSite5" id="HospitalSite5Remote" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite5" id="HospitalSite5Remote" value="Remote" checked style="margin-left: 13px;" >
                                                                                     <label class="form-check-label" for="HospitalSite5Remote">Remote</label>
 
                                                                                 </div>
@@ -688,15 +686,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity5" id="HospitalSite1ConnectivityHigh5" value="High"  <%=m_connectH5 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity5" id="HospitalSite1ConnectivityMed5" value="Med"  <%=m_connectM5 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity5" id="HospitalSite1ConnectivityLow5" value="Low"  <%=m_connectL5 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -724,7 +722,7 @@
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite6" id="HospitalSit6Remote" value="Remote" style="margin-left: 13px;" checked>
                                                                                     <label class="form-check-label" for="inlineRadio2">Remote</label>
 
                                                                                 </div>
@@ -732,15 +730,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity6" id="HospitalSite1ConnectivityHigh6" value="High"  <%=m_connectH6 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity6" id="HospitalSite1ConnectivityMed6" value="Med" <%=m_connectM6 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity6" id="HospitalSite1ConnectivityLow6" value="Low"<%=m_connectL6 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -768,7 +766,7 @@
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" checked style="margin-left: 13px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite7" id="HospitalSit7Remote" value="Remote" checked style="margin-left: 13px;" checked>
                                                                                     <label class="form-check-label" for="inlineRadio2">Remote</label>
 
                                                                                 </div>
@@ -776,15 +774,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity7" id="HospitalSite1ConnectivityHigh7" value="High" <%=m_connectH7 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity7" id="HospitalSite1ConnectivityMed7" value="Med" <%=m_connectM7 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity7" id="HospitalSite1ConnectivityLow7" value="Low" <%=m_connectL7 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -812,7 +810,7 @@
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite8" id="HospitalSit8Remote" value="Remote" style="margin-left: 13px;" checked>
                                                                                     <label class="form-check-label" for="inlineRadio2">Remote</label>
 
                                                                                 </div>
@@ -820,15 +818,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity8" id="HospitalSite1ConnectivityHigh8" value="High" <%=m_connectH8 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity8" id="HospitalSite1ConnectivityMed8" value="Med" <%=m_connectM8 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity8" id="HospitalSite1ConnectivityLow8" value="Low" <%=m_connectL8 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -856,7 +854,7 @@
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite9" id="HospitalSit9Remote" value="Remote" style="margin-left: 13px;" checked>
                                                                                     <label class="form-check-label" for="inlineRadio2">Remote</label>
 
                                                                                 </div>
@@ -864,15 +862,13 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityHigh9" value="High"  <%=m_connectH9 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityMed9" value="Med" <%=m_connectM8 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
-
-
-
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                                                                                                       
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityLow9" value="Low"  <%=m_connectL8 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -899,7 +895,7 @@
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioSite" id="inlineRadio2" value="Remote" style="margin-left: 13px;">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSite10" id="HospitalSite10Remote" value="Remote" style="margin-left: 13px;" checked>
                                                                                     <label class="form-check-label" for="inlineRadio2">Remote</label>
 
                                                                                 </div>
@@ -907,15 +903,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio3" value="High" checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity10" id="HospitalSite1ConnectivityHigh10" value="High"  <%=m_connectH10 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio4" value="Med">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity10" id="HospitalSite1ConnectivityMed10" value="Med"  <%=m_connectM10 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="inlineRadioConnectivity" id="inlineRadio5" value="Low">
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity10" id="HospitalSite1ConnectivityLow10" value="Low"  <%=m_connectL10 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>

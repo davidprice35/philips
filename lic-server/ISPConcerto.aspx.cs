@@ -42,12 +42,54 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     public string m_connectM1 = "";
     public string m_connectL1 = "";
 
+    public string m_connectH2 = "checked";
+    public string m_connectM2 = "";
+    public string m_connectL2 = "";
+    
+    public string m_connectH3 = "checked";
+    public string m_connectM3 = "";
+    public string m_connectL3 = "";
+
+
+    public string m_connectH4 = "checked";
+    public string m_connectM4 = "";
+    public string m_connectL4 = "";
+
+    public string m_connectH5 = "checked";
+    public string m_connectM5 = "";
+    public string m_connectL5 = "";
+
+    public string m_connectH6 = "checked";
+    public string m_connectM6 = "";
+    public string m_connectL6 = "";
+
+    public string m_connectH7 = "checked";
+    public string m_connectM7 = "";
+    public string m_connectL7 = "";
+
+    public string m_connectH8 = "checked";
+    public string m_connectM8 = "";
+    public string m_connectL8 = "";
+
+    public string m_connectH9 = "checked";
+    public string m_connectM9 = "";
+    public string m_connectL9 = "";
+
+    public string m_connectH10 = "checked";
+    public string m_connectM10 = "";
+    public string m_connectL10 = "";
+
+
     public string m_hidMacTable = "NICB006 - Enterprise Engine SW:xxx1,FICO248 - ISP Server - Software only:xxxx2,FICO248 - ISP Server - Software only:xxxx3,FICO248 - ISP Server - Software only:";
     
 
     public string m_UserName = string.Empty;
     public string m_UserID = string.Empty;
     public string m_UserType = string.Empty;
+
+    public string m_ID = string.Empty;
+
+    
     List<SiteInfoData> SiteInfoData1 = new List<SiteInfoData>();
     List<AdditionalApplication> AdditionalApplication1 = new List<AdditionalApplication>();
     List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
@@ -298,6 +340,15 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     {
         try
         {
+
+            if (Request.QueryString["id"] != null)
+            {
+                if (Request.QueryString["id"] != "")
+                {
+                    m_ID = Request.QueryString["id"].ToString();
+                }
+            }
+
 
             DataView myDV = Helper.GetData("Select * from PhilipsLic_Project where PhilipsLic_ProjectID=" + Request.QueryString["id"]);            
             foreach (DataRowView rowView in myDV)

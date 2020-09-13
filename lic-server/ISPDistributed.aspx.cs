@@ -18,6 +18,8 @@ using System.Data.SqlClient;
 
 public partial class competitive_info_Competitors : System.Web.UI.Page
 {
+    public string m_ID = string.Empty;
+
     public string m_NoApp = string.Empty;
 
     public string m_ConEnterpriseUsers = "11";
@@ -571,8 +573,12 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                 if (item1 != "")
                 {
-
-                    string item2 = Request.Form["txtConcurrent" + i.ToString()].ToString();
+                    string item2 = "";
+                    try {
+                        item2 = Request.Form["txtConcurrent" + i.ToString()].ToString();
+                    }
+                    catch { }
+                    
                     string item3 = "";
                     if (Request.Form["cmdHospitalName" + i.ToString()] != null)
                     {
@@ -672,6 +678,13 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             //bool Signin = false;
 
 
+            if (Request.QueryString["id"] != null)
+            {
+                if (Request.QueryString["id"] != "")
+                {
+                    m_ID = Request.QueryString["id"].ToString();
+                }
+            }
 
 
             //if (Session["User"] != null)

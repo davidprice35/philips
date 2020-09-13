@@ -29,8 +29,8 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     public string m_UserName = string.Empty;
     public string m_UserID = string.Empty;
     public string m_UserType = string.Empty;
+    public string m_ID = string.Empty;
 
-    
 
     private DataView GetData(string sql)
     {
@@ -272,98 +272,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
    
 
    
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        try {
-
-            Session["Competitors"] = "Super Admin";
-            Session["User"] = "Jonny";
-            Session["UserType"] = "Granted Access";
-            
-
-
-
-            //bool Signin = false;
-
-            //if (Session["User"] != null)
-            //{
-            //    if (Session["User"] != null)
-            //    {
-            //        m_UserName = Session["User"].ToString();
-            //        m_UserID= Session["UserID"].ToString();
-            //        m_UserType = Session["Competitors"].ToString();
-            //        Signin = true;
-            //    }
-
-            //}
-
-
-            //if (Signin == true)
-            //{
-
-
-            //}
-            //else
-            //{
-            //    Response.Redirect("/Account/Signin");
-            //}
-
-
-            try
-            {
-                //string EmailName = Request.Headers["Federation-UserPrincipalName"].ToString();
-                //Helper.InsertTracking(m_UserID, "Competitors", EmailName);
-            }
-            catch
-            {
-
-                //Helper.InsertTracking(m_UserID, "Competitors", "");
-            }
-
-
-
-
-            //if (Session["Competitors"].ToString() == "Super Admin")
-            //{
-            //   // PanSwitchUser.Visible = true;
-            //}
-            //else
-            //{
-            //    if (Session["SwitchUser"] != null)
-            //    {
-            //    }
-            //    else
-            //    {
-            //      //  PanSwitchUser.Visible = false;
-            //    }
-            //}
-
-            if (!IsPostBack)
-            {
-
-                Session["KeyAccountCount"] = 1;
-                Session["PortalSalesCount"] = 1;
-                Session["ProjectCoreCount"] = 1;
-                //if (Session["SwitchUser"] != null)
-                //{
-                //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
-                //}                           
-
-                //GetGridDBData();
-
-                //this.Grid1.DataSource = PhilipsDataLST;
-                //this.Grid1.DataBind();
-
-                //this.Grid1.ToolbarSettings.ShowToolbar = false;
-                //this.Grid1.EditSettings.AllowEditing = false;
-
-
-            }
-
-        }
-        catch { }
-    }
-
+    
     protected void cmdEdit_Click(object sender, EventArgs e)
     {
         try {
@@ -393,6 +302,16 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             string KeyAccountJSON = string.Empty;
             string PortalJSON = string.Empty;
             string CoreJSON = string.Empty;
+
+
+            if (Request.QueryString["id"] != null)
+            {
+                if (Request.QueryString["id"] != "")
+                {
+                    m_ID = Request.QueryString["id"].ToString();
+                }
+            }
+
 
             if (Session["KeyAccountCount"] != null)
             {
@@ -451,20 +370,33 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
             string SQL = string.Empty;
             
-
-            SQL = "INSERT INTO PhilipsLic_Project(project_name,customer_name,customer_address,customer_country,customer_po,customer_comments,customer_key_account,customer_portalsales,customer_project_core) VALUES('" + txtProjectName.Text + "','" + txtCustomerName.Text + "','" + txtCustomerAddress.Text + "','" + txtCountry.SelectedValue.ToString() + "','" + txtPONumber.Text + "','" + txtCommentBox.Text + "','"+ KeyAccountJSON + "','" + PortalJSON + "','" + CoreJSON + "')";
-            Helper.InsertData(SQL);
-
-            SQL = "SELECT PhilipsLic_ProjectID FROM travelma2_phil1.PhilipsLic_Project order by PhilipsLic_ProjectID desc limit 1";
-            DataView MyDV = Helper.GetData(SQL);
-            string myID = "";
-            foreach (DataRowView rowView in MyDV)
+            if (m_ID!="")
             {
-                myID = rowView["PhilipsLic_ProjectID"].ToString();
+                SQL = "UPDATE PhilipsLic_Project  set project_name='"+ txtProjectName.Text + "' where PhilipsLic_ProjectID=" + m_ID;
+                Helper.InsertData(SQL);
+                Response.Redirect("/lic-server/ISPConcerto.aspx?id=" + m_ID, true);
+            }
+            else
+            {
+                SQL = "INSERT INTO PhilipsLic_Project(project_name,customer_name,customer_address,customer_country,customer_po,customer_comments,customer_key_account,customer_portalsales,customer_project_core) VALUES('" + txtProjectName.Text + "','" + txtCustomerName.Text + "','" + txtCustomerAddress.Text + "','" + txtCountry.SelectedValue.ToString() + "','" + txtPONumber.Text + "','" + txtCommentBox.Text + "','" + KeyAccountJSON + "','" + PortalJSON + "','" + CoreJSON + "')";
+                Helper.InsertData(SQL);
+
+                SQL = "SELECT PhilipsLic_ProjectID FROM travelma2_phil1.PhilipsLic_Project order by PhilipsLic_ProjectID desc limit 1";
+                DataView MyDV = Helper.GetData(SQL);
+               
+                foreach (DataRowView rowView in MyDV)
+                {
+                    m_ID = rowView["PhilipsLic_ProjectID"].ToString();
+                }
+
             }
 
+         
 
-            Response.Redirect("/lic-server/ISPConcerto.aspx?id=" + myID, true);
+            
+
+
+            Response.Redirect("/lic-server/ISPConcerto.aspx?id=" + m_ID, true);
 
         }
         catch { }
@@ -1622,4 +1554,319 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         }
         catch { }
     }
+
+    private void SetupPage()
+    {
+        try
+        {
+
+            if (Request.QueryString["id"] != null)
+            {
+                if (Request.QueryString["id"] != "")
+                {
+                    m_ID = Request.QueryString["id"].ToString();
+                }
+            }
+
+
+            DataView myDV = Helper.GetData("Select * from PhilipsLic_Project where PhilipsLic_ProjectID=" + Request.QueryString["id"]);
+            foreach (DataRowView rowView in myDV)
+            {
+
+
+                txtProjectName.Text = rowView["project_name"].ToString();
+                txtCustomerName.Text = rowView["customer_name"].ToString();
+                txtCustomerAddress.Text = rowView["customer_address"].ToString();
+                txtCountry.SelectedValue = rowView["customer_country"].ToString();
+                txtPONumber.Text = rowView["customer_po"].ToString();
+                txtCommentBox.Text = rowView["customer_comments"].ToString();
+
+
+                KeyProjectData1 = JsonConvert.DeserializeObject<List<KeyProjectData>>(rowView["customer_key_account"].ToString());
+                for (int ixa = 0; ixa <= KeyProjectData1.Count - 1; ixa++)
+                {
+                    switch (ixa)
+                    {
+                        case 0:
+                            txtPortalKeyAccountFirstName1.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName1.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail1.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 1:
+                            txtPortalKeyAccountFirstName2.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName2.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail2.Text = KeyProjectData1[ixa].Email; ;
+                            break;
+                        case 2:
+                            txtPortalKeyAccountFirstName3.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName3.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail3.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 3:
+                            txtPortalKeyAccountFirstName4.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName4.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail4.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 4:
+                            txtPortalKeyAccountFirstName5.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName5.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail5.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 5:
+                            txtPortalKeyAccountFirstName6.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName6.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail6.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 6:
+                            txtPortalKeyAccountFirstName7.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName7.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail7.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 7:
+                            txtPortalKeyAccountFirstName8.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName8.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail8.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 8:
+                            txtPortalKeyAccountFirstName9.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName9.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail9.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 9:
+                            txtPortalKeyAccountFirstName10.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalKeyAccountLastName10.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalKeyAccountEmail10.Text = KeyProjectData1[ixa].Email;
+                            break;
+                    }
+                }
+
+
+                KeyProjectData1 = JsonConvert.DeserializeObject<List<KeyProjectData>>(rowView["customer_portalsales"].ToString());
+                for (int ixa = 0; ixa <= KeyProjectData1.Count - 1; ixa++)
+                {
+                    switch (ixa)
+                    {
+                        case 0:
+                            txtPortalSalesFirstName1.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName1.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail1.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 1:
+                            txtPortalSalesFirstName2.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName2.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail2.Text = KeyProjectData1[ixa].Email; ;
+                            break;
+                        case 2:
+                            txtPortalSalesFirstName3.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName3.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail3.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 3:
+                            txtPortalSalesFirstName4.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName4.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail4.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 4:
+                            txtPortalSalesFirstName5.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName5.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail5.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 5:
+                            txtPortalSalesFirstName6.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName6.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail6.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 6:
+                            txtPortalSalesFirstName7.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName7.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail7.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 7:
+                            txtPortalSalesFirstName8.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName8.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail8.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 8:
+                            txtPortalSalesFirstName9.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName9.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail9.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 9:
+                            txtPortalSalesFirstName10.Text = KeyProjectData1[ixa].FirstName;
+                            txtPortalSalesLastName10.Text = KeyProjectData1[ixa].LastName;
+                            txtPortalSalesEmail10.Text = KeyProjectData1[ixa].Email;
+                            break;
+                    }
+                }
+
+
+                KeyProjectData1 = JsonConvert.DeserializeObject<List<KeyProjectData>>(rowView["customer_portalsales"].ToString());
+                for (int ixa = 0; ixa <= KeyProjectData1.Count - 1; ixa++)
+                {
+                    switch (ixa)
+                    {
+                        case 0:
+                            txtProjectCoreFirstName1.Text = KeyProjectData1[ixa].FirstName;
+                            txtProjectCoreLastName1.Text = KeyProjectData1[ixa].LastName;
+                            txtProjectCoreEmail1.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 1:
+                            txtProjectCoreFirstName2.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName2.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail2.Text = KeyProjectData1[ixa].Email; ;
+                            break;
+                        case 2:
+                            txtProjectCoreFirstName3.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName3.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail3.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 3:
+                            txtProjectCoreFirstName4.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName4.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail4.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 4:
+                            txtProjectCoreFirstName5.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName5.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail5.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 5:
+                            txtProjectCoreFirstName6.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName6.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail6.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 6:
+                            txtProjectCoreFirstName7.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName7.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail7.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 7:
+                            txtProjectCoreFirstName8.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName8.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail8.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 8:
+                            txtProjectCoreFirstName9.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName9.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail9.Text = KeyProjectData1[ixa].Email;
+                            break;
+                        case 9:
+                            txtProjectCoreFirstName10.Text = KeyProjectData1[ixa].FirstName;
+                           txtProjectCoreLastName10.Text = KeyProjectData1[ixa].LastName;
+                             txtProjectCoreEmail10.Text = KeyProjectData1[ixa].Email;
+                            break;
+                    }
+                }
+
+            }                       
+
+
+        }
+        catch { }
+    }
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+
+            Session["Competitors"] = "Super Admin";
+            Session["User"] = "Jonny";
+            Session["UserType"] = "Granted Access";
+
+
+            if ( Request.QueryString["id"] != null )
+            {
+                if (Request.QueryString["id"] != "")
+                {
+                    m_ID = Request.QueryString["id"].ToString();
+                }
+            }
+
+            //bool Signin = false;
+
+            //if (Session["User"] != null)
+            //{
+            //    if (Session["User"] != null)
+            //    {
+            //        m_UserName = Session["User"].ToString();
+            //        m_UserID= Session["UserID"].ToString();
+            //        m_UserType = Session["Competitors"].ToString();
+            //        Signin = true;
+            //    }
+
+            //}
+
+
+            //if (Signin == true)
+            //{
+
+
+            //}
+            //else
+            //{
+            //    Response.Redirect("/Account/Signin");
+            //}
+
+
+            try
+            {
+                //string EmailName = Request.Headers["Federation-UserPrincipalName"].ToString();
+                //Helper.InsertTracking(m_UserID, "Competitors", EmailName);
+            }
+            catch
+            {
+
+                //Helper.InsertTracking(m_UserID, "Competitors", "");
+            }
+
+
+
+
+            //if (Session["Competitors"].ToString() == "Super Admin")
+            //{
+            //   // PanSwitchUser.Visible = true;
+            //}
+            //else
+            //{
+            //    if (Session["SwitchUser"] != null)
+            //    {
+            //    }
+            //    else
+            //    {
+            //      //  PanSwitchUser.Visible = false;
+            //    }
+            //}
+
+            if (!IsPostBack)
+            {
+
+                Session["KeyAccountCount"] = 1;
+                Session["PortalSalesCount"] = 1;
+                Session["ProjectCoreCount"] = 1;
+
+                SetupPage();
+
+
+                //if (Session["SwitchUser"] != null)
+                //{
+                //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
+                //}                           
+
+                //GetGridDBData();
+
+                //this.Grid1.DataSource = PhilipsDataLST;
+                //this.Grid1.DataBind();
+
+                //this.Grid1.ToolbarSettings.ShowToolbar = false;
+                //this.Grid1.EditSettings.AllowEditing = false;
+
+
+            }
+
+        }
+        catch { }
+    }
+
 }

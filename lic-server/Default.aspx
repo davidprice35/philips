@@ -39,6 +39,18 @@
             });
 
         });
+
+
+        function ValidateEmail(mail) 
+        {
+            if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test( document.getElementById(mail.id).value))
+            {
+            return (true)
+            }
+            alert("You have entered an invalid email address!")
+            return (false)
+        }
+
     </script>
 
 
@@ -561,16 +573,16 @@
                                                                         <asp:TextBox ID="txtPortalKeyAccountLastName10" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Last Name"></asp:TextBox>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail1" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail2" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail3" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail4" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail5" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail6" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail7" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail8" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail9" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
-                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail10" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail1" CssClass="form-control" runat="server" Style="margin-top: 3px;" Onchange="ValidateEmail(this);" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail2" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;"  placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail3" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail4" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail5" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail6" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail7" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail8" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail9" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="txtPortalKeyAccountEmail10" Visible="false" CssClass="form-control" runat="server" Onchange="ValidateEmail(this);"  Style="margin-top: 3px;" placeholder="Email"></asp:TextBox>
                                                                     </td>
 
                                                                     <td align="center">
@@ -819,7 +831,7 @@
 
                                                                 <td style="vertical-align: middle;">Comments Box </td>
                                                                 <td>
-                                                                    <asp:TextBox ID="txtCommentBox" CssClass="form-control" runat="server" TextMode="MultiLine" Style=""></asp:TextBox></td>
+                                                                    <asp:TextBox ID="txtCommentBox" CssClass="form-control" runat="server" TextMode="MultiLine" ></asp:TextBox></td>
 
                                                             </tr>
 
@@ -898,6 +910,13 @@
 
 
     <style>
+
+        textarea
+        {
+            resize: none;
+        }
+
+
         .Tab-info .nav-tabs > li > a {
             border-radius: 0;
             /*background: #178bc6;*/

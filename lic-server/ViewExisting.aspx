@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+  
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -167,7 +175,7 @@
                                             <div class="container">
                                                
                                                 
-                                                      <table class="table table-bordered" style="    margin-left: -10px;">
+                                                      <table class="table table-bordered" id="existingprojects" style="margin-left: -10px;">
                                                                   <thead class="thead-light">
                                                                     <tr>
                                                                       <th scope="col" style="background-color: #0b1f65;">No.</th>
@@ -233,7 +241,30 @@
     <script src="../competitive-info/js/bootstrap.min.js"></script>
 
 
+
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+
+
+
+    <script>
+
+
+        $(document).ready( function () {
+    $('#existingprojects').DataTable( {
+        "order": [[0, "desc"]],
+          "pageLength": 50
+    } );
+} );
+
+    </script>
+
     <style>
+
+        .dataTables_filter{
+            margin-right: 12px;
+        }
+
         .Tab-info .nav-tabs > li > a {
             border-radius: 0;
             /*background: #178bc6;*/
