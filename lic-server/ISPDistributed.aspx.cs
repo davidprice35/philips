@@ -24,6 +24,9 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
     public string m_ConEnterpriseUsers = "11";
 
+    public string m_site_info_idx = "1";
+
+    public string m_Hospitallist = "";
     public string m_txtConcurrent1 = "0";
     public string m_txtConcurrent2 = "0";
     public string m_txtConcurrent3 = "0";
@@ -39,6 +42,19 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     public string m_txtConcurrent13 = "0";
     public string m_txtConcurrent14 = "0";
     public string m_txtConcurrent15 = "0";
+
+
+    public string m_HostpitalEntryText1 = "0";
+    public string m_HostpitalEntryText2 = "0";
+    public string m_HostpitalEntryText3 = "0";
+    public string m_HostpitalEntryText4 = "0";
+    public string m_HostpitalEntryText5 = "0";
+    public string m_HostpitalEntryText6 = "0";
+    public string m_HostpitalEntryText7 = "0";
+    public string m_HostpitalEntryText8 = "0";
+    public string m_HostpitalEntryText9 = "0";
+    public string m_HostpitalEntryText10 = "0";
+
 
     public string m_connectH1 = "checked";
     public string m_connectM1 = "";
@@ -62,13 +78,14 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         {
 
         }
-        public SiteInfoData(string No, string HospitalName, string HospitalStreet,string Site, string Connectivity)
+        public SiteInfoData(string No, string HospitalName, string HospitalStreet,string Site, string Connectivity,string Users)
         {
             this.No = No;
             this.HospitalName = HospitalName;
             this.HospitalStreet = HospitalStreet;
             this.Site = Site;
             this.Connectivity = Connectivity;
+            this.Users = Users;
 
         }
 
@@ -77,6 +94,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         public string HospitalStreet { get; set; }
         public string Site { get; set; }
         public string Connectivity { get; set; }
+        public string Users { get; set; }
     }
 
 
@@ -209,12 +227,98 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         try
         {
 
-            DataView myDV = Helper.GetData("Select * from PhilipsLic_Project where PhilipsLic_ProjectID=" + Request.QueryString["id"]);            
+            DataView myDV = Helper.GetData("Select * from PhilipsLic_Project where PhilipsLic_ProjectID=" + Request.QueryString["id"]);
             foreach (DataRowView rowView in myDV)
             {
-                AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["centralised_add_application"].ToString());
+
+                //site info
+
+                SiteInfoData1 = JsonConvert.DeserializeObject<List<SiteInfoData>>(rowView["decentralised_siteinfo"].ToString());
+                m_site_info_idx = SiteInfoData1.Count.ToString();
+                if (SiteInfoData1.Count > 1) { hidCentralSite.Value = m_site_info_idx; }
+
+                for (int ix = 0; ix <= SiteInfoData1.Count - 1; ix++)
+                {
+                    switch (ix)
+                    {
+                        case 0:
+                            txtHospitalName1.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet1.Text = SiteInfoData1[ix].HospitalStreet;
+                            switch (SiteInfoData1[ix].Site)
+                            {
+                                case "High":
+                                    m_connectH1 = "checked";
+                                    break;
+                                case "Med":
+                                    m_connectM1 = "checked";
+                                    break;
+                                case "Low":
+                                    m_connectL1 = "checked";
+                                    break;
+                            }
+                            m_HostpitalEntryText1 = SiteInfoData1[ix].Users;
+                            break;
+                        case 1:
+                            txtHospitalName2.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet2.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText2 = SiteInfoData1[ix].Users;
+                            break;
+                        case 2:
+                            txtHospitalName3.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet3.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText3 = SiteInfoData1[ix].Users;
+                            break;
+                        case 3:
+                            txtHospitalName4.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet4.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText4 = SiteInfoData1[ix].Users;
+                            break;
+                        case 4:
+                            txtHospitalName5.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet5.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText5 = SiteInfoData1[ix].Users;
+                            break;
+                        case 5:
+                            txtHospitalName6.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet6.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText6 = SiteInfoData1[ix].Users;
+                            break;
+                        case 6:
+                            txtHospitalName7.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet7.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText7 = SiteInfoData1[ix].Users;
+                            break;
+                        case 7:
+                            txtHospitalName8.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet8.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText8 = SiteInfoData1[ix].Users;
+                            break;
+                        case 8:
+                            txtHospitalName9.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet9.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText9 = SiteInfoData1[ix].Users;
+                            break;
+                        case 9:
+                            txtHospitalName10.Text = SiteInfoData1[ix].HospitalName;
+                            txtHospitalStreet10.Text = SiteInfoData1[ix].HospitalStreet;
+                            m_HostpitalEntryText10 = SiteInfoData1[ix].Users;
+                            break;
+                    }
+                }
+
+
+                //concurrent
+                m_ConEnterpriseUsers = rowView["decentralised_concurrent_ent_users"].ToString();
+                if (m_ConEnterpriseUsers == "")
+                {
+                    m_ConEnterpriseUsers = "11";
+                }
+
+                AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["decentralised_add_application"].ToString());
                 m_NoApp = Convert.ToString(AdditionalApplication1.Count - 1);
 
+                //hidHospitalData
+                
 
                 for (int i = 0; i <= AdditionalApplication1.Count - 1; i++)
                 {
@@ -224,10 +328,39 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         case 0:
                             cmdApplication1.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent1 = AdditionalApplication1[i].ConcurrentUsers;
+
+                            string[] splitHospitalname = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+
+
+                            string[] splitMain_Hospitalname = splitHospitalname[0].Split(':');
+                            string[] splitAdditon_Hospitalname = splitHospitalname[1].Split(';');
+
+                            m_Hospitallist = "1:" + splitMain_Hospitalname[0] + "," + splitMain_Hospitalname[1] + "|" + string.Join(",", splitAdditon_Hospitalname);
+                            hidHospitalData1.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname.Length > 1)
+                            {
+                                hostpitalnewline1.Value = (splitAdditon_Hospitalname.Length  ).ToString(); 
+                            }
+                            
                             break;
                         case 1:
                             cmdApplication2.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent2 = AdditionalApplication1[i].ConcurrentUsers;
+
+
+                            string[] splitHospitalname1 = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+
+
+                            string[] splitMain_Hospitalname1 = splitHospitalname1[0].Split(':');
+                            string[] splitAdditon_Hospitalname1 = splitHospitalname1[1].Split(';');
+
+                            m_Hospitallist = "2:" + splitMain_Hospitalname1[0] + "," + splitMain_Hospitalname1[1] + "|" + string.Join(",", splitAdditon_Hospitalname1);
+                            hidHospitalData2.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname1.Length > 1)
+                            {
+                                hostpitalnewline2.Value = (splitAdditon_Hospitalname1.Length).ToString();
+                            }
+
                             break;
                         case 2:
                             cmdApplication3.SelectedValue = AdditionalApplication1[i].Application;
@@ -247,88 +380,125 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
                     }
 
-
-                    //site info
-
-                    SiteInfoData1 = JsonConvert.DeserializeObject<List<SiteInfoData>>(rowView["centralised_siteinfo"].ToString());
-                    for (int ix = 0; ix <= SiteInfoData1.Count - 1; ix++)
-                    {
-                        switch (ix)
-                        {
-                            case 0:
-                                txtHospitalName1.Text = SiteInfoData1[ix].HospitalName;
-                                txtHospitalStreet1.Text = SiteInfoData1[ix].HospitalStreet;
-                                switch (SiteInfoData1[ix].Site)
-                                {
-                                    case "High":
-                                        m_connectH1 = "checked";
-                                        break;
-                                    case "Med":
-                                        m_connectM1 = "checked";
-                                        break;
-                                    case "Low":
-                                        m_connectL1 = "checked";
-                                        break;
-                                }
-                                break;
-                            case 1:
-                                txtHospitalName2.Text = SiteInfoData1[ix].HospitalName;
-                                txtHospitalStreet2.Text = SiteInfoData1[ix].HospitalStreet;
-                                break;
-                            case 2:
-                                txtHospitalName3.Text = SiteInfoData1[ix].HospitalName;
-                                txtHospitalStreet3.Text = SiteInfoData1[ix].HospitalStreet;
-                                break;
-                            case 3:
-                                txtHospitalName4.Text = SiteInfoData1[ix].HospitalName;
-                                txtHospitalStreet4.Text = SiteInfoData1[ix].HospitalStreet;
-                                break;
-                            case 4:
-                                txtHospitalName5.Text = SiteInfoData1[ix].HospitalName;
-                                txtHospitalStreet5.Text = SiteInfoData1[ix].HospitalStreet;
-                                break;
-                            case 5:
-                                txtHospitalName6.Text = SiteInfoData1[ix].HospitalName;
-                                txtHospitalStreet6.Text = SiteInfoData1[ix].HospitalStreet;
-                                break;
-                        }
-                    }
-
-
-                    //concurrent
-                    m_ConEnterpriseUsers = rowView["centralised_concurrent_ent_users"].ToString();
-
-
-                    //SOftware only Mac
-                   
-                    MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["centralised_deliverymodel_ISPSoftware"].ToString());
-                    for (int ixa = 0; ixa <= MacAddressData1.Count - 1; ixa++)
-                    {
-                        switch (ixa)
-                        {
-                            case 0:                               
-                                break;
-                            case 1:
-                               
-                                break;
-                            case 2:
-                               
-                                break;
-                            case 3:
-                               
-                                break;
-                            case 4:
-                               
-                                break;
-                            
-                        }
-                    }
-
-
-
-
-
                 }
+
+                
+                               
+
+                //Mac
+                MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_deliverymodel_ISPSoftware"].ToString());
+                string currentidx = string.Empty;
+                int macidx = 1;
+                string machid = "";
+                for (int ixa = 0; ixa <= MacAddressData1.Count - 1; ixa++)
+                {
+                    string xx = MacAddressData1[ixa].No;
+
+                    if (currentidx=="")
+                    {
+                        currentidx = MacAddressData1[ixa].No;
+                    }
+
+                    if (xx == currentidx)
+                    {
+                        if (machid!="")
+                        {
+                            machid += ",";
+                        }
+
+                        machid += MacAddressData1[ixa].Menu + ":" + MacAddressData1[ixa].MacAddress;
+
+                        macidx++;
+                    }else
+                    {
+                        switch(currentidx)
+                        {
+                            case "1":
+                                hidMacTable1.Value = machid;
+                                break;
+                            case "2":
+                                hidMacTable2.Value = machid;
+                                break;
+                            case "3":
+                                hidMacTable3.Value = machid;
+                                break;
+                            case "4":
+                                hidMacTable4.Value = machid;
+                                break;
+                            case "5":
+                                hidMacTable5.Value = machid;
+                                break;
+                            case "6":
+                                hidMacTable6.Value = machid;
+                                break;
+                            case "7":
+                                hidMacTable7.Value = machid;
+                                break;
+                            case "8":
+                                hidMacTable8.Value = machid;
+                                break;
+                            case "9":
+                                hidMacTable9.Value = machid;
+                                break;
+                            case "10":
+                                hidMacTable10.Value = machid;
+                                break;
+                        }
+                        
+
+                        currentidx = MacAddressData1[ixa].No;
+                        macidx = 1;
+                        machid = "";
+
+                        machid += MacAddressData1[ixa].Menu + ":" + MacAddressData1[ixa].MacAddress;
+
+                        macidx++;
+
+                    }
+                }
+
+
+                switch (currentidx)
+                {
+                    case "1":
+                        hidMacTable1.Value = machid;
+                        break;
+                    case "2":
+                        hidMacTable2.Value = machid;
+                        break;
+                    case "3":
+                        hidMacTable3.Value = machid;
+                        break;
+                    case "4":
+                        hidMacTable4.Value = machid;
+                        break;
+                    case "5":
+                        hidMacTable5.Value = machid;
+                        break;
+                    case "6":
+                        hidMacTable6.Value = machid;
+                        break;
+                    case "7":
+                        hidMacTable7.Value = machid;
+                        break;
+                    case "8":
+                        hidMacTable8.Value = machid;
+                        break;
+                    case "9":
+                        hidMacTable9.Value = machid;
+                        break;
+                    case "10":
+                        hidMacTable10.Value = machid;
+                        break;
+                }
+
+                //hidMacTable
+
+                //MacSoftwareOnly1_1
+                //MacSoftwareOnly1_2
+
+
+                //}
 
 
 
@@ -341,7 +511,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             //txtHospitalName1
 
 
-           
+
 
 
 
@@ -497,11 +667,11 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                     }
                     break;
-                case "macAddress":
+                case "macAddresssections":
                     foreach (string key in Request.Form)
                     {
 
-                        bool hasItem = LoopNumberofEntries("ApplicationSoftwareOnly" + idx);
+                        bool hasItem = LoopNumberofEntries("ApplicationSoftwareOnly"+ idx + "_1");
 
                         if (hasItem)
                         {
@@ -549,10 +719,12 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             {
                 string item1 = Request.Form["txtHospitalName" + i.ToString()].ToString();
                 string item2 = Request.Form["txtHospitalStreet" + i.ToString()].ToString();
-                string item3 = Request.Form["HospitalSiteConnectivity" + i.ToString()].ToString();
-                string item4 = Request.Form["HospitalSite" + i.ToString()].ToString();
+                string item5 = Request.Form["HostpitalEntryText" + i.ToString()].ToString();
+                string item4 = "Remote";                
+                string item3 = Request.Form["HospitalRadioConnectivity" + i.ToString()].ToString();
+                
 
-                SiteInfoData1.Add(new SiteInfoData {  No=i.ToString(), HospitalName= item1, HospitalStreet = item2,  Site= item3, Connectivity= item4 });
+                SiteInfoData1.Add(new SiteInfoData {  No=i.ToString(), HospitalName= item1, HospitalStreet = item2,  Site= item3, Connectivity= item4, Users= item5 });
             }
             //serilaze for DB
             string centralised_siteinfo = JsonConvert.SerializeObject(SiteInfoData1, Formatting.Indented);
@@ -561,7 +733,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             string CONCURRENTENTERPRISEUSERS = Request.Form["CONCURRENTENTERPRISEUSERS"].ToString();
 
 
-            string WhichDeliveryTab = Request.Form["HiddenDeliveryModel"];
+            //string WhichDeliveryTab = Request.Form["HiddenDeliveryModel"];
 
 
             int addApplicationidx = GetNumberofEntries("addApplication");
@@ -573,46 +745,94 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                 if (item1 != "")
                 {
+
+                    //concurrent users
                     string item2 = "";
                     try {
                         item2 = Request.Form["txtConcurrent" + i.ToString()].ToString();
                     }
                     catch { }
-                    
+
+
+                    //get hospital count                    
+                    string hostitalidx= Request.Form["hostpitalnewline" + i.ToString()].ToString();
+
+                    //hospital name
                     string item3 = "";
                     if (Request.Form["cmdHospitalName" + i.ToString()] != null)
                     {
                         item3 = Request.Form["cmdHospitalName" + i.ToString()].ToString();
+                        item3 += ":" + Request.Form["txtCUsers" + i.ToString()].ToString(); 
+
                     }
                     else
                     {
                         item3 = "";
                     }
 
-                    AdditionalApplication1.Add(new AdditionalApplication { No = i.ToString(), Application = item1, ConcurrentUsers = item2, HospitalName = item3 });
+                    string additalItems = "";
+                    for (int ix = 1; ix <= 10; ix++)
+                    {
+                        string Hidx =  i.ToString() + "_" + ix.ToString();
+
+                        if (Request.Form["cmdHospitalName" + Hidx] != null)
+                        {
+                            //cmdHospitalName1_1  txtCUser1_1
+                            if (Request.Form["cmdHospitalName" + Hidx].ToString() != "")
+                            {
+                                additalItems +=  Request.Form["cmdHospitalName" + Hidx].ToString();
+                                additalItems += ":" + Request.Form["txtCUsers" + Hidx].ToString() + ";" ;
+                            }
+
+                        }
+                    }
+
+
+                    AdditionalApplication1.Add(new AdditionalApplication { No = i.ToString(), Application = item1, ConcurrentUsers = item2, HospitalName = item3 +"|" + additalItems });
                 }
             }
             string AdditionalApplication = JsonConvert.SerializeObject(AdditionalApplication1, Formatting.Indented);
 
 
 
-            int macidx = GetNumberofEntries("macAddress"); 
+            int macidx = GetNumberofEntries("macAddresssections"); 
 
-
+            //loop sections
             for (int i = 1; i <= macidx; i++)
             {
-                string item1 = Request.Form["ApplicationSoftwareOnly" + i.ToString()].ToString();
-                string item2 = Request.Form["MacSoftwareOnly" + i.ToString()].ToString();
 
-                MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2});
+                int macSection = 0;
+                int macSectionidx = 1;
+                foreach (string key in Request.Form)
+                {
+
+                    bool hasItem = LoopNumberofEntries("ApplicationSoftwareOnly" + i + "_" + macSectionidx);
+
+                    if (hasItem)
+                    {
+                        macSection++;
+                    }
+
+                    macSectionidx++;
+
+                }
+
+                for (int isec = 1; isec <= macSection; isec++)
+                {
+
+                    string item1 = Request.Form["ApplicationSoftwareOnly"+i+"_" +isec].ToString();
+                    string item2 = Request.Form["MacSoftwareOnly" + i + "_" + isec].ToString();
+
+                    MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                }
             }
 
             string MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
 
 
 
-
-            string SQL = "update PhilipsLic_Project set centralised_add_application='"+ AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
+            string SQL = "update PhilipsLic_Project set decentralised_siteinfo='" + centralised_siteinfo + "' , decentralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "', decentralised_add_application='"+ AdditionalApplication + "' , decentralised_deliverymodel_ISPSoftware='"+ MacAddressData + "' where PhilipsLic_ProjectID =" + id;
+            // string SQL = "update PhilipsLic_Project set centralised_add_application='"+ AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
             Helper.InsertData(SQL);
 
 
@@ -640,7 +860,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             //    myID = rowView["PhilipsLic_ProjectID"].ToString();
             //}
 
-
+            SetupPage();
 
 
 
@@ -656,7 +876,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         try
         {
             string id = Request.QueryString["id"];
-            Response.Redirect("/lic-server/OutputReporta.aspx?id=" + id);
+            Response.Redirect("/lic-server/OutputReportDistributed.aspx?id=" + id);
         }
         catch (Exception ex)
         {
@@ -739,16 +959,16 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             //      //  PanSwitchUser.Visible = false;
             //    }
             //}
-
+            
             if (!IsPostBack)
             {
 
 
 
 
-
-                SetUpApplicationCombo();
                 SetupPage();
+                SetUpApplicationCombo();
+               
                 //if (Session["SwitchUser"] != null)
                 //{
                 //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();

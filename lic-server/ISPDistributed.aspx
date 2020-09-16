@@ -506,7 +506,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet1" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                            <td><input type="number" id="HostpitalEntryText1" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText1" value="0" min="1" max="15"></td>
+                                                                            <td><input type="number" id="HostpitalEntryText1" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText1" value="<%=m_HostpitalEntryText1 %>"  min="1" max="15"></td>
 
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
@@ -520,15 +520,15 @@
                                                                             <td>
 
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityHigh" value="High" <%=m_connectH1 %> checked>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity1" id="HospitalSite1ConnectivityHigh" value="High" <%=m_connectH1 %> checked>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityMed" value="Med"  <%=m_connectM1 %>>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity1" id="HospitalSite1ConnectivityMed" value="Med"  <%=m_connectM1 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
 
 
 
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity1" id="HospitalSite1ConnectivityLow" value="Low"  <%=m_connectL1 %>>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalRadioConnectivity1" id="HospitalSite1ConnectivityLow" value="Low"  <%=m_connectL1 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -548,7 +548,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet2" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                            <td><input type="number" id="HostpitalEntryText2" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText2" value="0" min="1" max="15"></td>
+                                                                            <td><input type="number" id="HostpitalEntryText2" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText2"  value="<%=m_HostpitalEntryText2 %>"  min="1" max="15"></td>
 
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
@@ -595,7 +595,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet3" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                            <td><input type="number" id="HostpitalEntryText3" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText3" value="0" min="1" max="15"></td>
+                                                                            <td><input type="number" id="HostpitalEntryText3" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText3" value="<%=m_HostpitalEntryText3 %>" min="1" max="15"></td>
 
 
                                                                             <td>
@@ -646,7 +646,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet4" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                            <td><input type="number" id="HostpitalEntryText4" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText4" value="0" min="1" max="15"></td>
+                                                                            <td><input type="number" id="HostpitalEntryText4" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText4" value="<%=m_HostpitalEntryText4 %>" min="1" max="15"></td>
 
 
                                                                             <td>
@@ -695,7 +695,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet5" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                             <td><input type="number" id="HostpitalEntryText5" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText5" value="0" min="1" max="15"></td>
+                                                                             <td><input type="number" id="HostpitalEntryText5" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText5" value="<%=m_HostpitalEntryText5 %>" min="1" max="15"></td>
 
 
                                                                             <td>
@@ -743,7 +743,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet6" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                               <td><input type="number" id="HostpitalEntryText6" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText6" value="0" min="1" max="15"></td>
+                                                                               <td><input type="number" id="HostpitalEntryText6" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText6" value="<%=m_HostpitalEntryText6 %>" min="1" max="15"></td>
 
 
 
@@ -793,7 +793,7 @@
                                                                             </td>
 
 
-                                                                            <td><input type="number" id="HostpitalEntryText7" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText7" value="0" min="1" max="15"></td>
+                                                                            <td><input type="number" id="HostpitalEntryText7" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText7" value="<%=m_HostpitalEntryText7 %>" min="1" max="15"></td>
 
 
                                                                             <td>
@@ -841,7 +841,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet8" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                             <td><input type="number" id="HostpitalEntryText8" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText8" value="0" min="1" max="15"></td>
+                                                                             <td><input type="number" id="HostpitalEntryText8" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText8" value="<%=m_HostpitalEntryText8 %>"  min="1" max="15"></td>
 
 
 
@@ -890,7 +890,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet9" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                             <td><input type="number" id="HostpitalEntryText9" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText9" value="0" min="1" max="15"></td>
+                                                                             <td><input type="number" id="HostpitalEntryText9" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText9"  value="<%=m_HostpitalEntryText9 %>"  min="1" max="15"></td>
 
                                                                             <td>
                                                                                 <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
@@ -937,7 +937,7 @@
                                                                                 <asp:TextBox ID="txtHospitalStreet10" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="Hospital Street"></asp:TextBox>
                                                                             </td>
 
-                                                                             <td><input type="number" id="HostpitalEntryText10" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText10" value="0" min="1" max="15"></td>
+                                                                             <td><input type="number" id="HostpitalEntryText10" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText10"  value="<%=m_HostpitalEntryText10 %>"  min="1" max="15"></td>
 
 
 
@@ -981,7 +981,7 @@
 
                                                                 </table>
                                                                 </div>
-                                                                <asp:HiddenField ID="hidCentralSite" Value="1" runat="server" />
+                                                                <asp:HiddenField ID="hidCentralSite" Value="" runat="server" />
 
 
                                                                 <div onclick="CentralAddSite();" style="cursor: pointer;">+ Add another site </div>
@@ -1229,7 +1229,7 @@
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
 
-                                                                                     <span onclick="addhostnewline(1);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(1);" id="addhostnewline1" style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                      <asp:HiddenField ID="hostpitalnewline1" runat="server" Value="0" />
                                                                                 </td>
 
@@ -1375,7 +1375,7 @@
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
 
-                                                                                     <span onclick="addhostnewline(2);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(2);" id="addhostnewline2" style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline2" runat="server" Value="0" />
                                                                                 </td>
 
@@ -1530,7 +1530,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(3);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(3);" id="addhostnewline3" style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline3" runat="server" Value="0" />
                                                                                 </td>
 
@@ -1690,7 +1690,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(4);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(4);" id="addhostnewline4" style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline4" runat="server" Value="0" />
                                                                                 </td>
 
@@ -1839,7 +1839,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(5);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(5);" id="addhostnewline5" style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline5" runat="server" Value="0" />
                                                                                 </td>
 
@@ -1987,7 +1987,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(6);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(6);" id="addhostnewline6" style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline6" runat="server" Value="0" />
                                                                                 </td>
 
@@ -2135,7 +2135,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(7);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(7);"  id="addhostnewline7" style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline7" runat="server" Value="0" />
                                                                                 </td>
 
@@ -2284,7 +2284,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(8);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(8);"  id="addhostnewline8"  style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline8" runat="server" Value="0" />
                                                                                 </td>
 
@@ -2431,7 +2431,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(9);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(9);"  id="addhostnewline9"  style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline9" runat="server" Value="0" />
                                                                                 </td>
 
@@ -2582,7 +2582,7 @@
 
                                                                                     
 
-                                                                                     <span onclick="addhostnewline(10);" style="cursor: pointer;width: 180px;" >+ Add new</span>
+                                                                                     <span onclick="addhostnewline(10);"  id="addhostnewline10"  style="cursor: pointer;width: 180px;" >+ Add new</span>
                                                                                     <asp:HiddenField ID="hostpitalnewline10" runat="server" Value="0" />
                                                                                 </td>
                                                                                 <td>                                                                                    
@@ -3657,6 +3657,16 @@
         <asp:HiddenField ID="hidConcurrent_Range" runat="server" />
 
 
+        <asp:HiddenField ID="hidHospitalData1" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData2" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData3" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData4" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData5" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData6" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData7" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData8" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData9" runat="server" Value="" />
+        <asp:HiddenField ID="hidHospitalData10" runat="server" Value="" />
 
 
 
@@ -3681,7 +3691,7 @@
     <script>
 
 
-        var isDev = true;
+        var isDev = false;
 
         var sapicheckapp = "";
         var sapidata = "";
@@ -3713,10 +3723,21 @@
 
             $("#hostpitalnewline" + lineno)[0].value=itemnumber;
 
-            //itemnumber++;
+            //add new button
+            let noHospitals = GetnumberHospitals();
+            //add new button
+
+            if (noHospitals  == (itemnumber+1)) {
+                $("#addhostnewline" + lineno).hide();
+            } else {
+                $("#addhostnewline" + lineno).show();
+            }
 
             $("#cmdHospitalName"+ CurrentIDX).hide();
-            $("#txtCUser"+ CurrentIDX).hide();
+
+            $("#txtCUser" + CurrentIDX).hide();
+            $("#txtCUser" + CurrentIDX)[0].value = "0";
+            $("#cmdHospitalName" + CurrentIDX)[0].value = "";
             $("#cmdAddtionalAppDelete"+CurrentIDX).hide();
 
            
@@ -3730,6 +3751,17 @@
             let counteridx = $("#hostpitalnewline" + itemNo)[0].value;
             counteridx++;
             $("#hostpitalnewline" + itemNo)[0].value = counteridx;
+
+
+            //add new button
+            let noHospitals = GetnumberHospitals();
+            //add new button
+
+            if (noHospitals  == (counteridx+1)) {
+                $("#addhostnewline" + itemNo).hide();
+            } else {
+                $("#addhostnewline" + itemNo).show();
+            }
 
             switch (counteridx) {
                 case 1:
@@ -3808,7 +3840,7 @@
             //}
 
               
-            var siteConcurrent =  $("#HostpitalEntryText1")[0].value;
+            var siteConcurrent =  $("#HostpitalEntryText"+tableNo)[0].value;
 
           //  NoRows++;                      
 
@@ -3912,8 +3944,8 @@
 
             for (var i = 1; i <= rowCnt; i++) {
                 var myMac = '';
-                if ($("#MacSoftwareOnly" + i).length > 0) {
-                    myMac = $("#MacSoftwareOnly" + i)[0].value;
+                if ($("#MacSoftwareOnly" + tableid + "_" + i).length > 0) {
+                    myMac = $("#MacSoftwareOnly"  + tableid + "_" + i)[0].value;
                 }
 
                 MacList += $("#ApplicationSoftwareOnly" + tableid + "_" + i)[0].value + ":" +myMac + ",";
@@ -4059,27 +4091,19 @@
 
                         break;
                     case 3:
-                        
-                                              
-
-
+                                                                     
                         if (idx > datalicence) {
 
-                            var ele = document.createElement('span');
-                            ele.setAttribute('id', 'cmdLicenceProDelete' + idx);
-                            ele.setAttribute('onclick', 'deleteLicencePro(this);');
-                            td.appendChild(ele);
+                            if (ConUsers <= 10) {
 
-                            document.getElementById('cmdLicenceProDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                                var ele = document.createElement('span');
+                                ele.setAttribute('id', 'cmdLicenceProDelete' + idx);
+                                ele.setAttribute('onclick', 'deleteLicencePro(this);');
+                                td.appendChild(ele);
 
-
-                        } else {
-
-
-
-                            
-
-                        }
+                                document.getElementById('cmdLicenceProDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                            }                          
+                        } 
 
                         break;
                 }
@@ -4097,7 +4121,7 @@
             }
         }
 
-        function UpdateDistMacTable(thisItemNo)
+        function UpdateDistMacTable(thisItemNo,donotSTORE)
         {
 
             let maxConcurrent = $("#CONCURRENTENTERPRISEUSERS")[0].value;
@@ -4124,8 +4148,9 @@
                 alert("ERROR with value");
             }
 
-
-             storeCurrentMac(thisItemNo);
+            if (donotSTORE != 1) {
+                storeCurrentMac(thisItemNo);
+            }
             //remove items
             removeDistMacTable(thisItemNo);
 
@@ -4318,30 +4343,17 @@
 
 
                     case 3:
-                        
-                        //    <span id="cmdAddtionalAppDelete1" onclick="deleteAddtionalApp(this);">
-                        //        <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
-                        //    </span>                            
-
-
+                                              
                         if (idx > 2) {
+                            if (ConUsers <= 10) {
+                                var ele = document.createElement('span');
+                                ele.setAttribute('id', 'cmdLicenceDelete' + tableNo + "_" + idx);
+                                ele.setAttribute('onclick', 'deleteLicence(this);');
+                                td.appendChild(ele);
 
-                            var ele = document.createElement('span');
-                            ele.setAttribute('id', 'cmdLicenceDelete'  + tableNo + "_"+idx);
-                            ele.setAttribute('onclick', 'deleteLicence(this);');
-                            td.appendChild(ele);
-
-                            document.getElementById('cmdLicenceDelete'  + tableNo + "_"+idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
-
-
-                        } else {
-
-
-
-                            
-
-                        }
-
+                                document.getElementById('cmdLicenceDelete' + tableNo + "_" + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                            }
+                        } 
                         break;
                 }
 
@@ -4897,9 +4909,9 @@
                 //Concurrent_Users
                 if (array[1] == "No") {
 
-                    $("#txtConcurrent" + CurrentIDX)[0].disabled = true;
+                    $("#txtConcurrent" + CurrentIDX)[0].readOnly = true;
                 } else {
-                    $("#txtConcurrent" + CurrentIDX)[0].disabled = false;
+                    $("#txtConcurrent" + CurrentIDX)[0].readOnly = false;
                 }
 
                 //Concurrent_Range - Max
@@ -4920,6 +4932,20 @@
             }
         }
 
+
+        function GetnumberHospitals() {
+            let idx = 0;
+            for (i = 1; i <= 10; i++) {
+
+                if ($("#txtHospitalName" + i)[0].value != "") {
+                    idx++;
+                }
+
+            }
+
+            return idx;
+        }
+
         function validateCUser(itemTHIS,rowno,rowsubitem) {
 
             let myitem = itemTHIS.id;
@@ -4929,13 +4955,15 @@
             let selectedHost = 0;
 
 
+           
+
             //loop to make sure its unique
             let ShowError = false;
             for (i = 0; i < 10; i++) {
 
                 if (i == 0) {
-                    if ($("#cmdHospitalName" + 1)[0].value == hospitalselected) {
-                        if (myitemIDX != 1) {
+                    if ($("#cmdHospitalName" + rowno)[0].value == hospitalselected) {
+                        if (myitemIDX != rowno) {
                             ShowError = true;
                         }
                     }
@@ -4952,8 +4980,12 @@
             if (ShowError == true) {
 
                  $("#CONCURRENTENTERPRISE_Error4").show();
-                    $("#error4display")[0].innerText = "Duplicate Selection";                    
-                    return false;
+                $("#error4display")[0].innerText = "Duplicate Selection";  
+
+                //reset
+                $("#cmdHospitalName" + myitemIDX)[0].selectedIndex = "0";
+                $("#txtCUser" + myitemIDX)[0].value = 0;
+                return false;
 
             } else
             {
@@ -5013,10 +5045,10 @@
 
 
             if ( parseInt(myvalue) > parseInt(maxvalue)) {
-               
+                $("#" + myitem)[0].value = 0;
                 $("#CONCURRENTENTERPRISE_Error4").show();
                 $("#error4display")[0].innerText = "Value exceeds";
-                $("#" + myitem)[0].value = 0;
+               
                 return false;
 
             } else {
@@ -5029,6 +5061,7 @@
             if ( parseInt( myvalue)  > parseInt(concUser)) {
                 $("#CONCURRENTENTERPRISE_Error4").show();
                 $("#error4display")[0].innerText = "Value exceeds";
+                $("#" + myitem)[0].value = 0;
             } else {    
                  $("#CONCURRENTENTERPRISE_Error4").hide();
             }
@@ -5053,6 +5086,7 @@
                 
                 $("#CONCURRENTENTERPRISE_Error4").show();
                 $("#error4display")[0].innerText = "Value exceeds";
+                $("#" + myitem)[0].value = 0;
             } else {    
                  $("#CONCURRENTENTERPRISE_Error4").hide();
             }
@@ -5222,8 +5256,7 @@
 
         function UpdateHospital(itemidx)
         {
-            
-
+                  
             //clear boxes
              var i;
             for (i = 1; i < 10; i++) {
@@ -5235,120 +5268,136 @@
 
             //clear boxes
 
+            //Add blank
             AddHospitalItem("","");
+            //Add blank
 
 
             var i;
             for (i = 1; i <= 10; i++) {
 
-                if ($("#txtHospitalName" + i)[0].value != "") {
-
-                    
-                    
-                   
-                    AddHospitalItem($("#txtHospitalName" +i)[0].value, $("#txtHospitalName" +i)[0].value);
+                if ($("#txtHospitalName" + i)[0].value != "") {         
+                                       
+                    AddHospitalItem($("#txtHospitalName" + i)[0].value, $("#txtHospitalName" + i)[0].value);
                 }
 
-                //document.getElementById("cmdHospitalName1").innerHTML = "";
-
-                //AddHospitalItem("", "");
-                //AddHospitalItem($("#txtHospitalName" +i)[0].value, $("#txtHospitalName" +i)[0].value);
-               // $("#txtHospitalName" +i)[0].value
             }
 
-             //AddHospitalItem("", "");
-            //AddHospitalItem($("#txtHospitalName" + itemidx)[0].value, $("#txtHospitalName" + itemidx)[0].value);
-           
 
+            //heading and table
+            $("#mac" + itemidx).show();
+            $("#macheading" + itemidx)[0].innerText = "SITE " + itemidx + ": " +  $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+                        
+        }
 
+        function getRowindex(rowidx,tableRow) {
 
-            //switch (itemidx) {
-
-            //    case 1:
-            //        $("#HostpitalEntry1").show();
-            //        $("#HostpitalEntryLabel1")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+            //switch (rowidx) {
+                //case 1:
+            let nyrow = parseInt(rowidx) + 1;
+            return tableRow + "_" + nyrow;
                     
-            //        break;
-
-                
-            //    case 2:
-            //        $("#HostpitalEntry2").show();
-            //        $("#HostpitalEntryLabel2")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
-                    
-            //        break;
-
-            //      case 3:
-            //        $("#HostpitalEntry3").show();
-            //        $("#HostpitalEntryLabel3")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
-                    
-            //        break;
-
-            //     case 4:
-            //        $("#HostpitalEntry4").show();
-            //        $("#HostpitalEntryLabel4")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
-                    
-            //        break;
-
-            //     case 5:
-            //        $("#HostpitalEntry5").show();
-            //        $("#HostpitalEntryLabel5")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
-            //        break;
-
-            //     case 6:
-            //        $("#HostpitalEntry6").show();
-            //        $("#HostpitalEntryLabel6")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
-            //        break;
-
-            //     case 7:
-            //        $("#HostpitalEntry7").show();
-            //        $("#HostpitalEntryLabel7")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
-            //        break;
-
-            //     case 8:
-            //        $("#HostpitalEntry8").show();
-            //        $("#HostpitalEntryLabel8")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
-            //        break;
-
-            //    case 9:
-            //        $("#HostpitalEntry9").show();
-            //        $("#HostpitalEntryLabel9")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
-            //        break;
-
-            //    case 10:
-            //        $("#HostpitalEntry10").show();
-            //        $("#HostpitalEntryLabel10")[0].innerHTML = $("#txtHospitalName" + itemidx)[0].value.toUpperCase();                    
-            //        break;
 
             //}
 
+        }
+        function getArrayDataHospital(index,savedData,bytype,rowid) {
 
-            $("#mac" + itemidx).show();
-            $("#macheading" + itemidx)[0].innerText = "SITE " + itemidx + ": " +  $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+            //bytype =1 name
+            //bytype=2 type
+
+            let tmpidx = 0;
+            var mainItem = savedData.split("|");
+            var mainItem = mainItem[0].split(":");
+
+            if (index != "") {
+
+               // if (index.indexOf("_")) {
+
+                if (index.toString().includes("_")) {
+                    //tmpidx = index.substring(0, index.length - 2);;
+                    if (mainItem[0] == rowid) {
+
+                        mainItem = savedData.split("|");
+                        mainItem = mainItem[1].split(",");
+
+                        for (im = 0; im < mainItem.length; im++) {
+
+                            if (mainItem[im] !="") {
+
+                                //check and compare
+                                if (getRowindex(im,rowid) ==  index ) {                                                                                                         
+
+                                    let tmpitem = mainItem[im].split(":");
+
+                                    if (bytype == 1) {
+                                        return tmpitem[0];
+
+                                    } else {
+                                        return tmpitem[1];
+                                    }
+
+
+                                }
+
+                              
+
+                            }
+
+                        }
+
+
+
+                    }
+
+
+                } else {
+
+                    if (mainItem[0] == index) {
+
+                        let item = mainItem[1].split(",");
+
+                        if (bytype == 1) {
+                            return item[0];
+
+                        } else {
+                            return item[1];
+                        }
+
+
+                    }
+
+                }
+            }
+
             
-            //GetLicenceData();
-            //txtHospitalName1
-
         }
 
+        function AddHospitalItem(Text, Value)
+        {
 
-        function AddHospitalItem(Text, Value) {
-
-
-            //document.getElementById("cmdHospitalName1").innerHTML = "";
-           //document.getElementById("cmdHospitalName1_1").innerHTML = "";
-
-
-
+            //main
             var i;
             for (i = 1; i < 10; i++) {
                 var optVal = document.createElement("option");
                 
                 document.getElementById("cmdHospitalName" + i).options.add(optVal);
                 optVal.text = Text;
-                optVal.value = Value;
+                optVal.value = Value;                                
+
+                if (Text != "") {
+                    let savedData = document.getElementById("hidHospitalData"+i).value;
+                    if (getArrayDataHospital(i, savedData, 1,i) == Text) {
+                        document.getElementById("cmdHospitalName" + i).value = Text;
+                        document.getElementById("txtCUser" + i).value = getArrayDataHospital(i, savedData, 2,i);                        
+                    }
+                }
+
             }
+            //main
 
 
+            //x_1
             var i;
             for (i = 1; i < 10; i++) {
                 var optVal = document.createElement("option");
@@ -5357,10 +5406,18 @@
                 document.getElementById("cmdHospitalName" + 1+ "_"+i).options.add(optVal);
                 optVal.text = Text;
                 optVal.value = Value;
+
+                if (Text != "") {
+                    let savedData = document.getElementById("hidHospitalData"+1).value;
+                    if (getArrayDataHospital(1 + "_"+ i, savedData, 1,1) == Text) {
+                        document.getElementById("cmdHospitalName" + 1 + "_"+i).value = Text;
+                        document.getElementById("txtCUser" + 1+ "_"+ i).value = getArrayDataHospital( 1+ "_"+i, savedData, 2,1);                        
+                    }
+                }
             }
+            //x_1
 
-
-           
+            //x_2
             var i;
             for (i = 1; i < 10; i++) {
                 var optVal = document.createElement("option");
@@ -5369,8 +5426,16 @@
                 document.getElementById("cmdHospitalName" + 2+ "_"+i).options.add(optVal);
                 optVal.text = Text;
                 optVal.value = Value;
-            }
 
+                if (Text != "") {
+                    let savedData = document.getElementById("hidHospitalData"+2).value;
+                    if (getArrayDataHospital(2 + "_"+ i, savedData, 1,2) == Text) {
+                        document.getElementById("cmdHospitalName" + 2 + "_"+i).value = Text;
+                        document.getElementById("txtCUser" + 2+ "_"+ i).value = getArrayDataHospital( 2+ "_"+i, savedData, 2,2);                        
+                    }
+                }
+            }
+             //x_2
 
              var i;
             for (i = 1; i < 10; i++) {
@@ -8032,6 +8097,43 @@
                        
         }
 
+
+        function showhospitalboxes(tablerow) {
+
+              for (i = 0; i < 10; i++) {
+
+                  if (i == 0) {
+                      if ($("#cmdHospitalName"+tablerow)[0].value != "") {
+                          $("#cmdHospitalName"+tablerow).show();
+                      }                      
+                  } else {
+                       if ($("#cmdHospitalName"+tablerow+"_"+i)[0].value != "") {
+                           $("#cmdHospitalName" + tablerow + "_" + i).show();
+                           $("#txtCUser" + tablerow + "_" + i).show();
+                           $("#cmdAddtionalAppDelete" + tablerow + "_" + i).show();                                                                                                            
+                      } 
+                  }
+
+            }
+
+        }
+
+         function SetupMacTables() {
+
+              for (imac = 1; imac <= 10; imac++) {
+
+                if ( $("#txtHospitalName" +imac)[0].value!="") {
+                    $("#mac" + imac).show();
+                    $("#macheading" + imac)[0].innerText = "SITE " + imac + ": " + $("#txtHospitalName" + imac)[0].value.toUpperCase();
+                    if ($("#HostpitalEntryText"+imac)[0].value != "0") {
+                        UpdateDistMacTable(imac,1);
+                    }
+                }
+
+            }
+
+        }
+
         $(document).ready(function () {
            // GetLicenceData();
             $('.ApplicationDDL').select2();
@@ -8041,7 +8143,28 @@
 
                 $('.drop-down').addClass('OpenDropdown');
 
-            });
+             });
+
+
+            if ($("#hidCentralSite")[0].value > 1) {
+
+                let mysite = $("#hidCentralSite")[0].value;
+                mysite = parseInt(mysite) - 1;
+                $("#hidCentralSite")[0].value = mysite;
+                CentralAddSite();
+                UpdateHospital(1);
+
+                if ( $("#hostpitalnewline1")[0].value > 0) {
+                    showhospitalboxes(1);                  
+                }
+
+                SetupMacTables();
+
+               
+
+
+            }
+             
 
         });
 
