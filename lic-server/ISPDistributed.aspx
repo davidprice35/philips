@@ -482,6 +482,81 @@
                                                             <div class="tab-pane active" id="Central" role="tabpanel" aria-labelledby="Central-tab">
 
 
+
+                                        
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+
+                                                              <div class="col-12">
+                                                             <span id="CONCURRENTENTERPRISE_Error3" style="display:none;">
+                                                                 <br />
+                                                                    <div class='alert' style="color: white;background-color: red;border-color: red;font-weight:bold;" role='alert' id="error3display">
+                                                                   
+                                                                    </div>
+                                                                </span>
+                                                                   </div>
+                                                            <div class="col-md-3">
+
+                                                               
+
+                                                              
+                                                                
+                                                                <span id="CONCURRENTENTERPRISE_Error" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                     Concurrent users are not supported below 11
+                                                                    </div>
+                                                                </span>
+
+                                                                <span id="CONCURRENTENTERPRISE_Error2" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Concurrent users can not exceed 50
+                                                                    </div>
+                                                                </span>
+
+
+                                                                
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Enterprise Users</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" <%--onchange="GetLicenceData();"--%> value="<%=m_ConEnterpriseUsers %>" onchange="CheckConcurrentBox();" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="1" max="55">                                                                                
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+
+
+                                                                
+                                                               
+
+
+                                                                
+                                                                
+
+
+                                                            </div>
+
+                                                           
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        
+
+
+                                         
+
                                                                 <div class="table-responsive">
                                                                 <table class="table table-bordered" style="margin-left: -10px;">
                                                                     <thead class="thead-light">
@@ -1004,80 +1079,7 @@
                                             </div>
 
 
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="row">
-
-                                                              <div class="col-12">
-                                                             <span id="CONCURRENTENTERPRISE_Error3" style="display:none;">
-                                                                 <br />
-                                                                    <div class='alert' style="color: white;background-color: red;border-color: red;font-weight:bold;" role='alert' id="error3display">
-                                                                   
-                                                                    </div>
-                                                                </span>
-                                                                   </div>
-                                                            <div class="col-md-3">
-
-                                                               
-
-                                                                <p style="color: black; margin-top: 20px;"><b>CONCURRENT ENTERPRISE USERS</b></p>
-                                                                
-                                                                <span id="CONCURRENTENTERPRISE_Error" style="display:none;">
-                                                                    <div class='alert alert-warning' role='alert'>
-                                                                     Concurrent users are not supported below 11
-                                                                    </div>
-                                                                </span>
-
-                                                                <span id="CONCURRENTENTERPRISE_Error2" style="display:none;">
-                                                                    <div class='alert alert-warning' role='alert'>
-                                                                    Concurrent users can not exceed 50
-                                                                    </div>
-                                                                </span>
-
-
-                                                                
-
-                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
-                                                                    <thead class="thead-light">
-                                                                        <tr>
-                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
-
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" <%--onchange="GetLicenceData();"--%> value="<%=m_ConEnterpriseUsers %>" onchange="CheckConcurrentBox();" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="1" max="55">                                                                                
-                                                                            </td>
-
-
-                                                                        </tr>
-
-                                                                    </tbody>
-                                                                </table>
-
-
-                                                                
-                                                               
-
-
-                                                                
-                                                                
-
-
-                                                            </div>
-
-                                                           
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;">
-                                            </div>
+                                         
 
 
 
@@ -2827,7 +2829,7 @@
                                                 <p style="font-weight: bolder; margin-top: 20px;">DELIVERY MODEL</p>
 
 
-
+                                                
 
 
 
@@ -2923,6 +2925,26 @@
                                                                 
 
 
+                                                    <div class="DELIVERY-info">
+                                                        <div class="tab-regular" style="margin-top: 10px;">
+
+                                                            <ul class="nav nav-tabs " id="myTab1" role="tablist">
+
+                                                                     <li class="nav-item active" id="EDLEonly-tab"> 
+                                                                        <a class="nav-link test" id="EDLEonly1" name="EDLEonly1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Enterprise Distributed Licensing Engine - Software only (NIC487)</a>
+                                                                    </li> 
+
+                                                                    <li class="nav-item " id="EDLEonly-tab"> 
+                                                                        <a class="nav-link test" id="EDLEonly2" name="EDLEonly2" data-toggle="tab" href="#EDLEonly2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Enterprise Engine Software - Software only (NICB006)</a>
+                                                                    </li> 
+
+                                                           
+
+                                                                </ul>
+
+                                                        </div>
+                                                     </div>
+
 
 
                                                                 <div class="row" id="mac1">
@@ -2932,6 +2954,73 @@
       <div style="display: inline-block;">
        <span id="error1" style="color:red; font-weight:bold;"></span>
       </div>
+
+                                                                    <br />
+                                                                     <p style="font-weight:bold;display: inline-block;margin-left: 15px;" >IntelliSpace Portal</p>
+
+
+<div class="HorS-Site1" style="margin-left: 15px;">
+    <div class="tab-regular" style="margin-top: 10px;">
+        <ul class="nav nav-tabs " id="myTabSite1" role="tablist">
+
+            <li class="nav-item active" id="HorS-tab1"> 
+                    <a class="nav-link test" id="HorSoft1" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#hardwaresite1').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Software only</a>
+            </li> 
+
+            <li class="nav-item " id="HorH-tab1"> 
+                <a class="nav-link test" id="HorHard1" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#hardwaresite1').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Hardware</a>
+            </li> 
+            
+        </ul>
+    </div>
+</div>
+
+<div id="hardwaresite1" style="display:none;">
+    <div class="HorS-HardwareSite1" style="margin-left: 15px;">
+        <div class="tab-regular" style="margin-top: 10px;">
+            <ul class="nav nav-tabs " id="myTabHardwareSite1" role="tablist">
+
+                <li style="padding-top: 7px;">ISP Server:</li>
+
+                <li class="nav-item active" id="HorS-Hardwaretab1"> 
+                         <a class="nav-link test" id="Hardware-Standard1" name="Hardware-Standard1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px;width: 300px !important;">Standard ISP Server FIC0133</a>  
+                </li> 
+
+                <li class="nav-item " id="HorS-HardwareExttab1"> 
+                    <a class="nav-link test" id="Hardware-Extended1" name="Hardware-Extended1" data-toggle="tab" href="#HorHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Extended ISP Server (FIC0134)</a>
+                </li> 
+            
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="HorS-HardwareMemorySite1" style="margin-left: 15px;">
+        <div class="tab-regular" style="margin-top: 10px;">
+            <ul class="nav nav-tabs " id="myTabHardwareMemorySite1" role="tablist">
+
+                <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                <li class="nav-item active" id="HorS-HardwareMemoryYestab1"> 
+                         <a class="nav-link test" id="Hardware-StandardMemoryYes1" name="Hardware-StandardMemoryYes1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px;width: 300px !important;">Yes</a>  
+                </li> 
+
+                <li class="nav-item " id="HorS-HardwareMemoryNotab1"> 
+                    <a class="nav-link test" id="Hardware-StandardMemoryNo1" name="Hardware-StandardMemoryNo1" data-toggle="tab" href="#HorHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">No</a>
+                </li> 
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
     
                                                                     <div class="col-md-12">
 
@@ -2971,6 +3060,13 @@
 
 
 
+                                                                <br />
+                                                                     <p style="font-weight:bold;display: inline-block;margin-left: 0Spx;" >IntelliSpace Portal Zero Footprint Viewer</p>
+
+
+
+
+
 
                                                                  <div class="row" id="mac2" style="display:none;">
                                                                      <br />
@@ -2985,6 +3081,63 @@
           <span id="error2" style="color:red; font-weight:bold;"></span>
       </div>
 
+
+
+<div class="HorS-Site2" style="margin-left: 0px;">
+    <div class="tab-regular" style="margin-top: 10px;">
+        <ul class="nav nav-tabs " id="myTabSite2" role="tablist">
+
+            <li class="nav-item active" id="HorS-tab2"> 
+                    <a class="nav-link test" id="HorSoft2" name="HorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#hardwaresite2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Software only</a>
+            </li> 
+
+            <li class="nav-item " id="HorH-tab2"> 
+                <a class="nav-link test" id="HorHard2" name="HorHard2" data-toggle="tab" href="#HorHard2" role="tab" onclick="$('#hardwaresite2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Hardware</a>
+            </li> 
+            
+        </ul>
+    </div>
+</div>
+
+
+<div id="hardwaresite2" style="display:none;">
+    <div class="HorS-HardwareSite1" style="margin-left: 15px;">
+        <div class="tab-regular" style="margin-top: 10px;">
+            <ul class="nav nav-tabs " id="myTabHardwareSite2" role="tablist">
+
+                <li style="padding-top: 7px;">ISP Server:</li>
+
+                <li class="nav-item active" id="HorS-Hardwaretab2"> 
+                         <a class="nav-link test" id="Hardware-Standard2" name="Hardware-Standard2" data-toggle="tab" href="#HorSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px;width: 300px !important;">Standard ISP Server FIC0133</a>  
+                </li> 
+
+                <li class="nav-item " id="HorS-HardwareExttab2"> 
+                    <a class="nav-link test" id="Hardware-Extended2" name="Hardware-Extended2" data-toggle="tab" href="#HorHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Extended ISP Server (FIC0134)</a>
+                </li> 
+            
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="HorS-HardwareMemorySite2" style="margin-left: 15px;">
+        <div class="tab-regular" style="margin-top: 10px;">
+            <ul class="nav nav-tabs " id="myTabHardwareMemorySite2" role="tablist">
+
+                <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                <li class="nav-item active" id="HorS-HardwareMemoryYestab2"> 
+                         <a class="nav-link test" id="Hardware-StandardMemoryYes2" name="Hardware-StandardMemoryYes2" data-toggle="tab" href="#HorSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px;width: 300px !important;">Yes</a>  
+                </li> 
+
+                <li class="nav-item " id="HorS-HardwareMemoryNotab2"> 
+                    <a class="nav-link test" id="Hardware-StandardMemoryNo2" name="Hardware-StandardMemoryNo2" data-toggle="tab" href="#HorHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">No</a>
+                </li> 
+            
+            </ul>
+        </div>
+    </div>
+</div>
 
 
                                                                         <div class="table-responsive">
@@ -3015,6 +3168,30 @@
                                                                     <br />
                                                                     <div class="col-md-12">
                                                                            <p style="font-weight:bold;" id="macheading3"></p>
+
+
+
+                                                                         <div class="DELIVERY-info" style="margin-left: 0px;">
+                                                        <div class="tab-regular" style="margin-top: 10px;">
+
+                                                            <ul class="nav nav-tabs " id="myTab1" role="tablist">
+
+                                                                     <li class="nav-item active" id="EDLEonly-tab"> 
+                                                                        <a class="nav-link test" id="EDLEonly1" name="EDLEonly1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Software only</a>
+                                                                    </li> 
+
+                                                                    <li class="nav-item " id="EDLEonly-tab"> 
+                                                                        <a class="nav-link test" id="EDLEonly2" name="EDLEonly2" data-toggle="tab" href="#EDLEonly2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Hardware</a>
+                                                                    </li> 
+
+                                                           
+
+                                                                </ul>
+
+                                                        </div>
+                                                     </div>
+
+
                                                                         <div class="table-responsive">
                                                                             <table class="table table-bordered" id="macTable3" style="margin-left: -0px;">
                                                                                 <thead class="thead-light">
