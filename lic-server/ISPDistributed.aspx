@@ -3098,17 +3098,48 @@
             
 
                 <li class="nav-item active" id="HorS-tab1"> 
-                        <a class="nav-link test" id="HorSoft1" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#ZFPHW1').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                        <a class="nav-link test" id="HorSoft1" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#ZFPHW1').hide();$('#macContainer1_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
                 </li> 
 
                 <li class="nav-item " id="HorH-tab1"> 
-                    <a class="nav-link test" id="HorHard1" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                    <a class="nav-link test" id="HorHard1" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                 </li> 
             
             </ul>
         </div>
     </div>
 
+    
+<!--Mac Address 1_z-->
+<div id="macContainer1_z" >
+    <br /><br />
+    <div class="col-md-12" style="margin-left: -15px;">
+                                                                        
+        <div class="table-responsive">
+            <table class="table table-bordered" id="macTable1_z" style="margin-left: -2px;">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                    </tr>
+
+                    <tr id="macTable11_z_1"><td align="center"><span class="text-center">1</span></td><td align="center"><select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnly1_1" readonly="readonly" class="form-control softwareTable"><option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option></select></td><td align="center"><input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td><td align="center"></td></tr>
+
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <br />
+</div>
+<!--Mac Address 1-z-->
 
     <div style="display:none;" id="ZFPHW1">
     <div  style="margin-left: 0px;" id="ZFPViewerHW">
@@ -3230,6 +3261,7 @@
 
 
                             </tr>
+                          <tr id="macTable1_2_1"><td align="center"><span class="text-center">1</span></td><td align="center"><select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnly1_1" readonly="readonly" class="form-control softwareTable"><option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option></select></td><td align="center"><input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td><td align="center"></td></tr>
                         </thead>
                         <tbody>
                         </tbody>
@@ -3327,34 +3359,7 @@ NICA169</a>
 
 
 
-    
-<!--Mac Address 1_z-->
-<div id="macContainer1_z" >
-    <br /><br />
-    <div class="col-md-12" style="margin-left: -15px;">
-                                                                        
-        <div class="table-responsive">
-            <table class="table table-bordered" id="macTable1_z" style="margin-left: -2px;">
-                <thead class="thead-light">
-                    <tr>
-                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
 
-
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div onclick="MacAddLine(this);" id="macTableAdd1_z" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-    <br />
-</div>
-<!--Mac Address 1-z-->
 
 
 <div  style="margin-left: 0px;" id="ZFPRedundantViewerHW2" >
@@ -3451,6 +3456,8 @@ FIC0457</li>
 
 
                     </tr>
+
+                    <tr id="macTable1_2_1"><td align="center"><span class="text-center">1</span></td><td align="center"><select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnly1_1" readonly="readonly" class="form-control softwareTable"><option value="NICA963 - Test Environment">NICA963 - Test Environment</option></select></td><td align="center"><input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td><td align="center"></td></tr>
                 </thead>
                 <tbody>
                 </tbody>
@@ -4324,7 +4331,7 @@ FIC0457</li>
     <script>
 
 
-        var isDev = true;
+        var isDev = false;
 
         var sapicheckapp = "";
         var sapidata = "";
