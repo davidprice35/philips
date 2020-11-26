@@ -369,6 +369,16 @@
                                                 <%=m_OutputTableApplicationsTable %>
 
 
+
+
+
+                                                 <%=m_DeliveryModel %>
+                                                 <%=m_LicenceModel1 %>
+                                                 <%=m_PlanInstall %>
+
+
+
+
                                               
                                                 <%=m_OutputTable %>
 

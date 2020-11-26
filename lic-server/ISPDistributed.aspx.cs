@@ -69,7 +69,72 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     List<SiteInfoData> SiteInfoData1 = new List<SiteInfoData>();
     List<AdditionalApplication> AdditionalApplication1 = new List<AdditionalApplication>();
     List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData1 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData1 = new List<MacAddressData>();
     
+
+    //decentrailsed
+    public string m_EnterpriceInstallMac = string.Empty;
+
+
+
+
+    [Serializable]
+    public class SiteData
+    {
+        public SiteData()
+        {
+
+        }
+        public SiteData(string SiteNo, string SoftwareOnly, string Hardware, string MacData,string IntelliSpace_Portal_RedundantYes, string IntelliSpace_Portal_RedundantNo,string IntelliSpace_Portal_RedundantSoftwareOnly,string IntelliSpace_Portal_RedundantHardware
+            , string IntelliSpace_Portal_RedundantHardwareEnvironment, string IntelliSpace_Portal_RedundantHardwareExtendedMemory,string RedundantSoftwareOnlyMacData , string IntelliSpace_Portal_TestYes, string IntelliSpace_Portal_TestNo, string IntelliSpace_Portal_TestSoftwareOnly
+            , string IntelliSpace_Portal_TestHardware, string IntelliSpace_Portal_TestHardwareEnvironment, string IntelliSpace_Portal_TestHardwareExtendedMemory,string TestSoftwareOnlyMacData
+            )
+        {
+            this.SiteNo = SiteNo;
+            this.SoftwareOnly = SoftwareOnly;
+            this.Hardware = Hardware;
+            this.MacData = MacData;
+            this.IntelliSpace_Portal_RedundantYes = IntelliSpace_Portal_RedundantYes;
+            this.IntelliSpace_Portal_RedundantNo = IntelliSpace_Portal_RedundantNo;
+            this.IntelliSpace_Portal_RedundantSoftwareOnly = IntelliSpace_Portal_RedundantNo;
+            this.IntelliSpace_Portal_RedundantHardware = IntelliSpace_Portal_RedundantNo;
+            this.IntelliSpace_Portal_RedundantHardwareEnvironment = IntelliSpace_Portal_RedundantHardwareEnvironment;
+            this.IntelliSpace_Portal_RedundantHardwareExtendedMemory = IntelliSpace_Portal_RedundantHardwareExtendedMemory;
+            this.RedundantSoftwareOnlyMacData = RedundantSoftwareOnlyMacData;
+
+            this.IntelliSpace_Portal_TestYes = IntelliSpace_Portal_TestYes;
+            this.IntelliSpace_Portal_TestNo = IntelliSpace_Portal_TestNo;
+            this.IntelliSpace_Portal_TestSoftwareOnly = IntelliSpace_Portal_TestSoftwareOnly;
+            this.IntelliSpace_Portal_TestHardware = IntelliSpace_Portal_TestHardware;
+            this.IntelliSpace_Portal_TestHardwareEnvironment = IntelliSpace_Portal_RedundantHardwareEnvironment;
+            this.IntelliSpace_Portal_TestHardwareExtendedMemory = IntelliSpace_Portal_RedundantHardwareExtendedMemory;
+            this.TestSoftwareOnlyMacData = TestSoftwareOnlyMacData;
+
+        }
+
+        public string SiteNo { get; set; }
+        public string SoftwareOnly { get; set; }
+        public string Hardware { get; set; }
+        public string MacData { get; set; }
+        public string IntelliSpace_Portal_RedundantYes { get; set; }
+        public string IntelliSpace_Portal_RedundantNo { get; set; }
+        public string IntelliSpace_Portal_RedundantSoftwareOnly { get; set; }
+        public string IntelliSpace_Portal_RedundantHardware { get; set; }
+        public string IntelliSpace_Portal_RedundantHardwareEnvironment { get; set; }
+        public string IntelliSpace_Portal_RedundantHardwareExtendedMemory { get; set; }
+        public string RedundantSoftwareOnlyMacData { get; set; }
+
+        public string IntelliSpace_Portal_TestYes { get; set; }
+        public string IntelliSpace_Portal_TestNo { get; set; }
+        public string IntelliSpace_Portal_TestSoftwareOnly { get; set; }
+        public string IntelliSpace_Portal_TestHardware { get; set; }
+        public string IntelliSpace_Portal_TestHardwareEnvironment { get; set; }
+        public string IntelliSpace_Portal_TestHardwareExtendedMemory { get; set; }
+        public string TestSoftwareOnlyMacData { get; set; }
+    }
+
+
 
     [Serializable]
     public class SiteInfoData
@@ -230,7 +295,15 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             DataView myDV = Helper.GetData("Select * from PhilipsLic_Project where PhilipsLic_ProjectID=" + Request.QueryString["id"]);
             foreach (DataRowView rowView in myDV)
             {
+                HiddenSoftwareHardwareSite1.Value = rowView["decentralised_portal_site1"].ToString();
+                HiddenRedundantSite1.Value = rowView["decentralised_portal_redundant_site1"].ToString();
+                HiddenTestSite1.Value = rowView["decentralised_portal_test_site1"].ToString();
 
+                m_EnterpriceInstallMac = rowView["decentralised_enterpriceinstallmac"].ToString();
+                HiddenPlanInstallEngine.Value = rowView["decentralised_planinstallengine"].ToString();
+                HiddenTabLic1.Value = rowView["decentralised_licencemodel1"].ToString();
+
+                
                 //site info
 
                 SiteInfoData1 = JsonConvert.DeserializeObject<List<SiteInfoData>>(rowView["decentralised_siteinfo"].ToString());
@@ -385,7 +458,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 
                                
 
-                //Mac
+                //Mac Top Main 1
                 MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_deliverymodel_ISPSoftware"].ToString());
                 string currentidx = string.Empty;
                 int macidx = 1;
@@ -491,6 +564,123 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         hidMacTable10.Value = machid;
                         break;
                 }
+
+
+
+                #region Mac redudant app 
+                //Mac Top Main 1
+                RedundantMacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_portal_redundant_mac_site1"].ToString());
+                currentidx = string.Empty;
+                macidx = 1;
+                machid = "";
+                for (int ixa = 0; ixa <= RedundantMacAddressData1.Count - 1; ixa++)
+                {
+                    string xx = MacAddressData1[ixa].No;
+
+                    if (currentidx == "")
+                    {
+                        currentidx = MacAddressData1[ixa].No;
+                    }
+
+                    if (xx == currentidx)
+                    {
+                        if (machid != "")
+                        {
+                            machid += ",";
+                        }
+
+                        machid += MacAddressData1[ixa].Menu + ":" + MacAddressData1[ixa].MacAddress;
+
+                        macidx++;
+                    }
+                    else
+                    {
+                        switch (currentidx)
+                        {
+                            case "1":
+                                hidmacTableRedundant1.Value = machid;
+                                break;
+                            case "2":
+                                hidmacTableRedundant2.Value = machid;
+                                break;
+                            case "3":
+                                hidmacTableRedundant3.Value = machid;
+                                break;
+                            case "4":
+                                hidMacTable4.Value = machid;
+                                break;
+                            case "5":
+                                hidMacTable5.Value = machid;
+                                break;
+                            case "6":
+                                hidMacTable6.Value = machid;
+                                break;
+                            case "7":
+                                hidMacTable7.Value = machid;
+                                break;
+                            case "8":
+                                hidMacTable8.Value = machid;
+                                break;
+                            case "9":
+                                hidMacTable9.Value = machid;
+                                break;
+                            case "10":
+                                hidMacTable10.Value = machid;
+                                break;
+                        }
+
+
+                        currentidx = MacAddressData1[ixa].No;
+                        macidx = 1;
+                        machid = "";
+
+                        machid += MacAddressData1[ixa].Menu + ":" + MacAddressData1[ixa].MacAddress;
+
+                        macidx++;
+
+                    }
+                }
+
+
+                switch (currentidx)
+                {
+                    case "1":
+                        hidmacTableRedundant1.Value = machid;
+                        break;
+                    case "2":
+                        hidmacTableRedundant2.Value = machid;
+                        break;
+                    case "3":
+                        hidMacTable3.Value = machid;
+                        break;
+                    case "4":
+                        hidMacTable4.Value = machid;
+                        break;
+                    case "5":
+                        hidMacTable5.Value = machid;
+                        break;
+                    case "6":
+                        hidMacTable6.Value = machid;
+                        break;
+                    case "7":
+                        hidMacTable7.Value = machid;
+                        break;
+                    case "8":
+                        hidMacTable8.Value = machid;
+                        break;
+                    case "9":
+                        hidMacTable9.Value = machid;
+                        break;
+                    case "10":
+                        hidMacTable10.Value = machid;
+                        break;
+                }
+                #endregion
+
+
+
+
+
 
                 //hidMacTable
 
@@ -667,11 +857,11 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                     }
                     break;
-                case "macAddresssections":
+                case "macAddresssections_macTableSO":
                     foreach (string key in Request.Form)
                     {
 
-                        bool hasItem = LoopNumberofEntries("ApplicationSoftwareOnly"+ idx + "_1");
+                        bool hasItem = LoopNumberofEntries("ApplicationSoftwareOnly"+ "macTableSO"  +  idx + "_1");
 
                         if (hasItem)
                         {
@@ -733,8 +923,10 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             string CONCURRENTENTERPRISEUSERS = Request.Form["CONCURRENTENTERPRISEUSERS"].ToString();
 
 
-            //string WhichDeliveryTab = Request.Form["HiddenDeliveryModel"];
-
+            string WhichDeliveryTab = Request.Form["HiddenDeliveryModel"];
+            string WhichLicenceModel1 = Request.Form["HiddenTabLic1"];
+            string PlanInstallEngine = Request.Form["HiddenPlanInstallEngine"];
+            string EnterpriceInstallMac = Request.Form["MacSoftwareOnlyInstall1_1"];
 
             int addApplicationidx = GetNumberofEntries("addApplication");
 
@@ -793,9 +985,22 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             }
             string AdditionalApplication = JsonConvert.SerializeObject(AdditionalApplication1, Formatting.Indented);
 
+            ///////////////////////////////
+            ///
+            //Delivery Model
+            //Site Start
+            ////////////////////////////////
 
+            //Intelli Portal Software / Hardware
+            
+            string Site1SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite1"].ToString();
+            string Site1Redundant = Request.Form["HiddenRedundantSite1"].ToString();
+            string Site1Test = Request.Form["HiddenTestSite1"].ToString();
 
-            int macidx = GetNumberofEntries("macAddresssections"); 
+            string PortalISPserver1 = Request.Form["hidPortalISPserver1"].ToString();
+            string PortalExtMemNo1 = Request.Form["hidPortalExtMemNo1"].ToString();
+
+            int macidx = GetNumberofEntries("macAddresssections_macTableSO"); 
 
             //loop sections
             for (int i = 1; i <= macidx; i++)
@@ -820,8 +1025,8 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 for (int isec = 1; isec <= macSection; isec++)
                 {
 
-                    string item1 = Request.Form["ApplicationSoftwareOnly"+i+"_" +isec].ToString();
-                    string item2 = Request.Form["MacSoftwareOnly" + i + "_" + isec].ToString();
+                    string item1 = Request.Form["ApplicationSoftwareOnly" + "macTableSO"  + i+"_" +isec].ToString();
+                    string item2 = Request.Form["MacSoftwareOnly" + "macTableSO" + i + "_" + isec].ToString();
 
                     MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
                 }
@@ -830,14 +1035,82 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             string MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
 
 
+            //loop redundant
 
-            string SQL = "update PhilipsLic_Project set decentralised_siteinfo='" + centralised_siteinfo + "' , decentralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "', decentralised_add_application='"+ AdditionalApplication + "' , decentralised_deliverymodel_ISPSoftware='"+ MacAddressData + "' where PhilipsLic_ProjectID =" + id;
+
+            
+
+            int RedundantmacSection = 0;
+            int RedundantmacSectionidx = 1;
+            foreach (string key in Request.Form)
+            {
+
+                bool hasItemRedundant = LoopNumberofEntries("ApplicationRedundant" + 1 + "_" + RedundantmacSectionidx);
+
+                if (hasItemRedundant)
+                {
+                    RedundantmacSection++;
+                }
+
+                RedundantmacSectionidx++;
+
+            }
+
+            for (int isec = 1; isec <= RedundantmacSection; isec++)
+            {
+
+                string item1 = Request.Form["ApplicationRedundant"  + isec + "_" + isec].ToString();
+                string item2 = Request.Form["MacRedundant"  + isec + "_" + isec].ToString();
+
+                RedundantMacAddressData1.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+            }
+
+
+            //loop redundant
+
+
+
+            //loop test
+
+           
+            int TestmacSection = 0;
+            int TestmacSectionidx = 1;
+            foreach (string key in Request.Form)
+            {
+
+                bool hasItemTest = LoopNumberofEntries("macTestTableDataMenu" + 1 + "_" + TestmacSectionidx);
+
+                if (hasItemTest)
+                {
+                    TestmacSection++;
+                }
+
+                TestmacSectionidx++;
+
+            }
+
+            for (int isec = 1; isec <= TestmacSection; isec++)
+            {
+
+                string item1 = Request.Form["macTestTableDataMenu" + isec + "_" + isec].ToString();
+                string item2 = Request.Form["macTestTableDataAddress" + isec + "_" + isec].ToString();
+
+                TestMacAddressData1.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+            }
+
+
+            //loop test
+
+
+            string TestMacAddressData = JsonConvert.SerializeObject(TestMacAddressData1, Formatting.Indented);
+            string RedundantMacAddressData = JsonConvert.SerializeObject(RedundantMacAddressData1, Formatting.Indented);
+
+            string SQL = "update  PhilipsLic_Project set decentralised_ExtendedMem='"+ PortalExtMemNo1 + "', decentralised_ISPServer='"+ PortalISPserver1 + "',  decentralised_portal_test_mac_site1='" + TestMacAddressData + "', decentralised_portal_redundant_mac_site1='" + RedundantMacAddressData + "', decentralised_portal_test_site1='" + Site1Test + "', decentralised_portal_redundant_site1='" + Site1Redundant + "', decentralised_portal_site1='" + Site1SoftwareHardWare + "', decentralised_enterpriceinstallmac='" + EnterpriceInstallMac + "', decentralised_planinstallengine='" + PlanInstallEngine + "', decentralised_licencemodel1='" + WhichLicenceModel1 + "', decentralised_deliverymode='" + WhichDeliveryTab + "',  decentralised_siteinfo='" + centralised_siteinfo + "' , decentralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "', decentralised_add_application='"+ AdditionalApplication + "' , decentralised_mac_site1='" + MacAddressData + "' where PhilipsLic_ProjectID =" + id;
             // string SQL = "update PhilipsLic_Project set centralised_add_application='"+ AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
             Helper.InsertData(SQL);
 
 
-
-
+          
             //Response.Redirect("/lic-server/OutputReporta.aspx?id=10");
 
 

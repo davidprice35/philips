@@ -33,6 +33,21 @@ public partial class OutputReportDistributed : System.Web.UI.Page
 
     public string m_decentralised_concurrent_ent_users = string.Empty;
     public string m_decentralised_deliverymodel_ISPSoftware = string.Empty;
+
+    public string m_decentralised_deliverymode = string.Empty;
+    public string m_decentralised_licencemodel1 = string.Empty;
+    public string m_decentralised_planinstallengine = string.Empty;
+
+    public string m_DeliveryModel = string.Empty;
+    public string m_LicenceModel1 = string.Empty;
+    public string m_PlanInstall = string.Empty;
+
+
+
+
+
+
+
     public string m_UserName = string.Empty;
     public string m_UserID = string.Empty;
     public string m_UserType = string.Empty;
@@ -69,6 +84,18 @@ public partial class OutputReportDistributed : System.Web.UI.Page
 
     public string m_OutputTableApplicationsTable = string.Empty;
     public string m_OutputTableApplicationsTR = string.Empty;
+
+
+    public string m_SiteName1 = string.Empty;
+    public string m_SiteName2 = string.Empty;
+    public string m_SiteName3 = string.Empty;
+    public string m_SiteName4 = string.Empty;
+    public string m_SiteName5 = string.Empty;
+    public string m_SiteName6 = string.Empty;
+    public string m_SiteName7 = string.Empty;
+    public string m_SiteName8 = string.Empty;
+    public string m_SiteName9 = string.Empty;
+    public string m_SiteName10 = string.Empty;
 
 
     private DataView GetData(string sql)
@@ -461,6 +488,10 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     m_customer_address = rowView["customer_address"].ToString();
                     m_customer_country = rowView["customer_country"].ToString();
                     m_customer_po = rowView["customer_po"].ToString();
+                    m_decentralised_deliverymode = rowView["decentralised_deliverymode"].ToString();
+                    m_decentralised_licencemodel1 = rowView["decentralised_licencemodel1"].ToString();
+                    m_decentralised_planinstallengine = rowView["decentralised_planinstallengine"].ToString();
+
 
                     KeyProjectData1 = JsonConvert.DeserializeObject<List<KeyProjectData>>(rowView["customer_key_account"].ToString());
                     KeyPortalDat1 = JsonConvert.DeserializeObject<List<KeyPortalData>>(rowView["customer_portalsales"].ToString());
@@ -496,6 +527,40 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     //Hospital
                     for (int i = 0; i <= SiteInfoData1.Count - 1; i++)
                     {
+                        switch(i)
+                        {
+                            case 1:
+                                m_SiteName1 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 2:
+                                m_SiteName2 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 3:
+                                m_SiteName3 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 4:
+                                m_SiteName4 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 5:
+                                m_SiteName5 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 6:
+                                m_SiteName6 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 7:
+                                m_SiteName7 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 8:
+                                m_SiteName8 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 9:
+                                m_SiteName9 = SiteInfoData1[i].HospitalName;
+                                break;
+                            case 10:
+                                m_SiteName10 = SiteInfoData1[i].HospitalName;
+                                break;
+
+                        }
                         m_hospital_name += "<tr><td style='vertical-align: middle;'>"+ (i +1) +"</td><td>" + SiteInfoData1[i].HospitalName + "</td> <td>"+ SiteInfoData1[i].HospitalStreet + "</td> <td>" + SiteInfoData1[i].Users + "</td> <td>" + SiteInfoData1[i].Connectivity + "</td> <td>" + SiteInfoData1[i].Site + " </td></tr>";                       
                     }
                     //Hospital
@@ -538,6 +603,31 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     }
                     m_OutputTableApplicationsTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>ADDITIONAL APPLICATIONS</p>  <p><b>"+ catName + "</b></p>  <table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Option Number</th> <th scope='col' style='background-color: #0b1f65;'>Description</th> <th scope='col' style='background-color: #0b1f65;'>Users</th> <th scope='col' style='background-color: #0b1f65;'>Hospital Name</th>  <th scope='col' style='background-color: #0b1f65;'>Users</th> </tr></thead> <tbody> " + m_OutputTableApplicationsTR + " </tbody> </table></div>";
                     //additional Applications
+
+
+
+                    //Delivery Model
+
+
+                    
+                    if (m_decentralised_deliverymode== "SoftwareOnly")
+                    {
+                        m_DeliveryModel = "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered' style='width: 33%;'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>DELIVERY MODEL</b></th> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;'><b>" + m_decentralised_deliverymode + "</b></th> </tr></thead> <tbody> </tbody> </table> </div>";
+
+                        m_LicenceModel1 = "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered' style='width: 33%;'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Enterprise</b></th> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;'><b>" + m_decentralised_licencemodel1 + "</b></th> </tr></thead> <tbody> </tbody> </table> </div>";
+                        m_PlanInstall = "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered' style='width: 33%;'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Install</b></th> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;'><b>" + m_decentralised_planinstallengine + "</b></th> </tr></thead> <tbody> </tbody> </table> </div>";
+                       
+                    }
+                    else
+                    {
+
+                    }
+
+
+
+
+                    //Delivery Model
+
 
 
 
