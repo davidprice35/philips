@@ -85,7 +85,7 @@ public partial class OutputReportDistributed : System.Web.UI.Page
     public string m_OutputTableApplicationsTable = string.Empty;
     public string m_OutputTableApplicationsTR = string.Empty;
 
-
+    public string m_SiteName0 = string.Empty;
     public string m_SiteName1 = string.Empty;
     public string m_SiteName2 = string.Empty;
     public string m_SiteName3 = string.Empty;
@@ -529,6 +529,9 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     {
                         switch(i)
                         {
+                            case 0:
+                                m_SiteName0 = SiteInfoData1[i].HospitalName;
+                                break;
                             case 1:
                                 m_SiteName1 = SiteInfoData1[i].HospitalName;
                                 break;
@@ -659,7 +662,11 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                         }
                         else
                         {
-                            m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> <table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+                            m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
+                            
+                           
+
+                            m_OutputTable += "<table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
 
                             currentidx = MacAddressData1[i].No;
                             macidx = 1;
@@ -677,10 +684,47 @@ public partial class OutputReportDistributed : System.Web.UI.Page
 
 
 
-                    m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> <table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+                    m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> ";
+                    
+                    //SIte
+                    m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
+
+                    //Hardware / software
+                    m_OutputTable += "<p style='color:black;font-weight:bold;'> " + rowView["decentralised_portal_site1"].ToString() + " </p> ";
+
+                                       
+                    m_OutputTable += "<table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+
+                    m_OutputTable += "<p style='color:black;font-weight:bold;'> IntelliSpace Portal Redundant -" + rowView["decentralised_portal_redundant_site1"].ToString() + "</p> " ;
+
+                    if (rowView["decentralised_portal_redundant_site1"].ToString() =="Yes")
+                    {
+
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'>" + rowView["decentralised_portal_redundant_SH_site1"].ToString() + "</p> ";
+
+                        if (rowView["decentralised_portal_redundant_SH_site1"].ToString()== "SoftwareOnly")
+                        {
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>" + rowView["decentralised_portal_redundant_mac_site1"].ToString() + "</p> ";
+                        }
+                        
+
+                    }
 
 
 
+                    m_OutputTable += "<p style='color:black;font-weight:bold;'> IntelliSpace Portal Test Enviroment -" + rowView["decentralised_portal_test_site1"].ToString() + "</p> ";
+
+                    if (rowView["decentralised_portal_test_site1"].ToString()=="Yes")
+                    {
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'>" + rowView["decentralised_portal_test_SH_site1"].ToString() + "</p> ";
+
+                        if (rowView["decentralised_portal_test_SH_site1"].ToString()== "SoftwareHardWare")
+                        {
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'> IntelliSpace Portal Test -" + rowView["decentralised_portal_test_appenv_site1"].ToString() + "</p> ";
+
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'> Extended Memory - FIC0457 -" + rowView["decentralised_portal_test_extmemory_site1"].ToString() + "</p> ";
+                        }
+                    }
 
 
                 }

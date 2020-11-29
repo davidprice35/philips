@@ -3501,7 +3501,578 @@ FIC0457</li>
 
 
                                                                   <!--Start Site 2-->
-                                                              
+                                                                <div class="row" id="site2" style="display:none;">
+                                                                    <br />
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading2"></p>
+
+                                                                    <div style="display: inline-block;">
+                                                                        <span id="error2" style="color: red; font-weight: bold;"></span>
+                                                                    </div>
+
+                                                                    <div id="maincontainerPortal2" style="display: none;">
+
+                                                                        <br />
+                                                                        <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
+
+                                                                        <!--Site 1 Software & Hardward -->
+                                                                        <div class="HorS-Site1" style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: -2px;">
+                                                                                <ul class="nav nav-tabs " id="myTabSite2" role="tablist">
+
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS2">
+                                                                                        <a class="nav-link test" id="" name="HorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#hardwaresite2').hide();$('#macContainerSO2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH2">
+                                                                                        <a class="nav-link test" id="" name="HorHard2" data-toggle="tab" href="#HorHard2" role="tab" onclick="$('#hardwaresite2').show();$('#macContainerSO2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 1-->
+                                                                        <div id="macContainerSO2">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-12" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableSO2" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macaddline2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+
+                                                                            <!--Mac Address 1-->
+                                                                             <br />
+                                                                        </div>
+                                                                       
+
+
+
+                                                                        <div id="hardwaresite2" style="display: none;">
+                                                                            <div class="HorS-HardwareSite2" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite2" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">ISP Server:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab2">
+                                                                                            <a class="nav-link test" id="Hardware-Standard2" name="Hardware-Standard2" data-toggle="tab" href="#HorASoft2" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab2">
+                                                                                            <a class="nav-link test" id="Hardware-Extended2" name="Hardware-Extended2" data-toggle="tab" href="#HorAHard2" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="HorS-HardwareMemorySite2" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite2" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab2">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo2" name="Hardware-StandardMemoryNo2" data-toggle="tab" href="#HorHard2" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab2">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes2" name="Hardware-StandardMemoryYes2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        
+                                                                      
+
+                                                                        <div id="ZeroFootprintContainerTab2" style="display: none;">
+
+                                                                            <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
+
+                                                                            <div style="margin-left: 0px;">
+                                                                                <div class="tab-regular" style="margin-top: -2px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#ZFPHW2').hide();$('#macContainer2_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!--Mac Address 1_z-->
+                                                                            <div id="macContainer2_z">
+                                                                                <br />
+                                                                                <br />
+                                                                                <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-bordered" id="macTable2_z" style="margin-left: -2px;">
+                                                                                            <thead class="thead-light">
+                                                                                                <tr>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                    <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                                </tr>
+
+                                                                                                <tr id="macTable11_z_2">
+                                                                                                    <td align="center"><span class="text-center">1</span></td>
+                                                                                                    <td align="center">
+                                                                                                        <select name="ApplicationSoftwareOnly2_1" id="ApplicationSoftwareOnly2_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                        </select></td>
+                                                                                                    <td align="center">
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly2_1" id="MacSoftwareOnly2_1" class="form-control"></td>
+                                                                                                    <td align="center"></td>
+                                                                                                </tr>
+
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <br />
+                                                                            </div>
+                                                                            <!--Mac Address 2-z-->
+
+                                                                            <div style="display: none;" id="ZFPHW2">
+                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li class="nav-item" style="">ISP Zero Footprint server:</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 54px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li>Extended Memory - FIC0457</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftno2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <br />
+
+                                                                        </div>
+
+
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
+
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment</b>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item active" id="redundatntno2">
+                                                                                        <a class="nav-link " id="" name="HorNHard2" data-toggle="tab" href="#HorHard2" role="tab" onclick="PortalRedundant(2,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 19px;">No</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item" id="redundatntyes2">
+                                                                                        <a class="nav-link " id="" name="HorYSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="PortalRedundant(2,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>
+
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                                                                                               
+
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft2">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#ZFPRedundantHW2').hide();$('#macContainer1_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="CRedundantTHorHard2">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard2" data-toggle="tab" href="#HorHard2" role="tab" onclick="$('#ZFPRedundantHW2').show();$('#macContainer1_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 2_2-->
+                                                                        <div id="macContainer2_2" style="display: none;">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableRedundant2" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                            <tr id="TableMacTableRedundant2">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant2_1" id="ApplicationSoftwareOnlymacTableRedundant2_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
+                                                                                                    </select></td>
+                                                                                                <td align="center">
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant2_1" id="MacSoftwareOnlymacTableRedundant2_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd2_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        <!--Mac Address 2-->
+
+                                                                        <div style="display: none;" id="ZFPRedundantHW2">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cAppHorSoftN2">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cAppHorSoftY2">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 18px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>Extended Memory -FIC0457</li>
+
+
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN2">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY2">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY2" name="RedundantHorSoftExtY2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        
+
+
+
+                                                                        <div style="display: none;" id="ZFPHW2">
+                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall2" role="tablist">
+
+
+                                                                                        <li>ISP Zero Footprint server:</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+Viewer Server
+NICA169</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+
+
+
+
+
+
+                                                                            </div>
+
+
+
+
+
+
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW2">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall2" role="tablist">
+
+
+                                                                                        <li>Extended Memory -
+FIC0457</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#ZFPRedundantViewerHW2').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#ZFPRedundantViewerHW2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <br />
+
+
+                                                                        <!--Site 2 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
+                                                                                    </li>
+                                                                                    <li class="nav-item active" id="Testno2">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN2" data-toggle="tab" href="#HorHard2" role="tab" aria-controls="DELIVERY" onclick="PortalTest(2,'no');" aria-selected="true" style="width: 70px !important; margin-left: 96px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes2">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="PortalTest(2,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                         <!--Site 2 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs2">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft2">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft2" data-toggle="tab" href="#HorSoft2" onclick="$('#TestHW2').hide();$('#TestMacContainer2').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="cTestHorSoftY2">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY2" data-toggle="tab" href="#HorHard2" onclick="$('#TestHW2').show();$('#TestMacContainer2').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <!--Test Tab Mac Table -->
+
+                                                                        <div id="TestMacContainer2" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTestTable2" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                            </tr>
+
+                                                                                            <tr id="macTestTableData2_1">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="macTestTableDataMenu2_1" id="macTestTableDataMenu2_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA963 - Test Environment">NICA963 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress2_1" id="macTestTableDataAddress2_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd2_1" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <div style="display: none;" id="TestHW2">
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall2" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Test
+                                                                                            <br />
+                                                                                            Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cHorTSoftN2">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cHorTSoftY2">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW2">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall2" role="tablist">
+
+
+                                                                                        <li>Extended Memory - FIC0457</li>
+
+                                                                                        <li class="nav-item active" id="cHorENSoft2">
+                                                                                            <a class="nav-link test" id="HorENSoft2" name="HorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="cHorEYSoft2">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                    
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
                                                                 <!--Start Site 2-->
 
                                                             </div>
@@ -4281,348 +4852,6 @@ FIC0457</li>
 
 
 
-                                                                     
-
-                                                                        <div class="row" id="mac2" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-
-
-
-
-                                                                                <p style="font-weight: bold; display: inline-block;" id="macheading2"></p>
-                                                                                <div style="display: inline-block;">
-
-                                                                                    <span id="error2" style="color: red; font-weight: bold;"></span>
-                                                                                </div>
-
-
-
-                                                                                <div class="HorS-Site2" style="margin-left: 0px;">
-                                                                                    <div class="tab-regular" style="margin-top: 10px;">
-                                                                                        <ul class="nav nav-tabs " id="myTabSite2" role="tablist">
-
-                                                                                            <li class="nav-item active" id="HorS-tab2">
-                                                                                                <a class="nav-link test" id="HorSoft2" name="HorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#hardwaresite2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Software only</a>
-                                                                                            </li>
-
-                                                                                            <li class="nav-item " id="HorH-tab2">
-                                                                                                <a class="nav-link test" id="HorHard2" name="HorHard2" data-toggle="tab" href="#HorHard2" role="tab" onclick="$('#hardwaresite2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Hardware</a>
-                                                                                            </li>
-
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-
-
-                                                                                <div id="hardwaresite2" style="display: none;">
-                                                                                    <div class="HorS-HardwareSite1" style="margin-left: 15px;">
-                                                                                        <div class="tab-regular" style="margin-top: 10px;">
-                                                                                            <ul class="nav nav-tabs " id="myTabHardwareSite2" role="tablist">
-
-                                                                                                <li style="padding-top: 7px;">ISP Server:</li>
-
-                                                                                                <li class="nav-item active" id="HorS-Hardwaretab2">
-                                                                                                    <a class="nav-link test" id="Hardware-Standard2" name="Hardware-Standard2" data-toggle="tab" href="#HorSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 300px !important;">Standard ISP Server FIC0133</a>
-                                                                                                </li>
-
-                                                                                                <li class="nav-item " id="HorS-HardwareExttab2">
-                                                                                                    <a class="nav-link test" id="Hardware-Extended2" name="Hardware-Extended2" data-toggle="tab" href="#HorHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Extended ISP Server (FIC0134)</a>
-                                                                                                </li>
-
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-
-
-                                                                                    <div class="HorS-HardwareMemorySite2" style="margin-left: 15px;">
-                                                                                        <div class="tab-regular" style="margin-top: 10px;">
-                                                                                            <ul class="nav nav-tabs " id="myTabHardwareMemorySite2" role="tablist">
-
-                                                                                                <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
-
-                                                                                                <li class="nav-item " id="HorS-HardwareMemoryNotab2">
-                                                                                                    <a class="nav-link test" id="Hardware-StandardMemoryNo2" name="Hardware-StandardMemoryNo2" data-toggle="tab" href="#HorHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important; margin-left: 15px;">No</a>
-                                                                                                </li>
-
-                                                                                                <li class="nav-item active" id="HorS-HardwareMemoryYestab2">
-                                                                                                    <a class="nav-link test" id="Hardware-StandardMemoryYes2" name="Hardware-StandardMemoryYes2" data-toggle="tab" href="#HorSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Yes</a>
-                                                                                                </li>
-
-
-
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-
-
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable2" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-
-                                                                        <div class="row" id="mac3" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading3"></p>
-
-
-
-                                                                                <div class="DELIVERY-info" style="margin-left: 0px;">
-                                                                                    <div class="tab-regular" style="margin-top: 10px;">
-
-                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
-
-                                                                                            <li class="nav-item active" id="">
-                                                                                                <a class="nav-link test" id="EDLEonlyportal1" name="EDLEonlyportal1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Software only</a>
-                                                                                            </li>
-
-                                                                                            <li class="nav-item " id="">
-                                                                                                <a class="nav-link test" id="EDLEonlyportalH1" name="EDLEonlyportalH1" data-toggle="tab" href="#EDLEonly2" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">Hardware</a>
-                                                                                            </li>
-
-
-
-                                                                                        </ul>
-
-                                                                                    </div>
-                                                                                </div>
-
-
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable3" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline3" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-
-                                                                        <div class="row" id="mac4" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading4"></p>
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable4" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline4" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-
-                                                                        <div class="row" id="mac5" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading5"></p>
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable5" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline5" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-                                                                        <div class="row" id="mac6" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading6"></p>
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable6" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline6" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-
-                                                                        <div class="row" id="mac7" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading7"></p>
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable7" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline7" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-                                                                        <div class="row" id="mac8" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading8"></p>
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable8" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline8" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-
-                                                                        <div class="row" id="mac9" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading9"></p>
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable9" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline9" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
-
-
-                                                                        <div class="row" id="mac10" style="display: none;">
-                                                                            <br />
-                                                                            <div class="col-md-12">
-                                                                                <p style="font-weight: bold;" id="macheading10"></p>
-                                                                                <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable10" style="margin-left: -0px;">
-                                                                                        <thead class="thead-light">
-                                                                                            <tr>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div onclick="MacAddLine(this);" id="macaddline10" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-
-                                                                        </div>
                                                                     </div>
                                                                 </div>
 
@@ -6739,7 +6968,7 @@ FIC0457</li>
 
 
             //heading and table
-            $("#mac" + itemidx).show();
+            $("#site" + itemidx).show();
             $("#macheading" + itemidx)[0].innerText = "SITE " + itemidx + ": " + $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
 
         }
@@ -9773,32 +10002,32 @@ FIC0457</li>
 
             if (typeselect == "yes") {
                 $("#RedundantTabs").show();
-                $("#macContainer1_2").show();
+                $("#macContainer" + tableNo+"_2").show();
 
-                if ($('#hidRedSoftwareHardwareSite1')[0].value != "") {
-                    if ($('#hidRedSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
+                if ($('#hidRedSoftwareHardwareSite' + tableNo)[0].value != "") {
+                    if ($("#hidRedSoftwareHardwareSite" + tableNo )[0].value == "SoftwareHardWare") {
 
-                        $('#ZFPRedundantHW1').show();
-                        $('#macContainer1_2').hide();
+                        $("#ZFPRedundantHW" + tableNo ).show();
+                        $("#macContainer"+tableNo+"_2").hide();
 
-                        $('#CRedundantTHorSoft1').removeClass("active");
-                        $('#CRedundantTHorHard1').addClass('active');
+                        $("#CRedundantTHorSoft" + tableNo).removeClass("active");
+                        $("#CRedundantTHorHard" + tableNo ).addClass('active');
 
 
 
                     } else {
-                        $('#ZFPRedundantHW1').hide();
-                        $('#macContainer1_2').show();
+                        $("#ZFPRedundantHW" + tableNo).hide();
+                        $("#macContainer"+tableNo+"_2").show();
 
-                        $('#CRedundantTHorSoft1').addClass('active');
-                        $('#CRedundantTHorHard1').removeClass("active");
+                        $("#CRedundantTHorSoft" + tableNo).addClass('active');
+                        $("#CRedundantTHorHard" + tableNo).removeClass("active");
                     }
                 }
 
             } else {
                 $("#RedundantTabs").hide();
-                $("#macContainer1_2").hide();
-                $("#ZFPRedundantHW1").hide();
+                $("#macContainer" + tableNo+"_2").hide();
+                $("#ZFPRedundantHW" + tableNo).hide();
                 
             }
 
