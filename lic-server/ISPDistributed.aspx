@@ -3186,11 +3186,11 @@
 
 
 
-                                                                                    <li class="nav-item active" id="">
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft1">
                                                                                         <a class="nav-link test" id="" name="RedundantTHorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#ZFPRedundantHW1').hide();$('#macContainer1_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
                                                                                     </li>
 
-                                                                                    <li class="nav-item " id="">
+                                                                                    <li class="nav-item " id="CRedundantTHorHard1">
                                                                                         <a class="nav-link test" id="" name="RedundantTHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPRedundantHW1').show();$('#macContainer1_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                     </li>
 
@@ -3248,11 +3248,11 @@
                                                                                             <br />
                                                                                             Application Environment:</li>
 
-                                                                                        <li class="nav-item active" id="">
+                                                                                        <li class="nav-item active" id="cAppHorSoftN1">
                                                                                             <a class="nav-link test" id="" name="AppHorSoftN1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="">
+                                                                                        <li class="nav-item " id="cAppHorSoftY1">
                                                                                             <a class="nav-link test" id="" name="AppHorSoftY1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
@@ -3273,11 +3273,11 @@
                                                                                         <li>Extended Memory -FIC0457</li>
 
 
-                                                                                        <li class="nav-item active" id="">
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN1">
                                                                                             <a class="nav-link test" id="" name="RedundantHorSoftExtN1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="">
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY1">
                                                                                             <a class="nav-link test" id="RedundantHorSoftExtY1" name="RedundantHorSoftExtY1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
@@ -3380,11 +3380,11 @@ FIC0457</li>
                                                                         <div style="margin-left: 15px; display: none;" id="TestTabs1">
                                                                             <div class="tab-regular" style="margin-top: 10px;">
                                                                                 <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
-                                                                                    <li class="nav-item active" id="">
+                                                                                    <li class="nav-item active" id="cTestHorSoft1">
                                                                                         <a class="nav-link test" id="" name="TestHorSoft1" data-toggle="tab" href="#HorSoft1" onclick="$('#TestHW1').hide();$('#TestMacContainer1').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
                                                                                     </li>
 
-                                                                                    <li class="nav-item " id="">
+                                                                                    <li class="nav-item " id="cTestHorSoftY1">
                                                                                         <a class="nav-link test" id="" name="TestHorSoftY1" data-toggle="tab" href="#HorHard1" onclick="$('#TestHW1').show();$('#TestMacContainer1').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                     </li>
                                                                                 </ul>
@@ -3443,12 +3443,12 @@ FIC0457</li>
                                                                                             <br />
                                                                                             Environment:</li>
 
-                                                                                        <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorTSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        <li class="nav-item active" id="cHorTSoftN1">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="HorTSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        <li class="nav-item " id="cHorTSoftY1">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
 
@@ -3467,12 +3467,12 @@ FIC0457</li>
 
                                                                                         <li>Extended Memory - FIC0457</li>
 
-                                                                                        <li class="nav-item active" id="HorS-tab2">
+                                                                                        <li class="nav-item active" id="cHorENSoft1">
                                                                                             <a class="nav-link test" id="HorENSoft1" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
                                                                                         </li>
 
 
-                                                                                        <li class="nav-item " id="">
+                                                                                        <li class="nav-item " id="cHorEYSoft1">
                                                                                             <a class="nav-link test" id="" name="HorEYSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
@@ -4675,6 +4675,16 @@ FIC0457</li>
 
                                                     <asp:HiddenField ID="hidPortalISPserver1" Value="" runat="server" />
                                                     <asp:HiddenField ID="hidPortalExtMemNo1" Value="" runat="server" />
+
+
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo1" Value="" runat="server" />
+
+
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo1" Value="" runat="server" />
                                                                                      
 
                                                 </div>
@@ -4805,6 +4815,18 @@ FIC0457</li>
         <asp:HiddenField ID="hidmacTableRedundant10" runat="server" Value="" />
 
 
+        <asp:HiddenField ID="hidmacTableTest1" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest2" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest3" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest4" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest5" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest6" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest7" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest8" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest9" runat="server" Value="" />
+        <asp:HiddenField ID="hidmacTableTest10" runat="server" Value="" />
+
+
         <asp:HiddenField ID="hidManualISP" runat="server" />
 
 
@@ -4898,8 +4920,188 @@ FIC0457</li>
         }
 
 
-        
-     
+        //intelli portal Hardware / software
+        if ($('#HiddenSoftwareHardwareSite1')[0].value != "") {
+            if ($('#HiddenSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
+
+                $('#hardwaresite1').show();
+                $('#macContainerSO1').hide();
+
+                $('IntelliSpacePortalS1').removeClass("active");
+                $('#IntelliSpacePortalH1').addClass('active');
+
+                
+
+            } else {
+                $('#hardwaresite1').hide();
+                $('#macContainerSO1').show();
+
+                $('IntelliSpacePortalS1').addClass('active');
+                $('#IntelliSpacePortalH1').removeClass("active");
+            }
+        }
+
+
+        //ISP server
+        if ($('#hidPortalISPserver1')[0].value != "") {
+            if ($('#hidPortalISPserver1')[0].value == "Extended") {
+
+                $('#HorS-Hardwaretab1').removeClass("active");
+                $('#HorS-HardwareExttab1').addClass('active');
+            } else {
+                $('#HorS-Hardwaretab1').addClass('active');
+                $('#HorS-HardwareExttab1').removeClass("active");
+            }
+        }
+
+
+        //HorS-HardwareMemoryNotab1
+        //HorS-HardwareMemoryYestab1
+
+        //Ext Memory
+        if ($('#hidPortalExtMemNo1')[0].value != "") {
+            if ($('#hidPortalExtMemNo1')[0].value == "Yes") {
+
+                $('#HorS-HardwareMemoryNotab1').removeClass("active");
+                $('#HorS-HardwareMemoryYestab1').addClass('active');
+            } else {
+                $('#HorS-HardwareMemoryNotab1').addClass('active');
+                $('#HorS-HardwareMemoryYestab1').removeClass("active");
+            }
+        }
+
+
+
+        //redundant
+
+        //Yes / No                
+        if ($('#HiddenRedundantSite1')[0].value != "") {
+            if ($('#HiddenRedundantSite1')[0].value == "Yes") {
+
+                $('#redundatntno1').removeClass("active");
+                $('#redundatntyes1').addClass('active');
+                PortalRedundant(1, 'yes');
+            } else {
+                $('#redundatntno1').addClass('active');
+                $('#redundatntyes1').removeClass("active");
+                PortalRedundant(1, 'no');
+            }
+        }
+
+        //software / hardware
+
+        if ($('#hidRedSoftwareHardwareSite1')[0].value != "") {
+            if ($('#hidRedSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
+
+                $('#ZFPRedundantHW1').show();
+                $('#macContainer1_2').hide();
+
+                $('#CRedundantTHorSoft1').removeClass("active");
+                $('#CRedundantTHorHard1').addClass('active');
+
+
+
+            } else {
+                $('#ZFPRedundantHW1').hide();
+                $('#macContainer1_2').show();
+
+                $('#CRedundantTHorSoft1').addClass('active');
+                $('#CRedundantTHorHard1').removeClass("active");
+            }
+        }
+
+
+
+        //redundant app env
+        //Yes / No                
+        if ($('#hidRedAppEnvSite1')[0].value != "") {
+            if ($('#hidRedAppEnvSite1')[0].value == "Yes") {
+
+                $('#cAppHorSoftN1').removeClass("active");
+                $('#cAppHorSoftY1').addClass('active');                
+            } else {
+                $('#cAppHorSoftN1').addClass('active');
+                $('#cAppHorSoftY1').removeClass("active");               
+            }
+        }
+
+
+        //redundant ext memory
+        if ($('#hidRedExtMemNo1')[0].value != "") {
+            if ($('#hidRedExtMemNo1')[0].value == "Yes") {
+
+                $('#cRedundantHorSoftExtN1').removeClass("active");
+                $('#cRedundantHorSoftExtY1').addClass('active');
+            } else {
+                $('#cRedundantHorSoftExtN1').addClass('active');
+                $('#cRedundantHorSoftExtY1').removeClass("active");
+            }
+        }
+
+
+
+
+        //Test
+        //software / hardware
+
+        if ($('#hidTestSoftwareHardwareSite1')[0].value != "") {
+            if ($('#hidTestSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
+
+                $('#TestHW1').show();
+                $('#TestMacContainer1').hide();
+
+                $('#cTestHorSoft1').removeClass("active");
+                $('#cTestHorSoftY1').addClass('active');
+                
+
+
+            } else {
+                $('#TestHW1').hide();
+                $('#TestMacContainer1').show();
+
+                $('#cTestHorSoft1').addClass('active');
+                $('#cTestHorSoftY1').removeClass("active");
+            }
+        }
+
+
+        //Test app env
+        //Yes / No                
+        if ($('#hidTestEnvSite1')[0].value != "") {
+            if ($('#hidTestEnvSite1')[0].value == "Yes") {
+
+                $('#cHorTSoftN1').removeClass("active");
+                $('#cHorTSoftY1').addClass('active');
+            } else {
+                $('#cHorTSoftN1').addClass('active');
+                $('#cHorTSoftY1').removeClass("active");
+            }
+        }
+
+
+        if ($("#HiddenTestSite1")[0].value == "No") {
+            $("#Testno1").addClass('active');
+            $('#Testyes1').removeClass("active");
+            PortalTest(1, 'no');
+        } else {
+            $("#Testyes1").addClass('active');
+            $('#Testno1').removeClass("active");
+            PortalTest(1, 'yes');
+        }
+
+
+        //Test ext memory
+        if ($('#hidTestExtMemNo1')[0].value != "") {
+            if ($('#hidTestExtMemNo1')[0].value == "Yes") {
+
+                $('#HorENSoft1').removeClass("active");
+                $('#cHorEYSoft1').addClass('active');
+            } else {
+                $('#HorENSoft1').addClass('active');
+                $('#cHorEYSoft1').removeClass("active");
+            }
+        }
+
 
         if ($('#HostpitalEntryText1')[0].Value != "") {
             $("#maincontainerPortal1").show();
@@ -5524,8 +5726,12 @@ FIC0457</li>
 
                         switch (tableName) {
 
-                            case "hidmacTableRedundant1":
-                                maclist = $('#hidMacTable' + tableNo)[0].value
+                            case "macTestTable":
+                                maclist = $('#hidmacTableTest' + tableNo)[0].value
+                                break;
+
+                            case "macTableRedundant":
+                                maclist = $('#hidmacTableRedundant' + tableNo)[0].value
                                 break;
 
                             default:
@@ -5553,7 +5759,23 @@ FIC0457</li>
                             } else {
                                 if (maclist != "") {
                                     myMacres = maclist.split(":");
-                                    $("#MacSoftwareOnly" + tableName + tableNo + "_" + idx)[0].value = myMacres[1];
+
+                                    switch (tableName) {
+
+                                        case "macTestTable":
+                                            $("#MacSoftwareOnlymacTestTable" + tableNo + "_" + idx)[0].value = myMacres[1];
+                                            break;
+
+                                        case "macTableRedundant":
+                                            $("#MacSoftwareOnlymacTableRedundant" + tableNo + "_" + idx)[0].value = myMacres[1];
+                                            break;
+
+                                        default:
+                                            $("#MacSoftwareOnly" + tableName + tableNo + "_" + idx)[0].value = myMacres[1];
+                                            break;
+                                    }
+
+                                   
                                 }
                             }
 
@@ -9413,23 +9635,99 @@ FIC0457</li>
             let isredundatntyes1 = $("#redundatntyes1").hasClass('active');
 
 
+            //redundant
+
             if (isredundatntno1 == true) {
                 $("#HiddenRedundantSite1")[0].value = "No";
             } else {
                 $("#HiddenRedundantSite1")[0].value = "Yes";
             }
 
+
+            //Redudant Hardware / software
+
+            let isRedundantSoftware1 = $("#CRedundantTHorSoft1").hasClass('active');
+            let isRedundantHardware1 = $("#CRedundantTHorHard1").hasClass('active');   
+
+            if (isRedundantSoftware1 == true) {
+                $("#hidRedSoftwareHardwareSite1")[0].value = "SoftwareOnly";
+            } else {
+                $("#hidRedSoftwareHardwareSite1")[0].value = "SoftwareHardWare";
+            }
+
+
+            //portal redundant app enviroment
+
+            let isRedundantAppEnvNo1 = $("#cAppHorSoftN1").hasClass('active');
+            let isRedundantAppEnvYes1 = $("#cAppHorSoftY1").hasClass('active');
+
+            if (isRedundantAppEnvNo1 == true) {
+                $("#hidRedAppEnvSite1")[0].value = "No";
+            } else {
+                $("#hidRedAppEnvSite1")[0].value = "Yes";
+            }
+
+
+              //portal redundant Ext memory
+
+            let isRedundantExtMemNo1 = $("#cRedundantHorSoftExtN1").hasClass('active');
+            let isRedundantExtMemYes1 = $("#cRedundantHorSoftExtY1").hasClass('active');
+
+            if (isRedundantExtMemNo1 == true) {
+                $("#hidRedExtMemNo1")[0].value = "No";
+            } else {
+                $("#hidRedExtMemNo1")[0].value = "Yes";
+            }
+
+
+
+
+
             //portal test app env
             let isTestno1 = $("#Testno1").hasClass('active');
             let isTestyes1 = $("#Testyes1").hasClass('active');
-
-
+            
             if (isTestno1 == true) {
                 $("#HiddenTestSite1")[0].value = "No";
             } else {
                 $("#HiddenTestSite1")[0].value = "Yes";
             }
-            
+
+            //test software / hardware
+
+            let isTestSoftware1 = $("#cTestHorSoft1").hasClass('active');
+            let isTestHardware1 = $("#cTestHorSoftY1").hasClass('active');
+
+            if (isTestSoftware1 == true) {
+                $("#hidTestSoftwareHardwareSite1")[0].value = "SoftwareOnly";
+            } else {
+                $("#hidTestSoftwareHardwareSite1")[0].value = "SoftwareHardWare";
+            }
+
+
+
+            //test app enviroment
+
+            let isTestAppEnvNo1 = $("#cHorTSoftN1").hasClass('active');
+            let isTestAppEnvYes1 = $("#cHorTSoftY1").hasClass('active');
+
+            if (isTestAppEnvNo1 == true) {
+                $("#hidTestEnvSite1")[0].value = "No";
+            } else {
+                $("#hidTestEnvSite1")[0].value = "Yes";
+            }
+
+
+            //test Ext memory
+
+            let isTestExtMemNo1 = $("#cHorENSoft1").hasClass('active');
+            let isTestExtMemYes1 = $("#cHorEYSoft1").hasClass('active');
+
+            if (isTestExtMemNo1 == true) {
+                $("#hidTestExtMemNo1")[0].value = "No";
+            } else {
+                $("#hidTestExtMemNo1")[0].value = "Yes";
+            }
 
 
         }
@@ -9476,10 +9774,35 @@ FIC0457</li>
             if (typeselect == "yes") {
                 $("#RedundantTabs").show();
                 $("#macContainer1_2").show();
+
+                if ($('#hidRedSoftwareHardwareSite1')[0].value != "") {
+                    if ($('#hidRedSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
+
+                        $('#ZFPRedundantHW1').show();
+                        $('#macContainer1_2').hide();
+
+                        $('#CRedundantTHorSoft1').removeClass("active");
+                        $('#CRedundantTHorHard1').addClass('active');
+
+
+
+                    } else {
+                        $('#ZFPRedundantHW1').hide();
+                        $('#macContainer1_2').show();
+
+                        $('#CRedundantTHorSoft1').addClass('active');
+                        $('#CRedundantTHorHard1').removeClass("active");
+                    }
+                }
+
             } else {
                 $("#RedundantTabs").hide();
                 $("#macContainer1_2").hide();
+                $("#ZFPRedundantHW1").hide();
+                
             }
+
+            
 
         }
 
@@ -9488,9 +9811,33 @@ FIC0457</li>
             if (typeselect == "yes") {
                 $("#TestTabs1").show();
                 $("#TestMacContainer1").show();
+
+                if ($('#hidTestSoftwareHardwareSite1')[0].value != "") {
+                    if ($('#hidTestSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
+
+                        $('#TestHW1').show();
+                        $('#TestMacContainer1').hide();
+
+                        $('#cTestHorSoft1').removeClass("active");
+                        $('#cTestHorSoftY1').addClass('active');
+
+
+
+                    } else {
+                        $('#TestHW1').hide();
+                        $('#TestMacContainer1').show();
+
+                        $('#cTestHorSoft1').addClass('active');
+                        $('#cTestHorSoftY1').removeClass("active");
+                    }
+                }
+
             } else {
                 $("#TestTabs1").hide();
                 $("#TestMacContainer1").hide();
+                $('#TestHW1').hide();
+
+                
             }
 
         }
@@ -9522,26 +9869,18 @@ FIC0457</li>
                 SetupMacTables("macTableSO");
 
                
-                if ($("#HiddenRedundantSite1")[0].value == "No") {
-                    $("#redundatntno1").addClass('active');
-                    $('#redundatntyes1').removeClass("active");
-                    PortalRedundant(1, 'no');
-                } else {
-                    $("#redundatntyes1").addClass('active');
-                    $('#redundatntno1').removeClass("active");
-                    PortalRedundant(1, 'yes');
-                }
+                //if ($("#HiddenRedundantSite1")[0].value == "No") {
+                //    $("#redundatntno1").addClass('active');
+                //    $('#redundatntyes1').removeClass("active");
+                //    PortalRedundant(1, 'no');
+                //} else {
+                //    $("#redundatntyes1").addClass('active');
+                //    $('#redundatntno1').removeClass("active");
+                //    PortalRedundant(1, 'yes');
+                //}
 
 
-                if ($("#HiddenTestSite1")[0].value == "No") {
-                    $("#Testno1").addClass('active');
-                    $('#Testyes1').removeClass("active");
-                    PortalTest(1, 'no');
-                } else {
-                    $("#Testyes1").addClass('active');
-                    $('#Testno1').removeClass("active");
-                    PortalTest(1, 'yes');
-                }
+                
 
 
                 SetupMacTables("macTableRedundant");
