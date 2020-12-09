@@ -41,19 +41,23 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     public string m_customer_address = string.Empty;
     public string m_customer_country = string.Empty;
 
+    public string m_customer_key_accountOutput = string.Empty;
     public string m_customer_po = string.Empty;
     public string m_customer_key_account_email = string.Empty;
     public string m_customer_key_account_first = string.Empty;
     public string m_customer_key_account_last = string.Empty;
 
+    public string m_portalSalesOutput = string.Empty;
     public string m_portalSales_email = string.Empty;
     public string m_portalSales_first = string.Empty;
     public string m_portalSales_last = string.Empty;
 
+    public string m_coreOutput = string.Empty;
     public string m_core_email = string.Empty;
     public string m_core_first = string.Empty;
     public string m_core_last = string.Empty;
 
+    public string m_HospitalOutput = string.Empty;
 
     public string m_hospital_name = string.Empty;
     public string m_hospital_street = string.Empty;
@@ -372,7 +376,39 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         catch { }
     }
 
-   
+
+    private string GetAppCategoryData(DataView myApp, string findApp)
+    {
+
+        string myCat = string.Empty;
+
+        foreach (DataRowView rowView in myApp)
+        {
+            if (rowView["Applications"].ToString() == findApp)
+            {
+                myCat = rowView["Category"].ToString();
+                break;
+            }
+
+        }
+
+        if ( myCat=="")
+        {
+            switch(findApp.Trim())
+            {
+                case "NM Amyloid Analysis":
+                    myCat = "3e Party Applications";
+                    break;
+                case "NM EQual":
+                    myCat = "3e Party Applications";
+                    break;
+            }
+        }
+
+
+        return myCat;
+
+    }
     private string GetAppCatData(DataView myApp, string findApp)
     {
 
@@ -387,7 +423,18 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
         }
 
-
+        if (myCat=="")
+        {
+            switch (findApp.Trim())
+            {
+                case "NM Amyloid Analysis":
+                    myCat = "NICA965";
+                    break;
+                case "NM EQual":
+                    myCat = "NICA358";
+                    break;
+            }
+        }
 
         return myCat;
 
@@ -430,15 +477,36 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                     AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["centralised_add_application"].ToString());
 
                     for (int i = 0; i <= KeyProjectData1.Count-1; i++)
-                    {
-                        m_customer_key_account_email += KeyProjectData1[i].Email + "<hr/>";
-                        m_customer_key_account_first += KeyProjectData1[i].FirstName + "<hr/>";
-                        m_customer_key_account_last += KeyProjectData1[i].LastName + "<hr/>";
+                    {                       
+                        m_customer_key_accountOutput += "<tr>";
+                        if (i == 0)
+                        {
+                            m_customer_key_accountOutput += "<td style='vertical-align: middle;'>Key Account Manager</td><td>" + KeyProjectData1[i].FirstName + " </td><td> " + KeyProjectData1[i].LastName + "</td><td>" + KeyProjectData1[i].Email + "</td></tr>";
+                        }
+                        else
+                        {
+                            m_customer_key_accountOutput += "<td>&nbsp;</td> <td>" + KeyProjectData1[i].FirstName + " </td> <td> " + KeyProjectData1[i].LastName + "</td><td>" + KeyProjectData1[i].Email + "</td></tr>";
+                        }
+
+
+                        //m_customer_key_account_email += KeyProjectData1[i].Email + "<hr/>";
+                        //m_customer_key_account_first += KeyProjectData1[i].FirstName + "<hr/>";
+                        //m_customer_key_account_last += KeyProjectData1[i].LastName + "<hr/>";
                     }
 
 
                     for (int i = 0; i <= KeyPortalDat1.Count-1; i++)
                     {
+                        m_portalSalesOutput += "<tr>";
+                        if (i == 0)
+                        {
+                            m_portalSalesOutput += "<td style='vertical-align: middle;'>Portal Sales</td><td>" + KeyPortalDat1[i].FirstName + " </td><td> " + KeyPortalDat1[i].LastName + "</td><td>" + KeyPortalDat1[i].Email + "</td></tr>";
+                        }
+                        else
+                        {
+                            m_portalSalesOutput += "<td>&nbsp;</td> <td>" + KeyPortalDat1[i].FirstName + " </td> <td> " + KeyPortalDat1[i].LastName + "</td><td>" + KeyPortalDat1[i].Email + "</td></tr>";
+                        }
+
                         m_portalSales_email += KeyPortalDat1[i].Email + "<hr/>";
                         m_portalSales_first += KeyPortalDat1[i].FirstName + "<hr/>";
                         m_portalSales_last += KeyPortalDat1[i].LastName + "<hr/>";
@@ -447,19 +515,30 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                     for (int i = 0; i <= CoreDat1.Count-1; i++)
                     {
-                        m_core_email += CoreDat1[i].Email + "<hr/>";
-                        m_core_first += CoreDat1[i].FirstName + "<hr/>";
-                        m_core_last += CoreDat1[i].LastName + "<hr/>";
+                        m_coreOutput += "<tr>";
+                        if( i==0)
+                        {
+                            m_coreOutput += "<td style='vertical-align: middle;'>Project core team*</td><td>" + CoreDat1[i].FirstName + " </td><td> " + CoreDat1[i].LastName + "</td><td>" + CoreDat1[i].Email + "</td></tr>";
+                        }else
+                        {
+                            m_coreOutput += "<td>&nbsp;</td> <td>" + CoreDat1[i].FirstName + " </td> <td> " + CoreDat1[i].LastName + "</td><td>" + CoreDat1[i].Email + "</td></tr>";
+                        }
+                        
+                        //m_core_email += CoreDat1[i].Email + "<hr/>";
+                        //m_core_first += CoreDat1[i].FirstName + "<hr/>";
+                        //m_core_last += CoreDat1[i].LastName + "<hr/>";
                     }
 
 
                     //Hospital
                     for (int i = 0; i <= SiteInfoData1.Count - 1; i++)
                     {
-                        m_hospital_name += SiteInfoData1[i].HospitalName + "<br/>";
-                        m_hospital_street += SiteInfoData1[i].HospitalStreet + "<br/>";
-                        m_hospital_site += SiteInfoData1[i].Site + "<br/>";
-                        m_hospital_connect += SiteInfoData1[i].Connectivity + "<br/>";
+                        m_HospitalOutput += "<tr><td style='vertical-align: middle;'>"+ (i + 1) + "</td><td>" + SiteInfoData1[i].HospitalName + "</td><td>" + SiteInfoData1[i].HospitalStreet + "</td><td>" + SiteInfoData1[i].Site + "</td><td>" + SiteInfoData1[i].Connectivity + "</td></tr>";
+
+                        //m_hospital_name += SiteInfoData1[i].HospitalName + "<br/>";
+                        //m_hospital_street += SiteInfoData1[i].HospitalStreet + "<br/>";
+                        //m_hospital_site += SiteInfoData1[i].Site + "<br/>";
+                        //m_hospital_connect += SiteInfoData1[i].Connectivity + "<br/>";
                     }
 
 
@@ -467,23 +546,94 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                     DataView myApp = Helper.GetData("SELECT * FROM travelma2_phil1.PhilipsLic_Applications");
 
-
-                    
-
-
+                    //get cat list 
+                    Dictionary<string, string> categorylist = new Dictionary<string, string>();
                     for (int i = 0; i <= AdditionalApplication1.Count - 1; i++)
                     {
                         string[] DataItems = AdditionalApplication1[i].Application.Split('|');
-                        string cat = GetAppCatData(myApp, DataItems[0]);
-                        string app = DataItems[0];
-                       string appHos = m_hospital_street += AdditionalApplication1[i].HospitalName ;
-                       string appCon = AdditionalApplication1[i].ConcurrentUsers ;
+                        string category = GetAppCategoryData(myApp, DataItems[0]);
+                        if (!categorylist.ContainsKey(category))
+                        {
+                            if (category != "")
+                            {
+                                categorylist.Add(category, category);
+                            }
+                        }
+                    }
+                    //get cat list 
+
+                    //loop categories
+
+                    foreach (KeyValuePair<string, string> kvp in categorylist)
+                    {
+                        m_OutputTableApplicationsTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>" + kvp.Value + "</p><table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Option Number</th> <th scope='col' style='background-color: #0b1f65;'>Description</th> <th scope='col' style='background-color: #0b1f65;'>Overall Quantity ( select in the tool )</th> </tr></thead> <tbody> "; 
+
+                        for (int i = 0; i <= AdditionalApplication1.Count - 1; i++)
+                        {
+                            if ( i==0)
+                            {
+                                m_OutputTableApplicationsTR = "";
+                            }
+
+                            string[] DataItems = AdditionalApplication1[i].Application.Split('|');
+                            string category = GetAppCategoryData(myApp, DataItems[0]);
+                            if (category== kvp.Value)
+                            {
+                                string cat = GetAppCatData(myApp, DataItems[0]);
+                                string app = DataItems[0];
+                                string appCon = AdditionalApplication1[i].ConcurrentUsers;
+                                int myamount = 0;
+
+                                switch (app.Trim())
+                                {
+                                    case "NM EQual":
+                                        myamount = Convert.ToInt32(appCon);
+                                        myamount = myamount - 1;
+                                        m_OutputTableApplicationsTR += " <tr> <td> " + cat + " </td><td> NM EQual: 1 User</td><td> 1</td></tr>";
+                                        m_OutputTableApplicationsTR += " <tr> <td> FIC0086 </ td><td> NM Equal: Additional Users </td><td>" + myamount + "</td></tr>";
+                                        break;
+                                    case "NM Amyloid Analysis":
+                                        myamount = Convert.ToInt32(appCon);
+                                        myamount = myamount - 1;
+                                        m_OutputTableApplicationsTR += " <tr> <td> " + cat + " </td><td> NM Amyloid Analysis: 1 User</td><td> 1 </td></tr>";
+                                        m_OutputTableApplicationsTR += " <tr> <td> FIC0127 </ td><td>  NM Amyloid Analysis: Additional Users </td><td>" + myamount + "</td></tr>";
+                                        break;
+                                    case "Zero FootPrint Viewer SW - 2 User":
+                                        m_OutputTableApplicationsTR += " <tr> <td> " + cat + " </td><td> " + app + "</td><td> " + 2 + "</td></tr>";
+                                        myamount = Convert.ToInt32(appCon);
+                                        myamount = myamount - 2;
+                                        m_OutputTableApplicationsTR += " <tr> <td> FIC0439 </td><td>ZFP Viewer Add_Usr Concerto</td><td> " + myamount + "</td></tr>";
+                                        break;
+                                    default:
+                                        m_OutputTableApplicationsTR += " <tr> <td> " + cat + " </td><td> " + app + "</td><td> " + appCon + "</td></tr>";
+                                        break;
+                                }
+                                
+                            }
+                        }
+
+                        m_OutputTableApplicationsTable += m_OutputTableApplicationsTR + " </tbody> </table></div>";
+
+                    }
+
+                    //loop categories
+
+
+                    //    for (int i = 0; i <= AdditionalApplication1.Count - 1; i++)
+                    //{
+                    //    string[] DataItems = AdditionalApplication1[i].Application.Split('|');
+                    //    string cat = GetAppCatData(myApp, DataItems[0]);
+                    //    string category = GetAppCategoryData(myApp, DataItems[0]);
+                    //    string app = DataItems[0];
+                    //   string appHos = m_hospital_street += AdditionalApplication1[i].HospitalName ;
+                    //   string appCon = AdditionalApplication1[i].ConcurrentUsers ;
                         
-                        m_OutputTableApplicationsTR += " <tr> <td> "+ cat + " </td><td> "+ app + "</td><td> "+ appCon + "</td></tr>";
+                    //    m_OutputTableApplicationsTR += " <tr> <td> "+ cat + " </td><td> "+ app + "</td><td> "+ appCon + "</td></tr>";
 
                                              
-                    }
-                    m_OutputTableApplicationsTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>IntelliSpace Portal Enterprise Software</p><table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Option Number</th> <th scope='col' style='background-color: #0b1f65;'>Description</th> <th scope='col' style='background-color: #0b1f65;'>Overall Quantity ( select in the tool )</th> </tr></thead> <tbody> "+ m_OutputTableApplicationsTR + " </tbody> </table></div>";
+                    //}
+
+                    //m_OutputTableApplicationsTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>IntelliSpace Portal Enterprise Software</p><table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Option Number</th> <th scope='col' style='background-color: #0b1f65;'>Description</th> <th scope='col' style='background-color: #0b1f65;'>Overall Quantity ( select in the tool )</th> </tr></thead> <tbody> "+ m_OutputTableApplicationsTR + " </tbody> </table></div>";
                     //additional Applications
 
 

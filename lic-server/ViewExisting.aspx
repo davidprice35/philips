@@ -171,7 +171,7 @@
 
                                 <div class="tab-content toshiba-content " style="">
                                     <div id="home" class="tab-pane fade in active">                                        
-                                        <div style="margin-top: 30px; height: 1060px;">                                                                                                                                                                          
+                                        <div style="margin-top: 30px; min-height: 1060px;">                                                                                                                                                                          
                                             <div class="container">
                                                
                                                 

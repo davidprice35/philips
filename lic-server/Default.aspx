@@ -153,6 +153,12 @@
                                     </ul>
 
 
+                                     <ul class="nav navbar-nav icons-right" style="float: left;">
+                                        <li class="icons"><a href="/lic-server/">Start New Project</a></li>
+                                         
+                                        
+                                    </ul>
+
                                 </div>
 
                             </nav>
@@ -169,7 +175,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-9 right-padding">
                             <div class="rightbar">
                                 <ul class="nav nav-tabs">
-                                    <li class="active"><a href="/">START NEW PROJECT</a></li>
+                                    <li class="active"><a href="/">PROJECT PROFILE</a></li>
                                     <li><a href="/lic-server/ViewExisting.aspx">VIEW EXISTING PROJECTS</a></li>
 
                                 </ul>
@@ -557,7 +563,7 @@
                                                                         <asp:TextBox ID="txtPortalKeyAccountFirstName10" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="First Name"></asp:TextBox>
 
                                                                         <br />
-                                                                        <label for="sdsdsd"><span>
+                                                                        <label for="lnkKeyAccount"><span>
                                                                             <asp:LinkButton ID="lnkKeyAccount" runat="server" OnClick="lnkKeyAccount_Click">+ Add new member</asp:LinkButton></span></label>
                                                                     </td>
                                                                     <td>
@@ -605,26 +611,28 @@
                                                                         </span></asp:LinkButton>
 
                                                                            <asp:LinkButton ID="lnktxtPortalKeyAccountDelete5" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span>
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
                                                                            <asp:LinkButton ID="lnktxtPortalKeyAccountDelete6" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span>  
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                               <br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
                                                                          <asp:LinkButton ID="lnktxtPortalKeyAccountDelete7" runat="server"  OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span   >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                              <br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnktxtPortalKeyAccountDelete8" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnktxtPortalKeyAccountDelete8" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span > <br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnktxtPortalKeyAccountDelete9" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span  >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnktxtPortalKeyAccountDelete9" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span  > <br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
-                                                                       <asp:LinkButton ID="lnktxtPortalKeyAccountDelete10" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span  >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                       <asp:LinkButton ID="lnktxtPortalKeyAccountDelete10" runat="server" OnClick="lnktxtPortalKeyAccountDelete1_Click" Visible="false"> <span  > <br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
                                                                     </td>
@@ -644,7 +652,7 @@
                                                                     <asp:TextBox ID="txtPortalSalesFirstName10" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="First Name"></asp:TextBox>
 
                                                                     <br />
-                                                                    <label for="sdsdsd"><span>
+                                                                    <label for="lnkPortalSales"><span>
                                                                         <asp:LinkButton ID="lnkPortalSales" runat="server" OnClick="lnkPortalSales_Click">+ Add new member</asp:LinkButton></span></label>
                                                                 </td>
                                                                 <td>
@@ -693,26 +701,26 @@
                                                                         </span></asp:LinkButton>
 
                                                                            <asp:LinkButton ID="lnkPortalSalesDelete5" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span>
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                           <asp:LinkButton ID="lnkPortalSalesDelete6" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span>  
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                           <asp:LinkButton ID="lnkPortalSalesDelete6" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span>  <br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnkPortalSalesDelete7" runat="server"  OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span   >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnkPortalSalesDelete7" runat="server"  OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span   ><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnkPortalSalesDelete8" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnkPortalSalesDelete8" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span ><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnkPortalSalesDelete9" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span  >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnkPortalSalesDelete9" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span  ><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
-                                                                       <asp:LinkButton ID="lnkPortalSalesDelete10" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span  >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                       <asp:LinkButton ID="lnkPortalSalesDelete10" runat="server" OnClick="lnkPortalSalesDelete1_Click" Visible="false"> <span  ><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
 
                                                                     </td>
@@ -735,7 +743,7 @@
                                                                     <asp:TextBox ID="txtProjectCoreFirstName9" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="First Name"></asp:TextBox>
                                                                     <asp:TextBox ID="txtProjectCoreFirstName10" Visible="false" CssClass="form-control" runat="server" Style="margin-top: 3px;" placeholder="First Name"></asp:TextBox>
                                                                     <br />
-                                                                    <label for="sdsdsd"><span>
+                                                                    <label for="lnkProjectCore"><span>
                                                                         <asp:LinkButton ID="lnkProjectCore" runat="server" OnClick="lnkProjectCore_Click">+ Add new member</asp:LinkButton></span></label>
                                                                 </td>
                                                                 <td>
@@ -783,27 +791,27 @@
                                                                         </span></asp:LinkButton>
 
                                                                            <asp:LinkButton ID="lnkProjectCore5" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span>
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                           <asp:LinkButton ID="lnkProjectCore6" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span>  
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                           <asp:LinkButton ID="lnkProjectCore6" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span>  <br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnkProjectCore7" runat="server"  OnClick="lnkProjectCore1_Click" Visible="false"> <span   >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnkProjectCore7" runat="server"  OnClick="lnkProjectCore1_Click" Visible="false"> <span><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnkProjectCore8" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnkProjectCore8" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 12px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                         <asp:LinkButton ID="lnkProjectCore9" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span  >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                         <asp:LinkButton ID="lnkProjectCore9" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
 
-                                                                       <asp:LinkButton ID="lnkProjectCore10" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span  >
-                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;"></i>
+                                                                       <asp:LinkButton ID="lnkProjectCore10" runat="server" OnClick="lnkProjectCore1_Click" Visible="false"> <span  ><br />
+                                                                            <i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 10px;"></i>
                                                                         </span></asp:LinkButton>
 
                                                                     </td>

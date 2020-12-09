@@ -423,8 +423,8 @@
 
 
                                      <ul class="nav navbar-nav icons-right" style="float: left;">
-                                        <li class="icons"><a href="/lic-server/?id=<%=m_ID%>" target="_blank">Project Profile</a></li>
-                                         <li class="icons"><a href="/lic-server/ViewExisting.aspx" target="_blank">Existing Project</a></li>
+                                        <li class="icons"><a href="/lic-server/?id=<%=m_ID%>" >Project Profile</a></li>
+                                         <li class="icons"><a href="/lic-server/ViewExisting.aspx" >Existing Project</a></li>
                                         
                                     </ul>
 
@@ -934,7 +934,7 @@
                                                                 <asp:HiddenField ID="hidCentralSite" Value="1" runat="server" />
 
 
-                                                                <div onclick="CentralAddSite();" style="cursor: pointer;">+ Add another site </div>
+                                                                <div onclick="CentralAddSite(true);" style="cursor: pointer;">+ Add another site </div>
  
 
                                                             </div>
@@ -1034,6 +1034,52 @@
                                                                                 <td align="center">1</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication1"  onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL appddlselect" runat="server" Style="width: 100%; margin-top: 3px;">
+
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users|x">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users|x">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users|x">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users|x">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users|x">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users|x">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users|x">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users|x">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55|x">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1||x">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
+
+                                                                                      
+
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1068,6 +1114,53 @@
                                                                                 <td align="center">2</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication2" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%;">
+
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
+
+                                                                               
+
+
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1100,12 +1193,54 @@
                                                                                 <td align="center">3</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication3" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent3" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent3" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent3" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" value="<%=m_txtConcurrent3 %>" min="0" max="100">
                                                                                     <div id="errortxtConcurrent3" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1129,13 +1264,54 @@
                                                                                 <td align="center">4</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication4" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
 
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent4" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent4" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent4" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="0" max="100" value="<%=m_txtConcurrent4 %>">
                                                                                     <div id="errortxtConcurrent4" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1159,12 +1335,54 @@
                                                                                 <td align="center">5</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication5" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent5" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent5" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent5" min="0" max="100" value="<%=m_txtConcurrent5 %>">
                                                                                     <div id="errortxtConcurrent5" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1189,13 +1407,54 @@
                                                                                 <td align="center">6</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication6" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                         <asp:ListItem></asp:ListItem>
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent6" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent6" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent6" min="0" max="100" value="<%=m_txtConcurrent6 %>">
                                                                                     <div id="errortxtConcurrent6" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1220,13 +1479,54 @@
                                                                                 <td align="center">7</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication7" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                          <asp:ListItem></asp:ListItem>
+                                                                                          <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent7" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent7" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent7" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent7" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent7" min="10" max="100" value="<%=m_txtConcurrent7 %>">
                                                                                     <div id="errortxtConcurrent7" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1251,13 +1551,54 @@
                                                                                 <td align="center">8</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication8" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                         <asp:ListItem></asp:ListItem>
+                                                                                         <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent8" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent8" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent8" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent8" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent8" min="10" max="100" value="<%=m_txtConcurrent8 %>">
                                                                                     <div id="errortxtConcurrent8" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1281,13 +1622,54 @@
                                                                                 <td align="center">9</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication9" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                         <asp:ListItem></asp:ListItem>
+                                                                                         <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent9" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent9" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent9" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent9" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent9" min="10" max="100" value="<%=m_txtConcurrent9 %>">
                                                                                     <div id="errortxtConcurrent9" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1311,7 +1693,48 @@
                                                                                 <td align="center">10</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication10" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                         <asp:ListItem></asp:ListItem>
+                                                                                         <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1341,7 +1764,48 @@
                                                                                 <td align="center">11</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication11" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                         <asp:ListItem></asp:ListItem>
+                                                                                         <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1370,6 +1834,48 @@
                                                                                 <td align="center">12</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication12" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1399,6 +1905,48 @@
                                                                                 <td align="center">13</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication13" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
+                                                                                        <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1427,7 +1975,48 @@
                                                                                 <td align="center">14</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication14" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                         <asp:ListItem></asp:ListItem>
+                                                                                         <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1456,7 +2045,48 @@
                                                                                 <td align="center">15</td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdApplication15" onchange="GetApplicationData(this)" CssClass="form-control ApplicationDDL" runat="server" Style="width: 100%; margin-top: 3px;">
-                                                                                         <asp:ListItem></asp:ListItem>
+                                                                                         <asp:ListItem Value=""></asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - 1 User|No|1|NA">NICA439 - Mirada Viewer Pro </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer  Premium |No|1|NA">NICA441 - Mirada Viewer  Premium </asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Pro - S.Lic|No|Enterprise|">NICA445 - Mirada Viewer Pro - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="Mirada Viewer Prem. ISP - S.Lic|No|Enterprise|">NICA447 - Mirada Viewer Prem. ISP - S.Lic</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Processing App Suite|Yes|2|Up to max of Enterprise concurrent users">NICA436 - NM Processing App Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Astonish Recon Suite|No|Enterprise|">NICA438 - NM Astonish Recon Suite</asp:ListItem>
+                                                                                        <asp:ListItem Value="NM NeuroQ PET |Yes|1|Up to max of Enterprise concurrent users">NICA356/FIC0085 - NM NeuroQ PET </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt |Yes|1|Up to max of Enterprise concurrent users">NICA360 - NeuroQ SPECT Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM Amyloid Analysis |Yes|1|Up to max of Enterprise concurrent users">NICA965/FIC0127 - NM Amyloid Analysis </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM EQual |Yes|1|Up to max of Enterprise concurrent users">NICA358/FIC0466 - NM EQual </asp:ListItem>
+                                                                                        <asp:ListItem Value="NeuroQ DaTscan Opt |Yes|1|Up to max of Enterprise concurrent users">NICA367/FIC0466 - NeuroQ DaTscan Opt </asp:ListItem>
+                                                                                        <asp:ListItem Value="Emory Cardiac ToolBox V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB352 - Emory Cardiac ToolBox V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SPECT V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB355/FIC0222 - ECTB SPECT V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB PET V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB358/FIC0223 - ECTB PET V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB Heart Fusion V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB361/FIC0224 - ECTB Heart Fusion V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB SmartReport Option V4.x  |Yes|1|Up to max of Enterprise concurrent users">NICB364/FIC0252 - ECTB SmartReport Option V4.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB CFR MBF V4.x |Yes|1|Up to max of Enterprise concurrent users">NICB550/FIC0459 - ECTB CFR MBF V4.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0264/FIC0264 - NM AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQuant 2015.x  |Yes|1|Up to max of Enterprise concurrent users">FIC0266/FIC0266 - SPECT AutoQuant 2015.x  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0268 - NM/CTA Cedars Fusion 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2015.x |Yes|1|Up to max of Enterprise concurrent users">FIC0270 - Cedars MFSC 2015.x </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0473/FIC0473 - NM AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="SPECT AutoQUANT 2017  |Yes|1|Up to max of Enterprise concurrent users">FIC0474/FIC0474 - SPECT AutoQUANT 2017  </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM/CTA Cedars Fusion 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0475/FIC0475 - NM/CTA Cedars Fusion 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Cedars MFSC 2017 |Yes|1|Up to max of Enterprise concurrent users">FIC0476/FIC0476 - Cedars MFSC 2017 </asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2016|No|Enterprise|">FIC0304 - Corridor4DM SPECT 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2016|No|Enterprise|">FIC0303 - Corridor4DM NM 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2016|No|Enterprise|">FIC0305 - Corridor4DM CT Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor 4DM CFR MBF Opt 2016|No|Enterprise|">FIC0306 - Corridor 4DM CFR MBF Opt 2016</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM NM 2018|No|Enterprise|">FIC0461 - Corridor4DM NM 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
+                                                                                        <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
+
+                                                                                        <asp:ListItem Value="NeuroQ SPECT Opt - Add_Users|NULL||NULL">FIC0253 - NeuroQ SPECT Opt - Add_Users</asp:ListItem>
+                                                                                        <asp:ListItem Value="ECTB NM v4.x - Add_Users|NULL||NULL">FIC0221 - ECTB NM v4.x - Add_Users</asp:ListItem>
                                                                                     </asp:DropDownList>
 
                                                                                 </td>
@@ -1924,7 +2554,7 @@
 
 
                                                    
-                                                   
+                                                   <asp:HiddenField ID="HiddenApplicationServer" Value="" runat="server" />
 
                                                     <asp:HiddenField ID="HiddenDeliveryModel" Value="" runat="server" />
 
@@ -2090,6 +2720,8 @@
 
         var arrHead = new Array();
         arrHead = ['No', 'Menu', 'Mac','Remove']; // table headers.
+
+
 
 
 
@@ -2342,7 +2974,12 @@
                             ele.setAttribute('onclick', 'deleteLicencePro(this);');
                             td.appendChild(ele);
 
-                            document.getElementById('cmdLicenceProDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                            if ($("#ApplicationSoftwareHardWare" + idx)[0].value == "NICA963 - ISP Test Server - Software Only") {
+                            }
+                            else {
+                                document.getElementById('cmdLicenceProDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                            }
+                            
 
 
                         } else {
@@ -2510,7 +3147,13 @@
                             ele.setAttribute('onclick', 'deleteLicence(this);');
                             td.appendChild(ele);
 
-                            document.getElementById('cmdLicenceDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                            if ($("#ApplicationSoftwareOnly" + idx)[0].value == "NICA963 - ISP Test Server - Software Only")
+                            {
+                               // document.getElementById('cmdLicenceDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                            } else
+                            {
+                                document.getElementById('cmdLicenceDelete' + idx).innerHTML = '<i class="fa fa-trash" aria-hidden="true" style="font-size: 22px; margin-top: 5px;color: #337ab7;"></i>';
+                            }
 
 
                         } else {
@@ -2698,17 +3341,17 @@
                         
                         console.log("data.data:" + data.data);
 
-                        if (data.data == "0") {
+                        //if (data.data == "0") {
                             
-                            $("#" + ddlbox.id).val('').change();                                                                                                                                     
-                            $("#txtConcurrent" + ddlbox.id.replace("cmdApplication", ""))[0].value = "";
-                            $("#hidtxtConcurrent"+ ddlbox.id.replace("cmdApplication",""))[0].value ="";
+                        //    $("#" + ddlbox.id).val('').change();                                                                                                                                     
+                        //    $("#txtConcurrent" + ddlbox.id.replace("cmdApplication", ""))[0].value = "";
+                        //    $("#hidtxtConcurrent"+ ddlbox.id.replace("cmdApplication",""))[0].value ="";
 
                            
 
-                            $("#ApplicationErrorModalCenter").modal();
-                            return false;
-                        }
+                        //   // $("#ApplicationErrorModalCenter").modal();
+                        //    return false;
+                        //}
 
 
                         if (data.data == "3") {
@@ -2774,15 +3417,25 @@
 
                         if (array[2] == "1") {
                             if (!array[0].includes("Add_Users")) {
-                                $("#txtConcurrent" + CurrentIDX)[0].readOnly = true;
+                                if (array[3] == "Up to max of Enterprise concurrent users") {
+
+                                } else {
+                                    $("#txtConcurrent" + CurrentIDX)[0].readOnly = true;
+                                }
+
                             } else {
                                 $("#txtConcurrent" + CurrentIDX)[0].readOnly = false;
                             }
                         }
 
                         if (!array[0].includes("Add_Users")) {
-                            $("#txtConcurrent" + CurrentIDX)[0].value = array[2];
-                            $("#hidtxtConcurrent" +CurrentIDX)[0].value = array[2];
+
+                            if ($("#txtConcurrent" + CurrentIDX)[0].value == "") {
+
+                                $("#txtConcurrent" + CurrentIDX)[0].value = array[2];
+                                $("#hidtxtConcurrent" + CurrentIDX)[0].value = array[2];
+
+                            }
 
                             switch (array[3])
                             {
@@ -2891,13 +3544,14 @@
 
 
 
+                if (array[3] != "55") {
+                    //Concurrent_Users
+                    if (array[1] == "No") {
 
-                //Concurrent_Users
-                if (array[1] == "No") {
-
-                    $("#txtConcurrent" + CurrentIDX)[0].disabled = true;
-                } else {
-                    $("#txtConcurrent" + CurrentIDX)[0].disabled = false;
+                        $("#txtConcurrent" + CurrentIDX)[0].disabled = true;
+                    } else {
+                        $("#txtConcurrent" + CurrentIDX)[0].disabled = false;
+                    }
                 }
 
                 //Concurrent_Range - Max
@@ -3287,8 +3941,15 @@
                     $("#hidtxtConcurrent" + (i + 1))[0].value = res[2];                
                     $("#cmdHospitalName" + (i+1))[0].value = res[3]
                     
-                    if (!$("#cmdApplication" + (i+1))[0].value.includes("Add_Users")) {
-                        $("#txtConcurrent" + (i+1))[0].readOnly = true;
+                    if (!$("#cmdApplication" + (i + 1))[0].value.includes("Add_Users")) {
+
+                        if ($("#cmdApplication" + (i + 1))[0].value.includes("Up to max of Enterprise concurrent users"))
+                        {
+                            $("#txtConcurrent" + (i + 1))[0].readOnly = false;
+                        } else {
+                            $("#txtConcurrent" + (i + 1))[0].readOnly = true;
+                        }
+                       
                     } else {
                         $("#txtConcurrent" + (i+1))[0].readOnly = false;
                     }
@@ -3302,7 +3963,7 @@
             $("#hidadditionalapps")[0].value = arrlist.length;
        
 
-            GetLicenceData();
+           // GetLicenceData();
         }
 
 
@@ -3322,155 +3983,96 @@
             $("#txtHospitalName" + hidv)[0].value = "";
             $("#txtHospitalStreet" + hidv)[0].value = "";
 
-
-
-             //reorder
+            
+            //Save Order
             var i;
+            var arrlist = [];
             for (i = 1; i <= 10; i++) {
-                if (i <= 14) {
+                if (i <= 10) {
                     if ($("#txtHospitalName" + i)[0].value != "") {
-                        //Item has data 
-                        if ($("#txtHospitalName" + (i + 1))[0].value == "" & $("#txtHospitalName" + (i + 2))[0].value != "") {
 
-                            $("#txtHospitalName"+(i + 1)+"").val($("#txtHospitalName" + (i+2))[0].value);                           
-                            $("#txtHospitalStreet" + (i + 1) + "")[0].value = $("#txtHospitalStreet" + (i + 2) + "")[0].value;
-                           
-                               $("#row"+hidv+"-central").show();
-                            $("#row" + (hidv+1) + "-central").hide();
+                        let itemline = i;
+                        itemline += ":";
+                        itemline += $("#txtHospitalName" + (i))[0].value;
+                        itemline += ":";
+                        itemline += $("#txtHospitalStreet" + (i))[0].value;
+                        itemline += ":";
+
+                        if ($("#HospitalSite1ConnectivityHigh" + (i))[0].checked) {
+                            itemline += "H";
                         }
-                    } 
+
+                        if ($("#HospitalSite1ConnectivityMed" + (i))[0].checked) {
+                            itemline += "M";
+                        }
+
+                        if ($("#HospitalSite1ConnectivityLow" + (i))[0].checked) {
+                            itemline += "L";
+                        }
+
+                        arrlist.push(itemline);
+
+                        
+                    }
                 }
+            }                                                         
+            //Save Order
+
+
+            //blank all boxes
+
+            for (var i = 1; i <= arrlist.length + 1; i++) {
+                $("#txtHospitalName" + (i)).val("");
+                $("#txtHospitalStreet" + (i))[0].value = "";
+                $("#HospitalSite1ConnectivityHigh" + (i))[0].checked = true;         
+                $("#row" + i + "-central").hide();
             }
-            //reorder
-
-
-           // hidv = thisItem.id;
-          //  hidv = parseInt(hidv.replace("cmdHospitalDelete", ""));
 
 
 
-            //switch (hidv) {
-            //    case 1:
-            //        $("#row2-central").hide();
-            //        $("#row3-central").hide();
-            //        $("#row4-central").hide();
-            //        $("#row5-central").hide();
-            //        $("#row6-central").hide();
-            //        $("#row7-central").hide();
-            //        $("#row8-central").hide();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 2:
-            //        $("#row2-central").show();
-            //        $("#row3-central").hide();
-            //        $("#row4-central").hide();
-            //        $("#row5-central").hide();
-            //        $("#row6-central").hide();
-            //        $("#row7-central").hide();
-            //        $("#row8-central").hide();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 3:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").hide();
-            //        $("#row5-central").hide();
-            //        $("#row6-central").hide();
-            //        $("#row7-central").hide();
-            //        $("#row8-central").hide();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 4:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").show();
-            //        $("#row5-central").hide();
-            //        $("#row6-central").hide();
-            //        $("#row7-central").hide();
-            //        $("#row8-central").hide();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 5:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").show();
-            //        $("#row5-central").show();
-            //        $("#row6-central").hide();
-            //        $("#row7-central").hide();
-            //        $("#row8-central").hide();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 6:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").show();
-            //        $("#row5-central").show();
-            //        $("#row6-central").show();
-            //        $("#row7-central").hide();
-            //        $("#row8-central").hide();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 7:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").show();
-            //        $("#row5-central").show();
-            //        $("#row6-central").show();
-            //        $("#row7-central").show();
-            //        $("#row8-central").hide();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 8:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").show();
-            //        $("#row5-central").show();
-            //        $("#row6-central").show();
-            //        $("#row7-central").show();
-            //        $("#row8-central").show();
-            //        $("#row9-central").hide();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 9:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").show();
-            //        $("#row5-central").show();
-            //        $("#row6-central").show();
-            //        $("#row7-central").show();
-            //        $("#row8-central").show();
-            //        $("#row9-central").show();
-            //        $("#row10-central").hide();
-            //        break;
-            //    case 10:
-            //        $("#row2-central").show();
-            //        $("#row3-central").show();
-            //        $("#row4-central").show();
-            //        $("#row5-central").show();
-            //        $("#row6-central").show();
-            //        $("#row7-central").show();
-            //        $("#row8-central").show();
-            //        $("#row9-central").show();
-            //        $("#row10-central").show();
-            //        break;
-            //}
 
+
+            //rebuild
+
+            for (var i = 0; i <= arrlist.length - 1; i++) {
+
+                var res = arrlist[i].split(":");
+
+                $("#txtHospitalName" + (i + 1)).val(res[1]);
+                $("#txtHospitalStreet" + (i + 1))[0].value = res[2];
+
+                if (res[3]=="H") {
+                    $("#HospitalSite1ConnectivityHigh" + (i + 1) )[0].checked = true;
+                }
+
+                if (res[3] == "M") {
+                    $("#HospitalSite1ConnectivityMed" + (i + 1))[0].checked = true;
+                }
+
+                if (res[3] == "L") {
+                    $("#HospitalSite1ConnectivityLow" + (i + 1))[0].checked = true;
+                }
+
+
+                $("#row" + (i+1) + "-central").show();
+                $("#hidCentralSite")[0].value = i;
+        
+
+            }
+
+           
         }
 
-        function CentralAddSite() {
+        function CentralAddSite(skipincrement = false) {
 
             let hidv = $("#hidCentralSite")[0].value;
-            hidv++;
+            if (skipincrement == true) {
+                hidv++;
+            }
+
             $("#hidCentralSite")[0].value = hidv;
 
-            switch (hidv) {
+            switch (parseInt(hidv)) {
                 case 2:
                     $("#row2-central").show();
                     break;
@@ -3572,10 +4174,29 @@
                 if ($("#cmdApplication" + i)[0] != undefined && $("#cmdApplication" + i)[0].value !="" ) {
                     let appitem = $("#cmdApplication" + i)[0].value;
                     var array = $("#cmdApplication" + i)[0].value.split("|");
-                    if (array[2] == "Enterprise") {
+                    if (array[3] == "Up to max of Enterprise concurrent users") {
                         if ($("#txtConcurrent" + i)[0].value != "") {
-                            $("#txtConcurrent" + i)[0].value = enterpriseuser;
-                            $("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+
+                            $("#txtConcurrent" + i)[0].max = enterpriseuser;
+
+                            if (parseInt($("#txtConcurrent" + i)[0].value) > parseInt(enterpriseuser)) {
+                                $("#txtConcurrent" + i)[0].value = enterpriseuser;
+                                $("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+                            }
+
+                            if (parseInt(enterpriseuser) < parseInt($("#txtConcurrent" + i)[0].max)) {
+                               // $("#txtConcurrent" + i)[0].value = enterpriseuser;
+                               // $("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+                                $("#txtConcurrent" + i)[0].max = enterpriseuser;
+
+                                if ($("#hidtxtConcurrent" + i)[0].value > enterpriseuser) {
+                                    $("#txtConcurrent" + i)[0].value = enterpriseuser;
+                                    $("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+                                }
+
+                            }
+
+
                         }
                     } else {
 
@@ -3584,9 +4205,7 @@
                                 if (array[0].includes("Add_Users")) {
 
 
-                                    
-
-                                     switch (array[0]) {
+                                    switch (array[0]) {
                                         case "DynaCAD Enterprise - Add_Users":
                                             let usageCount = 0;
 
@@ -3598,15 +4217,13 @@
                                                 }
                                             }
 
-                                             $("#txtConcurrent" + i)[0].min = 1;
-                                             $("#txtConcurrent" + i)[0].max = (4 - usageCount);
+                                            $("#txtConcurrent" + i)[0].min = 1;
+                                            $("#txtConcurrent" + i)[0].max = (4 - usageCount);
 
-                                             if ((4 - usageCount) > $("#txtConcurrent" + i)[0].value) {
+                                            if ((4 - usageCount) > $("#txtConcurrent" + i)[0].value) {
                                                 $("#txtConcurrent" + i)[0].value = (4 - usageCount);
                                                 $("#hidtxtConcurrent" + i)[0].value = (4 - usageCount);
-                                             }
-
-
+                                            }
 
                                             break;
                                         case "Zero FootPrint Viewer SW - Add_Users":
@@ -3614,23 +4231,28 @@
                                             $("#txtConcurrent" + i)[0].max = 53;
                                             break;
                                         default:
-                                             $("#txtConcurrent" + i)[0].max = enterpriseuser - 1;
-                                             if (enterpriseuser - 1 < $("#txtConcurrent" + i)[0].value) {
+                                            $("#txtConcurrent" + i)[0].max = enterpriseuser - 1;
+                                            if (enterpriseuser - 1 < $("#txtConcurrent" + i)[0].value) {
                                                 $("#txtConcurrent" + i)[0].value = enterpriseuser - 1;
                                                 $("#hidtxtConcurrent" + i)[0].value = enterpriseuser - 1;
                                             }
                                             break;
                                     }
 
+                                }
+                            } else {
+                                if (array[2] == "Enterprise") {
 
+                                    $("#txtConcurrent" + i)[0].max = enterpriseuser;
 
-                                    
-
-                                    
-                                    
-
+                                    if (parseInt(enterpriseuser) <= parseInt($("#txtConcurrent" + i)[0].max)) {
+                                        $("#txtConcurrent" + i)[0].value = enterpriseuser;
+                                        $("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+                                        $("#txtConcurrent" + i)[0].max = enterpriseuser;
+                                    }
                                 }
                             }
+
                         }
                     }
                 }
@@ -5043,9 +5665,15 @@
             let selectedapplication2 = $("#cmdApplication2")[0].value + "?" + $("#txtConcurrent2")[0].value;
             let selectedapplication3 = $("#cmdApplication3")[0].value + "?" + $("#txtConcurrent3")[0].value;
             let selectedapplication4 = $("#cmdApplication4")[0].value + "?" + $("#txtConcurrent4")[0].value;
+            let selectedapplication5 = $("#cmdApplication5")[0].value + "?" + $("#txtConcurrent5")[0].value;
+            let selectedapplication6 = $("#cmdApplication6")[0].value + "?" + $("#txtConcurrent6")[0].value;
+            let selectedapplication7 = $("#cmdApplication7")[0].value + "?" + $("#txtConcurrent7")[0].value;
+            let selectedapplication8 = $("#cmdApplication8")[0].value + "?" + $("#txtConcurrent8")[0].value;
+            let selectedapplication9 = $("#cmdApplication9")[0].value + "?" + $("#txtConcurrent9")[0].value;
+            let selectedapplication10 = $("#cmdApplication10")[0].value + "?" + $("#txtConcurrent10")[0].value;
 
 
-            selectedapplication = selectedapplication1 + "~" + selectedapplication2 + "~" + selectedapplication3 + "~" + selectedapplication4;//+ "~" + selectedapplication5;
+            selectedapplication = selectedapplication1 + "~" + selectedapplication2 + "~" + selectedapplication3 + "~" + selectedapplication4 + "~" + selectedapplication5 + "~" + selectedapplication6 + "~" + selectedapplication7 + "~" + selectedapplication8 + "~" + selectedapplication9 + "~" + selectedapplication10;
 
             var myKeyVals = { enterpriseuser: enterpriseuser, selectedapplication: selectedapplication, enterpriseuser: enterpriseuser }
 
@@ -5578,14 +6206,28 @@
 
         $(document).ready(function () {
             GetLicenceData();
-            $('.ApplicationDDL').select2();
+            CentralAddSite(false);
 
-
+            $('.ApplicationDDL').select2();            
              $('.ToggleDropdown').click(function () {
-
                 $('.drop-down').addClass('OpenDropdown');
+             });
 
-            });
+
+            for (i = 1; i < 10; i++)
+            {
+                if ($("#txtHospitalName" + i)[0].value != "") {
+                    UpdateHospital(i);
+                }
+               
+                if ($("#cmdApplication" + i)[0].value != "") {
+
+                    $("#row" + i + "-additional-apps").show();
+
+                    GetApplicationData($("#cmdApplication" + i)[0]);
+                }
+            }
+
 
         });
 

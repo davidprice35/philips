@@ -372,7 +372,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             
             if (m_ID!="")
             {
-                SQL = "UPDATE PhilipsLic_Project  set project_name='"+ txtProjectName.Text + "' where PhilipsLic_ProjectID=" + m_ID;
+                SQL = "UPDATE PhilipsLic_Project  set project_name='"+ txtProjectName.Text + "' , customer_key_account='"+ KeyAccountJSON + "' , customer_portalsales='" + PortalJSON + "',  customer_project_core='" + CoreJSON + "'   where PhilipsLic_ProjectID=" + m_ID;
                 Helper.InsertData(SQL);
                 Response.Redirect("/lic-server/ISPConcerto.aspx?id=" + m_ID, true);
             }
@@ -470,18 +470,22 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtPortalKeyAccountFirstName2.Visible = true;
                         txtPortalKeyAccountLastName2.Visible = true;
                         txtPortalKeyAccountEmail2.Visible = true;
+                        lnktxtPortalKeyAccountDelete2.Visible = true;
 
                         txtPortalKeyAccountFirstName3.Visible = true;
                         txtPortalKeyAccountLastName3.Visible = true;
                         txtPortalKeyAccountEmail3.Visible = true;
+                        lnktxtPortalKeyAccountDelete3.Visible = true;
 
                         txtPortalKeyAccountFirstName4.Visible = true;
                         txtPortalKeyAccountLastName4.Visible = true;
                         txtPortalKeyAccountEmail4.Visible = true;
+                        lnktxtPortalKeyAccountDelete4.Visible = true;
 
                         txtPortalKeyAccountFirstName5.Visible = true;
                         txtPortalKeyAccountLastName5.Visible = true;
                         txtPortalKeyAccountEmail5.Visible = true;
+                        lnktxtPortalKeyAccountDelete5.Visible = true;
 
                         break;
 
@@ -489,154 +493,185 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtPortalKeyAccountFirstName2.Visible = true;
                         txtPortalKeyAccountLastName2.Visible = true;
                         txtPortalKeyAccountEmail2.Visible = true;
+                        lnktxtPortalKeyAccountDelete2.Visible = true;
 
                         txtPortalKeyAccountFirstName3.Visible = true;
                         txtPortalKeyAccountLastName3.Visible = true;
                         txtPortalKeyAccountEmail3.Visible = true;
+                        lnktxtPortalKeyAccountDelete3.Visible = true;
 
                         txtPortalKeyAccountFirstName4.Visible = true;
                         txtPortalKeyAccountLastName4.Visible = true;
                         txtPortalKeyAccountEmail4.Visible = true;
+                        lnktxtPortalKeyAccountDelete4.Visible = true;
 
                         txtPortalKeyAccountFirstName5.Visible = true;
                         txtPortalKeyAccountLastName5.Visible = true;
                         txtPortalKeyAccountEmail5.Visible = true;
+                        lnktxtPortalKeyAccountDelete5.Visible = true;
 
                         txtPortalKeyAccountFirstName6.Visible = true;
                         txtPortalKeyAccountLastName6.Visible = true;
                         txtPortalKeyAccountEmail6.Visible = true;
-
+                        lnktxtPortalKeyAccountDelete6.Visible = true;
                         break;
 
                     case "7":
                         txtPortalKeyAccountFirstName2.Visible = true;
                         txtPortalKeyAccountLastName2.Visible = true;
                         txtPortalKeyAccountEmail2.Visible = true;
+                        lnktxtPortalKeyAccountDelete2.Visible = true;
 
                         txtPortalKeyAccountFirstName3.Visible = true;
                         txtPortalKeyAccountLastName3.Visible = true;
                         txtPortalKeyAccountEmail3.Visible = true;
+                        lnktxtPortalKeyAccountDelete3.Visible = true;
 
                         txtPortalKeyAccountFirstName4.Visible = true;
                         txtPortalKeyAccountLastName4.Visible = true;
                         txtPortalKeyAccountEmail4.Visible = true;
+                        lnktxtPortalKeyAccountDelete4.Visible = true;
 
                         txtPortalKeyAccountFirstName5.Visible = true;
                         txtPortalKeyAccountLastName5.Visible = true;
                         txtPortalKeyAccountEmail5.Visible = true;
+                        lnktxtPortalKeyAccountDelete5.Visible = true;
 
                         txtPortalKeyAccountFirstName6.Visible = true;
                         txtPortalKeyAccountLastName6.Visible = true;
                         txtPortalKeyAccountEmail6.Visible = true;
+                        lnktxtPortalKeyAccountDelete6.Visible = true;
 
                         txtPortalKeyAccountFirstName7.Visible = true;
                         txtPortalKeyAccountLastName7.Visible = true;
                         txtPortalKeyAccountEmail7.Visible = true;
-
+                        lnktxtPortalKeyAccountDelete7.Visible = true;
                         break;
 
                     case "8":
                         txtPortalKeyAccountFirstName2.Visible = true;
                         txtPortalKeyAccountLastName2.Visible = true;
                         txtPortalKeyAccountEmail2.Visible = true;
+                        lnktxtPortalKeyAccountDelete2.Visible = true;
 
                         txtPortalKeyAccountFirstName3.Visible = true;
                         txtPortalKeyAccountLastName3.Visible = true;
                         txtPortalKeyAccountEmail3.Visible = true;
+                        lnktxtPortalKeyAccountDelete3.Visible = true;
 
                         txtPortalKeyAccountFirstName4.Visible = true;
                         txtPortalKeyAccountLastName4.Visible = true;
                         txtPortalKeyAccountEmail4.Visible = true;
+                        lnktxtPortalKeyAccountDelete4.Visible = true;
 
                         txtPortalKeyAccountFirstName5.Visible = true;
                         txtPortalKeyAccountLastName5.Visible = true;
                         txtPortalKeyAccountEmail5.Visible = true;
+                        lnktxtPortalKeyAccountDelete5.Visible = true;
 
                         txtPortalKeyAccountFirstName6.Visible = true;
                         txtPortalKeyAccountLastName6.Visible = true;
                         txtPortalKeyAccountEmail6.Visible = true;
+                        lnktxtPortalKeyAccountDelete6.Visible = true;
 
                         txtPortalKeyAccountFirstName7.Visible = true;
                         txtPortalKeyAccountLastName7.Visible = true;
                         txtPortalKeyAccountEmail7.Visible = true;
+                        lnktxtPortalKeyAccountDelete7.Visible = true;
 
                         txtPortalKeyAccountFirstName8.Visible = true;
                         txtPortalKeyAccountLastName8.Visible = true;
                         txtPortalKeyAccountEmail8.Visible = true;
-
+                        lnktxtPortalKeyAccountDelete8.Visible = true;
                         break;
 
                     case "9":
                         txtPortalKeyAccountFirstName2.Visible = true;
                         txtPortalKeyAccountLastName2.Visible = true;
                         txtPortalKeyAccountEmail2.Visible = true;
+                        lnktxtPortalKeyAccountDelete2.Visible = true;
 
                         txtPortalKeyAccountFirstName3.Visible = true;
                         txtPortalKeyAccountLastName3.Visible = true;
                         txtPortalKeyAccountEmail3.Visible = true;
+                        lnktxtPortalKeyAccountDelete3.Visible = true;
 
                         txtPortalKeyAccountFirstName4.Visible = true;
                         txtPortalKeyAccountLastName4.Visible = true;
                         txtPortalKeyAccountEmail4.Visible = true;
+                        lnktxtPortalKeyAccountDelete4.Visible = true;
 
                         txtPortalKeyAccountFirstName5.Visible = true;
                         txtPortalKeyAccountLastName5.Visible = true;
                         txtPortalKeyAccountEmail5.Visible = true;
+                        lnktxtPortalKeyAccountDelete5.Visible = true;
 
                         txtPortalKeyAccountFirstName6.Visible = true;
                         txtPortalKeyAccountLastName6.Visible = true;
                         txtPortalKeyAccountEmail6.Visible = true;
+                        lnktxtPortalKeyAccountDelete6.Visible = true;
 
                         txtPortalKeyAccountFirstName7.Visible = true;
                         txtPortalKeyAccountLastName7.Visible = true;
                         txtPortalKeyAccountEmail7.Visible = true;
+                        lnktxtPortalKeyAccountDelete7.Visible = true;
 
                         txtPortalKeyAccountFirstName8.Visible = true;
                         txtPortalKeyAccountLastName8.Visible = true;
                         txtPortalKeyAccountEmail8.Visible = true;
+                        lnktxtPortalKeyAccountDelete8.Visible = true;
 
                         txtPortalKeyAccountFirstName9.Visible = true;
                         txtPortalKeyAccountLastName9.Visible = true;
                         txtPortalKeyAccountEmail9.Visible = true;
-
+                        lnktxtPortalKeyAccountDelete9.Visible = true;
                         break;
 
                     case "10":
                         txtPortalKeyAccountFirstName2.Visible = true;
                         txtPortalKeyAccountLastName2.Visible = true;
                         txtPortalKeyAccountEmail2.Visible = true;
+                        lnktxtPortalKeyAccountDelete2.Visible = true;
 
                         txtPortalKeyAccountFirstName3.Visible = true;
                         txtPortalKeyAccountLastName3.Visible = true;
                         txtPortalKeyAccountEmail3.Visible = true;
+                        lnktxtPortalKeyAccountDelete3.Visible = true;
 
                         txtPortalKeyAccountFirstName4.Visible = true;
                         txtPortalKeyAccountLastName4.Visible = true;
                         txtPortalKeyAccountEmail4.Visible = true;
+                        lnktxtPortalKeyAccountDelete4.Visible = true;
 
                         txtPortalKeyAccountFirstName5.Visible = true;
                         txtPortalKeyAccountLastName5.Visible = true;
                         txtPortalKeyAccountEmail5.Visible = true;
+                        lnktxtPortalKeyAccountDelete5.Visible = true;
 
                         txtPortalKeyAccountFirstName6.Visible = true;
                         txtPortalKeyAccountLastName6.Visible = true;
                         txtPortalKeyAccountEmail6.Visible = true;
+                        lnktxtPortalKeyAccountDelete6.Visible = true;
 
                         txtPortalKeyAccountFirstName7.Visible = true;
                         txtPortalKeyAccountLastName7.Visible = true;
                         txtPortalKeyAccountEmail7.Visible = true;
+                        lnktxtPortalKeyAccountDelete7.Visible = true;
 
                         txtPortalKeyAccountFirstName8.Visible = true;
                         txtPortalKeyAccountLastName8.Visible = true;
                         txtPortalKeyAccountEmail8.Visible = true;
+                        lnktxtPortalKeyAccountDelete8.Visible = true;
 
                         txtPortalKeyAccountFirstName9.Visible = true;
                         txtPortalKeyAccountLastName9.Visible = true;
                         txtPortalKeyAccountEmail9.Visible = true;
+                        lnktxtPortalKeyAccountDelete9.Visible = true;
 
                         txtPortalKeyAccountFirstName10.Visible = true;
                         txtPortalKeyAccountLastName10.Visible = true;
                         txtPortalKeyAccountEmail10.Visible = true;
+                        lnktxtPortalKeyAccountDelete10.Visible = true;
 
                         break;
 
@@ -985,15 +1020,16 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtProjectCoreFirstName2.Visible = true;
                         txtProjectCoreLastName2.Visible = true;
                         txtProjectCoreEmail2.Visible = true;
+                        lnkProjectCore2.Visible = true;
 
                         txtProjectCoreFirstName3.Visible = true;
                         txtProjectCoreLastName3.Visible = true;
                         txtProjectCoreEmail3.Visible = true;
+                        lnkProjectCore3.Visible = true;
 
                         txtProjectCoreFirstName4.Visible = true;
                         txtProjectCoreLastName4.Visible = true;
                         txtProjectCoreEmail4.Visible = true;
-
                         lnkProjectCore4.Visible = true;
 
                         break;
@@ -1002,18 +1038,22 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtProjectCoreFirstName2.Visible = true;
                         txtProjectCoreLastName2.Visible = true;
                         txtProjectCoreEmail2.Visible = true;
+                        lnkProjectCore2.Visible = true;
 
                         txtProjectCoreFirstName3.Visible = true;
                         txtProjectCoreLastName3.Visible = true;
                         txtProjectCoreEmail3.Visible = true;
+                        lnkProjectCore3.Visible = true;
 
                         txtProjectCoreFirstName4.Visible = true;
                         txtProjectCoreLastName4.Visible = true;
                         txtProjectCoreEmail4.Visible = true;
+                        lnkProjectCore4.Visible = true;
 
                         txtProjectCoreFirstName5.Visible = true;
                         txtProjectCoreLastName5.Visible = true;
                         txtProjectCoreEmail5.Visible = true;
+                        lnkProjectCore5.Visible = true;
                         lnkProjectCore5.Visible = true;
                         break;
 
@@ -1021,45 +1061,55 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtProjectCoreFirstName2.Visible = true;
                         txtProjectCoreLastName2.Visible = true;
                         txtProjectCoreEmail2.Visible = true;
+                        lnkProjectCore2.Visible = true;
 
                         txtProjectCoreFirstName3.Visible = true;
                         txtProjectCoreLastName3.Visible = true;
                         txtProjectCoreEmail3.Visible = true;
+                        lnkProjectCore3.Visible = true;
 
                         txtProjectCoreFirstName4.Visible = true;
                         txtProjectCoreLastName4.Visible = true;
                         txtProjectCoreEmail4.Visible = true;
+                        lnkProjectCore4.Visible = true;
 
                         txtProjectCoreFirstName5.Visible = true;
                         txtProjectCoreLastName5.Visible = true;
                         txtProjectCoreEmail5.Visible = true;
+                        lnkProjectCore5.Visible = true;
 
                         txtProjectCoreFirstName6.Visible = true;
                         txtProjectCoreLastName6.Visible = true;
                         txtProjectCoreEmail6.Visible = true;
                         lnkProjectCore6.Visible = true;
+                        
                         break;
 
                     case "7":
                         txtProjectCoreFirstName2.Visible = true;
                         txtProjectCoreLastName2.Visible = true;
                         txtProjectCoreEmail2.Visible = true;
+                        lnkProjectCore2.Visible = true;
 
                         txtProjectCoreFirstName3.Visible = true;
                         txtProjectCoreLastName3.Visible = true;
                         txtProjectCoreEmail3.Visible = true;
+                        lnkProjectCore3.Visible = true;
 
                         txtProjectCoreFirstName4.Visible = true;
                         txtProjectCoreLastName4.Visible = true;
                         txtProjectCoreEmail4.Visible = true;
+                        lnkProjectCore4.Visible = true;
 
                         txtProjectCoreFirstName5.Visible = true;
                         txtProjectCoreLastName5.Visible = true;
                         txtProjectCoreEmail5.Visible = true;
+                        lnkProjectCore5.Visible = true;
 
                         txtProjectCoreFirstName6.Visible = true;
                         txtProjectCoreLastName6.Visible = true;
                         txtProjectCoreEmail6.Visible = true;
+                        lnkProjectCore6.Visible = true;
 
                         txtProjectCoreFirstName7.Visible = true;
                         txtProjectCoreLastName7.Visible = true;
@@ -1071,26 +1121,32 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtProjectCoreFirstName2.Visible = true;
                         txtProjectCoreLastName2.Visible = true;
                         txtProjectCoreEmail2.Visible = true;
+                        lnkProjectCore2.Visible = true;
 
                         txtProjectCoreFirstName3.Visible = true;
                         txtProjectCoreLastName3.Visible = true;
                         txtProjectCoreEmail3.Visible = true;
+                        lnkProjectCore3.Visible = true;
 
                         txtProjectCoreFirstName4.Visible = true;
                         txtProjectCoreLastName4.Visible = true;
                         txtProjectCoreEmail4.Visible = true;
+                        lnkProjectCore4.Visible = true;
 
                         txtProjectCoreFirstName5.Visible = true;
                         txtProjectCoreLastName5.Visible = true;
                         txtProjectCoreEmail5.Visible = true;
+                        lnkProjectCore5.Visible = true;
 
                         txtProjectCoreFirstName6.Visible = true;
                         txtProjectCoreLastName6.Visible = true;
                         txtProjectCoreEmail6.Visible = true;
+                        lnkProjectCore6.Visible = true;
 
                         txtProjectCoreFirstName7.Visible = true;
                         txtProjectCoreLastName7.Visible = true;
                         txtProjectCoreEmail7.Visible = true;
+                        lnkProjectCore7.Visible = true;
 
                         txtProjectCoreFirstName8.Visible = true;
                         txtProjectCoreLastName8.Visible = true;
@@ -1102,34 +1158,42 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtProjectCoreFirstName2.Visible = true;
                         txtProjectCoreLastName2.Visible = true;
                         txtProjectCoreEmail2.Visible = true;
+                        lnkProjectCore2.Visible = true;
 
                         txtProjectCoreFirstName3.Visible = true;
                         txtProjectCoreLastName3.Visible = true;
                         txtProjectCoreEmail3.Visible = true;
+                        lnkProjectCore3.Visible = true;
 
                         txtProjectCoreFirstName4.Visible = true;
                         txtProjectCoreLastName4.Visible = true;
                         txtProjectCoreEmail4.Visible = true;
+                        lnkProjectCore4.Visible = true;
 
                         txtProjectCoreFirstName5.Visible = true;
                         txtProjectCoreLastName5.Visible = true;
                         txtProjectCoreEmail5.Visible = true;
+                        lnkProjectCore5.Visible = true;
 
                         txtProjectCoreFirstName6.Visible = true;
                         txtProjectCoreLastName6.Visible = true;
                         txtProjectCoreEmail6.Visible = true;
+                        lnkProjectCore6.Visible = true;
 
                         txtProjectCoreFirstName7.Visible = true;
                         txtProjectCoreLastName7.Visible = true;
                         txtProjectCoreEmail7.Visible = true;
+                        lnkProjectCore7.Visible = true;
 
                         txtProjectCoreFirstName8.Visible = true;
                         txtProjectCoreLastName8.Visible = true;
                         txtProjectCoreEmail8.Visible = true;
+                        lnkProjectCore8.Visible = true;
 
                         txtProjectCoreFirstName9.Visible = true;
                         txtProjectCoreLastName9.Visible = true;
                         txtProjectCoreEmail9.Visible = true;
+                        lnkProjectCore9.Visible = true;
                         lnkProjectCore9.Visible = true;
                         break;
 
@@ -1137,34 +1201,43 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         txtProjectCoreFirstName2.Visible = true;
                         txtProjectCoreLastName2.Visible = true;
                         txtProjectCoreEmail2.Visible = true;
+                        lnkProjectCore2.Visible = true;
 
                         txtProjectCoreFirstName3.Visible = true;
                         txtProjectCoreLastName3.Visible = true;
                         txtProjectCoreEmail3.Visible = true;
+                        lnkProjectCore3.Visible = true;
 
                         txtProjectCoreFirstName4.Visible = true;
                         txtProjectCoreLastName4.Visible = true;
                         txtProjectCoreEmail4.Visible = true;
+                        lnkProjectCore4.Visible = true;
 
                         txtProjectCoreFirstName5.Visible = true;
                         txtProjectCoreLastName5.Visible = true;
                         txtProjectCoreEmail5.Visible = true;
+                        lnkProjectCore5.Visible = true;
 
                         txtProjectCoreFirstName6.Visible = true;
                         txtProjectCoreLastName6.Visible = true;
                         txtProjectCoreEmail6.Visible = true;
+                        lnkProjectCore6.Visible = true;
 
                         txtProjectCoreFirstName7.Visible = true;
                         txtProjectCoreLastName7.Visible = true;
                         txtProjectCoreEmail7.Visible = true;
+                        lnkProjectCore7.Visible = true;
+
 
                         txtProjectCoreFirstName8.Visible = true;
                         txtProjectCoreLastName8.Visible = true;
                         txtProjectCoreEmail8.Visible = true;
+                        lnkProjectCore8.Visible = true;
 
                         txtProjectCoreFirstName9.Visible = true;
                         txtProjectCoreLastName9.Visible = true;
                         txtProjectCoreEmail9.Visible = true;
+                        lnkProjectCore9.Visible = true;
 
                         txtProjectCoreFirstName10.Visible = true;
                         txtProjectCoreLastName10.Visible = true;
@@ -1226,13 +1299,21 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             lnktxtPortalKeyAccountDelete2.Visible = false;
                             break;
                         case "2":
+                            txtPortalKeyAccountFirstName2.Text = "";
+                            txtPortalKeyAccountLastName2.Text = "";
+                            txtPortalKeyAccountEmail2.Text = "";
+
                             txtPortalKeyAccountFirstName2.Visible = false;
                             txtPortalKeyAccountLastName2.Visible = false;
                             txtPortalKeyAccountEmail2.Visible = false;
                             lnktxtPortalKeyAccountDelete2.Visible = false;
                             break;
                         case "3":
-                            
+
+                            txtPortalKeyAccountFirstName3.Text = "";
+                            txtPortalKeyAccountLastName3.Text = "";
+                            txtPortalKeyAccountEmail3.Text = "";
+
                             txtPortalKeyAccountFirstName3.Visible = false;
                             txtPortalKeyAccountLastName3.Visible = false;
                             txtPortalKeyAccountEmail3.Visible = false;
@@ -1241,7 +1322,11 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
 
                         case "4":
-                           
+
+                            txtPortalKeyAccountFirstName4.Text = "";
+                            txtPortalKeyAccountLastName4.Text = "";
+                            txtPortalKeyAccountEmail4.Text = "";
+
                             txtPortalKeyAccountFirstName4.Visible = false;
                             txtPortalKeyAccountLastName4.Visible = false;
                             txtPortalKeyAccountEmail4.Visible = false;
@@ -1251,7 +1336,9 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
 
                         case "5":
-                           
+                            txtPortalKeyAccountFirstName5.Text = "";
+                            txtPortalKeyAccountLastName5.Text = "";
+                            txtPortalKeyAccountEmail5.Text = "";
 
                             txtPortalKeyAccountFirstName5.Visible = false;
                             txtPortalKeyAccountLastName5.Visible = false;
@@ -1260,8 +1347,10 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
 
                         case "6":
-                          
 
+                            txtPortalKeyAccountFirstName6.Text = "";
+                            txtPortalKeyAccountLastName6.Text = "";
+                            txtPortalKeyAccountEmail6.Text = "";
                             txtPortalKeyAccountFirstName6.Visible = false;
                             txtPortalKeyAccountLastName6.Visible = false;
                             txtPortalKeyAccountEmail6.Visible = false;
@@ -1269,8 +1358,10 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
 
                         case "7":
-                            
 
+                            txtPortalKeyAccountFirstName7.Text = "";
+                            txtPortalKeyAccountLastName7.Text = "";
+                            txtPortalKeyAccountEmail7.Text = "";
                             txtPortalKeyAccountFirstName7.Visible = false;
                             txtPortalKeyAccountLastName7.Visible = false;
                             txtPortalKeyAccountEmail7.Visible = false;
@@ -1278,8 +1369,10 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
 
                         case "8":
-                           
 
+                            txtPortalKeyAccountFirstName8.Text = "";
+                            txtPortalKeyAccountLastName8.Text = "";
+                            txtPortalKeyAccountEmail8.Text = "";
                             txtPortalKeyAccountFirstName8.Visible = false;
                             txtPortalKeyAccountLastName8.Visible = false;
                             txtPortalKeyAccountEmail8.Visible = false;
@@ -1287,8 +1380,10 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
 
                         case "9":
-                           
 
+                            txtPortalKeyAccountFirstName9.Text = "";
+                            txtPortalKeyAccountLastName9.Text = "";
+                            txtPortalKeyAccountEmail9.Text = "";
                             txtPortalKeyAccountFirstName9.Visible = false;
                             txtPortalKeyAccountLastName9.Visible = false;
                             txtPortalKeyAccountEmail9.Visible = false;
@@ -1296,7 +1391,10 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             break;
 
                         case "10":
-                           
+
+                            txtPortalKeyAccountFirstName10.Text = "";
+                            txtPortalKeyAccountLastName10.Text = "";
+                            txtPortalKeyAccountEmail10.Text = "";
 
                             txtPortalKeyAccountFirstName10.Visible = false;
                             txtPortalKeyAccountLastName10.Visible = false;
@@ -1591,51 +1689,110 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             txtPortalKeyAccountFirstName1.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName1.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail1.Text = KeyProjectData1[ixa].Email;
+
                             break;
                         case 1:
                             txtPortalKeyAccountFirstName2.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName2.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail2.Text = KeyProjectData1[ixa].Email; ;
+                            txtPortalKeyAccountEmail2.Visible = true;
+                            txtPortalKeyAccountLastName2.Visible = true;
+                            txtPortalKeyAccountFirstName2.Visible = true;
+                            lnktxtPortalKeyAccountDelete2.Visible = true;
+
+                            Session["KeyAccountCount"] = 2; 
+
                             break;
                         case 2:
                             txtPortalKeyAccountFirstName3.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName3.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail3.Text = KeyProjectData1[ixa].Email;
+                            txtPortalKeyAccountEmail3.Visible = true;
+                            txtPortalKeyAccountLastName3.Visible = true;
+                            txtPortalKeyAccountFirstName3.Visible = true;
+                            lnktxtPortalKeyAccountDelete3.Visible = true;
+                            Session["KeyAccountCount"] = 3;
                             break;
                         case 3:
                             txtPortalKeyAccountFirstName4.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName4.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail4.Text = KeyProjectData1[ixa].Email;
+                            txtPortalKeyAccountEmail4.Visible = true;
+                            txtPortalKeyAccountLastName4.Visible = true;
+                            txtPortalKeyAccountFirstName4.Visible = true;
+                            lnktxtPortalKeyAccountDelete4.Visible = true;
+
+                            Session["KeyAccountCount"] = 4;
                             break;
                         case 4:
                             txtPortalKeyAccountFirstName5.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName5.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail5.Text = KeyProjectData1[ixa].Email;
+                            txtPortalKeyAccountEmail5.Visible = true;
+                            txtPortalKeyAccountLastName5.Visible = true;
+                            txtPortalKeyAccountFirstName5.Visible = true;
+                            lnktxtPortalKeyAccountDelete5.Visible = true;
+
+                            Session["KeyAccountCount"] = 5;
                             break;
                         case 5:
                             txtPortalKeyAccountFirstName6.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName6.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail6.Text = KeyProjectData1[ixa].Email;
+                            txtPortalKeyAccountEmail6.Visible = true;
+                            txtPortalKeyAccountLastName6.Visible = true;
+                            txtPortalKeyAccountFirstName6.Visible = true;
+                            lnktxtPortalKeyAccountDelete6.Visible = true;
+                            Session["KeyAccountCount"] = 6;
                             break;
                         case 6:
                             txtPortalKeyAccountFirstName7.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName7.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail7.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalKeyAccountEmail7.Visible = true;
+                            txtPortalKeyAccountLastName7.Visible = true;
+                            txtPortalKeyAccountFirstName7.Visible = true;
+                            lnktxtPortalKeyAccountDelete7.Visible = true;
+
+                            Session["KeyAccountCount"] = 7;
                             break;
                         case 7:
                             txtPortalKeyAccountFirstName8.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName8.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail8.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalKeyAccountEmail8.Visible = true;
+                            txtPortalKeyAccountLastName8.Visible = true;
+                            txtPortalKeyAccountFirstName8.Visible = true;
+                            lnktxtPortalKeyAccountDelete8.Visible = true;
+
+                            Session["KeyAccountCount"] = 8;
                             break;
                         case 8:
                             txtPortalKeyAccountFirstName9.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName9.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail9.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalKeyAccountEmail9.Visible = true;
+                            txtPortalKeyAccountLastName9.Visible = true;
+                            txtPortalKeyAccountFirstName9.Visible = true;
+                            lnktxtPortalKeyAccountDelete9.Visible = true;
+
+                            Session["KeyAccountCount"] = 9;
+
                             break;
                         case 9:
                             txtPortalKeyAccountFirstName10.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalKeyAccountLastName10.Text = KeyProjectData1[ixa].LastName;
                             txtPortalKeyAccountEmail10.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalKeyAccountEmail10.Visible = true;
+                            txtPortalKeyAccountLastName10.Visible = true;
+                            txtPortalKeyAccountFirstName10.Visible = true;
+                            lnktxtPortalKeyAccountDelete10.Visible = true;
+
+                            Session["KeyAccountCount"] = 10;
                             break;
                     }
                 }
@@ -1654,53 +1811,116 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         case 1:
                             txtPortalSalesFirstName2.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName2.Text = KeyProjectData1[ixa].LastName;
-                            txtPortalSalesEmail2.Text = KeyProjectData1[ixa].Email; ;
+                            txtPortalSalesEmail2.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName2.Visible = true;
+                            txtPortalSalesLastName2.Visible = true;
+                            txtPortalSalesEmail2.Visible = true;
+                            lnkPortalSalesDelete2.Visible = true;
+                            Session["PortalSalesCount"] = 2;
+
                             break;
                         case 2:
                             txtPortalSalesFirstName3.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName3.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail3.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName3.Visible = true;
+                            txtPortalSalesLastName3.Visible = true;
+                            txtPortalSalesEmail3.Visible = true;
+                            lnkPortalSalesDelete3.Visible = true;
+                            Session["PortalSalesCount"] = 3;
                             break;
                         case 3:
                             txtPortalSalesFirstName4.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName4.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail4.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName4.Visible = true;
+                            txtPortalSalesLastName4.Visible = true;
+                            txtPortalSalesEmail4.Visible = true;
+                            lnkPortalSalesDelete4.Visible = true;
+                            Session["PortalSalesCount"] = 4;
+
                             break;
                         case 4:
                             txtPortalSalesFirstName5.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName5.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail5.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName5.Visible = true;
+                            txtPortalSalesLastName5.Visible = true;
+                            txtPortalSalesEmail5.Visible = true;
+                            lnkPortalSalesDelete5.Visible = true;
+                            Session["PortalSalesCount"] =5 ;
+
+
                             break;
                         case 5:
                             txtPortalSalesFirstName6.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName6.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail6.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName6.Visible = true;
+                            txtPortalSalesLastName6.Visible = true;
+                            txtPortalSalesEmail6.Visible = true;
+                            lnkPortalSalesDelete6.Visible = true;
+                            Session["PortalSalesCount"] = 6;
+
+
                             break;
                         case 6:
                             txtPortalSalesFirstName7.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName7.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail7.Text = KeyProjectData1[ixa].Email;
+                            txtPortalSalesFirstName7.Visible = true;
+                            txtPortalSalesLastName7.Visible = true;
+                            txtPortalSalesEmail7.Visible = true;
+                            lnkPortalSalesDelete7.Visible = true;
+                            Session["PortalSalesCount"] = 7;
+
                             break;
                         case 7:
                             txtPortalSalesFirstName8.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName8.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail8.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName8.Visible = true;
+                            txtPortalSalesLastName8.Visible = true;
+                            txtPortalSalesEmail8.Visible = true;
+                            lnkPortalSalesDelete8.Visible = true;
+                            Session["PortalSalesCount"] = 8;
+
                             break;
                         case 8:
                             txtPortalSalesFirstName9.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName9.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail9.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName9.Visible = true;
+                            txtPortalSalesLastName9.Visible = true;
+                            txtPortalSalesEmail9.Visible = true;
+                            lnkPortalSalesDelete9.Visible = true;
+                            Session["PortalSalesCount"] = 9;
                             break;
                         case 9:
                             txtPortalSalesFirstName10.Text = KeyProjectData1[ixa].FirstName;
                             txtPortalSalesLastName10.Text = KeyProjectData1[ixa].LastName;
                             txtPortalSalesEmail10.Text = KeyProjectData1[ixa].Email;
+
+                            txtPortalSalesFirstName9.Visible = true;
+                            txtPortalSalesLastName9.Visible = true;
+                            txtPortalSalesEmail9.Visible = true;
+                            lnkPortalSalesDelete10.Visible = true;
+                            Session["PortalSalesCount"] = 9;
+
+
                             break;
                     }
                 }
 
 
-                KeyProjectData1 = JsonConvert.DeserializeObject<List<KeyProjectData>>(rowView["customer_portalsales"].ToString());
+                KeyProjectData1 = JsonConvert.DeserializeObject<List<KeyProjectData>>(rowView["customer_project_core"].ToString());
                 for (int ixa = 0; ixa <= KeyProjectData1.Count - 1; ixa++)
                 {
                     switch (ixa)
@@ -1713,47 +1933,110 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         case 1:
                             txtProjectCoreFirstName2.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName2.Text = KeyProjectData1[ixa].LastName;
-                             txtProjectCoreEmail2.Text = KeyProjectData1[ixa].Email; ;
+                             txtProjectCoreEmail2.Text = KeyProjectData1[ixa].Email; 
+
+                            txtProjectCoreFirstName2.Visible = true;
+                            txtProjectCoreLastName2.Visible = true;
+                            txtProjectCoreEmail2.Visible = true;
+                            lnkProjectCore2.Visible = true;
+
+                            Session["ProjectCoreCount"] = 2;
+
                             break;
                         case 2:
                             txtProjectCoreFirstName3.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName3.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail3.Text = KeyProjectData1[ixa].Email;
+
+                            txtProjectCoreFirstName3.Visible = true;
+                            txtProjectCoreLastName3.Visible = true;
+                            txtProjectCoreEmail3.Visible = true;
+                            lnkProjectCore3.Visible = true;
+                            Session["ProjectCoreCount"] = 3;
                             break;
                         case 3:
                             txtProjectCoreFirstName4.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName4.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail4.Text = KeyProjectData1[ixa].Email;
+
+                            txtProjectCoreFirstName4.Visible = true;
+                            txtProjectCoreLastName4.Visible = true;
+                            txtProjectCoreEmail4.Visible = true;
+                            lnkProjectCore4.Visible = true;
+                            Session["ProjectCoreCount"] = 4;
+
                             break;
                         case 4:
                             txtProjectCoreFirstName5.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName5.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail5.Text = KeyProjectData1[ixa].Email;
+
+                            txtProjectCoreFirstName5.Visible = true;
+                            txtProjectCoreLastName5.Visible = true;
+                            txtProjectCoreEmail5.Visible = true;
+                            lnkProjectCore5.Visible = true;
+                            Session["ProjectCoreCount"] = 5;
                             break;
                         case 5:
                             txtProjectCoreFirstName6.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName6.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail6.Text = KeyProjectData1[ixa].Email;
+
+                            txtProjectCoreFirstName6.Visible = true;
+                            txtProjectCoreLastName6.Visible = true;
+                            txtProjectCoreEmail6.Visible = true;
+                            lnkProjectCore6.Visible = true;
+                            Session["ProjectCoreCount"] = 6;
+
                             break;
                         case 6:
                             txtProjectCoreFirstName7.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName7.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail7.Text = KeyProjectData1[ixa].Email;
+
+                            txtProjectCoreFirstName7.Visible = true;
+                            txtProjectCoreLastName7.Visible = true;
+                            txtProjectCoreEmail7.Visible = true;
+                            lnkProjectCore7.Visible = true;
+                            Session["ProjectCoreCount"] = 7;
+
+
                             break;
                         case 7:
                             txtProjectCoreFirstName8.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName8.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail8.Text = KeyProjectData1[ixa].Email;
+
+                            txtProjectCoreFirstName8.Visible = true;
+                            txtProjectCoreLastName8.Visible = true;
+                            txtProjectCoreEmail8.Visible = true;
+                            lnkProjectCore8.Visible = true;
+                            Session["ProjectCoreCount"] = 8;
+
+
                             break;
                         case 8:
                             txtProjectCoreFirstName9.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName9.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail9.Text = KeyProjectData1[ixa].Email;
+                            txtProjectCoreFirstName8.Visible = true;
+                            txtProjectCoreLastName8.Visible = true;
+                            txtProjectCoreEmail8.Visible = true;
+                            lnkProjectCore9.Visible = true;
+                            Session["ProjectCoreCount"] = 8;
+
                             break;
                         case 9:
                             txtProjectCoreFirstName10.Text = KeyProjectData1[ixa].FirstName;
                            txtProjectCoreLastName10.Text = KeyProjectData1[ixa].LastName;
                              txtProjectCoreEmail10.Text = KeyProjectData1[ixa].Email;
+
+                            txtProjectCoreFirstName10.Visible = true;
+                            txtProjectCoreLastName10.Visible = true;
+                            txtProjectCoreEmail10.Visible = true;
+                            lnkProjectCore10.Visible = true;
+                            Session["ProjectCoreCount"] = 10;
+
                             break;
                     }
                 }

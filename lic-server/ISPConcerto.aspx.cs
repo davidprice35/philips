@@ -242,99 +242,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     }
 
     
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        try {
-
-            Session["Competitors"] = "Super Admin";
-            Session["User"] = "Jonny";
-            Session["UserType"] = "Granted Access";
-            //bool Signin = false;
-
-
-
-
-            //if (Session["User"] != null)
-            //{
-            //    if (Session["User"] != null)
-            //    {
-            //        m_UserName = Session["User"].ToString();
-            //        m_UserID= Session["UserID"].ToString();
-            //        m_UserType = Session["Competitors"].ToString();
-            //        Signin = true;
-            //    }
-
-            //}
-
-
-            //if (Signin == true)
-            //{
-
-
-            //}
-            //else
-            //{
-            //    Response.Redirect("/Account/Signin");
-            //}
-
-
-            try
-            {
-                //string EmailName = Request.Headers["Federation-UserPrincipalName"].ToString();
-                //Helper.InsertTracking(m_UserID, "Competitors", EmailName);
-            }
-            catch
-            {
-
-                //Helper.InsertTracking(m_UserID, "Competitors", "");
-            }
-
-
-
-
-            //if (Session["Competitors"].ToString() == "Super Admin")
-            //{
-            //   // PanSwitchUser.Visible = true;
-            //}
-            //else
-            //{
-            //    if (Session["SwitchUser"] != null)
-            //    {
-            //    }
-            //    else
-            //    {
-            //      //  PanSwitchUser.Visible = false;
-            //    }
-            //}
-
-            if (!IsPostBack)
-            {
-
-
-
-
-
-                SetUpApplicationCombo();
-                SetupPage();
-                //if (Session["SwitchUser"] != null)
-                //{
-                //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
-                //}                           
-
-                //GetGridDBData();
-
-                //this.Grid1.DataSource = PhilipsDataLST;
-                //this.Grid1.DataBind();
-
-                //this.Grid1.ToolbarSettings.ShowToolbar = false;
-                //this.Grid1.EditSettings.AllowEditing = false;
-
-
-            }
-
-        }
-        catch { }
-    }
+   
 
     private void SetupPage()
     {
@@ -364,7 +272,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                     {
                         case 0:
                             cmdApplication1.SelectedValue = AdditionalApplication1[i].Application;
-                            m_txtConcurrent1 = AdditionalApplication1[i].ConcurrentUsers;
+                            m_txtConcurrent1 = AdditionalApplication1[i].ConcurrentUsers;                            
                             break;
                         case 1:
                             cmdApplication2.SelectedValue = AdditionalApplication1[i].Application;
@@ -389,6 +297,11 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                     }
 
 
+                    
+
+                }
+
+
                     //site info
 
                     SiteInfoData1 = JsonConvert.DeserializeObject<List<SiteInfoData>>(rowView["centralised_siteinfo"].ToString());
@@ -411,28 +324,54 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                                         m_connectL1 = "checked";
                                         break;
                                 }
+                                hidCentralSite.Value = "1";
                                 break;
                             case 1:
                                 txtHospitalName2.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet2.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "2";
                                 break;
                             case 2:
                                 txtHospitalName3.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet3.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "3";
                                 break;
                             case 3:
                                 txtHospitalName4.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet4.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "4";
                                 break;
                             case 4:
                                 txtHospitalName5.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet5.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "5";
                                 break;
                             case 5:
                                 txtHospitalName6.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet6.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "6";
                                 break;
-                        }
+                            case 6:
+                                txtHospitalName7.Text = SiteInfoData1[ix].HospitalName;
+                                txtHospitalStreet7.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "7";
+                                break;
+                            case 7:
+                                txtHospitalName8.Text = SiteInfoData1[ix].HospitalName;
+                                txtHospitalStreet8.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "8";
+                                break;
+                            case 8:
+                                txtHospitalName9.Text = SiteInfoData1[ix].HospitalName;
+                                txtHospitalStreet9.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "9";
+                                break;
+                            case 9:
+                                txtHospitalName10.Text = SiteInfoData1[ix].HospitalName;
+                                txtHospitalStreet10.Text = SiteInfoData1[ix].HospitalStreet;
+                                hidCentralSite.Value = "10";
+                                break;
+                    }
                     }
 
 
@@ -440,36 +379,25 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                     m_ConEnterpriseUsers = rowView["centralised_concurrent_ent_users"].ToString();
 
 
-                    //SOftware only Mac
-                   
-                    MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["centralised_deliverymodel_ISPSoftware"].ToString());
-                    for (int ixa = 0; ixa <= MacAddressData1.Count - 1; ixa++)
-                    {
-                        switch (ixa)
-                        {
-                            case 0:                               
-                                break;
-                            case 1:
-                               
-                                break;
-                            case 2:
-                               
-                                break;
-                            case 3:
-                               
-                                break;
-                            case 4:
-                               
-                                break;
-                            
-                        }
-                    }
+
+                //cmdApplication1.SelectedValue = "Mirada Viewer Pro - 1 User|No|1|NA";
 
 
+                //SOftware only Mac
+                string myMaclist = string.Empty;
 
-
-
+                MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["centralised_deliverymodel_ISPSoftware"].ToString());
+                for (int ixa = 0; ixa <= MacAddressData1.Count - 1; ixa++)
+                {
+                    myMaclist += MacAddressData1[ixa].Menu + ":" + MacAddressData1[ixa].No + ",";
                 }
+
+                hidMacTable.Value = myMaclist;
+
+                //"NICB006 - Enterprise Engine SW:,FICO248 - ISP Server - Software only:,"
+                //hidMacTable
+
+
 
 
 
@@ -482,7 +410,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             //txtHospitalName1
 
 
-           
+
 
 
 
@@ -506,8 +434,8 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
 
 
-            string SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Category not in ('Enterprise Software','Enterprise  Hardware')";
-            DataView MyDV = Helper.GetData(SQL);
+            //string SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Applications where Category not in ('Enterprise Software','Enterprise  Hardware')";
+            //DataView MyDV = Helper.GetData(SQL);
             string myID = "";
 
             cmdApplication1.Items.Add(new ListItem("", ""));
@@ -526,27 +454,27 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             cmdApplication14.Items.Add(new ListItem("", ""));
             cmdApplication15.Items.Add(new ListItem("", ""));
 
-            foreach (DataRowView rowView in MyDV)
-            {
-                myID = rowView["Applications"].ToString();
-                cmdApplication1.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication2.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication3.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication4.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication5.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication6.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication7.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication8.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication9.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication10.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication11.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication12.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication13.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication14.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
-                cmdApplication15.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //foreach (DataRowView rowView in MyDV)
+            //{
+            //    myID = rowView["Applications"].ToString();
+            //    cmdApplication1.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication2.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication3.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication4.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication5.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication6.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication7.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication8.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication9.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication10.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication11.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication12.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication13.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication14.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
+            //    cmdApplication15.Items.Add(new ListItem(rowView["Cat_No"].ToString() + " - " + rowView["Applications"].ToString(), rowView["Applications"].ToString() + "|" + rowView["Concurrent_Users"].ToString() + "|" + rowView["Concurrent_Default"].ToString() + "|" + rowView["Concurrent_Range"].ToString()));
 
 
-            }
+            //}
 
         }
         catch { }
@@ -714,8 +642,16 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                 if (item1 != "")
                 {
-
-                    string item2 = Request.Form["txtConcurrent" + i.ToString()].ToString();
+                    string item2 = "";
+                    if (Request.Form["txtConcurrent" + i.ToString()] != null)
+                    {
+                        item2 = Request.Form["txtConcurrent" + i.ToString()].ToString();
+                    }
+                    else
+                    {
+                        item2 = "1";
+                    }
+                  
                     string item3 = "";
                     if (Request.Form["cmdHospitalName" + i.ToString()] != null)
                     {
@@ -786,6 +722,9 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
         {
 
         }
+
+        SetUpApplicationCombo();
+        SetupPage();
     }
 
     protected void cmdConfig_Click(object sender, EventArgs e)
@@ -800,6 +739,115 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
         }
 
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+
+            Session["Competitors"] = "Super Admin";
+            Session["User"] = "Jonny";
+            Session["UserType"] = "Granted Access";
+            //bool Signin = false;
+
+
+            if (Request.QueryString["id"] != null)
+            {
+                if (Request.QueryString["id"] != "")
+                {
+                    m_ID = Request.QueryString["id"].ToString();
+                }
+                else
+                {
+                    Response.Redirect("/lic-server/");
+                }
+            }
+            else
+            {
+                Response.Redirect("/lic-server/");
+            }
+
+            //if (Session["User"] != null)
+            //{
+            //    if (Session["User"] != null)
+            //    {
+            //        m_UserName = Session["User"].ToString();
+            //        m_UserID= Session["UserID"].ToString();
+            //        m_UserType = Session["Competitors"].ToString();
+            //        Signin = true;
+            //    }
+
+            //}
+
+
+            //if (Signin == true)
+            //{
+
+
+            //}
+            //else
+            //{
+            //    Response.Redirect("/Account/Signin");
+            //}
+
+
+            try
+            {
+                //string EmailName = Request.Headers["Federation-UserPrincipalName"].ToString();
+                //Helper.InsertTracking(m_UserID, "Competitors", EmailName);
+            }
+            catch
+            {
+
+                //Helper.InsertTracking(m_UserID, "Competitors", "");
+            }
+
+
+
+
+            //if (Session["Competitors"].ToString() == "Super Admin")
+            //{
+            //   // PanSwitchUser.Visible = true;
+            //}
+            //else
+            //{
+            //    if (Session["SwitchUser"] != null)
+            //    {
+            //    }
+            //    else
+            //    {
+            //      //  PanSwitchUser.Visible = false;
+            //    }
+            //}
+
+            if (!IsPostBack)
+            {
+
+
+
+
+
+                SetUpApplicationCombo();
+                SetupPage();
+                //if (Session["SwitchUser"] != null)
+                //{
+                //    ddlSwitchUser.SelectedValue = Session["Competitors"].ToString();
+                //}                           
+
+                //GetGridDBData();
+
+                //this.Grid1.DataSource = PhilipsDataLST;
+                //this.Grid1.DataBind();
+
+                //this.Grid1.ToolbarSettings.ShowToolbar = false;
+                //this.Grid1.EditSettings.AllowEditing = false;
+
+
+            }
+
+        }
+        catch { }
     }
 }
 

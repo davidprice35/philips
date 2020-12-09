@@ -73,26 +73,29 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 string[] applicationslist = selectedapplication.Split('~');
                 foreach (string applist in applicationslist)
                 {
-
-                    //Split the concurrentuser
-                    string[] CurrentUsers = applist.Split('?');
-
-                    //concurrentUserList1.Add(new concurrentUserList(Convert.ToInt32(CurrentUsers[1]), CurrentUsers[0]));
-                    
-                    //Apllications
-                    string[] appItems = CurrentUsers[0].Split('|');
-                    SelectedAppList += "'" + appItems[0] + "'" + ",";
-
-                    if (appItems[0] == "Zero FootPrint Viewer SW - 2 User" | appItems[0] == "Zero FootPrint Viewer SW - Add_Users")
+                    if (applist != "?")
                     {
-                        if (CurrentUsers[1] == "")
-                        {
+                        //Split the concurrentuser
+                        string[] CurrentUsers = applist.Split('?');
 
-                        }
-                        else
+                        //concurrentUserList1.Add(new concurrentUserList(Convert.ToInt32(CurrentUsers[1]), CurrentUsers[0]));
+
+                        //Apllications
+                        string[] appItems = CurrentUsers[0].Split('|');
+                        SelectedAppList += "'" + appItems[0] + "'" + ",";
+
+                        if (appItems[0] == "Zero FootPrint Viewer SW - 2 User" | appItems[0] == "Zero FootPrint Viewer SW - Add_Users")
                         {
-                            concurentusers += Convert.ToInt32(CurrentUsers[1]);
+                            if (CurrentUsers[1] == "")
+                            {
+
+                            }
+                            else
+                            {
+                                concurentusers += Convert.ToInt32(CurrentUsers[1]);
+                            }
                         }
+
                     }
 
 
@@ -178,6 +181,11 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 Category = "IntelliSpace DynaCad ZFP";
             }
 
+            if (Category == "IntelliSpace IntelliSpace ZFP")
+            {
+                Category = "IntelliSpace ZFP";
+            }
+
             //get licence data
 
             if (HasZFP==true)
@@ -203,6 +211,11 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 if (Category == "IntelliSpace IntelliSpace DynaCad")
                 {
                     Category = "IntelliSpace DynaCad";
+                }
+
+                if (Category == "IntelliSpace IntelliSpace ZFP")
+                {
+                    Category = "IntelliSpace ZFP";
                 }
 
                 SQL = "SELECT * FROM travelma2_phil1.PhilipsLic_Licence where Type = '" + Category + "' and rangefrom <= " + enterpriseuser + " and rangeto >= " + enterpriseuser;

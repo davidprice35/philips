@@ -262,7 +262,7 @@
                                                 </div>
 
 
-
+                                                <br />
                                                 <div class="table-responsive" style="margin-left: -16px;">
                                                     <table class="table table-bordered" id="keydtable">
                                                         <thead>
@@ -275,49 +275,9 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>                                                               
-                                                                    <td style="vertical-align: middle;">Key Account Manager</td>
-                                                                    <td>
-                                                                        <%=m_customer_key_account_first %>
-                                                                    </td>
-                                                                    <td>
-                                                                       <%=m_customer_key_account_last %>
-                                                                    </td>
-                                                                    <td>
-                                                                       <%=m_customer_key_account_email %>
-                                                                    </td>
-                                                                </tr>
-                                                             <tr>
-                                                                <td style="vertical-align: middle;">InteliSpace Portal Sales Specialist</td>
-                                                                <td>
-                                                                     <%=m_portalSales_first %>
-                                                                    
-                                                                </td>
-                                                                <td>
-                                                                     <%=m_portalSales_last %>
-
-                                                                </td>
-                                                                <td>
-                                                                     <%=m_portalSales_email %>
-                                                                </td>
-
-                                                            </tr>
-
-                                                            <tr>
-
-                                                                <td style="vertical-align: middle;">Project core team*</td>
-                                                                <td>
-                                                                     <%=m_core_first %>
-                                                                    
-                                                                </td>
-                                                                <td>
-                                                                   <%=m_core_last %>
-                                                                </td>
-                                                                <td>
-                                                                      <%=m_core_email %>
-                                                                </td>
-                                                            </tr>
-
+                                                            <%=m_customer_key_accountOutput %>                                                            
+                                                             <%=m_portalSalesOutput %>
+                                                            <%=m_coreOutput %>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -336,21 +296,8 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>                                                               
-                                                                    <td style="vertical-align: middle;">1</td>
-                                                                    <td>
-                                                                        <%=m_hospital_name %>
-                                                                    </td>
-                                                                    <td>
-                                                                       <%=m_hospital_street %>
-                                                                    </td>
-                                                                    <td>
-                                                                       <%=m_hospital_site %>
-                                                                    </td>
-                                                                <td>
-                                                                       <%=m_hospital_connect %>
-                                                                    </td>
-                                                                </tr>
+                                                            
+                                                            <%=m_HospitalOutput %>
                                                              
 
                                                             
@@ -384,9 +331,10 @@
 
 
 
+
                                                 <%=m_OutputTableApplicationsTable %>
 
-
+                                                <!--Mac Table -->
                                                <%=m_OutputTable %>
 
 
