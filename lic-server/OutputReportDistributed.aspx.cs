@@ -712,151 +712,165 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     //Delivery Model
 
 
-
-
-
-                    string tableelement = "";
-                    
-                    List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
-
-                    MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(m_decentralised_deliverymodel_ISPSoftware);
-                    int outeridx = 0;
-
-                    string currentidx = string.Empty;
-                    int macidx = 1;
-                    string machid = "";
-
-                    for (int i = 0; i <= MacAddressData1.Count - 1; i++)
+                    for (int iSite = 1; iSite <= SiteInfoData1.Count; iSite++)
                     {
+                        string tableelement = "";
 
-                        string ItemNo = MacAddressData1[i].No;
+                        m_OutputTable += "<div style='margin-left: -17px;'>";
 
-                        if (currentidx == "")
+                        List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
+
+                        MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_mac_site" + iSite].ToString());
+                        int outeridx = 0;
+
+                        string currentidx = string.Empty;
+                        int macidx = 1;
+                        string machid = "";
+
+                        for (int i = 0; i <= MacAddressData1.Count - 1; i++)
                         {
-                            currentidx = MacAddressData1[i].No;
+
+                            string ItemNo = MacAddressData1[i].No;
+
+                            if (currentidx == "")
+                            {
+                                currentidx = MacAddressData1[i].No;
+                            }
+
+                            if (ItemNo == currentidx)
+                            {
+                                tableelement += "<tr><td> " + MacAddressData1[i].Menu + " </td><td> " + MacAddressData1[i].MacAddress + " </td></tr>";
+                            }
+                            else
+                            {
+                                m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
+
+
+
+                                m_OutputTable += "<table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+
+                                currentidx = MacAddressData1[i].No;
+                                macidx = 1;
+                                machid = "";
+
+                                tableelement = "<tr><td> " + MacAddressData1[i].Menu + " </td><td> " + MacAddressData1[i].MacAddress + " </td></tr>";
+
+                                macidx++;
+
+
+                            }
+
+
                         }
 
-                        if (ItemNo == currentidx)
+
+
+                        //m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;width: 99%;'> ";
+
+                        //SIte
+                        m_OutputTable += "<br/>";
+                        m_OutputTable += "<br/>";
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
+
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'>IntelliSpace Portal </p> ";
+
+
+
+                        //Hardware / software
+                        if (rowView["decentralised_portal_site" + iSite].ToString() == "SoftwareHardWare")
                         {
-                            tableelement += "<tr><td> " + MacAddressData1[i].Menu + " </td><td> " + MacAddressData1[i].MacAddress + " </td></tr>";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>HARDWARE</p> ";
+
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>ISP Server: " + rowView["decentralised_ISPServer" + iSite].ToString() + " </p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Extended Memory FIC0457: " + rowView["decentralised_ExtendedMem" + iSite].ToString() + " </p> ";
+
+
                         }
                         else
                         {
-                            m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
-                            
-                           
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>SOFTWARE</p> ";
 
-                            m_OutputTable += "<table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+                            m_OutputTable += "<table class='table table-bordered' > <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> ";
 
-                            currentidx = MacAddressData1[i].No;
-                            macidx = 1;
-                            machid = "";
+                        }
 
-                            tableelement = "<tr><td> " + MacAddressData1[i].Menu + " </td><td> " + MacAddressData1[i].MacAddress + " </td></tr>";
+                        //m_OutputTable += "</div>";
 
-                            macidx++;
+
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'> IntelliSpace Portal Redundant -" + rowView["decentralised_portal_redundant_site" + iSite].ToString() + "</p> ";
+
+                        if (rowView["decentralised_portal_redundant_site" + iSite].ToString() == "Yes")
+                        {
+
+                            if (rowView["decentralised_portal_redundant_SH_site" + iSite].ToString() == "SoftwareHardWare")
+                            {
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'>HARDWARE</p> ";
+                            }
+                            else
+                            {
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'>SOFTWARE</p> ";
+                            }
+
+
+                            if (rowView["decentralised_portal_redundant_SH_site" + iSite].ToString() == "SoftwareOnly")
+                            {
+                                //m_OutputTable += "<p style='color:black;font-weight:bold;'>" + rowView["decentralised_portal_redundant_mac_site1"].ToString() + "</p> ";
+
+                                MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_portal_redundant_mac_site" + iSite].ToString());
+
+
+                                tableelement = "<tr><td> " + MacAddressData1[0].Menu + " </td><td> " + MacAddressData1[0].MacAddress + " </td></tr>";
+                                m_OutputTable += "<table style='margin-left: -16px;width: 99%;' class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+                            }
 
 
                         }
 
 
-                    }
 
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'> IntelliSpace Portal Test Enviroment -" + rowView["decentralised_portal_test_site" + iSite].ToString() + "</p> ";
 
-
-                    m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;width: 99%;'> ";
-                    
-                    //SIte
-                    m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
-
-                    m_OutputTable += "<p style='color:black;font-weight:bold;'>IntelliSpace Portal </p> ";
-
-                    
-
-                    //Hardware / software
-                    if (rowView["decentralised_portal_site1"].ToString()== "SoftwareHardWare")
-                    {
-                        m_OutputTable += "<p style='color:black;font-weight:bold;'>HARDWARE</p> ";
-
-                        m_OutputTable += "<p style='color:black;font-weight:bold;'>ISP Server: " + rowView["decentralised_ISPServer1"].ToString() + " </p> ";
-                        m_OutputTable += "<p style='color:black;font-weight:bold;'>Extended Memory FIC0457: " + rowView["decentralised_ExtendedMem1"].ToString() + " </p> ";
-
-                        
-                    }
-                    else
-                    {
-                        m_OutputTable += "<p style='color:black;font-weight:bold;'>SOFTWARE</p> ";
-
-                        m_OutputTable += "<table class='table table-bordered' > <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
-
-                    }
-
-                    m_OutputTable += "</div>";
-
-
-                    m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: -16px;'> IntelliSpace Portal Redundant -" + rowView["decentralised_portal_redundant_site1"].ToString() + "</p> " ;
-
-                    if (rowView["decentralised_portal_redundant_site1"].ToString() =="Yes")
-                    {
-
-                        if (rowView["decentralised_portal_redundant_SH_site1"].ToString() == "SoftwareHardWare")
+                        if (rowView["decentralised_portal_test_site1"].ToString() == "Yes")
                         {
-                            m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: -16px;'>HARDWARE</p> ";
-                        }
-                        else
-                        {
-                            m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: -16px;'>SOFTWARE</p> ";
-                        }
-                            
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>" + rowView["decentralised_portal_test_SH_site" + iSite].ToString() + "</p> ";
 
-                        if (rowView["decentralised_portal_redundant_SH_site1"].ToString()== "SoftwareOnly")
-                        {
-                            //m_OutputTable += "<p style='color:black;font-weight:bold;'>" + rowView["decentralised_portal_redundant_mac_site1"].ToString() + "</p> ";
+                            if (rowView["decentralised_portal_test_SH_site" + iSite].ToString() == "SoftwareHardWare")
+                            {
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> IntelliSpace Portal Test -" + rowView["decentralised_portal_test_appenv_site" + iSite].ToString() + "</p> ";
 
-                            MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_portal_redundant_mac_site1"].ToString());
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> Extended Memory - FIC0457 -" + rowView["decentralised_portal_test_extmemory_site" + iSite].ToString() + "</p> ";
+                            }
+                            else
+                            {
+                                //software only
 
-                           
-                            tableelement = "<tr><td> " + MacAddressData1[0].Menu + " </td><td> " + MacAddressData1[0].MacAddress + " </td></tr>";
-                            m_OutputTable += "<table style='margin-left: -16px;width: 99%;' class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+                                MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_portal_test_mac_site" + iSite].ToString());
+                                if (MacAddressData1 != null)
+                                {
+                                    if (MacAddressData1.Count > 0)
+                                    {
+                                        tableelement = "<tr><td> " + MacAddressData1[0].Menu + " </td><td> " + MacAddressData1[0].MacAddress + " </td></tr>";
+
+
+
+                                        //m_OutputTable += "<p>test</p>";
+
+                                        m_OutputTable += "<div class='table-responsive' style='width: 89%;'> ";
+                                        m_OutputTable += "<table style='' class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;width:54%;'>Menu</th> <th scope='col' style='background-color: #0b1f65;width:54%;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> ";
+                                        m_OutputTable += "</div> ";
+
+                                    }
+                                }
+
+                            }
                         }
 
-                       
+                        m_OutputTable += "</div> ";
                     }
-
-
-
-                    m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 56px;'> IntelliSpace Portal Test Enviroment -" + rowView["decentralised_portal_test_site1"].ToString() + "</p> ";
-
-                    if (rowView["decentralised_portal_test_site1"].ToString()=="Yes")
-                    {
-                        m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 56px;'>" + rowView["decentralised_portal_test_SH_site1"].ToString() + "</p> ";
-
-                        if (rowView["decentralised_portal_test_SH_site1"].ToString()== "SoftwareHardWare")
-                        {
-                            m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 48px;'> IntelliSpace Portal Test -" + rowView["decentralised_portal_test_appenv_site1"].ToString() + "</p> ";
-
-                            m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 48px;'> Extended Memory - FIC0457 -" + rowView["decentralised_portal_test_extmemory_site1"].ToString() + "</p> ";
-                        }else
-                        {
-                            //software only
-
-                            MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_portal_test_mac_site1"].ToString());
-
-
-                            tableelement = "<tr><td> " + MacAddressData1[0].Menu + " </td><td> " + MacAddressData1[0].MacAddress + " </td></tr>";
-
-
-                            //m_OutputTable += "<p>test</p>";
-
-                            m_OutputTable += "<div class='table-responsive' style='margin-left: 55px;width: 89%;'> ";
-                            m_OutputTable += "<table style='' class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;width:54%;'>Menu</th> <th scope='col' style='background-color: #0b1f65;width:54%;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> ";
-                            m_OutputTable += "</div> ";
-
-                        }
-                    }
-
-
                 }
+
+
+                   
 
 
 
