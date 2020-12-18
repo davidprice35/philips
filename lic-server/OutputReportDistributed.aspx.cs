@@ -43,9 +43,9 @@ public partial class OutputReportDistributed : System.Web.UI.Page
     public string m_PlanInstall = string.Empty;
 
 
-
-
-
+    public string m_customer_key_accountOutput = string.Empty;
+    public string m_portalSalesOutput = string.Empty;
+    public string m_coreOutput = string.Empty;
 
 
     public string m_UserName = string.Empty;
@@ -422,9 +422,18 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     myCat = rowView["Cat_No"].ToString();
                 }
             }
-
+           
         }
 
+        if (myCat == "")
+        {
+            switch (findApp.Trim())
+            {
+                case "ECTB SPECT V4.x":
+                    myCat = "NICB355";
+                    break;
+            }
+        }
 
 
         return myCat;
@@ -453,7 +462,15 @@ public partial class OutputReportDistributed : System.Web.UI.Page
 
         }
 
-
+        if (myCat == "")
+        {
+            switch (findApp.Trim())
+            {
+                case "ECTB SPECT V4.x":
+                    myCat = "3e Party Applications";
+                    break;
+            }
+        }
 
         return myCat;
 
@@ -469,6 +486,9 @@ public partial class OutputReportDistributed : System.Web.UI.Page
             {
                 case "NM Amyloid Analysis":
                     myItem = "NICA965/FIC0127";
+                    break;
+                case "ECTB SPECT V4.x":
+                    myItem = "NICB355/FIC0222";
                     break;
             }
             
@@ -501,7 +521,7 @@ public partial class OutputReportDistributed : System.Web.UI.Page
 
 
                     m_decentralised_concurrent_ent_users = rowView["decentralised_concurrent_ent_users"].ToString();
-                    m_decentralised_deliverymodel_ISPSoftware = rowView["decentralised_deliverymodel_ISPSoftware"].ToString();
+                    m_decentralised_deliverymodel_ISPSoftware = rowView["decentralised_mac_site1"].ToString();
                     m_centralised_deliverymodel = rowView["centralised_deliverymodel"].ToString();
                     m_project_name = rowView["project_name"].ToString();
                     m_customer_name = rowView["customer_name"].ToString();
@@ -520,27 +540,58 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     SiteInfoData1 = JsonConvert.DeserializeObject<List<SiteInfoData>>(rowView["decentralised_siteinfo"].ToString());
                     AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["decentralised_add_application"].ToString());
 
-                    for (int i = 0; i <= KeyProjectData1.Count-1; i++)
+                    for (int i = 0; i <= KeyProjectData1.Count - 1; i++)
                     {
-                        m_customer_key_account_email += KeyProjectData1[i].Email + "<hr/>";
-                        m_customer_key_account_first += KeyProjectData1[i].FirstName + "<hr/>";
-                        m_customer_key_account_last += KeyProjectData1[i].LastName + "<hr/>";
+                        m_customer_key_accountOutput += "<tr>";
+                        if (i == 0)
+                        {
+                            m_customer_key_accountOutput += "<td style='vertical-align: middle;'>Key Account Manager</td><td>" + KeyProjectData1[i].FirstName + " </td><td> " + KeyProjectData1[i].LastName + "</td><td>" + KeyProjectData1[i].Email + "</td></tr>";
+                        }
+                        else
+                        {
+                            m_customer_key_accountOutput += "<td>&nbsp;</td> <td>" + KeyProjectData1[i].FirstName + " </td> <td> " + KeyProjectData1[i].LastName + "</td><td>" + KeyProjectData1[i].Email + "</td></tr>";
+                        }
+
+
+                        //m_customer_key_account_email += KeyProjectData1[i].Email + "<hr/>";
+                        //m_customer_key_account_first += KeyProjectData1[i].FirstName + "<hr/>";
+                        //m_customer_key_account_last += KeyProjectData1[i].LastName + "<hr/>";
                     }
 
 
-                    for (int i = 0; i <= KeyPortalDat1.Count-1; i++)
+                    for (int i = 0; i <= KeyPortalDat1.Count - 1; i++)
                     {
+                        m_portalSalesOutput += "<tr>";
+                        if (i == 0)
+                        {
+                            m_portalSalesOutput += "<td style='vertical-align: middle;'>Portal Sales</td><td>" + KeyPortalDat1[i].FirstName + " </td><td> " + KeyPortalDat1[i].LastName + "</td><td>" + KeyPortalDat1[i].Email + "</td></tr>";
+                        }
+                        else
+                        {
+                            m_portalSalesOutput += "<td>&nbsp;</td> <td>" + KeyPortalDat1[i].FirstName + " </td> <td> " + KeyPortalDat1[i].LastName + "</td><td>" + KeyPortalDat1[i].Email + "</td></tr>";
+                        }
+
                         m_portalSales_email += KeyPortalDat1[i].Email + "<hr/>";
                         m_portalSales_first += KeyPortalDat1[i].FirstName + "<hr/>";
                         m_portalSales_last += KeyPortalDat1[i].LastName + "<hr/>";
                     }
 
 
-                    for (int i = 0; i <= CoreDat1.Count-1; i++)
+                    for (int i = 0; i <= CoreDat1.Count - 1; i++)
                     {
-                        m_core_email += CoreDat1[i].Email + "<hr/>";
-                        m_core_first += CoreDat1[i].FirstName + "<hr/>";
-                        m_core_last += CoreDat1[i].LastName + "<hr/>";
+                        m_coreOutput += "<tr>";
+                        if (i == 0)
+                        {
+                            m_coreOutput += "<td style='vertical-align: middle;'>Project core team*</td><td>" + CoreDat1[i].FirstName + " </td><td> " + CoreDat1[i].LastName + "</td><td>" + CoreDat1[i].Email + "</td></tr>";
+                        }
+                        else
+                        {
+                            m_coreOutput += "<td>&nbsp;</td> <td>" + CoreDat1[i].FirstName + " </td> <td> " + CoreDat1[i].LastName + "</td><td>" + CoreDat1[i].Email + "</td></tr>";
+                        }
+
+                        //m_core_email += CoreDat1[i].Email + "<hr/>";
+                        //m_core_first += CoreDat1[i].FirstName + "<hr/>";
+                        //m_core_last += CoreDat1[i].LastName + "<hr/>";
                     }
 
 
@@ -606,13 +657,20 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                         
                         string Appdecoded = DecodeApplication(app);
                         string[] Appdecodedarray = Appdecoded.Split('/');
-
-
+                        
                         string[] hospitalarray = appHos.Split('|');
 
                         string[] mainhospital = hospitalarray[0].Split(':');
 
-                        m_OutputTableApplicationsTR += " <tr> <td> " + app + " </td><td> " + appCon + "</td> <td> " + Appdecodedarray[0] + " </td> <td> " + 1 + " </td> <td> " + Appdecodedarray[1] + " </td> <td> " + Convert.ToString( Convert.ToInt32(appCon) - 1 ) + " </td> <td> " + mainhospital[0] + "</td><td> " + mainhospital[1] + "</td></tr>";
+                        if (Appdecoded != "")
+                        {
+                            m_OutputTableApplicationsTR += " <tr> <td> " + app + " </td> <td> " + Appdecodedarray[0] + " </td> <td> " + 1 + " </td> <td> " + Appdecodedarray[1] + " </td> <td> " + Convert.ToString( Convert.ToInt32(appCon) - 1 ) + " </td><td> " + appCon + "</td> <td> " + mainhospital[0] + "</td><td> " + mainhospital[1] + "</td></tr>";
+                            
+                        }else
+                        {
+                            m_OutputTableApplicationsTR += " <tr> <td> " + app + " </td> <td> " + cat + " </td> <td> " + appCon + "  </td> <td> " + "" + " </td> <td> </td> <td> " + appCon + "</td> <td> " + mainhospital[0] + "</td><td> " + mainhospital[1] + "</td></tr>";
+                        }
+
 
                         string[] Addtionalhospitalarray = hospitalarray[1].Split(';');
 
@@ -627,7 +685,7 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                         }
 
                     }
-                    m_OutputTableApplicationsTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>ADDITIONAL APPLICATIONS</p>  <p><b>"+ catName + "</b></p>  <table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Desc</th> <th scope='col' style='background-color: #0b1f65;'>Total</th> <th scope='col' style='background-color: #0b1f65;'>First</th> <th scope='col' style='background-color: #0b1f65;'>Qty</th> <th scope='col' style='background-color: #0b1f65;'>Second</th> <th scope='col' style='background-color: #0b1f65;'>Qty</th>  <th scope='col' style='background-color: #0b1f65;'>Hospital Name</th>  <th scope='col' style='background-color: #0b1f65;'>Users</th> </tr></thead> <tbody> " + m_OutputTableApplicationsTR + " </tbody> </table></div>";
+                    m_OutputTableApplicationsTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>ADDITIONAL APPLICATIONS</p>  <p><b>"+ catName + "</b></p>  <table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Desc</th>  <th scope='col' style='background-color: #0b1f65;'>First</th> <th scope='col' style='background-color: #0b1f65;'>Qty</th> <th scope='col' style='background-color: #0b1f65;'>Second</th> <th scope='col' style='background-color: #0b1f65;'>Qty</th> <th scope='col' style='background-color: #0b1f65;'>Total</th>  <th scope='col' style='background-color: #0b1f65;'>Hospital Name</th>  <th scope='col' style='background-color: #0b1f65;'>Users</th> </tr></thead> <tbody> " + m_OutputTableApplicationsTR + " </tbody> </table></div>";
                     //additional Applications
 
 
@@ -638,11 +696,10 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     
                     if (m_decentralised_deliverymode== "SoftwareOnly")
                     {
-                        m_DeliveryModel = "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered' style='width: 33%;'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>DELIVERY MODEL</b></th> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;'><b>" + m_decentralised_deliverymode + "</b></th> </tr></thead> <tbody> </tbody> </table> </div>";
+                        m_DeliveryModel = "<div class='table-responsive' style='margin-left: -16px;'><table class='table table-bordered' style='width: 33%;'><thead> <tr>  <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>DELIVERY MODEL</b></th> </tr> </thead> <tbody><tr> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;    text-align: center;'><b>" + m_decentralised_deliverymode + "</b></th> </tr></tbody></table></div>";
+                        m_LicenceModel1 = "<div class='table-responsive' style='margin-left: -16px;'><table class='table table-bordered' style='width: 33%;'><thead> <tr>  <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Enterprise</b></th> </tr> </thead> <tbody><tr> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;    text-align: center;'><b>" + m_decentralised_licencemodel1 + "</b></th> </tr></tbody></table></div>";
+                        m_PlanInstall = "<div class='table-responsive' style='margin-left: -16px;'><table class='table table-bordered' style='width: 33%;'><thead> <tr>  <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Install</b></th> </tr> </thead> <tbody><tr> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;    text-align: center;'><b>" + m_decentralised_planinstallengine + "</b></th> </tr></tbody></table></div>";                        
 
-                        m_LicenceModel1 = "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered' style='width: 33%;'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Enterprise</b></th> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;'><b>" + m_decentralised_licencemodel1 + "</b></th> </tr></thead> <tbody> </tbody> </table> </div>";
-                        m_PlanInstall = "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered' style='width: 33%;'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Install</b></th> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;'><b>" + m_decentralised_planinstallengine + "</b></th> </tr></thead> <tbody> </tbody> </table> </div>";
-                       
                     }
                     else
                     {
@@ -707,23 +764,50 @@ public partial class OutputReportDistributed : System.Web.UI.Page
 
 
 
-                    m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> ";
+                    m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;width: 99%;'> ";
                     
                     //SIte
                     m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
 
-                    //Hardware / software
-                    m_OutputTable += "<p style='color:black;font-weight:bold;'> " + rowView["decentralised_portal_site1"].ToString() + " </p> ";
+                    m_OutputTable += "<p style='color:black;font-weight:bold;'>IntelliSpace Portal </p> ";
 
-                                       
-                    m_OutputTable += "<table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+                    
+
+                    //Hardware / software
+                    if (rowView["decentralised_portal_site1"].ToString()== "SoftwareHardWare")
+                    {
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'>HARDWARE</p> ";
+
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'>ISP Server: " + rowView["decentralised_ISPServer1"].ToString() + " </p> ";
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'>Extended Memory FIC0457: " + rowView["decentralised_ExtendedMem1"].ToString() + " </p> ";
+
+                        
+                    }
+                    else
+                    {
+                        m_OutputTable += "<p style='color:black;font-weight:bold;'>SOFTWARE</p> ";
+
+                        m_OutputTable += "<table class='table table-bordered' > <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+
+                    }
+
+                    m_OutputTable += "</div>";
+
 
                     m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: -16px;'> IntelliSpace Portal Redundant -" + rowView["decentralised_portal_redundant_site1"].ToString() + "</p> " ;
 
                     if (rowView["decentralised_portal_redundant_site1"].ToString() =="Yes")
                     {
 
-                        m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: -16px;'>" + rowView["decentralised_portal_redundant_SH_site1"].ToString() + "</p> ";
+                        if (rowView["decentralised_portal_redundant_SH_site1"].ToString() == "SoftwareHardWare")
+                        {
+                            m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: -16px;'>HARDWARE</p> ";
+                        }
+                        else
+                        {
+                            m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: -16px;'>SOFTWARE</p> ";
+                        }
+                            
 
                         if (rowView["decentralised_portal_redundant_SH_site1"].ToString()== "SoftwareOnly")
                         {
@@ -731,26 +815,43 @@ public partial class OutputReportDistributed : System.Web.UI.Page
 
                             MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_portal_redundant_mac_site1"].ToString());
 
-                            m_OutputTable += "<table style='margin-left: -16px;' class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+                           
                             tableelement = "<tr><td> " + MacAddressData1[0].Menu + " </td><td> " + MacAddressData1[0].MacAddress + " </td></tr>";
+                            m_OutputTable += "<table style='margin-left: -16px;width: 99%;' class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
                         }
 
-
+                       
                     }
 
 
 
-                    m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 52px;'> IntelliSpace Portal Test Enviroment -" + rowView["decentralised_portal_test_site1"].ToString() + "</p> ";
+                    m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 56px;'> IntelliSpace Portal Test Enviroment -" + rowView["decentralised_portal_test_site1"].ToString() + "</p> ";
 
                     if (rowView["decentralised_portal_test_site1"].ToString()=="Yes")
                     {
-                        m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 48px;'>" + rowView["decentralised_portal_test_SH_site1"].ToString() + "</p> ";
+                        m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 56px;'>" + rowView["decentralised_portal_test_SH_site1"].ToString() + "</p> ";
 
                         if (rowView["decentralised_portal_test_SH_site1"].ToString()== "SoftwareHardWare")
                         {
                             m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 48px;'> IntelliSpace Portal Test -" + rowView["decentralised_portal_test_appenv_site1"].ToString() + "</p> ";
 
                             m_OutputTable += "<p style='color:black;font-weight:bold;margin-left: 48px;'> Extended Memory - FIC0457 -" + rowView["decentralised_portal_test_extmemory_site1"].ToString() + "</p> ";
+                        }else
+                        {
+                            //software only
+
+                            MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_portal_test_mac_site1"].ToString());
+
+
+                            tableelement = "<tr><td> " + MacAddressData1[0].Menu + " </td><td> " + MacAddressData1[0].MacAddress + " </td></tr>";
+
+
+                            //m_OutputTable += "<p>test</p>";
+
+                            m_OutputTable += "<div class='table-responsive' style='margin-left: 55px;width: 89%;'> ";
+                            m_OutputTable += "<table style='' class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;width:54%;'>Menu</th> <th scope='col' style='background-color: #0b1f65;width:54%;'>Mac address</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> ";
+                            m_OutputTable += "</div> ";
+
                         }
                     }
 

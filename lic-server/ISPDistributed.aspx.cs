@@ -68,10 +68,47 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     public string m_UserType = string.Empty;
     List<SiteInfoData> SiteInfoData1 = new List<SiteInfoData>();
     List<AdditionalApplication> AdditionalApplication1 = new List<AdditionalApplication>();
+
     List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
     List<MacAddressData> RedundantMacAddressData1 = new List<MacAddressData>();
     List<MacAddressData> TestMacAddressData1 = new List<MacAddressData>();
-    
+
+    List<MacAddressData> MacAddressData2 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData2 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData2 = new List<MacAddressData>();
+
+    List<MacAddressData> MacAddressData3 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData3 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData3 = new List<MacAddressData>();
+
+    List<MacAddressData> MacAddressData4 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData4 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData4 = new List<MacAddressData>();
+
+    List<MacAddressData> MacAddressData5 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData5 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData5 = new List<MacAddressData>();
+
+    List<MacAddressData> MacAddressData6 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData6 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData6 = new List<MacAddressData>();
+
+    List<MacAddressData> MacAddressData7 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData7 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData7 = new List<MacAddressData>();
+
+    List<MacAddressData> MacAddressData8 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData8 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData8 = new List<MacAddressData>();
+
+    List<MacAddressData> MacAddressData9 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData9 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData9 = new List<MacAddressData>();
+
+
+    List<MacAddressData> MacAddressData10 = new List<MacAddressData>();
+    List<MacAddressData> RedundantMacAddressData10 = new List<MacAddressData>();
+    List<MacAddressData> TestMacAddressData10 = new List<MacAddressData>();
 
     //decentrailsed
     public string m_EnterpriceInstallMac = string.Empty;
@@ -304,8 +341,8 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 HiddenPlanInstallEngine.Value = rowView["decentralised_planinstallengine"].ToString();
                 HiddenTabLic1.Value = rowView["decentralised_licencemodel1"].ToString();
 
-                hidPortalISPserver1.Value = rowView["decentralised_ISPServer"].ToString();
-                hidPortalExtMemNo1.Value = rowView["decentralised_ExtendedMem"].ToString();
+                hidPortalISPserver1.Value = rowView["decentralised_ISPServer1"].ToString();
+                hidPortalExtMemNo1.Value = rowView["decentralised_ExtendedMem1"].ToString();
 
                 hidRedSoftwareHardwareSite1.Value = rowView["decentralised_portal_redundant_SH_site1"].ToString();
                 hidRedAppEnvSite1.Value = rowView["decentralised_portal_redundant_appenv_site1"].ToString();
@@ -401,8 +438,14 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["decentralised_add_application"].ToString());
                 m_NoApp = Convert.ToString(AdditionalApplication1.Count - 1);
 
+                hidadditionalapps.Value = AdditionalApplication1.Count.ToString();
+
                 //hidHospitalData
-                
+                string[] splitHospitalname2 = null;
+                string[] splitApplicationName = null;
+
+                string[] splitMain_Hospitalname2 = null;
+                string[] splitAdditon_Hospitalname2 = null;
 
                 for (int i = 0; i <= AdditionalApplication1.Count - 1; i++)
                 {
@@ -423,7 +466,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             hidHospitalData1.Value = m_Hospitallist;
                             if (splitAdditon_Hospitalname.Length > 1)
                             {
-                                hostpitalnewline1.Value = (splitAdditon_Hospitalname.Length  ).ToString(); 
+                                hostpitalnewline1.Value = (splitAdditon_Hospitalname.Length-1  ).ToString(); 
                             }
                             
                             break;
@@ -442,25 +485,109 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                             hidHospitalData2.Value = m_Hospitallist;
                             if (splitAdditon_Hospitalname1.Length > 1)
                             {
-                                hostpitalnewline2.Value = (splitAdditon_Hospitalname1.Length).ToString();
+                                hostpitalnewline2.Value = (splitAdditon_Hospitalname1.Length - 1).ToString();
                             }
 
                             break;
                         case 2:
                             cmdApplication3.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent3 = AdditionalApplication1[i].ConcurrentUsers;
+                            
+                            splitHospitalname2 = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+                            splitMain_Hospitalname2 = splitHospitalname2[0].Split(':');
+                            splitAdditon_Hospitalname2 = splitHospitalname2[1].Split(';');
+
+                            m_Hospitallist = "3:" + splitMain_Hospitalname2[0] + "," + splitMain_Hospitalname2[1] + "|" + string.Join(",", splitAdditon_Hospitalname2);
+                            hidHospitalData3.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname2.Length > 1)
+                            {
+                                hostpitalnewline3.Value = (splitAdditon_Hospitalname2.Length - 1).ToString();
+                            }
+
                             break;
                         case 3:
                             cmdApplication4.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent4 = AdditionalApplication1[i].ConcurrentUsers;
+
+                            splitHospitalname2 = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+                            splitMain_Hospitalname2 = splitHospitalname2[0].Split(':');
+                            splitAdditon_Hospitalname2 = splitHospitalname2[1].Split(';');
+
+                            m_Hospitallist = "4:" + splitMain_Hospitalname2[0] + "," + splitMain_Hospitalname2[1] + "|" + string.Join(",", splitAdditon_Hospitalname2);
+                            hidHospitalData4.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname2.Length > 1)
+                            {
+                                hostpitalnewline4.Value = (splitAdditon_Hospitalname2.Length - 1).ToString();
+                            }
+
+
                             break;
                         case 4:
                             cmdApplication5.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent5 = AdditionalApplication1[i].ConcurrentUsers;
+
+                            splitHospitalname2 = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+                            splitMain_Hospitalname2 = splitHospitalname2[0].Split(':');
+                            splitAdditon_Hospitalname2 = splitHospitalname2[1].Split(';');
+
+                            m_Hospitallist = "5:" + splitMain_Hospitalname2[0] + "," + splitMain_Hospitalname2[1] + "|" + string.Join(",", splitAdditon_Hospitalname2);
+                            hidHospitalData5.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname2.Length > 1)
+                            {
+                                hostpitalnewline5.Value = (splitAdditon_Hospitalname2.Length - 1).ToString();
+                            }
+
+
                             break;
                         case 5:
                             cmdApplication6.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent6 = AdditionalApplication1[i].ConcurrentUsers;
+
+                            splitHospitalname2 = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+                            splitMain_Hospitalname2 = splitHospitalname2[0].Split(':');
+                            splitAdditon_Hospitalname2 = splitHospitalname2[1].Split(';');
+
+                            m_Hospitallist = "6:" + splitMain_Hospitalname2[0] + "," + splitMain_Hospitalname2[1] + "|" + string.Join(",", splitAdditon_Hospitalname2);
+                            hidHospitalData6.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname2.Length > 1)
+                            {
+                                hostpitalnewline6.Value = (splitAdditon_Hospitalname2.Length - 1).ToString();
+                            }
+
+                            break;
+
+                        case 6:
+                            cmdApplication7.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent7 = AdditionalApplication1[i].ConcurrentUsers;
+
+                            splitHospitalname2 = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+                            splitMain_Hospitalname2 = splitHospitalname2[0].Split(':');
+                            splitAdditon_Hospitalname2 = splitHospitalname2[1].Split(';');
+
+                            m_Hospitallist = "7:" + splitMain_Hospitalname2[0] + "," + splitMain_Hospitalname2[1] + "|" + string.Join(",", splitAdditon_Hospitalname2);
+                            hidHospitalData7.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname2.Length > 1)
+                            {
+                                hostpitalnewline7.Value = (splitAdditon_Hospitalname2.Length - 1).ToString();
+                            }
+
+                            break;
+
+                        case 7:
+                            cmdApplication8.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent8 = AdditionalApplication1[i].ConcurrentUsers;
+
+                            splitHospitalname2 = AdditionalApplication1[i].HospitalName.ToString().Split('|');
+                            splitMain_Hospitalname2 = splitHospitalname2[0].Split(':');
+                            splitAdditon_Hospitalname2 = splitHospitalname2[1].Split(';');
+
+                            m_Hospitallist = "8:" + splitMain_Hospitalname2[0] + "," + splitMain_Hospitalname2[1] + "|" + string.Join(",", splitAdditon_Hospitalname2);
+                            hidHospitalData8.Value = m_Hospitallist;
+                            if (splitAdditon_Hospitalname2.Length > 1)
+                            {
+                                hostpitalnewline8.Value = (splitAdditon_Hospitalname2.Length - 1).ToString();
+                            }
+
                             break;
                     }
 
@@ -470,7 +597,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                                
 
                 //Mac Top Main 1
-                MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_deliverymodel_ISPSoftware"].ToString());
+                MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_mac_site1"].ToString());
                 string currentidx = string.Empty;
                 int macidx = 1;
                 string machid = "";
@@ -1112,26 +1239,174 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
             //Intelli Portal Software / Hardware
             
+            //Site Start here 
             string Site1SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite1"].ToString();
+            string Site2SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite2"].ToString();
+            string Site3SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite3"].ToString();
+            string Site4SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite4"].ToString();
+            string Site5SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite5"].ToString();
+            string Site6SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite6"].ToString();
+            string Site7SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite7"].ToString();
+            string Site8SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite8"].ToString();
+            string Site9SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite9"].ToString();
+            string Site10SoftwareHardWare = Request.Form["HiddenSoftwareHardwareSite10"].ToString();
+
 
             //Redundant No / Yes
             string Site1Redundant = Request.Form["HiddenRedundantSite1"].ToString();
+            string Site2Redundant = Request.Form["HiddenRedundantSite2"].ToString();
+            string Site3Redundant = Request.Form["HiddenRedundantSite3"].ToString();
+            string Site4Redundant = Request.Form["HiddenRedundantSite4"].ToString();
+            string Site5Redundant = Request.Form["HiddenRedundantSite5"].ToString();
+            string Site6Redundant = Request.Form["HiddenRedundantSite6"].ToString();
+            string Site7Redundant = Request.Form["HiddenRedundantSite7"].ToString();
+            string Site8Redundant = Request.Form["HiddenRedundantSite8"].ToString();
+            string Site9Redundant = Request.Form["HiddenRedundantSite9"].ToString();
+            string Site10Redundant = Request.Form["HiddenRedundantSite10"].ToString();
+
+
+
             string Site1RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite1"].ToString();
+            string Site2RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite2"].ToString();
+            string Site3RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite3"].ToString();
+            string Site4RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite4"].ToString();
+            string Site5RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite5"].ToString();
+            string Site6RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite6"].ToString();
+            string Site7RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite7"].ToString();
+            string Site8RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite8"].ToString();
+            string Site9RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite9"].ToString();
+            string Site10RedundantSofHard = Request.Form["hidRedSoftwareHardwareSite10"].ToString();
+            
+
 
             string Site1hidRedAppEnvSite1 = Request.Form["hidRedAppEnvSite1"].ToString();
+            string Site1hidRedAppEnvSite2 = Request.Form["hidRedAppEnvSite2"].ToString();
+            string Site1hidRedAppEnvSite3 = Request.Form["hidRedAppEnvSite3"].ToString();
+            string Site1hidRedAppEnvSite4 = Request.Form["hidRedAppEnvSite4"].ToString();
+            string Site1hidRedAppEnvSite5 = Request.Form["hidRedAppEnvSite5"].ToString();
+            string Site1hidRedAppEnvSite6 = Request.Form["hidRedAppEnvSite6"].ToString();
+            string Site1hidRedAppEnvSite7 = Request.Form["hidRedAppEnvSite7"].ToString();
+            string Site1hidRedAppEnvSite8 = Request.Form["hidRedAppEnvSite8"].ToString();
+            string Site1hidRedAppEnvSite9 = Request.Form["hidRedAppEnvSite9"].ToString();
+            string Site1hidRedAppEnvSite10 = Request.Form["hidRedAppEnvSite10"].ToString();
+            
+
             string Site1hidRedExtMemNo1 = Request.Form["hidRedExtMemNo1"].ToString();
+            string Site1hidRedExtMemNo2 = Request.Form["hidRedExtMemNo2"].ToString();
+            string Site1hidRedExtMemNo3 = Request.Form["hidRedExtMemNo3"].ToString();
+            string Site1hidRedExtMemNo4 = Request.Form["hidRedExtMemNo4"].ToString();
+            string Site1hidRedExtMemNo5 = Request.Form["hidRedExtMemNo5"].ToString();
+            string Site1hidRedExtMemNo6 = Request.Form["hidRedExtMemNo6"].ToString();
+            string Site1hidRedExtMemNo7 = Request.Form["hidRedExtMemNo7"].ToString();
+            string Site1hidRedExtMemNo8 = Request.Form["hidRedExtMemNo8"].ToString();
+            string Site1hidRedExtMemNo9 = Request.Form["hidRedExtMemNo9"].ToString();
+            string Site1hidRedExtMemNo10 = Request.Form["hidRedExtMemNo10"].ToString();
 
 
             string Site1Test = Request.Form["HiddenTestSite1"].ToString();
+            string Site2Test = Request.Form["HiddenTestSite2"].ToString();
+            string Site3Test = Request.Form["HiddenTestSite3"].ToString();
+            string Site4Test = Request.Form["HiddenTestSite4"].ToString();
+            string Site5Test = Request.Form["HiddenTestSite5"].ToString();
+            string Site6Test = Request.Form["HiddenTestSite6"].ToString();
+            string Site7Test = Request.Form["HiddenTestSite7"].ToString();
+            string Site8Test = Request.Form["HiddenTestSite8"].ToString();
+            string Site9Test = Request.Form["HiddenTestSite9"].ToString();
+            string Site10Test = Request.Form["HiddenTestSite10"].ToString();
 
             string PortalISPserver1 = Request.Form["hidPortalISPserver1"].ToString();
-            string PortalExtMemNo1 = Request.Form["hidPortalExtMemNo1"].ToString();
+            string PortalISPserver2 = Request.Form["hidPortalISPserver2"].ToString();
+            string PortalISPserver3 = Request.Form["hidPortalISPserver3"].ToString();
+            string PortalISPserver4 = Request.Form["hidPortalISPserver4"].ToString();
+            string PortalISPserver5 = Request.Form["hidPortalISPserver5"].ToString();
+            string PortalISPserver6 = Request.Form["hidPortalISPserver6"].ToString();
+            string PortalISPserver7 = Request.Form["hidPortalISPserver7"].ToString();
+            string PortalISPserver8 = Request.Form["hidPortalISPserver8"].ToString();
+            string PortalISPserver9 = Request.Form["hidPortalISPserver9"].ToString();
+            string PortalISPserver10 = Request.Form["hidPortalISPserver10"].ToString();
 
+            string PortalExtMemNo1 = Request.Form["hidPortalExtMemNo1"].ToString();
+            string PortalExtMemNo2 = Request.Form["hidPortalExtMemNo2"].ToString();
+            string PortalExtMemNo3 = Request.Form["hidPortalExtMemNo3"].ToString();
+            string PortalExtMemNo4 = Request.Form["hidPortalExtMemNo4"].ToString();
+            string PortalExtMemNo5 = Request.Form["hidPortalExtMemNo5"].ToString();
+            string PortalExtMemNo6 = Request.Form["hidPortalExtMemNo6"].ToString();
+            string PortalExtMemNo7 = Request.Form["hidPortalExtMemNo7"].ToString();
+            string PortalExtMemNo8 = Request.Form["hidPortalExtMemNo8"].ToString();
+            string PortalExtMemNo9 = Request.Form["hidPortalExtMemNo9"].ToString();
+            string PortalExtMemNo10 = Request.Form["hidPortalExtMemNo10"].ToString();
+            
 
             string TesSH_site1 = Request.Form["hidTestSoftwareHardwareSite1"].ToString();
-            string TestAppEnvSite1 = Request.Form["hidTestEnvSite1"].ToString();
-            string TestExtMemNo1 = Request.Form["hidTestExtMemNo1"].ToString();
+            string TesSH_site2 = Request.Form["hidTestSoftwareHardwareSite2"].ToString();
+            string TesSH_site3 = Request.Form["hidTestSoftwareHardwareSite3"].ToString();
+            string TesSH_site4 = Request.Form["hidTestSoftwareHardwareSite4"].ToString();
+            string TesSH_site5 = Request.Form["hidTestSoftwareHardwareSite5"].ToString();
+            string TesSH_site6 = Request.Form["hidTestSoftwareHardwareSite6"].ToString();
+            string TesSH_site7 = Request.Form["hidTestSoftwareHardwareSite7"].ToString();
+            string TesSH_site8 = Request.Form["hidTestSoftwareHardwareSite8"].ToString();
+            string TesSH_site9 = Request.Form["hidTestSoftwareHardwareSite9"].ToString();
+            string TesSH_site10 = Request.Form["hidTestSoftwareHardwareSite10"].ToString();
+            
 
+            string TestAppEnvSite1 = Request.Form["hidTestEnvSite1"].ToString();
+            string TestAppEnvSite2 = Request.Form["hidTestEnvSite2"].ToString();
+            string TestAppEnvSite3 = Request.Form["hidTestEnvSite3"].ToString();
+            string TestAppEnvSite4 = Request.Form["hidTestEnvSite4"].ToString();
+            string TestAppEnvSite5 = Request.Form["hidTestEnvSite5"].ToString();
+            string TestAppEnvSite6 = Request.Form["hidTestEnvSite6"].ToString();
+            string TestAppEnvSite7 = Request.Form["hidTestEnvSite7"].ToString();
+            string TestAppEnvSite8 = Request.Form["hidTestEnvSite8"].ToString();
+            string TestAppEnvSite9 = Request.Form["hidTestEnvSite9"].ToString();
+            string TestAppEnvSite10 = Request.Form["hidTestEnvSite10"].ToString();
+            
+
+            string TestExtMemNo1 = Request.Form["hidTestExtMemNo1"].ToString();
+            string TestExtMemNo2 = Request.Form["hidTestExtMemNo2"].ToString();
+            string TestExtMemNo3 = Request.Form["hidTestExtMemNo3"].ToString();
+            string TestExtMemNo4 = Request.Form["hidTestExtMemNo4"].ToString();
+            string TestExtMemNo5 = Request.Form["hidTestExtMemNo5"].ToString();
+            string TestExtMemNo6 = Request.Form["hidTestExtMemNo6"].ToString();
+            string TestExtMemNo7 = Request.Form["hidTestExtMemNo7"].ToString();
+            string TestExtMemNo8 = Request.Form["hidTestExtMemNo8"].ToString();
+            string TestExtMemNo9 = Request.Form["hidTestExtMemNo9"].ToString();
+            string TestExtMemNo10 = Request.Form["hidTestExtMemNo10"].ToString();
+
+            string sMacAddressData1 = string.Empty;
+            string sMacAddressData2 = string.Empty;
+            string sMacAddressData3 = string.Empty;
+            string sMacAddressData4 = string.Empty;
+            string sMacAddressData5 = string.Empty;
+            string sMacAddressData6 = string.Empty;
+            string sMacAddressData7 = string.Empty;
+            string sMacAddressData8 = string.Empty;
+            string sMacAddressData9 = string.Empty;
+            string sMacAddressData10 = string.Empty;
+
+
+            string sRedundantMacAddressData1 = string.Empty;
+            string sRedundantMacAddressData2 = string.Empty;
+            string sRedundantMacAddressData3 = string.Empty;
+            string sRedundantMacAddressData4 = string.Empty;
+            string sRedundantMacAddressData5 = string.Empty;
+            string sRedundantMacAddressData6 = string.Empty;
+            string sRedundantMacAddressData7 = string.Empty;
+            string sRedundantMacAddressData8 = string.Empty;
+            string sRedundantMacAddressData9 = string.Empty;
+            string sRedundantMacAddressData10 = string.Empty;
+
+            string sTestMacAddressData1 = string.Empty;
+            string sTestMacAddressData2 = string.Empty;
+            string sTestMacAddressData3 = string.Empty;
+            string sTestMacAddressData4 = string.Empty;
+            string sTestMacAddressData5 = string.Empty;
+            string sTestMacAddressData6 = string.Empty;
+            string sTestMacAddressData7 = string.Empty;
+            string sTestMacAddressData8 = string.Empty;
+            string sTestMacAddressData9 = string.Empty;
+            string sTestMacAddressData10 = string.Empty;
+
+            
 
 
             int macidx = GetNumberofEntries("macAddresssections_macTableSO"); 
@@ -1162,11 +1437,55 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                     string item1 = Request.Form["ApplicationSoftwareOnly" + "macTableSO"  + i+"_" +isec].ToString();
                     string item2 = Request.Form["MacSoftwareOnly" + "macTableSO" + i + "_" + isec].ToString();
 
-                    MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                    switch(i)
+                    {
+                        case 1:
+                            MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData1 = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
+                            break;
+                        case 2:
+                            MacAddressData2.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData2 = JsonConvert.SerializeObject(MacAddressData2, Formatting.Indented);
+                            break;
+                        case 3:
+                            MacAddressData3.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData3 = JsonConvert.SerializeObject(MacAddressData3, Formatting.Indented);
+                            break;
+                        case 4:
+                            MacAddressData4.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData4 = JsonConvert.SerializeObject(MacAddressData4, Formatting.Indented);
+                            break;
+                        case 5:
+                            MacAddressData5.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData5 = JsonConvert.SerializeObject(MacAddressData5, Formatting.Indented);
+                            break;
+                        case 6:
+                            MacAddressData6.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData6 = JsonConvert.SerializeObject(MacAddressData6, Formatting.Indented);
+                            break;
+                        case 7:
+                            MacAddressData7.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData7 = JsonConvert.SerializeObject(MacAddressData7, Formatting.Indented);
+                            break;
+                        case 8:
+                            MacAddressData8.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData8 = JsonConvert.SerializeObject(MacAddressData8, Formatting.Indented);
+                            break;
+                        case 9:
+                            MacAddressData9.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData9 = JsonConvert.SerializeObject(MacAddressData9, Formatting.Indented);
+                            break;
+                        case 10:
+                            MacAddressData10.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                            sMacAddressData10 = JsonConvert.SerializeObject(MacAddressData10, Formatting.Indented);
+                            break;
+
+                    }
+                    
                 }
             }
 
-            string MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
+            
 
 
             //loop redundant
@@ -1179,7 +1498,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             foreach (string key in Request.Form)
             {
 
-                bool hasItemRedundant = LoopNumberofEntries("ApplicationSoftwareOnlymacTableSO" + 1 + "_" + RedundantmacSectionidx);
+                bool hasItemRedundant = LoopNumberofEntries("ApplicationSoftwareOnlymacTableRedundant" + 1 + "_" + RedundantmacSectionidx);
 
                 if (hasItemRedundant)
                 {
@@ -1193,10 +1512,54 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             for (int isec = 1; isec <= RedundantmacSection; isec++)
             {
 
-                string item1 = Request.Form["ApplicationSoftwareOnlymacTableSO" + isec + "_" + isec].ToString();
-                string item2 = Request.Form["MacSoftwareOnlymacTableSO" + isec + "_" + isec].ToString();
+                string item1 = Request.Form["ApplicationSoftwareOnlymacTableRedundant" + isec + "_" + isec].ToString();
+                string item2 = Request.Form["MacSoftwareOnlymacTableRedundant" + isec + "_" + isec].ToString();
 
-                RedundantMacAddressData1.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                switch (isec)
+                {
+                    case 1:
+                        RedundantMacAddressData1.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData1 = JsonConvert.SerializeObject(RedundantMacAddressData1, Formatting.Indented);
+                        break;
+                    case 2:
+                        RedundantMacAddressData2.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData2 = JsonConvert.SerializeObject(RedundantMacAddressData2, Formatting.Indented);
+                        break;
+                    case 3:
+                        RedundantMacAddressData3.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData3 = JsonConvert.SerializeObject(RedundantMacAddressData3, Formatting.Indented);
+                        break;
+                    case 4:
+                        RedundantMacAddressData4.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData4 = JsonConvert.SerializeObject(RedundantMacAddressData4, Formatting.Indented);
+                        break;
+                    case 5:
+                        RedundantMacAddressData5.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData5 = JsonConvert.SerializeObject(RedundantMacAddressData5, Formatting.Indented);
+                        break;
+                    case 6:
+                        RedundantMacAddressData6.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData6 = JsonConvert.SerializeObject(RedundantMacAddressData6, Formatting.Indented);
+                        break;
+                    case 7:
+                        RedundantMacAddressData7.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData7 = JsonConvert.SerializeObject(RedundantMacAddressData7, Formatting.Indented);
+                        break;
+                    case 8:
+                        RedundantMacAddressData8.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData8 = JsonConvert.SerializeObject(RedundantMacAddressData8, Formatting.Indented);
+                        break;
+                    case 9:
+                        RedundantMacAddressData9.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData9 = JsonConvert.SerializeObject(RedundantMacAddressData9, Formatting.Indented);
+                        break;
+                    case 10:
+                        RedundantMacAddressData10.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sRedundantMacAddressData10 = JsonConvert.SerializeObject(RedundantMacAddressData10, Formatting.Indented);
+                        break;
+
+                }
+                
             }
 
 
@@ -1212,7 +1575,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             foreach (string key in Request.Form)
             {
 
-                bool hasItemTest = LoopNumberofEntries("ApplicationSoftwareOnlymacTableRedundant" + 1 + "_" + TestmacSectionidx);
+                bool hasItemTest = LoopNumberofEntries("ApplicationSoftwareOnlymacTestTable" + 1 + "_" + TestmacSectionidx);
 
                 if (hasItemTest)
                 {
@@ -1226,23 +1589,68 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             for (int isec = 1; isec <= TestmacSection; isec++)
             {
 
-                string item1 = Request.Form["ApplicationSoftwareOnlymacTableRedundant" + isec + "_" + isec].ToString();
-                string item2 = Request.Form["MacSoftwareOnlymacTableRedundant" + isec + "_" + isec].ToString();
+                string item1 = Request.Form["ApplicationSoftwareOnlymacTestTable" + isec + "_" + isec].ToString();
+                string item2 = Request.Form["MacSoftwareOnlymacTestTable" + isec + "_" + isec].ToString();
 
-                TestMacAddressData1.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                switch (isec)
+                {
+                    case 1:
+                        TestMacAddressData1.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData1 = JsonConvert.SerializeObject(TestMacAddressData1, Formatting.Indented);
+                        break;
+                    case 2:
+                        TestMacAddressData2.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData2 = JsonConvert.SerializeObject(TestMacAddressData2, Formatting.Indented);
+                        break;
+                    case 3:
+                        TestMacAddressData3.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData3 = JsonConvert.SerializeObject(TestMacAddressData3, Formatting.Indented);
+                        break;
+                    case 4:
+                        TestMacAddressData4.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData4 = JsonConvert.SerializeObject(TestMacAddressData4, Formatting.Indented);
+                        break;
+                    case 5:
+                        TestMacAddressData5.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData5 = JsonConvert.SerializeObject(TestMacAddressData5, Formatting.Indented);
+                        break;
+                    case 6:
+                        TestMacAddressData6.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData6 = JsonConvert.SerializeObject(TestMacAddressData6, Formatting.Indented);
+                        break;
+                    case 7:
+                        TestMacAddressData7.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData7 = JsonConvert.SerializeObject(TestMacAddressData7, Formatting.Indented);
+                        break;
+                    case 8:
+                        TestMacAddressData8.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData8 = JsonConvert.SerializeObject(TestMacAddressData8, Formatting.Indented);
+                        break;
+                    case 9:
+                        TestMacAddressData9.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData9 = JsonConvert.SerializeObject(TestMacAddressData9, Formatting.Indented);
+                        break;
+                    case 10:
+                        TestMacAddressData10.Add(new MacAddressData { No = isec.ToString(), Menu = item1, MacAddress = item2 });
+                        sTestMacAddressData10 = JsonConvert.SerializeObject(TestMacAddressData10, Formatting.Indented);
+                        break;
+
+                }
+
+                
             }
 
 
             //loop test
 
 
-            string TestMacAddressData = JsonConvert.SerializeObject(TestMacAddressData1, Formatting.Indented);
-            string RedundantMacAddressData = JsonConvert.SerializeObject(RedundantMacAddressData1, Formatting.Indented);
+            
+            
 
 
     
 
-            string SQL = "update  PhilipsLic_Project set decentralised_portal_test_SH_site1='"+ TesSH_site1 + "', decentralised_portal_test_appenv_site1='" + TestAppEnvSite1 + "', decentralised_portal_test_extmemory_site1='" + TestExtMemNo1 + "', decentralised_portal_redundant_appenv_site1='" + Site1hidRedAppEnvSite1 + "', decentralised_portal_redundant_extmemory_site1='" + Site1hidRedExtMemNo1 + "', decentralised_portal_redundant_SH_site1='" + Site1RedundantSofHard + "', decentralised_ExtendedMem='" + PortalExtMemNo1 + "', decentralised_ISPServer='"+ PortalISPserver1 + "',  decentralised_portal_test_mac_site1='" + TestMacAddressData + "', decentralised_portal_redundant_mac_site1='" + RedundantMacAddressData + "', decentralised_portal_test_site1='" + Site1Test + "', decentralised_portal_redundant_site1='" + Site1Redundant + "', decentralised_portal_site1='" + Site1SoftwareHardWare + "', decentralised_enterpriceinstallmac='" + EnterpriceInstallMac + "', decentralised_planinstallengine='" + PlanInstallEngine + "', decentralised_licencemodel1='" + WhichLicenceModel1 + "', decentralised_deliverymode='" + WhichDeliveryTab + "',  decentralised_siteinfo='" + centralised_siteinfo + "' , decentralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "', decentralised_add_application='"+ AdditionalApplication + "' , decentralised_mac_site1='" + MacAddressData + "' where PhilipsLic_ProjectID =" + id;
+            string SQL = "update  PhilipsLic_Project set decentralised_portal_test_SH_site1='"+ TesSH_site1 + "' , decentralised_portal_test_SH_site2='" + TesSH_site2 + "' ,decentralised_portal_test_SH_site3='" + TesSH_site3 + "',decentralised_portal_test_SH_site4='" + TesSH_site4 + "',decentralised_portal_test_SH_site5='" + TesSH_site5 + "',decentralised_portal_test_SH_site6='" + TesSH_site6 + "',decentralised_portal_test_SH_site7='" + TesSH_site7 + "',decentralised_portal_test_SH_site8='" + TesSH_site8 + "',decentralised_portal_test_SH_site9='" + TesSH_site9 + "',decentralised_portal_test_SH_site10='" + TesSH_site10 + "'  , decentralised_portal_test_appenv_site1='" + TestAppEnvSite1 + "' , decentralised_portal_test_appenv_site2='" + TestAppEnvSite2 + "' , decentralised_portal_test_appenv_site3='" + TestAppEnvSite3 + "', decentralised_portal_test_appenv_site4='" + TestAppEnvSite4 + "', decentralised_portal_test_appenv_site5='" + TestAppEnvSite5 + "', decentralised_portal_test_appenv_site6='" + TestAppEnvSite6 + "', decentralised_portal_test_appenv_site7='" + TestAppEnvSite7 + "', decentralised_portal_test_appenv_site8='" + TestAppEnvSite8 + "' , decentralised_portal_test_appenv_site10='" + TestAppEnvSite10 + "', decentralised_portal_test_extmemory_site1='" + TestExtMemNo1 + "', decentralised_portal_test_extmemory_site2='" + TestExtMemNo2 + "', decentralised_portal_test_extmemory_site3='" + TestExtMemNo3 + "', decentralised_portal_test_extmemory_site4='" + TestExtMemNo4 + "', decentralised_portal_test_extmemory_site5='" + TestExtMemNo5 + "', decentralised_portal_test_extmemory_site6='" + TestExtMemNo6 + "', decentralised_portal_test_extmemory_site7='" + TestExtMemNo7 + "', decentralised_portal_test_extmemory_site8='" + TestExtMemNo8 + "', decentralised_portal_test_extmemory_site9='" + TestExtMemNo9 + "', decentralised_portal_test_extmemory_site10='" + TestExtMemNo10 + "' ,decentralised_portal_redundant_appenv_site1='" + Site1hidRedAppEnvSite1 + "' , decentralised_portal_redundant_appenv_site2='" + Site1hidRedAppEnvSite2 + "' , decentralised_portal_redundant_appenv_site3='" + Site1hidRedAppEnvSite3 + "' , decentralised_portal_redundant_appenv_site4='" + Site1hidRedAppEnvSite4 + "' , decentralised_portal_redundant_appenv_site5='" + Site1hidRedAppEnvSite5 + "' , decentralised_portal_redundant_appenv_site6='" + Site1hidRedAppEnvSite6 + "' , decentralised_portal_redundant_appenv_site7='" + Site1hidRedAppEnvSite7 + "' , decentralised_portal_redundant_appenv_site8='" + Site1hidRedAppEnvSite8 + "' , decentralised_portal_redundant_appenv_site9='" + Site1hidRedAppEnvSite9 + "' , decentralised_portal_redundant_appenv_site10='" + Site1hidRedAppEnvSite10 + "',  decentralised_portal_redundant_extmemory_site1='" + Site1hidRedExtMemNo1 + "',  decentralised_portal_redundant_extmemory_site2='" + Site1hidRedExtMemNo2 + "' ,  decentralised_portal_redundant_extmemory_site3='" + Site1hidRedExtMemNo3 + "' ,  decentralised_portal_redundant_extmemory_site4='" + Site1hidRedExtMemNo4 + "' ,  decentralised_portal_redundant_extmemory_site5='" + Site1hidRedExtMemNo5 + "' ,  decentralised_portal_redundant_extmemory_site6='" + Site1hidRedExtMemNo6 + "' ,  decentralised_portal_redundant_extmemory_site7='" + Site1hidRedExtMemNo7 + "' ,  decentralised_portal_redundant_extmemory_site8='" + Site1hidRedExtMemNo8 + "' ,  decentralised_portal_redundant_extmemory_site9='" + Site1hidRedExtMemNo9 + "' ,  decentralised_portal_redundant_extmemory_site10='" + Site1hidRedExtMemNo10 + "' , decentralised_portal_redundant_SH_site1='" + Site1RedundantSofHard + "', decentralised_portal_redundant_SH_site2='" + Site2RedundantSofHard + "', decentralised_portal_redundant_SH_site3='" + Site3RedundantSofHard + "', decentralised_portal_redundant_SH_site4='" + Site4RedundantSofHard + "', decentralised_portal_redundant_SH_site5='" + Site5RedundantSofHard + "', decentralised_portal_redundant_SH_site6='" + Site6RedundantSofHard + "', decentralised_portal_redundant_SH_site7='" + Site7RedundantSofHard + "', decentralised_portal_redundant_SH_site8='" + Site8RedundantSofHard + "' , decentralised_portal_redundant_SH_site10='" + Site10RedundantSofHard + "', decentralised_ExtendedMem1='" + PortalExtMemNo1 + "' , decentralised_ExtendedMem2='" + PortalExtMemNo2 + "' , decentralised_ExtendedMem3='" + PortalExtMemNo3 + "' , decentralised_ExtendedMem4='" + PortalExtMemNo4 + "' , decentralised_ExtendedMem5='" + PortalExtMemNo5 + "' , decentralised_ExtendedMem6='" + PortalExtMemNo6 + "' , decentralised_ExtendedMem7='" + PortalExtMemNo7 + "' , decentralised_ExtendedMem8='" + PortalExtMemNo8 + "' , decentralised_ExtendedMem9='" + PortalExtMemNo9 + "' , decentralised_ExtendedMem10='" + PortalExtMemNo10 + "'  , decentralised_ISPServer1='" + PortalISPserver1 + "', decentralised_ISPServer2='" + PortalISPserver2 + "', decentralised_ISPServer3='" + PortalISPserver3 + "', decentralised_ISPServer4='" + PortalISPserver4 + "', decentralised_ISPServer5='" + PortalISPserver5 + "', decentralised_ISPServer6='" + PortalISPserver6 + "', decentralised_ISPServer7='" + PortalISPserver7 + "', decentralised_ISPServer8='" + PortalISPserver8 + "', decentralised_ISPServer9='" + PortalISPserver9 + "' , decentralised_ISPServer10='" + PortalISPserver10 + "',  decentralised_portal_test_mac_site1='" + sTestMacAddressData1 + "',  decentralised_portal_test_mac_site2='" + sTestMacAddressData2 + "',  decentralised_portal_test_mac_site3='" + sTestMacAddressData3 + "',  decentralised_portal_test_mac_site4='" + sTestMacAddressData4 + "',  decentralised_portal_test_mac_site5='" + sTestMacAddressData5 + "',  decentralised_portal_test_mac_site6='" + sTestMacAddressData6 + "',  decentralised_portal_test_mac_site7='" + sTestMacAddressData7 + "',  decentralised_portal_test_mac_site8='" + sTestMacAddressData8 + "',  decentralised_portal_test_mac_site9='" + sTestMacAddressData9 + "',  decentralised_portal_test_mac_site10='" + sTestMacAddressData10 + "', decentralised_portal_redundant_mac_site1='" + sRedundantMacAddressData1 + "' , decentralised_portal_redundant_mac_site2='" + sRedundantMacAddressData2 + "' , decentralised_portal_redundant_mac_site3='" + sRedundantMacAddressData3 + "' , decentralised_portal_redundant_mac_site4='" + sRedundantMacAddressData4 + "' , decentralised_portal_redundant_mac_site5='" + sRedundantMacAddressData5 + "', decentralised_portal_redundant_mac_site6='" + sRedundantMacAddressData6 + "', decentralised_portal_redundant_mac_site7='" + sRedundantMacAddressData7 + "', decentralised_portal_redundant_mac_site8='" + sRedundantMacAddressData8 + "', decentralised_portal_redundant_mac_site9='" + sRedundantMacAddressData9 + "', decentralised_portal_redundant_mac_site10='" + sRedundantMacAddressData10 + "', decentralised_portal_test_site2='" + Site2Test + "' , decentralised_portal_test_site3='" + Site3Test + "' , decentralised_portal_test_site4='" + Site4Test + "', decentralised_portal_test_site5='" + Site5Test + "', decentralised_portal_test_site6='" + Site6Test + "', decentralised_portal_test_site7='" + Site7Test + "', decentralised_portal_test_site8='" + Site8Test + "', decentralised_portal_test_site9='" + Site9Test + "', decentralised_portal_test_site10='" + Site10Test + "', decentralised_portal_redundant_site1='" + Site1Redundant + "', decentralised_portal_redundant_site2='" + Site2Redundant + "', decentralised_portal_redundant_site3='" + Site3Redundant + "', decentralised_portal_redundant_site4='" + Site4Redundant + "', decentralised_portal_redundant_site5='" + Site5Redundant + "', decentralised_portal_redundant_site6='" + Site6Redundant + "' , decentralised_portal_redundant_site7='" + Site7Redundant + "' , decentralised_portal_redundant_site8='" + Site8Redundant + "' , decentralised_portal_redundant_site9='" + Site9Redundant + "' , decentralised_portal_redundant_site10='" + Site10Redundant + "', decentralised_portal_site1='" + Site1SoftwareHardWare + "', decentralised_portal_site2='" + Site2SoftwareHardWare + "', decentralised_portal_site3='" + Site3SoftwareHardWare + "', decentralised_portal_site4='" + Site4SoftwareHardWare + "', decentralised_portal_site5='" + Site5SoftwareHardWare + "', decentralised_portal_site6='" + Site6SoftwareHardWare + "' , decentralised_portal_site7='" + Site7SoftwareHardWare + "' , decentralised_portal_site8='" + Site8SoftwareHardWare + "' , decentralised_portal_site9='" + Site9SoftwareHardWare + "' , decentralised_portal_site10='" + Site10SoftwareHardWare + "',  decentralised_enterpriceinstallmac='" + EnterpriceInstallMac + "', decentralised_planinstallengine='" + PlanInstallEngine + "', decentralised_licencemodel1='" + WhichLicenceModel1 + "', decentralised_deliverymode='" + WhichDeliveryTab + "',  decentralised_siteinfo='" + centralised_siteinfo + "' , decentralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "', decentralised_add_application='"+ AdditionalApplication + "' , decentralised_mac_site1='" + sMacAddressData1 + "' , decentralised_mac_site2='" + sMacAddressData2 + "', decentralised_mac_site3='" + sMacAddressData3 + "', decentralised_mac_site4='" + sMacAddressData4 + "', decentralised_mac_site5='" + sMacAddressData5 + "', decentralised_mac_site6='" + sMacAddressData6 + "', decentralised_mac_site7='" + sMacAddressData7 + "', decentralised_mac_site8='" + sMacAddressData8 + "', decentralised_mac_site9='" + sMacAddressData9 + "', decentralised_mac_site10='" + sMacAddressData10 + "' where PhilipsLic_ProjectID =" + id;
             // string SQL = "update PhilipsLic_Project set centralised_add_application='"+ AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
             Helper.InsertData(SQL);
 

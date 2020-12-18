@@ -275,48 +275,9 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>                                                               
-                                                                    <td style="vertical-align: middle;">Key Account Manager</td>
-                                                                    <td>
-                                                                        <%=m_customer_key_account_first %>
-                                                                    </td>
-                                                                    <td>
-                                                                       <%=m_customer_key_account_last %>
-                                                                    </td>
-                                                                    <td>
-                                                                       <%=m_customer_key_account_email %>
-                                                                    </td>
-                                                                </tr>
-                                                             <tr>
-                                                                <td style="vertical-align: middle;">InteliSpace Portal Sales Specialist</td>
-                                                                <td>
-                                                                     <%=m_portalSales_first %>
-                                                                    
-                                                                </td>
-                                                                <td>
-                                                                     <%=m_portalSales_last %>
-
-                                                                </td>
-                                                                <td>
-                                                                     <%=m_portalSales_email %>
-                                                                </td>
-
-                                                            </tr>
-
-                                                            <tr>
-
-                                                                <td style="vertical-align: middle;">Project core team*</td>
-                                                                <td>
-                                                                     <%=m_core_first %>
-                                                                    
-                                                                </td>
-                                                                <td>
-                                                                   <%=m_core_last %>
-                                                                </td>
-                                                                <td>
-                                                                      <%=m_core_email %>
-                                                                </td>
-                                                            </tr>
+                                                            <%=m_customer_key_accountOutput %>                                                            
+                                                            <%=m_portalSalesOutput %>
+                                                            <%=m_coreOutput %>
 
                                                         </tbody>
                                                     </table>
@@ -371,10 +332,20 @@
 
 
 
+<div class="row">
+  <div class="col-md-4">  <%=m_DeliveryModel %></div>
+  <div class="col-md-4"> <%=m_LicenceModel1 %></div>
+  <div class="col-md-4"><%=m_PlanInstall %> </div>
+</div>
 
-                                                 <%=m_DeliveryModel %>
-                                                 <%=m_LicenceModel1 %>
-                                                 <%=m_PlanInstall %>
+
+
+
+
+
+                                               
+                                                
+                                                 
 
 
 
@@ -390,9 +361,18 @@
 
                                             </div>
 
+                                            <a href="/lic-server/ISPDistributed?id=<%=Request.QueryString["id"] %>" style="display: block;
+    background: #178bc6;
+    color: #ffff;
+    margin: auto;
+    width: 20%;
+    border: none;
+    padding: 15px;
+    text-align: center;">
+                                            
+                                                Back
 
-
-
+                                                </a>
 
 
 

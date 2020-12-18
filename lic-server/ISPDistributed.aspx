@@ -506,7 +506,7 @@
 
                                                                                 <span id="CONCURRENTENTERPRISE_Error2" style="display: none;">
                                                                                     <div class='alert alert-warning' role='alert'>
-                                                                                        Concurrent users can not exceed 50
+                                                                                        Concurrent users can not exceed 200
                                                                                     </div>
                                                                                 </span>
 
@@ -523,7 +523,7 @@
                                                                                     <tbody>
                                                                                         <tr>
                                                                                             <td>
-                                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" <%--onchange="GetLicenceData();"--%> value="<%=m_ConEnterpriseUsers %>" onchange="CheckConcurrentBox();" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="1" max="55">
+                                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" <%--onchange="GetLicenceData();"--%> value="<%=m_ConEnterpriseUsers %>" onchange="CheckConcurrentBox();" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="1" max="200">
                                                                                             </td>
 
 
@@ -1244,13 +1244,13 @@
                                                                                     <input type="number" id="txtCUser1_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,1);" name="txtCUsers1_1" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser1_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,2);" name="txtCUsers1_2" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser1_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser1_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser1_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser1_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser1_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser1_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser1_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser1_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,3);" name="txtCUsers1_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser1_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,4);" name="txtCUsers1_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser1_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,5);" name="txtCUsers1_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser1_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,6);" name="txtCUsers1_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser1_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,7);" name="txtCUsers1_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser1_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,8);" name="txtCUsers1_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser1_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,9);" name="txtCUsers1_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser1_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,1,10);" name="txtCUsers1_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -1437,13 +1437,13 @@
                                                                                     <input type="number" id="txtCUser2_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,1);" name="txtCUsers2_1" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser2_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,2);" name="txtCUsers2_2" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser2_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser2_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser2_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser2_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser2_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser2_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser2_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser2_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,3);" name="txtCUsers2_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser2_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,4);" name="txtCUsers2_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser2_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,5);" name="txtCUsers2_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser2_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,6);" name="txtCUsers2_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser2_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,7);" name="txtCUsers2_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser2_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,8);" name="txtCUsers2_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser2_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,9);" name="txtCUsers2_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser2_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,2,10);" name="txtCUsers2_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -1569,7 +1569,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent3" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent3" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent3" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent3" min="10" max="100" value="<%=m_txtConcurrent3 %>">
                                                                                     <div id="errortxtConcurrent3" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1640,12 +1640,12 @@
                                                                                     <input type="number" id="txtCUser3_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,2);" name="txtCUsers3_2" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser3_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_3" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser3_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser3_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser3_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser3_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser3_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser3_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser3_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,3);" name="txtCUsers3_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser3_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,5);" name="txtCUsers3_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser3_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,6);" name="txtCUsers3_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser3_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,7);" name="txtCUsers3_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser3_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,8);" name="txtCUsers3_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser3_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,9);" name="txtCUsers3_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser3_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,3,10);" name="txtCUsers3_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -1775,7 +1775,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent4" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent4" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent4" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent4" min="10" max="100" value="<%=m_txtConcurrent4 %>">
                                                                                     <div id="errortxtConcurrent4" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -1845,13 +1845,13 @@
                                                                                     <input type="number" id="txtCUser4_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,1);" name="txtCUsers4_1" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser4_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,2);" name="txtCUsers4_2" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser4_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser4_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser4_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser4_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser4_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser4_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser4_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser4_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser4_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,4);" name="txtCUsers4_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser4_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,5);" name="txtCUsers4_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser4_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,6);" name="txtCUsers4_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser4_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,7);" name="txtCUsers4_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser4_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,8);" name="txtCUsers4_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser4_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,9);" name="txtCUsers4_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser4_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,10);" name="txtCUsers4_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -1974,7 +1974,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent5" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent5" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent5" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent5" min="10" max="100" value="<%=m_txtConcurrent5 %>">
                                                                                     <div id="errortxtConcurrent5" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -2036,17 +2036,17 @@
 
 
                                                                                 <td>
-                                                                                    <input type="number" id="txtCUser5" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,4,0);" name="txtCUsers4" min="1" max="55" value="" />
-                                                                                    <input type="number" id="txtCUser5_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,1);" name="txtCUsers4_1" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,2);" name="txtCUsers4_2" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser5_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,5,0);" name="txtCUsers5" min="1" max="55" value="" />
+                                                                                    <input type="number" id="txtCUser5_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,1);" name="txtCUsers5_1" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,2);" name="txtCUsers5_2" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,3);" name="txtCUsers5_3" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,4);" name="txtCUsers5_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,5);" name="txtCUsers5_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,6);" name="txtCUsers5_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,7);" name="txtCUsers5_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,8);" name="txtCUsers5_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,9);" name="txtCUsers5_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser5_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,5,10);" name="txtCUsers5_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -2167,7 +2167,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:HiddenField ID="hidtxtConcurrent6" runat="server" />
-                                                                                    <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent6" min="10" max="100">
+                                                                                    <input type="number" id="txtConcurrent6" onblur="CheckConcurrentValue(this)" class="form-control" style="margin-top: 3px;" name="txtConcurrent6" min="10" max="100" value="<%=m_txtConcurrent6 %>">
                                                                                     <div id="errortxtConcurrent6" class="errortxtConcurrent" style="color: red; padding-top: 2px; display: none;">Error with input</div>
                                                                                 </td>
 
@@ -2230,17 +2230,17 @@
 
 
                                                                                 <td>
-                                                                                    <input type="number" id="txtCUser6" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,4,0);" name="txtCUsers4" min="1" max="55" value="" />
-                                                                                    <input type="number" id="txtCUser6_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,1);" name="txtCUsers4_1" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,2);" name="txtCUsers4_2" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser6_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,6,0);" name="txtCUsers6" min="1" max="55" value="" />
+                                                                                    <input type="number" id="txtCUser6_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,1);" name="txtCUsers6_1" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,2);" name="txtCUsers6_2" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_3" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser6_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,6,3);" name="txtCUsers6_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -2425,17 +2425,17 @@
 
 
                                                                                 <td>
-                                                                                    <input type="number" id="txtCUser7" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,4,0);" name="txtCUsers4" min="1" max="55" value="" />
-                                                                                    <input type="number" id="txtCUser7_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,1);" name="txtCUsers4_1" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,2);" name="txtCUsers4_2" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser7_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,7,0);" name="txtCUsers7" min="1" max="55" value="" />
+                                                                                    <input type="number" id="txtCUser7_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,1);" name="txtCUsers7_1" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,2);" name="txtCUsers7_2" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_3" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser7_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,7,3);" name="txtCUsers7_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -2619,17 +2619,17 @@
 
 
                                                                                 <td>
-                                                                                    <input type="number" id="txtCUser8" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,4,0);" name="txtCUsers4" min="1" max="55" value="" />
-                                                                                    <input type="number" id="txtCUser8_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,1);" name="txtCUsers4_1" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,2);" name="txtCUsers4_2" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser8_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,8,0);" name="txtCUsers8" min="1" max="55" value="" />
+                                                                                    <input type="number" id="txtCUser8_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,1);" name="txtCUsers8_1" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,2);" name="txtCUsers8_2" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,3);" name="txtCUsers8_3" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,4);" name="txtCUsers8_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,5);" name="txtCUsers8_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,6);" name="txtCUsers8_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,7);" name="txtCUsers8_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,8);" name="txtCUsers8_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,9);" name="txtCUsers8_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser8_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,8,10);" name="txtCUsers8_10" min="1" max="15" value="" />
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -2812,17 +2812,17 @@
 
 
                                                                                 <td>
-                                                                                    <input type="number" id="txtCUser9" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,4,0);" name="txtCUsers4" min="1" max="55" value="" />
-                                                                                    <input type="number" id="txtCUser9_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,1);" name="txtCUsers4_1" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,2);" name="txtCUsers4_2" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_3" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_4" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_5" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_6" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_7" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_8" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_9" min="1" max="15" value="" />
-                                                                                    <input type="number" id="txtCUser9_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,4,3);" name="txtCUsers4_10" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,9,0);" name="txtCUsers9" min="1" max="55" value="" />
+                                                                                    <input type="number" id="txtCUser9_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,1);" name="txtCUsers9_1" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,2);" name="txtCUsers9_2" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,3);" name="txtCUsers9_3" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_4" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,4);" name="txtCUsers9_4" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_5" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,5);" name="txtCUsers9_5" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_6" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,6);" name="txtCUsers9_6" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_7" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,7);" name="txtCUsers9_7" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_8" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,8);" name="txtCUsers9_8" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_9" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,9);" name="txtCUsers9_9" min="1" max="15" value="" />
+                                                                                    <input type="number" id="txtCUser9_10" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,9,10);" name="txtCUsers9_10" min="1" max="15" value="" />
                                                                                 </td>
 
 
@@ -3007,7 +3007,7 @@
                                                                                     <asp:HiddenField ID="hostpitalnewline10" runat="server" Value="0" />
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input type="number" id="txtCUser10" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,4,0);" name="txtCUsers10" min="1" max="55" value="" />
+                                                                                    <input type="number" id="txtCUser10" class="form-control" style="margin-top: 3px;" onchange="validateCUser(this,10,0);" name="txtCUsers10" min="1" max="55" value="" />
                                                                                     <input type="number" id="txtCUser10_1" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,10,1);" name="txtCUsers10_1" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser10_2" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,10,2);" name="txtCUsers10_2" min="1" max="15" value="" />
                                                                                     <input type="number" id="txtCUser10_3" class="form-control" style="margin-top: 3px; display: none;" onchange="validateCUser(this,10,3);" name="txtCUsers10_3" min="1" max="15" value="" />
@@ -3829,7 +3829,7 @@
 
                                                                                                                                                
 
-                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs">
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs1">
                                                                             <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                 <ul class="nav nav-tabs " id="" role="tablist">
@@ -4406,7 +4406,7 @@ FIC0457</li>
 
                                                                                                                                                
 
-                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs">
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs2">
                                                                             <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                 <ul class="nav nav-tabs " id="" role="tablist">
@@ -4735,7 +4735,7 @@ FIC0457</li>
                                                                         <span id="error3" style="color: red; font-weight: bold;"></span>
                                                                     </div>
 
-                                                                    <div id="maincontainerPortal3" style="display: none;">
+                                                                    <div id="maincontainerPortal3" >
 
                                                                         <br />
                                                                         <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
@@ -4982,7 +4982,7 @@ FIC0457</li>
 
                                                                                                                                                
 
-                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs">
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs3">
                                                                             <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                 <ul class="nav nav-tabs " id="" role="tablist">
@@ -5001,11 +5001,11 @@ FIC0457</li>
                                                                             </div>
                                                                         </div>
 
-                                                                        <!--Mac Address 2_2-->
+                                                                        <!--Mac Address 3-->
                                                                         <div id="macContainer3_2" style="display: none;">
                                                                             <br />
                                                                             <br />
-                                                                            <div class="col-md-2" style="margin-left: 0px;">
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
 
                                                                                 <div class="table-responsive">
                                                                                     <table class="table table-bordered" id="macTableRedundant3" style="margin-left: -2px;">
@@ -5300,6 +5300,1165 @@ FIC0457</li>
                                                                     </div>
                                                                 </div>
                                                                     <!--Start Site 3-->
+
+
+                                                                  <!--Start Site 4-->
+                                                                 <div class="row" id="site4" style="display:none;">
+                                                                    <br />
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading4"></p>
+
+                                                                    <div style="display: inline-block;">
+                                                                        <span id="error4" style="color: red; font-weight: bold;"></span>
+                                                                    </div>
+
+                                                                    <div id="maincontainerPortal4" >
+
+                                                                        <br />
+                                                                        <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
+
+                                                                        <!--Site 4 Software & Hardward -->
+                                                                        <div class="HorS-Site4" style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: -2px;">
+                                                                                <ul class="nav nav-tabs " id="myTabSite4" role="tablist">
+
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS4">
+                                                                                        <a class="nav-link test" id="" name="HorSoft4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="$('#hardwaresite4').hide();$('#macContainerSO4').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH4">
+                                                                                        <a class="nav-link test" id="" name="HorHard4" data-toggle="tab" href="#HorHard4" role="tab" onclick="$('#hardwaresite4').show();$('#macContainerSO4').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 1-->
+                                                                        <div id="macContainerSO4">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-12" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableSO4" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macaddline4" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+
+                                                                            <!--Mac Address 1-->
+                                                                             <br />
+                                                                        </div>
+                                                                       
+
+
+
+                                                                        <div id="hardwaresite4" style="display: none;">
+                                                                            <div class="HorS-HardwareSite4" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite4" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">ISP Server:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab4">
+                                                                                            <a class="nav-link test" id="Hardware-Standard4" name="Hardware-Standard4" data-toggle="tab" href="#HorASoft4" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab4">
+                                                                                            <a class="nav-link test" id="Hardware-Extended4" name="Hardware-Extended4" data-toggle="tab" href="#HorAHard4" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="HorS-HardwareMemorySite4" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite4" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab4">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo4" name="Hardware-StandardMemoryNo4" data-toggle="tab" href="#HorHard4" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab4">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes4" name="Hardware-StandardMemoryYes4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        
+                                                                      
+
+                                                                        <div id="ZeroFootprintContainerTab4" style="display: none;">
+
+                                                                            <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
+
+                                                                            <div style="margin-left: 0px;">
+                                                                                <div class="tab-regular" style="margin-top: -2px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="$('#ZFPHW4').hide();$('#macContainer4_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!--Mac Address 1_z-->
+                                                                            <div id="macContainer4_z">
+                                                                                <br />
+                                                                                <br />
+                                                                                <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-bordered" id="macTable4_z" style="margin-left: -2px;">
+                                                                                            <thead class="thead-light">
+                                                                                                <tr>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                    <th scope="col" class="w-45" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                                </tr>
+
+                                                                                                <tr id="macTable11_z_4">
+                                                                                                    <td align="center"><span class="text-center">1</span></td>
+                                                                                                    <td align="center">
+                                                                                                        <select name="ApplicationSoftwareOnly4_1" id="ApplicationSoftwareOnly4_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                        </select></td>
+                                                                                                    <td align="center">
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly4_1" id="MacSoftwareOnly4_1" class="form-control"></td>
+                                                                                                    <td align="center"></td>
+                                                                                                </tr>
+
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <br />
+                                                                            </div>
+                                                                            <!--Mac Address 4-z-->
+
+                                                                            <div style="display: none;" id="ZFPHW4">
+                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li class="nav-item" style="">ISP Zero Footprint server:</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 54px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li>Extended Memory - FIC0457</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftno4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <br />
+
+                                                                        </div>
+
+
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
+
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment</b>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item active" id="redundatntno4">
+                                                                                        <a class="nav-link " id="" name="HorNHard4" data-toggle="tab" href="#HorHard4" role="tab" onclick="PortalRedundant(4,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 19px;">No</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item" id="redundatntyes4">
+                                                                                        <a class="nav-link " id="" name="HorYSoft4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="PortalRedundant(4,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>
+
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                                                                                               
+
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs4">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft4">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="$('#ZFPRedundantHW4').hide();$('#macContainer4_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="CRedundantTHorHard4">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard4" data-toggle="tab" href="#HorHard4" role="tab" onclick="$('#ZFPRedundantHW4').show();$('#macContainer4_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 4-->
+                                                                        <div id="macContainer4_2" style="display: none;">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableRedundant4" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                            <tr id="TableMacTableRedundant4">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant3_1" id="ApplicationSoftwareOnlymacTableRedundant4_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
+                                                                                                    </select></td>
+                                                                                                <td align="center">
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant4_1" id="MacSoftwareOnlymacTableRedundant4_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd4_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        <!--Mac Address 4-->
+
+                                                                        <div style="display: none;" id="ZFPRedundantHW4">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cAppHorSoftN4">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cAppHorSoftY4">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 18px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>Extended Memory -FIC0457</li>
+
+
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN4">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY4">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY4" name="RedundantHorSoftExtY4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        
+
+
+
+                                                                        <div style="display: none;" id="ZFPHW4">
+                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall4" role="tablist">
+
+
+                                                                                        <li>ISP Zero Footprint server:</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+Viewer Server
+NICA169</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+
+
+
+
+
+
+                                                                            </div>
+
+
+
+
+
+
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW4">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall4" role="tablist">
+
+
+                                                                                        <li>Extended Memory -
+FIC0457</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="$('#ZFPRedundantViewerHW4').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="$('#ZFPRedundantViewerHW4').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <br />
+
+
+                                                                        <!--Site 4 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
+                                                                                    </li>
+                                                                                    <li class="nav-item active" id="Testno4">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN4" data-toggle="tab" href="#HorHard4" role="tab" aria-controls="DELIVERY" onclick="PortalTest(4,'no');" aria-selected="true" style="width: 70px !important; margin-left: 96px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes4">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY4" data-toggle="tab" href="#HorSoft4" role="tab" onclick="PortalTest(4,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                         <!--Site 4 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs4">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft4">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft4" data-toggle="tab" href="#HorSoft4" onclick="$('#TestHW4').hide();$('#TestMacContainer4').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="cTestHorSoftY4">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY4" data-toggle="tab" href="#HorHard4" onclick="$('#TestHW4').show();$('#TestMacContainer4').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <!--Test Tab Mac Table -->
+
+                                                                        <div id="TestMacContainer4" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTestTable4" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-45" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                            </tr>
+
+                                                                                            <tr id="macTestTableData4_1">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="macTestTableDataMenu4_1" id="macTestTableDataMenu4_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA964 - Test Environment">NICA964 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress4_1" id="macTestTableDataAddress4_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd4_1" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <div style="display: none;" id="TestHW4">
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall4" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Test
+                                                                                            <br />
+                                                                                            Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cHorTSoftN4">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cHorTSoftY4">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW4">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall4" role="tablist">
+
+
+                                                                                        <li>Extended Memory - FIC0457</li>
+
+                                                                                        <li class="nav-item active" id="cHorENSoft4">
+                                                                                            <a class="nav-link test" id="HorENSoft4" name="HorSoft4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 49px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="cHorEYSoft4">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                    
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                    <!--Start Site 4-->
+
+
+
+
+
+
+                                                                 <!--Start Site 5-->
+                                                                 <div class="row" id="site5" style="display:none;">
+                                                                    <br />
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading5"></p>
+
+                                                                    <div style="display: inline-block;">
+                                                                        <span id="error5" style="color: red; font-weight: bold;"></span>
+                                                                    </div>
+
+                                                                    <div id="maincontainerPortal5" >
+
+                                                                        <br />
+                                                                        <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
+
+                                                                        <!--Site 5 Software & Hardward -->
+                                                                        <div class="HorS-Site5" style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: -2px;">
+                                                                                <ul class="nav nav-tabs " id="myTabSite5" role="tablist">
+
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS5">
+                                                                                        <a class="nav-link test" id="" name="HorSoft5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="$('#hardwaresite5').hide();$('#macContainerSO5').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH5">
+                                                                                        <a class="nav-link test" id="" name="HorHard5" data-toggle="tab" href="#HorHard5" role="tab" onclick="$('#hardwaresite5').show();$('#macContainerSO5').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 1-->
+                                                                        <div id="macContainerSO5">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-12" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableSO5" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macaddline5" style="cursor: pointer; margin-left: 15px;">+ Add another line </div>
+                                                                            <br />
+
+                                                                            <!--Mac Address 1-->
+                                                                             <br />
+                                                                        </div>
+                                                                       
+
+
+
+                                                                        <div id="hardwaresite5" style="display: none;">
+                                                                            <div class="HorS-HardwareSite5" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite5" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">ISP Server:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab5">
+                                                                                            <a class="nav-link test" id="Hardware-Standard5" name="Hardware-Standard5" data-toggle="tab" href="#HorASoft5" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab5">
+                                                                                            <a class="nav-link test" id="Hardware-Extended5" name="Hardware-Extended5" data-toggle="tab" href="#HorAHard5" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="HorS-HardwareMemorySite5" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite5" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab5">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo5" name="Hardware-StandardMemoryNo5" data-toggle="tab" href="#HorHard5" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab5">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes5" name="Hardware-StandardMemoryYes5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        
+                                                                      
+
+                                                                        <div id="ZeroFootprintContainerTab5" style="display: none;">
+
+                                                                            <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
+
+                                                                            <div style="margin-left: 0px;">
+                                                                                <div class="tab-regular" style="margin-top: -2px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="$('#ZFPHW5').hide();$('#macContainer5_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!--Mac Address 1_z-->
+                                                                            <div id="macContainer5_z">
+                                                                                <br />
+                                                                                <br />
+                                                                                <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-bordered" id="macTable5_z" style="margin-left: -2px;">
+                                                                                            <thead class="thead-light">
+                                                                                                <tr>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                    <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                                </tr>
+
+                                                                                                <tr id="macTable11_z_5">
+                                                                                                    <td align="center"><span class="text-center">1</span></td>
+                                                                                                    <td align="center">
+                                                                                                        <select name="ApplicationSoftwareOnly5_1" id="ApplicationSoftwareOnly5_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                        </select></td>
+                                                                                                    <td align="center">
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly5_1" id="MacSoftwareOnly5_1" class="form-control"></td>
+                                                                                                    <td align="center"></td>
+                                                                                                </tr>
+
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <br />
+                                                                            </div>
+                                                                            <!--Mac Address 5-z-->
+
+                                                                            <div style="display: none;" id="ZFPHW5">
+                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li class="nav-item" style="">ISP Zero Footprint server:</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 55px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li>Extended Memory - FIC0557</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftno5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <br />
+
+                                                                        </div>
+
+
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
+
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment</b>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item active" id="redundatntno5">
+                                                                                        <a class="nav-link " id="" name="HorNHard5" data-toggle="tab" href="#HorHard5" role="tab" onclick="PortalRedundant(5,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 19px;">No</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item" id="redundatntyes5">
+                                                                                        <a class="nav-link " id="" name="HorYSoft5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="PortalRedundant(5,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>
+
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                                                                                               
+
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs5">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft5">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="$('#ZFPRedundantHW5').hide();$('#macContainer5_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="CRedundantTHorHard5">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard5" data-toggle="tab" href="#HorHard5" role="tab" onclick="$('#ZFPRedundantHW5').show();$('#macContainer5_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                       <!--Mac Address 5-->
+                                                                        <div id="macContainer5_2" style="display: none;">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableRedundant5" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                            <tr id="TableMacTableRedundant5">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant5_1" id="ApplicationSoftwareOnlymacTableRedundant5_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
+                                                                                                    </select></td>
+                                                                                                <td align="center">
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant5_1" id="MacSoftwareOnlymacTableRedundant5_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd5_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        <!--Mac Address 5-->
+
+                                                                        <div style="display: none;" id="ZFPRedundantHW5">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cAppHorSoftN5">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cAppHorSoftY5">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 18px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>Extended Memory -FIC0557</li>
+
+
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN5">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY5">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY5" name="RedundantHorSoftExtY5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        
+
+
+
+                                                                        <div style="display: none;" id="ZFPHW5">
+                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall5" role="tablist">
+
+
+                                                                                        <li>ISP Zero Footprint server:</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+Viewer Server
+NICA169</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+
+
+
+
+
+
+                                                                            </div>
+
+
+
+
+
+
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW5">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall5" role="tablist">
+
+
+                                                                                        <li>Extended Memory -
+FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="$('#ZFPRedundantViewerHW5').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="$('#ZFPRedundantViewerHW5').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <br />
+
+
+                                                                        <!--Site 5 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
+                                                                                    </li>
+                                                                                    <li class="nav-item active" id="Testno5">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN5" data-toggle="tab" href="#HorHard5" role="tab" aria-controls="DELIVERY" onclick="PortalTest(5,'no');" aria-selected="true" style="width: 70px !important; margin-left: 96px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes5">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY5" data-toggle="tab" href="#HorSoft5" role="tab" onclick="PortalTest(5,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                         <!--Site 5 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs5">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft5">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft5" data-toggle="tab" href="#HorSoft5" onclick="$('#TestHW5').hide();$('#TestMacContainer5').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="cTestHorSoftY5">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY5" data-toggle="tab" href="#HorHard5" onclick="$('#TestHW5').show();$('#TestMacContainer5').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <!--Test Tab Mac Table -->
+
+                                                                        <div id="TestMacContainer5" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTestTable5" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                            </tr>
+
+                                                                                            <tr id="macTestTableData5_1">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="macTestTableDataMenu5_1" id="macTestTableDataMenu5_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA965 - Test Environment">NICA965 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress5_1" id="macTestTableDataAddress5_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd5_1" style="cursor: pointer; margin-left: 15px;">+ Add another line </div>
+                                                                            <br>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <div style="display: none;" id="TestHW5">
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall5" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Test
+                                                                                            <br />
+                                                                                            Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cHorTSoftN5">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cHorTSoftY5">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW5">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall5" role="tablist">
+
+
+                                                                                        <li>Extended Memory - FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="cHorENSoft5">
+                                                                                            <a class="nav-link test" id="HorENSoft5" name="HorSoft5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 49px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="cHorEYSoft5">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                    
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                    <!--Start Site 5-->
+
+
+
                                                             </div>
                                                               
 
@@ -5750,7 +6909,7 @@ FIC0457</li>
 
 
 
-                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs">
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabsz1">
                                                                             <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                 <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
@@ -6123,22 +7282,138 @@ FIC0457</li>
 
 
                                                     <asp:HiddenField ID="HiddenSoftwareHardwareSite1" Value="" runat="server" />
-                                                    <asp:HiddenField ID="HiddenRedundantSite1" Value="" runat="server" />
-                                                    <asp:HiddenField ID="HiddenTestSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenSoftwareHardwareSite10" Value="" runat="server" />
+                                                    
 
+                                                    <asp:HiddenField ID="HiddenTestSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenTestSite10" Value="" runat="server" />
+                                                    
+
+
+                                                    <asp:HiddenField ID="HiddenRedundantSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenRedundantSite10" Value="" runat="server" />
+                                                    
 
                                                     <asp:HiddenField ID="hidPortalISPserver1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalISPserver10" Value="" runat="server" />
+                                                    
+
                                                     <asp:HiddenField ID="hidPortalExtMemNo1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidPortalExtMemNo10" Value="" runat="server" />
+
 
 
                                                     <asp:HiddenField ID="hidRedSoftwareHardwareSite1" Value="" runat="server" />
-                                                    <asp:HiddenField ID="hidRedAppEnvSite1" Value="" runat="server" />
-                                                    <asp:HiddenField ID="hidRedExtMemNo1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedSoftwareHardwareSite10" Value="" runat="server" />
+                                                    
 
+                                                    <asp:HiddenField ID="hidRedAppEnvSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedAppEnvSite10" Value="" runat="server" />
+                                                    
+
+
+                                                    <asp:HiddenField ID="hidRedExtMemNo1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidRedExtMemNo10" Value="" runat="server" />
+                                                    
 
                                                     <asp:HiddenField ID="hidTestSoftwareHardwareSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestSoftwareHardwareSite10" Value="" runat="server" />
+                                                    
+
                                                     <asp:HiddenField ID="hidTestEnvSite1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestEnvSite10" Value="" runat="server" />
+
                                                     <asp:HiddenField ID="hidTestExtMemNo1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo2" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo3" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo4" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo5" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo6" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo7" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo8" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo9" Value="" runat="server" />
+                                                    <asp:HiddenField ID="hidTestExtMemNo10" Value="" runat="server" />
+                                                    
                                                                                      
 
                                                 </div>
@@ -6373,124 +7648,166 @@ FIC0457</li>
             }
         }
 
+       
 
         //intelli portal Hardware / software
-        if ($('#HiddenSoftwareHardwareSite1')[0].value != "") {
-            if ($('#HiddenSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
 
-                $('#hardwaresite1').show();
-                $('#macContainerSO1').hide();
+        for (i = 1; i <= 10; i++) {
+            if ($("#HiddenSoftwareHardwareSite" + i)[0].value != "") {
+                if ($("#HiddenSoftwareHardwareSite" + i)[0].value == "SoftwareHardWare") {
 
-                $('IntelliSpacePortalS1').removeClass("active");
-                $('#IntelliSpacePortalH1').addClass('active');
+                    $("#hardwaresite" + i).show();
+                    $("#macContainerSO" + i).hide();
 
-                
+                    $("#IntelliSpacePortalS" + i).removeClass("active");
+                    $("#IntelliSpacePortalH" + i).addClass('active');
 
-            } else {
-                $('#hardwaresite1').hide();
-                $('#macContainerSO1').show();
 
-                $('IntelliSpacePortalS1').addClass('active');
-                $('#IntelliSpacePortalH1').removeClass("active");
+
+                } else {
+                    $("#hardwaresite" +i).hide();
+                    $("#macContainerSO"+i).show();
+
+                    $("#IntelliSpacePortalS"+i).addClass('active');
+                    $("#IntelliSpacePortalH"+i).removeClass("active");
+                }
             }
         }
+
+
+        
 
 
         //ISP server
-        if ($('#hidPortalISPserver1')[0].value != "") {
-            if ($('#hidPortalISPserver1')[0].value == "Extended") {
+        
 
-                $('#HorS-Hardwaretab1').removeClass("active");
-                $('#HorS-HardwareExttab1').addClass('active');
-            } else {
-                $('#HorS-Hardwaretab1').addClass('active');
-                $('#HorS-HardwareExttab1').removeClass("active");
+        for (i = 1; i < 10; i++) {
+            if ($("#hidPortalISPserver" +i)[0].value != "") {
+                if ($("#hidPortalISPserver" + i)[0].value == "Extended") {
+
+                    $("#HorS-Hardwaretab" + i).removeClass("active");
+                    $("#HorS-HardwareExttab" + i).addClass("active");
+                } else {
+                    $("#HorS-Hardwaretab" + i).addClass("active");
+                    $("#HorS-HardwareExttab" + i).removeClass("active");
+                }
             }
         }
+       
 
 
         //HorS-HardwareMemoryNotab1
         //HorS-HardwareMemoryYestab1
 
         //Ext Memory
-        if ($('#hidPortalExtMemNo1')[0].value != "") {
-            if ($('#hidPortalExtMemNo1')[0].value == "Yes") {
+       
+        for (i = 1; i < 10; i++) {
+            if ($("#hidPortalExtMemNo" +i )[0].value != "") {
+                if ($("#hidPortalExtMemNo" + i)[0].value == "Yes") {
 
-                $('#HorS-HardwareMemoryNotab1').removeClass("active");
-                $('#HorS-HardwareMemoryYestab1').addClass('active');
-            } else {
-                $('#HorS-HardwareMemoryNotab1').addClass('active');
-                $('#HorS-HardwareMemoryYestab1').removeClass("active");
+                    $("#HorS-HardwareMemoryNotab" + i).removeClass("active");
+                    $("#HorS-HardwareMemoryYestab" + i).addClass("active");
+                } else {
+                    $("#HorS-HardwareMemoryNotab" + i).addClass("active");
+                    $("#HorS-HardwareMemoryYestab" + i).removeClass("active");
+                }
             }
         }
+
+        
 
 
 
         //redundant
 
-        //Yes / No                
-        if ($('#HiddenRedundantSite1')[0].value != "") {
-            if ($('#HiddenRedundantSite1')[0].value == "Yes") {
+     
 
-                $('#redundatntno1').removeClass("active");
-                $('#redundatntyes1').addClass('active');
-                PortalRedundant(1, 'yes');
-            } else {
-                $('#redundatntno1').addClass('active');
-                $('#redundatntyes1').removeClass("active");
-                PortalRedundant(1, 'no');
+        //Yes / No                
+        for (i = 1; i < 10; i++) {
+            if ($("#HiddenRedundantSite" + i )[0].value != "") {
+                if ($("#HiddenRedundantSite" + i )[0].value == "Yes") {
+
+                    $("#redundatntno" + i ).removeClass("active");
+                    $("#redundatntyes" + i ).addClass("active");
+                    PortalRedundant(i, "yes");
+                } else {
+                    $("#redundatntno" + i ).addClass("active");
+                    $("#redundatntyes" + i ).removeClass("active");
+                    PortalRedundant(i, "no");
+                }
             }
         }
+
+       
 
         //software / hardware
+        
 
-        if ($('#hidRedSoftwareHardwareSite1')[0].value != "") {
-            if ($('#hidRedSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
+        for (i = 1; i < 10; i++) {
+            if ($("#hidRedSoftwareHardwareSite" + i)[0].value != "") {
+                if ($("#hidRedSoftwareHardwareSite" + i)[0].value == "SoftwareHardWare") {
 
-                $('#ZFPRedundantHW1').show();
-                $('#macContainer1_2').hide();
+                    $("#ZFPRedundantHW" + i).show();
+                    $("#macContainer"+i+"_2").hide();
 
-                $('#CRedundantTHorSoft1').removeClass("active");
-                $('#CRedundantTHorHard1').addClass('active');
+                    $("#CRedundantTHorSoft" + i).removeClass("active");
+                    $("#CRedundantTHorHard" + i).addClass("active");
 
 
 
-            } else {
-                $('#ZFPRedundantHW1').hide();
-                $('#macContainer1_2').show();
+                } else {
+                    $("#ZFPRedundantHW" + i).hide();
+                    $("#macContainer" + i +"_2").show();
 
-                $('#CRedundantTHorSoft1').addClass('active');
-                $('#CRedundantTHorHard1').removeClass("active");
+                    $("#CRedundantTHorSoft" + i).addClass("active");
+                    $("#CRedundantTHorHard" + i).removeClass("active");
+                }
             }
         }
+
+        
 
 
 
         //redundant app env
-        //Yes / No                
-        if ($('#hidRedAppEnvSite1')[0].value != "") {
-            if ($('#hidRedAppEnvSite1')[0].value == "Yes") {
+        //Yes / No    
 
-                $('#cAppHorSoftN1').removeClass("active");
-                $('#cAppHorSoftY1').addClass('active');                
-            } else {
-                $('#cAppHorSoftN1').addClass('active');
-                $('#cAppHorSoftY1').removeClass("active");               
+        
+
+        for (i = 1; i < 10; i++) {
+            if ($("#hidRedAppEnvSite" + i)[0].value != "") {
+                if ($("#hidRedAppEnvSite" + i)[0].value == "Yes") {
+
+                    $("#cAppHorSoftN" + i).removeClass("active");
+                    $("#cAppHorSoftY" + i).addClass("active");
+                } else {
+                    $("#cAppHorSoftN" + i).addClass("active");
+                    $("#cAppHorSoftY" + i).removeClass("active");
+                }
             }
         }
+        
 
 
         //redundant ext memory
-        if ($('#hidRedExtMemNo1')[0].value != "") {
-            if ($('#hidRedExtMemNo1')[0].value == "Yes") {
 
-                $('#cRedundantHorSoftExtN1').removeClass("active");
-                $('#cRedundantHorSoftExtY1').addClass('active');
-            } else {
-                $('#cRedundantHorSoftExtN1').addClass('active');
-                $('#cRedundantHorSoftExtY1').removeClass("active");
+        
+
+
+        for (i = 1; i < 10; i++) {
+            if ($("#hidRedExtMemNo" + i)[0].value != "") {
+                if ($("#hidRedExtMemNo" + i)[0].value == "Yes") {
+
+                    $("#cRedundantHorSoftExtN" + i).removeClass("active");
+                    $("#cRedundantHorSoftExtY" + i).addClass("active");
+                } else {
+                    $("#cRedundantHorSoftExtN" + i).addClass("active");
+                    $("#cRedundantHorSoftExtY" + i).removeClass("active");
+                }
             }
         }
+
+        
 
 
 
@@ -6498,63 +7815,89 @@ FIC0457</li>
         //Test
         //software / hardware
 
-        if ($('#hidTestSoftwareHardwareSite1')[0].value != "") {
-            if ($('#hidTestSoftwareHardwareSite1')[0].value == "SoftwareHardWare") {
 
-                $('#TestHW1').show();
-                $('#TestMacContainer1').hide();
+       
 
-                $('#cTestHorSoft1').removeClass("active");
-                $('#cTestHorSoftY1').addClass('active');
-                
+        for (i = 1; i < 10; i++) {
+            if ($("#hidTestSoftwareHardwareSite" + i)[0].value != "") {
+                if ($("#hidTestSoftwareHardwareSite" + i)[0].value == "SoftwareHardWare") {
+
+                    $("#TestHW" + i).show();
+                    $("#TestMacContainer" + i).hide();
+
+                    $("#cTestHorSoft" + i).removeClass("active");
+                    $("#cTestHorSoftY" + i).addClass("active");
 
 
-            } else {
-                $('#TestHW1').hide();
-                $('#TestMacContainer1').show();
 
-                $('#cTestHorSoft1').addClass('active');
-                $('#cTestHorSoftY1').removeClass("active");
+                } else {
+                    $("#TestHW" + i).hide();
+                    $("#TestMacContainer" + i).show();
+
+                    $("#cTestHorSoft" + i).addClass("active");
+                    $("#cTestHorSoftY" + i).removeClass("active");
+                }
             }
         }
+
+        
 
 
         //Test app env
-        //Yes / No                
-        if ($('#hidTestEnvSite1')[0].value != "") {
-            if ($('#hidTestEnvSite1')[0].value == "Yes") {
+        //Yes / No     
 
-                $('#cHorTSoftN1').removeClass("active");
-                $('#cHorTSoftY1').addClass('active');
-            } else {
-                $('#cHorTSoftN1').addClass('active');
-                $('#cHorTSoftY1').removeClass("active");
+       
+
+        for (i = 1; i < 10; i++) {
+            if ($("#hidTestEnvSite" + i)[0].value != "") {
+                if ($("#hidTestEnvSite" + i)[0].value == "Yes") {
+
+                    $("#cHorTSoftN" + i).removeClass("active");
+                    $("#cHorTSoftY" + i).addClass("active");
+                } else {
+                    $("#cHorTSoftN" + i).addClass("active");
+                    $("#cHorTSoftY" + i).removeClass("active");
+                }
             }
         }
 
 
-        if ($("#HiddenTestSite1")[0].value == "No") {
-            $("#Testno1").addClass('active');
-            $('#Testyes1').removeClass("active");
-            PortalTest(1, 'no');
-        } else {
-            $("#Testyes1").addClass('active');
-            $('#Testno1').removeClass("active");
-            PortalTest(1, 'yes');
+        
+        
+
+        for (i = 1; i < 10; i++) {
+            if ($("#HiddenTestSite" + i)[0].value == "No") {
+                $("#Testno" + i).addClass("active");
+                $("#Testyes" + i).removeClass("active");
+                PortalTest(i, "no");
+            } else {
+                $("#Testyes" + i).addClass("active");
+                $("#Testno" + i).removeClass("active");
+                PortalTest(i, "yes");
+            }
         }
+
+        
 
 
         //Test ext memory
-        if ($('#hidTestExtMemNo1')[0].value != "") {
-            if ($('#hidTestExtMemNo1')[0].value == "Yes") {
 
-                $('#HorENSoft1').removeClass("active");
-                $('#cHorEYSoft1').addClass('active');
-            } else {
-                $('#HorENSoft1').addClass('active');
-                $('#cHorEYSoft1').removeClass("active");
+        
+
+        for (i = 1; i < 10; i++) {
+            if ($("#hidTestExtMemNo" + i)[0].value != "") {
+                if ($("#hidTestExtMemNo" + i)[0].value == "Yes") {
+
+                    $("#HorENSoft" + i).removeClass("active");
+                    $("#cHorEYSoft" + i).addClass("active");
+                } else {
+                    $("#HorENSoft" + i).addClass("active");
+                    $("#cHorEYSoft" + i).removeClass("active");
+                }
             }
         }
+
+        
 
 
         if ($('#HostpitalEntryText1')[0].Value != "") {
@@ -6598,12 +7941,19 @@ FIC0457</li>
 
         }
 
-        function addhostnewline(itemNo) {
+        function addhostnewline(itemNo,isadd) {
 
 
 
             let counteridx = $("#hostpitalnewline" + itemNo)[0].value;
-            counteridx++;
+
+            if (isadd == "No") {
+
+            } else {
+                counteridx++;
+            }
+
+            
             $("#hostpitalnewline" + itemNo)[0].value = counteridx;
 
 
@@ -6617,7 +7967,7 @@ FIC0457</li>
                 $("#addhostnewline" + itemNo).show();
             }
 
-            switch (counteridx) {
+            switch (parseInt(counteridx)) {
                 case 1:
                     $("#cmdHospitalName" + itemNo + "_1").show();
                     $("#txtCUser" + itemNo + "_1").show();
@@ -6637,7 +7987,7 @@ FIC0457</li>
                     $("#txtCUser" + itemNo + "_1").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_1").show();
 
-                    $("#cmdHospitalName" + itemNo + "1_2").show();
+                    $("#cmdHospitalName" + itemNo + "_2").show();
                     $("#txtCUser" + itemNo + "_2").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_2").show();
 
@@ -6647,31 +7997,164 @@ FIC0457</li>
                     break;
 
                 case 3:
+                    $("#cmdHospitalName" + itemNo + "_1").show();
+                    $("#txtCUser" + itemNo + "_1").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_1").show();
+
+                    $("#cmdHospitalName" + itemNo + "_2").show();
+                    $("#txtCUser" + itemNo + "_2").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_2").show();
+
+                    $("#cmdHospitalName" + itemNo + "_3").show();
+                    $("#txtCUser" + itemNo + "_3").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_3").show();
+
                     $("#cmdHospitalName" + itemNo + "_4").show();
                     $("#txtCUser" + itemNo + "_4").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_4").show();
                     break;
                 case 4:
+
+                    $("#cmdHospitalName" + itemNo + "_1").show();
+                    $("#txtCUser" + itemNo + "_1").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_1").show();
+
+                    $("#cmdHospitalName" + itemNo + "_2").show();
+                    $("#txtCUser" + itemNo + "_2").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_2").show();
+
+                    $("#cmdHospitalName" + itemNo + "_3").show();
+                    $("#txtCUser" + itemNo + "_3").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_3").show();
+
+                    $("#cmdHospitalName" + itemNo + "_4").show();
+                    $("#txtCUser" + itemNo + "_4").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_4").show();
+
                     $("#cmdHospitalName" + itemNo + "_5").show();
                     $("#txtCUser" + itemNo + "_5").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_5").show();
                     break;
                 case 5:
+                    $("#cmdHospitalName" + itemNo + "_1").show();
+                    $("#txtCUser" + itemNo + "_1").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_1").show();
+
+                    $("#cmdHospitalName" + itemNo + "_2").show();
+                    $("#txtCUser" + itemNo + "_2").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_2").show();
+
+                    $("#cmdHospitalName" + itemNo + "_3").show();
+                    $("#txtCUser" + itemNo + "_3").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_3").show();
+
+                    $("#cmdHospitalName" + itemNo + "_4").show();
+                    $("#txtCUser" + itemNo + "_4").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_4").show();
+
+                    $("#cmdHospitalName" + itemNo + "_5").show();
+                    $("#txtCUser" + itemNo + "_5").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_5").show();
+
                     $("#cmdHospitalName" + itemNo + "_6").show();
                     $("#txtCUser" + itemNo + "_6").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_6").show();
                     break;
                 case 6:
+                    $("#cmdHospitalName" + itemNo + "_1").show();
+                    $("#txtCUser" + itemNo + "_1").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_1").show();
+
+                    $("#cmdHospitalName" + itemNo + "_2").show();
+                    $("#txtCUser" + itemNo + "_2").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_2").show();
+
+                    $("#cmdHospitalName" + itemNo + "_3").show();
+                    $("#txtCUser" + itemNo + "_3").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_3").show();
+
+                    $("#cmdHospitalName" + itemNo + "_4").show();
+                    $("#txtCUser" + itemNo + "_4").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_4").show();
+
+                    $("#cmdHospitalName" + itemNo + "_5").show();
+                    $("#txtCUser" + itemNo + "_5").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_5").show();
+
+                    $("#cmdHospitalName" + itemNo + "_6").show();
+                    $("#txtCUser" + itemNo + "_6").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_6").show();
+
                     $("#cmdHospitalName" + itemNo + "_7").show();
                     $("#txtCUser" + itemNo + "_7").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_7").show();
                     break;
                 case 7:
+                    $("#cmdHospitalName" + itemNo + "_1").show();
+                    $("#txtCUser" + itemNo + "_1").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_1").show();
+
+                    $("#cmdHospitalName" + itemNo + "_2").show();
+                    $("#txtCUser" + itemNo + "_2").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_2").show();
+
+                    $("#cmdHospitalName" + itemNo + "_3").show();
+                    $("#txtCUser" + itemNo + "_3").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_3").show();
+
+                    $("#cmdHospitalName" + itemNo + "_4").show();
+                    $("#txtCUser" + itemNo + "_4").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_4").show();
+
+                    $("#cmdHospitalName" + itemNo + "_5").show();
+                    $("#txtCUser" + itemNo + "_5").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_5").show();
+
+                    $("#cmdHospitalName" + itemNo + "_6").show();
+                    $("#txtCUser" + itemNo + "_6").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_6").show();
+
+                    $("#cmdHospitalName" + itemNo + "_7").show();
+                    $("#txtCUser" + itemNo + "_7").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_7").show();
+
                     $("#cmdHospitalName" + itemNo + "_8").show();
                     $("#txtCUser" + itemNo + "_8").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_8").show();
                     break;
                 case 8:
+                    $("#cmdHospitalName" + itemNo + "_1").show();
+                    $("#txtCUser" + itemNo + "_1").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_1").show();
+
+                    $("#cmdHospitalName" + itemNo + "_2").show();
+                    $("#txtCUser" + itemNo + "_2").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_2").show();
+
+                    $("#cmdHospitalName" + itemNo + "_3").show();
+                    $("#txtCUser" + itemNo + "_3").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_3").show();
+
+                    $("#cmdHospitalName" + itemNo + "_4").show();
+                    $("#txtCUser" + itemNo + "_4").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_4").show();
+
+                    $("#cmdHospitalName" + itemNo + "_5").show();
+                    $("#txtCUser" + itemNo + "_5").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_5").show();
+
+                    $("#cmdHospitalName" + itemNo + "_6").show();
+                    $("#txtCUser" + itemNo + "_6").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_6").show();
+
+                    $("#cmdHospitalName" + itemNo + "_7").show();
+                    $("#txtCUser" + itemNo + "_7").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_7").show();
+
+                    $("#cmdHospitalName" + itemNo + "_8").show();
+                    $("#txtCUser" + itemNo + "_8").show();
+                    $("#cmdAddtionalAppDelete" + itemNo + "_8").show();
+
                     $("#cmdHospitalName" + itemNo + "_9").show();
                     $("#txtCUser" + itemNo + "_9").show();
                     $("#cmdAddtionalAppDelete" + itemNo + "_9").show();
@@ -7645,6 +9128,25 @@ FIC0457</li>
             if (ddlbox.value != "") {
                 var array = ddlbox.value.split("|");
 
+                let myidx = ddlbox.id.replace("cmdApplication", "");
+
+                for (myrowidx = 1; myrowidx < 10; myrowidx++) {
+
+                    $("#cmdHospitalName" + myidx)[0].value = "";
+                    $("#txtCUser" + myidx)[0].value = "";
+
+                    
+                    $("#cmdHospitalName" + myidx + "_" + myrowidx)[0].value = "";
+                    $("#txtCUser" + myidx + "_" + myrowidx)[0].value = "";
+                    $("#cmdAddtionalAppDelete" + myidx + "_" + myrowidx).hide();
+                    $("#cmdHospitalName" + myidx + "_" + myrowidx).hide();
+                    $("#txtCUser" + myidx + "_" + myrowidx).hide();
+                    $("#hostpitalnewline" + myidx )[0].value = "0";
+                    
+                        
+                }
+
+
                 let isValid = CheckApplicationsValidation(array[0], ddlbox);
             }
 
@@ -7804,8 +9306,14 @@ FIC0457</li>
 
                 //Concurrent_Users
                 if (array[1] == "No") {
-
-                    $("#txtConcurrent" + CurrentIDX)[0].readOnly = true;
+                    switch (array[0]) {
+                        case "Zero FootPrint Viewer SW - 2 User":
+                            break;
+                        default:
+                            $("#txtConcurrent" + CurrentIDX)[0].readOnly = true;
+                            break;
+                    }
+                   
                 } else {
                     $("#txtConcurrent" + CurrentIDX)[0].readOnly = false;
                 }
@@ -7813,10 +9321,10 @@ FIC0457</li>
                 //Concurrent_Range - Max
                 if (array[3] != "") {
 
-                    if (Number.isInteger(array[3]) == true) {
+                    
                         $("#txtConcurrent" + CurrentIDX)[0].max = array[3];
                         $("#hidtxtConcurrent" + CurrentIDX)[0].max = array[3];
-                    }
+                    
 
                 }
                 //txtConcurrent1
@@ -8039,6 +9547,15 @@ FIC0457</li>
             }
 
 
+            if (CONCURRENTENTERPRISEUSERS > 200) {
+                $("#CONCURRENTENTERPRISEUSERS")[0].value = total;
+                CONCURRENTENTERPRISEUSERS = total;
+                $("#CONCURRENTENTERPRISE_Error3").show();
+                $("#error3display")[0].innerText = "Enterprise Users can't be more than 200";
+            } else {
+                $("#CONCURRENTENTERPRISE_Error3").hide();
+            }
+
 
 
             for (i = 1; i <= 15; i++) {
@@ -8047,7 +9564,12 @@ FIC0457</li>
 
                         let myaa = $("#cmdApplication" + i)[0].value
                         if ($("#cmdApplication" + i)[0].value.includes("Enterprise") == true) {
-                            $("#txtConcurrent" + i)[0].value = CONCURRENTENTERPRISEUSERS;
+
+                            if (CONCURRENTENTERPRISEUSERS < $("#txtConcurrent" + i)[0].value) {
+                                $("#txtConcurrent" + i)[0].value = CONCURRENTENTERPRISEUSERS;
+                            }
+
+                            
                         }
 
                     }
@@ -8165,6 +9687,9 @@ FIC0457</li>
 
         function UpdateHospital(itemidx) {
 
+
+           
+
             //clear boxes
             var i;
             for (i = 1; i < 10; i++) {
@@ -8187,14 +9712,20 @@ FIC0457</li>
                 if ($("#txtHospitalName" + i)[0].value != "") {
 
                     AddHospitalItem($("#txtHospitalName" + i)[0].value, $("#txtHospitalName" + i)[0].value);
+
+                    //heading and table
+                    $("#site" + i).show();
+                    $("#macheading" + i)[0].innerText = "SITE " + i + ": " + $("#txtHospitalName" + i)[0].value.toUpperCase();
+                } else {
+                    $("#site" + i).hide();
                 }
+
+
 
             }
 
 
-            //heading and table
-            $("#site" + itemidx).show();
-            $("#macheading" + itemidx)[0].innerText = "SITE " + itemidx + ": " + $("#txtHospitalName" + itemidx)[0].value.toUpperCase();
+            
 
         }
 
@@ -8728,6 +10259,20 @@ FIC0457</li>
                         itemline += $("#txtConcurrent" + (i))[0].value;
                         itemline += ":";
                         itemline += $("#cmdHospitalName" + (i))[0].value;
+                        itemline += ":";
+                        itemline += $("#txtCUser" + i)[0].value;
+                        itemline += ":";
+                        itemline += "*";
+                        for (iaddional = 1; iaddional <= 10; iaddional++) {
+                            if ($("#cmdHospitalName" + (i) + "_" + iaddional)[0].value != "") {
+                                itemline += $("#cmdHospitalName" + (i) + "_" + iaddional)[0].value
+                                itemline += ";";
+                                itemline += $("#txtCUser" + (i) + "_" + iaddional)[0].value
+                                itemline += "^";
+                            }                           
+                        }
+
+
                         arrlist.push(itemline);
 
 
@@ -8756,6 +10301,8 @@ FIC0457</li>
 
             for (var i = 0; i <= arrlist.length - 1; i++) {
 
+                var resAddtional = arrlist[i].split("*");
+                var resAddtional = resAddtional[1].split("^");
                 var res = arrlist[i].split(":");
 
                 $("#cmdApplication" + (i + 1)).val(res[1]);
@@ -8768,8 +10315,30 @@ FIC0457</li>
                 } else {
                     $("#txtConcurrent" + (i + 1))[0].readOnly = false;
                 }
-
                 $("#row" + (i + 1) + "-additional-apps").show();
+
+
+                for (iaddional = 1; iaddional <= 10; iaddional++) {
+
+                    if (resAddtional[iaddional - 1] != undefined) {
+                        if (resAddtional[iaddional - 1] != "" ) {
+
+                            var resAddtionalItem = resAddtional[iaddional - 1].split(";");
+
+                            $("#cmdHospitalName" + (i + 1) + "_" + iaddional)[0].value = resAddtionalItem[0];
+                            $("#txtCUser" + (i + 1) + "_" + iaddional)[0].value = resAddtionalItem[1];
+
+                        } else {
+                            $("#cmdHospitalName" + (i + 1) + "_" + iaddional)[0].value = "";
+                            $("#txtCUser" + (i + 1) + "_" + iaddional)[0].value = "";
+                        }
+                    } else {
+                        $("#cmdHospitalName" + (i + 1) + "_" + iaddional)[0].value = "";
+                        $("#txtCUser" + (i + 1) + "_" + iaddional)[0].value = "";
+                    }
+
+                }
+
 
                 $("#cmdApplication" + (i + 1)).trigger('change');
 
@@ -8791,6 +10360,9 @@ FIC0457</li>
 
             hidv = thisItem.id;
             hidv = parseInt(hidv.replace("cmdHospitalDelete", ""));
+
+
+            $("#site" + hidv).hide();
 
             $("#row" + hidv + "-central").hide();
 
@@ -8959,9 +10531,9 @@ FIC0457</li>
 
 
 
-            if (enterpriseuser > 50) {
+            if (enterpriseuser > 200) {
                 //alert("Concurrent users can not exceed 50");
-                $("#CONCURRENTENTERPRISEUSERS")[0].value = 50;
+                $("#CONCURRENTENTERPRISEUSERS")[0].value = 200;
 
                 $("#CONCURRENTENTERPRISE_Error2").show();
             } else {
@@ -10444,9 +12016,9 @@ FIC0457</li>
 
             let enterpriseuser = $("#CONCURRENTENTERPRISEUSERS")[0].value;
 
-            if (enterpriseuser > 50) {
-                alert("Concurrent users can not exceed 50");
-                $("#CONCURRENTENTERPRISEUSERS")[0].value = 50;
+            if (enterpriseuser > 200) {
+                alert("Concurrent users can not exceed 200");
+                $("#CONCURRENTENTERPRISEUSERS")[0].value = 200;
             }
 
 
@@ -10971,154 +12543,181 @@ FIC0457</li>
 
 
             //Site1 
+            // for (i = 0; i < 10; i++) {
 
-            //Software / HardWare
-            let isSoftwareOnly1 = $("#IntelliSpacePortalS1").hasClass('active');
-            let isSoftwareHardWare1 = $("#IntelliSpacePortalH1").hasClass('active');
+            for (i = 1; i < 10; i++) {
 
-            if (isSoftwareOnly1 == true) {
-                $("#HiddenSoftwareHardwareSite1")[0].value = "SoftwareOnly";
-            } else {
-                $("#HiddenSoftwareHardwareSite1")[0].value = "SoftwareHardWare";
+                //Software / HardWare
+                let isSoftwareOnly = $("#IntelliSpacePortalS" + i).hasClass('active');
+                let isSoftwareHardWare = $("#IntelliSpacePortalH" + i).hasClass('active');
+
+                if (isSoftwareOnly == true) {
+                    $("#HiddenSoftwareHardwareSite"+i)[0].value = "SoftwareOnly";
+                } else {
+                    $("#HiddenSoftwareHardwareSite" + i)[0].value = "SoftwareHardWare";
+                }
+
             }
 
 
             //portal Hardware
 
             //ISP
-            let isPortalISPserverStd1 = $("#HorS-Hardwaretab1").hasClass('active');
-            let isPortalISPserverExt1 = $("#HorS-HardwareExttab1").hasClass('active');
-            
-            
+
+            for (i = 1; i < 10; i++) {
+                let isPortalISPserverStd = $("#HorS-Hardwaretab" + i).hasClass('active');
+                //let isPortalISPserverExt = $("#HorS-HardwareExttab1").hasClass('active');
+
+                if (isPortalISPserverStd == true) {
+                    $("#hidPortalISPserver" + i)[0].value = "Standard";
+                } else {
+                    $("#hidPortalISPserver" + i)[0].value = "Extended";
+                }
+
+            }
 
             //extended memory
-            let isPortalExtMemNo1 = $("#HorS-HardwareMemoryNotab1").hasClass('active');
-            let isPortalExtMemYes1 = $("#HorS-HardwareMemoryYestab1").hasClass('active');
-                                   
+
+            for (i = 1; i < 10; i++) {
+
+                let isPortalExtMemNo = $("#HorS-HardwareMemoryNotab" + i).hasClass('active');
+               // let isPortalExtMemYes1 = $("#HorS-HardwareMemoryYestab1").hasClass('active');
+
+
+                if (isPortalExtMemNo == true) {
+                    $("#hidPortalExtMemNo" + i)[0].value = "No";
+                } else {
+                    $("#hidPortalExtMemNo" + i)[0].value = "Yes";
+                }
+
+            }
 
             //Redundant App
-            let isPortalredundatNo1 = $("#redundatntno1").hasClass('active');
-            let isPortalredundatYes1 = $("#redundatntyes1").hasClass('active');                      
+           // let isPortalredundatNo1 = $("#redundatntno1").hasClass('active');
+           // let isPortalredundatYes1 = $("#redundatntyes1").hasClass('active');                      
             
 
             //Portal Test
-            let isPortalesttNo1 = $("#Testno1").hasClass('active');
-            let isPortalTestYes1 = $("#Testyes1").hasClass('active');
+           // let isPortalesttNo1 = $("#Testno1").hasClass('active');
+           // let isPortalTestYes1 = $("#Testyes1").hasClass('active');
 
 
-            if (isPortalISPserverStd1 == true) {
-                $("#hidPortalISPserver1")[0].value = "Standard";
-            } else {
-                $("#hidPortalISPserver1")[0].value = "Extended";
-            }
+            
 
-            if (isPortalExtMemNo1 == true) {
-                $("#hidPortalExtMemNo1")[0].value = "No";
-            } else {
-                $("#hidPortalExtMemNo1")[0].value = "Yes";
-            }
 
                                              
 
             //portal Hardware
 
             //portal redundant app env
-            let isredundatntno1= $("#redundatntno1").hasClass('active');
-            let isredundatntyes1 = $("#redundatntyes1").hasClass('active');
+
+            for (i = 1; i < 10; i++) {
+                let isredundatntno = $("#redundatntno" + i).hasClass('active');
+                //let isredundatntyes1 = $("#redundatntyes1").hasClass('active');
 
 
-            //redundant
+                //redundant
 
-            if (isredundatntno1 == true) {
-                $("#HiddenRedundantSite1")[0].value = "No";
-            } else {
-                $("#HiddenRedundantSite1")[0].value = "Yes";
+                if (isredundatntno == true) {
+                    $("#HiddenRedundantSite" + i)[0].value = "No";
+                } else {
+                    $("#HiddenRedundantSite" + i)[0].value = "Yes";
+                }
+
             }
 
 
             //Redudant Hardware / software
+            for (i = 1; i < 10; i++) {
+                let isRedundantSoftware = $("#CRedundantTHorSoft" + i).hasClass('active');
+               // let isRedundantHardware1 = $("#CRedundantTHorHard1").hasClass('active');
 
-            let isRedundantSoftware1 = $("#CRedundantTHorSoft1").hasClass('active');
-            let isRedundantHardware1 = $("#CRedundantTHorHard1").hasClass('active');   
-
-            if (isRedundantSoftware1 == true) {
-                $("#hidRedSoftwareHardwareSite1")[0].value = "SoftwareOnly";
-            } else {
-                $("#hidRedSoftwareHardwareSite1")[0].value = "SoftwareHardWare";
+                if (isRedundantSoftware == true) {
+                    $("#hidRedSoftwareHardwareSite" + i)[0].value = "SoftwareOnly";
+                } else {
+                    $("#hidRedSoftwareHardwareSite" + i)[0].value = "SoftwareHardWare";
+                }
             }
 
 
             //portal redundant app enviroment
+            for (i = 1; i < 10; i++) {
+                let isRedundantAppEnvNo1 = $("#cAppHorSoftN" + i).hasClass('active');
+                //let isRedundantAppEnvYes1 = $("#cAppHorSoftY1").hasClass('active');
 
-            let isRedundantAppEnvNo1 = $("#cAppHorSoftN1").hasClass('active');
-            let isRedundantAppEnvYes1 = $("#cAppHorSoftY1").hasClass('active');
-
-            if (isRedundantAppEnvNo1 == true) {
-                $("#hidRedAppEnvSite1")[0].value = "No";
-            } else {
-                $("#hidRedAppEnvSite1")[0].value = "Yes";
+                if (isRedundantAppEnvNo1 == true) {
+                    $("#hidRedAppEnvSite" + i)[0].value = "No";
+                } else {
+                    $("#hidRedAppEnvSite" + i)[0].value = "Yes";
+                }
             }
-
 
               //portal redundant Ext memory
+            for (i = 1; i < 10; i++) {
+                let isRedundantExtMemNo1 = $("#cRedundantHorSoftExtN" + i).hasClass('active');
+                //let isRedundantExtMemYes1 = $("#cRedundantHorSoftExtY1").hasClass('active');
 
-            let isRedundantExtMemNo1 = $("#cRedundantHorSoftExtN1").hasClass('active');
-            let isRedundantExtMemYes1 = $("#cRedundantHorSoftExtY1").hasClass('active');
-
-            if (isRedundantExtMemNo1 == true) {
-                $("#hidRedExtMemNo1")[0].value = "No";
-            } else {
-                $("#hidRedExtMemNo1")[0].value = "Yes";
+                if (isRedundantExtMemNo1 == true) {
+                    $("#hidRedExtMemNo" + i)[0].value = "No";
+                } else {
+                    $("#hidRedExtMemNo" + i)[0].value = "Yes";
+                }
             }
-
 
 
 
 
             //portal test app env
-            let isTestno1 = $("#Testno1").hasClass('active');
-            let isTestyes1 = $("#Testyes1").hasClass('active');
-            
-            if (isTestno1 == true) {
-                $("#HiddenTestSite1")[0].value = "No";
-            } else {
-                $("#HiddenTestSite1")[0].value = "Yes";
+
+            for (i = 1; i < 10; i++) {
+                let isTestno1 = $("#Testno" + i).hasClass('active');
+                
+
+                if (isTestno1 == true) {
+                    $("#HiddenTestSite" + i)[0].value = "No";
+                } else {
+                    $("#HiddenTestSite" + i)[0].value = "Yes";
+                }
+
             }
 
             //test software / hardware
+            for (i = 1; i < 10; i++) {
+                let isTestSoftware1 = $("#cTestHorSoft" + i).hasClass('active');
+               // let isTestHardware1 = $("#cTestHorSoftY" + i).hasClass('active');
 
-            let isTestSoftware1 = $("#cTestHorSoft1").hasClass('active');
-            let isTestHardware1 = $("#cTestHorSoftY1").hasClass('active');
-
-            if (isTestSoftware1 == true) {
-                $("#hidTestSoftwareHardwareSite1")[0].value = "SoftwareOnly";
-            } else {
-                $("#hidTestSoftwareHardwareSite1")[0].value = "SoftwareHardWare";
+                if (isTestSoftware1 == true) {
+                    $("#hidTestSoftwareHardwareSite" + i)[0].value = "SoftwareOnly";
+                } else {
+                    $("#hidTestSoftwareHardwareSite" + i)[0].value = "SoftwareHardWare";
+                }
             }
 
 
 
             //test app enviroment
+            for (i = 1; i < 10; i++) {
+                let isTestAppEnvNo1 = $("#cHorTSoftN" + i).hasClass('active');
+                //let isTestAppEnvYes1 = $("#cHorTSoftY" + i).hasClass('active');
 
-            let isTestAppEnvNo1 = $("#cHorTSoftN1").hasClass('active');
-            let isTestAppEnvYes1 = $("#cHorTSoftY1").hasClass('active');
-
-            if (isTestAppEnvNo1 == true) {
-                $("#hidTestEnvSite1")[0].value = "No";
-            } else {
-                $("#hidTestEnvSite1")[0].value = "Yes";
+                if (isTestAppEnvNo1 == true) {
+                    $("#hidTestEnvSite" + i)[0].value = "No";
+                } else {
+                    $("#hidTestEnvSite" + i)[0].value = "Yes";
+                }
             }
 
 
             //test Ext memory
+            for (i = 1; i < 10; i++) {
+                let isTestExtMemNo1 = $("#cHorENSoft" + i).hasClass('active');
+              //  let isTestExtMemYes1 = $("#cHorEYSoft1").hasClass('active');
 
-            let isTestExtMemNo1 = $("#cHorENSoft1").hasClass('active');
-            let isTestExtMemYes1 = $("#cHorEYSoft1").hasClass('active');
-
-            if (isTestExtMemNo1 == true) {
-                $("#hidTestExtMemNo1")[0].value = "No";
-            } else {
-                $("#hidTestExtMemNo1")[0].value = "Yes";
+                if (isTestExtMemNo1 == true) {
+                    $("#hidTestExtMemNo" + i)[0].value = "No";
+                } else {
+                    $("#hidTestExtMemNo" + i)[0].value = "Yes";
+                }
             }
 
 
@@ -11138,6 +12737,10 @@ FIC0457</li>
                         $("#cmdHospitalName" + tablerow + "_" + i).show();
                         $("#txtCUser" + tablerow + "_" + i).show();
                         $("#cmdAddtionalAppDelete" + tablerow + "_" + i).show();
+                    } else {
+                        $("#cmdHospitalName" + tablerow + "_" + i).hide();
+                        $("#txtCUser" + tablerow + "_" + i).hide();
+                        $("#cmdAddtionalAppDelete" + tablerow + "_" + i).hide();
                     }
                 }
 
@@ -11147,7 +12750,7 @@ FIC0457</li>
 
         function SetupMacTables(tableName) {
 
-            for (imac = 1; imac <= 1; imac++) {
+            for (imac = 1; imac <= 5; imac++) {
 
              //   if ($("#txtHospitalName" + imac)[0].value != "") {
                    // $("#mac" + imac).show();
@@ -11164,7 +12767,7 @@ FIC0457</li>
         function PortalRedundant(tableNo, typeselect) {
 
             if (typeselect == "yes") {
-                $("#RedundantTabs").show();
+                $("#RedundantTabs" + tableNo ).show();
                 $("#macContainer" + tableNo+"_2").show();
 
                 if ($('#hidRedSoftwareHardwareSite' + tableNo)[0].value != "") {
@@ -11188,7 +12791,7 @@ FIC0457</li>
                 }
 
             } else {
-                $("#RedundantTabs").hide();
+                $("#RedundantTabs" + tableNo).hide();
                 $("#macContainer" + tableNo+"_2").hide();
                 $("#ZFPRedundantHW" + tableNo).hide();
                 
@@ -11234,6 +12837,70 @@ FIC0457</li>
 
         }
 
+
+        function populateAddonalApp() {
+
+            for (irow = 1; irow < 10; irow++) {
+
+                //check app and set readonly
+
+                let myappname = $("#cmdApplication" + irow)[0].value;
+                var arrayloop = $("#cmdApplication" + irow)[0].value.split("|");
+                if (arrayloop[1] == "No") {
+                    $("#txtConcurrent" + irow)[0].readOnly = true;
+                }
+                //
+
+               addhostnewline(irow, "No");
+
+
+                let myrow = $("#hidHospitalData" + irow)[0].value;
+                var res = myrow.split("|");
+
+                for (irowItem = 0; irowItem < res.length; irowItem++) {
+
+                    var item1 = res[irowItem].split(":");
+
+                    
+
+
+                    if (irowItem == 0) {
+                        var item1 = res[irowItem].split(":");
+
+                        if (item1.length > 1) {
+                            //hospital / user
+                            var item2 = item1[1].split(",");
+
+                            $("#cmdHospitalName" + irow)[0].value = item2[0];
+                            $("#txtCUser" + irow)[0].value = item2[1];
+                        }
+                    } else {
+
+                        var item2 = res[irowItem].split(",");                       
+
+                        //for each addional item
+                        for (irowAddItem = 0; irowAddItem < item2.length; irowAddItem++) {
+
+                            var item1 = item2[irowAddItem].split(":");
+
+                            if (item1[0] != "") {
+                                $("#cmdHospitalName" + irow + "_" + parseInt(irowAddItem + 1)  )[0].value = item1[0];
+                                $("#txtCUser" + irow + "_" + parseInt(irowAddItem + 1) )[0].value = item1[1];
+                            }
+
+                        }
+
+                    }
+                    
+
+                    let itemA = "";
+                }
+
+
+            }
+
+        }
+
         $(document).ready(function () {
             // GetLicenceData();
             $('.ApplicationDDL').select2();
@@ -11254,31 +12921,44 @@ FIC0457</li>
                 CentralAddSite();
                 UpdateHospital(1);
 
-                if ($("#hostpitalnewline1")[0].value > 0) {
-                    showhospitalboxes(1);
-                }
-
-                SetupMacTables("macTableSO");
-
-               
-                //if ($("#HiddenRedundantSite1")[0].value == "No") {
-                //    $("#redundatntno1").addClass('active');
-                //    $('#redundatntyes1').removeClass("active");
-                //    PortalRedundant(1, 'no');
-                //} else {
-                //    $("#redundatntyes1").addClass('active');
-                //    $('#redundatntno1').removeClass("active");
-                //    PortalRedundant(1, 'yes');
+                //if ($("#hostpitalnewline1")[0].value > 0) {
+                //    showhospitalboxes(1);
                 //}
 
-
-                
-
-
+                SetupMacTables("macTableSO");
                 SetupMacTables("macTableRedundant");
                 SetupMacTables("macTestTable");
 
             }
+
+
+            for (myrowidx = 1; myrowidx < 10; myrowidx++) {               
+                if ($("#cmdApplication" + myrowidx)[0].value != "") {
+                    $("#row" + myrowidx + "-additional-apps").show();                  
+                }
+            }
+
+            //setup additional application boxes
+            populateAddonalApp();
+
+
+
+            for (myrowidx = 1; myrowidx < 10; myrowidx++) {
+
+                if ($("#cmdApplication" + myrowidx)[0].value != "") {                  
+                    showhospitalboxes(myrowidx);
+                }
+
+                if ($("#txtHospitalName" + myrowidx)[0].value != "") {
+                    $("#site" + myrowidx).show();                    
+                    $("#macheading" + myrowidx)[0].innerText = "SITE " + myrowidx + ": " + $("#txtHospitalName" + myrowidx)[0].value.toUpperCase();
+                } else {
+                    $("#site" + myrowidx).hide();
+                }
+                
+
+            }
+
 
 
         });
