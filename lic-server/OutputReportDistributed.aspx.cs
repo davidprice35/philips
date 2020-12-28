@@ -719,8 +719,10 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                         m_OutputTable += "<div style='margin-left: -17px;'>";
 
                         List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
-
-                        MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_mac_site" + iSite].ToString());
+                        if (rowView["decentralised_mac_site" + iSite].ToString() != "")
+                        {
+                            MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["decentralised_mac_site" + iSite].ToString());
+                        }
                         int outeridx = 0;
 
                         string currentidx = string.Empty;
@@ -770,7 +772,43 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                         //SIte
                         m_OutputTable += "<br/>";
                         m_OutputTable += "<br/>";
-                        m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + currentidx + "  </p> ";
+
+
+                        switch(iSite)
+                        {
+                            case 1:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName0 + "  </p> ";
+                                break;
+                            case 2:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName1 + "  </p> ";
+                                break;
+                            case 3:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName2 + "  </p> ";
+                                break;
+                            case 4:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName3 + "  </p> ";
+                                break;
+                            case 5:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName4 + "  </p> ";
+                                break;
+                            case 6:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName5 + "  </p> ";
+                                break;
+                            case 7:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName6 + "  </p> ";
+                                break;
+                            case 8:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName7 + "  </p> ";
+                                break;
+                            case 9:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName8 + "  </p> ";
+                                break;
+                            case 10:
+                                m_OutputTable += "<p style='color:black;font-weight:bold;'> SITE: " + m_SiteName9 + "  </p> ";
+                                break;
+                        }
+
+                        
 
                         m_OutputTable += "<p style='color:black;font-weight:bold;'>IntelliSpace Portal </p> ";
 

@@ -481,6 +481,61 @@
 
 
 
+                                                                
+                                                <div class="row" style="margin-left: -24px;">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+
+                                                                <p style="color: black; margin-top: 20px;"><b>CONCURRENT ENTERPRISE USERS</b></p>
+                                                                
+                                                                <span id="CONCURRENTENTERPRISE_Error" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                     Concurrent users are not supported below 11
+                                                                    </div>
+                                                                </span>
+
+                                                                <span id="CONCURRENTENTERPRISE_Error2" style="display:none;">
+                                                                    <div class='alert alert-warning' role='alert'>
+                                                                    Concurrent users can not exceed 50
+                                                                    </div>
+                                                                </span>
+
+                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" onchange="GetLicenceData();" value="<%=m_ConEnterpriseUsers %>" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="10" max="55">
+                                                                                <%-- <ej:NumericTextBox ID="CONCURRENTENTERPRISEUSERS" MaxValue="50" MinValue="10" Value="35" Name="CONCURRENTENTERPRISEUSERS" runat="server" Width="100%" />--%>
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                           
+
+               <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;    margin-left: -88px;  margin-bottom: 16px; max-width: 1561px;">
+                                            </div>                                                   
+                                          
+
+
                                                                 <table class="table table-bordered" style="margin-left: -10px;">
                                                                     <thead class="thead-light">
                                                                         <tr>
@@ -954,59 +1009,7 @@
                                             </div>
 
 
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-
-                                                                <p style="color: black; margin-top: 20px;"><b>CONCURRENT ENTERPRISE USERS</b></p>
-                                                                
-                                                                <span id="CONCURRENTENTERPRISE_Error" style="display:none;">
-                                                                    <div class='alert alert-warning' role='alert'>
-                                                                     Concurrent users are not supported below 11
-                                                                    </div>
-                                                                </span>
-
-                                                                <span id="CONCURRENTENTERPRISE_Error2" style="display:none;">
-                                                                    <div class='alert alert-warning' role='alert'>
-                                                                    Concurrent users can not exceed 50
-                                                                    </div>
-                                                                </span>
-
-                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
-                                                                    <thead class="thead-light">
-                                                                        <tr>
-                                                                            <th scope="col" style="background-color: #0b1f65;">Concurrent Users.</th>
-
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <input type="number" id="CONCURRENTENTERPRISEUSERS" onchange="GetLicenceData();" value="<%=m_ConEnterpriseUsers %>" class="form-control" style="width: 100%;" name="CONCURRENTENTERPRISEUSERS" min="10" max="55">
-                                                                                <%-- <ej:NumericTextBox ID="CONCURRENTENTERPRISEUSERS" MaxValue="50" MinValue="10" Value="35" Name="CONCURRENTENTERPRISEUSERS" runat="server" Width="100%" />--%>
-                                                                            </td>
-
-
-                                                                        </tr>
-
-                                                                    </tbody>
-                                                                </table>
-
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;">
-                                            </div>
+                                           
 
 
 

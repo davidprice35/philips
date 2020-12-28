@@ -513,7 +513,7 @@
 
 
 
-                                                                                <table class="table table-bordered" style="margin-left: 0px; width: 63px;">
+                                                                                <table class="table table-bordered" style="margin-left: -11px; width: 63px;margin-top: 14px;">
                                                                                     <thead class="thead-light">
                                                                                         <tr>
                                                                                             <th scope="col" style="background-color: #0b1f65;">Concurrent Enterprise Users</th>
@@ -550,10 +550,11 @@
                                                                 </div>
 
 
+                                                                     <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;    margin-left: -85px;  margin-bottom: 16px; width: 1489px;">
+                                            </div> 
 
 
-
-                                                                <div class="table-responsive">
+                                                                <div class="table-responsive" style="margin-left: -11px;">
                                                                     <table class="table table-bordered" style="margin-left: -10px;">
                                                                         <thead class="thead-light">
                                                                             <tr>
@@ -3508,7 +3509,7 @@
                                                                     <div class="tab-regular" style="margin-top: 10px;">
                                                                         <ul class="nav nav-tabs " id="" role="tablist">
                                                                             <li class="nav-item active" id="EDLEonly1-tab">
-                                                                                <a class="nav-link test active" id="EDLEonly1" name="EDLEonly1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" onclick="$('#macTable1Man1_z_1').show();$('#macTable1Man1_z_2').hide();" aria-selected="true" style="width: 300px !important;">Enterprise Distributed Licensing Engine - Software only (NICB487)</a>
+                                                                                <a class="nav-link test active" id="EDLEonly1" name="EDLEonly1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" onclick="$('#macTable1Man1_z_1').show();$('#macTable1Man1_z_2').hide();" aria-selected="true" style="width: 300px !important;">Enterprise Licensing Only Engine - Software only (NICB487)</a>
                                                                             </li>
                                                                             <li class="nav-item " id="EDLEonly2-tab">
                                                                                 <a class="nav-link test" id="EDLEonly2" name="EDLEonly2" data-toggle="tab" href="#EDLEonly2" role="tab" aria-controls="DELIVERY" aria-selected="true" onclick="$('#macTable1Man1_z_1').hide();$('#macTable1Man1_z_2').show();" style="width: 300px !important;">Enterprise Engine Software - Software only (NICB006)</a>
@@ -3524,7 +3525,7 @@
                                                                 <div style="margin-left: 0px;">
                                                                     <div class="tab-regular" style="margin-top: 10px;">
                                                                         <ul class="nav nav-tabs " id="" role="tablist">
-                                                                            <li style="padding-top: 7px;"><b>Are you planning to install<br />the Enterprise distributed Engine or Enterprise Engine ?&nbsp; </b></li>
+                                                                            <li style="padding-top: 7px;"><b>Are you planning to install<br />the Enterprise Licensing Only Engine or Enterprise Engine?</b></li>
                                                                             <li class="nav-item active" id="planInstallNO">
                                                                                 <a class="nav-link test" id="" name="planInstallNO" data-toggle="tab" href="#HorHard1" role="tab" aria-controls="DELIVERY" aria-selected="true" onclick="$('#macContainerTopMain1').hide();" style="width: 70px !important; margin-top: 10px; margin-left: 79px;">No</a>
                                                                             </li>
@@ -3549,7 +3550,7 @@
                                                                                         <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
                                                                                         <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
                                                                                         <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                     
 
                                                                                     </tr>
 
@@ -3561,7 +3562,7 @@
                                                                                             </select></td>
                                                                                         <td align="center">
                                                                                             <input type="text" value="<%=m_EnterpriceInstallMac %>" name="MacSoftwareOnlyInstall1_1" id="" class="form-control"></td>
-                                                                                        <td align="center"></td>
+                                                                                       
                                                                                     </tr>
                                                                                 </thead>
                                                                                 <tbody>
@@ -3576,7 +3577,8 @@
                                                                 <!--Start Site 1-->
                                                                 <div class="row" id="site1">
                                                                     <br />
-                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading1"></p>
+
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading1"></p>
 
                                                                     <div style="display: inline-block;">
                                                                         <span id="error1" style="color: red; font-weight: bold;"></span>
@@ -3680,7 +3682,7 @@
                                                                             <br />
                                                                         </div>
                                                                         
-                                                                      
+                                                                      <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;margin-bottom:15px"></div>
 
                                                                         <div id="ZeroFootprintContainerTab1" style="display: none;">
 
@@ -3941,7 +3943,7 @@
 
 
                                                                         
-
+                                                                        <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;margin-top:20px;margin-bottom:0px"></div>
 
 
                                                                         <div style="display: none;" id="ZFPHW1">
@@ -4010,7 +4012,7 @@ FIC0457</li>
 
                                                                         <!--Site 1 IntelliSpace Portal Test -->
                                                                         <div style="margin-left: 15px;">
-                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                            <div class="tab-regular" style="margin-top: 5px;">
                                                                                 <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
                                                                                     <li>
                                                                                         <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
@@ -4153,7 +4155,7 @@ FIC0457</li>
                                                                   <!--Start Site 2-->
                                                                 <div class="row" id="site2" style="display:none;">
                                                                     <br />
-                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading2"></p>
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading2"></p>
 
                                                                     <div style="display: inline-block;">
                                                                         <span id="error2" style="color: red; font-weight: bold;"></span>
@@ -4729,7 +4731,7 @@ FIC0457</li>
                                                                   <!--Start Site 3-->
                                                                  <div class="row" id="site3" style="display:none;">
                                                                     <br />
-                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading3"></p>
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading3"></p>
 
                                                                     <div style="display: inline-block;">
                                                                         <span id="error3" style="color: red; font-weight: bold;"></span>
@@ -5305,7 +5307,7 @@ FIC0457</li>
                                                                   <!--Start Site 4-->
                                                                  <div class="row" id="site4" style="display:none;">
                                                                     <br />
-                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading4"></p>
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading4"></p>
 
                                                                     <div style="display: inline-block;">
                                                                         <span id="error4" style="color: red; font-weight: bold;"></span>
@@ -5885,7 +5887,7 @@ FIC0457</li>
                                                                  <!--Start Site 5-->
                                                                  <div class="row" id="site5" style="display:none;">
                                                                     <br />
-                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px;" id="macheading5"></p>
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading5"></p>
 
                                                                     <div style="display: inline-block;">
                                                                         <span id="error5" style="color: red; font-weight: bold;"></span>
@@ -7631,9 +7633,11 @@ FIC0457</li>
             if ($('#HiddenPlanInstallEngine')[0].value == "Yes") {
                 $("#planInstallYes").addClass('active');            
                 $('#planInstallNO').removeClass("active");
+                $('#macContainerTopMain1').show();
             } else {
                 $("#planInstallNO").addClass('active');
                 $('#planInstallYes').removeClass("active");
+                $('#macContainerTopMain1').hide();
             }
         }
 
@@ -9714,8 +9718,10 @@ FIC0457</li>
                     AddHospitalItem($("#txtHospitalName" + i)[0].value, $("#txtHospitalName" + i)[0].value);
 
                     //heading and table
-                    $("#site" + i).show();
-                    $("#macheading" + i)[0].innerText = "SITE " + i + ": " + $("#txtHospitalName" + i)[0].value.toUpperCase();
+                    if ($("#macheading" + i)[0] != undefined) {
+                        $("#site" + i).show();
+                        $("#macheading" + i)[0].innerText = "SITE " + i + ": " + $("#txtHospitalName" + i)[0].value.toUpperCase();
+                    }
                 } else {
                     $("#site" + i).hide();
                 }
@@ -12950,8 +12956,10 @@ FIC0457</li>
                 }
 
                 if ($("#txtHospitalName" + myrowidx)[0].value != "") {
-                    $("#site" + myrowidx).show();                    
-                    $("#macheading" + myrowidx)[0].innerText = "SITE " + myrowidx + ": " + $("#txtHospitalName" + myrowidx)[0].value.toUpperCase();
+                    if ($("#macheading" + i)[0] != undefined) {
+                        $("#site" + myrowidx).show();
+                        $("#macheading" + myrowidx)[0].innerText = "SITE " + myrowidx + ": " + $("#txtHospitalName" + myrowidx)[0].value.toUpperCase();
+                    }
                 } else {
                     $("#site" + myrowidx).hide();
                 }
