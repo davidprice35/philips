@@ -341,6 +341,9 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 HiddenPlanInstallEngine.Value = rowView["decentralised_planinstallengine"].ToString();
                 HiddenTabLic1.Value = rowView["decentralised_licencemodel1"].ToString();
 
+
+
+
                 hidPortalISPserver1.Value = rowView["decentralised_ISPServer1"].ToString();
                 hidPortalExtMemNo1.Value = rowView["decentralised_ExtendedMem1"].ToString();
 
@@ -1172,7 +1175,17 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             string WhichDeliveryTab = Request.Form["HiddenDeliveryModel"];
             string WhichLicenceModel1 = Request.Form["HiddenTabLic1"];
             string PlanInstallEngine = Request.Form["HiddenPlanInstallEngine"];
-            string EnterpriceInstallMac = Request.Form["MacSoftwareOnlyInstall1_1"];
+            string EnterpriceInstallMac = "";
+
+            if (WhichLicenceModel1== "NICB487")
+            {
+                EnterpriceInstallMac = Request.Form["MacSoftwareOnlyInstall1_NICB487"];
+            }
+
+            if (WhichLicenceModel1 == "NICB006")
+            {
+                EnterpriceInstallMac = Request.Form["MacSoftwareOnlyInstall1_NICB006"];
+            }
 
             int addApplicationidx = GetNumberofEntries("addApplication");
 

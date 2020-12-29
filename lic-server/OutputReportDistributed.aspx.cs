@@ -42,6 +42,7 @@ public partial class OutputReportDistributed : System.Web.UI.Page
     public string m_LicenceModel1 = string.Empty;
     public string m_PlanInstall = string.Empty;
 
+    public string m_DeliveryGrid = string.Empty;
 
     public string m_customer_key_accountOutput = string.Empty;
     public string m_portalSalesOutput = string.Empty;
@@ -698,7 +699,11 @@ public partial class OutputReportDistributed : System.Web.UI.Page
                     {
                         m_DeliveryModel = "<div class='table-responsive' style='margin-left: -16px;'><table class='table table-bordered' style='width: 33%;'><thead> <tr>  <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>DELIVERY MODEL</b></th> </tr> </thead> <tbody><tr> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;    text-align: center;'><b>" + m_decentralised_deliverymode + "</b></th> </tr></tbody></table></div>";
                         m_LicenceModel1 = "<div class='table-responsive' style='margin-left: -16px;'><table class='table table-bordered' style='width: 33%;'><thead> <tr>  <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Enterprise</b></th> </tr> </thead> <tbody><tr> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;    text-align: center;'><b>" + m_decentralised_licencemodel1 + "</b></th> </tr></tbody></table></div>";
-                        m_PlanInstall = "<div class='table-responsive' style='margin-left: -16px;'><table class='table table-bordered' style='width: 33%;'><thead> <tr>  <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Install</b></th> </tr> </thead> <tbody><tr> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;    text-align: center;'><b>" + m_decentralised_planinstallengine + "</b></th> </tr></tbody></table></div>";                        
+                        m_PlanInstall = "<div class='table-responsive' style='margin-left: -16px;'><table class='table table-bordered' style='width: 33%;'><thead> <tr>  <th scope='col' style='background-color: #0b1f65;padding-bottom:10px;height: 41px;width: 18px;'><b>Install</b></th> </tr> </thead> <tbody><tr> <th scope='col' style='padding-bottom:10px; width: 15px;color:black;    text-align: center;'><b>" + m_decentralised_planinstallengine + "</b></th> </tr></tbody></table></div>";
+
+                        m_DeliveryGrid = "<div style='margin-left:-17px; '><table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Menu</th> <th scope='col' style='background-color: #0b1f65;'>Mac address</th> </tr></thead> <tbody> <tr><td> " + m_decentralised_licencemodel1 + " </td><td>  </td></tr> </tbody> </table></div>";
+
+                        
 
                     }
                     else

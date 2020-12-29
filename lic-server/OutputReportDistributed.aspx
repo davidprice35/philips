@@ -327,6 +327,10 @@
 
 
 
+
+
+
+
                                                 <%=m_OutputTableApplicationsTable %>
 
 
@@ -338,7 +342,7 @@
   <div class="col-md-4"><%=m_PlanInstall %> </div>
 </div>
 
-
+<%=m_DeliveryGrid %>
 
   <%=m_OutputTable %>
 

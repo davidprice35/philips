@@ -338,9 +338,30 @@
                 <li class="col-sm-2 col-xs-2 width"><a href="/MV-Matrix/">MV MATRIX</a></li>
                 <li class="col-sm-2 col-xs-2 width"><a href="/competitive-info/Competitors">COMPETITIVE INFO</a></li>
                 <li class="col-sm-2 col-xs-2 width"><a href="#"></a></li>
-                <li class="col-sm-2 col-xs-2 width"><a href="#"></a></li>
+                <li class="col-sm-2 col-xs-2 width"><a href="#">ENTERPRISE ORDERING SHEET</a></li>
 
                 <li class="col-sm-2 col-xs-2 width"><a href="#"></a></li>
+
+            </div>
+            <div class="nav nav-pills">
+                <li class="col-sm-2 col-xs-2 width"></li>
+                <li class="col-sm-2 col-xs-2 width"></li>
+                <li class="col-sm-2 col-xs-2 width" style="background: #1f8dc7;text-align: center;">
+                    
+                    <span style="border-radius: 0;
+    background: #1f8dc7;
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;"><a href="/competitive-info/Competitors" style="color:white;">ISP</a> |</span>
+                     <span><a href="/competitive-info/Competitors" style="color:white;">ISAI</a></span>
+
+                </li>
+               <li class="col-sm-2 col-xs-2 width"></li><li class="col-sm-2 col-xs-2 width"></li>
+
+                <li class="col-sm-2 col-xs-2 width"></li>
 
             </div>
         </div>
@@ -550,7 +571,7 @@
                                                                 </div>
 
 
-                                                                     <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;    margin-left: -85px;  margin-bottom: 16px; width: 1489px;">
+                                                                     <div class="seperator" style="border-bottom-color: #cdcdcd; border-bottom-style: solid;      margin-bottom: 16px; ">
                                             </div> 
 
 
@@ -579,7 +600,8 @@
                                                                                 </td>
 
                                                                                 <td>
-                                                                                    <input type="number" id="HostpitalEntryText1" onchange="checkEntValues(this);" class="form-control" style="width: 100%;" name="HostpitalEntryText1" value="<%=m_HostpitalEntryText1 %>" min="1" max="15"></td>
+                                                                                    <input type="number" id="HostpitalEntryText1" onchange="checkEntValues(this);" class="form-control" style="                                                                                            width: 100%;
+                                                                                    " name="HostpitalEntryText1" value="<%=m_HostpitalEntryText1 %>" min="1" max="15"></td>
 
                                                                                 <td>
                                                                                     <div class="form-check form-check-inline" style="text-align: center; margin-top: 6px;">
@@ -3509,10 +3531,10 @@
                                                                     <div class="tab-regular" style="margin-top: 10px;">
                                                                         <ul class="nav nav-tabs " id="" role="tablist">
                                                                             <li class="nav-item active" id="EDLEonly1-tab">
-                                                                                <a class="nav-link test active" id="EDLEonly1" name="EDLEonly1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" onclick="$('#macTable1Man1_z_1').show();$('#macTable1Man1_z_2').hide();" aria-selected="true" style="width: 300px !important;">Enterprise Licensing Only Engine - Software only (NICB487)</a>
+                                                                                <a class="nav-link test active" id="EDLEonly1" name="EDLEonly1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" onclick="$('#macContainerTopMain1').show();$('#macContainerTopMain1_1').hide();" aria-selected="true" style="width: 300px !important;">Enterprise Licensing Only Engine - Software only (NICB487)</a>
                                                                             </li>
                                                                             <li class="nav-item " id="EDLEonly2-tab">
-                                                                                <a class="nav-link test" id="EDLEonly2" name="EDLEonly2" data-toggle="tab" href="#EDLEonly2" role="tab" aria-controls="DELIVERY" aria-selected="true" onclick="$('#macTable1Man1_z_1').hide();$('#macTable1Man1_z_2').show();" style="width: 300px !important;">Enterprise Engine Software - Software only (NICB006)</a>
+                                                                                <a class="nav-link test" id="EDLEonly2" name="EDLEonly2" data-toggle="tab" href="#EDLEonly2" role="tab" aria-controls="DELIVERY" aria-selected="true" onclick="$('#macContainerTopMain1').hide();$('#macContainerTopMain1_1').show();" style="width: 300px !important;">Enterprise Engine Software - Software only (NICB006)</a>
                                                                             </li>                                                                            
                                                                         </ul>
 
@@ -3561,7 +3583,7 @@
                                                                                                 <option value="NICB487">NICB487</option>
                                                                                             </select></td>
                                                                                         <td align="center">
-                                                                                            <input type="text" value="<%=m_EnterpriceInstallMac %>" name="MacSoftwareOnlyInstall1_1" id="" class="form-control"></td>
+                                                                                            <input type="text" value="<%=m_EnterpriceInstallMac %>" name="MacSoftwareOnlyInstall1_NICB487" id="" class="form-control"></td>
                                                                                        
                                                                                     </tr>
                                                                                 </thead>
@@ -3572,6 +3594,44 @@
                                                                     </div>
                                                                     <br />                                                                    
                                                                 </div>
+
+
+                                                                <div id="macContainerTopMain1_1" style="display: none;">
+                                                                    <br />
+                                                                    <br />
+                                                                    <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-bordered" id="" style="margin-left: -2px;">
+                                                                                <thead class="thead-light">
+                                                                                    <tr>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                     
+
+                                                                                    </tr>
+
+                                                                                    <tr id="">
+                                                                                        <td align="center"><span class="text-center">1</span></td>
+                                                                                        <td align="center">
+                                                                                            <select name="ApplicationSoftwareInstallOnly1_1" id="" readonly="readonly" class="form-control softwareTable">
+                                                                                                <option value="NICB487">NICB006</option>
+                                                                                            </select></td>
+                                                                                        <td align="center">
+                                                                                            <input type="text" value="<%=m_EnterpriceInstallMac %>" name="MacSoftwareOnlyInstall1_NICB006" id="" class="form-control"></td>
+                                                                                       
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <br />                                                                    
+                                                                </div>
+
+
 
 
                                                                 <!--Start Site 1-->
