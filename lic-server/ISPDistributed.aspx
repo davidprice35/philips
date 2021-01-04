@@ -1180,7 +1180,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -1376,7 +1376,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -1574,7 +1574,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -1780,7 +1780,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -1979,7 +1979,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -2172,7 +2172,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -2366,7 +2366,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -2562,7 +2562,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -2753,7 +2753,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -2952,7 +2952,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -3142,7 +3142,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -3210,7 +3210,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -3286,7 +3286,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -3361,7 +3361,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -3436,7 +3436,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM SPECT 2018|No|Enterprise|">FIC0462 - Corridor4DM SPECT 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
-                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
+                                                                                        <asp:ListItem Value="Zero FootPrint Viewer SW|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW</asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
@@ -3631,17 +3631,129 @@
                                                                     <br />                                                                    
                                                                 </div>
 
+                                                               
+
+
+                                                            </div>
+                                                              
+                                                              <div class="tab-pane" id="SOFTWARE" role="tabpanel" aria-labelledby="SOFTWARE-tab">                                                           
+
+
+                                                                <div class="DELIVERY-info">
+                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                        <ul class="nav nav-tabs " id="myTab1" role="tablist">
+
+                                                                            <li class="nav-item active" id="">
+                                                                                <a class="nav-link test" id="EDLEonlynic1" name="EDLEonlynic1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" onclick="$('#macTable1Man1_z_1').show();$('#macTable1Man1_z_2').hide();" aria-selected="true" style="width: 300px !important;">Enterprise Distributed Licensing Engine - Software only (NICB487)</a>
+                                                                            </li>
+
+                                                                            <li style="padding-top: 7px;color: #111 !important;background: #d2dee5 !important;width: 300px;text-align: center;padding-bottom: 6px;" >
+                                                                                <span style="color: #111 !important;background: #d2dee5 !important;font-weight: 600; font-size: 13px; cursor: pointer;text-transform: uppercase;text-align: center;">
+                                                                                   Enterprise Engine Software -<br /> Software only (NICB006)
+                                                                                </span>
+                                                                            </li>
+
+                                                                           
+
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
 
 
 
-                                                                <!--Start Site 1-->
+
+                                                                <div style="margin-left: 0px;">
+                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+                                                                           <li style="padding-top: 7px;color: #fff !important;background: #178bc6 !important;width: 300px;text-align: center;padding-bottom: 6px;" >
+                                                                                <span style="color: #fff !important;background: #178bc6 !important;font-weight: 600; font-size: 13px; cursor: pointer;text-transform: uppercase;text-align: center;">
+                                                                                    ISP Enterprise Distributed <br />licensing server - NICB488
+                                                                                </span>
+                                                                            </li>
+
+                                                                           
+
+                                                                            <li class="nav-item active" id="" style="margin-left: 101px;">
+                                                                                <a class="nav-link test" id="" name="HorDYSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" onclick="$('#macContainerMainSH1').show();" style="width: 70px !important; margin-top: 10px;">Yes</a>
+                                                                            </li>
+
+
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <!--Mac Address Main 1-->
+                                                                <div id="macContainerMainSH1" >
+                                                                    <br />
+                                                                    <br />
+                                                                    <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-bordered" id="macTableMain1" style="margin-left: -2px;">
+                                                                                <thead class="thead-light">
+                                                                                    <tr>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+                                                                                    </tr>
+
+                                                                                    <tr id="macTable1Man1_z_1">
+                                                                                        <td align="center"><span class="text-center">1</span></td>
+                                                                                        <td align="center">
+                                                                                            <select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnlymain1_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                <option value="NICB487">NICB487</option>
+                                                                                            </select></td>
+                                                                                        <td align="center">
+                                                                                            <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
+                                                                                        <td align="center"></td>
+                                                                                    </tr>
+                                                                                    <tr id="macTable1Man1_z_2" style="display: none;">
+                                                                                        <td align="center"><span class="text-center">1</span></td>
+                                                                                        <td align="center">
+                                                                                            <select name="ApplicationSoftwareOnlymain1_2" id="ApplicationSoftwareOnlymain1_2" readonly="readonly" class="form-control softwareTable">
+                                                                                                <option value="NICB006">NICB006</option>
+                                                                                            </select></td>
+                                                                                        <td align="center">
+                                                                                            <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
+                                                                                        <td align="center"></td>
+                                                                                    </tr>
+
+
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <br />
+
+                                                                    <!--Mac Address Main 1-->
+                                                                </div>
+
+
+
+                                                            </div>
+                                                            
+
+                                                            <div id="siteStart">
+                                                                 <!--Start Site 1-->
                                                                 <div class="row" id="site1">
                                                                     <br />
 
                                                                     <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading1"></p>
 
                                                                     <div style="display: inline-block;">
-                                                                        <span id="error1" style="color: red; font-weight: bold;"></span>
+                                                                        <span id="siteerror1" style="color: red; font-weight: bold;"></span>
                                                                     </div>
 
                                                                     <div id="maincontainerPortal1" style="display: none;">
@@ -3690,7 +3802,7 @@
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div onclick="MacAddLine(this);" id="macaddline1" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <div onclick="MacAddLine(this);" id="" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
                                                                             <br />
 
                                                                             <!--Mac Address 1-->
@@ -3790,7 +3902,7 @@
                                                                                                     <td align="center"><span class="text-center">1</span></td>
                                                                                                     <td align="center">
                                                                                                         <select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnly1_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
                                                                                                         </select></td>
                                                                                                     <td align="center">
                                                                                                         <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
@@ -3810,7 +3922,7 @@
                                                                             <!--Mac Address 1-z-->
 
                                                                             <div style="display: none;" id="ZFPHW1">
-                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div style="margin-left: 0px;" id="">
                                                                                     <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                         <ul class="nav nav-tabs " id="" role="tablist">
@@ -4007,7 +4119,7 @@
 
 
                                                                         <div style="display: none;" id="ZFPHW1">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 0px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
@@ -4145,7 +4257,7 @@ FIC0457</li>
                                                                       
 
                                                                         <div style="display: none;" id="TestHW1">
-                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 15px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
@@ -4337,7 +4449,7 @@ FIC0457</li>
                                                                                         </li>
 
                                                                                         <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW2').show();$('#macContainer2_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                         </li>
 
                                                                                     </ul>
@@ -4367,7 +4479,7 @@ FIC0457</li>
                                                                                                     <td align="center"><span class="text-center">1</span></td>
                                                                                                     <td align="center">
                                                                                                         <select name="ApplicationSoftwareOnly2_1" id="ApplicationSoftwareOnly2_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
                                                                                                         </select></td>
                                                                                                     <td align="center">
                                                                                                         <input type="text" value="" name="MacSoftwareOnly2_1" id="MacSoftwareOnly2_1" class="form-control"></td>
@@ -4387,7 +4499,7 @@ FIC0457</li>
                                                                             <!--Mac Address 2-z-->
 
                                                                             <div style="display: none;" id="ZFPHW2">
-                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div style="margin-left: 0px;" id="">
                                                                                     <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                         <ul class="nav nav-tabs " id="" role="tablist">
@@ -4476,11 +4588,11 @@ FIC0457</li>
 
 
                                                                                     <li class="nav-item active" id="CRedundantTHorSoft2">
-                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#ZFPRedundantHW2').hide();$('#macContainer1_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft2" data-toggle="tab" href="#HorSoft2" role="tab" onclick="$('#ZFPRedundantHW2').hide();$('#macContainer2_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
                                                                                     </li>
 
                                                                                     <li class="nav-item " id="CRedundantTHorHard2">
-                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard2" data-toggle="tab" href="#HorHard2" role="tab" onclick="$('#ZFPRedundantHW2').show();$('#macContainer1_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard2" data-toggle="tab" href="#HorHard2" role="tab" onclick="$('#ZFPRedundantHW2').show();$('#macContainer2_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                     </li>
 
                                                                                 </ul>
@@ -4583,8 +4695,8 @@ FIC0457</li>
 
 
 
-                                                                        <div style="display: none;" id="ZFPHW2">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                        <div style="display: none;" id="CZFPHW2">
+                                                                            <div style="margin-left: 0px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall2" role="tablist">
@@ -4722,7 +4834,7 @@ FIC0457</li>
                                                                       
 
                                                                         <div style="display: none;" id="TestHW2">
-                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 15px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall2" role="tablist">
@@ -4943,7 +5055,7 @@ FIC0457</li>
                                                                                                     <td align="center"><span class="text-center">1</span></td>
                                                                                                     <td align="center">
                                                                                                         <select name="ApplicationSoftwareOnly3_1" id="ApplicationSoftwareOnly3_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
                                                                                                         </select></td>
                                                                                                     <td align="center">
                                                                                                         <input type="text" value="" name="MacSoftwareOnly3_1" id="MacSoftwareOnly3_1" class="form-control"></td>
@@ -4963,7 +5075,7 @@ FIC0457</li>
                                                                             <!--Mac Address 3-z-->
 
                                                                             <div style="display: none;" id="ZFPHW3">
-                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div style="margin-left: 0px;" id="">
                                                                                     <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                         <ul class="nav nav-tabs " id="" role="tablist">
@@ -5160,7 +5272,7 @@ FIC0457</li>
 
 
                                                                         <div style="display: none;" id="ZFPHW3">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 0px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall3" role="tablist">
@@ -5298,7 +5410,7 @@ FIC0457</li>
                                                                       
 
                                                                         <div style="display: none;" id="TestHW3">
-                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 15px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall3" role="tablist">
@@ -5519,7 +5631,7 @@ FIC0457</li>
                                                                                                     <td align="center"><span class="text-center">1</span></td>
                                                                                                     <td align="center">
                                                                                                         <select name="ApplicationSoftwareOnly4_1" id="ApplicationSoftwareOnly4_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
                                                                                                         </select></td>
                                                                                                     <td align="center">
                                                                                                         <input type="text" value="" name="MacSoftwareOnly4_1" id="MacSoftwareOnly4_1" class="form-control"></td>
@@ -5539,7 +5651,7 @@ FIC0457</li>
                                                                             <!--Mac Address 4-z-->
 
                                                                             <div style="display: none;" id="ZFPHW4">
-                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div style="margin-left: 0px;" id="">
                                                                                     <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                         <ul class="nav nav-tabs " id="" role="tablist">
@@ -5736,7 +5848,7 @@ FIC0457</li>
 
 
                                                                         <div style="display: none;" id="ZFPHW4">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 0px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall4" role="tablist">
@@ -5874,7 +5986,7 @@ FIC0457</li>
                                                                       
 
                                                                         <div style="display: none;" id="TestHW4">
-                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 15px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall4" role="tablist">
@@ -6099,7 +6211,7 @@ FIC0457</li>
                                                                                                     <td align="center"><span class="text-center">1</span></td>
                                                                                                     <td align="center">
                                                                                                         <select name="ApplicationSoftwareOnly5_1" id="ApplicationSoftwareOnly5_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
                                                                                                         </select></td>
                                                                                                     <td align="center">
                                                                                                         <input type="text" value="" name="MacSoftwareOnly5_1" id="MacSoftwareOnly5_1" class="form-control"></td>
@@ -6119,7 +6231,7 @@ FIC0457</li>
                                                                             <!--Mac Address 5-z-->
 
                                                                             <div style="display: none;" id="ZFPHW5">
-                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                                <div style="margin-left: 0px;" id="">
                                                                                     <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                         <ul class="nav nav-tabs " id="" role="tablist">
@@ -6316,10 +6428,10 @@ FIC0457</li>
 
 
                                                                         <div style="display: none;" id="ZFPHW5">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 0px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall5" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
 
 
                                                                                         <li>ISP Zero Footprint server:</li>
@@ -6454,7 +6566,7 @@ FIC0557</li>
                                                                       
 
                                                                         <div style="display: none;" id="TestHW5">
-                                                                            <div style="margin-left: 15px;" id="ZFPViewerHW">
+                                                                            <div style="margin-left: 15px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
                                                                                     <ul class="nav nav-tabs " id="mydoyouwnatinstall5" role="tablist">
@@ -6519,211 +6631,34 @@ FIC0557</li>
                                                                 </div>
                                                                     <!--Start Site 5-->
 
+                                                                
 
 
-                                                            </div>
-                                                              
-
-                                                            <div class="tab-pane" id="SOFTWARE" role="tabpanel" aria-labelledby="SOFTWARE-tab">
-
-
-
-                                                                <table class="table" style="margin-left: -15px; display: none;">
-
-                                                                    <tbody>
-
-
-                                                                        <tr>
-                                                                            <td style="width: 254px;">ISP Software Only:</td>
-                                                                            <td>
-
-
-                                                                                <input id="cmdISPSoftwareOnly1" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly active" type="button" value="1">
-                                                                                <input id="cmdISPSoftwareOnly2" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="2">
-                                                                                <input id="cmdISPSoftwareOnly3" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="3">
-                                                                                <input id="cmdISPSoftwareOnly4" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="4">
-                                                                                <input id="cmdISPSoftwareOnly5" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="5">
-                                                                                <input id="cmdISPSoftwareOnly6" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="6">
-                                                                                <input id="cmdISPSoftwareOnly7" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="7">
-                                                                                <input id="cmdISPSoftwareOnly8" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="8">
-                                                                                <input id="cmdISPSoftwareOnly9" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="9">
-                                                                                <input id="cmdISPSoftwareOnly10" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="10">
-                                                                                <input id="cmdISPSoftwareOnly11" onclick="ISPSoftwareButton(this);" class="ISPSoftwareOnly" type="button" value="11">
-
-
-                                                                                <asp:HiddenField ID="HiddenField1" runat="server" />
-                                                                                <asp:HiddenField ID="HiddenField2" runat="server" />
-                                                                                <asp:HiddenField ID="HiddenField3" runat="server" />
-                                                                            </td>
-
-
-                                                                        </tr>
-
-
-
-                                                                    </tbody>
-                                                                </table>
-
-
-                                                                <table class="table" style="margin-left: -15px; display: none;">
-
-                                                                    <tbody>
-                                                                        <tr>
-
-                                                                            <td style="width: 274px">ISP Test Server Software Only? </td>
-
-                                                                            <td style="width: 50px;">
-
-                                                                                <input id="" class="ISPSoftwareButton active" onclick="ispSoftware('NO', this);" type="button" value="No">
-                                                                            </td>
-                                                                            <td style="width: 50px;">
-                                                                                <input id="" class="ISPSoftwareButton" onclick="ispSoftware('YES', this);" type="button" value="Yes">
-                                                                                <asp:HiddenField ID="HiddenField4" runat="server" />
-                                                                            </td>
-
-                                                                            <td></td>
-
-                                                                            <td align="right"></td>
-
-
-                                                                            <td></td>
-
-                                                                        </tr>
-
-
-
-                                                                    </tbody>
-                                                                </table>
-
-
-
-
-                                                                <div class="DELIVERY-info">
-                                                                    <div class="tab-regular" style="margin-top: 10px;">
-
-                                                                        <ul class="nav nav-tabs " id="myTab1" role="tablist">
-
-                                                                            <li class="nav-item active" id="">
-                                                                                <a class="nav-link test" id="EDLEonlynic1" name="EDLEonlynic1" data-toggle="tab" href="#EDLEonly1" role="tab" aria-controls="DELIVERY" onclick="$('#macTable1Man1_z_1').show();$('#macTable1Man1_z_2').hide();" aria-selected="true" style="width: 300px !important;">Enterprise Distributed Licensing Engine - Software only (NICB487)</a>
-                                                                            </li>
-
-                                                                            <li class="nav-item " id="">
-                                                                                <a class="nav-link test" id="EDLEonlyniceS1" name="EDLEonlyniceS1" data-toggle="tab" href="#EDLEonly2" role="tab" aria-controls="DELIVERY" aria-selected="true" onclick="$('#macTable1Man1_z_1').hide();$('#macTable1Man1_z_2').show();" style="width: 300px !important;">Enterprise Engine Software - Software only (NICB006)</a>
-                                                                            </li>
-
-
-
-                                                                        </ul>
-
-                                                                    </div>
-                                                                </div>
-
-
-
-
-                                                                <div style="margin-left: 0px;">
-                                                                    <div class="tab-regular" style="margin-top: 10px;">
-
-                                                                        <ul class="nav nav-tabs " id="" role="tablist">
-
-                                                                            <li style="padding-top: 7px;"><b>Are you planning to install
-                                                                                <br />
-                                                                                the Enterprise distributed Engine or Enterprise Engine ?&nbsp; </b></li>
-
-                                                                            <li class="nav-item active" id="HorH-tab1">
-                                                                                <a class="nav-link test" id="HorHard1" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" aria-controls="DELIVERY" aria-selected="true" onclick="$('#macContainerMain1').hide();" style="width: 70px !important; margin-top: 10px; margin-left: 79px;">No</a>
-                                                                            </li>
-
-                                                                            <li class="nav-item " id="">
-                                                                                <a class="nav-link test" id="" name="HorDYSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" onclick="$('#macContainerMain1').show();" style="width: 70px !important; margin-top: 10px;">Yes</a>
-                                                                            </li>
-
-
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <!--Mac Address Main 1-->
-                                                                <div id="macContainerMain1" style="display: none;">
+                                                                <!--Start Site 6-->
+                                                                 <div class="row" id="site6" style="display:none;">
                                                                     <br />
-                                                                    <br />
-                                                                    <div class="col-md-12" style="margin-left: -15px;">
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading6"></p>
 
-                                                                        <div class="table-responsive">
-                                                                            <table class="table table-bordered" id="macTableMain1" style="margin-left: -2px;">
-                                                                                <thead class="thead-light">
-                                                                                    <tr>
-                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                        <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
-                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
-                                                                                        <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-                                                                                    </tr>
-
-                                                                                    <tr id="macTable1Man1_z_1">
-                                                                                        <td align="center"><span class="text-center">1</span></td>
-                                                                                        <td align="center">
-                                                                                            <select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnlymain1_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                <option value="NICB487">NICB487</option>
-                                                                                            </select></td>
-                                                                                        <td align="center">
-                                                                                            <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
-                                                                                        <td align="center"></td>
-                                                                                    </tr>
-                                                                                    <tr id="macTable1Man1_z_2" style="display: none;">
-                                                                                        <td align="center"><span class="text-center">1</span></td>
-                                                                                        <td align="center">
-                                                                                            <select name="ApplicationSoftwareOnlymain1_2" id="ApplicationSoftwareOnlymain1_2" readonly="readonly" class="form-control softwareTable">
-                                                                                                <option value="NICB006">NICB006</option>
-                                                                                            </select></td>
-                                                                                        <td align="center">
-                                                                                            <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
-                                                                                        <td align="center"></td>
-                                                                                    </tr>
-
-
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <br />
-
-                                                                    <!--Mac Address Main 1-->
-                                                                </div>
-
-
-
-
-
-
-                                                                <div class="row" id="mac1">
-                                                                    <br />
-                                                                                                                                        
                                                                     <div style="display: inline-block;">
-                                                                        <span id="error1" style="color: red; font-weight: bold;"></span>
+                                                                        <span id="error6" style="color: red; font-weight: bold;"></span>
                                                                     </div>
 
-                                                                    <div id="maincontainerPortal" style="display: none;">
+                                                                    <div id="maincontainerPortal6" >
+
                                                                         <br />
                                                                         <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
 
-
-                                                                        <div class="HorS-Site1" style="margin-left: 15px;">
+                                                                        <!--Site 6 Software & Hardward -->
+                                                                        <div class="HorS-Site6" style="margin-left: 15px;">
                                                                             <div class="tab-regular" style="margin-top: -2px;">
-                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+                                                                                <ul class="nav nav-tabs " id="myTabSite6" role="tablist">
 
-                                                                                    <li class="nav-item active" id="">
-                                                                                        <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#hardwaresite1').hide();$('#macContainer1').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS6">
+                                                                                        <a class="nav-link test" id="" name="HorSoft6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="$('#hardwaresite6').hide();$('#macContainerSO6').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
                                                                                     </li>
 
-                                                                                    <li class="nav-item " id="">
-                                                                                        <a class="nav-link test" id="" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#hardwaresite1').show();$('#macContainer1').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH6">
+                                                                                        <a class="nav-link test" id="" name="HorHard6" data-toggle="tab" href="#HorHard6" role="tab" onclick="$('#hardwaresite6').show();$('#macContainerSO6').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                     </li>
 
                                                                                 </ul>
@@ -6731,13 +6666,13 @@ FIC0557</li>
                                                                         </div>
 
                                                                         <!--Mac Address 1-->
-                                                                        <div id="macContainer1">
+                                                                        <div id="macContainerSO6">
                                                                             <br />
                                                                             <br />
                                                                             <div class="col-md-12" style="margin-left: 0px;">
 
                                                                                 <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable1" style="margin-left: -2px;">
+                                                                                    <table class="table table-bordered" id="macTableSO6" style="margin-left: -2px;">
                                                                                         <thead class="thead-light">
                                                                                             <tr>
                                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
@@ -6754,28 +6689,29 @@ FIC0557</li>
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div onclick="MacAddLine(this);" id="macaddline1" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <div onclick="MacAddLine(this);" id="macaddline6" style="cursor: pointer; margin-left: 15px;">+ Add another line </div>
                                                                             <br />
 
                                                                             <!--Mac Address 1-->
+                                                                             <br />
                                                                         </div>
-                                                                        <br />
+                                                                       
 
 
 
-                                                                        <div id="hardwaresite1" style="display: none;">
-                                                                            <div class="HorS-HardwareSite1" style="margin-left: 15px;">
+                                                                        <div id="hardwaresite6" style="display: none;">
+                                                                            <div class="HorS-HardwareSite6" style="margin-left: 15px;">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
-                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite1" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite6" role="tablist">
 
                                                                                         <li style="padding-top: 7px;">ISP Server:</li>
 
-                                                                                        <li class="nav-item active" id="HorS-Hardwaretab1">
-                                                                                            <a class="nav-link test" id="Hardware-Standard1" name="Hardware-Standard1" data-toggle="tab" href="#HorHWSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab6">
+                                                                                            <a class="nav-link test" id="Hardware-Standard6" name="Hardware-Standard6" data-toggle="tab" href="#HorASoft6" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="HorS-HardwareExttab1">
-                                                                                            <a class="nav-link test" id="Hardware-Extended1" name="Hardware-Extended1" data-toggle="tab" href="#HorHWHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab6">
+                                                                                            <a class="nav-link test" id="Hardware-Extended6" name="Hardware-Extended6" data-toggle="tab" href="#HorAHard6" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
                                                                                         </li>
 
                                                                                     </ul>
@@ -6783,18 +6719,18 @@ FIC0557</li>
                                                                             </div>
 
 
-                                                                            <div class="HorS-HardwareMemorySite1" style="margin-left: 15px;">
+                                                                            <div class="HorS-HardwareMemorySite6" style="margin-left: 15px;">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
-                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite1" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite6" role="tablist">
 
                                                                                         <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
 
-                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab1">
-                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo1" name="Hardware-StandardMemoryNo1" data-toggle="tab" href="#HorHWMHard1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab6">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo6" name="Hardware-StandardMemoryNo6" data-toggle="tab" href="#HorHard6" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab1">
-                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes1" name="Hardware-StandardMemoryYes1" data-toggle="tab" href="#HorHWMSoft1" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab6">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes6" name="Hardware-StandardMemoryYes6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
 
@@ -6802,24 +6738,12 @@ FIC0557</li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
+                                                                            <br />
                                                                         </div>
+                                                                        
+                                                                      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                        <br />
-
-                                                                        <div id="ZeroFootprintContainer1" style="display: none;">
+                                                                        <div id="ZeroFootprintContainerTab6" style="display: none;">
 
                                                                             <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
 
@@ -6831,11 +6755,11 @@ FIC0557</li>
 
 
                                                                                         <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#ZFPHW1').hide();$('#macContainer1_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="$('#ZFPHW6').hide();$('#macContainer6_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
                                                                                         </li>
 
                                                                                         <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                         </li>
 
                                                                                     </ul>
@@ -6844,31 +6768,31 @@ FIC0557</li>
 
 
                                                                             <!--Mac Address 1_z-->
-                                                                            <div id="macContainer1_z">
+                                                                            <div id="macContainer6_z">
                                                                                 <br />
                                                                                 <br />
                                                                                 <div class="col-md-12" style="margin-left: -15px;">
 
                                                                                     <div class="table-responsive">
-                                                                                        <table class="table table-bordered" id="macTable1_z" style="margin-left: -2px;">
+                                                                                        <table class="table table-bordered" id="macTable6_z" style="margin-left: -2px;">
                                                                                             <thead class="thead-light">
                                                                                                 <tr>
                                                                                                     <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                    <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
                                                                                                     <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
                                                                                                     <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
 
 
                                                                                                 </tr>
 
-                                                                                                <tr id="macTable11_z_1">
+                                                                                                <tr id="macTable11_z_6">
                                                                                                     <td align="center"><span class="text-center">1</span></td>
                                                                                                     <td align="center">
-                                                                                                        <select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnly1_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW - 2 User">Zero FootPrint Viewer SW - 2 User</option>
+                                                                                                        <select name="ApplicationSoftwareOnly6_1" id="ApplicationSoftwareOnly6_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA168 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
                                                                                                         </select></td>
                                                                                                     <td align="center">
-                                                                                                        <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly6_1" id="MacSoftwareOnly6_1" class="form-control"></td>
                                                                                                     <td align="center"></td>
                                                                                                 </tr>
 
@@ -6882,23 +6806,23 @@ FIC0557</li>
 
                                                                                 <br />
                                                                             </div>
-                                                                            <!--Mac Address 1-z-->
+                                                                            <!--Mac Address 6-z-->
 
-                                                                            <div style="display: none;" id="ZFPHW1">
-                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                            <div style="display: none;" id="ZFPHW6">
+                                                                                <div style="margin-left: 0px;" id="">
                                                                                     <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                        <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
 
 
                                                                                             <li class="nav-item" style="">ISP Zero Footprint server:</li>
 
                                                                                             <li class="nav-item active" id="">
-                                                                                                <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 54px;">No</a>
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 55px;">No</a>
                                                                                             </li>
 
                                                                                             <li class="nav-item " id="">
-                                                                                                <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                             </li>
 
 
@@ -6909,21 +6833,20 @@ FIC0557</li>
                                                                                     </div>
                                                                                 </div>
 
-                                                                                <div style="margin-left: 0px;" id="ZFPViewerHW2">
+                                                                                <div style="margin-left: 0px;" id="">
                                                                                     <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                        <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
 
 
-                                                                                            <li>Extended Memory -
-    FIC0457</li>
+                                                                                            <li>Extended Memory - FIC0567</li>
 
                                                                                             <li class="nav-item active" id="">
-                                                                                                <a class="nav-link test" id="" name="HorSoftEM1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
+                                                                                                <a class="nav-link test" id="" name="HorASoftno6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
                                                                                             </li>
 
                                                                                             <li class="nav-item " id="">
-                                                                                                <a class="nav-link test" id="" name="HorSoftEM1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                             </li>
 
 
@@ -6941,24 +6864,22 @@ FIC0557</li>
                                                                         </div>
 
 
-                                                                        <div style="margin-left: 0px;">
-                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
 
-                                                                                <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
-
-
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
                                                                                     <li>
                                                                                         <b>IntelliSpace Portal Redundant
                                                                                             <br />
                                                                                             Application Environment</b>
                                                                                     </li>
 
-                                                                                    <li class="nav-item active">
-                                                                                        <a class="nav-link " id="HorHardRedundant1" name="HorHaRedd1" data-toggle="tab" href="#HorHard1" role="tab" onclick="PortalRedundant(1,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 19px;">No</a>
+                                                                                    <li class="nav-item active" id="redundatntno6">
+                                                                                        <a class="nav-link " id="" name="HorNHard6" data-toggle="tab" href="#HorHard6" role="tab" onclick="PortalRedundant(6,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 19px;">No</a>
                                                                                     </li>
 
-                                                                                    <li class="nav-item" id="HorS-tabRedundant1">
-                                                                                        <a class="nav-link " id="HorSoftRedundant1" name="HorSoftRed1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="PortalRedundant(1,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    <li class="nav-item" id="redundatntyes6">
+                                                                                        <a class="nav-link " id="" name="HorYSoft6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="PortalRedundant(6,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
                                                                                     </li>
 
 
@@ -6967,37 +6888,35 @@ FIC0557</li>
                                                                             </div>
                                                                         </div>
 
+                                                                                                                                               
 
-
-
-
-                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabsz1">
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs6">
                                                                             <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
 
 
 
-                                                                                    <li class="nav-item active" id="">
-                                                                                        <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#ZFPRedundantHW1').hide();$('#macContainer1_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft6">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="$('#ZFPRedundantHW6').hide();$('#macContainer6_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
                                                                                     </li>
 
-                                                                                    <li class="nav-item " id="">
-                                                                                        <a class="nav-link test" id="" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPRedundantHW1').show();$('#macContainer1_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    <li class="nav-item " id="CRedundantTHorHard6">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard6" data-toggle="tab" href="#HorHard6" role="tab" onclick="$('#ZFPRedundantHW6').show();$('#macContainer6_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                     </li>
 
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
 
-                                                                        <!--Mac Address 1_2-->
-                                                                        <div id="macContainer1_2" style="display: none;">
+                                                                       <!--Mac Address 6-->
+                                                                        <div id="macContainer6_2" style="display: none;">
                                                                             <br />
                                                                             <br />
-                                                                            <div class="col-md-12" style="margin-left: 0px;">
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
 
                                                                                 <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable1" style="margin-left: -2px;">
+                                                                                    <table class="table table-bordered" id="macTableRedundant6" style="margin-left: -2px;">
                                                                                         <thead class="thead-light">
                                                                                             <tr>
                                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
@@ -7007,14 +6926,14 @@ FIC0557</li>
 
 
                                                                                             </tr>
-                                                                                            <tr id="macTable1_2_1">
+                                                                                            <tr id="TableMacTableRedundant6">
                                                                                                 <td align="center"><span class="text-center">1</span></td>
                                                                                                 <td align="center">
-                                                                                                    <select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnly1_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant6_1" id="ApplicationSoftwareOnlymacTableRedundant6_1" readonly="readonly" class="form-control softwareTable">
                                                                                                         <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
                                                                                                     </select></td>
                                                                                                 <td align="center">
-                                                                                                    <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant6_1" id="MacSoftwareOnlymacTableRedundant6_1" class="form-control"></td>
                                                                                                 <td align="center"></td>
                                                                                             </tr>
                                                                                         </thead>
@@ -7024,28 +6943,28 @@ FIC0557</li>
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div onclick="MacAddLine(this);" id="macTableAdd1_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd6_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
                                                                             <br />
                                                                         </div>
-                                                                        <!--Mac Address 1-->
+                                                                        <!--Mac Address 6-->
 
-                                                                        <div style="display: none;" id="ZFPRedundantHW1">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                        <div style="display: none;" id="ZFPRedundantHW6">
+                                                                            <div style="margin-left: 15px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
 
 
                                                                                         <li>IntelliSpace Portal Redundant
                                                                                             <br />
                                                                                             Application Environment:</li>
 
-                                                                                        <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
+                                                                                        <li class="nav-item active" id="cAppHorSoftN6">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        <li class="nav-item " id="cAppHorSoftY6">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
 
@@ -7056,22 +6975,21 @@ FIC0557</li>
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerRedundantHW2">
+                                                                            <div style="margin-left: 18px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
 
 
-                                                                                        <li>Extended Memory -
-FIC0457</li>
+                                                                                        <li>Extended Memory -FIC0557</li>
 
 
-                                                                                        <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN6">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY6">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY6" name="RedundantHorSoftExtY6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
 
@@ -7083,21 +7001,21 @@ FIC0457</li>
                                                                         </div>
 
 
+                                                                        
 
 
 
-
-                                                                        <div style="display: none;" id="ZFPHW1">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                        <div style="display: none;" id="ZFPHW6">
+                                                                            <div style="margin-left: 0px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall6" role="tablist">
 
 
                                                                                         <li>ISP Zero Footprint server:</li>
 
                                                                                         <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
 Viewer Server
 NICA169</a>
                                                                                         </li>
@@ -7119,22 +7037,22 @@ NICA169</a>
 
 
 
-                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW2">
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW6">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall6" role="tablist">
 
 
                                                                                         <li>Extended Memory -
-FIC0457</li>
+FIC0557</li>
 
                                                                                         <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#ZFPRedundantViewerHW2').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="$('#ZFPRedundantViewerHW6').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
                                                                                         </li>
 
 
                                                                                         <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="$('#ZFPRedundantViewerHW2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="$('#ZFPRedundantViewerHW6').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
 
@@ -7151,82 +7069,65 @@ FIC0457</li>
                                                                         <br />
 
 
-
-                                                                        <div style="margin-left: 0px;">
+                                                                        <!--Site 6 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
                                                                             <div class="tab-regular" style="margin-top: 18px;">
-
-                                                                                <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
-
-
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
                                                                                     <li>
-                                                                                        <b>IntelliSpace Portal
-                                                                                            <br />
-                                                                                            Test Environment</b>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
                                                                                     </li>
-
-                                                                                    <li class="nav-item active" id="">
-                                                                                        <a class="nav-link test" id="" name="HorHard1" data-toggle="tab" href="#HorHard1" role="tab" aria-controls="DELIVERY" onclick="PortalTest(1,'no');" aria-selected="true" style="width: 70px !important; margin-left: 96px;">No</a>
-                                                                                    </li>
-
-
-                                                                                    <li class="nav-item " id="">
-                                                                                        <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" onclick="PortalTest(1,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
-                                                                                    </li>
-
-
+                                                                                    <li class="nav-item active" id="Testno6">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN6" data-toggle="tab" href="#HorHard6" role="tab" aria-controls="DELIVERY" onclick="PortalTest(6,'no');" aria-selected="true" style="width: 70px !important; margin-left: 96px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes6">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY6" data-toggle="tab" href="#HorSoft6" role="tab" onclick="PortalTest(6,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
 
 
-                                                                        <div style="margin-left: 0px; display: none;" id="TestTabs">
+                                                                         <!--Site 6 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs6">
                                                                             <div class="tab-regular" style="margin-top: 10px;">
-
-                                                                                <ul class="nav nav-tabs " id="" role="tablist">
-
-
-
-                                                                                    <li class="nav-item active" id="">
-                                                                                        <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" onclick="$('#ZFPTestHW1').hide();$('#macContainer1_3').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft6">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft6" data-toggle="tab" href="#HorSoft6" onclick="$('#TestHW6').hide();$('#TestMacContainer6').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
                                                                                     </li>
 
-                                                                                    <li class="nav-item " id="">
-                                                                                        <a class="nav-link test" id="" name="HorHard1" data-toggle="tab" href="#HorHard1" onclick="$('#ZFPTestHW1').show();$('#macContainer1_3').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    <li class="nav-item " id="cTestHorSoftY6">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY6" data-toggle="tab" href="#HorHard6" onclick="$('#TestHW6').show();$('#TestMacContainer6').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
                                                                                     </li>
-
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
 
+                                                                      
 
-                                                                       
+                                                                        <!--Test Tab Mac Table -->
 
-                                                                        <!--Mac Address 1_3-->
-                                                                        <div id="macContainer1_3" style="display: none;">
-                                                                            <br />
-                                                                            <br />
-                                                                            <div class="col-md-12" style="margin-left: -15px;">
-
+                                                                        <div id="TestMacContainer6" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
                                                                                 <div class="table-responsive">
-                                                                                    <table class="table table-bordered" id="macTable1_3" style="margin-left: -2px;">
+                                                                                    <table class="table table-bordered" id="macTestTable6" style="margin-left: -2px;">
                                                                                         <thead class="thead-light">
                                                                                             <tr>
                                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
-                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
                                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
                                                                                                 <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
-
-
                                                                                             </tr>
 
-                                                                                            <tr id="macTable1_2_1">
+                                                                                            <tr id="macTestTableData6_1">
                                                                                                 <td align="center"><span class="text-center">1</span></td>
                                                                                                 <td align="center">
-                                                                                                    <select name="ApplicationSoftwareOnly1_1" id="ApplicationSoftwareOnly1_1" readonly="readonly" class="form-control softwareTable">
-                                                                                                        <option value="NICA963 - Test Environment">NICA963 - Test Environment</option>
-                                                                                                    </select></td>
-                                                                                                <td align="center">
-                                                                                                    <input type="text" value="" name="MacSoftwareOnly1_1" id="MacSoftwareOnly1_1" class="form-control"></td>
+                                                                                                    <select name="macTestTableDataMenu6_1" id="macTestTableDataMenu6_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA966 - Test Environment">NICA966 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress6_1" id="macTestTableDataAddress6_1" class="form-control"></td>
                                                                                                 <td align="center"></td>
                                                                                             </tr>
                                                                                         </thead>
@@ -7236,29 +7137,29 @@ FIC0457</li>
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div onclick="MacAddLine(this);" id="macTableAdd1_3" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
-                                                                            <br />
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd6_1" style="cursor: pointer; margin-left: 16px;">+ Add another line </div>
+                                                                            <br>
                                                                         </div>
-                                                                        <!--Mac Address 1-->
 
+                                                                      
 
-                                                                        <div style="display: none;" id="ZFPTestHW1">
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerHW">
+                                                                        <div style="display: none;" id="TestHW6">
+                                                                            <div style="margin-left: 15px;" id="">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall1" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall6" role="tablist">
 
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
                                                                                             Environment:</li>
 
-                                                                                        <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        <li class="nav-item active" id="cHorTSoftN6">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
                                                                                         </li>
 
-                                                                                        <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        <li class="nav-item " id="cHorTSoftY6">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
 
@@ -7269,21 +7170,21 @@ FIC0457</li>
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div style="margin-left: 0px;" id="ZFPViewerRedundantHW2">
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW6">
                                                                                 <div class="tab-regular" style="margin-top: 10px;">
 
-                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall6" role="tablist">
 
 
-                                                                                        <li>Extended Memory - FIC0457</li>
+                                                                                        <li>Extended Memory - FIC0557</li>
 
-                                                                                        <li class="nav-item active" id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        <li class="nav-item active" id="cHorENSoft6">
+                                                                                            <a class="nav-link test" id="HorENSoft6" name="HorSoft6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 49px;">No</a>
                                                                                         </li>
 
 
-                                                                                        <li class="nav-item " id="">
-                                                                                            <a class="nav-link test" id="" name="HorSoft1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        <li class="nav-item " id="cHorEYSoft6">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
                                                                                         </li>
 
 
@@ -7293,6 +7194,12 @@ FIC0457</li>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+
+
+
+
+
+                                                                    
 
 
 
@@ -7300,6 +7207,2279 @@ FIC0457</li>
 
                                                                     </div>
                                                                 </div>
+                                                                    <!--Start Site 6-->
+
+
+
+                                                                <!--Start Site 7-->
+                                                                 <div class="row" id="site7" style="display:none;">
+                                                                    <br />
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading7"></p>
+
+                                                                    <div style="display: inline-block;">
+                                                                        <span id="error7" style="color: red; font-weight: bold;"></span>
+                                                                    </div>
+
+                                                                    <div id="maincontainerPortal7" >
+
+                                                                        <br />
+                                                                        <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
+
+                                                                        <!--Site 7 Software & Hardward -->
+                                                                        <div class="HorS-Site7" style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: -2px;">
+                                                                                <ul class="nav nav-tabs " id="myTabSite7" role="tablist">
+
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS7">
+                                                                                        <a class="nav-link test" id="" name="HorSoft7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="$('#hardwaresite7').hide();$('#macContainerSO7').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH7">
+                                                                                        <a class="nav-link test" id="" name="HorHard7" data-toggle="tab" href="#HorHard7" role="tab" onclick="$('#hardwaresite7').show();$('#macContainerSO7').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 1-->
+                                                                        <div id="macContainerSO7">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-12" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableSO7" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macaddline7" style="cursor: pointer; margin-left: 15px;">+ Add another line </div>
+                                                                            <br />
+
+                                                                            <!--Mac Address 1-->
+                                                                             <br />
+                                                                        </div>
+                                                                       
+
+
+
+                                                                        <div id="hardwaresite7" style="display: none;">
+                                                                            <div class="HorS-HardwareSite7" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite7" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">ISP Server:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab7">
+                                                                                            <a class="nav-link test" id="Hardware-Standard7" name="Hardware-Standard7" data-toggle="tab" href="#HorASoft7" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab7">
+                                                                                            <a class="nav-link test" id="Hardware-Extended7" name="Hardware-Extended7" data-toggle="tab" href="#HorAHard7" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="HorS-HardwareMemorySite7" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite7" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab7">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo7" name="Hardware-StandardMemoryNo7" data-toggle="tab" href="#HorHard7" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab7">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes7" name="Hardware-StandardMemoryYes7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        
+                                                                      
+
+                                                                        <div id="ZeroFootprintContainerTab7" style="display: none;">
+
+                                                                            <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
+
+                                                                            <div style="margin-left: 0px;">
+                                                                                <div class="tab-regular" style="margin-top: -2px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="$('#ZFPHW7').hide();$('#macContainer7_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!--Mac Address 1_z-->
+                                                                            <div id="macContainer7_z">
+                                                                                <br />
+                                                                                <br />
+                                                                                <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-bordered" id="macTable7_z" style="margin-left: -2px;">
+                                                                                            <thead class="thead-light">
+                                                                                                <tr>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                    <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                                </tr>
+
+                                                                                                <tr id="macTable11_z_7">
+                                                                                                    <td align="center"><span class="text-center">1</span></td>
+                                                                                                    <td align="center">
+                                                                                                        <select name="ApplicationSoftwareOnly7_1" id="ApplicationSoftwareOnly7_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA178 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
+                                                                                                        </select></td>
+                                                                                                    <td align="center">
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly7_1" id="MacSoftwareOnly7_1" class="form-control"></td>
+                                                                                                    <td align="center"></td>
+                                                                                                </tr>
+
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <br />
+                                                                            </div>
+                                                                            <!--Mac Address 7-z-->
+
+                                                                            <div style="display: none;" id="ZFPHW7">
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li class="nav-item" style="">ISP Zero Footprint server:</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 55px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li>Extended Memory - FIC0577</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftno7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <br />
+
+                                                                        </div>
+
+
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
+
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment</b>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item active" id="redundatntno7">
+                                                                                        <a class="nav-link " id="" name="HorNHard7" data-toggle="tab" href="#HorHard7" role="tab" onclick="PortalRedundant(7,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 19px;">No</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item" id="redundatntyes7">
+                                                                                        <a class="nav-link " id="" name="HorYSoft7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="PortalRedundant(7,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>
+
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                                                                                               
+
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs7">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft7">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="$('#ZFPRedundantHW7').hide();$('#macContainer7_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="CRedundantTHorHard7">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard7" data-toggle="tab" href="#HorHard7" role="tab" onclick="$('#ZFPRedundantHW7').show();$('#macContainer7_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                       <!--Mac Address 7-->
+                                                                        <div id="macContainer7_2" style="display: none;">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableRedundant7" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                            <tr id="TableMacTableRedundant7">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant7_1" id="ApplicationSoftwareOnlymacTableRedundant7_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
+                                                                                                    </select></td>
+                                                                                                <td align="center">
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant7_1" id="MacSoftwareOnlymacTableRedundant7_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd7_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        <!--Mac Address 7-->
+
+                                                                        <div style="display: none;" id="ZFPRedundantHW7">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cAppHorSoftN7">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cAppHorSoftY7">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 18px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>Extended Memory -FIC0557</li>
+
+
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN7">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY7">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY7" name="RedundantHorSoftExtY7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        
+
+
+
+                                                                        <div style="display: none;" id="ZFPHW7">
+                                                                            <div style="margin-left: 0px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall7" role="tablist">
+
+
+                                                                                        <li>ISP Zero Footprint server:</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+Viewer Server
+NICA169</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+
+
+
+
+
+
+                                                                            </div>
+
+
+
+
+
+
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW7">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall7" role="tablist">
+
+
+                                                                                        <li>Extended Memory -
+FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="$('#ZFPRedundantViewerHW7').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="$('#ZFPRedundantViewerHW7').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <br />
+
+
+                                                                        <!--Site 7 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
+                                                                                    </li>
+                                                                                    <li class="nav-item active" id="Testno7">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN7" data-toggle="tab" href="#HorHard7" role="tab" aria-controls="DELIVERY" onclick="PortalTest(7,'no');" aria-selected="true" style="width: 70px !important; margin-left: 97px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes7">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY7" data-toggle="tab" href="#HorSoft7" role="tab" onclick="PortalTest(7,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                         <!--Site 7 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs7">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft7">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft7" data-toggle="tab" href="#HorSoft7" onclick="$('#TestHW7').hide();$('#TestMacContainer7').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="cTestHorSoftY7">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY7" data-toggle="tab" href="#HorHard7" onclick="$('#TestHW7').show();$('#TestMacContainer7').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <!--Test Tab Mac Table -->
+
+                                                                        <div id="TestMacContainer7" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTestTable7" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                            </tr>
+
+                                                                                            <tr id="macTestTableData7_1">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="macTestTableDataMenu7_1" id="macTestTableDataMenu7_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA977 - Test Environment">NICA966 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress7_1" id="macTestTableDataAddress7_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd7_1" style="cursor: pointer; margin-left: 17px;">+ Add another line </div>
+                                                                            <br>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <div style="display: none;" id="TestHW7">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall7" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Test
+                                                                                            <br />
+                                                                                            Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cHorTSoftN7">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cHorTSoftY7">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW7">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall7" role="tablist">
+
+
+                                                                                        <li>Extended Memory - FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="cHorENSoft7">
+                                                                                            <a class="nav-link test" id="HorENSoft7" name="HorSoft7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 49px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="cHorEYSoft7">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                                                                                               
+                                                                    </div>
+                                                                </div>
+                                                                    <!--Start Site 7-->
+
+
+
+
+
+                                                                 <!--Start Site 8-->
+                                                                 <div class="row" id="site8" style="display:none;">
+                                                                    <br />
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading8"></p>
+
+                                                                    <div style="display: inline-block;">
+                                                                        <span id="error8" style="color: red; font-weight: bold;"></span>
+                                                                    </div>
+
+                                                                    <div id="maincontainerPortal8" >
+
+                                                                        <br />
+                                                                        <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
+
+                                                                        <!--Site 6 Software & Hardward -->
+                                                                        <div class="HorS-Site6" style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: -2px;">
+                                                                                <ul class="nav nav-tabs " id="myTabSite8" role="tablist">
+
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS8">
+                                                                                        <a class="nav-link test" id="" name="HorSoft8" data-toggle="tab" href="#HorSoft8" role="tab" onclick="$('#hardwaresite8').hide();$('#macContainerSO8').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH8">
+                                                                                        <a class="nav-link test" id="" name="HorHard8" data-toggle="tab" href="#HorHard8" role="tab" onclick="$('#hardwaresite8').show();$('#macContainerSO8').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 1-->
+                                                                        <div id="macContainerSO8">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-12" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableSO8" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macaddline8" style="cursor: pointer; margin-left: 15px;">+ Add another line </div>
+                                                                            <br />
+
+                                                                            <!--Mac Address 1-->
+                                                                             <br />
+                                                                        </div>
+                                                                       
+
+
+
+                                                                        <div id="hardwaresite8" style="display: none;">
+                                                                            <div class="HorS-HardwareSite8" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite8" role="tablist">
+
+                                                                                        <li style="padding-top: 8px;">ISP Server:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab8">
+                                                                                            <a class="nav-link test" id="Hardware-Standard8" name="Hardware-Standard8" data-toggle="tab" href="#HorASoft8" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab8">
+                                                                                            <a class="nav-link test" id="Hardware-Extended8" name="Hardware-Extended8" data-toggle="tab" href="#HorAHard8" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="HorS-HardwareMemorySite8" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite8" role="tablist">
+
+                                                                                        <li style="padding-top: 8px;">Extended Memory FIC0458:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab8">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo8" name="Hardware-StandardMemoryNo8" data-toggle="tab" href="#HorHard8" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 80px !important; margin-left: 38px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab8">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes8" name="Hardware-StandardMemoryYes8" data-toggle="tab" href="#HorSoft8" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 80px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        
+                                                                      
+
+                                                                        <div id="ZeroFootprintContainerTab8" style="display: none;">
+
+                                                                            <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
+
+                                                                            <div style="margin-left: 0px;">
+                                                                                <div class="tab-regular" style="margin-top: -2px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft8" data-toggle="tab" href="#HorSoft8" role="tab" onclick="$('#ZFPHW8').hide();$('#macContainer8_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!--Mac Address 1_z-->
+                                                                            <div id="macContainer8_z">
+                                                                                <br />
+                                                                                <br />
+                                                                                <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-bordered" id="macTable8_z" style="margin-left: -2px;">
+                                                                                            <thead class="thead-light">
+                                                                                                <tr>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                    <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                                </tr>
+
+                                                                                                <tr id="macTable11_z_8">
+                                                                                                    <td align="center"><span class="text-center">1</span></td>
+                                                                                                    <td align="center">
+                                                                                                        <select name="ApplicationSoftwareOnly8_1" id="ApplicationSoftwareOnly8_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA188 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
+                                                                                                        </select></td>
+                                                                                                    <td align="center">
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly8_1" id="MacSoftwareOnly8_1" class="form-control"></td>
+                                                                                                    <td align="center"></td>
+                                                                                                </tr>
+
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <br />
+                                                                            </div>
+                                                                            <!--Mac Address 8-z-->
+
+                                                                            <div style="display: none;" id="ZFPHW8">
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li class="nav-item" style="">ISP Zero Footprint server:</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 80px !important; margin-left: 55px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 80px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li>Extended Memory - FIC0588</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftno8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 80px !important; margin-left: 30px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 80px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <br />
+
+                                                                        </div>
+
+
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
+
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment</b>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item active" id="redundatntno8">
+                                                                                        <a class="nav-link " id="" name="HorNHard8" data-toggle="tab" href="#HorHard8" role="tab" onclick="PortalRedundant(8,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 80px !important; margin-left: 19px;">No</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item" id="redundatntyes8">
+                                                                                        <a class="nav-link " id="" name="HorYSoft8" data-toggle="tab" href="#HorSoft8" role="tab" onclick="PortalRedundant(8,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 80px !important;">Yes</a>
+                                                                                    </li>
+
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                                                                                               
+
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs8">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft8">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft8" data-toggle="tab" href="#HorSoft8" role="tab" onclick="$('#ZFPRedundantHW8').hide();$('#macContainer8_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="CRedundantTHorHard8">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard8" data-toggle="tab" href="#HorHard8" role="tab" onclick="$('#ZFPRedundantHW8').show();$('#macContainer8_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                       <!--Mac Address 8-->
+                                                                        <div id="macContainer8_2" style="display: none;">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableRedundant8" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                            <tr id="TableMacTableRedundant8">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant8_1" id="ApplicationSoftwareOnlymacTableRedundant8_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
+                                                                                                    </select></td>
+                                                                                                <td align="center">
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant8_1" id="MacSoftwareOnlymacTableRedundant8_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd8_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        <!--Mac Address 8-->
+
+                                                                        <div style="display: none;" id="ZFPRedundantHW8">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cAppHorSoftN8">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 80px !important; margin-left: 23px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cAppHorSoftY8">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 18px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>Extended Memory -FIC0557</li>
+
+
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN8">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY8">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY8" name="RedundantHorSoftExtY8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        
+
+
+
+                                                                        <div style="display: none;" id="ZFPHW8">
+                                                                            <div style="margin-left: 0px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall8" role="tablist">
+
+
+                                                                                        <li>ISP Zero Footprint server:</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+Viewer Server
+NICA169</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+
+
+
+
+
+
+                                                                            </div>
+
+
+
+
+
+
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW8">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall8" role="tablist">
+
+
+                                                                                        <li>Extended Memory -
+FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft7" data-toggle="tab" href="#HorSoft8" role="tab" onclick="$('#ZFPRedundantViewerHW8').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft8" data-toggle="tab" href="#HorSoft8" role="tab" onclick="$('#ZFPRedundantViewerHW8').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <br />
+
+
+                                                                        <!--Site 8 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
+                                                                                    </li>
+                                                                                    <li class="nav-item active" id="Testno8">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN8" data-toggle="tab" href="#HorHard8" role="tab" aria-controls="DELIVERY" onclick="PortalTest(8,'no');" aria-selected="true" style="width: 70px !important; margin-left: 98px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes8">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY8" data-toggle="tab" href="#HorSoft8" role="tab" onclick="PortalTest(8,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                         <!--Site 8 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs8">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft8">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft8" data-toggle="tab" href="#HorSoft8" onclick="$('#TestHW8').hide();$('#TestMacContainer8').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="cTestHorSoftY8">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY8" data-toggle="tab" href="#HorHard8" onclick="$('#TestHW8').show();$('#TestMacContainer8').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <!--Test Tab Mac Table -->
+
+                                                                        <div id="TestMacContainer8" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTestTable8" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                            </tr>
+
+                                                                                            <tr id="macTestTableData8_1">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="macTestTableDataMenu8_1" id="macTestTableDataMenu8_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA977 - Test Environment">NICA966 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress8_1" id="macTestTableDataAddress8_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd8_1" style="cursor: pointer; margin-left: 18px;">+ Add another line </div>
+                                                                            <br>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <div style="display: none;" id="TestHW8">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall8" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Test
+                                                                                            <br />
+                                                                                            Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cHorTSoftN8">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 81px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cHorTSoftY8">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW8">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall8" role="tablist">
+
+
+                                                                                        <li>Extended Memory - FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="cHorENSoft8">
+                                                                                            <a class="nav-link test" id="HorENSoft8" name="HorSoft8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 49px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="cHorEYSoft8">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                                                                                               
+                                                                    </div>
+                                                                </div>
+                                                                    <!--Start Site 8-->
+
+
+                                                                  <!--Start Site 9-->
+                                                                 <div class="row" id="site9" style="display:none;">
+                                                                    <br />
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading9"></p>
+
+                                                                    <div style="display: inline-block;">
+                                                                        <span id="error9" style="color: red; font-weight: bold;"></span>
+                                                                    </div>
+
+                                                                    <div id="maincontainerPortal9" >
+
+                                                                        <br />
+                                                                        <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
+
+                                                                        <!--Site 9 Software & Hardward -->
+                                                                        <div class="HorS-Site9" style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: -2px;">
+                                                                                <ul class="nav nav-tabs " id="myTabSite9" role="tablist">
+
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS9">
+                                                                                        <a class="nav-link test" id="" name="HorSoft9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="$('#hardwaresite9').hide();$('#macContainerSO9').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH9">
+                                                                                        <a class="nav-link test" id="" name="HorHard9" data-toggle="tab" href="#HorHard9" role="tab" onclick="$('#hardwaresite9').show();$('#macContainerSO9').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 1-->
+                                                                        <div id="macContainerSO9">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-12" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableSO9" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macaddline9" style="cursor: pointer; margin-left: 15px;">+ Add another line </div>
+                                                                            <br />
+
+                                                                            <!--Mac Address 1-->
+                                                                             <br />
+                                                                        </div>
+                                                                       
+
+
+
+                                                                        <div id="hardwaresite9" style="display: none;">
+                                                                            <div class="HorS-HardwareSite9" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite9" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">ISP Server:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab9">
+                                                                                            <a class="nav-link test" id="Hardware-Standard9" name="Hardware-Standard9" data-toggle="tab" href="#HorASoft9" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab9">
+                                                                                            <a class="nav-link test" id="Hardware-Extended9" name="Hardware-Extended9" data-toggle="tab" href="#HorAHard9" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="HorS-HardwareMemorySite9" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite9" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab9">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo9" name="Hardware-StandardMemoryNo9" data-toggle="tab" href="#HorHard9" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab9">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes9" name="Hardware-StandardMemoryYes9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        
+                                                                      
+
+                                                                        <div id="ZeroFootprintContainerTab9" style="display: none;">
+
+                                                                            <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
+
+                                                                            <div style="margin-left: 0px;">
+                                                                                <div class="tab-regular" style="margin-top: -2px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="$('#ZFPHW9').hide();$('#macContainer9_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!--Mac Address 1_z-->
+                                                                            <div id="macContainer9_z">
+                                                                                <br />
+                                                                                <br />
+                                                                                <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-bordered" id="macTable9_z" style="margin-left: -2px;">
+                                                                                            <thead class="thead-light">
+                                                                                                <tr>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                    <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                                </tr>
+
+                                                                                                <tr id="macTable11_z_9">
+                                                                                                    <td align="center"><span class="text-center">1</span></td>
+                                                                                                    <td align="center">
+                                                                                                        <select name="ApplicationSoftwareOnly9_1" id="ApplicationSoftwareOnly9_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA178 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
+                                                                                                        </select></td>
+                                                                                                    <td align="center">
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly9_1" id="MacSoftwareOnly9_1" class="form-control"></td>
+                                                                                                    <td align="center"></td>
+                                                                                                </tr>
+
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <br />
+                                                                            </div>
+                                                                            <!--Mac Address 9-z-->
+
+                                                                            <div style="display: none;" id="ZFPHW9">
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li class="nav-item" style="">ISP Zero Footprint server:</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 55px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li>Extended Memory - FIC0577</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftno9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <br />
+
+                                                                        </div>
+
+
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
+
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment</b>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item active" id="redundatntno9">
+                                                                                        <a class="nav-link " id="" name="HorNHard9" data-toggle="tab" href="#HorHard9" role="tab" onclick="PortalRedundant(9,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 19px;">No</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item" id="redundatntyes9">
+                                                                                        <a class="nav-link " id="" name="HorYSoft9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="PortalRedundant(9,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>
+
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                                                                                               
+
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs9">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft9">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="$('#ZFPRedundantHW9').hide();$('#macContainer9_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="CRedundantTHorHard9">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard9" data-toggle="tab" href="#HorHard9" role="tab" onclick="$('#ZFPRedundantHW9').show();$('#macContainer9_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                       <!--Mac Address 9-->
+                                                                        <div id="macContainer9_2" style="display: none;">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableRedundant9" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                            <tr id="TableMacTableRedundant9">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant9_1" id="ApplicationSoftwareOnlymacTableRedundant9_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
+                                                                                                    </select></td>
+                                                                                                <td align="center">
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant9_1" id="MacSoftwareOnlymacTableRedundant9_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd9_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        <!--Mac Address 9-->
+
+                                                                        <div style="display: none;" id="ZFPRedundantHW9">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cAppHorSoftN9">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cAppHorSoftY9">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 18px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>Extended Memory -FIC0557</li>
+
+
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN9">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY9">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY9" name="RedundantHorSoftExtY9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        
+
+
+
+                                                                        <div style="display: none;" id="ZFPHW9">
+                                                                            <div style="margin-left: 0px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall9" role="tablist">
+
+
+                                                                                        <li>ISP Zero Footprint server:</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+Viewer Server
+NICA169</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+
+
+
+
+
+
+                                                                            </div>
+
+
+
+
+
+
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW9">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall9" role="tablist">
+
+
+                                                                                        <li>Extended Memory -
+FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="$('#ZFPRedundantViewerHW9').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 29px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="$('#ZFPRedundantViewerHW9').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <br />
+
+
+                                                                        <!--Site 9 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
+                                                                                    </li>
+                                                                                    <li class="nav-item active" id="Testno9">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN9" data-toggle="tab" href="#HorHard9" role="tab" aria-controls="DELIVERY" onclick="PortalTest(9,'no');" aria-selected="true" style="width: 70px !important; margin-left: 99px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes9">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY9" data-toggle="tab" href="#HorSoft9" role="tab" onclick="PortalTest(9,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                         <!--Site 9 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs9">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft9">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft9" data-toggle="tab" href="#HorSoft9" onclick="$('#TestHW9').hide();$('#TestMacContainer9').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="cTestHorSoftY9">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY9" data-toggle="tab" href="#HorHard9" onclick="$('#TestHW9').show();$('#TestMacContainer9').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <!--Test Tab Mac Table -->
+
+                                                                        <div id="TestMacContainer9" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTestTable9" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                            </tr>
+
+                                                                                            <tr id="macTestTableData9_1">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="macTestTableDataMenu9_1" id="macTestTableDataMenu9_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA999 - Test Environment">NICA966 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress9_1" id="macTestTableDataAddress9_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd9_1" style="cursor: pointer; margin-left: 17px;">+ Add another line </div>
+                                                                            <br>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <div style="display: none;" id="TestHW9">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall9" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Test
+                                                                                            <br />
+                                                                                            Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cHorTSoftN9">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cHorTSoftY9">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW9">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall9" role="tablist">
+
+
+                                                                                        <li>Extended Memory - FIC0559</li>
+
+                                                                                        <li class="nav-item active" id="cHorENSoft9">
+                                                                                            <a class="nav-link test" id="HorENSoft9" name="HorSoft9" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 49px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="cHorEYSoft9">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                                                                                               
+                                                                    </div>
+                                                                </div>
+                                                                    <!--Start Site 9-->
+
+
+
+
+                                                                 <!--Start Site 10-->
+                                                                 <div class="row" id="site10" style="display:none;">
+                                                                    <br />
+                                                                    <p style="font-weight: bold; display: inline-block; margin-left: 15px; margin-top: 25px; padding-right: 15px; background-color: #0b1f65; color: white;   padding-left: 15px;     padding-top: 10px;     padding-bottom: 10px;" id="macheading10"></p>
+
+                                                                    <div style="display: inline-block;">
+                                                                        <span id="error10" style="color: red; font-weight: bold;"></span>
+                                                                    </div>
+
+                                                                    <div id="maincontainerPortal10" >
+
+                                                                        <br />
+                                                                        <p style="font-weight: bold; display: inline-block; margin-left: 15px;">IntelliSpace Portal</p>
+
+                                                                        <!--Site 10 Software & Hardward -->
+                                                                        <div class="HorS-Site10" style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: -2px;">
+                                                                                <ul class="nav nav-tabs " id="myTabSite10" role="tablist">
+
+                                                                                    <li class="nav-item active" id="IntelliSpacePortalS10">
+                                                                                        <a class="nav-link test" id="" name="HorSoft10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="$('#hardwaresite10').hide();$('#macContainerSO10').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="IntelliSpacePortalH10">
+                                                                                        <a class="nav-link test" id="" name="HorHard10" data-toggle="tab" href="#HorHard10" role="tab" onclick="$('#hardwaresite10').show();$('#macContainerSO10').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--Mac Address 1-->
+                                                                        <div id="macContainerSO10">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-12" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableSO10" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macaddline10" style="cursor: pointer; margin-left: 15px;">+ Add another line </div>
+                                                                            <br />
+
+                                                                            <!--Mac Address 1-->
+                                                                             <br />
+                                                                        </div>
+                                                                       
+
+
+
+                                                                        <div id="hardwaresite10" style="display: none;">
+                                                                            <div class="HorS-HardwareSite10" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareSite10" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">ISP Server:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-Hardwaretab10">
+                                                                                            <a class="nav-link test" id="Hardware-Standard10" name="Hardware-Standard10" data-toggle="tab" href="#HorASoft10" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="margin-left: 15px; width: 181px !important;">Standard ISP Server FIC0133</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareExttab10">
+                                                                                            <a class="nav-link test" id="Hardware-Extended10" name="Hardware-Extended10" data-toggle="tab" href="#HorAHard10" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Extended ISP Server (FIC0134)</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="HorS-HardwareMemorySite10" style="margin-left: 15px;">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+                                                                                    <ul class="nav nav-tabs " id="myTabHardwareMemorySite10" role="tablist">
+
+                                                                                        <li style="padding-top: 7px;">Extended Memory FIC0457:</li>
+
+                                                                                        <li class="nav-item active" id="HorS-HardwareMemoryNotab10">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryNo10" name="Hardware-StandardMemoryNo10" data-toggle="tab" href="#HorHard10" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 38px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="HorS-HardwareMemoryYestab10">
+                                                                                            <a class="nav-link test" id="Hardware-StandardMemoryYes10" name="Hardware-StandardMemoryYes10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        
+                                                                      
+
+                                                                        <div id="ZeroFootprintContainerTab10" style="display: none;">
+
+                                                                            <p style="font-weight: bold; display: inline-block; margin-left: 0px;">IntelliSpace Portal Zero Footprint Viewer</p>
+
+                                                                            <div style="margin-left: 0px;">
+                                                                                <div class="tab-regular" style="margin-top: -2px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorSoft10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="$('#ZFPHW10').hide();$('#macContainer10_z').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="ZeoFHorHard1" data-toggle="tab" href="#HorHard1" role="tab" onclick="$('#ZFPHW1').show();$('#macContainer1_z').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                        </li>
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!--Mac Address 1_z-->
+                                                                            <div id="macContainer10_z">
+                                                                                <br />
+                                                                                <br />
+                                                                                <div class="col-md-12" style="margin-left: -15px;">
+
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-bordered" id="macTable10_z" style="margin-left: -2px;">
+                                                                                            <thead class="thead-light">
+                                                                                                <tr>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                    <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                    <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                                </tr>
+
+                                                                                                <tr id="macTable11_z_10">
+                                                                                                    <td align="center"><span class="text-center">1</span></td>
+                                                                                                    <td align="center">
+                                                                                                        <select name="ApplicationSoftwareOnly10_1" id="ApplicationSoftwareOnly10_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                            <option value="NICA178 - Zero FootPrint Viewer SW">Zero FootPrint Viewer SW</option>
+                                                                                                        </select></td>
+                                                                                                    <td align="center">
+                                                                                                        <input type="text" value="" name="MacSoftwareOnly10_1" id="MacSoftwareOnly10_1" class="form-control"></td>
+                                                                                                    <td align="center"></td>
+                                                                                                </tr>
+
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <br />
+                                                                            </div>
+                                                                            <!--Mac Address 10-z-->
+
+                                                                            <div style="display: none;" id="ZFPHW10">
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li class="nav-item" style="">ISP Zero Footprint server:</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftN10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 55px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="ZerHorSoftY10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div style="margin-left: 0px;" id="">
+                                                                                    <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                        <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                            <li>Extended Memory - FIC0577</li>
+
+                                                                                            <li class="nav-item active" id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftno10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 30px;">No</a>
+                                                                                            </li>
+
+                                                                                            <li class="nav-item " id="">
+                                                                                                <a class="nav-link test" id="" name="HorASoftyes10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                            </li>
+
+
+
+
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <br />
+
+                                                                        </div>
+
+
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 0px;">
+
+                                                                                <ul class="nav nav-tabs" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment</b>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item active" id="redundatntno10">
+                                                                                        <a class="nav-link " id="" name="HorNHard10" data-toggle="tab" href="#HorHard10" role="tab" onclick="PortalRedundant(10,'no');" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important; margin-left: 110px;">No</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item" id="redundatntyes10">
+                                                                                        <a class="nav-link " id="" name="HorYSoft10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="PortalRedundant(10,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>
+
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                                                                                               
+
+                                                                        <div style="margin-left: 15px; display: none;" id="RedundantTabs10">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">
+
+
+
+                                                                                    <li class="nav-item active" id="CRedundantTHorSoft10">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorSoft10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="$('#ZFPRedundantHW10').hide();$('#macContainer10_2').show();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="CRedundantTHorHard10">
+                                                                                        <a class="nav-link test" id="" name="RedundantTHorHard10" data-toggle="tab" href="#HorHard10" role="tab" onclick="$('#ZFPRedundantHW10').show();$('#macContainer10_2').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                       <!--Mac Address 10-->
+                                                                        <div id="macContainer10_2" style="display: none;">
+                                                                            <br />
+                                                                            <br />
+                                                                            <div class="col-md-22" style="margin-left: 0px;">
+
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTableRedundant10" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-35" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+
+
+                                                                                            </tr>
+                                                                                            <tr id="TableMacTableRedundant10">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="ApplicationSoftwareOnlymacTableRedundant10_1" id="ApplicationSoftwareOnlymacTableRedundant10_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA203 - Redundant ISP App. Soft Only">NICA203 - Redundant ISP App. Soft Only</option>
+                                                                                                    </select></td>
+                                                                                                <td align="center">
+                                                                                                    <input type="text" value="" name="MacSoftwareOnlymacTableRedundant10_1" id="MacSoftwareOnlymacTableRedundant10_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTableAdd10_2" style="cursor: pointer; margin-left: 14px;">+ Add another line </div>
+                                                                            <br />
+                                                                        </div>
+                                                                        <!--Mac Address 10-->
+
+                                                                        <div style="display: none;" id="ZFPRedundantHW10">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Redundant
+                                                                                            <br />
+                                                                                            Application Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cAppHorSoftN10">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftN10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 23px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cAppHorSoftY10">
+                                                                                            <a class="nav-link test" id="" name="AppHorSoftY10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 18px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="" role="tablist">
+
+
+                                                                                        <li>Extended Memory -FIC0557</li>
+
+
+                                                                                        <li class="nav-item active" id="cRedundantHorSoftExtN10">
+                                                                                            <a class="nav-link test" id="" name="RedundantHorSoftExtN10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 28px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cRedundantHorSoftExtY10">
+                                                                                            <a class="nav-link test" id="RedundantHorSoftExtY10" name="RedundantHorSoftExtY10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        
+
+
+
+                                                                        <div style="display: none;" id="ZFPHW10">
+                                                                            <div style="margin-left: 0px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall10" role="tablist">
+
+
+                                                                                        <li>ISP Zero Footprint server:</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HormydoyouSoft10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 300px !important;">ISP Zero Footprint
+Viewer Server
+NICA1610</a>
+                                                                                        </li>
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+
+
+
+
+
+
+                                                                            </div>
+
+
+
+
+
+
+                                                                            <div style="margin-left: 0px;" id="ZFPRedundantViewerHW10">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall10" role="tablist">
+
+
+                                                                                        <li>Extended Memory -
+FIC0557</li>
+
+                                                                                        <li class="nav-item active" id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMNSoft10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="$('#ZFPRedundantViewerHW10').show();" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 210px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="">
+                                                                                            <a class="nav-link test" id="" name="HorEMYSoft10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="$('#ZFPRedundantViewerHW10').hide();" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <br />
+
+
+                                                                        <!--Site 10 IntelliSpace Portal Test -->
+                                                                        <div style="margin-left: 15px;">
+                                                                            <div class="tab-regular" style="margin-top: 18px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                    
+                                                                                    <li>
+                                                                                        <b>IntelliSpace Portal<br />Test Environment </b>                                                                                                                                                                                        
+                                                                                    </li>
+                                                                                    <li class="nav-item active" id="Testno10">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardN10" data-toggle="tab" href="#HorHard10" role="tab" aria-controls="DELIVERY" onclick="PortalTest(10,'no');" aria-selected="true" style="width: 70px !important; margin-left: 1010px;">No</a>
+                                                                                    </li>                                                                                    
+                                                                                    <li class="nav-item " id="Testyes10">
+                                                                                        <a class="nav-link test" id="" name="TestHorHardY10" data-toggle="tab" href="#HorSoft10" role="tab" onclick="PortalTest(10,'yes');" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important;">Yes</a>
+                                                                                    </li>                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                         <!--Site 10 IntelliSpace Portal Test Tab Soft & Hardware -->
+                                                                        <div style="margin-left: 15px; display: none;" id="TestTabs10">
+                                                                            <div class="tab-regular" style="margin-top: 10px;">
+                                                                                <ul class="nav nav-tabs " id="" role="tablist">                                                                                                                                                                       
+                                                                                    <li class="nav-item active" id="cTestHorSoft10">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoft10" data-toggle="tab" href="#HorSoft10" onclick="$('#TestHW10').hide();$('#TestMacContainer10').show();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Software Only</a>
+                                                                                    </li>
+
+                                                                                    <li class="nav-item " id="cTestHorSoftY10">
+                                                                                        <a class="nav-link test" id="" name="TestHorSoftY10" data-toggle="tab" href="#HorHard10" onclick="$('#TestHW10').show();$('#TestMacContainer10').hide();" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 181px !important;">Hardware</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <!--Test Tab Mac Table -->
+
+                                                                        <div id="TestMacContainer10" style="display:none;">
+                                                                            <br><br>
+                                                                            <div class="col-md-22" style="margin-left: -15px;">
+                                                                        
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-bordered" id="macTestTable10" style="margin-left: -2px;">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">No.</th>
+                                                                                                <th scope="col" class="w-55" style="background-color: #0b1f65;">Menu</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Mac address:</th>
+                                                                                                <th scope="col" class="w-25" style="background-color: #0b1f65;">Remove:</th>
+                                                                                            </tr>
+
+                                                                                            <tr id="macTestTableData10_1">
+                                                                                                <td align="center"><span class="text-center">1</span></td>
+                                                                                                <td align="center">
+                                                                                                    <select name="macTestTableDataMenu10_1" id="macTestTableDataMenu10_1" readonly="readonly" class="form-control softwareTable">
+                                                                                                        <option value="NICA999 - Test Environment">NICA966 - Test Environment</option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td align="center"><input type="text" value="" name="macTestTableDataAddress10_1" id="macTestTableDataAddress10_1" class="form-control"></td>
+                                                                                                <td align="center"></td>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div onclick="MacAddLine(this);" id="macTestTableAdd10_1" style="cursor: pointer; margin-left: 17px;">+ Add another line </div>
+                                                                            <br>
+                                                                        </div>
+
+                                                                      
+
+                                                                        <div style="display: none;" id="TestHW10">
+                                                                            <div style="margin-left: 15px;" id="">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall10" role="tablist">
+
+
+                                                                                        <li>IntelliSpace Portal Test
+                                                                                            <br />
+                                                                                            Environment:</li>
+
+                                                                                        <li class="nav-item active" id="cHorTSoftN10">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftN10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
+                                                                                        </li>
+
+                                                                                        <li class="nav-item " id="cHorTSoftY10">
+                                                                                            <a class="nav-link test" id="" name="HorTSoftY10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div style="margin-left: 15px;" id="ZFPViewerRedundantHW10">
+                                                                                <div class="tab-regular" style="margin-top: 10px;">
+
+                                                                                    <ul class="nav nav-tabs " id="mydoyouwnatinstall10" role="tablist">
+
+
+                                                                                        <li>Extended Memory - FIC0559</li>
+
+                                                                                        <li class="nav-item active" id="cHorENSoft10">
+                                                                                            <a class="nav-link test" id="HorENSoft10" name="HorSoft10" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 49px;">No</a>
+                                                                                        </li>
+
+
+                                                                                        <li class="nav-item " id="cHorEYSoft10">
+                                                                                            <a class="nav-link test" id="" name="HorEYSoft9" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="true" style="width: 70px !important;">Yes</a>
+                                                                                        </li>
+
+
+
+
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                                                                                               
+                                                                    </div>
+                                                                </div>
+                                                                    <!--Start Site 10-->
+
+
 
 
                                                             </div>
@@ -7342,6 +9522,8 @@ FIC0457</li>
                                                     <asp:HiddenField ID="HiddenTabLic1" Value="" runat="server" />
                                                     <asp:HiddenField ID="HiddenPlanInstallEngine" Value="" runat="server" />
 
+                                                    <asp:HiddenField ID="Hiddendecentralised_deliverymode" Value="" runat="server" />
+                                                    
 
                                                     <asp:HiddenField ID="HiddenSoftwareHardwareSite1" Value="" runat="server" />
                                                     <asp:HiddenField ID="HiddenSoftwareHardwareSite2" Value="" runat="server" />
@@ -7700,6 +9882,26 @@ FIC0457</li>
                 $('#macContainerTopMain1').hide();
             }
         }
+
+        if ($('#Hiddendecentralised_deliverymode')[0].value != "") {
+
+            if ($('#Hiddendecentralised_deliverymode')[0].value == "SoftwareHardWare") {
+                $("#NavsoftwareHardware-tab").addClass('active');
+                $("#Navsoftware-tab").removeClass("active");
+
+                $('#DELIVERY').removeClass("active");                
+                $('#SOFTWARE').addClass("active");
+
+            } else {
+                $("#NavsoftwareHardware-tab").removeClass('active');
+                $("#Navsoftware-tab").addClass("active");
+
+                $('#DELIVERY').addClass("active");
+                $('#SOFTWARE').removeClass("active");
+            }
+
+        }
+        
 
 
         if ($('#HiddenTabLic1')[0].value != "") {
@@ -8976,6 +11178,40 @@ FIC0457</li>
             }
         }
 
+        function checkDynacad(itemNumber) {
+
+
+            let usageCount = 0;
+            let totalDyn = 0;
+
+            //get total number
+            var ix;
+            for (ix = 1; ix <= 15; ix++) {
+                if ($("#cmdApplication" + ix)[0].value.includes("DynaCAD Prostate") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Breast") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Combo Package")) {
+
+                    totalDyn += parseInt($("#txtConcurrent" + ix)[0].value);
+                    usageCount++;
+                }
+            }
+
+
+            if (itemNumber != "") {
+                if (totalDyn > 10) {
+
+                    //$("#txtConcurrent" + itemNumber)[0].max
+
+                    //1 = entered value
+                    //2 = max
+                    //3 = total dyn
+                    var errorRS = [$("#txtConcurrent4")[0].value, "10", totalDyn];
+                    return errorRS;
+                }
+                //   $("#txtConcurrent" + itemNumber)[0].max = (totalDyn - 4);
+            }
+
+
+
+        }
 
         function CheckConcurrentValue(TextBoxItem) {
 
@@ -8984,13 +11220,54 @@ FIC0457</li>
 
             let CurrentIDX = TextBoxItem.id.replace('txtConcurrent', '');
 
-            if (myvalue > $(TextBoxItem)[0].max) {
+
+            var errorRS = checkDynacad(CurrentIDX);
+            if (Array.isArray(errorRS)) {
+
+                $(TextBoxItem)[0].value = 0;
+                $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "max range is 10";
                 $("#errortxtConcurrent" + CurrentIDX).show();
-                $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
-                $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "max range is " + $(TextBoxItem)[0].max;
 
             } else {
-                $("#errortxtConcurrent" + CurrentIDX).hide();
+
+
+                if ($("#cmdApplication" + CurrentIDX)[0].value == "Zero FootPrint Viewer SW|No|2|55") {
+
+                    //check min
+                    if ($(TextBoxItem)[0].value < 2) {
+                        $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "min is 2";
+                        $("#errortxtConcurrent" + CurrentIDX).show();
+                        $(TextBoxItem)[0].value = 2;
+                    } else {
+                        $("#errortxtConcurrent" + CurrentIDX).hide();
+                    }
+
+
+                    //check Max
+                    if (myvalue > $(TextBoxItem)[0].max) {
+                        $("#errortxtConcurrent" + CurrentIDX).show();
+                        $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
+                        $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "max range is 55";
+
+                    } else {
+                        $("#errortxtConcurrent" + CurrentIDX).hide();
+                    }
+
+
+                } else {
+
+
+                    if (myvalue > $(TextBoxItem)[0].max) {
+                        $("#errortxtConcurrent" + CurrentIDX).show();
+                        $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
+                        $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "max range is 10";
+
+                    } else {
+                        $("#errortxtConcurrent" + CurrentIDX).hide();
+                    }
+
+                }
+
             }
 
 
@@ -9230,8 +11507,19 @@ FIC0457</li>
 
                 if (ddlbox.selectedOptions[0].innerText.includes("/")) {
 
-                    $("#txtConcurrent" + CurrentIDX)[0].value = 1;
-                    $("#hidtxtConcurrent" + CurrentIDX)[0].value = 1;
+                    if (ddlbox.selectedOptions[0].innerText == "NICA168/FIC0439 - Zero FootPrint Viewer SW") {
+
+                        $("#txtConcurrent" + CurrentIDX)[0].value = 2;
+                        $("#hidtxtConcurrent" + CurrentIDX)[0].value = 2;
+                        $("#txtConcurrent" + CurrentIDX)[0].readOnly = false;
+                        $("#txtConcurrent" + CurrentIDX)[0].disabled = false;
+
+                    } else {
+
+                        $("#txtConcurrent" + CurrentIDX)[0].value = 1;
+                        $("#hidtxtConcurrent" + CurrentIDX)[0].value = 1;
+
+                    }                                        
 
                 } else {
 
@@ -9293,9 +11581,9 @@ FIC0457</li>
                                     //}
 
                                     break;
-                                case "Zero FootPrint Viewer SW - Add_Users":
-                                    $("#txtConcurrent" + CurrentIDX)[0].min = 1;
-                                    $("#txtConcurrent" + CurrentIDX)[0].max = 53;
+                                case "Zero FootPrint Viewer SW":
+                                    $("#txtConcurrent" + CurrentIDX)[0].min = 2;
+                                    $("#txtConcurrent" + CurrentIDX)[0].max = 55;
                                     break;
                                 default:
                                     $("#txtConcurrent" + CurrentIDX)[0].min = 1;
@@ -9371,7 +11659,7 @@ FIC0457</li>
                 //Concurrent_Users
                 if (array[1] == "No") {
                     switch (array[0]) {
-                        case "Zero FootPrint Viewer SW - 2 User":
+                        case "Zero FootPrint Viewer SW":
                             break;
                         default:
                             $("#txtConcurrent" + CurrentIDX)[0].readOnly = true;
@@ -9425,12 +11713,16 @@ FIC0457</li>
 
 
             //if zero show box
-            if ($("#cmdApplication" + rowno)[0].value == "Zero FootPrint Viewer SW - 2 User|No|2|55") {
-                $("#ZeroFootprintContainerTab1").show();
-                $("#ZeroFootprintContainer1").show();
-            } else {                
-                $("#ZeroFootprintContainerTab1").hide();
-                $("#ZeroFootprintContainer1").hide();
+            for (izo = 0; izo < 10; izo++) {
+
+                if ($("#cmdApplication" + rowno)[0].value == "Zero FootPrint Viewer SW|No|2|55") {                    
+                    $("#ZeroFootprintContainerTab" + izo).show();
+                    $("#ZeroFootprintContainer" + izo).show();                                        
+                } else {
+                    $("#ZeroFootprintContainerTab" + izo).hide();
+                    $("#ZeroFootprintContainer" + izo).hide();
+                }
+
             }
 
 
@@ -9690,51 +11982,7 @@ FIC0457</li>
             } else {
                 $("#CONCURRENTENTERPRISE_Error3").hide();
             }
-
-
-
-            if (HostpitalEntryText1 != "0") {
-                UpdateDistMacTable('1', "" ,'macTableSO');
-                $("#maincontainerPortal1").show();
-            }
-
-            //if (HostpitalEntryText2 != "0") {
-            //    UpdateDistMacTable('2');
-            //}
-
-
-            //if (HostpitalEntryText3 != "0") {
-            //    UpdateDistMacTable('3');
-            //}
-
-            //if (HostpitalEntryText4 != "0") {
-            //    UpdateDistMacTable('4');
-            //}
-
-            //if (HostpitalEntryText5 != "0") {
-            //    UpdateDistMacTable('5');
-            //}
-
-            //if (HostpitalEntryText6 != "0") {
-            //    UpdateDistMacTable('6');
-            //}
-
-            //if (HostpitalEntryText7 != "0") {
-            //    UpdateDistMacTable('7');
-            //}
-
-            //if (HostpitalEntryText8 != "0") {
-            //    UpdateDistMacTable('8');
-            //}
-
-            //if (HostpitalEntryText9 != "0") {
-            //    UpdateDistMacTable('9');
-            //}
-
-            //if (HostpitalEntryText10 != "0") {
-            //    UpdateDistMacTable('10');
-            //}
-
+        
 
             if (parseInt($("#" + itemTHIS.id)[0].value) > 15) {
                 $("#CONCURRENTENTERPRISE_Error3").show();
@@ -9742,9 +11990,6 @@ FIC0457</li>
                 $("#" + itemTHIS.id)[0].value = 15;
                 return false;
             }
-
-
-
 
         }
 
@@ -10633,57 +12878,77 @@ FIC0457</li>
 
                         if ($("#txtConcurrent" + i)[0].value != "") {
                             //if (array[2] == "") {
-                                if (array[3] =="Up to max of Enterprise concurrent users") {
+                            if (array[3] == "Up to max of Enterprise concurrent users") {
 
 
 
 
-                                    switch (array[0]) {
-                                        case "DynaCAD Enterprise - Add_Users":
-                                            let usageCount = 0;
+                                switch (array[0]) {
+                                    case "DynaCAD Enterprise":
+                                        let usageCount = 0;
 
-                                            var ix;
-                                            for (ix = 1; ix <= 15; ix++) {
-                                                if ($("#cmdApplication" + ix)[0].value.includes("DynaCAD Prostate - 1 User") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Breast - 1 User") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Combo Package - 1 User")) {
+                                        var ix;
+                                        for (ix = 1; ix <= 15; ix++) {
+                                            if ($("#cmdApplication" + ix)[0].value.includes("DynaCAD Prostate - 1 User") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Breast - 1 User") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Combo Package - 1 User")) {
 
-                                                    usageCount++;
-                                                }
+                                                usageCount++;
                                             }
+                                        }
 
-                                            $("#txtConcurrent" + i)[0].min = 1;
-                                            $("#txtConcurrent" + i)[0].max = (4 - usageCount);
+                                        $("#txtConcurrent" + i)[0].min = 1;
+                                        $("#txtConcurrent" + i)[0].max = (4 - usageCount);
 
-                                            if ((4 - usageCount) > $("#txtConcurrent" + i)[0].value) {
-                                                $("#txtConcurrent" + i)[0].value = (4 - usageCount);
-                                                $("#hidtxtConcurrent" + i)[0].value = (4 - usageCount);
-                                            }
+                                        if ((4 - usageCount) > $("#txtConcurrent" + i)[0].value) {
+                                            $("#txtConcurrent" + i)[0].value = (4 - usageCount);
+                                            $("#hidtxtConcurrent" + i)[0].value = (4 - usageCount);
+                                        }
 
 
 
-                                            break;
-                                        case "Zero FootPrint Viewer SW - Add_Users":
-                                            $("#txtConcurrent" + i)[0].min = 1;
-                                            $("#txtConcurrent" + i)[0].max = 53;
-                                            break;
-                                        default:
-                                            $("#txtConcurrent" + i)[0].max = enterpriseuser ;
-                                            if (enterpriseuser  < $("#txtConcurrent" + i)[0].value) {
-                                                $("#txtConcurrent" + i)[0].value = 1 ;
-                                                $("#hidtxtConcurrent" + i)[0].value = 1 ;
-                                            }
+                                        break;
+                                    case "Zero FootPrint Viewer SW - Add_Users":
+                                        $("#txtConcurrent" + i)[0].min = 1;
+                                        $("#txtConcurrent" + i)[0].max = 53;
+                                        break;
+                                    default:
+                                        $("#txtConcurrent" + i)[0].max = enterpriseuser;
+                                        if (enterpriseuser < $("#txtConcurrent" + i)[0].value) {
+                                            $("#txtConcurrent" + i)[0].value = 1;
+                                            $("#hidtxtConcurrent" + i)[0].value = 1;
+                                        }
+                                        break;
+                                }
+
+
+
+
+
+
+
+
+                            } else {
+
+                                if ($("#txtConcurrent" + i)[0].value != "") {
+
+                                    switch (array[0].trim()) {
+                                        case "Zero FootPrint Viewer SW":
+                                            $("#txtConcurrent" + i)[0].disabled = false;
+                                            $("#txtConcurrent" + i)[0].readOnly = false;
+                                            $("#txtConcurrent" + i)[0].max = 55;
+                                            $("#txtConcurrent" + i)[0].min = 2;
+                                        case "DynaCAD Combo Package":
+                                        case "DynaCAD Breast":
+                                        case "DynaCAD Prostate":
+                                           // $("#txtConcurrent" + i).dis
+                                            $("#txtConcurrent" + i)[0].disabled = false;
+                                            $("#txtConcurrent" + i)[0].readOnly = false;
+                                            $("#txtConcurrent" + i)[0].max = 10;
+
                                             break;
                                     }
-
-
-
-
-
-
-
-
                                 }
                             }
-                      // }
+                        }
                     }
                 }
             }
@@ -12912,9 +15177,21 @@ FIC0457</li>
 
                 let myappname = $("#cmdApplication" + irow)[0].value;
                 var arrayloop = $("#cmdApplication" + irow)[0].value.split("|");
-                if (arrayloop[1] == "No") {
-                    $("#txtConcurrent" + irow)[0].readOnly = true;
+
+
+                switch (arrayloop[0].trim())
+                {
+                    case "Zero FootPrint Viewer SW":
+                        $("#txtConcurrent" + irow)[0].readOnly = false;
+                        $("#txtConcurrent" + irow)[0].max = 55;
+                        break;
+                    default:
+                        if (arrayloop[1] == "No") {
+                            $("#txtConcurrent" + irow)[0].readOnly = true;
+                        }
+                        break;
                 }
+
                 //
 
                addhostnewline(irow, "No");

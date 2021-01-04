@@ -263,7 +263,19 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             {
                 AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["centralised_add_application"].ToString());
                 m_NoApp = Convert.ToString(AdditionalApplication1.Count - 1);
+                if (m_NoApp == "-1" )
+                {
+                    m_NoApp = "0";
+                }
 
+                if (AdditionalApplication1.Count == 0)
+                {
+                    hidadditionalapps.Value ="1";
+                }
+                else
+                {
+                    hidadditionalapps.Value = AdditionalApplication1.Count.ToString();
+                }
 
                 for (int i = 0; i <= AdditionalApplication1.Count - 1; i++)
                 {
@@ -293,6 +305,46 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                         case 5:
                             cmdApplication6.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent6 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 6:
+                            cmdApplication6.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent6 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 7:
+                            cmdApplication7.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent7 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 8:
+                            cmdApplication8.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent8 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 9:
+                            cmdApplication9.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent9 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 10:
+                            cmdApplication10.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent10 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 11:
+                            cmdApplication11.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent11 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 13:
+                            cmdApplication12.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent12 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 14:
+                            cmdApplication13.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent13 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 15:
+                            cmdApplication14.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent14 = AdditionalApplication1[i].ConcurrentUsers;
+                            break;
+                        case 16:
+                            cmdApplication15.SelectedValue = AdditionalApplication1[i].Application;
+                            m_txtConcurrent15 = AdditionalApplication1[i].ConcurrentUsers;
                             break;
                     }
 
@@ -330,47 +382,156 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                                 txtHospitalName2.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet2.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "2";
-                                break;
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH2 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM2 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL2 = "checked";
+                                        break;
+                                }
+                            break;
                             case 2:
                                 txtHospitalName3.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet3.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "3";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH3 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM3 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL3 = "checked";
+                                        break;
+                                }
                                 break;
                             case 3:
                                 txtHospitalName4.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet4.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "4";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH4 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM4 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL4 = "checked";
+                                        break;
+                                }
                                 break;
                             case 4:
                                 txtHospitalName5.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet5.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "5";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH5 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM5 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL5 = "checked";
+                                        break;
+                                }
                                 break;
                             case 5:
                                 txtHospitalName6.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet6.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "6";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH6 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM6 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL6 = "checked";
+                                        break;
+                                }
                                 break;
                             case 6:
                                 txtHospitalName7.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet7.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "7";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH7 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM7 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL7 = "checked";
+                                        break;
+                                }
                                 break;
                             case 7:
                                 txtHospitalName8.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet8.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "8";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH8 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM8 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL8 = "checked";
+                                        break;
+                                }
                                 break;
                             case 8:
                                 txtHospitalName9.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet9.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "9";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH9 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM9 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL9 = "checked";
+                                        break;
+                                }
                                 break;
                             case 9:
                                 txtHospitalName10.Text = SiteInfoData1[ix].HospitalName;
                                 txtHospitalStreet10.Text = SiteInfoData1[ix].HospitalStreet;
                                 hidCentralSite.Value = "10";
+                                switch (SiteInfoData1[ix].Site)
+                                {
+                                    case "High":
+                                        m_connectH10 = "checked";
+                                        break;
+                                    case "Med":
+                                        m_connectM10 = "checked";
+                                        break;
+                                    case "Low":
+                                        m_connectL10 = "checked";
+                                        break;
+                                }
                                 break;
+
                     }
                     }
 

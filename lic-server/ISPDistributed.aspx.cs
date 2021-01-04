@@ -333,6 +333,8 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             foreach (DataRowView rowView in myDV)
             {
 
+                Hiddendecentralised_deliverymode.Value = rowView["decentralised_deliverymode"].ToString(); //software / hardware portal
+
                 HiddenSoftwareHardwareSite1.Value = rowView["decentralised_portal_site1"].ToString(); //software / hardware portal
                 HiddenRedundantSite1.Value = rowView["decentralised_portal_redundant_site1"].ToString();
                 HiddenTestSite1.Value = rowView["decentralised_portal_test_site1"].ToString();

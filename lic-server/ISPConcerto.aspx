@@ -28,26 +28,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
   <%--  <link href="https://cdn.syncfusion.com/16.1.0.37/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
     <script src='<%= Page.ResolveClientUrl("~/js/ej/jquery-1.11.3.min.js")%>' type="text/javascript"></script>
     <script src='<%= Page.ResolveClientUrl("~/js/ej/jsrender.min.js")%>' type="text/javascript"></script>
     <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.web.all.min.js")%>' type="text/javascript"></script>
     <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.webform.min.js")%>' type="text/javascript"></script>--%>
 
-
-
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-
-
-
-
-    
-
-
+           
     <style>
-
-
         .select2-search--dropdown {
             padding:0px !important;
         }
@@ -187,10 +176,7 @@
                 border: 1px solid #178bc6;
                 border-bottom-color: transparent;
             }
-
-
-
-
+            
 
         .STBAddStorage {
             color: black;
@@ -2450,13 +2436,28 @@
                                                                                                 <input type="button" name="ISPPremiumLicense7" value="7" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense7" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
                                                                                                 <input type="button" name="ISPPremiumLicense8" value="8" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense8" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
                                                                                                 <input type="button" name="ISPPremiumLicense9" value="9" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense9" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
-                                                                                                <%--<input type="button" name="ISPPremiumLicense10" value="10" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense10" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;"></td>--%>
+                                                                                                <input type="button" name="ISPPremiumLicense10" value="10" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense10" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
 
+                                                                                            </td>
+
+                                                                                           
 
 
 
                                                                                         </tr>
 
+
+                                                                                        <tr>
+                                                                                             <td style="width: 274px; border-top: 0px" id="prelabel4"></td>
+                                                                                             <td colspan="3" align="right" style="border-top: 0px">
+                                                                                                <input type="button" name="ISPPremiumLicense11" value="11" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense11" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+                                                                                                <input type="button" name="ISPPremiumLicense12" value="12" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense12" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+                                                                                                <input type="button" name="ISPPremiumLicense13" value="13" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense13" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+                                                                                                <input type="button" name="ISPPremiumLicense14" value="14" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense14" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+                                                                                                <input type="button" name="ISPPremiumLicense15" value="15" onclick="ISPSoftwarePreButton(this);" id="ISPPremiumLicense15" class="ISPPremiumLicenseHW" style="font-weight: 600; height: 49px; width: 49px; margin: 0 5px 0 0;">
+
+                                                                                            </td>
+                                                                                        </tr>
 
 
 
@@ -3175,24 +3176,72 @@
         }
 
 
-        function CheckConcurrentValue(TextBoxItem) {
+        function checkDynacad(itemNumber) {
 
-          //  let myCONCURRENTENTERPRISEUSERS = parseInt($("#CONCURRENTENTERPRISEUSERS")[0].value);
-            let myvalue = parseInt($(TextBoxItem)[0].value);
 
-            let CurrentIDX = TextBoxItem.id.replace('txtConcurrent', '');
-          
-            if ( myvalue > $(TextBoxItem)[0].max) {
-                $("#errortxtConcurrent" + CurrentIDX).show();
-                $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
-                $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "max range is " + $(TextBoxItem)[0].max;
+            let usageCount = 0;
+            let totalDyn = 0;
 
-            } else {
-                $("#errortxtConcurrent" + CurrentIDX).hide();
+            //get total number
+            var ix;
+            for (ix = 1; ix <= 15; ix++) {
+                if ($("#cmdApplication" + ix)[0].value.includes("DynaCAD Prostate") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Breast") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Combo Package")) {
+
+                    totalDyn += parseInt($("#txtConcurrent" + ix)[0].value);
+                    usageCount++;
+                }
             }
 
 
-            GetLicenceData();
+            if (itemNumber != "") {
+                if (totalDyn > 4) {
+
+                    //$("#txtConcurrent" + itemNumber)[0].max
+
+                    //1 = entered value
+                    //2 = max
+                    //3 = total dyn
+                    var errorRS = [$("#txtConcurrent4")[0].value, "4", totalDyn];
+                    return errorRS;
+                }
+             //   $("#txtConcurrent" + itemNumber)[0].max = (totalDyn - 4);
+            }
+
+
+
+        }
+
+
+        function CheckConcurrentValue(TextBoxItem) {
+          
+            let myvalue = parseInt($(TextBoxItem)[0].value);
+           
+
+            let CurrentIDX = TextBoxItem.id.replace('txtConcurrent', '');
+
+            var errorRS = checkDynacad(CurrentIDX);
+            if (Array.isArray(errorRS)) {
+                //error
+                $(TextBoxItem)[0].value = 0;
+                $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "combined max range is 4";
+                $("#errortxtConcurrent" + CurrentIDX).show();
+            } else {
+
+                if (myvalue > $(TextBoxItem)[0].max) {
+                    $("#errortxtConcurrent" + CurrentIDX).show();
+                    $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
+                    $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "max range is 4";
+
+                } else {
+                    $("#errortxtConcurrent" + CurrentIDX).hide();
+                }
+
+            }
+          
+           
+
+
+            GetLicenceData(TextBoxItem);
 
         }
 
@@ -3423,7 +3472,11 @@
                                 if (array[3] == "Up to max of Enterprise concurrent users") {
 
                                 } else {
+
+                                   
                                     $("#txtConcurrent" + CurrentIDX)[0].readOnly = true;
+                                   
+                                    
                                 }
 
                             } else {
@@ -3446,7 +3499,9 @@
 
                                     $("#txtConcurrent" + CurrentIDX)[0].max = CONCURRENTENTERPRISEUSERS;
                                     break;
-
+                                case "N/A":
+                                    $("#txtConcurrent" + CurrentIDX)[0].max = array[2];
+                                    break;
                                 default:
                                     $("#txtConcurrent" + CurrentIDX)[0].max = array[3];
                                     break;
@@ -3454,39 +3509,53 @@
                             
                         }
 
-                        if (array[0].includes("Add_Users")) {
+                        var totalDyn = 0;
+                        if (array[0].trim()) {
 
                             CONCURRENTENTERPRISEUSERS = CONCURRENTENTERPRISEUSERS - 1;
 
 
-                            switch (array[0]) {
-                                case "DynaCAD Enterprise - Add_Users":
-                                    let usageCount = 0;
+                            switch (array[0].trim()) {
+                                case "DynaCAD Combo Package":
+                                case "DynaCAD Breast":
+                                case "DynaCAD Prostate":
+                                    //let usageCount = 0;
 
-                                    var i;
-                                    for (i = 1; i <= 15; i++) {
-                                        if ($("#cmdApplication" + i)[0].value.includes("DynaCAD Prostate - 1 User") | $("#cmdApplication" + i)[0].value.includes("DynaCAD Breast - 1 User") | $("#cmdApplication" + i)[0].value.includes("DynaCAD Combo Package - 1 User")) {
+                                    //var i;
+                                    //for (i = 1; i <= 15; i++) {
+                                    //    if ($("#cmdApplication" + i)[0].value.includes("DynaCAD Prostate") | $("#cmdApplication" + i)[0].value.includes("DynaCAD Breast") | $("#cmdApplication" + i)[0].value.includes("DynaCAD Combo Package")) {
 
-                                            usageCount++;
-                                        }
-                                    }
-
-                                    $("#txtConcurrent" + CurrentIDX)[0].min = 1;
-                                    $("#txtConcurrent" + CurrentIDX)[0].max = (4 - usageCount);
-                                    //if ($("#txtConcurrent" + CurrentIDX)[0].value == "") {
-                                    //    $("#txtConcurrent" + CurrentIDX)[0].value = (4 - usageCount);
+                                    //        totalDyn += parseInt($("#txtConcurrent" + i)[0].value);
+                                    //        usageCount++;
+                                    //    }
                                     //}
+
+                                    //$("#txtConcurrent" + CurrentIDX)[0].min = 1;
+                                    //if (usageCount == 1) {
+                                    //    $("#txtConcurrent" + CurrentIDX)[0].max = 4;
+                                    //} else {
+                                    //    if ((4 - totalDyn) < 0) {
+                                    //        $("#txtConcurrent" + CurrentIDX)[0].max = 0;
+                                    //    } else {
+                                    //        $("#txtConcurrent" + CurrentIDX)[0].max = (4 - totalDyn);
+                                    //    }
+
+                                        
+                                    //}
+                                    ////if ($("#txtConcurrent" + CurrentIDX)[0].value == "") {
+                                    ////    $("#txtConcurrent" + CurrentIDX)[0].value = (4 - usageCount);
+                                    ////}
                                     
                                     break;
-                                case "Zero FootPrint Viewer SW - Add_Users":
-                                    $("#txtConcurrent" + CurrentIDX)[0].min = 1;
+                                case "Zero FootPrint Viewer SW":
+                                    $("#txtConcurrent" + CurrentIDX)[0].min = 2;
                                     $("#txtConcurrent" + CurrentIDX)[0].max = 53;
                                     break;
-                                default:
-                                    $("#txtConcurrent" + CurrentIDX)[0].min = 1;
-                                    $("#txtConcurrent" + CurrentIDX)[0].max = CONCURRENTENTERPRISEUSERS;
-                                    //$("#txtConcurrent" + CurrentIDX)[0].value = CONCURRENTENTERPRISEUSERS;
-                                    break;
+                                //default:
+                                //    $("#txtConcurrent" + CurrentIDX)[0].min = 1;
+                                //    $("#txtConcurrent" + CurrentIDX)[0].max = CONCURRENTENTERPRISEUSERS;
+                                //    //$("#txtConcurrent" + CurrentIDX)[0].value = CONCURRENTENTERPRISEUSERS;
+                                //    break;
                             }
 
 
@@ -3496,54 +3565,6 @@
 
 
                 }
-
-
-                //checkallDynacad
-                var i;
-                var dycAddUserLocation = 0;
-                var dyncadcnt = 0;
-                for (i = 0; i < 16; i++) {
-                    if ($("#cmdApplication" + i)[0] != undefined && $("#cmdApplication" + i)[0].value !="" ) {
-                        let appitem = $("#cmdApplication" + i)[0].value;
-                        if (appitem != "") {                            
-                            var arrayloop = $("#cmdApplication" + i)[0].value.split("|");
-
-
-                            switch (arrayloop[0])
-                            {
-                                case "DynaCAD Prostate - 1 User":
-                                    dyncadcnt++;
-                                    break;
-                                case "DynaCAD Breast - 1 User":
-                                    dyncadcnt++;
-                                    break;
-                                case "DynaCAD Combo Package - 1 User":
-                                    dyncadcnt++;
-                                    break;
-                            }
-
-                            if (arrayloop[0] == "DynaCAD Enterprise - Add_Users") {
-                                //$("#txtConcurrent" + i)[0].value = enterpriseuser;
-                                //$("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
-                                dycAddUserLocation = i;
-                            }
-                        }
-                    }
-                }
-
-                if (dyncadcnt > 0) {
-                    if (dycAddUserLocation > 0) {
-                        if ($("#txtConcurrent" + dycAddUserLocation)[0].value != "") {
-                            dyncadcnt = 4 - dyncadcnt;
-                            $("#txtConcurrent" + dycAddUserLocation)[0].value = dyncadcnt;
-                            $("#hidtxtConcurrent" + dycAddUserLocation)[0].value = dyncadcnt;
-                            $("#txtConcurrent" + dycAddUserLocation)[0].max = dyncadcnt;                            
-                        }
-                    }
-                }
-
-
-                //checkallDynacad
 
 
 
@@ -3556,6 +3577,65 @@
                         $("#txtConcurrent" + CurrentIDX)[0].disabled = false;
                     }
                 }
+
+
+                //checkallDynacad
+                var i;
+                var dycAddUserLocation = 0;
+                var dyncadcnt = 0;
+                //for (i = 0; i < 16; i++) {
+                //    if ($("#cmdApplication" + i)[0] != undefined && $("#cmdApplication" + i)[0].value != "") {
+                //        let appitem = $("#cmdApplication" + i)[0].value;
+                //        if (appitem != "") {
+                //            var arrayloop = $("#cmdApplication" + i)[0].value.split("|");
+
+
+                //            switch (arrayloop[0].trim()) {
+                //                case "DynaCAD Prostate":
+                //                    dyncadcnt++;
+                //                    break;
+                //                case "DynaCAD Breast":
+                //                    dyncadcnt++;
+                //                    break;
+                //                case "DynaCAD Combo Package":
+                //                    dyncadcnt++;
+                //                    break;
+                //            }
+
+                //            //if (arrayloop[0] == "DynaCAD Enterprise - Add_Users") {
+                //            //$("#txtConcurrent" + i)[0].value = enterpriseuser;
+                //            //$("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
+                //            // dycAddUserLocation = i;
+                //            //}
+                //        }
+                //    }
+
+
+
+                //}
+
+                //if (dyncadcnt > 0) {
+
+                //    $("#txtConcurrent" + CurrentIDX)[0].readOnly = false;
+                //    $("#txtConcurrent" + CurrentIDX)[0].disabled = false;
+
+                //    if ($("#txtConcurrent" + CurrentIDX)[0].value != "") {
+                //        if ($("#txtConcurrent" + CurrentIDX)[0].value == "0") {
+
+                //            if (totalDyn > 3) {
+                //                $("#txtConcurrent" + CurrentIDX)[0].value = 0;
+                //            } else {
+                //                $("#txtConcurrent" + CurrentIDX)[0].value = 1;
+                //            }
+                //        }
+                //    }
+                //}
+
+                //checkallDynacad
+
+
+
+               
 
                 //Concurrent_Range - Max
                 if (array[3] != "") {
@@ -4144,10 +4224,14 @@
 
 
 
-        function GetLicenceData() {
+        function GetLicenceData(TextBoxItem) {
 
             let enterpriseuser = $("#CONCURRENTENTERPRISEUSERS")[0].value;
 
+            var mytextboxnumber = 0;
+            if (TextBoxItem != undefined) {
+                mytextboxnumber = TextBoxItem.id.replace("txtConcurrent", "");
+            }
             
 
             if (enterpriseuser > 50) {
@@ -4203,30 +4287,40 @@
                         }
                     } else {
 
+                        var totalDyn = 0;
                         if ($("#txtConcurrent" + i)[0].value != "") {
                             if (array[2] == "") {
                                 if (array[0].includes("Add_Users")) {
 
 
-                                    switch (array[0]) {
-                                        case "DynaCAD Enterprise - Add_Users":
-                                            let usageCount = 0;
+                                    switch (array[0].trim()) {
+                                        case "DynaCAD Combo Package":
+                                        case "DynaCAD Breast":
+                                        case "DynaCAD Prostate":
+                                            //let usageCount = 0;
 
-                                            var ix;
-                                            for (ix = 1; ix <= 15; ix++) {
-                                                if ($("#cmdApplication" + ix)[0].value.includes("DynaCAD Prostate - 1 User") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Breast - 1 User") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Combo Package - 1 User")) {
+                                            //var ix;
+                                            //for (ix = 1; ix <= 15; ix++) {
+                                            //    if ($("#cmdApplication" + ix)[0].value.includes("DynaCAD Prostate") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Breast") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Combo Package")) {
 
-                                                    usageCount++;
-                                                }
-                                            }
+                                            //        totalDyn += parseInt($("#txtConcurrent" + i)[0].value);
+                                            //        usageCount++;
+                                            //    }
+                                            //}
 
-                                            $("#txtConcurrent" + i)[0].min = 1;
-                                            $("#txtConcurrent" + i)[0].max = (4 - usageCount);
+                                            //$("#txtConcurrent" + i)[0].min = 1;
+                                            //if (usageCount == 1) {
+                                            //    $("#txtConcurrent" + i)[0].max = 4;
+                                            //} else {
+                                            //    $("#txtConcurrent" + i)[0].max = (4 - totalDyn);
+                                            //}
 
-                                            if ((4 - usageCount) > $("#txtConcurrent" + i)[0].value) {
-                                                $("#txtConcurrent" + i)[0].value = (4 - usageCount);
-                                                $("#hidtxtConcurrent" + i)[0].value = (4 - usageCount);
-                                            }
+                                         
+
+                                            //if ((4 - totalDyn) > $("#txtConcurrent" + i)[0].value) {
+                                            //    $("#txtConcurrent" + i)[0].value = (4 - totalDyn);
+                                            //    $("#hidtxtConcurrent" + i)[0].value = (4 - totalDyn);
+                                            //}
 
                                             break;
                                         case "Zero FootPrint Viewer SW - Add_Users":
@@ -4253,6 +4347,60 @@
                                         $("#hidtxtConcurrent" + i)[0].value = enterpriseuser;
                                         $("#txtConcurrent" + i)[0].max = enterpriseuser;
                                     }
+                                } else {
+
+                                    switch (array[0].trim()) {
+                                        case "DynaCAD Prostate":
+                                        case "DynaCAD Breast":
+                                        case "DynaCAD Combo Package":
+
+                                            $("#txtConcurrent" + i)[0].disabled = false;
+                                            $("#txtConcurrent" + i)[0].readOnly = false;
+                                            $("#txtConcurrent" + i)[0].max = 4;
+                                            //let usageCount = 0;
+
+                                            //var ix;
+                                            //for (ix = 1; ix <= 15; ix++) {
+                                            //    if ($("#cmdApplication" + ix)[0].value.includes("DynaCAD Prostate") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Breast") | $("#cmdApplication" + ix)[0].value.includes("DynaCAD Combo Package")) {
+
+                                            //        if (parseInt($("#txtConcurrent" + ix)[0].value) > 0) {
+                                            //            totalDyn += parseInt($("#txtConcurrent" + ix)[0].value);
+                                            //        }
+                                            //        usageCount++;
+                                            //    }
+                                            //}
+
+                                            //$("#txtConcurrent" + i)[0].min = 1;
+                                            //if (usageCount == 1) {
+                                            //    $("#txtConcurrent" + i)[0].max = 4;
+                                            //} else {
+                                            //  //  $("#txtConcurrent" + i)[0].max = (4 - totalDyn);
+                                            //}
+
+                                            //if (usageCount == 1) {
+
+                                            //}
+                                            //else
+                                            //{
+                                            //    //if ((4 - totalDyn) > $("#txtConcurrent" + i)[0].value) {
+                                            //    //    $("#txtConcurrent" + i)[0].value = (4 - totalDyn);
+                                            //    //    $("#hidtxtConcurrent" + i)[0].value = (4 - totalDyn);
+                                            //    //}
+                                            //}
+
+                                            
+
+
+                                            break;
+                                        default:
+                                            $("#txtConcurrent" + i)[0].value = array[2];
+                                            $("#hidtxtConcurrent" + i)[0].value = array[2];
+                                            $("#txtConcurrent" + i)[0].max = array[2];
+                                            break;
+
+                                    }
+
+                                    
                                 }
                             }
 
@@ -4262,8 +4410,8 @@
             }
 
 
-
-
+                                   
+                       
 
 
             let IsTest = false;
