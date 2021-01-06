@@ -261,6 +261,11 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             DataView myDV = Helper.GetData("Select * from PhilipsLic_Project where PhilipsLic_ProjectID=" + Request.QueryString["id"]);            
             foreach (DataRowView rowView in myDV)
             {
+                HiddenDeliveryModel.Value = rowView["centralised_deliverymodel"].ToString();
+                HiddenButtonBlock1.Value = rowView["centralised_block1"].ToString();
+                HiddenButtonBlock2.Value = rowView["centralised_block2"].ToString();
+                hidLicenceDataPro.Value = "4";
+
                 AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["centralised_add_application"].ToString());
                 m_NoApp = Convert.ToString(AdditionalApplication1.Count - 1);
                 if (m_NoApp == "-1" )
@@ -284,68 +289,83 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                     {
                         case 0:
                             cmdApplication1.SelectedValue = AdditionalApplication1[i].Application;
-                            m_txtConcurrent1 = AdditionalApplication1[i].ConcurrentUsers;                            
+                            m_txtConcurrent1 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName1.Value = AdditionalApplication1[i].HospitalName;
                             break;
                         case 1:
                             cmdApplication2.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent2 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName2.Value = AdditionalApplication1[i].HospitalName;
                             break;
                         case 2:
                             cmdApplication3.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent3 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName3.Value = AdditionalApplication1[i].HospitalName;
                             break;
                         case 3:
                             cmdApplication4.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent4 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName4.Value = AdditionalApplication1[i].HospitalName;
                             break;
                         case 4:
                             cmdApplication5.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent5 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName5.Value = AdditionalApplication1[i].HospitalName;
                             break;
                         case 5:
                             cmdApplication6.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent6 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName6.Value = AdditionalApplication1[i].HospitalName;
                             break;
                         case 6:
-                            cmdApplication6.SelectedValue = AdditionalApplication1[i].Application;
-                            m_txtConcurrent6 = AdditionalApplication1[i].ConcurrentUsers;
-                            break;
-                        case 7:
                             cmdApplication7.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent7 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName7.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 8:
+                        case 7:
                             cmdApplication8.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent8 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName8.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 9:
+                        case 8:
                             cmdApplication9.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent9 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName9.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 10:
+                        case 9:
                             cmdApplication10.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent10 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName10.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 11:
+                        case 10:
                             cmdApplication11.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent11 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName11.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 13:
+                        case 11:
                             cmdApplication12.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent12 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName12.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 14:
+                        case 12:
                             cmdApplication13.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent13 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName13.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 15:
+                        case 13:
                             cmdApplication14.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent14 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName14.Value = AdditionalApplication1[i].HospitalName;
                             break;
-                        case 16:
+                        case 14:
                             cmdApplication15.SelectedValue = AdditionalApplication1[i].Application;
                             m_txtConcurrent15 = AdditionalApplication1[i].ConcurrentUsers;
+                            HiddenHospitalName15.Value = AdditionalApplication1[i].HospitalName;
                             break;
+                        //case 16:
+                        //    cmdApplication15.SelectedValue = AdditionalApplication1[i].Application;
+                        //    m_txtConcurrent15 = AdditionalApplication1[i].ConcurrentUsers;
+                        //    break;
                     }
 
 
@@ -554,6 +574,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 }
 
                 hidMacTable.Value = myMaclist;
+                hidMacTablePro.Value = myMaclist;
 
                 //"NICB006 - Enterprise Engine SW:,FICO248 - ISP Server - Software only:,"
                 //hidMacTable
@@ -843,10 +864,23 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
             string MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
 
+            string HiddenButtonBlock1 = Request.Form["HiddenButtonBlock1"];
+            string HiddenButtonBlock2 = Request.Form["HiddenButtonBlock2"];
+
+            //pro
+            string HiddenProAddStorage = Request.Form["HiddenProAddStorage"];
+            string HiddenProlicence = Request.Form["HiddenProlicence"];
+            string HiddenProSoftware = Request.Form["HiddenProSoftware"];
+
+            //pre
+            string HiddenPreStorage = Request.Form["HiddenPreStorage"];
+            string HiddenPreStorageTotal = Request.Form["HiddenPreStorageTotal"];
+            string HiddenPreServers = Request.Form["HiddenPreServers"];
+            string HiddenPreLicence = Request.Form["HiddenPreLicence"];
+            string HiddenPreSoftware = Request.Form["HiddenPreSoftware"];
 
 
-
-            string SQL = "update PhilipsLic_Project set centralised_add_application='"+ AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
+            string SQL = "update PhilipsLic_Project set centralised_pre_storage='"+ HiddenPreStorage + "', centralised_pre_storage_total='"+ HiddenPreStorageTotal + "', centralised_pre_host_servers='"+ HiddenPreServers + "', centralised_pre_licence='"+ HiddenPreLicence + "', centralised_pre_testserver='"+ HiddenPreSoftware + "',  centralised_pro_storage='" + HiddenProAddStorage + "', centralised_pro_licence='"+ HiddenProlicence + "', centralised_pro_testserver='"+ HiddenProSoftware + "', centralised_block1='" + HiddenButtonBlock1 + "', centralised_block2='" + HiddenButtonBlock2 + "', centralised_add_application='" + AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
             Helper.InsertData(SQL);
 
 

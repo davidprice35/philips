@@ -72,6 +72,20 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
     public string m_OutputTableApplicationsTable = string.Empty;
     public string m_OutputTableApplicationsTR = string.Empty;
 
+    public string m_Block1 = string.Empty;
+    public string m_Block2 = string.Empty;
+
+    public string m_centralised_pro_storage = string.Empty;
+    public string m_centralised_pro_licence = string.Empty;
+    public string m_centralised_pro_testserver = string.Empty;
+
+    public string m_centralised_pre_storage = string.Empty;
+    public string m_centralised_pre_storage_total = string.Empty;
+    public string m_centralised_pre_host_servers = string.Empty;
+    public string m_centralised_pre_licence = string.Empty;
+    public string m_centralised_pre_testserver = string.Empty;
+
+
 
     private DataView GetData(string sql)
     {
@@ -460,6 +474,21 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 foreach (DataRowView rowView in myDV)
                 {
 
+                    m_Block1 = rowView["centralised_block1"].ToString();
+                    m_Block2 = rowView["centralised_block2"].ToString();
+
+                    m_centralised_pro_storage = rowView["centralised_pro_storage"].ToString();
+                    m_centralised_pro_licence = rowView["centralised_pro_licence"].ToString();
+                    m_centralised_pro_testserver = rowView["centralised_pro_testserver"].ToString();
+
+                    m_centralised_pre_storage = rowView["centralised_pre_storage"].ToString();
+                    m_centralised_pre_storage_total = rowView["centralised_pre_storage_total"].ToString();
+                    m_centralised_pre_host_servers = rowView["centralised_pre_host_servers"].ToString();
+                    m_centralised_pre_licence = rowView["centralised_pre_licence"].ToString();
+                    m_centralised_pre_testserver = rowView["centralised_pre_testserver"].ToString();
+
+               
+
 
                     m_centralised_concurrent_ent_users = rowView["centralised_concurrent_ent_users"].ToString();
                     m_centralised_deliverymodel_ISPSoftware = rowView["centralised_deliverymodel_ISPSoftware"].ToString();
@@ -627,10 +656,10 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                     //    string app = DataItems[0];
                     //   string appHos = m_hospital_street += AdditionalApplication1[i].HospitalName ;
                     //   string appCon = AdditionalApplication1[i].ConcurrentUsers ;
-                        
+
                     //    m_OutputTableApplicationsTR += " <tr> <td> "+ cat + " </td><td> "+ app + "</td><td> "+ appCon + "</td></tr>";
 
-                                             
+
                     //}
 
                     //m_OutputTableApplicationsTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>IntelliSpace Portal Enterprise Software</p><table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Option Number</th> <th scope='col' style='background-color: #0b1f65;'>Description</th> <th scope='col' style='background-color: #0b1f65;'>Overall Quantity ( select in the tool )</th> </tr></thead> <tbody> "+ m_OutputTableApplicationsTR + " </tbody> </table></div>";
@@ -639,58 +668,108 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
 
 
-                    string tableelement = "";
-                    if (m_centralised_deliverymodel== "SoftwareOnly")
+                    //
+                    //Delivery model
+                    //
+
+                    if (m_centralised_deliverymodel == "SoftwareOnly")
                     {
-                        List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
-
-                        MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(m_centralised_deliverymodel_ISPSoftware);
-                        int outeridx = 0;
-
-                        for (int i = 0; i <= MacAddressData1.Count - 1; i++)
-                        {
-                            //Enterprise
-
-                            string[] DataItems = MacAddressData1[i].Menu.Split('-');
-                            string option = "";
-                            string desc = "";
-                            int idx = 0;
-                            // Part 3: loop over result array.
-                            foreach (string word in DataItems)
-                            {
-                                if (idx == 0)
-                                {
-                                    option = word.Trim();
-                                }
-
-                                if (idx == 1)
-                                {
-                                    desc = word.Trim();
-                                }
-                                
-                                idx++;
-                                
-                            }
-
-                            if (outeridx == 0)
-                            {
-                                tableelement += "<tr> <p style='color:black;font-weight:bold;'>IntelliSpace Portal Software only</p><td> " + option + " </td><td> " + desc + " </td><td>"+ MacAddressData1[i].MacAddress + " </td></tr>";
-                            }
-                            else
-                            {
-                                tableelement += "<tr><td> " + option + " </td><td> " + desc + " </td><td> " + MacAddressData1[i].MacAddress + " </td> </tr>";
-                            }
-                            outeridx++;
-
-                        }
-                     
-                        m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Option Number</th> <th scope='col' style='background-color: #0b1f65;'>Description</th> <th scope='col' style='background-color: #0b1f65;'>Overall Quantity ( select in the tool )</th> </tr></thead> <tbody> "+ tableelement + " </tbody> </table> </div>";                        
-
+                        m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>DELIVERY MODEL : SOFTWARE ONLY</p> ";
+                        m_OutputTable += "</div>";
                     }
                     else
                     {
 
+                        m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <p style='color:black;font-weight:bold;'>DELIVERY MODEL : SOFTWARE & HARDWARE</p> ";
+
+                        if (m_Block1 == "HHANR")
+                        {
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Hardware High Availiabllity NOT required</p> ";
+                        }
+                        else
+                        {
+                            //HHAIR
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Hardware High Availiabllity IS required</p> ";
+                        }
+
+
+                        if (m_Block2 == "Pro")
+                        {
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Pro</p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>IntelliSpace Portal Enterprise Pro HW</p> ";
+                     
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>5TB Additional Storage : "+ m_centralised_pro_storage + " </p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>ISP Pro License : " + m_centralised_pro_licence + "</p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>ISP Test Server Software Only? : " + m_centralised_pro_testserver + "</p> ";
+
+                        }
+                        else
+                        {
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Premium</p> ";
+
+                            
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>IntelliSpace Portal Enterprise Premium HW</p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Do Your Customer requires Philips to provide storage? : " + m_centralised_pre_storage + " </p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Total Storage Required : " + m_centralised_pre_storage_total + " </p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>Total Host servers required : " + m_centralised_pre_host_servers + " </p> ";                            
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>ISP Premium License : " + m_centralised_pre_licence + " </p> ";
+                            m_OutputTable += "<p style='color:black;font-weight:bold;'>ISP Test Server Software Only? : " + m_centralised_pre_testserver + " </p> ";
+
+                        }
+
+                        m_OutputTable += "</div>";
                     }
+
+
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+                    //Mac Table
+                    string tableelement = "";                    
+                    List<MacAddressData> MacAddressData1 = new List<MacAddressData>();
+                    MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(m_centralised_deliverymodel_ISPSoftware);
+                    int outeridx = 0;
+
+                    for (int i = 0; i <= MacAddressData1.Count - 1; i++)
+                    {
+                        //Enterprise
+
+                        string[] DataItems = MacAddressData1[i].Menu.Split('-');
+                        string option = "";
+                        string desc = "";
+                        int idx = 0;
+                        // Part 3: loop over result array.
+                        foreach (string word in DataItems)
+                        {
+                            if (idx == 0)
+                            {
+                                option = word.Trim();
+                            }
+
+                            if (idx == 1)
+                            {
+                                desc = word.Trim();
+                            }
+
+                            idx++;
+
+                        }
+
+                        if (outeridx == 0)
+                        {
+                            tableelement += "<tr> <p style='color:black;font-weight:bold;'>IntelliSpace Portal Software only</p><td> " + option + " </td><td> " + desc + " </td><td>" + MacAddressData1[i].MacAddress + " </td></tr>";
+                        }
+                        else
+                        {
+                            tableelement += "<tr><td> " + option + " </td><td> " + desc + " </td><td> " + MacAddressData1[i].MacAddress + " </td> </tr>";
+                        }
+                        outeridx++;
+
+                    }
+
+                    m_OutputTable += "<div class='table-responsive' style='margin-left: -16px;'> <table class='table table-bordered'> <thead> <tr> <th scope='col' style='background-color: #0b1f65;'>Option Number</th> <th scope='col' style='background-color: #0b1f65;'>Description</th> <th scope='col' style='background-color: #0b1f65;'>Overall Quantity ( select in the tool )</th> </tr></thead> <tbody> " + tableelement + " </tbody> </table> </div>";
+
+
+
+                    
 
 
 

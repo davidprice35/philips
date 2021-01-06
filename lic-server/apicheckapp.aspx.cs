@@ -138,176 +138,176 @@ public partial class lic_server_apidata : System.Web.UI.Page
             string AppArray = Request.Form["AppArray"].ToString();
             
           
-            if (appName.Contains("- Add_Users"))
-            {
+            //if (appName.Contains("- Add_Users"))
+           // {
 
                 // string mainApp = appName.Replace("- Add_Users", "").ToString().Trim();
 
-                string mainApp = GetMainApp(appName);
+                //string mainApp = GetMainApp(appName);
 
-                string[] appSplit = AppArray.Split(',');
+                //string[] appSplit = AppArray.Split(',');
 
-                // Part 3: loop over result array.
-                foreach (string myapp in appSplit)
-                {
-                    if (myapp != "")
-                    {
+                //// Part 3: loop over result array.
+                //foreach (string myapp in appSplit)
+                //{
+                //    if (myapp != "")
+                //    {
 
-                        string[] appapp = myapp.Split('|');
-                        string[] appapp2 = appapp[0].Split('-');
-
-
-
-                        switch(appName)
-                        {
-                            case "DynaCAD Enterprise - Add_Users":
-                                if (appName == appapp[0].Trim())
-                                {
-
-                                }
-                                else
-                                {
-                                    if (appapp[0].Trim() == "DynaCAD Prostate - 1 User" | appapp[0].Trim() == "DynaCAD Breast - 1 User" | appapp[0].Trim() == "DynaCAD Combo Package - 1 User")
-                                    {
-                                        DataOK = "1";   //item is in list we are good  
-
-                                        //does appName appear 2 in list
-                                        int idxcnt = 0;
-                                        foreach (string myapp2 in appSplit)
-                                        {
-                                            string[] MainListItem = myapp2.Split('|');
-                                            if (appName == MainListItem[0].Trim())
-                                            {
-                                                if (idxcnt > 0)
-                                                {
-                                                    DataOK = "3";
-                                                    HasSet = 1;
-                                                    break;
-                                                }
-                                                idxcnt++;
-                                            }
-
-                                        }
-
-
-                                        break;
-
-                                    }
-                                    else
-                                    {
-                                        DataOK = "0";
-                                        HasSet = 1;
-                                    }
-                                }
-                                break;
-                            case "Zero FootPrint Viewer SW - Add_Users":
-                                if (appName == appapp[0].Trim())
-                                {
-
-                                }
-                                else
-                                {
-                                    if (appapp[0].Trim() == "Zero FootPrint Viewer SW - 2 User")
-                                    {
-                                        DataOK = "1";   //item is in list we are good  
-
-                                        //does appName appear 2 in list
-                                        int idxcnt = 0;
-                                        foreach (string myapp2 in appSplit)
-                                        {
-                                            string[] MainListItem = myapp2.Split('|');
-                                            if (appName == MainListItem[0].Trim())
-                                            {
-                                                if (idxcnt > 0)
-                                                {
-                                                    DataOK = "3";
-                                                    HasSet = 1;
-                                                    break;
-                                                }
-                                                idxcnt++;
-                                            }
-
-                                        }
-                                    }
-                                    else
-                                    {
-                                        DataOK = "0";
-                                        HasSet = 1;
-                                    }
-                                }
-                                break;
-                            default:
-                                if (mainApp.Trim() == appapp[0].Trim())
-                                {
-                                    DataOK = "1";   //item is in list we are good    
-                                    HasSet = 1;
-                                    //does appName appear 2 in list
-                                    int idxcnt = 0;
-                                    foreach (string myapp2 in appSplit)
-                                    {
-                                        string[] MainListItem = myapp2.Split('|');
-                                        if (appName == MainListItem[0].Trim())
-                                        {
-                                            if (idxcnt > 0)
-                                            {
-                                                DataOK = "3";
-                                                HasSet = 1;
-                                                break;
-                                            }
-                                            idxcnt++;
-                                        }
-
-                                    }
+                //        string[] appapp = myapp.Split('|');
+                //        string[] appapp2 = appapp[0].Split('-');
 
 
 
-                                    break;
-                                }
-                                else
-                                {
-                                    if (HasSet == 0)
-                                    {
-                                        DataOK = "0";
-                                        HasSet = 1;
-                                    }
+                //        switch(appName)
+                //        {
+                //            case "DynaCAD Enterprise - Add_Users":
+                //                if (appName == appapp[0].Trim())
+                //                {
 
-                                }
-                                break;
-                        }
-                        // loop array is main item in list
+                //                }
+                //                else
+                //                {
+                //                    if (appapp[0].Trim() == "DynaCAD Prostate - 1 User" | appapp[0].Trim() == "DynaCAD Breast - 1 User" | appapp[0].Trim() == "DynaCAD Combo Package - 1 User")
+                //                    {
+                //                        DataOK = "1";   //item is in list we are good  
+
+                //                        //does appName appear 2 in list
+                //                        int idxcnt = 0;
+                //                        foreach (string myapp2 in appSplit)
+                //                        {
+                //                            string[] MainListItem = myapp2.Split('|');
+                //                            if (appName == MainListItem[0].Trim())
+                //                            {
+                //                                if (idxcnt > 0)
+                //                                {
+                //                                    DataOK = "3";
+                //                                    HasSet = 1;
+                //                                    break;
+                //                                }
+                //                                idxcnt++;
+                //                            }
+
+                //                        }
+
+
+                //                        break;
+
+                //                    }
+                //                    else
+                //                    {
+                //                        DataOK = "0";
+                //                        HasSet = 1;
+                //                    }
+                //                }
+                //                break;
+                //            case "Zero FootPrint Viewer SW - Add_Users":
+                //                if (appName == appapp[0].Trim())
+                //                {
+
+                //                }
+                //                else
+                //                {
+                //                    if (appapp[0].Trim() == "Zero FootPrint Viewer SW - 2 User")
+                //                    {
+                //                        DataOK = "1";   //item is in list we are good  
+
+                //                        //does appName appear 2 in list
+                //                        int idxcnt = 0;
+                //                        foreach (string myapp2 in appSplit)
+                //                        {
+                //                            string[] MainListItem = myapp2.Split('|');
+                //                            if (appName == MainListItem[0].Trim())
+                //                            {
+                //                                if (idxcnt > 0)
+                //                                {
+                //                                    DataOK = "3";
+                //                                    HasSet = 1;
+                //                                    break;
+                //                                }
+                //                                idxcnt++;
+                //                            }
+
+                //                        }
+                //                    }
+                //                    else
+                //                    {
+                //                        DataOK = "0";
+                //                        HasSet = 1;
+                //                    }
+                //                }
+                //                break;
+                //            default:
+                //                if (mainApp.Trim() == appapp[0].Trim())
+                //                {
+                //                    DataOK = "1";   //item is in list we are good    
+                //                    HasSet = 1;
+                //                    //does appName appear 2 in list
+                //                    int idxcnt = 0;
+                //                    foreach (string myapp2 in appSplit)
+                //                    {
+                //                        string[] MainListItem = myapp2.Split('|');
+                //                        if (appName == MainListItem[0].Trim())
+                //                        {
+                //                            if (idxcnt > 0)
+                //                            {
+                //                                DataOK = "3";
+                //                                HasSet = 1;
+                //                                break;
+                //                            }
+                //                            idxcnt++;
+                //                        }
+
+                //                    }
+
+
+
+                //                    break;
+                //                }
+                //                else
+                //                {
+                //                    if (HasSet == 0)
+                //                    {
+                //                        DataOK = "0";
+                //                        HasSet = 1;
+                //                    }
+
+                //                }
+                //                break;
+                //        }
+                //        // loop array is main item in list
                         
 
 
-                        //is item dupped up
-                        if (appName == appapp[0].Trim())
-                        {
-                            if (DataOK != "0")
-                            {
-                                if (maincnt > 0)
-                                {
-                                    DataOK = "3";
-                                    HasSet = 1;
-                                    break;
-                                }
+                //        //is item dupped up
+                //        if (appName == appapp[0].Trim())
+                //        {
+                //            if (DataOK != "0")
+                //            {
+                //                if (maincnt > 0)
+                //                {
+                //                    DataOK = "3";
+                //                    HasSet = 1;
+                //                    break;
+                //                }
 
-                                maincnt++;
-                            }
-                        }
-
-
-                        if (DataOK=="1" & HasSet == 1)
-                        {
-                            break;
-                        }
+                //                maincnt++;
+                //            }
+                //        }
 
 
-                    }
+                //        if (DataOK=="1" & HasSet == 1)
+                //        {
+                //            break;
+                //        }
+
+
+                //    }
                     
-                }
+                //}
 
                 
-            }else
-            {
+            //}else
+            //{
                 int idx = 0;
                 int idxApp = 0;
                 //string mainApp = GetMainApp(appName);
@@ -323,7 +323,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                         string[] appapp = myapp.Split('|');
                                                 
                         //is item dupped up
-                        if (appName == appapp[0].Trim())
+                        if (appName.Trim() == appapp[0].Trim())
                         {
                             
 
@@ -342,7 +342,7 @@ public partial class lic_server_apidata : System.Web.UI.Page
                 }
 
 
-            }
+           // }
 
 
 

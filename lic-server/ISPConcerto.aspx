@@ -1059,7 +1059,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55|x">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1||x">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1086,6 +1086,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName1" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName1" runat="server" />
                                                                                 </td>
 
                                                                                 <td align="center">
@@ -1139,7 +1140,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1167,6 +1168,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName2" CssClass="form-control" runat="server" Style="width: 100%;">
                                                                                        <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName2" runat="server" />
                                                                                 </td>
                                                                                 <td align="center">
 
@@ -1217,7 +1219,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1241,6 +1243,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName3" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                        <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName3" runat="server" />
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete3" onclick="deleteAddtionalApp(this);">
@@ -1288,7 +1291,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1312,6 +1315,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName4" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName4" runat="server" />
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete4" onclick="deleteAddtionalApp(this);">
@@ -1359,7 +1363,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1383,6 +1387,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName5" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                          <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName5" runat="server" />
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete5" onclick="deleteAddtionalApp(this);">
@@ -1431,7 +1436,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1455,6 +1460,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName6" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                          <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName6" runat="server" />
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete6" onclick="deleteAddtionalApp(this);">
@@ -1503,7 +1509,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1527,6 +1533,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName7" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                          <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName7" runat="server" />
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete7" onclick="deleteAddtionalApp(this);">
@@ -1575,7 +1582,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1599,6 +1606,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName8" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                         <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                     <asp:HiddenField ID="HiddenHospitalName8" runat="server" />
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete8" onclick="deleteAddtionalApp(this);">
@@ -1646,7 +1654,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1670,6 +1678,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName9" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                           <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName9" runat="server" /> 
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete9" onclick="deleteAddtionalApp(this);">
@@ -1717,7 +1726,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1740,6 +1749,7 @@
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName10" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName10" runat="server" /> 
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     
@@ -1788,7 +1798,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1811,6 +1821,7 @@
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName11" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                     </asp:DropDownList>
+                                                                                     <asp:HiddenField ID="HiddenHospitalName11" runat="server" /> 
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete11" onclick="deleteAddtionalApp(this);">
@@ -1858,7 +1869,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1882,6 +1893,7 @@
                                                                                     <asp:DropDownList ID="cmdHospitalName12" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                          <asp:ListItem></asp:ListItem>
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName12" runat="server" /> 
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete12" onclick="deleteAddtionalApp(this);">
@@ -1929,7 +1941,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -1952,6 +1964,7 @@
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName13" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                     </asp:DropDownList>
+                                                                                    <asp:HiddenField ID="HiddenHospitalName13" runat="server" /> 
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete13" onclick="deleteAddtionalApp(this);">
@@ -1999,7 +2012,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -2022,6 +2035,9 @@
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName14" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                     </asp:DropDownList>
+
+                                                                                    <asp:HiddenField ID="HiddenHospitalName14" runat="server" /> 
+
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete14" onclick="deleteAddtionalApp(this);">
@@ -2069,7 +2085,7 @@
                                                                                         <asp:ListItem Value="Corridor4DM CT Opt 2018|No|Enterprise|">FIC0463 - Corridor4DM CT Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Corridor4DM CFR MBF Opt 2018|No|Enterprise|">FIC0464 - Corridor4DM CFR MBF Opt 2018</asp:ListItem>
                                                                                         <asp:ListItem Value="Zero FootPrint Viewer SW - 2 User|No|2|55">NICA168/FIC0439 - Zero FootPrint Viewer SW - 2 User</asp:ListItem>
-                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1|Sum of FICO4329 and NICA283 and NICA282 and NICA288 should be max 4 and max 10 for hybrid &amp; distributed">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
+                                                                                        <asp:ListItem Value="DynaCAD Prostate |Yes|1| ">NICA283/FIC0429 - DynaCAD Prostate </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Breast |No|1|">NICA282/FIC0429 - DynaCAD Breast </asp:ListItem>
                                                                                         <asp:ListItem Value="DynaCAD Combo Package |No|1|">NICA288/FIC0429 - DynaCAD Combo Package </asp:ListItem>
                                                                                         <asp:ListItem Value="NM JETPack App License - Add_Users|NULL||NULL">FIC0095 - NM JETPack App License - Add_Users</asp:ListItem>
@@ -2092,6 +2108,9 @@
                                                                                 <td>
                                                                                     <asp:DropDownList ID="cmdHospitalName15" CssClass="form-control" runat="server" Style="width: 100%; margin-top: 3px;">
                                                                                     </asp:DropDownList>
+
+                                                                                    <asp:HiddenField ID="HiddenHospitalName15" runat="server" />
+
                                                                                 </td>
                                                                                 <td align="center">
                                                                                     <span id="cmdAddtionalAppDelete15" onclick="deleteAddtionalApp(this);">
@@ -2541,26 +2560,34 @@
 
                                             <div class="row">
                                                 <div class="col-8 text-center">
-
-
+                                                    
                                                     <table class="table table-responsive text-center" style="margin-left: 40px; margin-right: 40px; width:80%">
-
                                                       <tbody>    
                                                         <tr>
-                                                          <td> <asp:LinkButton ID="cmdConfig" OnClick="cmdConfig_Click" runat="server" Style="display: block; background: #178bc6; color: #ffff; margin: auto; width: 20%; border: none; padding: 15px;  text-align: center;"> Configuration </asp:LinkButton>
-</td>
-                                                          <td> <asp:LinkButton ID="cmdSave" OnClick="cmdSave_Click" OnClientClick="setupSave();" runat="server" Style="display: block; background: #178bc6; color: #ffff; margin: auto; width: 20%; border: none; padding: 15px;  text-align: center;"> Save </asp:LinkButton>
-</td>
-      
+                                                          <td> <asp:LinkButton ID="cmdConfig" OnClick="cmdConfig_Click" runat="server" Style="display: block; background: #178bc6; color: #ffff; margin: auto; width: 20%; border: none; padding: 15px;  text-align: center;"> Configuration </asp:LinkButton></td>
+                                                          <td> <asp:LinkButton ID="cmdSave" OnClick="cmdSave_Click" OnClientClick="setupSave();" runat="server" Style="display: block; background: #178bc6; color: #ffff; margin: auto; width: 20%; border: none; padding: 15px;  text-align: center;"> Save </asp:LinkButton></td>      
                                                         </tr>
                                                       </tbody>
                                                     </table>
-
-
                                                    
-                                                   <asp:HiddenField ID="HiddenApplicationServer" Value="" runat="server" />
-
+                                                    <asp:HiddenField ID="HiddenApplicationServer" Value="" runat="server" />
                                                     <asp:HiddenField ID="HiddenDeliveryModel" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenButtonBlock1" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenButtonBlock2" Value="" runat="server" />
+
+
+                                                    <asp:HiddenField ID="HiddenProAddStorage" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenProlicence" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenProSoftware" Value="" runat="server" />
+                                                    
+
+                                                    <asp:HiddenField ID="HiddenPreStorage" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenPreStorageTotal" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenPreServers" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenPreLicence" Value="" runat="server" />
+                                                    <asp:HiddenField ID="HiddenPreSoftware" Value="" runat="server" />
+
+
 
                                                 </div>
 
@@ -2706,7 +2733,7 @@
     <script>
 
 
-        var isDev = false;
+        var isDev = true;
 
         var sapicheckapp = "";
         var sapidata = "";
@@ -2726,7 +2753,53 @@
         arrHead = ['No', 'Menu', 'Mac','Remove']; // table headers.
 
 
+        if ($('#HiddenDeliveryModel')[0].value != "")
+        {
 
+            if ($('#HiddenDeliveryModel')[0].value = "SoftwareHardWare") {
+                $('#NavsoftwareHardware-tab').addClass("active");
+                $('#Navsoftware-tab').removeClass("active");
+
+                $('#DELIVERY').removeClass("active");
+                $('#SOFTWARE').addClass("active");
+                                
+                selectButtons();
+
+                if ($('#HiddenButtonBlock1')[0].value == "HHANR")
+                {
+                    $('#hhaNOT').addClass("active");
+                    $('#hhaIS').removeClass("active");
+                    hha('NO');
+
+                } else
+                {
+                    $('#hhaNOT').removeClass("active");
+                    $('#hhaIS').addClass("active");
+                    hha('YES');
+                }
+
+
+                if ($('#HiddenButtonBlock2')[0].value == "Pro") {
+                    $('#HHNotPro').addClass("active");
+                    $('#HHNotPrem').removeClass("active");
+                    hha('Pro');
+
+                } else {
+                    $('#HHNotPro').removeClass("active");
+                    $('#HHNotPrem').addClass("active");
+                    hha('Premium');
+                }
+                
+
+
+
+            } else {                
+                $('#NavsoftwareHardware-tab').removeClass("active");
+                $('#Navsoftware-tab').addClass("active");
+            }
+
+
+        }
 
 
         function CreateRowPro(NoRows, ApplicationUsed, IsTest, maclist, isPre) {
@@ -2941,6 +3014,7 @@
                         ele.setAttribute('type', 'text');
                         ele.setAttribute('value', '');
                         ele.setAttribute('name', "MacSoftwareOnlyPro" + idx);
+                        ele.setAttribute('id', "MacSoftwareOnlyPro" + idx);
                         ele.setAttribute("class", "form-control");
                         td.appendChild(ele);
 
@@ -2955,8 +3029,10 @@
                                 for (i = 0; i < res.length; i++) {
                                     if (idx == (i + 1)) {
                                         if (res[i] != ":") {
-                                            myMacres = res[i].split(":");     
-                                             $("#MacSoftwareOnlyPro" + idx)[0].value = myMacres[1];
+                                            myMacres = res[i].split(":");
+                                            if (myMacres.length > 1) {
+                                                $("#MacSoftwareOnlyPro" + idx)[0].value = myMacres[1];
+                                            }
                                             
                                         }
                                     }
@@ -3344,10 +3420,10 @@
 
             var AppArray = [];
 
-            let selectedapplication1 = $("#cmdApplication1")[0].value ;
-            let selectedapplication2 = $("#cmdApplication2")[0].value ;
-            let selectedapplication3 = $("#cmdApplication3")[0].value ;
-            let selectedapplication4 = $("#cmdApplication4")[0].value ;
+            let selectedapplication1 = $("#cmdApplication1")[0].value;
+            let selectedapplication2 = $("#cmdApplication2")[0].value;
+            let selectedapplication3 = $("#cmdApplication3")[0].value;
+            let selectedapplication4 = $("#cmdApplication4")[0].value;
             let selectedapplication5 = $("#cmdApplication5")[0].value;
             let selectedapplication6 = $("#cmdApplication6")[0].value;
             let selectedapplication7 = $("#cmdApplication7")[0].value;
@@ -3486,7 +3562,7 @@
 
                         if (!array[0].includes("Add_Users")) {
 
-                            if ($("#txtConcurrent" + CurrentIDX)[0].value == "") {
+                            if ($("#txtConcurrent" + CurrentIDX)[0].value == "" | $("#txtConcurrent" + CurrentIDX)[0].value == "0") {
 
                                 $("#txtConcurrent" + CurrentIDX)[0].value = array[2];
                                 $("#hidtxtConcurrent" + CurrentIDX)[0].value = array[2];
@@ -3673,6 +3749,11 @@
                 document.getElementById("cmdHospitalName" + i).options.add(optVal);
                 optVal.text = Text;
                 optVal.value = Value;
+
+                if ($("#HiddenHospitalName" + i)[0].value == Value) {
+                    optVal.selected = true;
+                }
+                                
             }
 
            
@@ -5024,16 +5105,6 @@
                 $("#premTotalStorageRequiredROW").hide();
 
                 $("#ISPTestLicenseHWNo").addClass("active");
-
-
-
-                 //SHFullPartalDisplay
-                        //$('#parial_ha')[0].value = data.parial_ha;
-                        //$('#full_ha')[0].value = data.full_ha;
-                        //$('#server_ha_partial')[0].value = data.server_ha_partial;
-                        //$('#server_ha_full')[0].value = data.server_ha_full;
-
-
                 
                 //pro licences
                 currentValue = $('#hidLicenceDataPro2')[0].value;
@@ -5055,14 +5126,9 @@
                     CreateRowPro(currentValue, $('#hidApplicationDataPro').value, false, $('#hidMacTablePro')[0].value);
                 }
 
-
-                //servers              
-                //let maclist = $('#hidMacTablePro')[0].value;
+                //servers                              
                 $('.AdditionalhostserverHW.active').removeClass("active");
-                $("#Additionalhostserver" + $('#server_ha_full')[0].value).addClass("active");
-               // SetUpPrelicences2(currentValue, HasTestServer, maclist);
-
-
+                $("#Additionalhostserver" + $('#server_ha_full')[0].value).addClass("active");               
 
             } else {
 
@@ -5175,15 +5241,6 @@
                 $("#premTotalStorageRequiredROW").hide();
 
                 $("#ISPTestLicenseHWNo").addClass("active");
-
-
-
-                 //SHFullPartalDisplay
-                        //$('#parial_ha')[0].value = data.parial_ha;
-                        //$('#full_ha')[0].value = data.full_ha;
-                        //$('#server_ha_partial')[0].value = data.server_ha_partial;
-                        //$('#server_ha_full')[0].value = data.server_ha_full;
-
 
                 
                 //pro licences
@@ -5960,28 +6017,12 @@
                     $("#Additionalhostserver" + noServer).addClass("active");
                     break;
                 case "Full":
-                  //  SHProDisplay(0);
-//                    SHPreDisplay(1);
-
-                    //$("#HHYesPartial").prop('disabled', true);
+                                      
                     $('.HHAyesopt.active').removeClass("active");
                     $("#HHYesFull").addClass("active");
 
-                    $('.ISPPremiumLicenseHW.active').removeClass("active");
-
-                    //$("#ISPPremiumLicense" + $('#hidLicenceDataPro2')[0].value).addClass("active");
-
-                    //noServer = parseInt($('#server_ha_full')[0].value);
-                    //noServer = parseInt(noServer);
-
-                    //$('.AdditionalhostserverHW.active').removeClass("active");
-                    //$("#Additionalhostserver" + noServer).addClass("active");
-
-                    SHFullPreDisplay(1);
-                   // SHFullPartalDisplay(0);
-                    
-
-
+                    $('.ISPPremiumLicenseHW.active').removeClass("active");             
+                    SHFullPreDisplay(1);                                     
                     break;
                 case "YES":
 
@@ -6004,22 +6045,14 @@
                     $('.ISPPremiumLicenseHW.active').removeClass("active");
                     $('.Philipsprovidestorage.active').removeClass("active");
                     $("#PhilipsprovidestorageNo").addClass("active");
-
-                    //SHFullPartalDisplay
-                        //$('#parial_ha')[0].value = data.parial_ha;
-                        //$('#full_ha')[0].value = data.full_ha;
-                        //$('#server_ha_partial')[0].value = data.server_ha_partial;
-                        //$('#server_ha_full')[0].value = data.server_ha_full;
-
-
-                    if ($('#parial_ha')[0].value == 1) {
+                 
+                    if ($('#parial_ha')[0].value == 1)
+                    {
                         $('.HHAyesopt.active').removeClass("active");                         
                         $("#HHYesPartial").addClass("active");
                         $("#HHYesPartial").prop('disabled', false);
                         $("#HHYesPartial").css('color', 'black');
-                        SHFullPartalDisplay(1);//partal
-                       // SHFullPreDisplay(0);
-                       
+                        SHFullPartalDisplay(1);//partal                                            
 
                     } else {
 
@@ -6032,60 +6065,13 @@
                         if ($('#parial_ha')[0].value == 0) {
                             $("#HHYesPartial").prop('disabled', true);   
 
-
-
                             $("#HHYesPartial").css('color', 'grey');
                             //
 
                         }
                         
                     }
-
-
-
-
-                    //GetProData();
-                   // SHProDisplay(0);
-                    //SHPreDisplay(1);
-
-                    //$('.HHAyesopt.active').removeClass("active");
-
-                    //$('.ISPPremiumLicenseHW.active').removeClass("active");
-                    //$("#ISPPremiumLicense" + $('#hidLicenceDataPro2')[0].value).addClass("active");
-
-
-
-                    //if ($('#server_ha_partial')[0].value > 0) {
-                    //    $("#HHYesPartial").addClass("active");
-
-                    //    noServer = parseInt($('#server_ha_partial')[0].value);
-                    //    noServer = parseInt(noServer);
-
-                    //    $("#Additionalhostserver" + noServer).addClass("active");
-
-
-                    //} else {
-                    //    $("#HHYesFull").addClass("active");
-
-                    //    noServer = parseInt($('#server_ha_full')[0].value);
-                    //    noServer = parseInt(noServer);
-
-                    //    $("#Additionalhostserver" + noServer).addClass("active");
-                    //}
-
-                    //if ($('#server_ha_partial')[0].value == 0) {
-                    //    $("#HHYesPartial").prop('disabled', true);
-                    //}
-
-
-                    //if ($('#full_ha')[0].value == 3)
-                    //{
-                    //    $("#HHYesFull").prop('disabled', true); 
-                    //    $("#FullHAModalCenter").modal();
-                        
-                    //}
-
-
+                    
                     break;
                 case "NO":
                     $("#HHYesPartial").hide();
@@ -6095,9 +6081,7 @@
                     $('.HHAyesopt.active').removeClass("active");
                     $('.HHAopt.active').removeClass("active");
                     $("#HHNotPro").addClass("active");
-                   // GetProData();
-
-
+                   
                     if ($('#hidLicenceDataPro')[0].value == 0) {
                         SHPreDisplay(1);
                         SHProDisplay(0);
@@ -6352,6 +6336,170 @@
             if (isSoftwareHardWare != "") {
                 $("#HiddenDeliveryModel")[0].value = "SoftwareHardWare";
             }
+
+
+            if ($("#hhaNOT").hasClass('active'))
+            {
+                $("#HiddenButtonBlock1")[0].value = "HHANR";
+            }
+            else
+            {
+                $("#HiddenButtonBlock1")[0].value = "HHAIR";
+            }
+
+
+            if ($("#HHNotPro").hasClass('active')) {
+                $("#HiddenButtonBlock2")[0].value = "Pro";
+
+                if ($("#STBAddStorageNo").hasClass('active')) {
+
+                    $("#HiddenProAddStorage")[0].value = "No";
+                } else {
+                    $("#HiddenProAddStorage")[0].value = "Yes";
+                }
+
+                if ($("#ISPAdvancedlicense1").hasClass('active')) {
+                    $("#HiddenProlicence")[0].value = "1";
+                }
+
+                if ($("#ISPAdvancedlicense2").hasClass('active')) {
+                    $("#HiddenProlicence")[0].value = "2";
+                }
+
+                if ($("#ISPAdvancedlicense3").hasClass('active')) {
+                    $("#HiddenProlicence")[0].value = "3";
+                }
+
+                if ($("#ISPAdvancedlicense4").hasClass('active')) {
+                    $("#HiddenProlicence")[0].value = "4";
+                }
+
+                if ($("#ISPAdvancedlicense5").hasClass('active')) {
+                    $("#HiddenProlicence")[0].value = "5";
+                }
+
+
+                if ($("#ISPTextLicenseRequiredNo").hasClass('active'))
+                {
+                    $("#HiddenProSoftware")[0].value = "No";
+                } else {
+                    $("#HiddenProSoftware")[0].value = "Yes";
+                }
+                
+                
+                  
+            }
+            else {
+                $("#HiddenButtonBlock2")[0].value = "Pre";
+
+                //storage
+                if ($("#PhilipsprovidestorageNo").hasClass('active')) {
+                    $("#HiddenPreStorage")[0].value = "No";
+                } else {
+                    $("#HiddenPreStorage")[0].value = "Yes";
+                }
+
+
+                //total storage
+                if ($("#AdditionalStorageRequired10TB").hasClass('active')) {
+                    $("#HiddenPreStorageTotal")[0].value = "10";
+                }
+
+                if ($("#AdditionalStorageRequired15TB").hasClass('active')) {
+                    $("#HiddenPreStorageTotal")[0].value = "15";
+                }
+
+                if ($("#AdditionalStorageRequired20TB").hasClass('active')) {
+                    $("#HiddenPreStorageTotal")[0].value = "20";
+                }
+
+                //host servers
+                if ($("#Additionalhostserver1").hasClass('active')) {
+                    $("#HiddenPreServers")[0].value = "1";
+                }
+
+                if ($("#Additionalhostserver2").hasClass('active')) {
+                    $("#HiddenPreServers")[0].value = "2";
+                }
+
+                if ($("#Additionalhostserver3").hasClass('active')) {
+                    $("#HiddenPreServers")[0].value = "3";
+                }
+
+
+                //isp licence
+
+                if ($("#ISPPremiumLicense1").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "1";
+                }
+
+                if ($("#ISPPremiumLicense2").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "1";
+                }
+
+                if ($("#ISPPremiumLicense3").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "3";
+                }
+
+                if ($("#ISPPremiumLicense4").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "4";
+                }
+
+                if ($("#ISPPremiumLicense5").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "5";
+                }
+
+                if ($("#ISPPremiumLicense6").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "6";
+                }
+
+                if ($("#ISPPremiumLicense7").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "7";
+                }
+
+                if ($("#ISPPremiumLicense8").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "8";
+                }
+
+                if ($("#ISPPremiumLicense9").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "9";
+                }
+
+                if ($("#ISPPremiumLicense10").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "10";
+                }
+
+                if ($("#ISPPremiumLicense11").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "11";
+                }
+
+                if ($("#ISPPremiumLicense12").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "12";
+                }
+
+                if ($("#ISPPremiumLicense13").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "13";
+                }
+
+                if ($("#ISPPremiumLicense14").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "14";
+                }
+                if ($("#ISPPremiumLicense15").hasClass('active')) {
+                    $("#HiddenPreLicence")[0].value = "15";
+                }
+               
+                
+                if ($("#ISPTestLicenseHWNo").hasClass('active')) {
+                    $("#HiddenPreSoftware")[0].value = "No";
+                } else {
+                    $("#HiddenPreSoftware")[0].value = "Yes";
+                }
+                
+
+            }
+
+           
+
                        
         }
 
