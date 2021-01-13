@@ -906,10 +906,10 @@
                                                                                     <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityHigh9" value="High"  <%=m_connectH9 %>>
                                                                                     <label class="form-check-label" for="inlineRadio3">High</label>
 
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityMed9" value="Med" <%=m_connectM8 %>>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityMed9" value="Med" <%=m_connectM9 %>>
                                                                                     <label class="form-check-label" for="inlineRadio4">Med</label>
                                                                                                                                                                        
-                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityLow9" value="Low"  <%=m_connectL8 %>>
+                                                                                    <input class="form-check-input" type="radio" name="HospitalSiteConnectivity9" id="HospitalSite1ConnectivityLow9" value="Low"  <%=m_connectL9 %>>
                                                                                     <label class="form-check-label" for="inlineRadio5">Low</label>
 
                                                                                 </div>
@@ -2733,7 +2733,7 @@
     <script>
 
 
-        var isDev = true;
+        var isDev = false;
 
         var sapicheckapp = "";
         var sapidata = "";
@@ -2988,8 +2988,27 @@
                                 for (i = 0; i < res.length; i++) {
                                     if (idx == (i + 1)) {
                                         if (res[i] != ":") {
-                                             myMacres = res[i].split(":");                                            
-                                            $("#ApplicationSoftwareHardWare" + idx).val('NICA963 - ISP Test Server - Software Only').change();
+                                            if (i > 0) {
+
+                                                if ($("#HHNotPrem").hasClass("active")) {
+                                                    myMacres = res[i].split(":");
+
+                                                    if (myMacres[0] == "FIC0456 ISP Premium  SW License") {
+                                                        $("#ApplicationSoftwareHardWare" + idx).val(myMacres[0]).change();
+                                                    } else {
+
+                                                    }
+
+                                                    
+
+                                                }
+
+                                               
+
+                                            } else {
+                                                myMacres = res[i].split(":");
+                                                $("#ApplicationSoftwareHardWare" + idx).val(myMacres[0]).change();
+                                            }
                                         }
                                     }
                                 }
@@ -3031,7 +3050,7 @@
                                         if (res[i] != ":") {
                                             myMacres = res[i].split(":");
                                             if (myMacres.length > 1) {
-                                                $("#MacSoftwareOnlyPro" + idx)[0].value = myMacres[1];
+                                                $("#MacSoftwareOnlyPro" + idx)[0].value = myMacres[2];
                                             }
                                             
                                         }

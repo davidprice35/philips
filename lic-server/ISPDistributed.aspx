@@ -1,10 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="ISPDistributed.aspx.cs" Inherits="competitive_info_Competitors" %>
 
-<%--<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
-<%@ Register Assembly="Syncfusion.EJ.Web, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Web" TagPrefix="ej" %>
-<%@ Register Assembly="Syncfusion.EJ, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Models" TagPrefix="ej" %>--%>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,20 +24,7 @@
     <![endif]-->
 
 
-    <%--  <link href="https://cdn.syncfusion.com/16.1.0.37/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-    <script src='<%= Page.ResolveClientUrl("~/js/ej/jquery-1.11.3.min.js")%>' type="text/javascript"></script>
-    <script src='<%= Page.ResolveClientUrl("~/js/ej/jsrender.min.js")%>' type="text/javascript"></script>
-    <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.web.all.min.js")%>' type="text/javascript"></script>
-    <script src='<%= Page.ResolveClientUrl("~/js/ej/ej.webform.min.js")%>' type="text/javascript"></script>--%>
-
-
-
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-
-
-
-
-
 
 
     <style>
@@ -3583,7 +3565,7 @@
                                                                                                 <option value="NICB487">NICB487</option>
                                                                                             </select></td>
                                                                                         <td align="center">
-                                                                                            <input type="text" value="<%=m_EnterpriceInstallMac %>" name="MacSoftwareOnlyInstall1_NICB487" id="" class="form-control"></td>
+                                                                                            <input type="text" value="<%=m_EnterpriceInstallMac %>" name="MacSoftwareOnlyInstall1_NICB487" id="MacSoftwareOnlyInstall1_NICB487" class="form-control"></td>
                                                                                        
                                                                                     </tr>
                                                                                 </thead>
@@ -4265,7 +4247,7 @@ FIC0457</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN1">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN1" data-toggle="tab" href="#HorSoft1" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -4842,7 +4824,7 @@ FIC0457</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN2">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN2" data-toggle="tab" href="#HorSoft2" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -5418,7 +5400,7 @@ FIC0457</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN3">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN3" data-toggle="tab" href="#HorSoft3" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -5994,7 +5976,7 @@ FIC0457</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN4">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN4" data-toggle="tab" href="#HorSoft4" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -6574,7 +6556,7 @@ FIC0557</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN5">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN5" data-toggle="tab" href="#HorSoft5" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -7152,7 +7134,7 @@ FIC0557</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN6">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN6" data-toggle="tab" href="#HorSoft6" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -7729,7 +7711,7 @@ FIC0557</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN7">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN7" data-toggle="tab" href="#HorSoft7" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -8298,7 +8280,7 @@ FIC0557</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN8">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN8" data-toggle="tab" href="#HorSoft8" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 81px;">No</a>
@@ -8864,7 +8846,7 @@ FIC0557</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN9">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN9" data-toggle="tab" href="#HorSoft9" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -9432,7 +9414,7 @@ FIC0557</li>
 
                                                                                         <li>IntelliSpace Portal Test
                                                                                             <br />
-                                                                                            Environment:</li>
+                                                                                            Environment - NICA964</li>
 
                                                                                         <li class="nav-item active" id="cHorTSoftN10">
                                                                                             <a class="nav-link test" id="" name="HorTSoftN10" data-toggle="tab" href="#HorSoft10" role="tab" aria-controls="DELIVERY" aria-selected="false" style="width: 70px !important; margin-left: 71px;">No</a>
@@ -11244,9 +11226,9 @@ FIC0557</li>
 
 
                     //check Max
-                    if (myvalue > $(TextBoxItem)[0].max) {
+                    if (myvalue > 55 ) {
                         $("#errortxtConcurrent" + CurrentIDX).show();
-                        $(TextBoxItem)[0].value = $(TextBoxItem)[0].max;
+                        $(TextBoxItem)[0].value = 55;
                         $("#errortxtConcurrent" + CurrentIDX)[0].innerHTML = "max range is 55";
 
                     } else {
@@ -11581,7 +11563,7 @@ FIC0557</li>
                                     //}
 
                                     break;
-                                case "Zero FootPrint Viewer SW":
+                                case "Zero FootPrint Viewer SW - 2 User":
                                     $("#txtConcurrent" + CurrentIDX)[0].min = 2;
                                     $("#txtConcurrent" + CurrentIDX)[0].max = 55;
                                     break;
@@ -11702,6 +11684,19 @@ FIC0557</li>
             return idx;
         }
 
+        function GetSiteNumber(SiteName) {
+
+            if (SiteName != "") {
+                for (izoa = 1; izoa <= 10; izoa++) {
+                    if ($("#txtHospitalName" + izoa)[0].value == SiteName) {
+                        return izoa;
+                    }
+
+                }
+            }
+
+        }
+
         function validateCUser(itemTHIS, rowno, rowsubitem) {
 
             let myitem = itemTHIS.id;
@@ -11713,15 +11708,56 @@ FIC0557</li>
 
 
             //if zero show box
-            for (izo = 0; izo < 10; izo++) {
+            for (izo = 1; izo <= 10; izo++) {
 
-                if ($("#cmdApplication" + rowno)[0].value == "Zero FootPrint Viewer SW|No|2|55") {                    
-                    $("#ZeroFootprintContainerTab" + izo).show();
-                    $("#ZeroFootprintContainer" + izo).show();                                        
-                } else {
-                    $("#ZeroFootprintContainerTab" + izo).hide();
-                    $("#ZeroFootprintContainer" + izo).hide();
-                }
+                //for each application if zero
+
+                if ($("#cmdApplication" + izo)[0].value == "Zero FootPrint Viewer SW|No|2|55") {    
+
+                    let siteNumber = GetSiteNumber($("#cmdHospitalName" + izo)[0].value);
+
+                    if ($("#txtCUser" + izo)[0].value > 2) {                        
+                        $("#ZeroFootprintContainerTab" + siteNumber).show();
+                        $("#ZeroFootprintContainer" + siteNumber).show();
+                    } else {
+                        $("#ZeroFootprintContainerTab" + siteNumber).hide();
+                        $("#ZeroFootprintContainer" + siteNumber).hide();
+                    }
+
+
+                    //for each sub site
+                    for (izob = 1; izob <= 10; izob++)
+                    {
+                        //cmdHospitalName1_1
+                        let siteNumberA = GetSiteNumber($("#cmdHospitalName" + izo + "_" + izob)[0].value);
+
+                        if ($("#txtCUser" + izo + "_" + izob)[0].value > 2) {
+                            $("#ZeroFootprintContainerTab" + siteNumberA).show();
+                            $("#ZeroFootprintContainer" + siteNumberA).show();
+                        } else {
+                            $("#ZeroFootprintContainerTab" + siteNumberA).hide();
+                            $("#ZeroFootprintContainer" + siteNumberA).hide();
+                        }
+
+                    }
+
+
+                    //let showZero = 0;
+                    //if ($("#txtCUser" + rowno)[0].value > 2) {
+                    //    $("#ZeroFootprintContainerTab" + rowno).show();
+                    //    $("#ZeroFootprintContainer" + rowno).show();
+                    //} else {
+                    //    $("#ZeroFootprintContainerTab" + rowno).hide();
+                    //    $("#ZeroFootprintContainer" + rowno).hide();
+                    //}
+
+
+                   
+
+                } //else {
+                   // $("#ZeroFootprintContainerTab" + izo).hide();
+                   // $("#ZeroFootprintContainer" + izo).hide();
+                //}
 
             }
 
@@ -12553,6 +12589,23 @@ FIC0557</li>
             $("#txtConcurrent" + hidv + "")[0].value = ""
             $("#row" + hidv + "-additional-apps").hide();
             $("#errortxtConcurrent" + hidv).hide();
+
+
+            //
+
+
+            for (izo = 1; izo < 15; izo++) {
+
+                if ($("#cmdApplication" + izo)[0].value == "Zero FootPrint Viewer SW|No|2|55") {
+                    $("#ZeroFootprintContainerTab" + izo).show();
+                    $("#ZeroFootprintContainer" + izo).show();
+                } else {
+                    $("#ZeroFootprintContainerTab" + izo).hide();
+                    $("#ZeroFootprintContainer" + izo).hide();
+                }
+
+            }
+
 
 
             //reorder
@@ -15272,6 +15325,8 @@ FIC0557</li>
                 SetupMacTables("macTableRedundant");
                 SetupMacTables("macTestTable");
 
+            } else {
+                SetupMacTables("macTableSO");
             }
 
 

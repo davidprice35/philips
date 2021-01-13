@@ -265,6 +265,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 HiddenButtonBlock1.Value = rowView["centralised_block1"].ToString();
                 HiddenButtonBlock2.Value = rowView["centralised_block2"].ToString();
                 hidLicenceDataPro.Value = "4";
+                hidLicenceDataPro2.Value = "2";
 
                 AdditionalApplication1 = JsonConvert.DeserializeObject<List<AdditionalApplication>>(rowView["centralised_add_application"].ToString());
                 m_NoApp = Convert.ToString(AdditionalApplication1.Count - 1);
@@ -570,7 +571,7 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
                 MacAddressData1 = JsonConvert.DeserializeObject<List<MacAddressData>>(rowView["centralised_deliverymodel_ISPSoftware"].ToString());
                 for (int ixa = 0; ixa <= MacAddressData1.Count - 1; ixa++)
                 {
-                    myMaclist += MacAddressData1[ixa].Menu + ":" + MacAddressData1[ixa].No + ",";
+                    myMaclist += MacAddressData1[ixa].Menu + ":" + MacAddressData1[ixa].No + ":" + MacAddressData1[ixa].MacAddress + ",";
                 }
 
                 hidMacTable.Value = myMaclist;
@@ -763,6 +764,21 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
 
                     }
                     break;
+                case "macAddressPro":
+                    foreach (string key in Request.Form)
+                    {
+
+                        bool hasItem = LoopNumberofEntries("ApplicationSoftwareHardWare" + idx);
+
+                        if (hasItem)
+                        {
+                            noItems++;
+                        }
+
+                        idx++;
+
+                    }
+                    break;
             }
 
 
@@ -849,21 +865,6 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             }
             string AdditionalApplication = JsonConvert.SerializeObject(AdditionalApplication1, Formatting.Indented);
 
-
-
-            int macidx = GetNumberofEntries("macAddress"); 
-
-
-            for (int i = 1; i <= macidx; i++)
-            {
-                string item1 = Request.Form["ApplicationSoftwareOnly" + i.ToString()].ToString();
-                string item2 = Request.Form["MacSoftwareOnly" + i.ToString()].ToString();
-
-                MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2});
-            }
-
-            string MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
-
             string HiddenButtonBlock1 = Request.Form["HiddenButtonBlock1"];
             string HiddenButtonBlock2 = Request.Form["HiddenButtonBlock2"];
 
@@ -878,6 +879,45 @@ public partial class competitive_info_Competitors : System.Web.UI.Page
             string HiddenPreServers = Request.Form["HiddenPreServers"];
             string HiddenPreLicence = Request.Form["HiddenPreLicence"];
             string HiddenPreSoftware = Request.Form["HiddenPreSoftware"];
+
+            string MacAddressData = "";
+            if (WhichDeliveryTab== "SoftwareHardWare")
+            {
+                //"SoftwareHardWare"
+                int macidx = GetNumberofEntries("macAddressPro");
+                for (int i = 1; i <= macidx; i++)
+                {
+                    string item1 = Request.Form["ApplicationSoftwareHardWare" + i.ToString()].ToString();
+                    string item2 = Request.Form["MacSoftwareOnlyPro" + i.ToString()].ToString();
+
+                    MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                }
+                MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
+                //"SoftwareHardWare"
+
+            }
+            else
+            {
+                //software only
+                int macidx = GetNumberofEntries("macAddress");
+                for (int i = 1; i <= macidx; i++)
+                {
+                    string item1 = Request.Form["ApplicationSoftwareOnly" + i.ToString()].ToString();
+                    string item2 = Request.Form["MacSoftwareOnly" + i.ToString()].ToString();
+
+                    MacAddressData1.Add(new MacAddressData { No = i.ToString(), Menu = item1, MacAddress = item2 });
+                }
+                MacAddressData = JsonConvert.SerializeObject(MacAddressData1, Formatting.Indented);
+                //software only
+            }
+
+
+            // 
+
+
+
+
+
 
 
             string SQL = "update PhilipsLic_Project set centralised_pre_storage='"+ HiddenPreStorage + "', centralised_pre_storage_total='"+ HiddenPreStorageTotal + "', centralised_pre_host_servers='"+ HiddenPreServers + "', centralised_pre_licence='"+ HiddenPreLicence + "', centralised_pre_testserver='"+ HiddenPreSoftware + "',  centralised_pro_storage='" + HiddenProAddStorage + "', centralised_pro_licence='"+ HiddenProlicence + "', centralised_pro_testserver='"+ HiddenProSoftware + "', centralised_block1='" + HiddenButtonBlock1 + "', centralised_block2='" + HiddenButtonBlock2 + "', centralised_add_application='" + AdditionalApplication + "', centralised_deliverymodel='" + WhichDeliveryTab + "', centralised_deliverymodel_ISPSoftware='" + MacAddressData + "',  centralised_siteinfo='" + centralised_siteinfo + "', centralised_concurrent_ent_users='"+ CONCURRENTENTERPRISEUSERS + "' where PhilipsLic_ProjectID =" + id;
